@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atractivos — Aconquija Turismo</title>
+  <meta name="description" content="Descubrí todos los atractivos naturales y culturales de Aconquija, Catamarca.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/atractivos.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagenes/aconquija_icono.png">
+</head>
+<body>
+
+  <div id="readProgress"></div>
+
+  <!-- ═══ NAV ═══ -->
+  <header class="nav" id="siteNav">
+    <a href="../../index.html" class="logo">
+      <img src="../../imagenes/logo_aconquija(1).png" alt="">
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="index.html#explorar">Explorar</a>
+      <a href="index.html#lugares">Lugares</a>
+      <a href="index.html#estaciones">Estaciones</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#sobre">Sobre Aconquija</a>
+    </nav>
+    <div class="nav-icons">
+      <a href="https://www.instagram.com/turismo_aconquijacat?igsh=MTJxOGR2NWd3aWZqOA==" target="_blank" class="icon-circle" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1"/>
+        </svg>
+      </a>
+      <div class="icon-circle" title="Facebook">
+        <a href="https://www.facebook.com/share/1M1xpsvGS9/?mibextid=wwXIfr" target="_blank" class="icon-circle" title="Facebook">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M15 4h-2a4 4 0 0 0-4 4v3H7v3h2v6h3v-6h2.5l.5-3H12V8a1 1 0 0 1 1-1h2V4z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="icon-circle">
+        <a href="https://wa.me/5493834966977" target="_blank" class="icon-circle" title="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.52 3.48A11.8 11.8 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.12.56 4.19 1.62 6.02L0 24l6.16-1.61A11.95 11.95 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.2-3.48-8.52ZM12.03 21.8a9.78 9.78 0 0 1-4.99-1.37l-.36-.21-3.65.95.98-3.56-.24-.37A9.78 9.78 0 1 1 12.03 21.8Zm5.39-7.33c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.24-.46-2.36-1.48-.88-.79-1.47-1.77-1.64-2.07-.17-.29-.02-.45.13-.6.14-.14.29-.37.44-.56.15-.19.19-.33.29-.55.1-.22.05-.41-.02-.56-.07-.15-.64-1.55-.88-2.13-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.33-.26.26-.99.97-.99 2.37 0 1.4 1.02 2.75 1.16 2.94.15.19 2.01 3.07 4.88 4.3.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="icon-circle menu-trigger" id="menuBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <line x1="4" y1="17" x2="20" y2="17"/>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ═══ HERO ATRACTIVOS ═══ -->
+  <section class="atr-hero">
+    <!-- ════ EDITAR: reemplazar con una foto real de Aconquija ════ -->
+    <div class="atr-hero-bg" style="background-image:url('../../imagenes/fondo3.webp')"></div>
+    <div class="atr-hero-content">
+      <nav class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>›</span>
+        <span>Atractivos</span>
+      </nav>
+      <p class="atr-eyebrow">Aconquija · Catamarca</p>
+      <h1>Atractivos</h1>
+      <p class="atr-lead">Lugares, experiencias y rincones que hacen única a la sierra del Aconquija.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══ FILTROS ═══ -->
+  <div class="filtros-wrap" id="filtrosWrap">
+    <div class="filtros-inner container">
+      <div class="filtros-scroll">
+        <!-- ════ EDITAR: ajustar categorías según los lugares reales ════ -->
+        <button class="filtro active" data-cat="all">Todos</button>
+        <button class="filtro" data-cat="trekking">Trekking</button>
+        <button class="filtro" data-cat="naturaleza">Naturaleza</button>
+        <button class="filtro" data-cat="cultura">Cultura</button>
+        <button class="filtro" data-cat="aventura">Aventura</button>
+        <button class="filtro" data-cat="gastronomia">Gastronomía</button>
+      </div>
+      <div class="filtro-count" id="filtroCount">12 atractivos</div>
+    </div>
+  </div>
+
+
+  <!-- ═══ GRID DE ATRACTIVOS ═══ -->
+  <main class="atr-main">
+    <div class="container">
+      <div class="atr-grid" id="atrGrid">
+
+        <!--
+          ════════════════════════════════════════════
+          CÓMO AGREGAR UN ATRACTIVO NUEVO:
+          1. Copiar un bloque .atr-card completo
+          2. Cambiar data-cat al valor del filtro correspondiente
+             (trekking / naturaleza / cultura / aventura / gastronomia)
+          3. Cambiar href al archivo del lugar (ej: lugares/cascada.html)
+          4. Cambiar el src de la imagen
+          5. Cambiar badge, título, descripción y metadatos
+          
+          Para la card GRANDE (featured), usar class="atr-card atr-card--featured"
+          Solo poner una card featured por página.
+          ════════════════════════════════════════════
+        -->
+
+        <!-- Card grande (featured) — Trekking principal -->
+        <a class="atr-card atr-card--featured" href="lugares/cruce-nevados.html" data-cat="trekking">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1483347756197-71ef80e95f73?auto=format&fit=crop&w=1200&q=80"
+              alt="Cruce de los Nevados del Aconquija" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Trekking</span>
+              <span class="atr-dif atr-dif--alta">Alta dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Cruce de los Nevados</h2>
+            <p class="atr-card-desc">Una travesía de alta montaña entre glaciares de roca, lagunas escondidas y cumbres que superan los 5.500 metros.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2–3 días</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l4-8 4 4 4-6 4 4"/></svg>+5.500 m</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Naturaleza -->
+        <a class="atr-card" href="lugares/cascada.html" data-cat="naturaleza">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=80"
+              alt="Cascada Escondida" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Naturaleza</span>
+              <span class="atr-dif atr-dif--baja">Baja dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Cascada Escondida</h2>
+            <p class="atr-card-desc">Un salto de agua entre el bosque nativo, a media hora del pueblo por sendero señalizado.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3 hs</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Aventura -->
+        <a class="atr-card" href="lugares/cabalgatas.html" data-cat="aventura">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80"
+              alt="Cabalgatas de Pirca" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Aventura</span>
+              <span class="atr-dif atr-dif--media">Media dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Cabalgatas de Pirca</h2>
+            <p class="atr-card-desc">Recorré los senderos altos como lo hacían los arrieros, con guías baqueanos del pueblo.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Día completo</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Naturaleza -->
+        <a class="atr-card" href="lugares/estrellas.html" data-cat="naturaleza">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?auto=format&fit=crop&w=800&q=80"
+              alt="Noches de estrellas" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Naturaleza</span>
+            </div>
+            <h2 class="atr-card-title">Noches de Estrellas</h2>
+            <p class="atr-card-desc">Cielos sin contaminación lumínica. La Vía Láctea visible a simple vista casi todo el año.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Nocturno</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Cultura -->
+        <a class="atr-card" href="lugares/plaza.html" data-cat="cultura">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80"
+              alt="Plaza y Casco Histórico" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Cultura</span>
+            </div>
+            <h2 class="atr-card-title">Plaza y Casco Histórico</h2>
+            <p class="atr-card-desc">El corazón del pueblo, rodeado de casas de adobe y la iglesia patronal del siglo XIX.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Libre</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Trekking -->
+        <a class="atr-card" href="lugares/quebrada.html" data-cat="trekking">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+              alt="Quebrada del Arenal" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Trekking</span>
+              <span class="atr-dif atr-dif--media">Media dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Quebrada del Arenal</h2>
+            <p class="atr-card-desc">Formaciones rocosas talladas por siglos de viento y agua entre paredes de más de 80 metros.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>4 hs</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Gastronomía -->
+        <a class="atr-card" href="lugares/gastronomia.html" data-cat="gastronomia">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+              alt="Gastronomía regional" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Gastronomía</span>
+            </div>
+            <h2 class="atr-card-title">Cocina de la Sierra</h2>
+            <p class="atr-card-desc">Cabrito de monte, locro de altura y productos de huerta, preparados por los propios vecinos.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Mediodía / noche</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Naturaleza -->
+        <a class="atr-card" href="lugares/bosque.html" data-cat="naturaleza">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80"
+              alt="Bosque de Altura" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Naturaleza</span>
+              <span class="atr-dif atr-dif--baja">Baja dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Bosque de Altura</h2>
+            <p class="atr-card-desc">Senderos entre vegetación nativa de yungas, arroyos de montaña y aves endémicas de la sierra.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>2 hs</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Cultura -->
+        <a class="atr-card" href="lugares/artesanias.html" data-cat="cultura">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1490650034157-0537574bafd6?auto=format&fit=crop&w=800&q=80"
+              alt="Artesanías en Telar" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Cultura</span>
+            </div>
+            <h2 class="atr-card-title">Artesanías en Telar</h2>
+            <p class="atr-card-desc">Tejidos en telar criollo, cerámica y productos regionales hechos a mano por artesanos del pueblo.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Libre</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Trekking -->
+        <a class="atr-card" href="lugares/laguna.html" data-cat="trekking">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+              alt="Laguna del Viento" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Trekking</span>
+              <span class="atr-dif atr-dif--alta">Alta dificultad</span>
+            </div>
+            <h2 class="atr-card-title">Laguna del Viento</h2>
+            <p class="atr-card-desc">Laguna de origen glaciario a 4.200 metros, con el reflejo de los picos nevados en el agua.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6 hs</span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l4-8 4 4 4-6 4 4"/></svg>4.200 m</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Aventura -->
+        <a class="atr-card" href="lugares/filo-amanecer.html" data-cat="aventura">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
+              alt="Filo del Amanecer" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Aventura</span>
+            </div>
+            <h2 class="atr-card-title">Filo del Amanecer</h2>
+            <p class="atr-card-desc">El punto donde el sol asoma primero. Campamento nocturno y amanecer en el filo de la cumbre.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Overnight</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+        <!-- Card — Naturaleza -->
+        <a class="atr-card" href="lugares/mirador.html" data-cat="naturaleza">
+          <div class="atr-card-img">
+            <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80"
+              alt="Mirador del Aconquija" loading="lazy">
+          </div>
+          <div class="atr-card-body">
+            <div class="atr-card-top">
+              <span class="atr-cat-badge">Naturaleza</span>
+            </div>
+            <h2 class="atr-card-title">Mirador del Aconquija</h2>
+            <p class="atr-card-desc">Vista panorámica de 360° sobre el valle y los nevados. El mejor punto para fotografiar la sierra.</p>
+            <div class="atr-card-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>1 hs</span>
+            </div>
+          </div>
+          <div class="atr-card-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </div>
+        </a>
+
+      </div><!-- /atr-grid -->
+
+      <div class="no-results" id="noResults" style="display:none;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <p>No hay atractivos en esta categoría todavía.</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- ═══ CTA FINAL ═══ -->
+  <section class="atr-cta">
+    <div class="atr-cta-bg" style="background-image:url('imagenes/caballo.PNG')"></div>
+    <div class="atr-cta-content reveal">
+      <p class="atr-eyebrow">¿Necesitás ayuda?</p>
+      <h2>Armamos el recorrido con vos</h2>
+      <p>Consultá con nuestros guías locales para planificar la mejor visita según tu tiempo y experiencia.</p>
+      <a href="https://wa.me/5493834966977" target="_blank" class="btn-primary">
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER — igual que index.html ═══ -->
+  <footer>
+    <div class="container">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a href="index.html" class="logo">
+            <img src="imagenes/logo_aconquija(2).png" alt="">
+          </a>
+          <p>Ente de Turismo de Aconquija, Catamarca. A los pies de los Nevados, naturaleza que inspira.</p>
+        </div>
+        <div class="foot-cols">
+          <div class="foot-col">
+            <h5>Explorar</h5>
+            <a href="index.html#explorar">Excursiones</a>
+            <a href="index.html#lugares">Lugares</a>
+            <a href="index.html#estaciones">Estaciones</a>
+          </div>
+          <div class="foot-col">
+            <h5>Servicios</h5>
+            <a href="index.html#servicios">Dónde dormir</a>
+            <a href="index.html#servicios">Dónde comer</a>
+            <a href="index.html#servicios">Guías locales</a>
+          </div>
+          <div class="foot-col">
+            <h5>Contacto</h5>
+            <p>Ruta Provincial N°65, Aconquija, Catamarca</p>
+            <p>Maxyz000@icloud.com</p>
+            <p>+54 383 496-6977</p>
+          </div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© 2026 Aconquija Turismo — Todos los derechos reservados</p>
+        <div class="foot-social">
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 4h-2a4 4 0 0 0-4 4v3H7v3h2v6h3v-6h2.5l.5-3H12V8a1 1 0 0 1 1-1h2V4z"/></svg></div>
+          <a href="https://wa.me/5493834966977"><div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.03 0C5.4 0 .03 5.37.03 12c0 2.12.56 4.19 1.62 6.02L0 24l6.16-1.61A11.95 11.95 0 0 0 12.03 24C18.66 24 24 18.63 24 12c0-3.2-1.25-6.2-3.48-8.52ZM12.03 21.8a9.78 9.78 0 0 1-4.99-1.37l-.36-.21-3.65.95.98-3.56-.24-.37A9.78 9.78 0 1 1 12.03 21.8Zm5.39-7.33c-.29-.15-1.71-.84-1.98-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.22-.63.07-.29-.15-1.24-.46-2.36-1.48-.88-.79-1.47-1.77-1.64-2.07-.17-.29-.02-.45.13-.6.14-.14.29-.37.44-.56.15-.19.19-.33.29-.55.1-.22.05-.41-.02-.56-.07-.15-.64-1.55-.88-2.13-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.33-.26.26-.99.97-.99 2.37 0 1.4 1.02 2.75 1.16 2.94.15.19 2.01 3.07 4.88 4.3.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.71-.7 1.95-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/></svg></div></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../js/scrip.js"></script>
+  <script src="../../js/atractivos.js"></script>
+</body>
+</html>

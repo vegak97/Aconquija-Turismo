@@ -1,0 +1,463 @@
+/* ============================================================
+   atractivos.css — Página de atractivos
+   Aconquija Turismo
+   Requiere style.css cargado primero.
+   ============================================================ */
+
+
+/* ══════════════════════════════════════════════
+   HERO ATRACTIVOS
+══════════════════════════════════════════════ */
+.atr-hero {
+  position: relative;
+  height: 54vh;
+  min-height: 360px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.atr-hero-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center 40%;
+  transform: scale(1.05);
+  animation: heroZoom 1.6s ease forwards;
+}
+.atr-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16,18,22,.3) 0%,
+    rgba(16,18,22,.1) 35%,
+    rgba(16,18,22,.65) 72%,
+    rgba(16,18,22,.92) 100%
+  );
+}
+.atr-hero-content {
+  position: relative; z-index: 3;
+  padding: 0 6vw 44px;
+  width: 100%;
+  animation: fadeUp .8s .15s ease both;
+}
+.atr-eyebrow {
+  font-size: .72rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sand);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.atr-hero h1 {
+  font-family: var(--ff-display);
+  font-weight: 500;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.atr-lead {
+  color: rgba(255,255,255,.75);
+  font-size: .98rem;
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+/* Contador de atractivos — esquina inferior derecha */
+.atr-hero-count {
+  position: absolute;
+  bottom: 44px; right: 6vw;
+  z-index: 3;
+  text-align: right;
+  color: #fff;
+  animation: fadeUp .8s .3s ease both;
+}
+.count-num {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 3.4rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.count-label {
+  display: block;
+  font-size: .7rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  margin-top: 2px;
+}
+
+
+/* ══════════════════════════════════════════════
+   BARRA DE FILTROS
+══════════════════════════════════════════════ */
+.filtros-wrap {
+  position: sticky;
+  top: 62px; /* debajo del nav */
+  z-index: 100;
+  background: var(--mist);
+  border-bottom: 1px solid var(--line-light);
+  box-shadow: 0 4px 20px rgba(22,27,34,.06);
+  transition: top .4s ease;
+}
+.filtros-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.filtros-scroll {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 14px 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  flex: 1;
+}
+.filtros-scroll::-webkit-scrollbar { display: none; }
+
+.filtro {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background: transparent;
+  font-family: var(--ff-body);
+  font-size: .76rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--stone);
+  cursor: pointer;
+  transition: all .25s ease;
+  white-space: nowrap;
+}
+.filtro:hover {
+  color: var(--night);
+  border-color: var(--line-light);
+  background: rgba(22,27,34,.04);
+}
+.filtro.active {
+  background: var(--night);
+  color: #fff;
+  border-color: var(--night);
+}
+
+/* Contador de resultados */
+.filtro-count {
+  font-size: .75rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--stone);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+
+/* ══════════════════════════════════════════════
+   MAIN — GRID DE ATRACTIVOS
+══════════════════════════════════════════════ */
+.atr-main {
+  padding: 48px 0 80px;
+  background: var(--mist);
+}
+.atr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* ── CARD BASE ── */
+.atr-card {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-light);
+  transition: transform .38s cubic-bezier(.2,.7,.2,1),
+              box-shadow .38s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--night);
+}
+.atr-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(22,27,34,.13);
+}
+
+/* Imagen */
+.atr-card-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+.atr-card-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(16,18,22,.0) 50%,
+    rgba(16,18,22,.35) 100%
+  );
+}
+.atr-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .9s cubic-bezier(.2,.7,.2,1);
+}
+.atr-card:hover .atr-card-img img { transform: scale(1.07); }
+
+/* Cuerpo */
+.atr-card-body {
+  padding: 20px 22px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.atr-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.atr-cat-badge {
+  font-size: .65rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--amber);
+  background: rgba(226,147,92,.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Badge de dificultad */
+.atr-dif {
+  font-size: .64rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 20px;
+}
+.atr-dif--baja   { background: rgba(34,197,94,.1);  color: #16a34a; }
+.atr-dif--media  { background: rgba(234,179,8,.1);  color: #a16207; }
+.atr-dif--alta   { background: rgba(239,68,68,.1);  color: #dc2626; }
+
+.atr-card-title {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--night);
+  margin: 0;
+}
+.atr-card-desc {
+  font-size: .88rem;
+  color: #5a5f67;
+  line-height: 1.65;
+  flex: 1;
+}
+.atr-card-meta {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+.atr-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: .76rem;
+  color: var(--stone);
+  letter-spacing: .4px;
+}
+.atr-card-meta svg {
+  width: 13px; height: 13px;
+  flex-shrink: 0;
+}
+
+/* Flecha top-right */
+.atr-card-arrow {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: rgba(22,27,34,.55);
+  backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  opacity: 0;
+  transform: translate(-4px, 4px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.atr-card-arrow svg { width: 15px; height: 15px; }
+.atr-card:hover .atr-card-arrow {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ── CARD FEATURED (card grande, ocupa 2 columnas) ── */
+.atr-card--featured {
+  grid-column: span 2;
+  flex-direction: row;
+  align-items: stretch;
+}
+.atr-card--featured .atr-card-img {
+  width: 55%;
+  height: auto;
+  min-height: 260px;
+  flex-shrink: 0;
+}
+.atr-card--featured .atr-card-body {
+  padding: 28px 26px;
+  justify-content: center;
+}
+.atr-card--featured .atr-card-title {
+  font-size: 1.5rem;
+}
+.atr-card--featured .atr-card-desc {
+  font-size: .95rem;
+}
+
+/* ── ANIMACIÓN DE FILTRO ── */
+.atr-card {
+  animation: cardIn .4s ease both;
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.atr-card.hidden {
+  display: none;
+}
+
+/* Sin resultados */
+.no-results {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--stone);
+  grid-column: 1 / -1;
+}
+.no-results svg { width: 40px; height: 40px; margin: 0 auto 14px; opacity: .4; }
+.no-results p   { font-size: 1rem; }
+
+
+/* ══════════════════════════════════════════════
+   CTA FINAL
+══════════════════════════════════════════════ */
+.atr-cta {
+  position: relative;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.atr-cta-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.atr-cta-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(16,18,22,.65);
+}
+.atr-cta-content {
+  position: relative; z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 6vw;
+}
+.atr-cta h2 {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  margin-top: 14px;
+  line-height: 1.15;
+}
+.atr-cta p {
+  margin-top: 18px;
+  color: rgba(255,255,255,.8);
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — TABLET (≤1024px)
+══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .atr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .atr-card--featured {
+    grid-column: span 2;
+    flex-direction: column;
+  }
+  .atr-card--featured .atr-card-img {
+    width: 100%;
+    height: 260px;
+  }
+  .filtro-count { display: none; }
+}
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — MOBILE (≤640px)
+   ENFOCADO EN TELÉFONO
+══════════════════════════════════════════════ */
+@media (max-width: 640px) {
+
+  /* Hero más compacto */
+  .atr-hero { height: 46vh; min-height: 300px; }
+  .atr-hero h1 { font-size: clamp(2.2rem, 11vw, 3rem); }
+  .atr-lead { font-size: .88rem; }
+  .atr-hero-count { display: none; } /* más limpio en mobile */
+
+  /* Filtros */
+  .filtros-wrap { top: 54px; }
+  .filtro { padding: 7px 16px; font-size: .7rem; }
+
+  /* Grid: 1 columna en mobile */
+  .atr-grid { grid-template-columns: 1fr; gap: 16px; }
+  .atr-card--featured {
+    grid-column: span 1;
+    flex-direction: column;
+  }
+  .atr-card--featured .atr-card-img {
+    width: 100%;
+    height: 220px;
+  }
+  .atr-card--featured .atr-card-title { font-size: 1.3rem; }
+
+  /* Cards en mobile: imagen más alta para mejor visual */
+  .atr-card-img { height: 200px; }
+
+  /* Flecha siempre visible en mobile (no hay hover) */
+  .atr-card-arrow {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  /* CTA */
+  .atr-cta { padding: 80px 0; }
+  .atr-cta-bg { background-attachment: scroll; }
+}
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — MOBILE PEQUEÑO (≤400px)
+══════════════════════════════════════════════ */
+@media (max-width: 400px) {
+  .atr-card-img { height: 180px; }
+  .atr-card-body { padding: 16px 16px 18px; }
+  .atr-card-title { font-size: 1.05rem; }
+}
