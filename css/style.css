@@ -401,7 +401,7 @@ nav.links a:hover::after { width: 100%; }
 .cta { position: relative; padding: 160px 0; text-align: center; color: var(--white); overflow: hidden; }
 .cta-bg {
   position: absolute; inset: 0;
-  background-image: url('../imagenes/caballo.PNG');
+  background-image: url('../imagenes/caballo.webp');
   background-size: cover; background-position: center; background-attachment: fixed;
 }
 .cta-bg::after { content: ''; position: absolute; inset: 0; background: rgba(16,18,22,.62); }
