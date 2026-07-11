@@ -307,7 +307,6 @@ nav.links a:hover::after { width: 100%; }
 .exp-card:hover img { transform: scale(1.08); }
 .exp-card .overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(10,12,14,0) 40%, rgba(10,12,14,.88) 100%);
 }
 .exp-card .text { position: absolute; left: 0; right: 0; bottom: 0; padding: 28px; }
 .exp-card .tag {
@@ -798,8 +797,8 @@ footer.site-footer {
 
   /* Cards explorar */
   .card-grid { grid-template-columns: 1fr; }
-  .exp-card  { height: 280px; }
-  .exp-card:nth-child(1) { grid-column: span 1; height: 320px; }
+  .exp-card  { height: auto; aspect-ratio: 3 / 4; }
+  .exp-card:nth-child(1) { grid-column: span 1; height: auto; aspect-ratio: 3 / 4; }
 
   /* Lugar scroll: tarjetas más angostas */
   .place-card { flex: 0 0 260px; }
@@ -832,7 +831,7 @@ footer.site-footer {
   .rel-grid { grid-template-columns: 1fr; }
 
   /* Cards explorar en pantalla pequeña */
-  .exp-card { height: 240px; }
+  .exp-card { height: auto; aspect-ratio: 3 / 4; }
 
   /* Carrusel de lugares */
   .place-card { flex: 0 0 85vw; }
