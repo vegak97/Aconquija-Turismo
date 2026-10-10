@@ -8,8 +8,9 @@ Estas reglas son obligatorias para cualquier agente, asistente o colaborador que
 - La solicitud de permiso debe enumerar los archivos o carpetas afectados, los cambios previstos y su posible impacto.
 - No se debe comenzar la modificación hasta recibir la aprobación del usuario.
 - **Excepción:** si el usuario pide directamente un cambio específico (por ejemplo, «modificá el menú para que sea responsive»), esa petición cuenta como autorización para realizar ese cambio concreto y no hace falta volver a pedir permiso.
-- La autorización para un cambio específico no autoriza modificaciones adicionales que no sean necesarias para cumplirlo. Para esas modificaciones adicionales se debe pedir permiso.
-- Crear, borrar, mover, renombrar o reemplazar archivos también cuenta como modificación.
+- La autorización directa cubre únicamente el cambio solicitado y los pasos estrictamente necesarios para realizarlo. **Si para completar la tarea hace falta modificar algo adicional que el usuario no mencionó ni tuvo en cuenta, hay que detenerse, explicar qué se necesita cambiar, por qué y qué archivos se verían afectados, y pedir permiso antes de hacerlo.**
+- **Si durante el trabajo aparece una necesidad imprevista de modificar algo fuera del alcance autorizado, no realizar ese cambio silenciosamente:** notificar al usuario, describir el cambio previsto y su impacto, y esperar su autorización.
+- Crear, borrar, mover, renombrar o reemplazar archivos también cuenta como modificación y requiere autorización, salvo que esté comprendido en la petición directa del usuario.
 
 ## 2. Registro obligatorio de cambios
 
