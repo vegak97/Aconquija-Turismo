@@ -30,4 +30,4 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** se trasladaron las reglas de agentes a `Aconquija-react/agents.md`; se convirtió el registro de `Registro.mp` a Markdown y se ubicó como `Aconquija-react/Registro.md`; se actualizaron las reglas para apuntar al nuevo registro dentro de la carpeta React; se retiraron las versiones antiguas de la raíz para evitar duplicados.
 - **Motivo:** organizar los documentos de instrucciones y registro junto al proyecto React, como solicitó el usuario.
 - **Autorización:** petición directa del usuario del 2026-10-10.
-- **Resultado:** completado; se verificará que los archivos finales estén en sus nuevas rutas.
+- **Resultado:** completado y verificado; `Aconquija-react/agents.md` y `Aconquija-react/Registro.md` existen en sus nuevas rutas. Se confirmó que las rutas antiguas `agents.md` y `Registro.mp` ya no existen en la raíz.
