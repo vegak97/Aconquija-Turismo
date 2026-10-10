@@ -31,3 +31,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** organizar los documentos de instrucciones y registro junto al proyecto React, como solicitó el usuario.
 - **Autorización:** petición directa del usuario del 2026-10-10.
 - **Resultado:** completado y verificado; `Aconquija-react/agents.md` y `Aconquija-react/Registro.md` existen en sus nuevas rutas. Se confirmó que las rutas antiguas `agents.md` y `Registro.mp` ya no existen en la raíz.
+
+### 19:44:37 -03:00
+- **Archivo afectado:** `Aconquija-react/Metodologia.md`.
+- **Cambio:** se creó el documento de metodología con objetivo, reglas obligatorias, criterios de migración, fases de inventario, preparación de React, recursos y estilos, migración de la página principal, adaptación de interacciones, migración de páginas secundarias, pruebas, preparación de publicación y listas de verificación.
+- **Motivo:** conservar el plan completo de migración para trabajar por etapas y evitar omisiones.
+- **Autorización:** petición directa del usuario del 2026-10-10.
+- **Resultado:** completado; documento creado en la carpeta del proyecto React. La creación del plan no autoriza por sí misma a ejecutar las etapas de migración.
