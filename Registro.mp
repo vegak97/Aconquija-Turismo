@@ -17,3 +17,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** cumplir la regla solicitada de dejar constancia obligatoria de todos los cambios con fecha y hora.
 - **Autorización:** petición directa del usuario del 2026-10-10.
 - **Resultado:** completado; registro creado en el repositorio.
+
+### 19:08:53 -03:00
+- **Archivo afectado:** `agents.md`
+- **Cambio:** se aclararon las reglas para indicar que una petición directa autoriza únicamente el cambio pedido y los pasos estrictamente necesarios; cualquier modificación adicional no prevista o que exceda el alcance autorizado requiere notificar al usuario y obtener permiso antes de ejecutarla.
+- **Motivo:** incorporar la aclaración solicitada por el usuario sobre cambios adicionales no contemplados y necesidades imprevistas durante el trabajo.
+- **Autorización:** petición directa del usuario del 2026-10-10.
+- **Resultado:** completado; archivo actualizado en el repositorio.
