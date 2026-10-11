@@ -183,3 +183,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Hallazgos:** se inventariaron enlaces a atractivos, referencias a imágenes y recursos compartidos, posibles destinos relativos incorrectos para Cabalgatas y Senderismo, una tarjeta sin título y una tarjeta de Bosque de Alisos repetida.
 - **Alcance:** no se modificó código React ni el sitio original. No se implementaron rutas ni se ejecutaron pruebas de navegador.
 - **Resultado:** metodología actualizada mediante el commit `7a085a2322da8bc6d9a2007960226c2e6ba04b8d`.
+
+
+### 2026-10-11 — Aprobación de ruta y aclaración sobre tarjetas de Respira Verde
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se actualizó el Anexo M para marcar `/circuitos/respira-verde` como ruta aprobada para esta página y se añadió la aclaración del usuario sobre las tarjetas.
+- **Aclaración funcional/editorial:** las tarjetas se conservan como están mientras se definen sus destinos concretos. La repetición de Bosque de los Alisos es intencional y sirve como referencia visual; no debe eliminarse ni considerarse un error. No se inventan ni implementan rutas para cada tarjeta en esta etapa.
+- **Alcance:** únicamente documentación. No se modificó código React ni el sitio original, no se implementaron rutas y el mapa global de 15 páginas sigue pendiente de aprobación.
+- **Resultado:** metodología actualizada mediante el commit `6896ad5390154081725f3f99faa3a2f765c1085e`. Registro actualizado en este commit.
