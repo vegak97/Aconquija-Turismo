@@ -322,3 +322,55 @@ Se revisaron referencias `href`, `src`, `poster` y `data-src` presentes en las 1
 **Criterio de migración:** las rutas inexistentes se documentan como incidencias y no se migran como archivos. No se eliminó ni corrigió ninguna referencia en el sitio original. Antes de decidir si un enlace se descarta, se reemplaza o se conserva como externo, se deberá revisar su intención y, cuando corresponda, pedir autorización al usuario.
 
 **Pendiente:** comprobar todas las rutas contra el árbol completo del repositorio, mapear cada imagen por página, revisar enlaces internos y anclas, clasificar recursos externos y realizar pruebas visuales/funcionales en navegador. La Fase 0 continúa parcial; la Fase 1 no comenzó.
+
+
+## Anexo D — Referencias de imágenes con rutas/extensiones no coincidentes (2026-10-10)
+
+Esta revisión compara referencias de imagen en atributos HTML (`src`, `poster`, `data-src`, `data-image` y `data-bg`) con el árbol de archivos de la rama `main`. Las líneas indicadas corresponden a los HTML revisados en esta fecha. La revisión es estática: no se cambiaron referencias ni se confirmó visualmente qué imagen pretendía usar cada sección.
+
+### 1. Extensión solicitada distinta de la disponible
+
+| Página original | Línea | Referencia actual | Archivo encontrado en el repositorio |
+|---|---:|---|---|
+| `html/tercer_nivel/balneario_buena_vista.html` | 306 | `../../imagenes/balneario_municipal/balneario.png` | `imagenes/balneario_municipal/balneario.webp` |
+| `html/tercer_nivel/balneario_buena_vista.html` | 320 | `../../imagenes/balneario_municipal/balneario_2.png` | `imagenes/balneario_municipal/balneario_2.webp` |
+| `html/tercer_nivel/balneario_buena_vista.html` | 335 | `../../imagenes/balneario_municipal/balneario_5.png` | `imagenes/balneario_municipal/balneario_5.webp` |
+| `html/tercer_nivel/balneario_buena_vista.html` | 350 | `../../imagenes/balneario_municipal/balneario_4.png` | `imagenes/balneario_municipal/balneario_4.webp` |
+| `html/tercer_nivel/balneario_buena_vista.html` | 567 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/bosque_de_alisos.html` | 580 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/cristo_redentor.html` | 573 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/desfile_civico.html` | 570 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/el_charquiadero.html` | 580 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/festival_mayor_aconquija.html` | 569 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/fiesta_bandoneon.html` | 567 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/rio_potrero.html` | 573 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/tuneles_rio_potrero.html` | 579 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/virgen_del_valle.html` | 525 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/yunka_suma.html` | 575 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+
+La existencia de un archivo con el mismo nombre base no demuestra por sí sola que sea la imagen visualmente correcta; antes de cambiar la extensión se debe confirmar que corresponde al recurso pretendido.
+
+### 2. Referencias que resuelven a una carpeta incorrecta por la ruta relativa
+
+En páginas ubicadas en `html/tercer_nivel/`, `../imagenes/` retrocede solamente a `html/`, por lo que la referencia termina apuntando a `html/imagenes/`. Para llegar a la carpeta `imagenes/` ubicada en la raíz del repositorio se necesitan dos niveles (`../../imagenes/`). Esta explicación describe la resolución de rutas; no autoriza cambios automáticos.
+
+| Páginas y líneas | Referencia actual | Ubicación que se encontró |
+|---|---|---|
+| `bosque_de_alisos.html` línea 358; `cristo_redentor.html` línea 325; `desfile_civico.html` línea 324; `el_charquiadero.html` línea 332; `festival_mayor_aconquija.html` línea 338; `fiesta_bandoneon.html` línea 323; `rio_potrero.html` línea 326; `tuneles_rio_potrero.html` línea 358; `virgen_del_valle.html` línea 290; `yunka_suma.html` línea 328 | `../imagenes/montaña.png` | El archivo existe como `imagenes/montaña.png` en la raíz; la referencia actual resuelve a `html/imagenes/montaña.png`. |
+| `cristo_redentor.html` línea 351; `desfile_civico.html` línea 350; `el_charquiadero.html` línea 358; `fiesta_bandoneon.html` línea 349; `rio_potrero.html` línea 352; `tuneles_rio_potrero.html` línea 314; `virgen_del_valle.html` línea 320; `yunka_suma.html` línea 354 | `../imagenes/rio.jpeg` | El archivo existe como `imagenes/rio.jpeg` en la raíz; la referencia actual resuelve a `html/imagenes/rio.jpeg`. |
+| `bosque_de_alisos.html` línea 314 | `../imagenes/bosque.webp` | La referencia resuelve a `html/imagenes/bosque.webp`, que no existe. Hay un archivo `imagenes/bosque_de_alisos/bosque.webp`; falta confirmar si es el recurso pretendido. |
+
+### 3. Referencias sin archivo exacto localizado
+
+| Página original | Línea(s) | Referencia actual | Observación |
+|---|---:|---|---|
+| `html/tercer_nivel/balneario_buena_vista.html` | 538 | `../../imagenes/bosque.webp` | No existe en la raíz `imagenes/bosque.webp`. Existe `imagenes/bosque_de_alisos/bosque.webp`, pero no se presume que sea equivalente. |
+| `html/tercer_nivel/bosque_de_alisos.html` | 565 | `../../imagenes/chica.PNG` | No se encontró un archivo con esa ruta ni nombre base en el árbol actual. |
+| `html/tercer_nivel/cristo_redentor.html` | 338; `desfile_civico.html` 337; `el_charquiadero.html` 345; `festival_mayor_aconquija.html` 351; `fiesta_bandoneon.html` 336; `rio_potrero.html` 339; `tuneles_rio_potrero.html` 564; `virgen_del_valle.html` 305; `yunka_suma.html` 341 | `../imagenes/chica.PNG` en las primeras siete páginas hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
+
+### 4. Estado y criterio
+
+- Se confirmó la diferencia de extensión `.png`/`.webp` en las cuatro referencias del balneario y `.jpeg`/`.webp` en las diez referencias a la imagen nocturna del planetario.
+- Se confirmó que `../imagenes/montaña.png` y `../imagenes/rio.jpeg` apuntan a `html/imagenes/`, aunque los archivos existen en la carpeta `imagenes/` de la raíz.
+- Las referencias a `chica.PNG` y a `bosque.webp` requieren identificar la imagen correcta o decidir si la referencia está obsoleta.
+- Este anexo es un inventario de incidencias, no una orden de corrección. No se modificó ningún HTML original, CSS, imagen ni archivo React. La Fase 0 sigue abierta y la Fase 1 no comenzó.
