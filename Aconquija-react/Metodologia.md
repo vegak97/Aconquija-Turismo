@@ -578,3 +578,38 @@ Se revisó la salida compartida de PowerShell para los diez HTML de `html/tercer
 
 **Resultado:** auditoría estática de enlaces de tercer nivel documentada; no se verificó navegación en navegador, no se modificó el sitio HTML/CSS/JavaScript original ni el código React, y no se ejecutaron pruebas.
 
+## Anexo H — Decisión inicial sobre la estrategia de rutas React (2026-10-11)
+
+### H.1 Decisión acordada
+
+El usuario eligió la **opción A: rutas agrupadas por categoría** para organizar las páginas en React Router. La propuesta es utilizar segmentos legibles como `/experiencias/...`, `/lugares/...` y `/eventos/...`, en lugar de copiar las rutas físicas de los HTML originales.
+
+Esta decisión fija el criterio de organización, pero **no aprueba todavía las rutas individuales ni autoriza a implementarlas**. Cada destino se debe contrastar con el contenido y los enlaces de las 15 páginas incluidas en el alcance vigente. Las rutas candidatas se considerarán provisionales hasta que el usuario revise y apruebe el mapa completo.
+
+### H.2 Revisión de la página 1 de 15: página principal
+
+**Origen:** `index.html` en la raíz del sitio original.
+
+**Destino candidato:** `/`.
+
+La auditoría estática de los atributos `href` de la página principal encontró enlaces a cuatro páginas de segundo nivel y cinco páginas de tercer nivel que sí figuran en el inventario vigente. También aparecen anclas a secciones de la página (`#explorar`, `#lugares`, `#estaciones`, `#servicios` y `#sobre`), enlaces externos de redes/contacto, recursos de fuentes e icono, y algunos enlaces `#` cuyo comportamiento de destino aún debe revisarse.
+
+Para la migración, las anclas de la página principal deben seguir apuntando a secciones reales de esa página, y los enlaces a otras páginas deben convertirse a las rutas React que se aprueben. Los enlaces externos y recursos no deben confundirse con rutas internas. Los enlaces `href="#"` se mantienen como pendientes de inspección; no se les asigna un destino inventado.
+
+Esta revisión es estática: no se probó la navegación en navegador ni se confirmó el comportamiento de los enlaces.
+
+### H.3 Procedimiento para continuar el mapa
+
+1. Revisar las páginas de forma ordenada y registrar para cada una: archivo de origen, función/contenido, enlaces a otras páginas del inventario, enlaces a secciones, destinos externos y referencias dudosas.
+2. Proponer un destino legible bajo la categoría que corresponda; si la categoría no es clara, marcarla como pendiente en vez de decidir por suposición.
+3. Revisar todos los destinos propuestos en una tabla única y obtener aprobación del usuario antes de implementar React Router.
+4. Documentar nuevos hallazgos en este archivo y cada modificación documental en `Registro.md`.
+
+- [x] Elegida por el usuario la estrategia de rutas agrupadas por categoría.
+- [x] Revisados los tipos principales de enlaces de `index.html` a partir de la salida de PowerShell compartida.
+- [ ] Revisar y proponer las rutas de las cuatro páginas de segundo nivel.
+- [ ] Revisar y proponer las rutas de las diez páginas de tercer nivel.
+- [ ] Resolver o marcar como pendientes los destinos dudosos y enlaces `href="#"`.
+- [ ] Presentar y aprobar el mapa definitivo antes de escribir código de rutas.
+
+**Resultado:** criterio de rutas acordado y primera revisión documentada como provisional. No se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas.
