@@ -539,3 +539,42 @@ Get-ChildItem .\html\segundo_nivel -Filter *.html |
 
 **Resultado:** auditoría estática parcial. No se modificaron archivos HTML, CSS, JavaScript ni código React. No se ejecutaron pruebas de navegador; los destinos dudosos siguen pendientes de confirmación.
 
+## Anexo G — Hallazgos de la auditoría de enlaces de tercer nivel (2026-10-11)
+
+Se revisó la salida compartida de PowerShell para los diez HTML de `html/tercer_nivel/`. Esta es una inspección estática de atributos `href`: no demuestra por sí sola que un destino funcione o falle al abrirlo en un navegador. Las referencias dudosas quedan pendientes; no se cambia automáticamente el sitio original.
+
+### G.1 Navegación interna y relaciones entre páginas
+
+- En las diez páginas se repiten enlaces de navegación hacia `../../index.html` y sus secciones `#explorar`, `#lugares`, `#estaciones`, `#servicios` y `#sobre`, además de enlaces de inicio en el pie. Al migrar, habrá que definir equivalentes React y decidir cómo conservar la navegación a secciones de la página principal.
+- `html/tercer_nivel/desfile_civico.html` enlaza a `festival_mayor_aconquija.html`, que corresponde a un archivo incluido en el inventario, y a `../segundo_nivel/noches_estrelladas.html`, también inventariado.
+- En `html/tercer_nivel/desfile_civico.html` aparece `cabalgatas de pirca.html`. El nombre contiene espacios y no coincide con ninguno de los diez archivos de tercer nivel del inventario actual. Confirmar el destino esperado; no crear una página ni sustituir el enlace por inferencia.
+- Los enlaces a `../../index.html` y a archivos HTML vecinos son rutas internas relativas al archivo original. En React se deben transformar según el mapa de rutas aprobado, no copiar literalmente sin evaluar su destino.
+
+### G.2 Contacto: discrepancias que requieren confirmación
+
+- Varias páginas muestran el enlace telefónico `tel:+5438300000` con el texto visible `+54 383 000 0000`; en `balneario_buena_vista.html` se encontró además `tel:+543834961062` con el texto `Balneario: 0383 496-1062`. Verificar cuáles son los números correctos antes de trasladarlos.
+- Se repite el correo `mailto:info@aconquija.tur.ar` en la mayoría de estas páginas. Este hallazgo no confirma que la dirección esté activa ni que sea el contacto definitivo.
+- Hay enlaces generales de WhatsApp a `https://wa.me/5493834966977` y otros enlaces con mensajes precargados dirigidos a `https://wa.me/543830000000`. La diferencia entre ambos destinos debe revisarse y confirmarse; no se debe decidir automáticamente cuál conservar.
+- Los números y correos son datos de contenido, no rutas de React. Mantenerlos separados de la tabla de rutas y pedir confirmación si la fuente no permite establecer el valor correcto.
+
+### G.3 Enlaces externos y recursos
+
+- Se encontraron enlaces a Google Fonts, Instagram, Facebook, WhatsApp y Google Maps. Deben clasificarse como recursos o destinos externos, no como rutas internas de páginas React.
+- Las páginas enlazan a `../../css/style.css` y `../../imagenes/aconquija_icono.png`. Durante la migración, comprobar la existencia y el uso real de los recursos antes de decidir cómo trasladarlos.
+- La salida muestra enlaces a mapas para destinos como Balneario Municipal Buena Vista, Yunka Suma, Cristo Redentor, Río Potrero y Aconquija. Conservar sus destinos salvo que el usuario autorice cambios.
+
+### G.4 Procedimiento y estado
+
+1. Comparar cada referencia local con el inventario vigente y clasificarla como ruta interna, ancla, recurso, enlace externo, contacto o destino dudoso.
+2. Verificar el contexto de `cabalgatas de pirca.html` y de los teléfonos/WhatsApp antes de decidir equivalencias.
+3. Añadir al mapa de navegación una columna para el destino original, la ruta React propuesta y el estado de verificación.
+4. No modificar archivos originales durante la auditoría; pedir confirmación cuando la intención del enlace o el dato de contacto no se pueda deducir con seguridad.
+
+- [x] Recibida la salida de PowerShell para los diez archivos de tercer nivel.
+- [x] Registrados enlaces internos, externos y de contacto relevantes para la migración.
+- [x] Identificado un destino HTML que no figura en el inventario vigente.
+- [ ] Confirmar las referencias dudosas y los datos de contacto.
+- [ ] Completar y aprobar el mapa de rutas antes de implementar React Router.
+
+**Resultado:** auditoría estática de enlaces de tercer nivel documentada; no se verificó navegación en navegador, no se modificó el sitio HTML/CSS/JavaScript original ni el código React, y no se ejecutaron pruebas.
+
