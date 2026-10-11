@@ -374,3 +374,111 @@ En páginas ubicadas en `html/tercer_nivel/`, `../imagenes/` retrocede solamente
 - Se confirmó que `../imagenes/montaña.png` y `../imagenes/rio.jpeg` apuntan a `html/imagenes/`, aunque los archivos existen en la carpeta `imagenes/` de la raíz.
 - Las referencias a `chica.PNG` y a `bosque.webp` requieren identificar la imagen correcta o decidir si la referencia está obsoleta.
 - Este anexo es un inventario de incidencias, no una orden de corrección. No se modificó ningún HTML original, CSS, imagen ni archivo React. La Fase 0 sigue abierta y la Fase 1 no comenzó.
+
+## Anexo E — Planificación de rutas React y control de alcance (2026-10-11)
+
+**Estado: propuesta de planificación; todavía no implementada.** Este anexo organiza el trabajo previo a la migración. No autoriza por sí solo a crear componentes, modificar rutas, migrar contenido ni cambiar el sitio original. Las rutas de destino que aparecen abajo son propuestas pendientes de contrastar con los enlaces reales (`href`) del sitio.
+
+### E.1 Inventario confirmado por la revisión local
+
+El usuario ejecutó desde la raíz del repositorio:
+
+```powershell
+Get-ChildItem .\html -Recurse -Filter *.html |
+    Select-Object -ExpandProperty FullName
+```
+
+La salida mostró 14 páginas dentro de `html/`:
+
+**Segundo nivel (4):**
+- `html/segundo_nivel/aconquija_respira_verde.html`
+- `html/segundo_nivel/cultiva_tradicion.html`
+- `html/segundo_nivel/noches_estrelladas.html`
+- `html/segundo_nivel/pucara_aconquija.html`
+
+**Tercer nivel (10):**
+- `html/tercer_nivel/balneario_buena_vista.html`
+- `html/tercer_nivel/bosque_de_alisos.html`
+- `html/tercer_nivel/cristo_redentor.html`
+- `html/tercer_nivel/desfile_civico.html`
+- `html/tercer_nivel/festival_mayor_aconquija.html`
+- `html/tercer_nivel/fiesta_bandoneon.html`
+- `html/tercer_nivel/rio_potrero.html`
+- `html/tercer_nivel/tuneles_rio_potrero.html`
+- `html/tercer_nivel/virgen_del_valle.html`
+- `html/tercer_nivel/yunka_suma.html`
+
+A estas 14 páginas se suma el `index.html` original en la raíz del repositorio: **15 páginas originales incluidas en el alcance actual (1 inicio + 4 de segundo nivel + 10 de tercer nivel)**.
+
+**Exclusión explícita:** `html/tercer_nivel/el_charquiadero.html` fue eliminada intencionalmente por indicación previa del usuario y no debe recrearse ni migrarse. Las menciones anteriores a ese archivo y los conteos preliminares de 16 páginas/11 páginas de tercer nivel en los anexos previos quedan superados por este inventario local más reciente. Se conservan en el historial documental para trazabilidad, pero no son la lista vigente de migración.
+
+### E.2 Tabla inicial de rutas propuestas
+
+Los segmentos de URL se escriben en minúsculas, sin tildes y con guiones. Esta convención es una propuesta para la aplicación React, no una orden de cambiar enlaces del sitio original.
+
+| Página original | Ruta React propuesta | Estado |
+|---|---|---|
+| `index.html` | `/` | Propuesta |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `/respira-verde` | Propuesta |
+| `html/segundo_nivel/cultiva_tradicion.html` | `/cultiva-tradicion` | Propuesta |
+| `html/segundo_nivel/noches_estrelladas.html` | `/noches-estrelladas` | Propuesta |
+| `html/segundo_nivel/pucara_aconquija.html` | `/pucara-aconquija` | Propuesta |
+| `html/tercer_nivel/balneario_buena_vista.html` | `/lugares/balneario-buena-vista` | Propuesta |
+| `html/tercer_nivel/bosque_de_alisos.html` | `/naturaleza/bosque-de-alisos` | Propuesta |
+| `html/tercer_nivel/cristo_redentor.html` | `/lugares/cristo-redentor` | Propuesta |
+| `html/tercer_nivel/desfile_civico.html` | `/tradiciones/desfile-civico` | Propuesta |
+| `html/tercer_nivel/festival_mayor_aconquija.html` | `/fiestas/festival-mayor-aconquija` | Propuesta |
+| `html/tercer_nivel/fiesta_bandoneon.html` | `/fiestas/fiesta-bandoneon` | Propuesta |
+| `html/tercer_nivel/rio_potrero.html` | `/naturaleza/rio-potrero` | Propuesta |
+| `html/tercer_nivel/tuneles_rio_potrero.html` | `/naturaleza/tuneles-rio-potrero` | Propuesta |
+| `html/tercer_nivel/virgen_del_valle.html` | `/lugares/virgen-del-valle` | Propuesta |
+| `html/tercer_nivel/yunka_suma.html` | `/naturaleza/yunka-suma` | Propuesta |
+
+### E.3 Reglas para aprobar las rutas
+
+Antes de declarar definitiva la tabla:
+
+1. Revisar los `href` de `index.html` y de las 14 páginas dentro de `html/`, anotando origen, destino y tipo de enlace (interno, ancla, externo, red social o contacto).
+2. Confirmar la relación real entre secciones y páginas específicas. No inferir jerarquías solo por el nombre del archivo ni por la categoría sugerida en la URL.
+3. Detectar enlaces rotos, destinos inexistentes y diferencias de mayúsculas/minúsculas; documentar las incidencias sin corregir el sitio original.
+4. Decidir y documentar el comportamiento de las rutas desconocidas mediante una página 404.
+5. Definir cómo se tratarán las URL antiguas si la aplicación React reemplaza al sitio en el mismo dominio. No configurar redirecciones ni hosting en esta etapa.
+6. Aprobar con el usuario la tabla final antes de implementar el enrutador.
+
+### E.4 Organización prevista en React
+
+La estructura existente bajo `aconquija-react/src/` incluye `components/layout`, `components/home`, `components/ui`, `pages/second-level`, `pages/third-level`, `data` y `styles`. La propuesta es mantener esa separación y asignar una página React a cada ruta, reutilizando componentes compartidos cuando sea apropiado. Los nombres y ubicaciones finales de los archivos se confirmarán antes de crearlos.
+
+- `components/layout/`: navegación compartida y estructura común del sitio.
+- `components/home/`: bloques específicos de la página principal.
+- `components/ui/`: elementos visuales reutilizables.
+- `pages/second-level/`: las cuatro páginas de segundo nivel.
+- `pages/third-level/`: las diez páginas de tercer nivel.
+- `data/`: datos de navegación u otros contenidos compartidos, solo si su uso queda definido.
+- `styles/`: estilos globales y específicos acordados.
+
+React Router ya está instalado en las dependencias del proyecto. Su instalación no significa que las rutas estén implementadas: todavía hay que diseñarlas, aprobarlas y probarlas.
+
+### E.5 Secuencia de trabajo acordada antes de migrar
+
+1. **Planificar:** completar la tabla de rutas y el mapa de enlaces a partir de los `href` reales.
+2. **Revisar:** comparar la tabla con el inventario y resolver dudas con el usuario.
+3. **Documentar:** actualizar esta metodología y el registro de cambios antes de pasar a la implementación.
+4. **Solicitar autorización de implementación:** enumerar los archivos React que se crearán o modificarán y el objetivo de cada uno.
+5. **Implementar el enrutador:** solo después de la aprobación; definir las 15 rutas incluidas y la ruta 404.
+6. **Verificar:** probar acceso directo a cada ruta, enlaces internos, navegación atrás/adelante y compilación. No marcar pruebas que no se hayan ejecutado.
+7. **Migrar por etapas:** comenzar por la página principal y continuar con las páginas secundarias, conservando el sitio original intacto.
+
+### E.6 Estado actualizado
+
+- [x] Se recibió la salida de PowerShell que enumera las 14 páginas bajo `html/`.
+- [x] Se registró el alcance actual de 15 páginas originales, incluida la página de inicio.
+- [x] Se excluyó expresamente `el_charquiadero.html` del alcance vigente.
+- [x] Se documentó una primera propuesta de rutas para revisión.
+- [ ] Auditar los enlaces `href` de todas las páginas y construir el mapa de navegación real.
+- [ ] Aprobar con el usuario la tabla definitiva de rutas.
+- [ ] Implementar el enrutador React.
+- [ ] Iniciar la migración de contenido.
+
+**Estado de la metodología:** planificación de rutas en curso. No se ha modificado código React ni el sitio original como resultado de este anexo. La Fase 0 sigue abierta; no se considera iniciada la migración de contenido.
+
