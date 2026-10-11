@@ -823,3 +823,16 @@ El 2026-10-11, el usuario indicó que toda la información general de contacto y
 ### Estado de esta revisión
 
 Página 9 de 15 revisada estáticamente. Se documentaron la ruta candidata, el contenido del mirador, referencias de imágenes que requieren verificación, discrepancias de contacto sujetas al criterio de `index.html`, recursos compartidos e interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
+
+
+## Criterio transversal confirmado por el usuario — Imágenes ilustrativas eliminadas
+
+El usuario aclaró el 2026-10-11 que las referencias vacías de imágenes pueden ser intencionales: eliminó imágenes ilustrativas que no estaban alojadas localmente. Aplicar este criterio en la auditoría y la futura migración:
+
+- No volver a agregar imágenes ilustrativas externas que el usuario haya eliminado ni buscar sustitutos por iniciativa propia.
+- Una referencia vacía como `src=""` o `data-full=""` no se debe asumir automáticamente como un error ni rellenar con una imagen de Internet. Registrar el caso y respetar que el recurso puede haber sido retirado intencionalmente.
+- En la futura implementación React, las imágenes deben tratarse como opcionales. Si no existe una imagen local aprobada, se puede dejar el espacio vacío o no renderizar el elemento de imagen, según el diseño acordado; evitar un `src=""` en el elemento `img` si puede causar que el navegador cargue la propia página como recurso.
+- Las imágenes alojadas localmente se conservarán solo cuando su archivo y ruta se puedan comprobar. Las rutas sospechosas se documentan para verificación, no se corrigen a ciegas.
+- No se modifica el HTML original ni el código React antes de la aprobación del mapa definitivo de rutas.
+
+Este criterio se suma a las reglas del proyecto y a la indicación de extraer los datos generales de contacto y redes sociales desde `index.html`. Ante una regla existente en los documentos del proyecto que sea más específica, se respetará y se aclarará cualquier conflicto antes de implementar.
