@@ -356,16 +356,16 @@ En páginas ubicadas en `html/tercer_nivel/`, `../imagenes/` retrocede solamente
 
 | Páginas y líneas | Referencia actual | Ubicación que se encontró |
 |---|---|---|
-| `bosque_de_alisos.html` línea 358; `cristo_redentor.html` línea 325; `desfile_civico.html` línea 324; `el_charquiadero.html` línea 332; `festival_mayor_aconquija.html` línea 338; `fiesta_bandoneon.html` línea 323; `rio_potrero.html` línea 326; `tuneles_rio_potrero.html` línea 358; `virgen_del_valle.html` línea 290; `yunka_suma.html` línea 328 | `../imagenes/montaña.png` | El archivo existe como `imagenes/montaña.png` en la raíz; la referencia actual resuelve a `html/imagenes/montaña.png`. |
-| `cristo_redentor.html` línea 351; `desfile_civico.html` línea 350; `el_charquiadero.html` línea 358; `fiesta_bandoneon.html` línea 349; `rio_potrero.html` línea 352; `tuneles_rio_potrero.html` línea 314; `virgen_del_valle.html` línea 320; `yunka_suma.html` línea 354 | `../imagenes/rio.jpeg` | El archivo existe como `imagenes/rio.jpeg` en la raíz; la referencia actual resuelve a `html/imagenes/rio.jpeg`. |
-| `bosque_de_alisos.html` línea 314 | `../imagenes/bosque.webp` | La referencia resuelve a `html/imagenes/bosque.webp`, que no existe. Hay un archivo `imagenes/bosque_de_alisos/bosque.webp`; falta confirmar si es el recurso pretendido. |
+| `bosque_de_alisos.html` línea 357; `cristo_redentor.html` línea 324; `desfile_civico.html` línea 323; `el_charquiadero.html` línea 331; `festival_mayor_aconquija.html` línea 337; `fiesta_bandoneon.html` línea 322; `rio_potrero.html` línea 325; `tuneles_rio_potrero.html` línea 357; `virgen_del_valle.html` línea 289; `yunka_suma.html` línea 327 | `../imagenes/montaña.png` | El archivo existe como `imagenes/montaña.png` en la raíz; la referencia actual resuelve a `html/imagenes/montaña.png`. |
+| `cristo_redentor.html` línea 350; `desfile_civico.html` línea 349; `el_charquiadero.html` línea 357; `fiesta_bandoneon.html` línea 348; `rio_potrero.html` línea 351; `tuneles_rio_potrero.html` línea 313; `virgen_del_valle.html` línea 319; `yunka_suma.html` línea 353 | `../imagenes/rio.jpeg` | El archivo existe como `imagenes/rio.jpeg` en la raíz; la referencia actual resuelve a `html/imagenes/rio.jpeg`. |
+| `bosque_de_alisos.html` línea 313 | `../imagenes/bosque.webp` | La referencia resuelve a `html/imagenes/bosque.webp`, que no existe. Hay un archivo `imagenes/bosque_de_alisos/bosque.webp`; falta confirmar si es el recurso pretendido. |
 
 ### 3. Referencias sin archivo exacto localizado
 
 | Página original | Línea(s) | Referencia actual | Observación |
 |---|---:|---|---|
 | `html/tercer_nivel/balneario_buena_vista.html` | 538 | `../../imagenes/bosque.webp` | No existe en la raíz `imagenes/bosque.webp`. Existe `imagenes/bosque_de_alisos/bosque.webp`, pero no se presume que sea equivalente. |
-| `html/tercer_nivel/bosque_de_alisos.html` | 565 | `../../imagenes/chica.PNG` | No se encontró un archivo con esa ruta ni nombre base en el árbol actual. |
+| `html/tercer_nivel/bosque_de_alisos.html` | 564 | `../../imagenes/chica.PNG` | No se encontró un archivo con esa ruta ni nombre base en el árbol actual. |
 | `html/tercer_nivel/cristo_redentor.html` | 338; `desfile_civico.html` 337; `el_charquiadero.html` 345; `festival_mayor_aconquija.html` 351; `fiesta_bandoneon.html` 336; `rio_potrero.html` 339; `tuneles_rio_potrero.html` 564; `virgen_del_valle.html` 305; `yunka_suma.html` 341 | `../imagenes/chica.PNG` en las primeras siete páginas hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
 
 ### 4. Estado y criterio
