@@ -206,3 +206,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** se actualizó el Anexo N para marcar `/lugares/balneario-municipal-buena-vista` como ruta aprobada por el usuario.
 - **Alcance:** la aprobación corresponde solo a esta página; el mapa global de las 15 páginas continúa pendiente. No se modificó código React ni se implementó la ruta.
 - **Resultado:** metodología actualizada mediante el commit 7edc5512b0b7309c3b2d63f571ee0b3f4f959d0c. Registro actualizado en este commit.
+
+
+### 2026-10-11 — Página 8: Bosque de Alisos
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo O con la revisión estática de `html/tercer_nivel/bosque_de_alisos.html). Se propone provisionalmente la ruta `/lugares/bosque-de-alisos`.
+- **Hallazgos:** relación del atractivo individual con el circuito Respira Verde; una extensión `.webo` sospechosa en la imagen hero, dos imágenes con `src=""`, referencias `data-full=""`, diferencias de extensión en logotipos, datos de contacto genéricos y detalles estructurales del encabezado por verificar.
+- **Alcance:** solo documentación. No se modificó código React ni el sitio original; la ruta está pendiente de aprobación y no se implementó.
+- **Resultado:** metodología actualizada mediante el commit 6aadc38a1a2337875553c0b7fde9b0f326c5a087. Registro actualizado en este commit.
