@@ -144,3 +144,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** continuar la revisión secuencial de las 15 páginas, guardar hallazgos útiles para el mapa de rutas y evitar convertir enlaces no verificados en rutas definitivas.
 - **Autorización:** petición explícita del usuario del 2026-10-11 para revisar las 15 páginas y documentar los hallazgos útiles en `Metodologia.md` y cada cambio en `Registro.md`; elección expresa de rutas agrupadas por categoría.
 - **Resultado:** metodología actualizada en GitHub mediante el commit `bf04b9f40a848146d860aae2004cca319d36e5d0`. Esta entrada registra la actualización documental. La ruta candidata sigue pendiente de aprobación y los destinos no inventariados quedan sin resolver. No se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas de navegador.
+
+
+### 2026-10-11 20:10:00 -03:00
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo K a la metodología con la revisión estática de `html/segundo_nivel/noches_estrelladas.html` (página 4 de 15). Se documentó la ruta candidata `/lugares/planetario-janaxpacha-huasi`, el destino sospechoso `....//index.html#lugares`, una referencia de correo aparentemente mal formada y los principales recursos locales.
+- **Motivo:** continuar la revisión secuencial de las páginas originales y registrar incidencias sin corregirlas por suposición ni empezar la implementación antes de aprobar el mapa definitivo.
+- **Autorización:** petición explícita del usuario del 2026-10-11 para revisar las 15 páginas y documentar los hallazgos útiles en `Metodologia.md` y cada cambio en `Registro.md`; elección expresa de rutas agrupadas por categoría.
+- **Resultado:** metodología actualizada en GitHub mediante el commit `67a5db23ef3da03ad58f55f6730a600f6ba6648d`. Registro actualizado en este commit. La ruta candidata y las incidencias quedan pendientes de validación; no se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas de navegador.
