@@ -28,15 +28,14 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 
 **Objetivo:** conocer todo lo que existe antes de trasladarlo.
 
-- [ ] Revisar la estructura completa del sitio original.
-- [ ] Enumerar las páginas HTML, incluida la página de inicio y todas las páginas secundarias.
-- [ ] Identificar hojas de estilo CSS, archivos JavaScript, fuentes, iconos y dependencias externas.
-- [ ] Inventariar las imágenes y registrar qué página o sección utiliza cada una.
-- [ ] Revisar enlaces internos, enlaces externos, redes sociales, botones y destinos de navegación.
-- [ ] Identificar interacciones: menú adaptable, barra de progreso de desplazamiento, animaciones de aparición, pestañas de estaciones, galería/lightbox y cualquier otra función existente.
-- [ ] Registrar posibles rutas rotas, errores o comportamientos dudosos sin corregirlos todavía.
-- [ ] Preparar una tabla de correspondencia entre los archivos originales y los componentes o páginas React previstos.
-- [ ] Presentar los hallazgos y pedir autorización para comenzar la siguiente etapa.
+- [x] Revisar la estructura del repositorio y enumerar las páginas HTML identificadas.
+- [x] Identificar las hojas de estilo CSS y el JavaScript principal.
+- [ ] Completar el inventario de imágenes y asociarlas con cada página o sección.
+- [ ] Completar la revisión de enlaces internos, externos y destinos de navegación.
+- [x] Identificar las interacciones principales descritas en `js/scrip.js`.
+- [x] Registrar las referencias obsoletas informadas por el usuario, sin corregirlas en esta fase.
+- [x] Preparar una tabla inicial de correspondencia entre páginas originales y destinos React propuestos.
+- [x] Presentar el diagnóstico al usuario y obtener autorización para documentarlo en esta metodología y en el registro.
 
 **Condición para avanzar:** el inventario debe estar completo en lo posible y el usuario debe conocer cualquier problema que implique ampliar el alcance.
 
@@ -212,17 +211,19 @@ Después de trabajar:
 
 También se localizaron estas páginas de tercer nivel: `html/tercer_nivel/cristo_redentor.html`, `bosque_de_alisos.html`, `virgen_del_valle.html`, `balneario_buena_vista.html`, `tuneles_rio_potrero.html`, `rio_potrero.html`, `yunka_suma.html`, `fiesta_bandoneon.html`, `festival_mayor_aconquija.html` y `desfile_civico.html`, todas dentro de `html/tercer_nivel/`.
 
-### A.2 Pendientes de verificar
+### A.2 Estado de verificación y pendientes
 
-- [ ] Confirmar el inventario completo de HTML y recursos de imágenes; la revisión remota no ha establecido todavía una lista exhaustiva.
-- [ ] Comprobar en la copia local el archivo `js/atractivos.js`: no se encontró en la ruta remota esperada, aunque dos páginas secundarias lo referencian.
-- [ ] Revisar la ruta exacta y el nombre del archivo de la página “Cruce de los Nevados”; no se encontró con el nombre/ruta consultados.
-- [ ] Verificar los destinos de enlaces que no aparecieron en las rutas remotas esperadas: `html/segundo_nivel/lugares/cabalgatas.html`, `estrellas.html`, `quebrada.html`, `gastronomia.html`, `bosque.html`, `artesanias.html`, `laguna.html`, `filo-amanecer.html`, `mirador.html` y `html/tercer_nivel/cabalgatas de pirca.html`. Estos nombres son candidatos de búsqueda, no un diagnóstico definitivo de enlaces rotos.
-- [ ] Localizar la carpeta de imágenes y asociar los recursos con cada página. El recurso binario `imagenes/aconquija_icono.png` parece existir; el intento de lectura como texto no permite validar su contenido visual.
-- [ ] Confirmar la estructura local de Vite/React. Los archivos `Aconquija-react/package.json`, `src/App.jsx`, `src/main.jsx` y `src/index.css` no se encontraron en las rutas remotas consultadas; podrían existir únicamente en la computadora local o no haberse subido.
-- [ ] Preparar una tabla completa de enlaces internos, recursos, dependencias externas y correspondencia entre páginas originales y futuras páginas/componentes React.
-- [ ] Ejecutar el sitio original en navegador y comprobar visualmente enlaces e interacciones cuando se autorice esa revisión práctica.
+- [x] Se confirmó con el usuario que la estructura local y la del repositorio remoto coinciden.
+- [x] Se confirmó el inventario de 16 páginas HTML originales: la página principal, cuatro páginas de segundo nivel y once páginas de tercer nivel. La página `aconquija-react/index.html` pertenece a la aplicación Vite, no al sitio original.
+- [x] Se identificaron los archivos principales `css/style.css`, `css/atractivos.css` y `js/scrip.js`.
+- [x] El usuario aclaró que las referencias a `js/atractivos.js` y a determinados HTML que no existen son restos obsoletos que olvidó retirar. Se documentan como referencias por revisar, no como archivos reales que deban migrarse.
+- [ ] Completar el inventario visual de imágenes y registrar qué página/sección usa cada recurso.
+- [ ] Completar la auditoría de enlaces internos, externos, redes sociales y destinos de navegación. La detección textual inicial no equivale a una comprobación manual en navegador.
+- [ ] Verificar visualmente las páginas y sus interacciones en un navegador.
+- [ ] Revisar dependencias externas, fuentes, iconos y recursos de terceros de manera exhaustiva.
+- [ ] Confirmar el inventario final de rutas dudosas con una revisión sistemática de todos los atributos href y src.
 
+No se ha ejecutado el sitio en un navegador ni se ha realizado una prueba funcional integral. Las referencias obsoletas no se han eliminado; cualquier limpieza del HTML se tratará como un cambio separado, aunque el usuario haya aclarado que los destinos referenciados no existen.
 ### A.3 Interacciones identificadas en el JavaScript principal
 
 1. Barra de progreso de desplazamiento.
@@ -235,3 +236,66 @@ También se localizaron estas páginas de tercer nivel: `html/tercer_nivel/crist
 8. Acciones para compartir o copiar contenido.
 
 **Estado del inventario:** parcial. Esta inspección no modifica el sitio original y no autoriza correcciones de rutas ni migraciones. Antes de iniciar la fase siguiente, se debe revisar la copia local, completar el inventario y presentar los archivos concretos previstos para esa etapa.
+
+## Anexo B — Correspondencia inicial del sitio original con React (2026-10-10)
+
+Esta tabla es una propuesta de arquitectura para orientar la migración. Los nombres de destino son propuestas; no implica que esos archivos ya existan ni autoriza su creación en esta fase. La organización final se confirmará al comenzar la Fase 1, después de revisar la estructura real de la aplicación Vite.
+
+### B.1 Página principal y recursos comunes
+
+| Origen actual | Destino React propuesto | Alcance |
+|---|---|---|
+| `index.html` | `src/pages/Inicio.jsx` | Contenido de la página principal y sus secciones. |
+| `css/style.css` | `src/styles/global.css` y estilos específicos de componentes | Estilos globales, distribución, tipografía y diseño adaptable; conservar el aspecto original. |
+| `css/atractivos.css` | `src/styles/atractivos.css` o estilos de páginas/componentes equivalentes | Estilos de las páginas de atractivos, tras comprobar qué reglas utiliza cada una. |
+| `js/scrip.js` | Estado, efectos y manejadores en componentes React | Adaptar las interacciones a React; no copiar el script de forma indiscriminada. |
+| `imagenes/` | `public/imagenes/` (propuesta) | Incorporar copias de los recursos que se usen; no mover ni borrar los originales. |
+
+### B.2 Páginas de segundo nivel
+
+| Página original | Página React propuesta |
+|---|---|
+| `html/segundo_nivel/aconquija_respira_verde.html` | `src/pages/RespiraVerde.jsx` |
+| `html/segundo_nivel/cultiva_tradicion.html` | `src/pages/CultivaTradicion.jsx` |
+| `html/segundo_nivel/noches_estrelladas.html` | `src/pages/NochesEstrelladas.jsx` |
+| `html/segundo_nivel/pucara_aconquija.html` | `src/pages/PucaraAconquija.jsx` |
+
+### B.3 Páginas de tercer nivel
+
+| Página original | Página React propuesta |
+|---|---|
+| `html/tercer_nivel/balneario_buena_vista.html` | `src/pages/BalnearioBuenaVista.jsx` |
+| `html/tercer_nivel/bosque_de_alisos.html` | `src/pages/BosqueDeAlisos.jsx` |
+| `html/tercer_nivel/cristo_redentor.html` | `src/pages/CristoRedentor.jsx` |
+| `html/tercer_nivel/desfile_civico.html` | `src/pages/DesfileCivico.jsx` |
+| `html/tercer_nivel/el_charquiadero.html` | `src/pages/ElCharquiadero.jsx` |
+| `html/tercer_nivel/festival_mayor_aconquija.html` | `src/pages/FestivalMayor.jsx` |
+| `html/tercer_nivel/fiesta_bandoneon.html` | `src/pages/FiestaBandoneon.jsx` |
+| `html/tercer_nivel/rio_potrero.html` | `src/pages/RioPotrero.jsx` |
+| `html/tercer_nivel/tuneles_rio_potrero.html` | `src/pages/TunelesRioPotrero.jsx` |
+| `html/tercer_nivel/virgen_del_valle.html` | `src/pages/VirgenDelValle.jsx` |
+| `html/tercer_nivel/yunka_suma.html` | `src/pages/YunkaSuma.jsx` |
+
+### B.4 Componentes reutilizables candidatos
+
+| Componente propuesto | Responsabilidad posible |
+|---|---|
+| `Navbar.jsx` | Encabezado, navegación y menú móvil. |
+| `Hero.jsx` | Presentación principal con imagen, título, texto y llamada a la acción. |
+| `PlaceCard.jsx` y `CardGrid.jsx` | Tarjetas reutilizables para excursiones y atractivos. |
+| `SeasonTabs.jsx` | Pestañas y paneles de estaciones. |
+| `Gallery.jsx` y `Lightbox.jsx` | Galería, ampliación y navegación entre imágenes. |
+| `ShareButtons.jsx` | Compartir por redes o copiar el enlace. |
+| `Reveal.jsx` | Aparición de elementos al entrar en pantalla, si se conserva ese efecto. |
+| `Footer.jsx` | Información de contacto, enlaces y redes sociales. |
+| `PageLayout.jsx` | Estructura común de páginas secundarias, si las páginas comparten suficiente estructura. |
+
+La lista es orientativa: en la Fase 1 se revisará qué componentes realmente convienen y cómo resolver las rutas, sin añadir dependencias nuevas ni alterar el diseño por iniciativa propia.
+
+### B.5 Interacciones que deben preservarse y adaptarse
+
+Según la lectura de `js/scrip.js`, deben evaluarse: barra de progreso de lectura; estado de la navegación al desplazarse; menú móvil con superposición y cierre por botón, enlace o Escape; animaciones `reveal` mediante `IntersectionObserver`; pestañas de estaciones; lightbox con anterior/siguiente, cierre por fondo y Escape/flechas; y acciones para compartir o copiar el enlace. Su presencia y funcionamiento deben verificarse página por página antes de declarar la migración completa.
+
+### B.6 Estado de la Fase 0
+
+**Estado: diagnóstico inicial documentado; Fase 0 todavía parcial.** La tabla de correspondencia y el inventario de páginas ya están documentados, pero falta completar la asociación de imágenes, la auditoría exhaustiva de enlaces y la verificación visual/funcional en navegador. No se ejecutaron pruebas de la aplicación durante esta actualización. No se inició la Fase 1 ni se modificó el código del sitio original.
