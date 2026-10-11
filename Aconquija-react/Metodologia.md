@@ -669,3 +669,22 @@ Las referencias a hojas de estilo, imágenes, fuentes y redes sociales deben cla
 ### Estado de esta revisión
 
 Página 3 de 15 revisada estáticamente. Se documentaron la ruta candidata, los enlaces a tres páginas incluidas en el inventario y los destinos no inventariados. Queda pendiente revisar las páginas destino y decidir sus slugs definitivos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se ejecutaron pruebas de navegador.
+
+
+## Anexo K — Revisión de la página 4 de 15: Noches Estrelladas / Planetario Janaxpacha Huasi (2026-10-11)
+
+**Archivo revisado:** `html/segundo_nivel/noches_estrelladas.html` (591 líneas). Revisión estática del HTML de la rama `main`; no se ejecutó en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento y el `<h1>` identifican el contenido como “Planetario Janaxpacha Huasi”. Por lo tanto, aunque el archivo se llame `noches_estrelladas.html`, la página está centrada en un atractivo concreto: el planetario.
+- **Ruta React candidata:** `/lugares/planetario-janaxpacha-huasi`. Es provisional. La clasificación se basa en que la página describe un sitio/atractivo visitable; deberá contrastarse con el contenido y la navegación del resto del sitio antes de aprobar el mapa.
+- **Navegación interna:** los enlaces del encabezado regresan a `index.html` y a sus secciones. En la línea 31 aparece el destino anómalo `....//index.html#lugares`, que no coincide con el patrón de los demás enlaces `../../index.html#...`. Se documenta como probable error de ruta, sin corregir el HTML original.
+- **Enlaces de visita y contacto:** hay un enlace a Google Maps en la línea 437, un enlace telefónico en la línea 469, una referencia de correo en la línea 470 cuyo atributo `href` comienza con `>Maxyz000@icloud.com` y un enlace de WhatsApp con mensaje en la línea 480. La referencia de correo parece mal formada; no se debe convertir en un destino React ni cambiar el dato sin confirmar el correo correcto.
+- **Otros destinos externos:** se encontró un enlace a una búsqueda de Google Maps sobre Aconquija en la línea 491. Estos enlaces externos/contacto deben conservarse como tales, no mapearse como rutas internas.
+- **Recursos locales referenciados:** `../../imagenes/planetario/planetario_3.webp`, `planetario_4.webp`, `noche.webp` y `planetario_2.webp`, además de los logotipos y `../../js/scrip.js`. Las referencias se anotan para preservar la asociación de imágenes e interacción al migrar; esta revisión del HTML no confirma por sí sola que cada recurso cargue correctamente en navegador.
+- **Convención de categorías:** el nombre de archivo “noches estrelladas” no debe imponerse como slug definitivo si la página visible identifica otro contenido. La propuesta prioriza el nombre del atractivo, sujeto a aprobación.
+
+### Estado de esta revisión
+
+Página 4 de 15 revisada estáticamente. Se documentaron una ruta candidata, una referencia de navegación sospechosa, un enlace de correo mal formado y los recursos principales. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
