@@ -751,7 +751,7 @@ El usuario confirmó que aprueba `/circuitos/respira-verde` y aclaró que las ta
 ### Hallazgos para el mapa de rutas
 
 - **Título y contenido principal:** el título del documento es “Balneario Municipal Buena Vista — Aconquija Turismo” y el H1 es “Balneario Municipal Buena Vista”. La página describe la pileta municipal, sus sectores de profundidad, tobogán, quinchos y asadores; incluye acceso, equipamiento, galería e información lateral.
-- **Ruta React candidata:** `/lugares/balneario-municipal-buena-vista`. Es una propuesta provisional, pendiente de aprobación del usuario y de contrastarla con el mapa completo de las 15 páginas.
+- **Ruta React aprobada para esta página:** `/lugares/balneario-municipal-buena-vista`. El usuario aprobó expresamente esta ruta el 2026-10-11. El mapa global de las 15 páginas sigue pendiente de revisión y aprobación.
 - **Categorías y datos presentados:** “Pileta Municipal”, “Recreación Familiar” y “Buena Vista, Aconquija”; duración “Medio día”, temporada primavera/verano y aptitud familiar. Son contenidos del HTML que se deben preservar durante la migración, sin asumir que sus datos están actualizados externamente.
 - **Navegación y recursos compartidos:** enlaces del encabezado y pie al inicio y sus secciones mediante `../../index.html#...`; hoja `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logotipos `../../imagenes/logo_aconquija(1).webp` y `../../imagenes/logo_aconquija(2).webp`, y script `../../js/scrip.js`.
 - **Imágenes y galería:** hero y galería referencian `../../imagenes/balneario_municipal/balneario.webp`, `balneario_2.webp`, `balneario_5.webp` y `balneario_4.webp`. Los textos alternativos de las primeras tres las identifican como “imagen ilustrativa”. Las imágenes primera y cuarta tienen `data-full=""`, a diferencia de las otras dos, que indican una ruta. Se registra para comprobar durante las pruebas de la futura migración, sin corregir el original ahora.
@@ -762,3 +762,8 @@ El usuario confirmó que aprueba `/circuitos/respira-verde` y aclaró que las ta
 ### Estado de esta revisión
 
 Página 7 de 15 revisada estáticamente. Se documentaron la ruta candidata, contenido, recursos, interacciones y asuntos pendientes de verificación en imágenes y contactos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
+
+
+### Aprobación de ruta — Balneario Municipal Buena Vista
+
+El usuario aprobó expresamente la ruta React `/lugares/balneario-municipal-buena-vista` para la página `html/tercer_nivel/balneario_buena_vista.html` el 2026-10-11. La aprobación aplica a esta página; el mapa global de las 15 páginas continúa pendiente. No se modificó código ni se implementó la ruta.
