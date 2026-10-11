@@ -175,3 +175,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** se actualizó el Anexo L para reflejar que el usuario aprobó expresamente la ruta `/lugares/pucara-de-aconquija`.
 - **Alcance:** queda aprobada la ruta individual de Pucará; el mapa completo de las 15 páginas sigue pendiente. No se modificó código React ni se implementó la ruta.
 - **Resultado:** metodología actualizada mediante el commit `e2d3cdd924128765b42cf0c07eee2b8b95348817`. Registro actualizado en este commit.
+
+
+### 2026-10-11 — Página 6: Respira Verde
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se documentó la revisión estática de `html/segundo_nivel/aconquija_respira_verde.html` (400 líneas) en el Anexo M. Ruta candidata propuesta: `/circuitos/respira-verde`, pendiente de aprobación.
+- **Hallazgos:** se inventariaron enlaces a atractivos, referencias a imágenes y recursos compartidos, posibles destinos relativos incorrectos para Cabalgatas y Senderismo, una tarjeta sin título y una tarjeta de Bosque de Alisos repetida.
+- **Alcance:** no se modificó código React ni el sitio original. No se implementaron rutas ni se ejecutaron pruebas de navegador.
+- **Resultado:** metodología actualizada mediante el commit `7a085a2322da8bc6d9a2007960226c2e6ba04b8d`.
