@@ -767,3 +767,24 @@ Página 7 de 15 revisada estáticamente. Se documentaron la ruta candidata, cont
 ### Aprobación de ruta — Balneario Municipal Buena Vista
 
 El usuario aprobó expresamente la ruta React `/lugares/balneario-municipal-buena-vista` para la página `html/tercer_nivel/balneario_buena_vista.html` el 2026-10-11. La aprobación aplica a esta página; el mapa global de las 15 páginas continúa pendiente. No se modificó código ni se implementó la ruta.
+
+
+## Anexo O — Página 8 de 15: Bosque de Alisos
+
+**Archivo revisado:** `html/tercer_nivel/bosque_de_alisos.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó que los recursos existan o carguen.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento es “Bosque de Alisos — Aconquija Turismo” y el H1 es “Bosque de Alisos”. Presenta el bosque montano de yungas, flora y fauna, duración y dificultad estimadas, acceso, equipamiento y galería.
+- **Ruta React candidata:** `/lugares/bosque-de-alisos`. Es una propuesta provisional, pendiente de aprobación del usuario y de contrastarla con el mapa global de 15 páginas.
+- **Relación con Respira Verde:** la página describe al Bosque de Alisos como parte del circuito Respira Verde y menciona conexiones con Charqueadero, Río Potrero y los túneles. Esto no cambia la ruta independiente propuesta para el circuito (`/circuitos/respira-verde`): esta página representa un atractivo individual.
+- **Recursos de imagen con posibles errores:** el fondo hero usa `../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webo` (extensión escrita como `.webo`), mientras la galería referencia `../../imagenes/bosque_de_alisos/bosque.webp` y `../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webp`. Dos imágenes de la galería tienen `src=""`; el hero y otras imágenes tienen `data-full=""`. Registrar para verificar contra el árbol de imágenes y las pruebas de navegador; no corregir ahora el sitio original.
+- **Contenido editorial:** la galería explica que algunas imágenes de bosque nuboso son ilustrativas. Debe conservarse esa distinción al migrar y no presentarse una imagen ilustrativa como fotografía local confirmada.
+- **Navegación y recursos compartidos:** enlaces de navegación al inicio y sus secciones; CSS `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logotipo de encabezado `../../imagenes/logo_aconquija(1).webp`, logotipo del pie `../../imagenes/logo_aconquija(2).png` y script `../../js/scrip.js`. Las extensiones distintas de los logotipos deben verificarse contra los archivos reales.
+- **Mapa y contacto:** el mapa apunta a una búsqueda de Google Maps para Yunka Suma, Aconquija. La ficha muestra el teléfono genérico `+54 383 000 0000` y el correo `info@aconquija.tur.ar`; el botón WhatsApp usa `https://wa.me/543830000000`, mientras el enlace de redes/pie usa `https://wa.me/5493834966977`. Confirmar datos definitivos antes de migrarlos; no elegir por suposición.
+- **Detalles estructurales:** se observa un cierre `</div>` adicional después del bloque de iconos del encabezado y contenedores `icon-circle` anidados en los accesos de Facebook y WhatsApp. Dejar pendiente la verificación estructural/visual; no modificar el original en esta fase.
+- **Interacciones:** barra de progreso de lectura, navegación adaptable, galería con lightbox y controles anterior/siguiente/cerrar, compartir por Facebook/WhatsApp y copiar enlace.
+
+### Estado de esta revisión
+
+Página 8 de 15 revisada estáticamente. Se documentaron la ruta candidata, la relación con Respira Verde, recursos de imágenes posiblemente mal referenciados, datos de contacto genéricos y las interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
