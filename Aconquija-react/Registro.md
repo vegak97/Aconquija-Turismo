@@ -232,3 +232,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Contacto/redes:** se aplicó el criterio confirmado por el usuario de tomar los datos generales de contacto y perfiles sociales de `index.html`, sin reutilizar automáticamente los valores locales de esta página.
 - **Alcance:** solo documentación. No se modificó código React ni el sitio original; la ruta queda pendiente de aprobación y no se implementó. No se ejecutaron pruebas de navegador.
 - **Resultado:** metodología actualizada mediante el commit 345b0415f7c1560480ea5fd8d77988d612318da7. Registro actualizado en este commit.
+
+
+### 2026-10-11 — Criterio de imágenes retiradas
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Aclaración del usuario:** las referencias de imagen vacías pueden ser intencionales porque se eliminaron imágenes ilustrativas no alojadas localmente.
+- **Regla acordada:** no reponer imágenes externas ni inventar sustitutos; no considerar automáticamente `src=""` o `data-full=""` como un error; verificar los archivos locales antes de conservar referencias sospechosas. En la futura migración React, tratar las imágenes como opcionales y evitar un elemento `img` con `src=""`; según el diseño aprobado, dejar el espacio vacío o no renderizar la imagen.
+- **Alcance:** documentación únicamente. Se mantienen las reglas del proyecto y la condición de no tocar el código hasta aprobar el mapa definitivo de rutas.
+- **Resultado:** metodología actualizada mediante el commit 517b5b0f61cf3c02d24adfce8f2bb56f36f7672f. Registro actualizado en este commit.
