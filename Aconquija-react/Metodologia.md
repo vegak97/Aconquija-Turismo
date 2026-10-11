@@ -803,3 +803,23 @@ El 2026-10-11, el usuario indicó que toda la información general de contacto y
 - No se debe inventar un dato si falta en `index.html`, ni cambiar el HTML original como parte de esta auditoría.
 - Los enlaces específicos de un atractivo —por ejemplo, su ubicación en Google Maps— se analizan aparte y no se sustituyen por enlaces generales de contacto.
 - Este criterio documenta la fuente de verdad para la futura migración; todavía no autoriza cambios en componentes React ni en el sitio original.
+
+
+## Anexo P — Página 9 de 15: Cristo Redentor de Aconquija
+
+**Archivo revisado:** `html/tercer_nivel/cristo_redentor.html`. Revisión estática del HTML en `main`; no se ejecutó en navegador ni se verificó que las imágenes carguen.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Cristo Redentor de Aconquija — Aconquija Turismo” y H1 “Cristo Redentor de Aconquija”. Describe un mirador en El Lindero, vistas de los Nevados del Aconquija, sendero corto de 30 a 60 minutos ida y vuelta, acceso libre y recomendaciones para la visita.
+- **Ruta React candidata:** `/lugares/cristo-redentor`. Es una propuesta provisional, pendiente de aprobación del usuario y de contrastarla con el mapa global de 15 páginas.
+- **Ubicación y mapa:** el contenido indica El Lindero, municipio de Aconquija. El enlace de mapa usa una búsqueda de Google Maps para “Cristo Redentor Aconquija Catamarca”; debe conservarse como enlace externo específico del atractivo, no como ruta interna React.
+- **Imágenes:** el fondo hero referencia `../../imagenes/cristo_redentor/cristo_redentor_2.webp`. La primera imagen de galería es externa de Unsplash y está marcada explícitamente como ilustrativa. Las otras tres imágenes usan `../imagenes/montaña.webp`, `../imagenes/chica.webp` y `../imagenes/rio.webp`; desde la ubicación `html/tercer_nivel/`, esas rutas relativas parecen apuntar a `html/imagenes/` en vez de la carpeta raíz `imagenes/`. Las tres también tienen `data-full=""`. Registrar para comprobar contra los archivos reales y las pruebas de navegador; no corregir el original ahora.
+- **Contacto y redes sociales:** esta página contiene valores genéricos de teléfono/correo y enlaces sociales propios. Conforme al criterio transversal confirmado por el usuario, durante la migración los datos globales de contacto y redes (correo, teléfono, WhatsApp, Instagram, Facebook, TikTok y otros canales) deben extraerse de `index.html`; no copiar los valores distintos de esta página ni inventar datos faltantes. Los botones de compartir son interacciones de la página y se documentan por separado de los enlaces generales de perfil.
+- **Navegación y recursos compartidos:** CSS `../../css/style.css`, favicon `../../imagenes/aconquija_icono.png`, logotipo de cabecera `../../imagenes/logo_aconquija(1).png`, logotipo de pie `../../imagenes/logo_aconquija(2).webp` y JavaScript `../../js/scrip.js`. Las extensiones de los logotipos difieren de otras páginas y deben verificarse contra el inventario real.
+- **Detalles estructurales:** se observa un cierre `</div>` adicional cerca del final del encabezado, y hay contenedores `icon-circle` anidados en los accesos de Facebook/WhatsApp. En el pie, los iconos de Instagram y Facebook aparecen como elementos visuales sin enlace propio; verificar si deben reutilizar los destinos oficiales de `index.html` al migrar.
+- **Interacciones:** navegación adaptable, barra de progreso de lectura, galería/lightbox con anterior/siguiente/cerrar, botones para compartir por Facebook y WhatsApp, y copiar enlace.
+
+### Estado de esta revisión
+
+Página 9 de 15 revisada estáticamente. Se documentaron la ruta candidata, el contenido del mirador, referencias de imágenes que requieren verificación, discrepancias de contacto sujetas al criterio de `index.html`, recursos compartidos e interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
