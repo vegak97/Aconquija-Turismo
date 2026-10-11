@@ -199,3 +199,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Hallazgos:** contenido de pileta municipal y recreación familiar; referencias a imágenes, CSS y JavaScript; galería/lightbox, barra de progreso y acciones para compartir; discrepancias entre los destinos de WhatsApp y datos de contacto genéricos; detalles estructurales a verificar en el encabezado y en los iconos.
 - **Alcance:** no se modificó código React ni el sitio original. La ruta queda pendiente de aprobación; no se implementó ninguna ruta ni se ejecutaron pruebas de navegador.
 - **Resultado:** metodología actualizada mediante el commit 04d99dae37dbd7d018ccfd5a80530125b14f106e. Registro actualizado en este commit.
+
+
+### 2026-10-11 — Aprobación de ruta: Balneario Municipal Buena Vista
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se actualizó el Anexo N para marcar `/lugares/balneario-municipal-buena-vista` como ruta aprobada por el usuario.
+- **Alcance:** la aprobación corresponde solo a esta página; el mapa global de las 15 páginas continúa pendiente. No se modificó código React ni se implementó la ruta.
+- **Resultado:** metodología actualizada mediante el commit 7edc5512b0b7309c3b2d63f571ee0b3f4f959d0c. Registro actualizado en este commit.
