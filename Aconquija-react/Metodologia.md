@@ -613,3 +613,38 @@ Esta revisión es estática: no se probó la navegación en navegador ni se conf
 - [ ] Presentar y aprobar el mapa definitivo antes de escribir código de rutas.
 
 **Resultado:** criterio de rutas acordado y primera revisión documentada como provisional. No se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas.
+
+## Anexo I — Revisión de rutas de la página 2 de 15: Aconquija Respira Verde (2026-10-11)
+
+**Archivo de origen:** `html/segundo_nivel/aconquija_respira_verde.html`.
+
+**Ruta React candidata:** `/experiencias/respira-verde`. Es provisional y deberá validarse al comparar el contenido de la página con el mapa completo.
+
+### I.1 Enlaces internos hacia páginas del inventario vigente
+
+La auditoría estática encontró referencias a estas páginas de tercer nivel que sí forman parte del inventario vigente:
+
+| Destino original enlazado | Ruta React candidata | Estado |
+|---|---|---|
+| `../tercer_nivel/tuneles_rio_potrero.html` | `/lugares/tuneles-rio-potrero` | Provisional; confirmar categoría al revisar el contenido |
+| `../tercer_nivel/bosque_de_alisos.html` | `/lugares/bosque-de-alisos` | Provisional |
+| `../tercer_nivel/rio_potrero.html` | `/lugares/rio-potrero` | Provisional |
+| `../tercer_nivel/yunka_suma.html` | `/lugares/yunka-suma` | Provisional |
+
+### I.2 Destinos dudosos o no incluidos en el inventario
+
+- Se detectó `../tercer_nivel/Cruce de los Nevados.html`. El nombre contiene espacios y no coincide con ninguno de los diez archivos de tercer nivel del inventario vigente. No se asigna una ruta React ni se crea una página hasta confirmar el destino pretendido.
+- Se detectaron `lugares/cabalgatas.html` y `lugares/senderismo.html`, que no figuran entre las 15 páginas incluidas en el alcance actual. Debe confirmarse si representan páginas que quedaron fuera del inventario, secciones internas, contenido que debe integrarse en otra página o referencias obsoletas. No asumir que deben crearse.
+
+### I.3 Recursos y estado de verificación
+
+Las referencias a hojas de estilo, imágenes, fuentes y redes sociales deben clasificarse por separado de las rutas de navegación React. La presencia de un `href` en el HTML no demuestra por sí sola que el destino cargue correctamente.
+
+- [x] Revisados estáticamente los destinos `href` compartidos para esta página.
+- [x] Propuesta de ruta React registrada como provisional.
+- [x] Enlaces a páginas inventariadas separados de los destinos dudosos/no inventariados.
+- [ ] Confirmar el destino de “Cruce de los Nevados”.
+- [ ] Confirmar la intención de los enlaces de cabalgatas y senderismo.
+- [ ] Verificar navegación en navegador cuando exista una versión React navegable.
+
+**Resultado:** revisión estática documentada. No se modificó el HTML original ni el código React; no se implementaron rutas y no se ejecutaron pruebas de navegador.
