@@ -696,3 +696,24 @@ Página 4 de 15 revisada estáticamente. Se documentaron una ruta candidata, una
 - **Estado de las incidencias:** las referencias sospechosas descritas arriba quedan marcadas como reportadas como corregidas por el usuario; todavía no se han vuelto a inspeccionar en el archivo para verificar los cambios. No asumir que siguen presentes ni afirmar que se comprobaron.
 - **Estado de la ruta:** aprobada por el usuario como propuesta de ruta para esta página. El mapa global sigue pendiente hasta completar y revisar el inventario de 15 páginas.
 - **Alcance:** solo se actualiza documentación. No se modifica el código React ni se implementan rutas.
+
+
+## Anexo L — Página 5 de 15: Pucará de Aconquija
+
+**Archivo revisado:** `html/segundo_nivel/pucara_aconquija.html` (599 líneas). Revisión estática del archivo en la rama `main`; no se ejecutó en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento es “Pucará de Aconquija — Aconquija Turismo” y el H1 de la línea 101 es “Pucará de Aconquija”. El contenido trata el sitio arqueológico, su contexto histórico, acceso, equipamiento recomendado y galería.
+- **Ruta React candidata:** `/lugares/pucara-de-aconquija`. Es provisional y coherente con la opción elegida de agrupar rutas por categoría. Queda pendiente de aprobación expresa del usuario y de la revisión del mapa completo.
+- **Categorías descriptivas visibles:** la página usa etiquetas “Patrimonio Mundial UNESCO”, “Arqueología Inca” y “Monumento Histórico Nacional” (líneas 95–97). Son datos de contenido que conviene preservar al migrar.
+- **Navegación interna:** los enlaces del encabezado, breadcrumb y pie apuntan a `../../index.html` o a secciones del inicio, como `../../index.html#lugares`. No se detectó en la revisión textual el patrón extraño señalado en la página anterior.
+- **Mapa y contacto:** el enlace “Ver en el mapa” de la línea 431 usa un enlace corto de Google Maps. En las líneas 461–462 hay posibles inconsistencias entre los destinos y los datos visibles: el teléfono muestra `+54 383 4966977` pero el `href` usa `tel:+5438300000`; el texto visible es `Maxyz000@icloud.com` pero el `href` apunta a `mailto:info@aconquija.tur.ar`. El pie muestra además `info@aconquija.tur.ar` y `+54 383 000 0000` (líneas 547–548). No se deben elegir datos correctos por suposición; confirmar con el usuario antes de migrarlos como contactos definitivos.
+- **WhatsApp:** hay enlaces de contacto/reserva en las líneas 56, 472 y 562. Se conservan como destinos externos, no como rutas internas. La revisión estática no confirma que los números estén activos.
+- **Imágenes:** el hero referencia `../../imagenes/ruinas_del_pucara/ruinas.webp` (línea 80). La galería referencia `ruinas_3.webp`, `ruinas_2.webp`, `ruina.webp` y `ruinas_4.webp` bajo `../../imagenes/ruinas_del_pucara/` (líneas 313, 327, 341 y 354). La tercera imagen tiene `alt=""`; la segunda describe explícitamente una “imagen ilustrativa de arquitectura inca”. Revisar estos textos alternativos y la correspondencia de las imágenes al validar recursos, sin cambiar los originales ahora.
+- **Recursos compartidos:** hoja de estilos `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logotipos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, y script `../../js/scrip.js`. Las referencias fueron encontradas en el HTML, pero esta revisión no verifica que los archivos carguen.
+- **Interacción a conservar:** hay una galería con lightbox y controles anterior/siguiente/cerrar, además de botones de compartir. Deben inventariarse para la futura migración a componentes React; no se implementan en esta etapa.
+
+### Estado de esta revisión
+
+Página 5 de 15 revisada estáticamente. Se documentaron una ruta candidata, la estructura de contenido, los recursos referenciados, la galería/lightbox y discrepancias aparentes en los enlaces de contacto. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
