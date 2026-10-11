@@ -482,3 +482,60 @@ React Router ya está instalado en las dependencias del proyecto. Su instalació
 
 **Estado de la metodología:** planificación de rutas en curso. No se ha modificado código React ni el sitio original como resultado de este anexo. La Fase 0 sigue abierta; no se considera iniciada la migración de contenido.
 
+## Anexo F — Hallazgos de la auditoría de enlaces de segundo nivel (2026-10-11)
+
+**Fuente:** salida de solo lectura de PowerShell ejecutada por el usuario desde la raíz del repositorio:
+
+```powershell
+Get-ChildItem .\html\segundo_nivel -Filter *.html |
+    Select-String -Pattern 'href\s*='
+```
+
+**Alcance de esta revisión:** se inspeccionaron las coincidencias de `href` en los cuatro archivos de `html/segundo_nivel/`. La salida puede dividir líneas largas; los hallazgos siguientes son incidencias por verificar, no una prueba de funcionamiento o fallo en navegador.
+
+### F.1 Enlaces internos a revisar
+
+| Archivo de origen | Referencia encontrada | Observación / siguiente acción |
+|---|---|---|
+| `html/segundo_nivel/aconquija_respira_verde.html` | `../tercer_nivel/tuneles_rio_potrero.html` | Apunta a una página incluida en el inventario actual. Confirmar destino y relación de navegación durante la auditoría completa. |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `../tercer_nivel/bosque_de_alisos.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `../tercer_nivel/rio_potrero.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `../tercer_nivel/yunka_suma.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `../tercer_nivel/Cruce de los Nevados.html` | El nombre contiene espacios y mayúsculas y no coincide con ninguna de las páginas de tercer nivel incluidas en el inventario vigente. Verificar el destino pretendido; no crear un archivo ni decidir una sustitución automáticamente. |
+| `html/segundo_nivel/aconquija_respira_verde.html` | `lugares/cabalgatas.html`, `lugares/senderismo.html` | Son rutas relativas al directorio `html/segundo_nivel/`; no aparecen entre las páginas inventariadas. Confirmar si son referencias obsoletas o si el destino esperado es otro. |
+| `html/segundo_nivel/cultiva_tradicion.html` | `../tercer_nivel/fiesta_bandoneon.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/cultiva_tradicion.html` | `../tercer_nivel/festival_mayor_aconquija.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/cultiva_tradicion.html` | `../tercer_nivel/desfile_civico.html` | Apunta a una página incluida en el inventario actual. |
+| `html/segundo_nivel/cultiva_tradicion.html` | `lugares/cabalgatas.html`, `lugares/estrellas.html`, `lugares/quebrada.html`, `lugares/gastronomia.html`, `lugares/bosque.html`, `lugares/artesanias.html`, `lugares/laguna.html`, `lugares/filo-amanecer.html`, `lugares/mirador.html` | Estas rutas relativas no corresponden a páginas incluidas en el inventario vigente. Verificar cada destino antes de definir qué debe ocurrir en React. No asumir que cada referencia requiere una página nueva. |
+| `html/segundo_nivel/noches_estrelladas.html` | `....//index.html#lugares` | La ruta parece contener un error tipográfico. Registrar para confirmar el destino pretendido; no modificar el original durante esta fase. |
+| `html/segundo_nivel/pucara_aconquija.html` | `../../index.html` y `../../index.html#explorar` | Enlaces de regreso a la página de inicio y a una sección de esta. En React deberán conservar el destino equivalente. |
+
+### F.2 Contacto, recursos y enlaces externos
+
+- Las cuatro páginas enlazan a Google Fonts; varias enlazan a `../../css/style.css` y a `../../imagenes/aconquija_icono.png`. Respira Verde y Cultiva Tradición también referencian `../../css/atractivos.css`. Verificar qué recursos existen y se usan antes de trasladarlos; las rutas originales son relativas al HTML de origen.
+- Se encontraron enlaces a Instagram, Facebook y WhatsApp. Conservar los destinos externos previstos durante la migración, salvo autorización para cambiarlos.
+- En `noches_estrelladas.html`, la salida muestra un atributo parecido a `href=">Maxyz000@icloud.com"`. Parece estar mal formado; confirmar el HTML exacto y el correo previsto antes de proponer una corrección.
+- En `pucara_aconquija.html`, el destino telefónico `tel:+5438300000` no parece coincidir con el número visible `+54 383 4966977`. El enlace de correo apunta a `mailto:info@aconquija.tur.ar`, mientras que el texto visible es `Maxyz000@icloud.com`. Son discrepancias que requieren confirmación del usuario; no adivinar el dato correcto.
+- Hay enlaces de mapas, teléfono, correo y WhatsApp que son externos o de contacto, no rutas de páginas React. Deben clasificarse por separado del mapa de rutas internas.
+
+### F.3 Procedimiento para resolver incidencias
+
+1. Continuar la auditoría de `href` en las páginas de tercer nivel y comparar todas las referencias con el inventario local.
+2. Clasificar cada referencia como ruta interna existente, ancla de sección, recurso, enlace externo, contacto, destino dudoso o destino no inventariado.
+3. Para rutas dudosas, consultar el archivo y el contexto antes de sugerir una equivalencia. Si el destino deseado no puede deducirse con seguridad, preguntar al usuario.
+4. Mantener las incidencias como pendientes hasta que se verifiquen. No cambiar el sitio original como parte de esta auditoría.
+5. Al aprobar las rutas React, construir un mapa de navegación con origen, destino original, destino React propuesto y estado de verificación.
+6. Antes de implementar, confirmar con el usuario qué enlaces conservar, cuáles deben apuntar a páginas migradas y cuáles requieren una decisión de contenido.
+
+### F.4 Estado tras esta revisión
+
+- [x] Se recibió la salida de PowerShell para los cuatro archivos de segundo nivel.
+- [x] Se identificaron rutas internas hacia páginas incluidas en el inventario vigente.
+- [x] Se documentaron referencias a destinos no inventariados y posibles errores tipográficos.
+- [x] Se registraron discrepancias aparentes en enlaces de contacto para confirmación.
+- [ ] Verificar cada destino dudoso contra los archivos locales y el contexto del contenido.
+- [ ] Auditar los `href` de las diez páginas de tercer nivel.
+- [ ] Completar el mapa de enlaces y aprobar las rutas definitivas con el usuario.
+
+**Resultado:** auditoría estática parcial. No se modificaron archivos HTML, CSS, JavaScript ni código React. No se ejecutaron pruebas de navegador; los destinos dudosos siguen pendientes de confirmación.
+
