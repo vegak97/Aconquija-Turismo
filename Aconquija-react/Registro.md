@@ -168,3 +168,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Hallazgos registrados:** contenido de sitio arqueológico, enlaces de navegación, galería y lightbox, referencias a imágenes/CSS/JS, y posibles discrepancias entre los textos visibles y los destinos `tel:` y `mailto:`. No se modificaron los datos de contacto porque requieren confirmación.
 - **Motivo y autorización:** continuar la revisión secuencial de las 15 páginas y documentar los hallazgos en ambos archivos antes de implementar rutas. Se mantiene la decisión del usuario de agrupar rutas por categoría y no tocar código hasta aprobar el mapa definitivo.
 - **Resultado:** metodología actualizada mediante el commit `6d71a3986513086884251494de1a73c9dad8d641`. No se modificó código React ni el sitio original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
+
+
+### 2026-10-11 — Aprobación de ruta de Pucará de Aconquija
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se actualizó el Anexo L para reflejar que el usuario aprobó expresamente la ruta `/lugares/pucara-de-aconquija`.
+- **Alcance:** queda aprobada la ruta individual de Pucará; el mapa completo de las 15 páginas sigue pendiente. No se modificó código React ni se implementó la ruta.
+- **Resultado:** metodología actualizada mediante el commit `e2d3cdd924128765b42cf0c07eee2b8b95348817`. Registro actualizado en este commit.
