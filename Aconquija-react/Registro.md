@@ -223,3 +223,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Regla acordada:** `index.html` será la referencia principal para esos datos; si una página interior difiere, prevalece `index.html`. No inventar datos ausentes ni alterar el HTML original durante la auditoría. Los mapas específicos de atractivos se evalúan por separado.
 - **Alcance:** únicamente documentación. No se modificó código React ni el sitio original, no se implementó la ruta y el mapa global de las 15 páginas sigue pendiente de aprobación.
 - **Resultado:** metodología actualizada mediante el commit a1563118e7853c7ff9a56b7a540ac6ece92111a9. Registro actualizado en este commit.
+
+
+### 2026-10-11 — Página 9: Cristo Redentor de Aconquija
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo P con la revisión estática de `html/tercer_nivel/cristo_redentor.html` y se propone provisionalmente la ruta `/lugares/cristo-redentor`.
+- **Hallazgos:** mirador en El Lindero, recorrido corto y acceso libre; tres rutas de imagen relativas que parecen apuntar a una ubicación incorrecta y atributos `data-full=""`; imagen ilustrativa externa; extensiones de logotipos distintas; estructura de encabezado e iconos que requieren verificación.
+- **Contacto/redes:** se aplicó el criterio confirmado por el usuario de tomar los datos generales de contacto y perfiles sociales de `index.html`, sin reutilizar automáticamente los valores locales de esta página.
+- **Alcance:** solo documentación. No se modificó código React ni el sitio original; la ruta queda pendiente de aprobación y no se implementó. No se ejecutaron pruebas de navegador.
+- **Resultado:** metodología actualizada mediante el commit 345b0415f7c1560480ea5fd8d77988d612318da7. Registro actualizado en este commit.
