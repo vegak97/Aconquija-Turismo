@@ -648,3 +648,24 @@ Las referencias a hojas de estilo, imágenes, fuentes y redes sociales deben cla
 - [ ] Verificar navegación en navegador cuando exista una versión React navegable.
 
 **Resultado:** revisión estática documentada. No se modificó el HTML original ni el código React; no se implementaron rutas y no se ejecutaron pruebas de navegador.
+
+
+## Anexo J — Revisión de la página 3 de 15: Cultiva Tradición (2026-10-11)
+
+**Archivo revisado:** `html/segundo_nivel/cultiva_tradicion.html` (501 líneas). Revisión estática del HTML remoto en `main`; no se ejecutó la página en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Contenido principal:** el `<h1>` es “Cultiva Tradicion”. El texto de presentación lo describe como un recorrido turístico que reúne naturaleza, costumbres y trabajo local. La página funciona como un circuito o colección temática, aunque varias tarjetas corresponden a eventos culturales concretos.
+- **Ruta React candidata según la convención elegida:** `/experiencias/cultiva-tradicion`. Se mantiene como propuesta provisional hasta revisar las 15 páginas y aprobar el mapa completo.
+- **Enlaces internos hacia páginas inventariadas:**
+  - `../tercer_nivel/fiesta_bandoneon.html` → candidata a una ruta de la categoría eventos, por ejemplo `/eventos/fiesta-del-bandoneon` (slug pendiente de decisión).
+  - `../tercer_nivel/festival_mayor_aconquija.html` → candidata a `/eventos/festival-mayor` (slug pendiente de confirmar).
+  - `../tercer_nivel/desfile_civico.html` → candidata a una ruta de eventos o tradiciones; decidir la categoría al comparar el contenido de la página destino.
+  - La navegación general vuelve a `index.html` y a sus anclas `#explorar`, `#lugares`, `#estaciones`, `#servicios` y `#sobre`; en React deberán convertirse en navegación interna compatible con la ruta final.
+- **Destinos no incluidos en el inventario vigente de 15 páginas:** `lugares/cabalgatas.html`, `lugares/estrellas.html`, `lugares/quebrada.html`, `lugares/gastronomia.html`, `lugares/bosque.html`, `lugares/artesanias.html`, `lugares/laguna.html`, `lugares/filo-amanecer.html` y `lugares/mirador.html`. No deben convertirse automáticamente en rutas React: primero hay que confirmar si son enlaces obsoletos, contenido que se decidió excluir o destinos que necesitan una decisión del usuario.
+- **Criterio de clasificación:** no clasificar toda la página como “evento” solo porque contiene varias tarjetas culturales. Su introducción la presenta como un circuito/recorrido; las páginas destino de festivales y desfile se evaluarán individualmente por su contenido.
+
+### Estado de esta revisión
+
+Página 3 de 15 revisada estáticamente. Se documentaron la ruta candidata, los enlaces a tres páginas incluidas en el inventario y los destinos no inventariados. Queda pendiente revisar las páginas destino y decidir sus slugs definitivos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se ejecutaron pruebas de navegador.
