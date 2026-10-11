@@ -836,3 +836,24 @@ El usuario aclaró el 2026-10-11 que las referencias vacías de imágenes pueden
 - No se modifica el HTML original ni el código React antes de la aprobación del mapa definitivo de rutas.
 
 Este criterio se suma a las reglas del proyecto y a la indicación de extraer los datos generales de contacto y redes sociales desde `index.html`. Ante una regla existente en los documentos del proyecto que sea más específica, se respetará y se aclarará cualquier conflicto antes de implementar.
+
+
+## Anexo Q — Página 10 de 15: Desfile Cívico Escolar (2026-10-11)
+
+**Archivo revisado:** `html/tercer_nivel/desfile_civico.html`. Revisión estática del HTML remoto en `main`; no se ejecutó en navegador y no se verificó que los recursos carguen.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Desfile Cívico Escolar — Aconquija Turismo” y H1 “Desfile Cívico Escolar”. Describe una actividad comunitaria de verano en el Complejo Municipal de Aconquija, en El Lindero: participación de escuelas, vecinos a caballo y policía, feria posterior, recomendaciones para asistir y fecha variable, habitualmente en enero según el texto de la página.
+- **Ruta React candidata:** `/eventos/desfile-civico-escolar`. Es provisional y queda pendiente de aprobación del usuario y de la revisión del mapa global; no se implementó.
+- **Fecha y contenido informativo:** el propio HTML aclara que la fecha exacta cambia según el año y recomienda confirmarla antes de viajar. No convertir la referencia a enero en una fecha anual fija ni añadir fechas no presentes en el original.
+- **Ubicación y mapa:** el contenido ubica la actividad en el Complejo Municipal, El Lindero, Aconquija. El enlace de Google Maps busca “Complejo Municipal Aconquija Catamarca”; es un destino externo específico, no una ruta React.
+- **Galería e imágenes:** la primera imagen de galería procede de Unsplash y el texto alternativo y el pie de galería la identifican como ilustrativa. Las tres imágenes siguientes usan `../imagenes/montaña.png`, `../imagenes/chica.PNG` y `../imagenes/rio.jpeg`; desde `html/tercer_nivel/`, esas rutas relativas parecen apuntar a `html/imagenes/`, no a la carpeta raíz `imagenes/`. Sus atributos `data-full` están vacíos. No completar ni corregir estas referencias por suposición: comprobar los archivos locales y respetar el criterio del usuario de no reponer ilustraciones externas retiradas.
+- **Tarjetas relacionadas:** se muestran “Festival Mayor de Aconquija”, “Cabalgatas de Pirca” y “Planetario Janaxpacha Huasi”. El enlace a `festival_mayor_aconquija.html` corresponde a un archivo del inventario actual; `../segundo_nivel/noches_estrelladas.html` corresponde a otra página inventariada. El destino `cabalgatas de pirca.html` contiene espacios y no coincide con los archivos de tercer nivel listados; queda pendiente confirmar su destino y no debe asignársele una ruta nueva por inferencia.
+- **Navegación y recursos compartidos:** el HTML enlaza a `../../css/style.css`, `../../imagenes/logo_aconquija(1).png`, `../../imagenes/logo_aconquija(2).png` y `../../js/scrip.js`. Las rutas y extensiones deben contrastarse con el inventario de archivos antes de migrarlas.
+- **Contacto y redes:** aparecen Instagram, Facebook y WhatsApp, además de teléfono y correo en la ficha. Por el criterio transversal confirmado por el usuario, los datos globales de contacto y redes sociales se tomarán de `index.html`; no copiar automáticamente los datos distintos de esta página ni inventar valores. Los enlaces de compartir y el mapa específico se evalúan por separado.
+- **Interacciones:** navegación adaptable, galería/lightbox, botones para compartir por Facebook y WhatsApp y botón para copiar enlace. Deben conservarse como comportamientos a inventariar; no se probaron en navegador durante esta revisión.
+
+### Estado de esta revisión
+
+Página 10 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, los destinos relacionados, las referencias de imagen que requieren verificación y las interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
