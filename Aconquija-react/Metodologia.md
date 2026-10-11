@@ -717,3 +717,23 @@ Página 4 de 15 revisada estáticamente. Se documentaron una ruta candidata, una
 ### Estado de esta revisión
 
 Página 5 de 15 revisada estáticamente. Se documentaron una ruta candidata, la estructura de contenido, los recursos referenciados, la galería/lightbox y discrepancias aparentes en los enlaces de contacto. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
+
+
+## Anexo M — Página 6 de 15: Aconquija Respira Verde
+
+**Archivo revisado:** `html/segundo_nivel/aconquija_respira_verde.html` (400 líneas). Revisión estática del archivo en la rama `main`; no se ejecutó en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento es “Aconquija Respira Verde — Circuito Turístico” y el H1 de la línea 81 es “Respira Verde”. La página presenta una colección de atractivos para armar un recorrido, por lo que su función es la de un circuito turístico, no la de un atractivo individual.
+- **Ruta React candidata:** `/circuitos/respira-verde`. Es provisional; se propone la categoría `circuitos` para distinguir el recorrido de los atractivos individuales en `/lugares/...`. Queda pendiente de aprobación y de contrastarla con el mapa completo.
+- **Enlaces a páginas de atractivos:** aparecen destinos a `../tercer_nivel/tuneles_rio_potrero.html` (línea 92), `../tercer_nivel/bosque_de_alisos.html` (líneas 122 y 289), `../tercer_nivel/rio_potrero.html` (línea 175), `../tercer_nivel/yunka_suma.html` (línea 202) y `../tercer_nivel/Cruce de los Nevados.html` (línea 230). Se deben comparar con los nombres reales de archivo antes de establecer las rutas React definitivas.
+- **Destinos potencialmente problemáticos:** las tarjetas de Cabalgatas y Senderismo apuntan a `lugares/cabalgatas.html` (línea 149) y `lugares/senderismo.html` (línea 260), rutas relativas que, desde este archivo, podrían resolver a una carpeta inexistente bajo `segundo_nivel/lugares/`. Verificar el árbol real del repositorio antes de decidir el destino.
+- **Contenido de tarjetas:** la tarjeta de Senderismo tiene un encabezado vacío en la línea 270. La tarjeta “Bosque de Alisos” se repite con variación de mayúsculas en líneas 130 y 299. La tarjeta de Túneles usa el título “Túneles Quebrada de las cañas” (línea 101) mientras que el alt de su imagen dice “Túneles de Yunca” (línea 94); conviene preservar el contenido y registrar estas diferencias para revisión editorial posterior, sin editar ahora.
+- **Imágenes:** referencias locales a `../../imagenes/tuneles.webp`, `../../imagenes/bosque_de_alisos/bosque_de_alisos.webp`, `../../imagenes/cabalgata.webp`, `../../imagenes/rio.jpeg`, `../../imagenes/otoño.jpg` y `../../imagenes/cruz.webp`. La tarjeta de Senderismo usa además una imagen remota de Unsplash (línea 262). La inspección estática no confirma que los archivos existan o carguen.
+- **Navegación y recursos compartidos:** el encabezado y pie vuelven a secciones del inicio mediante `../../index.html#...`. La página referencia `../../css/style.css`, `../../css/atractivos.css`, `../../imagenes/aconquija_icono.png`, logotipos y `../../js/scrip.js`.
+- **Contacto/acción:** incluye enlaces a WhatsApp para redes y para “Armamos el recorrido con vos” (líneas 54 y 338), que deben conservarse como destinos externos en la futura migración.
+
+### Estado de esta revisión
+
+Página 6 de 15 revisada estáticamente. Se documentó la función de circuito turístico, la ruta candidata, los enlaces a atractivos, tarjetas con contenido posiblemente incompleto/duplicado y los recursos referenciados. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
