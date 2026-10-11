@@ -578,3 +578,113 @@ Se revisó la salida compartida de PowerShell para los diez HTML de `html/tercer
 
 **Resultado:** auditoría estática de enlaces de tercer nivel documentada; no se verificó navegación en navegador, no se modificó el sitio HTML/CSS/JavaScript original ni el código React, y no se ejecutaron pruebas.
 
+## Anexo H — Decisión inicial sobre la estrategia de rutas React (2026-10-11)
+
+### H.1 Decisión acordada
+
+El usuario eligió la **opción A: rutas agrupadas por categoría** para organizar las páginas en React Router. La propuesta es utilizar segmentos legibles como `/experiencias/...`, `/lugares/...` y `/eventos/...`, en lugar de copiar las rutas físicas de los HTML originales.
+
+Esta decisión fija el criterio de organización, pero **no aprueba todavía las rutas individuales ni autoriza a implementarlas**. Cada destino se debe contrastar con el contenido y los enlaces de las 15 páginas incluidas en el alcance vigente. Las rutas candidatas se considerarán provisionales hasta que el usuario revise y apruebe el mapa completo.
+
+### H.2 Revisión de la página 1 de 15: página principal
+
+**Origen:** `index.html` en la raíz del sitio original.
+
+**Destino candidato:** `/`.
+
+La auditoría estática de los atributos `href` de la página principal encontró enlaces a cuatro páginas de segundo nivel y cinco páginas de tercer nivel que sí figuran en el inventario vigente. También aparecen anclas a secciones de la página (`#explorar`, `#lugares`, `#estaciones`, `#servicios` y `#sobre`), enlaces externos de redes/contacto, recursos de fuentes e icono, y algunos enlaces `#` cuyo comportamiento de destino aún debe revisarse.
+
+Para la migración, las anclas de la página principal deben seguir apuntando a secciones reales de esa página, y los enlaces a otras páginas deben convertirse a las rutas React que se aprueben. Los enlaces externos y recursos no deben confundirse con rutas internas. Los enlaces `href="#"` se mantienen como pendientes de inspección; no se les asigna un destino inventado.
+
+Esta revisión es estática: no se probó la navegación en navegador ni se confirmó el comportamiento de los enlaces.
+
+### H.3 Procedimiento para continuar el mapa
+
+1. Revisar las páginas de forma ordenada y registrar para cada una: archivo de origen, función/contenido, enlaces a otras páginas del inventario, enlaces a secciones, destinos externos y referencias dudosas.
+2. Proponer un destino legible bajo la categoría que corresponda; si la categoría no es clara, marcarla como pendiente en vez de decidir por suposición.
+3. Revisar todos los destinos propuestos en una tabla única y obtener aprobación del usuario antes de implementar React Router.
+4. Documentar nuevos hallazgos en este archivo y cada modificación documental en `Registro.md`.
+
+- [x] Elegida por el usuario la estrategia de rutas agrupadas por categoría.
+- [x] Revisados los tipos principales de enlaces de `index.html` a partir de la salida de PowerShell compartida.
+- [ ] Revisar y proponer las rutas de las cuatro páginas de segundo nivel.
+- [ ] Revisar y proponer las rutas de las diez páginas de tercer nivel.
+- [ ] Resolver o marcar como pendientes los destinos dudosos y enlaces `href="#"`.
+- [ ] Presentar y aprobar el mapa definitivo antes de escribir código de rutas.
+
+**Resultado:** criterio de rutas acordado y primera revisión documentada como provisional. No se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas.
+
+## Anexo I — Revisión de rutas de la página 2 de 15: Aconquija Respira Verde (2026-10-11)
+
+**Archivo de origen:** `html/segundo_nivel/aconquija_respira_verde.html`.
+
+**Ruta React candidata:** `/experiencias/respira-verde`. Es provisional y deberá validarse al comparar el contenido de la página con el mapa completo.
+
+### I.1 Enlaces internos hacia páginas del inventario vigente
+
+La auditoría estática encontró referencias a estas páginas de tercer nivel que sí forman parte del inventario vigente:
+
+| Destino original enlazado | Ruta React candidata | Estado |
+|---|---|---|
+| `../tercer_nivel/tuneles_rio_potrero.html` | `/lugares/tuneles-rio-potrero` | Provisional; confirmar categoría al revisar el contenido |
+| `../tercer_nivel/bosque_de_alisos.html` | `/lugares/bosque-de-alisos` | Provisional |
+| `../tercer_nivel/rio_potrero.html` | `/lugares/rio-potrero` | Provisional |
+| `../tercer_nivel/yunka_suma.html` | `/lugares/yunka-suma` | Provisional |
+
+### I.2 Destinos dudosos o no incluidos en el inventario
+
+- Se detectó `../tercer_nivel/Cruce de los Nevados.html`. El nombre contiene espacios y no coincide con ninguno de los diez archivos de tercer nivel del inventario vigente. No se asigna una ruta React ni se crea una página hasta confirmar el destino pretendido.
+- Se detectaron `lugares/cabalgatas.html` y `lugares/senderismo.html`, que no figuran entre las 15 páginas incluidas en el alcance actual. Debe confirmarse si representan páginas que quedaron fuera del inventario, secciones internas, contenido que debe integrarse en otra página o referencias obsoletas. No asumir que deben crearse.
+
+### I.3 Recursos y estado de verificación
+
+Las referencias a hojas de estilo, imágenes, fuentes y redes sociales deben clasificarse por separado de las rutas de navegación React. La presencia de un `href` en el HTML no demuestra por sí sola que el destino cargue correctamente.
+
+- [x] Revisados estáticamente los destinos `href` compartidos para esta página.
+- [x] Propuesta de ruta React registrada como provisional.
+- [x] Enlaces a páginas inventariadas separados de los destinos dudosos/no inventariados.
+- [ ] Confirmar el destino de “Cruce de los Nevados”.
+- [ ] Confirmar la intención de los enlaces de cabalgatas y senderismo.
+- [ ] Verificar navegación en navegador cuando exista una versión React navegable.
+
+**Resultado:** revisión estática documentada. No se modificó el HTML original ni el código React; no se implementaron rutas y no se ejecutaron pruebas de navegador.
+
+
+## Anexo J — Revisión de la página 3 de 15: Cultiva Tradición (2026-10-11)
+
+**Archivo revisado:** `html/segundo_nivel/cultiva_tradicion.html` (501 líneas). Revisión estática del HTML remoto en `main`; no se ejecutó la página en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Contenido principal:** el `<h1>` es “Cultiva Tradicion”. El texto de presentación lo describe como un recorrido turístico que reúne naturaleza, costumbres y trabajo local. La página funciona como un circuito o colección temática, aunque varias tarjetas corresponden a eventos culturales concretos.
+- **Ruta React candidata según la convención elegida:** `/experiencias/cultiva-tradicion`. Se mantiene como propuesta provisional hasta revisar las 15 páginas y aprobar el mapa completo.
+- **Enlaces internos hacia páginas inventariadas:**
+  - `../tercer_nivel/fiesta_bandoneon.html` → candidata a una ruta de la categoría eventos, por ejemplo `/eventos/fiesta-del-bandoneon` (slug pendiente de decisión).
+  - `../tercer_nivel/festival_mayor_aconquija.html` → candidata a `/eventos/festival-mayor` (slug pendiente de confirmar).
+  - `../tercer_nivel/desfile_civico.html` → candidata a una ruta de eventos o tradiciones; decidir la categoría al comparar el contenido de la página destino.
+  - La navegación general vuelve a `index.html` y a sus anclas `#explorar`, `#lugares`, `#estaciones`, `#servicios` y `#sobre`; en React deberán convertirse en navegación interna compatible con la ruta final.
+- **Destinos no incluidos en el inventario vigente de 15 páginas:** `lugares/cabalgatas.html`, `lugares/estrellas.html`, `lugares/quebrada.html`, `lugares/gastronomia.html`, `lugares/bosque.html`, `lugares/artesanias.html`, `lugares/laguna.html`, `lugares/filo-amanecer.html` y `lugares/mirador.html`. No deben convertirse automáticamente en rutas React: primero hay que confirmar si son enlaces obsoletos, contenido que se decidió excluir o destinos que necesitan una decisión del usuario.
+- **Criterio de clasificación:** no clasificar toda la página como “evento” solo porque contiene varias tarjetas culturales. Su introducción la presenta como un circuito/recorrido; las páginas destino de festivales y desfile se evaluarán individualmente por su contenido.
+
+### Estado de esta revisión
+
+Página 3 de 15 revisada estáticamente. Se documentaron la ruta candidata, los enlaces a tres páginas incluidas en el inventario y los destinos no inventariados. Queda pendiente revisar las páginas destino y decidir sus slugs definitivos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se ejecutaron pruebas de navegador.
+
+
+## Anexo K — Revisión de la página 4 de 15: Noches Estrelladas / Planetario Janaxpacha Huasi (2026-10-11)
+
+**Archivo revisado:** `html/segundo_nivel/noches_estrelladas.html` (591 líneas). Revisión estática del HTML de la rama `main`; no se ejecutó en navegador.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento y el `<h1>` identifican el contenido como “Planetario Janaxpacha Huasi”. Por lo tanto, aunque el archivo se llame `noches_estrelladas.html`, la página está centrada en un atractivo concreto: el planetario.
+- **Ruta React candidata:** `/lugares/planetario-janaxpacha-huasi`. Es provisional. La clasificación se basa en que la página describe un sitio/atractivo visitable; deberá contrastarse con el contenido y la navegación del resto del sitio antes de aprobar el mapa.
+- **Navegación interna:** los enlaces del encabezado regresan a `index.html` y a sus secciones. En la línea 31 aparece el destino anómalo `....//index.html#lugares`, que no coincide con el patrón de los demás enlaces `../../index.html#...`. Se documenta como probable error de ruta, sin corregir el HTML original.
+- **Enlaces de visita y contacto:** hay un enlace a Google Maps en la línea 437, un enlace telefónico en la línea 469, una referencia de correo en la línea 470 cuyo atributo `href` comienza con `>Maxyz000@icloud.com` y un enlace de WhatsApp con mensaje en la línea 480. La referencia de correo parece mal formada; no se debe convertir en un destino React ni cambiar el dato sin confirmar el correo correcto.
+- **Otros destinos externos:** se encontró un enlace a una búsqueda de Google Maps sobre Aconquija en la línea 491. Estos enlaces externos/contacto deben conservarse como tales, no mapearse como rutas internas.
+- **Recursos locales referenciados:** `../../imagenes/planetario/planetario_3.webp`, `planetario_4.webp`, `noche.webp` y `planetario_2.webp`, además de los logotipos y `../../js/scrip.js`. Las referencias se anotan para preservar la asociación de imágenes e interacción al migrar; esta revisión del HTML no confirma por sí sola que cada recurso cargue correctamente en navegador.
+- **Convención de categorías:** el nombre de archivo “noches estrelladas” no debe imponerse como slug definitivo si la página visible identifica otro contenido. La propuesta prioriza el nombre del atractivo, sujeto a aprobación.
+
+### Estado de esta revisión
+
+Página 4 de 15 revisada estáticamente. Se documentaron una ruta candidata, una referencia de navegación sospechosa, un enlace de correo mal formado y los recursos principales. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
