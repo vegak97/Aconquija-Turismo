@@ -337,16 +337,16 @@ Esta revisión compara referencias de imagen en atributos HTML (`src`, `poster`,
 | `html/tercer_nivel/balneario_buena_vista.html` | 335 | `../../imagenes/balneario_municipal/balneario_5.png` | `imagenes/balneario_municipal/balneario_5.webp` |
 | `html/tercer_nivel/balneario_buena_vista.html` | 350 | `../../imagenes/balneario_municipal/balneario_4.png` | `imagenes/balneario_municipal/balneario_4.webp` |
 | `html/tercer_nivel/balneario_buena_vista.html` | 567 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/bosque_de_alisos.html` | 580 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/cristo_redentor.html` | 573 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/desfile_civico.html` | 570 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/el_charquiadero.html` | 580 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/festival_mayor_aconquija.html` | 569 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/fiesta_bandoneon.html` | 567 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/rio_potrero.html` | 573 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/tuneles_rio_potrero.html` | 579 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/virgen_del_valle.html` | 525 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
-| `html/tercer_nivel/yunka_suma.html` | 575 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/bosque_de_alisos.html` | 579 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/cristo_redentor.html` | 572 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/desfile_civico.html` | 569 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/el_charquiadero.html` | 579 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/festival_mayor_aconquija.html` | 568 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/fiesta_bandoneon.html` | 566 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/rio_potrero.html` | 572 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/tuneles_rio_potrero.html` | 578 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/virgen_del_valle.html` | 524 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
+| `html/tercer_nivel/yunka_suma.html` | 574 | `../../imagenes/planetario/noche.jpeg` | `imagenes/planetario/noche.webp` |
 
 La existencia de un archivo con el mismo nombre base no demuestra por sí sola que sea la imagen visualmente correcta; antes de cambiar la extensión se debe confirmar que corresponde al recurso pretendido.
 
@@ -366,7 +366,7 @@ En páginas ubicadas en `html/tercer_nivel/`, `../imagenes/` retrocede solamente
 |---|---:|---|---|
 | `html/tercer_nivel/balneario_buena_vista.html` | 538 | `../../imagenes/bosque.webp` | No existe en la raíz `imagenes/bosque.webp`. Existe `imagenes/bosque_de_alisos/bosque.webp`, pero no se presume que sea equivalente. |
 | `html/tercer_nivel/bosque_de_alisos.html` | 564 | `../../imagenes/chica.PNG` | No se encontró un archivo con esa ruta ni nombre base en el árbol actual. |
-| `html/tercer_nivel/cristo_redentor.html` | 338; `desfile_civico.html` 337; `el_charquiadero.html` 345; `festival_mayor_aconquija.html` 351; `fiesta_bandoneon.html` 336; `rio_potrero.html` 339; `tuneles_rio_potrero.html` 564; `virgen_del_valle.html` 305; `yunka_suma.html` 341 | `../imagenes/chica.PNG` en las primeras siete páginas hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
+| `html/tercer_nivel/cristo_redentor.html` | 337; `desfile_civico.html` 336; `el_charquiadero.html` 344; `festival_mayor_aconquija.html` 350; `fiesta_bandoneon.html` 335; `rio_potrero.html` 338; `tuneles_rio_potrero.html` 563; `virgen_del_valle.html` 304; `yunka_suma.html` 340 | `../imagenes/chica.PNG` en las primeras siete páginas hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
 
 ### 4. Estado y criterio
 
