@@ -299,3 +299,26 @@ Según la lectura de `js/scrip.js`, deben evaluarse: barra de progreso de lectur
 ### B.6 Estado de la Fase 0
 
 **Estado: diagnóstico inicial documentado; Fase 0 todavía parcial.** La tabla de correspondencia y el inventario de páginas ya están documentados, pero falta completar la asociación de imágenes, la auditoría exhaustiva de enlaces y la verificación visual/funcional en navegador. No se ejecutaron pruebas de la aplicación durante esta actualización. No se inició la Fase 1 ni se modificó el código del sitio original.
+
+### Anexo C — Revisión preliminar de referencias de recursos (2026-10-10)
+
+Se revisaron referencias `href`, `src`, `poster` y `data-src` presentes en las 16 páginas HTML originales. Esta pasada es preliminar: recopila rutas que requieren revisión, pero no confirma todavía la validez de todas las referencias ni reemplaza una auditoría exhaustiva.
+
+**Destinos comprobados como inexistentes en el repositorio de la rama `main`:**
+- `html/segundo_nivel/lugares/cabalgatas.html`
+- `html/segundo_nivel/lugares/senderismo.html`
+- `html/segundo_nivel/lugares/estrellas.html`
+- `html/tercer_nivel/Cruce de los Nevados.html`
+- `js/atractivos.js`
+- `html/imagenes/bosque.webp`
+- `imagenes/bosque.webp`
+
+**Otras referencias que requieren inspección:**
+- En `html/segundo_nivel/noches_estrelladas.html` aparece la referencia `....//index.html#lugares`, con formato sospechoso.
+- Varias páginas de tercer nivel contienen referencias como `../imagenes/montaña.png`, `../imagenes/rio.jpeg`, `../../imagenes/bosque.webp` o enlaces HTML relativos que podrían resolver a ubicaciones distintas de las previstas.
+- Se encontraron referencias a recursos alojados en Unsplash y enlaces externos a redes sociales, WhatsApp y mapas. Deben clasificarse y verificarse por separado.
+- Algunas páginas contienen referencias repetidas al logotipo y enlaces hacia páginas que no figuran entre las 16 páginas inventariadas.
+
+**Criterio de migración:** las rutas inexistentes se documentan como incidencias y no se migran como archivos. No se eliminó ni corrigió ninguna referencia en el sitio original. Antes de decidir si un enlace se descarta, se reemplaza o se conserva como externo, se deberá revisar su intención y, cuando corresponda, pedir autorización al usuario.
+
+**Pendiente:** comprobar todas las rutas contra el árbol completo del repositorio, mapear cada imagen por página, revisar enlaces internos y anclas, clasificar recursos externos y realizar pruebas visuales/funcionales en navegador. La Fase 0 continúa parcial; la Fase 1 no comenzó.
