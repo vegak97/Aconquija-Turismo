@@ -123,3 +123,9 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición explícita del usuario de documentar en la metodología la información útil para la migración; la salida de PowerShell fue compartida el 2026-10-11.
 - **Resultado:** la metodología se actualizó en GitHub mediante el commit `94b5424dcf9b576f3bb7cadd9b398f9cbd4ddc37`. Los hallazgos permanecen pendientes de verificación. No se modificó el sitio HTML/CSS/JavaScript original ni el código React, no se implementaron rutas y no se ejecutaron pruebas de navegador.
 
+### 2026-10-11 19:53:00 -03:00
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo H a la metodología: decisión del usuario de organizar las rutas por categoría (`/experiencias/...`, `/lugares/...`, `/eventos/...`), revisión estática inicial de la página principal `index.html` (página 1 de 15) y procedimiento para revisar las restantes páginas antes de aprobar el mapa definitivo.
+- **Motivo:** convertir la preferencia acordada en un criterio explícito de migración y registrar los hallazgos para no perderlos durante las siguientes etapas.
+- **Autorización:** petición explícita del usuario en la conversación del 2026-10-11 para revisar las 15 páginas y documentar los hallazgos útiles en `Metodologia.md` y los cambios en `Registro.md`; elección expresa de la opción A para el estilo de rutas.
+- **Resultado:** documentación actualizada en GitHub. Las rutas individuales siguen pendientes de revisión y aprobación. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
