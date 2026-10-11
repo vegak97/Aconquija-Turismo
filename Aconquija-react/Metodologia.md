@@ -742,3 +742,23 @@ Página 6 de 15 revisada estáticamente. Se documentó la función de circuito t
 ### Aclaración del usuario — tarjetas de Respira Verde
 
 El usuario confirmó que aprueba `/circuitos/respira-verde` y aclaró que las tarjetas deben mantenerse tal como están por ahora: todavía faltan definir o desarrollar sus destinos concretos. La repetición de Bosque de los Alisos es intencional y funciona como referencia visual. No tratarla como error ni eliminarla; no modificar el diseño ni asignar rutas definitivas a las tarjetas antes de revisar y aprobar el mapa global.
+
+
+## Anexo N — Página 7 de 15: Balneario Municipal Buena Vista
+
+**Archivo revisado:** `html/tercer_nivel/balneario_buena_vista.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó que los recursos existan o carguen.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** el título del documento es “Balneario Municipal Buena Vista — Aconquija Turismo” y el H1 es “Balneario Municipal Buena Vista”. La página describe la pileta municipal, sus sectores de profundidad, tobogán, quinchos y asadores; incluye acceso, equipamiento, galería e información lateral.
+- **Ruta React candidata:** `/lugares/balneario-municipal-buena-vista`. Es una propuesta provisional, pendiente de aprobación del usuario y de contrastarla con el mapa completo de las 15 páginas.
+- **Categorías y datos presentados:** “Pileta Municipal”, “Recreación Familiar” y “Buena Vista, Aconquija”; duración “Medio día”, temporada primavera/verano y aptitud familiar. Son contenidos del HTML que se deben preservar durante la migración, sin asumir que sus datos están actualizados externamente.
+- **Navegación y recursos compartidos:** enlaces del encabezado y pie al inicio y sus secciones mediante `../../index.html#...`; hoja `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logotipos `../../imagenes/logo_aconquija(1).webp` y `../../imagenes/logo_aconquija(2).webp`, y script `../../js/scrip.js`.
+- **Imágenes y galería:** hero y galería referencian `../../imagenes/balneario_municipal/balneario.webp`, `balneario_2.webp`, `balneario_5.webp` y `balneario_4.webp`. Los textos alternativos de las primeras tres las identifican como “imagen ilustrativa”. Las imágenes primera y cuarta tienen `data-full=""`, a diferencia de las otras dos, que indican una ruta. Se registra para comprobar durante las pruebas de la futura migración, sin corregir el original ahora.
+- **Mapa y contacto:** el mapa apunta a una búsqueda de Google Maps para “Balneario Municipal Buena Vista Aconquija Catamarca”. La ficha muestra el teléfono `0383 496-1062` con `tel:+543834961062` y el correo `info@aconquija.tur.ar`. El botón de WhatsApp usa `https://wa.me/543830000000`, mientras que los enlaces de WhatsApp de redes y pie usan `https://wa.me/5493834966977`; hay además un teléfono genérico en el pie (`+54 383 000 0000`). No se debe elegir ni cambiar un dato por suposición; confirmar cuáles son los contactos definitivos antes de migrar.
+- **Detalles estructurales observados:** dentro del encabezado hay un contenedor de cierre adicional después del bloque de iconos, y los iconos de Facebook y WhatsApp incluyen elementos con clase `icon-circle` anidados. Se anotan para revisión visual/DOM posterior; no se modifica el HTML original en esta etapa.
+- **Interacciones:** barra de progreso de lectura, navegación adaptable, galería con lightbox y controles anterior/siguiente/cerrar, compartir por Facebook/WhatsApp y copiar enlace. Se deberán inventariar y probar al migrar a React.
+
+### Estado de esta revisión
+
+Página 7 de 15 revisada estáticamente. Se documentaron la ruta candidata, contenido, recursos, interacciones y asuntos pendientes de verificación en imágenes y contactos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementaron rutas ni se ejecutaron pruebas de navegador.
