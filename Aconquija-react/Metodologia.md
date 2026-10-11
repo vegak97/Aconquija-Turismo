@@ -366,11 +366,11 @@ En páginas ubicadas en `html/tercer_nivel/`, `../imagenes/` retrocede solamente
 |---|---:|---|---|
 | `html/tercer_nivel/balneario_buena_vista.html` | 538 | `../../imagenes/bosque.webp` | No existe en la raíz `imagenes/bosque.webp`. Existe `imagenes/bosque_de_alisos/bosque.webp`, pero no se presume que sea equivalente. |
 | `html/tercer_nivel/bosque_de_alisos.html` | 564 | `../../imagenes/chica.PNG` | No se encontró un archivo con esa ruta ni nombre base en el árbol actual. |
-| `html/tercer_nivel/cristo_redentor.html` | 337; `desfile_civico.html` 336; `el_charquiadero.html` 344; `festival_mayor_aconquija.html` 350; `fiesta_bandoneon.html` 335; `rio_potrero.html` 338; `tuneles_rio_potrero.html` 563; `virgen_del_valle.html` 304; `yunka_suma.html` 340 | `../imagenes/chica.PNG` en las primeras siete páginas hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
+| `html/tercer_nivel/cristo_redentor.html` | 337; `desfile_civico.html` 336; `el_charquiadero.html` 344; `festival_mayor_aconquija.html` 350; `fiesta_bandoneon.html` 335; `rio_potrero.html` 338; `tuneles_rio_potrero.html` 563; `virgen_del_valle.html` 304; `yunka_suma.html` 340 | `../imagenes/chica.PNG` en las seis páginas desde `cristo_redentor.html` hasta `rio_potrero.html`; `../../imagenes/chica.PNG` en túneles; `../imagenes/chica.PNG` en virgen y yunka | No se encontró `imagenes/chica.PNG` ni un archivo con el mismo nombre base en el árbol actual. Las referencias `../imagenes/chica.PNG` además resuelven a `html/imagenes/chica.PNG`. |
 
 ### 4. Estado y criterio
 
-- Se confirmó la diferencia de extensión `.png`/`.webp` en las cuatro referencias del balneario y `.jpeg`/`.webp` en las diez referencias a la imagen nocturna del planetario.
+- Se confirmó la diferencia de extensión `.png`/`.webp` en las cuatro referencias del balneario y `.jpeg`/`.webp` en las once referencias a la imagen nocturna del planetario.
 - Se confirmó que `../imagenes/montaña.png` y `../imagenes/rio.jpeg` apuntan a `html/imagenes/`, aunque los archivos existen en la carpeta `imagenes/` de la raíz.
 - Las referencias a `chica.PNG` y a `bosque.webp` requieren identificar la imagen correcta o decidir si la referencia está obsoleta.
 - Este anexo es un inventario de incidencias, no una orden de corrección. No se modificó ningún HTML original, CSS, imagen ni archivo React. La Fase 0 sigue abierta y la Fase 1 no comenzó.
