@@ -152,3 +152,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** continuar la revisión secuencial de las páginas originales y registrar incidencias sin corregirlas por suposición ni empezar la implementación antes de aprobar el mapa definitivo.
 - **Autorización:** petición explícita del usuario del 2026-10-11 para revisar las 15 páginas y documentar los hallazgos útiles en `Metodologia.md` y cada cambio en `Registro.md`; elección expresa de rutas agrupadas por categoría.
 - **Resultado:** metodología actualizada en GitHub mediante el commit `67a5db23ef3da03ad58f55f6730a600f6ba6648d`. Registro actualizado en este commit. La ruta candidata y las incidencias quedan pendientes de validación; no se modificó código React ni el sitio original, no se implementaron rutas y no se ejecutaron pruebas de navegador.
+
+
+### 2026-10-11 — Confirmación de ruta y correcciones reportadas para el planetario
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se actualizó el Anexo K para registrar que el usuario informa haber corregido los problemas de `html/segundo_nivel/noches_estrelladas.html` y aprueba la ruta `/lugares/planetario-janaxpacha-huasi`.
+- **Estado de verificación:** las correcciones fueron reportadas por el usuario, pero todavía no se volvió a inspeccionar el HTML para comprobarlas. No se da por verificada su resolución.
+- **Estado de la ruta:** aprobada para la página del planetario; el mapa completo de las 15 páginas continúa pendiente de aprobación.
+- **Resultado:** metodología actualizada mediante el commit `6413d67ea507c6e68f2dc1dfc089b2abd5a0971c`. No se modificó código React ni se implementaron rutas.
