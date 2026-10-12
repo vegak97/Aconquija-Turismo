@@ -325,6 +325,8 @@ header.nav .nav-mobile-social .icon-circle svg {
   font-weight: 500; margin-top: 14px; max-width: 560px;
 }
 .section-head p { color: var(--stone); max-width: 380px; line-height: 1.6; font-size: .98rem; }
+.explorar .section-head h2,
+.explorar .section-head p { color: var(--sand); }
 
 .card-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
 .exp-card {
