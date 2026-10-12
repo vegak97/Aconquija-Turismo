@@ -1016,3 +1016,37 @@ Página 15 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 - **Ruta aprobada expresamente por el usuario:** `/lugares/virgen-del-valle`.
 - **Alcance:** ruta aprobada para incluirla en el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación sigue pendiente de aprobación del mapa definitivo de las 15 páginas.
 - **Observaciones pendientes:** la imagen principal externa está identificada como ilustrativa; la galería contiene referencias vacías y un recurso local por verificar. No restaurar imágenes ni completar referencias vacías sin autorización. Los datos globales de contacto y redes deben obtenerse de `index.html`.
+
+
+## Anexo W — Mapa consolidado de las 15 páginas para aprobación del usuario (2026-10-11)
+
+Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigente. Es el **mapa consolidado presentado para revisión**; todavía no se considera aprobado como conjunto ni autoriza implementar React Router. Los estados individuales reflejan las aprobaciones expresas registradas más abajo/en anexos previos. La ruta inicial de la página principal y las candidatas marcadas pendientes deben confirmarse antes de implementar.
+
+| N.º | Página / contenido | Archivo original | Ruta propuesta para React | Estado de la ruta |
+|---:|---|---|---|---|
+| 1 | Inicio | `index.html` | `/` | Propuesta; confirmar al aprobar el mapa completo |
+| 2 | Aconquija Respira Verde | `html/segundo_nivel/aconquija_respira_verde.html` | `/circuitos/respira-verde` | Aprobada expresamente. Sustituye la candidata inicial `/experiencias/respira-verde` documentada en la revisión temprana; mantener una sola ruta para este archivo |
+| 3 | Cultiva Tradición | `html/segundo_nivel/cultiva_tradicion.html` | `/experiencias/cultiva-tradicion` | Pendiente de aprobación expresa |
+| 4 | Planetario Janaxpacha Huasi | `html/segundo_nivel/noches_estrelladas.html` | `/lugares/planetario-janaxpacha-huasi` | Aprobada expresamente |
+| 5 | Pucará de Aconquija | `html/segundo_nivel/pucara_aconquija.html` | `/lugares/pucara-de-aconquija` | Aprobada expresamente |
+| 6 | Balneario Municipal Buena Vista | `html/tercer_nivel/balneario_buena_vista.html` | `/lugares/balneario-municipal-buena-vista` | Aprobada expresamente |
+| 7 | Bosque de Alisos | `html/tercer_nivel/bosque_de_alisos.html` | `/lugares/bosque-de-alisos` | Aprobada expresamente |
+| 8 | Cristo Redentor de Aconquija | `html/tercer_nivel/cristo_redentor.html` | `/lugares/cristo-redentor` | Pendiente de aprobación expresa |
+| 9 | Desfile Cívico Escolar | `html/tercer_nivel/desfile_civico.html` | `/eventos/desfile-civico-escolar` | Aprobada expresamente |
+| 10 | Festival Mayor de Aconquija | `html/tercer_nivel/festival_mayor_aconquija.html` | `/eventos/festival-mayor` | Aprobada expresamente |
+| 11 | Festival Provincial del Bandoneón | `html/tercer_nivel/fiesta_bandoneon.html` | `/eventos/fiesta-del-bandoneon` | Pendiente de aprobación expresa; slug propuesto a partir de la revisión de Cultiva Tradición |
+| 12 | Río Potrero | `html/tercer_nivel/rio_potrero.html` | `/lugares/rio-potrero` | Aprobada expresamente |
+| 13 | Túneles del Río Potrero | `html/tercer_nivel/tuneles_rio_potrero.html` | `/lugares/tuneles-del-rio-potrero` | Aprobada expresamente |
+| 14 | Virgen del Valle de Aconquija | `html/tercer_nivel/virgen_del_valle.html` | `/lugares/virgen-del-valle` | Aprobada expresamente |
+| 15 | Yunka Suma | `html/tercer_nivel/yunka_suma.html` | `/lugares/yunka-suma` | Aprobada expresamente |
+
+### Revisión final del mapa
+
+- La estrategia acordada es agrupar las rutas por categoría (opción A).
+- La propuesta contiene 15 archivos únicos y no incluye páginas adicionales para cabalgatas, senderismo u otros enlaces que no forman parte del inventario vigente.
+- Las tarjetas de Aconquija Respira Verde deben conservarse como están en el original; no inferir rutas definitivas para destinos no incluidos en el inventario.
+- Los enlaces a secciones de la página principal, recursos, mapas externos, correo, teléfono, redes y WhatsApp no son páginas adicionales de este mapa.
+- Las referencias de imágenes vacías y los recursos locales dudosos siguen pendientes de verificación; no se restaurarán imágenes eliminadas ni se modificarán originales sin autorización.
+- Las revisiones de contenido fueron estáticas. No se han ejecutado pruebas en navegador ni de acceso directo a rutas React, porque el enrutador aún no se implementó.
+- **Pendientes para aprobación conjunta:** confirmar `/` como ruta de inicio y aprobar (o cambiar) las rutas de Cultiva Tradición, Cristo Redentor y Festival Provincial del Bandoneón; luego confirmar que se aprueba el mapa completo como conjunto.
+- **Estado:** presentado para revisión del usuario. No se modificó código React ni el sitio original.
