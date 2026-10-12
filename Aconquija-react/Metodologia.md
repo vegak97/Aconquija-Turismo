@@ -892,3 +892,25 @@ Página 11 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 - **Ruta aprobada por el usuario:** `/eventos/festival-mayor`.
 - **Alcance:** se aprueba únicamente el nombre y patrón de ruta para el mapa definitivo. No autoriza cambios en código ni migración de la página; estos siguen pendientes hasta aprobar el mapa completo.
 - **Criterios que se conservan:** no completar referencias de imágenes vacías ni restaurar imágenes ilustrativas eliminadas; obtener contacto y redes globales desde `index.html`; verificar rutas locales antes de migrar.
+
+
+## Anexo S — Página 12 de 15: Túneles del Río Potrero
+
+**Archivo revisado:** `html/tercer_nivel/tuneles_rio_potrero.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se comprobó la existencia física de los recursos locales.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Túneles del Río Potrero — Aconquija Turismo” y H1 “Túneles del Río Potrero”. La página presenta los túneles del Cerro de Las Cañas como vestigios del proyecto hidroeléctrico Potrero del Clavillo, detenido en 1976; describe el entorno de yungas, los cursos de agua, el acceso desde Río Potrero, el equipamiento recomendado y la visita guiada dentro del circuito Respira Verde.
+- **Ruta React candidata:** `/lugares/tuneles-del-rio-potrero`. Es una propuesta provisional, pendiente de aprobación expresa del usuario y de la aprobación del mapa completo de las 15 páginas. No se implementó.
+- **Categoría y relación:** la página etiqueta la experiencia como trekking en yungas, historia e ingeniería y circuito Respira Verde. Puede pertenecer a la categoría de lugares y relacionarse con `/circuitos/respira-verde`, pero no se debe modificar ni crear navegación hasta aprobar el mapa.
+- **Duración contradictoria:** el encabezado muestra “30 a 1,20 horas” y una característica dice “40 a 1,20 horas”, mientras que la ficha lateral informa “3 a 4 horas (ida y vuelta)”. No elegir ni corregir una duración durante la migración sin confirmación; registrar el dato para validarlo con el responsable del contenido.
+- **Imágenes:** el fondo principal apunta a `../../imagenes/respira_verde/tuneles/tuneles.png`, que debe verificarse en el repositorio. Las cuatro imágenes de galería tienen `src=""`; la primera y la cuarta también tienen `data-full=""`. El texto identifica la foto de túnel como ilustrativa y el pie señala que el resto corresponde al entorno local. Conforme al criterio confirmado por el usuario, no restaurar ilustraciones externas ni completar referencias vacías por iniciativa propia. En React, las imágenes deben tratarse como opcionales y nunca renderizarse con `src=""`.
+- **Ubicación y mapa:** el punto de partida indicado es la localidad de Río Potrero, Aconquija. El enlace abre Google Maps con la búsqueda `Rio Potrero Aconquija Catamarca`; el botón secundario abre una búsqueda general de Aconquija. Son enlaces externos y no rutas internas de la aplicación.
+- **Contacto y redes:** hay enlaces a Instagram, Facebook y WhatsApp, teléfono y correo que parecen genéricos o de ejemplo, incluidos `+54 383 000 0000`, `info@aconquija.tur.ar` y un WhatsApp con número `543830000000`. Por el criterio transversal del usuario, los datos globales de contacto y redes se tomarán de `index.html`; no migrar estos valores locales como fuente de verdad.
+- **Recursos compartidos:** CSS `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, JavaScript `../../js/scrip.js`. Verificar que existan antes de usarlos, sin cambiar el sitio original.
+- **Estructura e interacciones:** hay un `</div>` extra cerca del cierre del encabezado. Se identifican barra de progreso, navegación adaptable, galería/lightbox anterior/siguiente/cerrar, compartir por Facebook/WhatsApp y copiar enlace. El lightbox comienza con `src=""`; evitar una solicitud accidental a la propia página en React. No se probó ninguna interacción en navegador.
+- **Contenido a validar:** el texto usa distintas variantes de nombres de ríos y contiene frases que podrían requerir revisión editorial; no normalizar ni alterar afirmaciones geográficas/históricas sin aprobación.
+
+### Estado de esta revisión
+
+Página 12 de 15 revisada estáticamente. Se documentaron contenido, ruta candidata, duración contradictoria, referencias de imagen vacías, contactos, recursos y posibles detalles estructurales. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
