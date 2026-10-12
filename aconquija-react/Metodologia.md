@@ -1460,3 +1460,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** el ajuste anterior basado únicamente en pseudo-elementos no resolvió el reporte visual del usuario; esta alternativa hace explícito el indicador dentro del botón seleccionado.
 - **Alcance:** solo la línea de las pestañas de Estaciones; no se cambia la lógica de selección ni el sitio original fuera de `aconquija-react/`.
 - **Validación:** revisión estática del JSX y CSS guardados en GitHub. La comprobación visual local, build y pruebas de navegador no se han ejecutado.
+
+
+## Clima actual compacto en la barra de navegación — 2026-10-12
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** se agregó `WeatherBadge` junto a las redes sociales de la barra superior. Consulta temperatura actual y código de condición para Aconquija mediante la API pública de Open-Meteo, actualiza cada 15 minutos y representa la condición con un icono compacto. En pantallas pequeñas oculta el nombre del lugar para ahorrar espacio.
+- **Motivo:** petición directa del usuario para mostrar el clima de Aconquija en tamaño pequeño junto a los iconos sociales.
+- **Alcance:** únicamente la barra de navegación del proyecto React; no se modificó el sitio original ni se añadieron dependencias.
+- **Validación:** revisión estática de los cambios guardados en GitHub. No se ejecutaron build, lint ni pruebas de navegador. La consulta del clima requiere conexión a internet y puede mostrar `—°` si el servicio no responde.
