@@ -1347,3 +1347,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo y autorización:** el usuario pidió que la navegación se sintiera más viva, con una línea fina que crezca fluidamente a medida que se desplaza por la página, y autorizó implementarla.
 - **Alcance:** solo se ajustó el estilo de la barra de progreso en React; no se alteraron los enlaces, el fondo ni la estructura de la navegación, y no se modificó el sitio original.
 - **Validación:** cambio guardado en `main`. No se ejecutaron lint, build ni pruebas de navegador; falta confirmar la sensación del movimiento visualmente.
+
+
+## 2026-10-12 — Contraste blanco en los textos principales de Estaciones
+
+- **Archivos de código afectados:** `aconquija-react/src/App.css` y `aconquija-react/src/App.jsx`.
+- **Cambio concreto:** se fijó el blanco puro (`#ffffff`) para el título «Aconquija cambia con cada estación» y su descripción. Se añadió una clase exclusiva al título de verano «Días largos» para que también sea blanco sin cambiar los títulos de las demás estaciones.
+- **Motivo:** mejorar el contraste de esos tres textos sobre el fondo oscuro de Estaciones.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Límites:** no se modificaron el fondo, las pestañas, las imágenes, los textos ni los estilos de otras secciones; el sitio original fuera de `aconquija-react/` permanece intacto.
+- **Validación:** cambio registrado en la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; falta revisar el resultado visual local.
