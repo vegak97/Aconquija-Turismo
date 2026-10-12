@@ -273,3 +273,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** continuar el mapa de rutas por categoría solicitado para Aconquija React.
 - **Autorización:** aprobación explícita del usuario (“si”) a la propuesta de ruta.
 - **Resultado:** ruta registrada como aprobada; no se modificó código de la aplicación. La implementación sigue bloqueada hasta aprobar el mapa completo.
+
+
+## 2026-10-11 21:07 -03:00 — Revisión estática de página 12
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió el Anexo S sobre `html/tercer_nivel/tuneles_rio_potrero.html`, con ruta candidata `/lugares/tuneles-del-rio-potrero`, contenido, duración contradictoria, imágenes vacías, enlaces de contacto, recursos e interacciones detectadas.
+- **Motivo:** continuar la revisión secuencial de las 15 páginas y mantener documentados los hallazgos útiles para el mapa de rutas.
+- **Autorización:** solicitud directa del usuario de continuar paso a paso con la revisión y documentación, respetando `Aconquija-react/agents.md` y sin tocar código antes de aprobar el mapa definitivo.
+- **Resultado:** documentación actualizada; la ruta de esta página queda pendiente de aprobación. No se modificó código React ni el sitio HTML/CSS/JavaScript original y no se ejecutaron pruebas de navegador.
