@@ -453,3 +453,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** confirmación explícita del usuario el 2026-10-12.
 - **Límites respetados:** no se modificó el color de la barra de navegación, el fondo, otros textos, las imágenes ni el sitio HTML/CSS/JavaScript original.
 - **Resultado:** cambio aplicado en la rama remota `main`. Falta la comprobación visual local; no se ejecutaron lint, build ni pruebas de navegador en esta intervención.
+
+
+## 2026-10-12 — Fondo azul pizarra en Estaciones / Climas
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se reemplazó `#1c222c` por `#34485b` en la propiedad `background` de `.estaciones`.
+- **Motivo:** recuperar un fondo de sección distinto y aplicar el color azul pizarra elegido por el usuario.
+- **Autorización:** instrucción explícita del usuario para cambiar únicamente el fondo de Estaciones / Climas.
+- **Límites respetados:** no se modificaron colores de texto, tarjetas, botones, otras secciones, componentes ni el sitio original.
+- **Resultado:** cambio aplicado en la rama remota `main`; falta la comprobación visual local. No se ejecutaron lint, build ni pruebas de navegador.
