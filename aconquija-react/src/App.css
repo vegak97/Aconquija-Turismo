@@ -916,3 +916,18 @@ footer.site-footer {
   transform: translateY(-2px);
 }
 
+
+
+/* Footer en pizarra oscuro con todos sus textos en blanco */
+footer,
+footer.site-footer {
+  background: #1c222c !important;
+  color: #ffffff !important;
+}
+footer .foot-brand p,
+footer .foot-col h5,
+footer .foot-col a,
+footer .foot-col address,
+footer .foot-bottom p {
+  color: #ffffff !important;
+}
