@@ -369,3 +369,21 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** evitar que Windows trate como una misma carpeta rutas que GitHub registra con capitalización distinta, manteniendo la aplicación React, su documentación y estructura bajo una sola ruta coherente.
 - **Autorización:** autorización explícita del usuario el 2026-10-11 para ejecutar esta reorganización de rutas en GitHub y actualizar el registro; no incluye cambios en código React ni en el sitio original.
 - **Resultado:** completado y verificado: los tres documentos y los siete archivos .gitkeep quedaron bajo aconquija-react/; se retiraron las nueve entradas correspondientes a la ruta Aconquija-react/. La aplicación y el sitio original no se modificaron; no se ejecutaron pruebas de compilación porque esta tarea solo reorganizó rutas y documentación.
+
+## 2026-10-12 02:00:55 -03:00 — Criterios vigentes para la migración
+
+- **Archivos afectados:** `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se actualizó la sección 3 de la metodología para consolidar los acuerdos vigentes: alcance de 15 páginas y exclusión de `el_charquiadero.html`; tratamiento de destinos que representan contenido futuro; búsqueda de la misma imagen en otras extensiones locales; conservación de espacios reservados cuando no existe el recurso; prohibición de generar imágenes con `src=""`; uso de `index.html` como fuente canónica de contacto y redes; distinción entre auditoría estática y pruebas reales; y conservación de anexos antiguos como antecedentes históricos.
+- **Motivo:** incorporar las aclaraciones del usuario y evitar que las notas antiguas o las referencias a contenido pendiente se interpreten como autorización para ampliar el alcance de la migración.
+- **Autorización:** solicitud directa del usuario del 2026-10-12 para volver a intentar la modificación de los documentos; las aclaraciones de alcance y criterios se habían proporcionado previamente en esta conversación del proyecto.
+- **Resultado:** actualización de `Metodologia.md` aplicada en `main` y registrada aquí. No se modificó código React ni el sitio original HTML/CSS/JavaScript. No se ejecutaron pruebas de compilación, lint ni navegador, porque el cambio fue exclusivamente documental.
+
+
+## 2026-10-12 02:38:08 -03:00 — Consolidación del estado documental
+
+- **Archivos afectados:** `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto en `Metodologia.md`:** se reemplazó el antiguo resumen de estado por una síntesis vigente que separa decisiones aprobadas, auditoría estática completada, estado técnico real de React y pasos pendientes. Se aclaró que build, lint, pruebas de navegador y publicación siguen pendientes porque no se ejecutaron; también se añadió una nota para identificar los anexos antiguos como antecedentes cuando contradigan el alcance y las decisiones actuales.
+- **Cambio concreto en `Registro.md`:** se corrigió el delimitador Markdown de `el_charquiadero.html` en la entrada anterior y se agregó esta entrada de trazabilidad.
+- **Motivo:** facilitar la continuidad del proyecto y evitar repetir revisiones o tratar decisiones históricas como vigentes.
+- **Autorización:** permiso explícito del usuario en esta conversación del 2026-10-12 para consolidar la documentación y corregir el error de formato.
+- **Resultado:** actualización documental aplicada en `main`. No se modificó código React ni el sitio original HTML/CSS/JavaScript. No se ejecutaron build, lint ni pruebas de navegador.

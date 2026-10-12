@@ -16,13 +16,19 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 6. **Si no se puede actualizar el registro, detenerse.** No continuar con más modificaciones hasta informar el problema y resolver cómo mantener la trazabilidad.
 7. **No dar por verificado lo que no se probó.** Diferenciar entre tareas realizadas, pruebas ejecutadas y asuntos pendientes.
 
-## 3. Criterios acordados para la migración
+## 3. Criterios vigentes acordados para la migración
 
-- **Diseño:** mantener el diseño original lo más fielmente posible; corregir errores solo dentro del alcance autorizado.
-- **Páginas y contenido:** conservar las páginas, textos, enlaces y contenidos existentes, adaptándolos a React.
-- **Alcance previsto:** migrar el sitio completo, incluidas las páginas secundarias, las imágenes y las interacciones. Cada etapa concreta se confirmará antes de ejecutarla.
-- **Separación:** el proyecto nuevo estará dentro de `aconquija-react/`; el sitio original no se utilizará como lugar de trabajo para esta migración.
-- **Cambios no previstos:** ninguna mejora estética, reescritura de contenido, eliminación de funciones, cambio de rutas o instalación adicional se hará por iniciativa propia sin consultarlo primero.
+- **Diseño y contenido:** mantener el diseño original lo más fielmente posible y conservar textos, estructura, enlaces e interacciones de las páginas aprobadas. No introducir mejoras, reescrituras ni contenido nuevo por iniciativa propia.
+- **Alcance vigente:** el inventario autorizado para migrar es de **15 páginas originales**, conforme al mapa aprobado en el Anexo W/Y. `html/tercer_nivel/el_charquiadero.html` fue excluida intencionalmente y no debe recrearse ni migrarse. Los conteos de 16 páginas y las listas anteriores que aparecen en anexos antiguos son antecedentes históricos, no el alcance actual.
+- **Rutas:** el mapa de 15 rutas del Anexo W está aprobado como conjunto. Esta aprobación documental no autoriza por sí sola a modificar código ni a implementar rutas; se requiere la autorización específica de la etapa correspondiente.
+- **Páginas futuras aún no terminadas:** algunos destinos inexistentes se incluyeron intencionalmente como recordatorios de contenido futuro. No crear esas páginas ni redactar su contenido durante esta migración. Antes de migrar los enlaces que apuntan a ellas, conservar la referencia como pendiente y no convertirla en un enlace activo roto; si la forma de representarla en la interfaz requiere una decisión no acordada, consultar al usuario.
+- **Imágenes y recursos faltantes:** si una ruta o extensión de imagen no coincide con un archivo disponible, buscar en el repositorio local el mismo recurso con otra extensión (por ejemplo, `.webp`, `.png`, `.jpg` o variaciones de mayúsculas). Usar la ruta real solo cuando se confirme que es la misma imagen y documentar la correspondencia. Si no existe una imagen equivalente local, conservar el espacio visual reservado para que el usuario la agregue más adelante; no descargar, inventar ni sustituirla por una imagen parecida.
+- **Referencias de imagen vacías:** algunas pueden ser espacios intencionales reservados para recursos que todavía no se agregaron. No clasificarlas automáticamente como errores ni generar en React elementos `<img>` con `src=""`; mantener el espacio reservado de forma segura hasta que el usuario proporcione el recurso.
+- **Contacto y redes sociales globales:** usar los datos de contacto y redes de `index.html` como fuente canónica. Si una página secundaria presenta datos globales diferentes o incompletos, unificarlos con los de `index.html` durante la migración. No inventar datos que no estén allí. Los enlaces de mapas o ubicación específicos de cada atractivo se revisan por separado.
+- **Verificación:** distinguir siempre una auditoría estática de las pruebas reales. Inspeccionar archivos o referencias no demuestra que la aplicación compile, que el linter pase ni que la interfaz funcione en un navegador. Informar cada prueba como ejecutada, fallida o pendiente según corresponda.
+- **Separación:** el proyecto nuevo estará dentro de `aconquija-react/`; el sitio original HTML/CSS/JavaScript debe permanecer intacto.
+- **Trazabilidad histórica:** conservar los anexos antiguos por trazabilidad. Cuando contradigan las decisiones vigentes, señalar que son antecedentes superados y tomar como referencia los criterios actuales y el mapa aprobado.
+- **Cambios no previstos:** si surge una decisión sobre diseño, contenido, comportamiento, dependencias o alcance que no esté cubierta por estos acuerdos, detenerse y consultarla antes de modificar archivos.
 
 ## 4. Fase 0 — Inventario y diagnóstico
 
@@ -176,21 +182,48 @@ Después de trabajar:
 - [ ] Se actualizó `Registro.md` con fecha y hora de Argentina (UTC-03:00), rutas, cambio, motivo, autorización y resultado.
 - [ ] Se informó al usuario qué se hizo, qué se comprobó y qué queda pendiente.
 
-## 13. Estado inicial del plan
+## 13. Estado vigente del proyecto — 2026-10-12 02:37:51 -03:00
 
-- [x] Reglas de autorización y registro documentadas en `agents.md`.
-- [x] Registro de cambios ubicado en `Registro.md`.
-- [x] Metodología de migración documentada en este archivo.
-- [ ] Inventario técnico completo del sitio original.
-- [ ] Estructura React final confirmada.
-- [ ] Migración de la página de inicio.
-- [ ] Adaptación de interacciones.
-- [ ] Migración de páginas secundarias.
-- [ ] Pruebas completas.
-- [ ] Preparación de publicación.
+Esta sección resume el estado actual para retomar el trabajo sin repetir auditorías ni confundir decisiones antiguas con las vigentes. El detalle histórico se conserva en los anexos y el registro de cambios.
 
-**Estado:** planificación documentada. La metodología no autoriza por sí sola a ejecutar las etapas siguientes. Se debe acordar el plan de trabajo concreto y obtener autorización antes de modificar archivos del proyecto para la migración.
+### Decisiones aprobadas
 
+- [x] Reglas de autorización y trazabilidad documentadas en `agents.md`.
+- [x] Mapa definitivo de **15 páginas** y sus rutas React aprobado como conjunto (Anexo W/Y).
+- [x] Estrategia de rutas agrupadas por categoría aprobada: por ejemplo, `/lugares/bosque-de-alisos` y `/eventos/festival-mayor`.
+- [x] Criterios de preservación del sitio original, imágenes, enlaces pendientes y datos globales de contacto consolidados en la sección 3.
+- [x] Exclusión de `html/tercer_nivel/el_charquiadero.html` confirmada.
+
+### Auditoría estática ya realizada
+
+- [x] Revisadas las 15 páginas incluidas en el alcance y documentadas las correspondencias de rutas.
+- [x] Revisada la estructura actual del proyecto React y la presencia de dependencias.
+- [x] Identificadas referencias a destinos internos aún inexistentes, rutas/extensiones de imágenes que no coinciden, atributos de imagen vacíos, discrepancias de contacto y algunos detalles de estructura HTML que necesitan verificación al migrar.
+- [x] Confirmado que el sitio original permanece separado del proyecto React; no se modificó durante la auditoría.
+- [x] Conservados los hallazgos y decisiones previas como anexos para mantener la trazabilidad.
+
+### Estado técnico actual de React
+
+- `react-router-dom` ya está declarado en las dependencias.
+- `src/App.jsx` está vacío; `src/App.css` también está vacío.
+- `src/index.css` conserva estilos iniciales de Vite; `src/main.jsx` importa `App`.
+- Las carpetas `src/components/`, `src/pages/`, `src/data/` y `src/styles/` solo contienen marcadores `.gitkeep`.
+- El HTML de React aún muestra metadatos genéricos de Vite y no se ha incorporado el conjunto de imágenes turísticas al proyecto React.
+- **No se ha ejecutado** `npm run build`, lint ni una prueba de navegador en esta revisión. Por lo tanto, esos resultados siguen pendientes; la inspección estática no demuestra que la compilación falle o pase.
+- La plataforma de publicación todavía debe confirmarse antes de decidir la configuración de rutas y base de Vite.
+
+### Próximos pasos — sin autorización implícita para editar
+
+1. Confirmar el entorno local y ejecutar las comprobaciones de build/lint, sin alterar archivos, si el usuario quiere continuar con esa verificación.
+2. Presentar el plan concreto para preparar la estructura de React y las rutas aprobadas, enumerando cada archivo que se modificaría.
+3. Esperar autorización específica antes de tocar código.
+4. Migrar la página de inicio y validarla antes de avanzar con las páginas restantes.
+5. Resolver las imágenes y enlaces durante la migración aplicando la sección 3; no crear destinos futuros ni sustituir imágenes por otras inventadas.
+6. Ejecutar y documentar pruebas reales, y confirmar el destino de publicación antes de preparar el despliegue.
+
+**Estado general:** auditoría estática y planificación completadas; implementación React, compilación, lint, pruebas de navegador y publicación pendientes. La aprobación del mapa de rutas no autoriza cambios de código.
+
+**Nota sobre los anexos históricos:** se conservan para no perder decisiones, evidencia ni contexto. Si un anexo antiguo habla de 16 páginas, indica que el mapa está pendiente de aprobación o propone una ruta distinta, esa información describe una etapa anterior y no debe prevalecer sobre la sección 3, este estado vigente y las entradas más recientes de `Registro.md`.
 
 ## Anexo A — Inventario inicial del sitio original (2026-10-10)
 
