@@ -481,3 +481,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** igualar el fondo de «Explorá Aconquija a tu manera» al de «Estaciones / Climas», sin alterar el resto del diseño.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Resultado:** cambios aplicados en la rama `main` y confirmados por la respuesta de GitHub. La comprobación es estática; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12 — Texto dorado en Explorar Aconquija a tu manera
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se agregó el selector `.explorar .section-head h2, .explorar .section-head p` con `color: var(--sand)`, aplicándolo únicamente al título y al párrafo de la sección Explorar.
+- **Motivo:** dar a esos dos textos el tono dorado solicitado sin cambiar otros elementos visuales.
+- **Autorización:** autorización explícita del usuario el 2026-10-12.
+- **Límites respetados:** se conserva el fondo `#1c222c`; no se modificaron tarjetas, imágenes, márgenes, contenido ni otras secciones. No se tocó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios documentados y guardados en la rama `main`. La comprobación visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
