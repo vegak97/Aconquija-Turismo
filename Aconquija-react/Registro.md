@@ -256,3 +256,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** se registró la aprobación expresa de `/eventos/desfile-civico-escolar` para `html/tercer_nivel/desfile_civico.html`.
 - **Alcance:** la aprobación corresponde a esta página individual; el mapa global de las 15 páginas sigue pendiente. No se modificó código React ni el sitio original y no se implementó la ruta.
 - **Resultado:** metodología actualizada mediante el commit `14f882d2ec56f8f5bd02ca2be1167166a48113aa`. Registro actualizado en este commit.
+
+
+### 2026-10-11 21:03:25 -03:00 — Página 11: Festival Mayor de Aconquija
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo R con la revisión estática de `html/tercer_nivel/festival_mayor_aconquija.html` y la propuesta provisional `/eventos/festival-mayor`.
+- **Hallazgos:** evento de tres noches hacia fines de enero; fecha y cartelera variables; ubicación en el Complejo Polideportivo Municipal Juan Higinio Vedia; cuatro imágenes de galería con `src=""`, tres con `data-full=""`; enlaces de contacto/redes y mapa; controles de galería, compartir y copiar enlace.
+- **Criterios aplicados:** no reponer imágenes ilustrativas retiradas ni completar referencias vacías por suposición. Los datos generales de contacto y redes deben tomarse de `index.html`. No se presentarán fechas, precios ni carteleras variables como información vigente sin confirmación.
+- **Autorización:** el usuario pidió continuar con la revisión de las páginas y respetar `Aconquija-react/agents.md`; el trabajo se limitó a revisión estática y documentación.
+- **Resultado:** metodología actualizada mediante el commit `e9925ac1b23cf249d07989628e16f6eb5409bdb9`. Registro actualizado en este commit. No se modificó código React ni el sitio original, no se implementó la ruta y no se ejecutaron pruebas de navegador. La ruta queda pendiente de aprobación.
