@@ -400,12 +400,14 @@ header.nav .nav-mobile-social .icon-circle svg {
   border-bottom: 1px solid var(--line); flex-wrap: wrap;
 }
 .est-tab {
-  padding: 16px 28px; font-size: .85rem; letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--stone); cursor: pointer; position: relative; font-weight: 500; transition: color .3s ease;
+  appearance: none; background: transparent; border: 0; border-radius: 0;
+  padding: 16px 28px; font-family: inherit; font-size: .85rem;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--stone); cursor: pointer; position: relative; font-weight: 500;
+  transition: color .3s ease; text-align: left;
 }
 .est-tab.active { color: var(--white); }
-.est-tab:hover,
-.est-tab:focus-visible { color: var(--sand); }
+.est-tab:focus-visible { outline: 2px solid var(--sand); outline-offset: -2px; }
 .est-tab.active::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -1px;
   height: 2px; background: var(--amber);
