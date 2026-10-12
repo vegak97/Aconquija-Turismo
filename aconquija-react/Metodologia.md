@@ -1396,3 +1396,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo colores de fechas y títulos dentro de Estaciones. No se modifican textos, imágenes, tamaños, bordes, distribución, pestañas ni otras secciones.
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Validación:** cambio comprobado estáticamente en el CSS de GitHub. No se ejecutaron lint, build ni pruebas de navegador; queda pendiente la comprobación visual local.
+
+## Botones de estaciones iguales al index.html original — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Referencia revisada:** `css/style.css` del sitio original, reglas `.est-tabs`, `.est-tab`, `.est-tab.active` y `.est-tab.active::after`.
+- **Cambio:** se neutralizaron los estilos predeterminados del elemento `button` (fondo, borde y apariencia), se heredó la tipografía del sitio y se quitó el cambio de color al pasar el cursor que no existe en la referencia original. Se conservaron el espaciado, tamaño, mayúsculas, color inactivo, color activo y línea inferior ámbar. Se añadió un contorno de foco visible para navegación por teclado.
+- **Alcance:** solo la apariencia de las pestañas Verano, Otoño, Invierno y Primavera en React. No se modificaron textos, comportamiento de selección, imágenes ni archivos del sitio original.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Validación:** reglas comparadas estáticamente con `css/style.css`; no se ejecutaron lint, build ni pruebas de navegador.
