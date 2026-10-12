@@ -265,3 +265,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Criterios aplicados:** no reponer imágenes ilustrativas retiradas ni completar referencias vacías por suposición. Los datos generales de contacto y redes deben tomarse de `index.html`. No se presentarán fechas, precios ni carteleras variables como información vigente sin confirmación.
 - **Autorización:** el usuario pidió continuar con la revisión de las páginas y respetar `Aconquija-react/agents.md`; el trabajo se limitó a revisión estática y documentación.
 - **Resultado:** metodología actualizada mediante el commit `e9925ac1b23cf249d07989628e16f6eb5409bdb9`. Registro actualizado en este commit. No se modificó código React ni el sitio original, no se implementó la ruta y no se ejecutaron pruebas de navegador. La ruta queda pendiente de aprobación.
+
+
+## 2026-10-11 21:07 -03:00 — Aprobación de ruta de Festival Mayor
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se documentó la aprobación de la ruta `/eventos/festival-mayor` para `html/tercer_nivel/festival_mayor_aconquija.html`.
+- **Motivo:** continuar el mapa de rutas por categoría solicitado para Aconquija React.
+- **Autorización:** aprobación explícita del usuario (“si”) a la propuesta de ruta.
+- **Resultado:** ruta registrada como aprobada; no se modificó código de la aplicación. La implementación sigue bloqueada hasta aprobar el mapa completo.
