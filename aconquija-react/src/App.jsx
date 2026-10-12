@@ -293,7 +293,7 @@ function HomePage() {
             <div className="est-panels reveal">
               {seasons.map((season) => (
                 <div className={`est-panel${activeSeason === season.id ? ' active' : ''}`} id={`panel-${season.id}`} role="tabpanel" key={season.id} hidden={activeSeason !== season.id}>
-                  <div><div className="est-eyebrow">{season.dates}</div><h3>{season.title}</h3><p>{season.text}</p></div>
+                  <div><div className="est-eyebrow">{season.dates}</div><h3 className={season.id === 'verano' ? 'season-title--summer' : undefined}>{season.title}</h3><p>{season.text}</p></div>
                   <img src={season.image} alt={season.alt} />
                 </div>
               ))}
