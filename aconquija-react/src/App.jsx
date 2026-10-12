@@ -6,6 +6,7 @@ import logoHeader from '../../imagenes/logo_aconquija(1).png'
 import logoFooter from '../../imagenes/logo_aconquija(2).png'
 import respiraVerdeImage from '../../imagenes/respira_verde_fondo.png'
 import cultivaTradicionImage from '../../imagenes/cultiva_tradicion.webp'
+import caballoImage from '../../imagenes/caballo.webp'
 import nochesEstrelladasImage from '../../imagenes/cautiva_miradas.png'
 import pucaraImage from '../../imagenes/respira_aconquija2.webp'
 import cristoRedentorImage from '../../imagenes/cristo_redentor/cristo_redentor.webp'
@@ -316,7 +317,7 @@ function HomePage() {
         </section>
 
         <section className="cta" id="sobre">
-          <div className="cta-bg" />
+          <div className="cta-bg" style={{ backgroundImage: `url("${caballoImage}")` }} />
           <div className="cta-content">
             <div className="eyebrow">Sobre Aconquija</div>
             <h2>Un pueblo, una sierra, un mismo ritmo.</h2>
