@@ -547,3 +547,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Límites respetados:** no se modifican el rótulo dorado «Sobre Aconquija», el párrafo, el botón, la imagen de fondo ni otras secciones.
 - **Resultado:** cambio aplicado y documentado en `main`. No se ejecutaron lint, build ni pruebas de navegador; falta comprobar el aspecto visual local.
+
+
+## 2026-10-12T17:38:17-03:00 — Igualación del botón «Planeá tu visita» con el sitio original
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se cambió el destino del enlace del botón en React de `#servicios` a `#`, coincidiendo con el botón de `index.html`. Se comprobó que la clase `btn-primary` y sus reglas visuales ya coinciden con `css/style.css`; por eso no se modificó el CSS.
+- **Motivo:** reproducir en la sección «Sobre Aconquija» el botón de referencia, tanto en su estilo existente como en su destino de enlace.
+- **Autorización:** permiso explícito del usuario el 2026-10-12, después de confirmar el alcance del cambio.
+- **Límites respetados:** el HTML original y sus estilos no se modificaron; tampoco se cambiaron otros botones ni elementos de la sección.
+- **Resultado:** cambio aplicado y documentado en la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; falta verificar el resultado en el navegador local.
