@@ -1218,3 +1218,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Cambio:** se cambió únicamente el color de fondo de `.estaciones` a azul pizarra `#34485b`, conservando las demás propiedades y estilos de la sección.
 - **Autorización:** el usuario eligió expresamente Azul pizarra y autorizó cambiar únicamente el fondo de Estaciones / Climas.
 - **Validación pendiente:** revisar visualmente la sección en el navegador local. No se ejecutaron lint, build ni pruebas de navegador en esta intervención.
+
+
+## Ajuste visual de circuitos, estaciones y pie de página — 2026-10-12
+
+- **Archivo de estilos:** `aconquija-react/src/App.css`.
+- **Referencia:** capturas compartidas por el usuario para las secciones «Qué hacer», «Cuándo venir» y el pie de página.
+- **Cambio:** se restauró el fondo oscuro original de Estaciones / Climas (`#1c222c`) para que coincida con la referencia; se añadió el estado hover/foco dorado (`var(--sand)`) a los botones de estaciones, manteniendo el texto blanco y la línea dorada de la pestaña seleccionada. Los rótulos de sección y los encabezados del pie ya usan el tono dorado `var(--sand)` en las reglas existentes, por lo que se conservaron sin cambios.
+- **Alcance:** estilos visuales de esas partes; sin cambios en textos, imágenes, enlaces, estructura JSX ni sitio original.
+- **Autorización:** el usuario autorizó expresamente este ajuste el 2026-10-12.
+- **Validación:** pendiente de comprobación visual local; no se ejecutaron lint, build ni pruebas de navegador.
