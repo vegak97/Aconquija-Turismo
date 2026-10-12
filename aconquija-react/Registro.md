@@ -626,3 +626,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** las otras fechas, el fondo y el resto de la página no se modifican intencionalmente.
 - **Resultado:** actualización enviada a `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el aspecto visual en el navegador local.
+
+
+## 2026-10-12T18:56:14-03:00 — Reducción sutil del alto de la navegación
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** la navegación superior reduce su relleno vertical de 20 px a 16 px; cuando la página está desplazada, pasa de 12 px a 10 px. El logo del encabezado se ajusta de 72 px a 66 px y a 58 px en el estado desplazado, con una transición suave.
+- **Motivo:** hacer la barra menos gruesa y más liviana a la vista, manteniendo su estructura y comportamiento.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** se modificó únicamente el alto visual de la navegación de React y se documentó el cambio. El logo del footer y el sitio original no se modificaron intencionalmente.
+- **Resultado:** CSS y documentación actualizados en `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el resultado visual local.
