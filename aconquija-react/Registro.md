@@ -415,3 +415,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización explícita del usuario el 2026-10-12 para iniciar esta etapa y modificar inicialmente los cinco archivos indicados.
 - **Límites respetados:** no se modificó el sitio original fuera de `aconquija-react/`; no se cambiaron `src/main.jsx`, `vite.config.js`, `package.json`, dependencias ni configuración de publicación; no se crearon archivos nuevos ni se movieron recursos.
 - **Resultado:** cambios aplicados a la rama remota `main`. La inspección remota del contenido confirma que se incorporó la estructura principal y se importó la hoja de estilos; todavía no se ejecutaron lint, build ni pruebas de navegador después de estos cambios. La etapa no se declara validada hasta revisar los resultados reales en el entorno local.
+
+
+## 2026-10-12 — Ajuste interno previo a la validación de Inicio
+
+- **Archivo afectado:** `aconquija-react/src/App.jsx`.
+- **Cambio concreto:** se hizo explícita la inicialización del `IntersectionObserver` usado por las animaciones de aparición, evitando que la función de callback dependa de una variable todavía en proceso de inicialización.
+- **Motivo:** reducir el riesgo de advertencias del linter y mantener una limpieza clara del observador al desmontar la página.
+- **Autorización:** ajuste técnico interno incluido en la autorización de migrar Inicio y adaptar sus interacciones; no se amplió el alcance ni se modificaron archivos adicionales.
+- **Resultado:** cambio aplicado en la rama remota `main`. La comprobación estática remota confirma que la inicialización quedó explícita; el lint, el build y las pruebas de navegador siguen pendientes.
