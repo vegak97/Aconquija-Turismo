@@ -985,3 +985,25 @@ Página 14 de 15 revisada estáticamente. Se documentaron contenido, ruta candid
 - **Ruta aprobada expresamente por el usuario:** `/lugares/yunka-suma`.
 - **Alcance:** se aprueba la ruta para el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación continúa pendiente de aprobación del mapa completo.
 - **Observaciones pendientes:** las imágenes de la galería y la imagen del lightbox contienen referencias vacías; no completarlas por suposición ni restaurar ilustraciones eliminadas. Los datos globales de contacto y redes deben obtenerse de `index.html`.
+
+
+## Anexo V — Página 15 de 15: Virgen del Valle de Aconquija
+
+**Archivo revisado:** `html/tercer_nivel/virgen_del_valle.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó físicamente la existencia de recursos locales.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Virgen del Valle de Aconquija — Aconquija Turismo” y H1 “Virgen del Valle de Aconquija”. Describe la escultura religiosa ubicada en El Lindero, frente al Cristo Redentor y al otro lado del Río del Campo. Incluye contexto religioso, referencia a la Semana Santa y una descripción de la caminata desde el pueblo.
+- **Ruta React candidata:** `/lugares/virgen-del-valle`. Propuesta provisional, pendiente de aprobación expresa del usuario y de la revisión del mapa completo. No se implementó.
+- **Relaciones entre páginas:** el texto vincula explícitamente este destino con `html/tercer_nivel/cristo_redentor.html` como paseo combinable en la misma jornada. La relación puede representarse en el mapa definitivo; no se creó ningún enlace React.
+- **Imágenes:** la imagen principal usa una URL externa de Unsplash y está marcada como ilustrativa; otra referencia local es `../../imagenes/virgen_del_valle/virgen_del_valle_2.webp`; dos imágenes de galería tienen `src=""`, y el lightbox también empieza con una fuente vacía. Verificar la existencia de la imagen local antes de migrar. No restaurar ilustraciones externas ni completar referencias vacías sin autorización. En React no renderizar imágenes con `src=""`; tratarlas como opcionales según el diseño aprobado.
+- **Ubicación y mapas:** los enlaces “Ver en el mapa” y “Cómo llegar” abren Google Maps con la búsqueda `Virgen del Valle Aconquija Catamarca`; son destinos externos, no rutas internas.
+- **Acceso y seguridad del recorrido:** el HTML indica que desde el pueblo se cruza el Río del Campo para llegar a la lomada y recomienda calzado cerrado con buen agarre. Es una descripción editorial, no una confirmación del caudal o las condiciones actuales del río; no presentar el cruce como seguro en todo momento sin verificar condiciones.
+- **Datos religiosos:** el texto identifica a la Virgen del Valle como patrona de Catamarca y menciona la celebración del 8 de diciembre y actividades de Semana Santa. Se registran como contenido de la página, no como comprobación independiente de fechas de eventos locales.
+- **Contacto y redes:** aplicar el criterio transversal de tomar los datos globales desde `index.html`, no de páginas interiores.
+- **Recursos compartidos:** CSS `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, JavaScript `../../js/scrip.js`. Verificar su existencia y rutas antes de migrar; conservar intactos los originales.
+- **Estructura e interacciones:** la página contiene navegación, barra de progreso, galería/lightbox y controles para compartir/copiar enlace. Las interacciones no se probaron en navegador.
+
+### Estado de esta revisión
+
+Página 15 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, la relación con Cristo Redentor, las referencias de imágenes y los enlaces externos. La ruta queda pendiente de aprobación; no se modificó código React ni el sitio HTML/CSS/JavaScript original.
