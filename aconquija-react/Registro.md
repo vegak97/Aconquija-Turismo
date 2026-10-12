@@ -616,3 +616,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** confirmación explícita del usuario el 2026-10-12.
 - **Alcance respetado:** no se cambiaron el fondo, las pestañas, las imágenes, los demás títulos de temporada ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** actualizaciones enviadas a la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual local queda pendiente.
+
+
+## 2026-10-12T18:52:27-03:00 — Fecha de verano en dorado arena
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** «Diciembre — Marzo» recibe una clase específica para verano y se establece su color en dorado arena (`#cdaa78`).
+- **Motivo:** aplicar el color solicitado a la fecha de verano en la sección Estaciones.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** las otras fechas, el fondo y el resto de la página no se modifican intencionalmente.
+- **Resultado:** actualización enviada a `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el aspecto visual en el navegador local.
