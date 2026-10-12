@@ -1337,3 +1337,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Alcance:** solo los encabezados de columnas dentro del footer de React; no se modifican otras secciones ni el sitio original.
 - **Validación:** selector CSS comprobado estáticamente en GitHub. La comprobación visual en navegador queda pendiente.
+
+
+## Barra de progreso de desplazamiento — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** la barra superior `#readProgress` pasa a medir 3 px y usa el dorado arena `#cdaa78`. Se suavizó la transición de anchura con una curva de aceleración y se añadió `will-change: width` para preparar el navegador para ese cambio visual.
+- **Comportamiento existente:** `src/App.jsx` ya calcula el porcentaje de desplazamiento y actualiza la anchura al subir o bajar; por eso no fue necesario cambiar la lógica React.
+- **Motivo y autorización:** el usuario pidió que la navegación se sintiera más viva, con una línea fina que crezca fluidamente a medida que se desplaza por la página, y autorizó implementarla.
+- **Alcance:** solo se ajustó el estilo de la barra de progreso en React; no se alteraron los enlaces, el fondo ni la estructura de la navegación, y no se modificó el sitio original.
+- **Validación:** cambio guardado en `main`. No se ejecutaron lint, build ni pruebas de navegador; falta confirmar la sensación del movimiento visualmente.
