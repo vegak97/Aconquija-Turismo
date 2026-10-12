@@ -333,7 +333,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 #lugares .section-head .eyebrow,
 #estaciones .section-head .eyebrow,
 #servicios .section-head .eyebrow,
-#sobre .cta-content .eyebrow { color: var(--sand); }
+#sobre .cta-content .eyebrow { color: #cdaa78 !important; }
 
 .card-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
 .exp-card {
