@@ -182,7 +182,7 @@ Después de trabajar:
 - [ ] Se actualizó `Registro.md` con fecha y hora de Argentina (UTC-03:00), rutas, cambio, motivo, autorización y resultado.
 - [ ] Se informó al usuario qué se hizo, qué se comprobó y qué queda pendiente.
 
-## 13. Estado vigente del proyecto — 2026-10-12 03:22:49 -03:00
+## 13. Estado vigente del proyecto — 2026-10-12
 
 Esta sección resume el estado actual para retomar el trabajo sin repetir auditorías ni confundir decisiones antiguas con las vigentes. El detalle histórico se conserva en los anexos y en el registro de cambios.
 
@@ -193,36 +193,43 @@ Esta sección resume el estado actual para retomar el trabajo sin repetir audito
 - [x] Estrategia de rutas agrupadas por categoría aprobada.
 - [x] Criterios de preservación del sitio original, imágenes, enlaces pendientes y datos globales consolidados en la sección 3.
 - [x] Exclusión de `html/tercer_nivel/el_charquiadero.html` confirmada.
-- [x] El usuario autorizó expresamente la Etapa 1 de preparación de la base React y pidió guardar el plan de implementación para mantener la continuidad.
+- [x] Etapa 1 de preparación de la base React autorizada e implementada.
+- [x] El usuario autorizó la migración de la página principal original a React, reutilizando los archivos existentes `src/App.jsx`, `src/App.css`, `src/index.css`, `Metodologia.md` y `Registro.md`.
 
-### Auditoría y pruebas ejecutadas antes de la Etapa 1
+### Estado de la Etapa 1 — Base React
 
-- [x] Inspección estática del mapa de 15 páginas y de la estructura React.
-- [x] En el entorno local del usuario, `npm.cmd run lint` terminó con 0 advertencias y 0 errores, analizando 3 archivos.
-- [x] En el entorno local del usuario, `npm.cmd run build` falló antes de la Etapa 1 con `MISSING_EXPORT`: `src/App.jsx` no exportaba `default`, porque el usuario había dejado intencionalmente ese archivo vacío.
-- [x] Confirmado que `public/favicon.svg` existe.
-- [x] Confirmado que `react-router-dom` ya está declarado; no se necesita agregar una dependencia para el enrutamiento.
+- [x] Se configuraron las 15 rutas aprobadas usando React Router y se mantuvo una pantalla provisional para las páginas aún no migradas.
+- [x] Se reemplazaron los estilos globales de la plantilla por una base neutral y adaptable.
+- [x] Se actualizaron idioma, título y metadatos básicos del documento HTML de React.
+- [ ] La verificación local posterior al cambio (lint, build y navegación en navegador) no está confirmada todavía.
 
-### Estado de la Etapa 1
+### Estado de la migración de Inicio
 
-- [x] Se implementó el componente raíz y se configuraron las 15 rutas aprobadas usando React Router.
-- [x] Se agregaron pantallas provisionales explícitas para indicar que el contenido original se migrará en etapas posteriores; estas pantallas no sustituyen ni pretenden completar las páginas originales.
-- [x] Se reemplazaron los estilos globales de la plantilla por una base neutral y adaptable para el trabajo turístico.
-- [x] Se actualizaron idioma, título y metadatos básicos del documento HTML.
-- [x] El archivo `src/App.css` se mantuvo vacío, tal como el usuario decidió dejarlo. `src/main.jsx`, `vite.config.js`, `package.json` y el sitio original permanecieron sin cambios.
-- [ ] El usuario debe sincronizar los cambios desde VS Code y ejecutar las comprobaciones posteriores a la Etapa 1.
-- [ ] La prueba posterior al cambio de `npm.cmd run lint`, la compilación `npm.cmd run build` y la revisión en navegador siguen pendientes; no se afirma que hayan pasado.
+- [x] Se trasladó a `src/App.jsx` la estructura de la página principal: navegación, hero, presentación, circuitos, lugares, pestañas de estaciones, servicios, sección final y pie de página.
+- [x] Se reutilizaron los recursos gráficos existentes del repositorio mediante importaciones relativas, sin mover ni modificar los archivos de imágenes originales.
+- [x] Se trasladaron a `src/App.css` las reglas de diseño originales de `css/style.css`, ajustando únicamente las rutas de recursos necesarias desde la ubicación del archivo React.
+- [x] Se adaptaron a React el menú móvil, el cierre con Escape, el progreso de lectura, el estado del encabezado al desplazarse, las animaciones de aparición y las pestañas de estaciones.
+- [x] Se actualizaron los estilos globales de `src/index.css` para integrar la tipografía y la base visual del sitio.
+- [ ] La comparación visual en navegador, el lint y la compilación después de esta migración siguen pendientes. No se declara la etapa validada hasta recibir esos resultados.
+- [ ] Los títulos y descripciones vacíos de las tarjetas de circuitos se conservaron porque están vacíos en el original; no se inventó contenido.
+
+### Archivos protegidos y límites
+
+- El sitio original HTML/CSS/JavaScript fuera de `aconquija-react/` permanece sin cambios.
+- No se modificaron `src/main.jsx`, `vite.config.js`, `package.json` ni las dependencias.
+- No se crearon archivos adicionales ni se movieron imágenes.
+- Las 14 páginas secundarias siguen con pantallas provisionales y se migrarán en una etapa posterior, con autorización específica.
+- Las pruebas posteriores a la migración aún no se han ejecutado en el entorno local del usuario; el contenido remoto fue escrito mediante GitHub, pero eso no equivale a una prueba de build, lint o navegador.
 
 ### Próximos pasos
 
-1. Sincronizar desde GitHub en VS Code.
-2. Ejecutar `npm.cmd run lint` y `npm.cmd run build` y compartir los resultados.
-3. Si las comprobaciones pasan, iniciar el servidor de desarrollo y verificar las rutas antes de migrar contenido.
-4. Solicitar autorización específica para la Etapa 2 antes de crear componentes compartidos o incorporar recursos turísticos.
-5. Continuar la migración por etapas, registrar cada cambio y mantener intacto el sitio original.
+1. El usuario sincroniza los cambios como parte de su flujo habitual.
+2. Ejecutar `npm.cmd run lint` y revisar el resultado antes de pasar al build.
+3. Ejecutar `npm.cmd run build` y resolver cualquier error solo tras explicar los archivos afectados y obtener autorización si el cambio no está incluido en el alcance ya aprobado.
+4. Iniciar la aplicación y revisar la página principal en escritorio y móvil; comparar contra el original y anotar problemas concretos.
+5. No migrar las páginas secundarias hasta cerrar la validación de Inicio y solicitar autorización separada para la etapa siguiente.
 
-**Estado general:** Etapa 1 implementada en el repositorio remoto; validación local posterior pendiente. La aprobación de esta etapa no autoriza automáticamente las etapas siguientes.
-
+**Estado general:** la base React y la primera migración de la página de inicio están implementadas en la rama remota. La validación local posterior permanece pendiente.
 
 ## Anexo A — Inventario inicial del sitio original (2026-10-10)
 
@@ -1105,69 +1112,64 @@ Estas decisiones reemplazan las propuestas anteriores para esas páginas. Se reg
 - **Estado del código:** no se modificó ningún archivo de código React ni los originales HTML/CSS/JavaScript; tampoco se implementó ni probó React Router.
 
 
-## 14. Plan de implementación aprobado — Aconquija React
+## 14. Plan de implementación y continuidad — Aconquija React
 
-Este plan fue aprobado expresamente por el usuario el 2026-10-12. Es la referencia de continuidad del proyecto: seguir las etapas en orden, no repetir auditorías ya documentadas y pedir autorización antes de cada etapa nueva. Las rutas aprobadas se conservan en el Anexo W/Y.
+Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históricas se conservan en los anexos, pero ante cualquier contradicción prevalecen la sección 3, el estado vigente de la sección 13 y las autorizaciones explícitas posteriores.
 
 ### Principios para todas las etapas
 
-- Respetar `agents.md`: autorización previa, alcance limitado y registro obligatorio.
+- Respetar `agents.md`: explicar los cambios antes de realizarlos, esperar autorización para cada etapa y registrar los resultados.
 - Mantener intacto el sitio original HTML/CSS/JavaScript fuera de `aconquija-react/`.
 - No crear ni migrar la página excluida `html/tercer_nivel/el_charquiadero.html`.
 - No inventar contenido ni reemplazar imágenes faltantes por imágenes parecidas.
 - Mantener las rutas aprobadas y no activar enlaces a páginas futuras inexistentes.
 - Distinguir siempre entre revisión estática, lint, build y pruebas reales en navegador.
-- Actualizar `Registro.md` en cada tarea de cambios y detenerse si no se puede registrar el resultado.
+- No crear nuevos archivos, cambiar configuración, mover recursos ni añadir dependencias sin explicarlo y pedir autorización si no está incluido en la etapa aprobada.
 
 ### Etapa 1 — Preparación de la base React
 
-**Estado:** implementada en el repositorio remoto; falta verificar en la copia local sincronizada.
+**Estado:** implementada en la rama remota; la verificación local posterior no está confirmada.
 
-**Archivos incluidos en la autorización:**
-- `src/App.jsx`: componente raíz, configuración de las 15 rutas aprobadas con React Router y pantallas provisionales para páginas aún no migradas.
-- `src/index.css`: reemplazo de los estilos globales de plantilla por estilos base neutrales, adaptables y accesibles.
-- `index.html`: idioma español, título y metadatos básicos. Se conserva el favicon existente.
-- `Metodologia.md`: estado actualizado y plan persistente.
-- `Registro.md`: entrada de trazabilidad de la etapa.
+- `src/App.jsx`: componente raíz y 15 rutas aprobadas, con pantallas provisionales para páginas aún no migradas.
+- `src/index.css`: base global neutral inicial.
+- `index.html` dentro de React: idioma, título y metadatos básicos.
+- `Metodologia.md` y `Registro.md`: plan y trazabilidad.
 
-**Archivos que se mantienen sin cambios:** `src/App.css` (el usuario decidió dejarlo vacío), `src/main.jsx`, `vite.config.js`, `package.json`, los recursos originales y el sitio HTML/CSS/JavaScript original.
+### Etapa 2 — Migración de la página principal
 
-**Criterio de aceptación:** sincronizar los cambios; obtener resultado sin errores en lint y build; verificar en navegador que las rutas aprobadas cargan una pantalla provisional y que una ruta desconocida muestra la pantalla de no encontrada. Los resultados se registrarán cuando las pruebas se ejecuten realmente.
+**Estado:** implementación remota aplicada; lint, build y comparación en navegador pendientes.
 
-### Etapa 2 — Componentes compartidos y organización
+- `src/App.jsx`: estructura de Inicio migrada desde el `index.html` original, con navegación, hero, introducción, circuitos, lugares, estaciones, servicios, sección final y pie de página. Se mantuvieron las 14 rutas secundarias como pantallas provisionales.
+- `src/App.css`: estilos basados en `css/style.css`, con ajuste de las rutas de imágenes para su ubicación dentro de React.
+- `src/index.css`: integración de la base visual global y reglas de apoyo para los controles React.
+- `Metodologia.md` y `Registro.md`: actualización del estado y trazabilidad.
+- Los recursos gráficos se importan desde sus ubicaciones originales mediante rutas relativas; no se movieron ni editaron archivos de imagen.
+- No se añadieron dependencias ni se modificó configuración de Vite.
+- Criterio de aceptación: lint y build ejecutados correctamente; página Inicio revisada en navegador en escritorio y móvil; enlaces y pestañas verificados; cualquier problema se documenta antes de avanzar.
 
-- Proponer y autorizar por separado los archivos que se crearán para encabezado, navegación, pie de página y componentes reutilizables.
-- Definir dónde se ubicarán los recursos turísticos sin duplicar ni mover los originales.
-- No introducir dependencias ni modificar la configuración de publicación sin necesidad justificada y permiso.
-- Registrar los archivos y verificar la estructura antes de continuar.
+### Etapa 3 — Revisión y cierre de Inicio
 
-### Etapa 3 — Migración de la página de inicio
+- Ejecutar lint y build después de sincronizar los cambios.
+- Revisar el resultado visual contra el original, en escritorio y móvil.
+- Corregir problemas detectados solo después de explicar qué archivos requieren cambios y obtener autorización cuando corresponda.
+- No dar por completada la etapa hasta documentar los resultados reales.
 
-- Migrar por bloques el contenido original de `index.html`: navegación, hero, presentación, tarjetas/secciones y pie de página.
-- Conservar textos, orden, imágenes, enlaces y comportamiento originales, respetando los acuerdos de la sección 3.
-- Comparar la página React con el original en escritorio y móvil antes de darla por terminada.
+### Etapa 4 — Migración de las 14 páginas secundarias
 
-### Etapa 4 — Interacciones y recursos
-
-- Adaptar a React las interacciones existentes: menú móvil, estado de navegación al desplazarse, progreso, animaciones, pestañas, galería/lightbox y acciones de compartir, según el inventario.
-- Confirmar las rutas de imágenes localmente; usar una extensión alternativa solo si se confirma que es el mismo recurso.
-- Mantener espacios reservados cuando una imagen intencionalmente no existe, sin generar `img src=""`.
-- Verificar accesibilidad básica, teclado y limpieza de eventos/observadores.
-
-### Etapa 5 — Migración de las 14 páginas restantes
-
-- Migrar las páginas secundarias según el mapa de 15 rutas aprobado.
-- Reutilizar componentes cuando no altere el resultado visual.
+- Presentar un plan específico de archivos antes de comenzar y solicitar autorización independiente.
+- Migrar las páginas conforme al mapa aprobado de 15 rutas.
+- Reutilizar componentes cuando no altere el resultado visual; pedir permiso antes de crear archivos nuevos fuera del alcance aprobado.
 - No crear contenido futuro no aprobado ni migrar `el_charquiadero.html`.
-- Probar cada ruta directa y los enlaces internos antes de pasar a la siguiente página.
+- Confirmar rutas de imágenes; usar una extensión alternativa solo si se confirma que es el mismo recurso. Si no existe equivalente, preservar el espacio visual reservado sin usar `img src=""`.
+- Probar cada ruta directa y sus enlaces antes de pasar a la siguiente página.
 
-### Etapa 6 — Pruebas y control de calidad
+### Etapa 5 — Pruebas y control de calidad integral
 
-- Ejecutar lint y build después de los cambios.
-- Revisar errores de consola, solicitudes de recursos, enlaces, botones, navegación, galería, diseño adaptable y comparación visual.
+- Ejecutar lint y build.
+- Revisar errores de consola, recursos faltantes, enlaces, navegación, controles, accesibilidad básica y diseño adaptable.
 - Registrar cada prueba como aprobada, fallida o pendiente; nunca afirmar que una prueba pasó si no se ejecutó.
 
-### Etapa 7 — Publicación
+### Etapa 6 — Publicación
 
 - Confirmar con el usuario el alojamiento antes de elegir base path o estrategia de rutas.
 - Revisar navegación directa y recarga de rutas para el alojamiento elegido.
@@ -1176,7 +1178,7 @@ Este plan fue aprobado expresamente por el usuario el 2026-10-12. Es la referenc
 
 ### Cómo retomar sin perder el hilo
 
-1. Consultar esta sección y la última entrada de `Registro.md`.
+1. Consultar la sección 13 y la última entrada de `Registro.md`.
 2. Revisar la condición pendiente de la etapa actual.
 3. Pedir solo la información que falte para esa condición; no repetir auditorías ya completadas.
 4. Explicar archivos, propósito e impacto antes de solicitar autorización para una nueva etapa.
