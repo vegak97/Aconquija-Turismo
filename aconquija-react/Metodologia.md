@@ -1405,3 +1405,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo la apariencia de las pestañas Verano, Otoño, Invierno y Primavera en React. No se modificaron textos, comportamiento de selección, imágenes ni archivos del sitio original.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Validación:** reglas comparadas estáticamente con `css/style.css`; no se ejecutaron lint, build ni pruebas de navegador.
+
+## Contraste y estado iluminado de las pestañas de Estaciones — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Referencia revisada:** `index.html`, `css/style.css` y `js/scrip.js` del sitio original. El JavaScript original alterna la clase `active`; el CSS original destaca la pestaña seleccionada en blanco y con una línea inferior ámbar.
+- **Cambio:** el color de las pestañas inactivas pasa de gris piedra a blanco translúcido (`rgba(255,255,255,.62)`). La pestaña activa permanece blanca y recibe un resplandor blanco muy sutil, conservando la línea inferior ámbar. No se altera la selección de estación.
+- **Motivo:** recuperar el contraste translúcido de las pestañas inactivas y hacer más evidente cuál estación está seleccionada, según la aclaración del usuario.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Validación:** cambio guardado en `main` y comparado estáticamente; no se ejecutaron lint, build ni pruebas visuales en navegador.
