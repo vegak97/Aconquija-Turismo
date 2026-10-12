@@ -1254,3 +1254,11 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Se conserva:** el fondo `#1c222c`, el resto de la sección, y los estilos de otras secciones.
 - **Autorización:** el usuario pidió reintentar el cambio porque el resultado anterior no se reflejó.
 - **Validación:** selector guardado y comprobado estáticamente en GitHub. La revisión visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Corrección a blanco de los textos de Explorar
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio concreto:** el título «Explorá Aconquija a tu manera» y su párrafo descriptivo pasan a `#ffffff` mediante el selector `#explorar .section-head h2, #explorar .section-head p`.
+- **Motivo y autorización:** el usuario aclaró que quería los dos textos blancos, no dorados, y autorizó cambiarlo directamente para probar.
+- **Límites:** se conserva el fondo `#1c222c`; no se modifican tarjetas ni otras secciones. La comprobación visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
