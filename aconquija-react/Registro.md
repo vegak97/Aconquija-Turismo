@@ -655,3 +655,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Límites respetados:** no se cambiaron textos, imágenes, tamaños, bordes, distribución, pestañas ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** CSS y documentación actualizados en la rama `main`. La comprobación es estática; no se ejecutaron lint, build ni pruebas de navegador y queda pendiente revisar el aspecto en el navegador local.
+
+## 2026-10-12T19:17:03.396-03:00 — Botones de estaciones replicados desde el index.html original
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Referencia:** `css/style.css` original, bloque de pestañas de Estaciones.
+- **Cambio concreto:** los botones React ahora neutralizan fondo y borde nativos y heredan la tipografía; se conserva el espaciado de 16px 28px, tamaño de fuente, espaciado entre letras, mayúsculas, color gris inactivo, blanco activo y línea inferior ámbar. Se retiró el hover dorado que no estaba en el original y se dejó un contorno de foco accesible para teclado.
+- **Motivo:** reproducir el aspecto anterior de las etiquetas Verano, Otoño, Invierno y Primavera del sitio original.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Límites respetados:** no se cambiaron textos ni el comportamiento de selección; no se modificó `index.html` ni `css/style.css` fuera de `aconquija-react/`.
+- **Resultado:** estilos y documentación actualizados en la rama `main`. Comparación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
