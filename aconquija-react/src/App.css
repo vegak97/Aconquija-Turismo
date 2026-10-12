@@ -382,7 +382,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 /* ══════════════════════════════════════════════
    SECCIÓN: ESTACIONES — tabs (index)
 ══════════════════════════════════════════════ */
-.estaciones { background: #34485b; color: var(--white); padding: 120px 0; position: relative; }
+.estaciones { background: #1c222c; color: var(--white); padding: 120px 0; position: relative; }
 .est-tabs {
   display: flex; margin-top: 50px;
   border-bottom: 1px solid var(--line); flex-wrap: wrap;
@@ -392,6 +392,8 @@ header.nav .nav-mobile-social .icon-circle svg {
   color: var(--stone); cursor: pointer; position: relative; font-weight: 500; transition: color .3s ease;
 }
 .est-tab.active { color: var(--white); }
+.est-tab:hover,
+.est-tab:focus-visible { color: var(--sand); }
 .est-tab.active::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -1px;
   height: 2px; background: var(--amber);
