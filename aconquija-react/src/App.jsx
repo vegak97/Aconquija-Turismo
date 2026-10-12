@@ -288,7 +288,7 @@ function HomePage() {
               <p>Cada momento del año tiene su propia versión. Elegí la que te llama.</p>
             </div>
             <div className="est-tabs reveal" role="tablist" aria-label="Estaciones del año">
-              {seasons.map((season) => <button className={`est-tab${activeSeason === season.id ? ' active' : ''}`} type="button" role="tab" aria-selected={activeSeason === season.id} aria-controls={`panel-${season.id}`} key={season.id} onClick={() => setActiveSeason(season.id)}>{season.label}</button>)}
+              {seasons.map((season) => <button className={`est-tab${activeSeason === season.id ? ' active' : ''}`} type="button" role="tab" aria-selected={activeSeason === season.id} aria-controls={`panel-${season.id}`} key={season.id} onClick={() => setActiveSeason(season.id)}>{season.label}<span className="est-tab-underline" aria-hidden="true" /></button>)}
             </div>
             <div className="est-panels reveal">
               {seasons.map((season) => (
