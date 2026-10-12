@@ -674,3 +674,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Límites respetados:** solo se ajustó el estilo de las pestañas dentro de React; no se modificó el sitio original ni la lógica de selección.
 - **Resultado:** CSS y documentación actualizados en `main`. Verificación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12T19:24:43-03:00 — Línea fina debajo de las pestañas de Estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se quitó el borde inferior general del contenedor de pestañas y se añadió una línea separada de 1 px, blanco translúcido (`rgba(255,255,255,.38)`), a 14 px de distancia. Su ancho es el 60 % del contenedor, con máximo de 520 px.
+- **Motivo:** añadir un separador fino y discreto del mismo tono visual que los botones, sin pegarlo a ellos ni extenderlo demasiado.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Límites respetados:** se conservó el subrayado ámbar de la pestaña activa y no se modificó la lógica ni el sitio original.
+- **Resultado:** CSS y documentación actualizados en `main`. Verificación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
