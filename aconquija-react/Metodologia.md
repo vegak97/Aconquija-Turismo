@@ -1469,3 +1469,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** petición directa del usuario para mostrar el clima de Aconquija en tamaño pequeño junto a los iconos sociales.
 - **Alcance:** únicamente la barra de navegación del proyecto React; no se modificó el sitio original ni se añadieron dependencias.
 - **Validación:** revisión estática de los cambios guardados en GitHub. No se ejecutaron build, lint ni pruebas de navegador. La consulta del clima requiere conexión a internet y puede mostrar `—°` si el servicio no responde.
+
+
+## Contraste blanco para la temperatura de la barra de navegación — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** la cifra de temperatura del indicador del clima ahora tiene color blanco explícito (`#ffffff`) para destacar sobre la barra pizarra oscura.
+- **Motivo:** mejorar la legibilidad del dato de temperatura, como pidió el usuario.
+- **Alcance:** solo el texto de temperatura del indicador climático; no se cambian el icono, el nombre del lugar, la consulta meteorológica ni otras partes de la navegación.
+- **Validación:** revisión estática del cambio. No se ejecutaron build, lint ni pruebas de navegador.
