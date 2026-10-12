@@ -498,3 +498,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario informó que el ajuste anterior no se veía y autorizó volver a intentarlo.
 - **Alcance:** solo el título y el párrafo indicados; se conserva el fondo `#1c222c` y no se modifican las tarjetas ni otras secciones.
 - **Resultado:** cambio aplicado en `main` y documentado. Comprobación visual pendiente del usuario; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Corrección a blanco de los textos de Explorar
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio:** se reemplazó `#cdaa78` por `#ffffff` en la regla específica del título y el párrafo de la sección Explorar.
+- **Motivo y autorización:** el usuario aclaró que quería blanco en vez de dorado y pidió que se aplicara el cambio directamente para probar.
+- **Alcance:** se mantiene el fondo `#1c222c`; no se modifican tarjetas ni otras secciones.
+- **Validación:** cambio guardado en `main` y documentado. La revisión visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
