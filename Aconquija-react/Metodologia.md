@@ -1024,17 +1024,17 @@ Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigen
 
 | N.º | Página / contenido | Archivo original | Ruta propuesta para React | Estado de la ruta |
 |---:|---|---|---|---|
-| 1 | Inicio | `index.html` | `/` | Propuesta; confirmar al aprobar el mapa completo |
+| 1 | Inicio | `index.html` | `/` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
 | 2 | Aconquija Respira Verde | `html/segundo_nivel/aconquija_respira_verde.html` | `/circuitos/respira-verde` | Aprobada expresamente. Sustituye la candidata inicial `/experiencias/respira-verde` documentada en la revisión temprana; mantener una sola ruta para este archivo |
-| 3 | Cultiva Tradición | `html/segundo_nivel/cultiva_tradicion.html` | `/experiencias/cultiva-tradicion` | Pendiente de aprobación expresa |
+| 3 | Cultiva Tradición | `html/segundo_nivel/cultiva_tradicion.html` | `/circuitos/cultiva-tradicion` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
 | 4 | Planetario Janaxpacha Huasi | `html/segundo_nivel/noches_estrelladas.html` | `/lugares/planetario-janaxpacha-huasi` | Aprobada expresamente |
 | 5 | Pucará de Aconquija | `html/segundo_nivel/pucara_aconquija.html` | `/lugares/pucara-de-aconquija` | Aprobada expresamente |
 | 6 | Balneario Municipal Buena Vista | `html/tercer_nivel/balneario_buena_vista.html` | `/lugares/balneario-municipal-buena-vista` | Aprobada expresamente |
 | 7 | Bosque de Alisos | `html/tercer_nivel/bosque_de_alisos.html` | `/lugares/bosque-de-alisos` | Aprobada expresamente |
-| 8 | Cristo Redentor de Aconquija | `html/tercer_nivel/cristo_redentor.html` | `/lugares/cristo-redentor` | Pendiente de aprobación expresa |
+| 8 | Cristo Redentor de Aconquija | `html/tercer_nivel/cristo_redentor.html` | `/lugares/cristo-redentor` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
 | 9 | Desfile Cívico Escolar | `html/tercer_nivel/desfile_civico.html` | `/eventos/desfile-civico-escolar` | Aprobada expresamente |
 | 10 | Festival Mayor de Aconquija | `html/tercer_nivel/festival_mayor_aconquija.html` | `/eventos/festival-mayor` | Aprobada expresamente |
-| 11 | Festival Provincial del Bandoneón | `html/tercer_nivel/fiesta_bandoneon.html` | `/eventos/fiesta-del-bandoneon` | Pendiente de aprobación expresa; slug propuesto a partir de la revisión de Cultiva Tradición |
+| 11 | Festival Provincial del Bandoneón | `html/tercer_nivel/fiesta_bandoneon.html` | `/eventos/fiesta-del-bandoneon` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
 | 12 | Río Potrero | `html/tercer_nivel/rio_potrero.html` | `/lugares/rio-potrero` | Aprobada expresamente |
 | 13 | Túneles del Río Potrero | `html/tercer_nivel/tuneles_rio_potrero.html` | `/lugares/tuneles-del-rio-potrero` | Aprobada expresamente |
 | 14 | Virgen del Valle de Aconquija | `html/tercer_nivel/virgen_del_valle.html` | `/lugares/virgen-del-valle` | Aprobada expresamente |
@@ -1048,5 +1048,17 @@ Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigen
 - Los enlaces a secciones de la página principal, recursos, mapas externos, correo, teléfono, redes y WhatsApp no son páginas adicionales de este mapa.
 - Las referencias de imágenes vacías y los recursos locales dudosos siguen pendientes de verificación; no se restaurarán imágenes eliminadas ni se modificarán originales sin autorización.
 - Las revisiones de contenido fueron estáticas. No se han ejecutado pruebas en navegador ni de acceso directo a rutas React, porque el enrutador aún no se implementó.
-- **Pendientes para aprobación conjunta:** confirmar `/` como ruta de inicio y aprobar (o cambiar) las rutas de Cultiva Tradición, Cristo Redentor y Festival Provincial del Bandoneón; luego confirmar que se aprueba el mapa completo como conjunto.
+- **Pendiente para aprobación conjunta:** revisar la tabla actualizada y confirmar que se aprueba el mapa completo como conjunto.
 - **Estado:** presentado para revisión del usuario. No se modificó código React ni el sitio original.
+
+
+## Anexo X — Decisiones del usuario sobre rutas pendientes (2026-10-11)
+
+El usuario confirmó estas decisiones individuales para el mapa de rutas:
+
+- `index.html` → `/`.
+- `html/segundo_nivel/cultiva_tradicion.html` → `/circuitos/cultiva-tradicion`.
+- `html/tercer_nivel/cristo_redentor.html` → `/lugares/cristo-redentor`.
+- `html/tercer_nivel/fiesta_bandoneon.html` → `/eventos/fiesta-del-bandoneon`.
+
+Estas decisiones reemplazan las propuestas anteriores para esas páginas. Se registran como rutas elegidas individualmente; el mapa de 15 páginas todavía necesita la aprobación del usuario como conjunto antes de implementar React Router.
