@@ -1433,3 +1433,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance:** solo se ajustaron los estilos de las pestañas de Estaciones en React; no se modificó la lógica de selección ni el sitio original.
 - **Validación:** cambio revisado estáticamente en el contenido de GitHub. No se ejecutaron lint, build ni pruebas visuales en navegador.
+
+
+## Ajuste de proximidad y grosor de la línea de Estaciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** la línea base blanca translúcida pasa de 1 px a 0,5 px y se acerca a las pestañas al moverla de `bottom: -14px` a `bottom: -2px`. El segmento dorado de la pestaña activa también se acerca a la misma posición, conservando 1 px de grosor para cubrir visualmente la línea base.
+- **Motivo:** el usuario autorizó hacer la línea translúcida aún más fina y más cercana a los botones, manteniendo la idea de que el dorado reemplace el tramo situado bajo la estación activa.
+- **Alcance:** solo se modificaron los dos pseudo-elementos de las pestañas de Estaciones; la selección React, los textos, las imágenes y el sitio original quedan sin cambios intencionales.
+- **Validación:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron lint, build ni pruebas de navegador; falta la comprobación visual local.
