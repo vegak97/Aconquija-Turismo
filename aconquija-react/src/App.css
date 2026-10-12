@@ -401,7 +401,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 }
 .est-tabs::after {
   content: ''; position: absolute; left: 0; bottom: -14px;
-  width: min(60%, 520px); height: 1px;
+  width: 100%; height: 1px;
   background: rgba(255,255,255,.38);
 }
 .est-tab {
@@ -417,8 +417,8 @@ header.nav .nav-mobile-social .icon-circle svg {
 }
 .est-tab:focus-visible { outline: 2px solid var(--sand); outline-offset: -2px; }
 .est-tab.active::after {
-  content: ''; position: absolute; left: 0; right: 0; bottom: -1px;
-  height: 2px; background: var(--amber);
+  content: ''; position: absolute; left: 0; right: 0; bottom: -14px;
+  height: 1px; background: var(--sand); z-index: 1;
 }
 .est-panels { position: relative; margin-top: 50px; min-height: 420px; }
 .est-panel  { display: none; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
