@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import heroBackgroundImage from '../../imagenes/fondo(1).webp'
 import logoHeader from '../../imagenes/logo_aconquija(1).png'
 import logoFooter from '../../imagenes/logo_aconquija(2).png'
 import respiraVerdeImage from '../../imagenes/respira_verde_fondo.png'
@@ -216,7 +217,7 @@ function HomePage() {
       <Header />
       <main>
         <section className="hero" aria-label="Presentación de Aconquija">
-          <div className="hero-bg" />
+          <div className="hero-bg" style={{ backgroundImage: `url("${heroBackgroundImage}")` }} />
           <div className="hero-content">
             <h1>Aconquija</h1>
             <div className="hero-sub">Naturaleza que inspira</div>
