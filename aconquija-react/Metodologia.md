@@ -1317,3 +1317,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Alcance:** solo el botón «Planeá tu visita» de «Sobre Aconquija»; no se alteran otros botones ni el sitio original.
 - **Validación:** regla comprobada estáticamente en el CSS de GitHub. La comprobación visual en navegador sigue pendiente.
+
+
+## Footer en pizarra oscuro y texto blanco — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se aplicó al pie de página un fondo pizarra oscuro `#1c222c` y color blanco explícito a los textos de marca, encabezados de columnas, enlaces, datos de contacto y aviso de derechos reservados.
+- **Motivo:** unificar el pie de página con el tono pizarra oscuro solicitado y asegurar contraste blanco para todos sus textos.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Alcance:** reglas limitadas a `footer`; no se cambian las demás secciones ni el sitio original fuera de `aconquija-react/`.
+- **Validación:** selectores comprobados estáticamente en el CSS guardado en GitHub. La revisión visual en navegador sigue pendiente.
