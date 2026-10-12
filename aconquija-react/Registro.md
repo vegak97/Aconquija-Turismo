@@ -443,3 +443,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario en esta conversación para revisar los archivos necesarios y aplicar la corrección.
 - **Límites respetados:** no se alteraron los destinos de los enlaces, el componente JSX, el fondo de la barra, otros sectores de Inicio ni los archivos del sitio original.
 - **Resultado:** cambios aplicados en la rama remota `main`. Pendiente de comprobación visual local; no se afirma que lint, build o pruebas de navegador hayan pasado.
+
+
+## 2026-10-12 — Título central de Inicio en blanco
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio en CSS:** se agregó una regla específica para que `Aconquija` y `Naturaleza que inspira`, dentro de `.hero-content`, se muestren en blanco puro (`#fff`).
+- **Motivo:** el usuario indicó que ambos textos centrales se veían gris oscuro y pidió que fueran blancos.
+- **Autorización:** confirmación explícita del usuario el 2026-10-12.
+- **Límites respetados:** no se modificó el color de la barra de navegación, el fondo, otros textos, las imágenes ni el sitio HTML/CSS/JavaScript original.
+- **Resultado:** cambio aplicado en la rama remota `main`. Falta la comprobación visual local; no se ejecutaron lint, build ni pruebas de navegador en esta intervención.
