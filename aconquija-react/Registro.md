@@ -557,3 +557,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario el 2026-10-12, después de confirmar el alcance del cambio.
 - **Límites respetados:** el HTML original y sus estilos no se modificaron; tampoco se cambiaron otros botones ni elementos de la sección.
 - **Resultado:** cambio aplicado y documentado en la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; falta verificar el resultado en el navegador local.
+
+
+## 2026-10-12T17:47:00-03:00 — Refuerzo visual del botón «Planeá tu visita»
+
+- **Archivos afectados:** `aconquija-react/src/App.css` y `aconquija-react/Metodologia.md`.
+- **Cambio concreto:** se añadió una regla CSS específica para el botón de la sección «Sobre Aconquija»: fondo ámbar anaranjado `#e2935c`, borde redondeado de 30 px, texto oscuro y estado hover blanco con elevación ligera. Se documentó el ajuste en metodología.
+- **Motivo:** el usuario indicó que el estilo anterior no se aplicaba visualmente como esperaba y pidió un color más anaranjado y bordes redondeados.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Resultado:** CSS y metodología guardados en `main`. La comprobación visual en navegador sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
