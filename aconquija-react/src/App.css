@@ -310,7 +310,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 /* ══════════════════════════════════════════════
    SECCIÓN: EXPLORAR — cards (index)
 ══════════════════════════════════════════════ */
-.explorar { background: var(--night); padding: 120px 0; color: var(--white); position: relative; }
+.explorar { background: #1c222c; padding: 120px 0; color: var(--white); position: relative; }
 
 .section-head {
   display: flex; justify-content: space-between; align-items: flex-end;
