@@ -596,3 +596,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** aprobación explícita del usuario el 2026-10-12 («mandale»).
 - **Alcance:** solo estilos del footer React y documentación; no se alteraron enlaces, textos, estructura JSX ni el sitio original.
 - **Resultado:** CSS actualizado en `main`. Revisión visual local pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12T18:13:14-03:00 — Barra de progreso dorado arena con movimiento fluido
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** la barra `#readProgress`, ubicada en el borde superior, pasó de 2 px a 3 px, cambió al dorado arena `#cdaa78` y recibió una transición de anchura más suave mediante `cubic-bezier(.22,.7,.22,1)`; se añadió `will-change: width`.
+- **Motivo:** dar más vida a la navegación sin agregar movimiento exagerado ni modificar el menú.
+- **Autorización:** petición directa y confirmación explícita del usuario el 2026-10-12.
+- **Alcance:** la lógica de desplazamiento ya existía en `src/App.jsx` y se conservó; no se cambiaron enlaces, estructura de navegación ni el sitio original.
+- **Resultado:** CSS y documentación guardados en `main`. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual y de fluidez queda pendiente.
