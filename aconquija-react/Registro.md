@@ -721,3 +721,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** cambio limitado a la pestaña activa de Estaciones dentro de `aconquija-react/`; no se alteraron las demás secciones ni el sitio original.
 - **Resultado:** archivos actualizados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador; la verificación visual local sigue pendiente.
+
+
+## 2026-10-12 — Clima de Aconquija junto a las redes sociales
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se incorporó un indicador pequeño de clima con icono y temperatura actual en la barra de navegación, junto a los iconos sociales. La información se consulta a Open-Meteo para las coordenadas aproximadas de Aconquija, se refresca cada 15 minutos y se adapta a pantallas pequeñas.
+- **Motivo:** el usuario pidió colocar el clima de Aconquija en pequeño al lado de las redes sociales.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo se modificó la barra superior dentro de `aconquija-react/`; no se modificó el sitio original ni se agregaron dependencias.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
