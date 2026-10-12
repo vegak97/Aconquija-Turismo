@@ -527,3 +527,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo los cinco rótulos pequeños; títulos grandes, descripciones, fondos, tarjetas, botones, navegación y el sitio original permanecen sin cambios.
 - **Resultado:** cambio aplicado y documentado en `main`. La revisión visual sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Fondo de la sección Sobre Aconquija con caballo.webp
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se importó `../../imagenes/caballo.webp` en `App.jsx` y se conectó al fondo de `.cta-bg` en la sección `#sobre`; se retiró la ruta duplicada del CSS para que el recurso sea resuelto por Vite.
+- **Motivo:** mostrar la imagen de caballos como fondo de «Sobre Aconquija».
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Límites respetados:** se conserva el oscurecimiento de la imagen, el recorte, el contenido y la estructura de la sección; no se modificó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** el archivo `imagenes/caballo.webp` existe en el repositorio y la referencia quedó conectada en el código remoto. No se ejecutaron lint, build ni pruebas de navegador; falta comprobar el resultado visual local.
