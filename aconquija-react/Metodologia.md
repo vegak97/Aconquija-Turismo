@@ -182,48 +182,47 @@ Después de trabajar:
 - [ ] Se actualizó `Registro.md` con fecha y hora de Argentina (UTC-03:00), rutas, cambio, motivo, autorización y resultado.
 - [ ] Se informó al usuario qué se hizo, qué se comprobó y qué queda pendiente.
 
-## 13. Estado vigente del proyecto — 2026-10-12 02:37:51 -03:00
+## 13. Estado vigente del proyecto — 2026-10-12 03:22:49 -03:00
 
-Esta sección resume el estado actual para retomar el trabajo sin repetir auditorías ni confundir decisiones antiguas con las vigentes. El detalle histórico se conserva en los anexos y el registro de cambios.
+Esta sección resume el estado actual para retomar el trabajo sin repetir auditorías ni confundir decisiones antiguas con las vigentes. El detalle histórico se conserva en los anexos y en el registro de cambios.
 
 ### Decisiones aprobadas
 
 - [x] Reglas de autorización y trazabilidad documentadas en `agents.md`.
 - [x] Mapa definitivo de **15 páginas** y sus rutas React aprobado como conjunto (Anexo W/Y).
-- [x] Estrategia de rutas agrupadas por categoría aprobada: por ejemplo, `/lugares/bosque-de-alisos` y `/eventos/festival-mayor`.
-- [x] Criterios de preservación del sitio original, imágenes, enlaces pendientes y datos globales de contacto consolidados en la sección 3.
+- [x] Estrategia de rutas agrupadas por categoría aprobada.
+- [x] Criterios de preservación del sitio original, imágenes, enlaces pendientes y datos globales consolidados en la sección 3.
 - [x] Exclusión de `html/tercer_nivel/el_charquiadero.html` confirmada.
+- [x] El usuario autorizó expresamente la Etapa 1 de preparación de la base React y pidió guardar el plan de implementación para mantener la continuidad.
 
-### Auditoría estática ya realizada
+### Auditoría y pruebas ejecutadas antes de la Etapa 1
 
-- [x] Revisadas las 15 páginas incluidas en el alcance y documentadas las correspondencias de rutas.
-- [x] Revisada la estructura actual del proyecto React y la presencia de dependencias.
-- [x] Identificadas referencias a destinos internos aún inexistentes, rutas/extensiones de imágenes que no coinciden, atributos de imagen vacíos, discrepancias de contacto y algunos detalles de estructura HTML que necesitan verificación al migrar.
-- [x] Confirmado que el sitio original permanece separado del proyecto React; no se modificó durante la auditoría.
-- [x] Conservados los hallazgos y decisiones previas como anexos para mantener la trazabilidad.
+- [x] Inspección estática del mapa de 15 páginas y de la estructura React.
+- [x] En el entorno local del usuario, `npm.cmd run lint` terminó con 0 advertencias y 0 errores, analizando 3 archivos.
+- [x] En el entorno local del usuario, `npm.cmd run build` falló antes de la Etapa 1 con `MISSING_EXPORT`: `src/App.jsx` no exportaba `default`, porque el usuario había dejado intencionalmente ese archivo vacío.
+- [x] Confirmado que `public/favicon.svg` existe.
+- [x] Confirmado que `react-router-dom` ya está declarado; no se necesita agregar una dependencia para el enrutamiento.
 
-### Estado técnico actual de React
+### Estado de la Etapa 1
 
-- `react-router-dom` ya está declarado en las dependencias.
-- `src/App.jsx` está vacío; `src/App.css` también está vacío.
-- `src/index.css` conserva estilos iniciales de Vite; `src/main.jsx` importa `App`.
-- Las carpetas `src/components/`, `src/pages/`, `src/data/` y `src/styles/` solo contienen marcadores `.gitkeep`.
-- El HTML de React aún muestra metadatos genéricos de Vite y no se ha incorporado el conjunto de imágenes turísticas al proyecto React.
-- **No se ha ejecutado** `npm run build`, lint ni una prueba de navegador en esta revisión. Por lo tanto, esos resultados siguen pendientes; la inspección estática no demuestra que la compilación falle o pase.
-- La plataforma de publicación todavía debe confirmarse antes de decidir la configuración de rutas y base de Vite.
+- [x] Se implementó el componente raíz y se configuraron las 15 rutas aprobadas usando React Router.
+- [x] Se agregaron pantallas provisionales explícitas para indicar que el contenido original se migrará en etapas posteriores; estas pantallas no sustituyen ni pretenden completar las páginas originales.
+- [x] Se reemplazaron los estilos globales de la plantilla por una base neutral y adaptable para el trabajo turístico.
+- [x] Se actualizaron idioma, título y metadatos básicos del documento HTML.
+- [x] El archivo `src/App.css` se mantuvo vacío, tal como el usuario decidió dejarlo. `src/main.jsx`, `vite.config.js`, `package.json` y el sitio original permanecieron sin cambios.
+- [ ] El usuario debe sincronizar los cambios desde VS Code y ejecutar las comprobaciones posteriores a la Etapa 1.
+- [ ] La prueba posterior al cambio de `npm.cmd run lint`, la compilación `npm.cmd run build` y la revisión en navegador siguen pendientes; no se afirma que hayan pasado.
 
-### Próximos pasos — sin autorización implícita para editar
+### Próximos pasos
 
-1. Confirmar el entorno local y ejecutar las comprobaciones de build/lint, sin alterar archivos, si el usuario quiere continuar con esa verificación.
-2. Presentar el plan concreto para preparar la estructura de React y las rutas aprobadas, enumerando cada archivo que se modificaría.
-3. Esperar autorización específica antes de tocar código.
-4. Migrar la página de inicio y validarla antes de avanzar con las páginas restantes.
-5. Resolver las imágenes y enlaces durante la migración aplicando la sección 3; no crear destinos futuros ni sustituir imágenes por otras inventadas.
-6. Ejecutar y documentar pruebas reales, y confirmar el destino de publicación antes de preparar el despliegue.
+1. Sincronizar desde GitHub en VS Code.
+2. Ejecutar `npm.cmd run lint` y `npm.cmd run build` y compartir los resultados.
+3. Si las comprobaciones pasan, iniciar el servidor de desarrollo y verificar las rutas antes de migrar contenido.
+4. Solicitar autorización específica para la Etapa 2 antes de crear componentes compartidos o incorporar recursos turísticos.
+5. Continuar la migración por etapas, registrar cada cambio y mantener intacto el sitio original.
 
-**Estado general:** auditoría estática y planificación completadas; implementación React, compilación, lint, pruebas de navegador y publicación pendientes. La aprobación del mapa de rutas no autoriza cambios de código.
+**Estado general:** Etapa 1 implementada en el repositorio remoto; validación local posterior pendiente. La aprobación de esta etapa no autoriza automáticamente las etapas siguientes.
 
-**Nota sobre los anexos históricos:** se conservan para no perder decisiones, evidencia ni contexto. Si un anexo antiguo habla de 16 páginas, indica que el mapa está pendiente de aprobación o propone una ruta distinta, esa información describe una etapa anterior y no debe prevalecer sobre la sección 3, este estado vigente y las entradas más recientes de `Registro.md`.
 
 ## Anexo A — Inventario inicial del sitio original (2026-10-10)
 
@@ -1104,3 +1103,81 @@ Estas decisiones reemplazan las propuestas anteriores para esas páginas. Se reg
 - **Resultado:** el mapa de rutas queda aprobado como conjunto y pasa a ser la referencia acordada para planificar la implementación.
 - **Límite de autorización:** esta aprobación no permite modificar código. Antes de implementar, se presentará un plan concreto con los archivos React que se crearían o modificarían y se solicitará autorización independiente.
 - **Estado del código:** no se modificó ningún archivo de código React ni los originales HTML/CSS/JavaScript; tampoco se implementó ni probó React Router.
+
+
+## 14. Plan de implementación aprobado — Aconquija React
+
+Este plan fue aprobado expresamente por el usuario el 2026-10-12. Es la referencia de continuidad del proyecto: seguir las etapas en orden, no repetir auditorías ya documentadas y pedir autorización antes de cada etapa nueva. Las rutas aprobadas se conservan en el Anexo W/Y.
+
+### Principios para todas las etapas
+
+- Respetar `agents.md`: autorización previa, alcance limitado y registro obligatorio.
+- Mantener intacto el sitio original HTML/CSS/JavaScript fuera de `aconquija-react/`.
+- No crear ni migrar la página excluida `html/tercer_nivel/el_charquiadero.html`.
+- No inventar contenido ni reemplazar imágenes faltantes por imágenes parecidas.
+- Mantener las rutas aprobadas y no activar enlaces a páginas futuras inexistentes.
+- Distinguir siempre entre revisión estática, lint, build y pruebas reales en navegador.
+- Actualizar `Registro.md` en cada tarea de cambios y detenerse si no se puede registrar el resultado.
+
+### Etapa 1 — Preparación de la base React
+
+**Estado:** implementada en el repositorio remoto; falta verificar en la copia local sincronizada.
+
+**Archivos incluidos en la autorización:**
+- `src/App.jsx`: componente raíz, configuración de las 15 rutas aprobadas con React Router y pantallas provisionales para páginas aún no migradas.
+- `src/index.css`: reemplazo de los estilos globales de plantilla por estilos base neutrales, adaptables y accesibles.
+- `index.html`: idioma español, título y metadatos básicos. Se conserva el favicon existente.
+- `Metodologia.md`: estado actualizado y plan persistente.
+- `Registro.md`: entrada de trazabilidad de la etapa.
+
+**Archivos que se mantienen sin cambios:** `src/App.css` (el usuario decidió dejarlo vacío), `src/main.jsx`, `vite.config.js`, `package.json`, los recursos originales y el sitio HTML/CSS/JavaScript original.
+
+**Criterio de aceptación:** sincronizar los cambios; obtener resultado sin errores en lint y build; verificar en navegador que las rutas aprobadas cargan una pantalla provisional y que una ruta desconocida muestra la pantalla de no encontrada. Los resultados se registrarán cuando las pruebas se ejecuten realmente.
+
+### Etapa 2 — Componentes compartidos y organización
+
+- Proponer y autorizar por separado los archivos que se crearán para encabezado, navegación, pie de página y componentes reutilizables.
+- Definir dónde se ubicarán los recursos turísticos sin duplicar ni mover los originales.
+- No introducir dependencias ni modificar la configuración de publicación sin necesidad justificada y permiso.
+- Registrar los archivos y verificar la estructura antes de continuar.
+
+### Etapa 3 — Migración de la página de inicio
+
+- Migrar por bloques el contenido original de `index.html`: navegación, hero, presentación, tarjetas/secciones y pie de página.
+- Conservar textos, orden, imágenes, enlaces y comportamiento originales, respetando los acuerdos de la sección 3.
+- Comparar la página React con el original en escritorio y móvil antes de darla por terminada.
+
+### Etapa 4 — Interacciones y recursos
+
+- Adaptar a React las interacciones existentes: menú móvil, estado de navegación al desplazarse, progreso, animaciones, pestañas, galería/lightbox y acciones de compartir, según el inventario.
+- Confirmar las rutas de imágenes localmente; usar una extensión alternativa solo si se confirma que es el mismo recurso.
+- Mantener espacios reservados cuando una imagen intencionalmente no existe, sin generar `img src=""`.
+- Verificar accesibilidad básica, teclado y limpieza de eventos/observadores.
+
+### Etapa 5 — Migración de las 14 páginas restantes
+
+- Migrar las páginas secundarias según el mapa de 15 rutas aprobado.
+- Reutilizar componentes cuando no altere el resultado visual.
+- No crear contenido futuro no aprobado ni migrar `el_charquiadero.html`.
+- Probar cada ruta directa y los enlaces internos antes de pasar a la siguiente página.
+
+### Etapa 6 — Pruebas y control de calidad
+
+- Ejecutar lint y build después de los cambios.
+- Revisar errores de consola, solicitudes de recursos, enlaces, botones, navegación, galería, diseño adaptable y comparación visual.
+- Registrar cada prueba como aprobada, fallida o pendiente; nunca afirmar que una prueba pasó si no se ejecutó.
+
+### Etapa 7 — Publicación
+
+- Confirmar con el usuario el alojamiento antes de elegir base path o estrategia de rutas.
+- Revisar navegación directa y recarga de rutas para el alojamiento elegido.
+- Solicitar autorización separada antes de publicar o modificar servicios externos.
+- Conservar el sitio original como respaldo hasta que el usuario confirme la aceptación de la migración.
+
+### Cómo retomar sin perder el hilo
+
+1. Consultar esta sección y la última entrada de `Registro.md`.
+2. Revisar la condición pendiente de la etapa actual.
+3. Pedir solo la información que falte para esa condición; no repetir auditorías ya completadas.
+4. Explicar archivos, propósito e impacto antes de solicitar autorización para una nueva etapa.
+5. Al terminar, actualizar el estado de esta metodología y añadir una entrada detallada al registro.
