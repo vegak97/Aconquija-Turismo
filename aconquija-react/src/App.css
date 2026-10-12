@@ -122,7 +122,7 @@ header.nav .nav-mobile-social .icon-circle svg {
   font-size: .78rem; line-height: 1;
 }
 .weather-icon { font-size: 1rem; }
-.weather-temp { font-weight: 600; letter-spacing: .2px; }
+.weather-temp { color: #ffffff !important; font-weight: 600; letter-spacing: .2px; }
 .weather-location {
   color: rgba(255,255,255,.78); font-size: .68rem;
   letter-spacing: .3px;
