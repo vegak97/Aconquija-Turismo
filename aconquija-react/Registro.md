@@ -683,3 +683,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Límites respetados:** se conservó el subrayado ámbar de la pestaña activa y no se modificó la lógica ni el sitio original.
 - **Resultado:** CSS y documentación actualizados en `main`. Verificación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12T19:32:00-03:00 — Línea de Estaciones más fina con tramo activo dorado arena
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** la línea blanca translúcida se redujo a 1 px y se extendió al 100 % del ancho del contenedor de pestañas. El subrayado de la estación activa también quedó en 1 px, en dorado arena (`var(--sand)`), y se alineó a la misma altura para cubrir visualmente el tramo correspondiente de la línea base.
+- **Motivo:** el usuario pidió una línea más fina, que alcance el ancho de las imágenes, y que el dorado arena reemplace el tramo bajo el botón seleccionado.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** no se modificó la lógica React que actualiza `activeSeason`, el contenido ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** CSS y documentación actualizados en `main`. Se hizo revisión estática; no se ejecutaron lint, build ni pruebas de navegador, por lo que la comprobación visual local queda pendiente.
