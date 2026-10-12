@@ -433,3 +433,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** el recurso se importa explícitamente en `App.jsx` y se asigna a `backgroundImage` del elemento `.hero-bg`; se reemplazó la referencia de imagen de CSS por un color de respaldo.
 - **Motivo y autorización:** el usuario pidió pulir la página de Inicio y señaló que no veía el fondo esperado. La corrección se limita a la imagen del hero y está dentro de la etapa autorizada.
 - **Resultado:** actualización aplicada en la rama remota `main`. La inspección del contenido confirma la importación explícita y que se eliminó la referencia CSS anterior. Falta comprobar el resultado visual en el navegador local; no se declara aún validado.
+
+
+## 2026-10-12 — Contraste y grosor de la barra de navegación
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio en CSS:** se añadieron reglas específicas para mantener en blanco los enlaces Explorar, Lugares, Estaciones, Servicios y Sobre Aconquija en todos sus estados; se fijó el grosor tipográfico en 400 para evitar el aspecto demasiado negrita; se reforzó el color blanco de los iconos sociales en escritorio y móvil.
+- **Motivo:** mejorar la legibilidad y el contraste de la navegación sobre la barra.
+- **Autorización:** permiso explícito del usuario en esta conversación para revisar los archivos necesarios y aplicar la corrección.
+- **Límites respetados:** no se alteraron los destinos de los enlaces, el componente JSX, el fondo de la barra, otros sectores de Inicio ni los archivos del sitio original.
+- **Resultado:** cambios aplicados en la rama remota `main`. Pendiente de comprobación visual local; no se afirma que lint, build o pruebas de navegador hayan pasado.
