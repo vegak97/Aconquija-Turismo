@@ -925,9 +925,13 @@ footer.site-footer {
   color: #ffffff !important;
 }
 footer .foot-brand p,
-footer .foot-col h5,
 footer .foot-col a,
 footer .foot-col address,
 footer .foot-bottom p {
   color: #ffffff !important;
+}
+
+/* Encabezados del footer en dorado arena */
+footer .foot-col h5 {
+  color: #cdaa78 !important;
 }
