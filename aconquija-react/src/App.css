@@ -34,10 +34,11 @@ img   { display: block; max-width: 100%; }
 ══════════════════════════════════════════════ */
 #readProgress {
   position: fixed; top: 0; left: 0;
-  height: 2px; width: 0%;
-  background: var(--amber);
+  height: 3px; width: 0%;
+  background: #cdaa78;
   z-index: 9999;
-  transition: width .1s linear;
+  transition: width .14s cubic-bezier(.22,.7,.22,1);
+  will-change: width;
 }
 
 
