@@ -586,3 +586,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Alcance respetado:** solo encabezados de columnas del pie de página React; no se alteran enlaces ni otras secciones, y no se modifica el sitio original.
 - **Resultado:** CSS, metodología y registro guardados en `main`. La revisión visual en navegador sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12T17:59:33-03:00 — Línea divisoria y redes sociales en la franja inferior del footer
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se quitó el borde inferior de la zona superior y se agregó una línea fina dorado arena semitransparente encima de la franja inferior. Se ajustó el espacio para separar las columnas del copyright y los iconos sociales.
+- **Redes sociales:** se conservaron Instagram, Facebook, TikTok y WhatsApp a la derecha; sus iconos ahora usan `#cdaa78`.
+- **Motivo:** acercar el footer a la referencia aprobada por el usuario.
+- **Autorización:** aprobación explícita del usuario el 2026-10-12 («mandale»).
+- **Alcance:** solo estilos del footer React y documentación; no se alteraron enlaces, textos, estructura JSX ni el sitio original.
+- **Resultado:** CSS actualizado en `main`. Revisión visual local pendiente; no se ejecutaron lint, build ni pruebas de navegador.
