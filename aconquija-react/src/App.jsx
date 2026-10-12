@@ -322,7 +322,7 @@ function HomePage() {
             <div className="eyebrow">Sobre Aconquija</div>
             <h2>Un pueblo, una sierra, un mismo ritmo.</h2>
             <p>Aconquija no se visita rápido. Es un lugar para quedarse unos días, caminar despacio y dejar que la montaña marque el paso. Te esperamos al pie de los Nevados.</p>
-            <a href="#servicios" className="btn-primary">Planeá tu visita</a>
+            <a href="#" className="btn-primary">Planeá tu visita</a>
           </div>
         </section>
       </main>
