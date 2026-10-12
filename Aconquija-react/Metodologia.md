@@ -923,3 +923,25 @@ Página 12 de 15 revisada estáticamente. Se documentaron contenido, ruta candid
 - **Ruta aprobada expresamente por el usuario:** `/lugares/tuneles-del-rio-potrero`.
 - **Alcance:** se aprueba la ruta para incluirla en el mapa definitivo. No se autoriza implementar la ruta ni modificar el código React; la implementación permanece pendiente hasta que el usuario apruebe el mapa completo.
 - **Observaciones que siguen pendientes:** confirmar la duración, que aparece contradictoria en el HTML, y verificar recursos locales cuando corresponda. Respetar el criterio de imágenes vacías y tomar datos globales de contacto y redes desde `index.html`.
+
+
+## Anexo T — Página 13 de 15: Río Potrero
+
+**Archivo revisado:** `html/tercer_nivel/rio_potrero.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó físicamente la existencia de recursos.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Río Potrero — Aconquija Turismo” y H1 “Río Potrero”. Describe la localidad del departamento Andalgalá, su ubicación entre las sierras de Aconquija y Narváez, los bosques de aliso de cerro, la confluencia de tres ríos, el camping y las posibilidades de senderismo. También presenta el acceso por la Ruta Provincial N.º 1 desde Catamarca y por la Cuesta del Clavillo desde Tucumán.
+- **Ruta React candidata:** `/lugares/rio-potrero`. Es una propuesta provisional, pendiente de aprobación expresa y de la revisión del mapa completo de 15 páginas. No se implementó.
+- **Relación con otras páginas:** el contenido se relaciona temáticamente con `/lugares/tuneles-del-rio-potrero` (ruta ya aprobada) y con el circuito Respira Verde. Esta relación no autoriza a modificar enlaces ni a implementar navegación antes de aprobar el mapa completo.
+- **Imagen principal:** el contenedor hero utiliza `background-image: url('')`, por lo que la referencia está vacía. Las imágenes de galería también tienen `src=""`; algunas tienen además `data-full=""`. Según el criterio confirmado por el usuario, no restaurar ilustraciones eliminadas ni completar referencias vacías por iniciativa propia. En React, evitar renderizar imágenes con fuente vacía; tratarlas como opcionales y respetar el diseño aprobado.
+- **Acceso y datos variables:** el texto indica que hay tramos de ripio y vados del río y recomienda consultar el estado del camino, especialmente después de lluvias. Mantener esta advertencia como contenido de la página, sin convertirla en una afirmación actual sobre transitabilidad.
+- **Ubicación y mapa:** el enlace de mapa abre Google Maps con la búsqueda `Rio Potrero Aconquija Catamarca`. Es un destino externo, no una ruta React.
+- **Contacto y redes:** la página incluye Instagram, Facebook y WhatsApp, teléfono `+54 383 000 0000`, correo `info@aconquija.tur.ar` y un enlace de WhatsApp con número genérico. Aplicar el criterio transversal del usuario: los datos globales de contacto y perfiles se extraen de `index.html`; no reutilizar los datos locales genéricos como fuente de verdad.
+- **Recursos compartidos:** CSS `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, JavaScript `../../js/scrip.js`. Verificar archivos y rutas antes de la migración, sin alterar los originales.
+- **Estructura e interacciones:** se identifica un cierre `</div>` adicional en el encabezado, además de navegación adaptable, barra de progreso, galería/lightbox, botones de compartir y copiar enlace. El lightbox comienza con una fuente vacía. Se detectaron posibles datos y enlaces de contacto genéricos; las interacciones no se probaron en navegador.
+- **Contenido geográfico:** la descripción menciona Río del Campo, río Potrero y Río Las Chacras como confluencia, y conecta el punto con la Quebrada de las Cañas. Se registra como contenido original, sin verificación externa ni corrección editorial en esta fase.
+
+### Estado de esta revisión
+
+Página 13 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, las relaciones con otros destinos, las referencias de imagen vacías, los datos de contacto genéricos y los recursos/interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
