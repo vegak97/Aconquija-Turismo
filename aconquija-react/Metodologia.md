@@ -1357,3 +1357,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Límites:** no se modificaron el fondo, las pestañas, las imágenes, los textos ni los estilos de otras secciones; el sitio original fuera de `aconquija-react/` permanece intacto.
 - **Validación:** cambio registrado en la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; falta revisar el resultado visual local.
+
+
+## 2026-10-12 — Fecha de verano en dorado arena
+
+- **Archivos de código afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio concreto:** la fecha «Diciembre — Marzo» recibe una clase exclusiva de verano y el color dorado arena `#cdaa78`.
+- **Motivo:** destacar la fecha de verano dentro de la sección Estaciones.
+- **Autorización:** solicitud directa del usuario el 2026-10-12.
+- **Límites:** no se cambian las fechas de otoño, invierno o primavera ni otros estilos o secciones.
+- **Validación:** cambio registrado en `main`; no se ejecutaron build, lint ni pruebas de navegador.
