@@ -195,6 +195,12 @@ header.nav .nav-mobile-social .icon-circle svg {
   margin-top: 18px; font-size: .85rem; letter-spacing: 5px; text-transform: uppercase;
   color: rgba(255,255,255,.88); font-weight: 500;
 }
+
+/* Contraste del título y subtítulo centrales del hero */
+.hero-content h1,
+.hero-content .hero-sub {
+  color: #fff;
+}
 .hero-divider {
   width: 1px; height: 46px; background: rgba(255,255,255,.55);
   margin: 34px auto 0;
