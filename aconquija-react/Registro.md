@@ -463,3 +463,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** instrucción explícita del usuario para cambiar únicamente el fondo de Estaciones / Climas.
 - **Límites respetados:** no se modificaron colores de texto, tarjetas, botones, otras secciones, componentes ni el sitio original.
 - **Resultado:** cambio aplicado en la rama remota `main`; falta la comprobación visual local. No se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Ajuste visual de circuitos, estaciones y pie de página
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **CSS:** el fondo de `.estaciones` volvió a `#1c222c`, coincidente con la captura de referencia; se añadió color dorado `var(--sand)` para hover y foco visible de `.est-tab`. La pestaña activa conserva texto blanco y subrayado dorado. Los rótulos de sección y encabezados del footer ya tenían el color dorado correspondiente y no necesitaron cambios.
+- **Motivo:** aproximar el aspecto de «Qué hacer», «Cuándo venir» y pie de página a las capturas proporcionadas.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Límites:** no se modificaron contenido, imágenes, enlaces, estructura JSX ni el sitio original.
+- **Validación:** pendiente en navegador local; no se ejecutaron lint, build ni pruebas de navegador.
