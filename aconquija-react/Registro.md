@@ -566,3 +566,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario indicó que el estilo anterior no se aplicaba visualmente como esperaba y pidió un color más anaranjado y bordes redondeados.
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Resultado:** CSS y metodología guardados en `main`. La comprobación visual en navegador sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12T17:48:00-03:00 — Footer pizarra oscuro y textos blancos
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el pie de página ahora usa fondo pizarra oscuro `#1c222c`; se forzó el color blanco en el texto descriptivo de marca, títulos de columnas, enlaces, datos de contacto y aviso de derechos reservados. Se documentó el criterio en metodología.
+- **Motivo:** lograr el contraste y la uniformidad de color solicitados para la parte inferior del sitio.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Alcance respetado:** reglas limitadas al footer de React; no se modificaron otras secciones ni el sitio original.
+- **Resultado:** CSS, metodología y registro actualizados en `main`. Se verificaron los contenidos guardados en GitHub; la revisión visual en navegador sigue pendiente y no se ejecutaron lint, build ni pruebas de navegador.
