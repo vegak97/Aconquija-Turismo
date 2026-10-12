@@ -1327,3 +1327,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Alcance:** reglas limitadas a `footer`; no se cambian las demás secciones ni el sitio original fuera de `aconquija-react/`.
 - **Validación:** selectores comprobados estáticamente en el CSS guardado en GitHub. La revisión visual en navegador sigue pendiente.
+
+
+## Encabezados del footer en dorado arena — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** los encabezados de las tres columnas del pie de página —«Explorar», «Servicios» y «Contacto»— usan el dorado arena `#cdaa78`. Los enlaces, la descripción, la dirección, el correo, el teléfono y el texto legal permanecen blancos sobre el fondo pizarra `#1c222c`.
+- **Motivo:** destacar los encabezados de navegación y contacto sin perder el contraste del resto del pie de página.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Alcance:** solo los encabezados de columnas dentro del footer de React; no se modifican otras secciones ni el sitio original.
+- **Validación:** selector CSS comprobado estáticamente en GitHub. La comprobación visual en navegador queda pendiente.
