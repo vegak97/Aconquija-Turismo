@@ -337,3 +337,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** completar el mapa de rutas de las 15 páginas revisadas.
 - **Autorización:** solicitud directa del usuario, que aprobó la ruta y pidió documentarla en ambos archivos, sin modificar código.
 - **Resultado:** ruta marcada como aprobada para el mapa definitivo. No se modificó código React ni el sitio HTML/CSS/JavaScript original. La implementación queda pendiente de la aprobación del mapa definitivo.
+
+
+## 2026-10-11 21:15 -03:00 — Mapa consolidado de 15 páginas para revisión
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió el Anexo W con una tabla única de 15 archivos originales y sus rutas React propuestas, distinguiendo las rutas aprobadas expresamente de las que siguen pendientes. Se aclaró que `/circuitos/respira-verde` es la ruta aprobada para Aconquija Respira Verde y que reemplaza la propuesta inicial `/experiencias/respira-verde`, evitando duplicar el mismo archivo en el mapa.
+- **Motivo:** presentar al usuario el mapa consolidado para su revisión antes de implementar React Router.
+- **Autorización:** solicitud directa del usuario de registrar la aprobación de Virgen del Valle y mostrar el mapa de las 15 páginas antes de implementar.
+- **Resultado:** mapa documental consolidado para revisión. Quedan pendientes la confirmación de `/` y la aprobación expresa de las rutas de Cultiva Tradición, Cristo Redentor y Festival Provincial del Bandoneón, además de la aprobación del mapa completo como conjunto. No se modificó código React ni el sitio HTML/CSS/JavaScript original.
