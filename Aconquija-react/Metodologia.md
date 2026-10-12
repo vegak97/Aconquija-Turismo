@@ -862,3 +862,24 @@ Página 10 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 ### Aprobación de ruta — Desfile Cívico Escolar
 
 El usuario aprobó expresamente la ruta React `/eventos/desfile-civico-escolar` para `html/tercer_nivel/desfile_civico.html` el 2026-10-11. Esta aprobación corresponde a la página individual; el mapa global de las 15 páginas continúa pendiente. No se modificó código React ni el sitio original y la ruta no se implementó.
+
+
+## Anexo R — Página 11 de 15: Festival Mayor de Aconquija
+
+**Archivo revisado:** `html/tercer_nivel/festival_mayor_aconquija.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó la carga de recursos.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Festival Mayor de Aconquija — Aconquija Turismo” y H1 “Festival Mayor de Aconquija”. Presenta el festival como evento popular de tres noches consecutivas (viernes a domingo), hacia fines de enero, en el Complejo Polideportivo Municipal Juan Higinio Vedia y el escenario Lindor Núñez Piosek. Incluye contexto cultural, venta de entradas, ubicación, recomendaciones para asistir y referencias a artistas de ediciones recientes.
+- **Ruta React candidata:** `/eventos/festival-mayor`. Es provisional y queda pendiente de aprobación del usuario y de la revisión del mapa global de 15 páginas; no se implementó.
+- **Fechas y entradas:** el contenido aclara que la fecha exacta varía y recomienda consultar la edición del año en curso. No fijar una fecha anual ni presentar precios, cartelera o disponibilidad como vigentes sin confirmación actualizada.
+- **Ubicación y mapa:** el texto nombra el Complejo Polideportivo Municipal Juan Higinio Vedia y el enlace abre una búsqueda de Google Maps para Aconquija, Catamarca. Conservar como enlace externo específico; no confundir con la ruta interna.
+- **Imágenes:** las cuatro imágenes de galería tienen `src=""`; tres también tienen `data-full=""`. El texto alternativo identifica imágenes de músicos/público como ilustrativas y distingue otras del entorno local. Según el criterio confirmado por el usuario, las referencias vacías pueden ser intencionales tras retirar ilustraciones: no reponer imágenes externas ni buscar sustitutos por iniciativa propia. Verificar solo los archivos locales si corresponde, y tratar imágenes no disponibles como opcionales en la futura implementación React.
+- **Navegación y recursos compartidos:** enlaces al inicio y secciones del sitio; CSS `../../css/style.css`, logotipos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, y JavaScript `../../js/scrip.js`. Comprobar la existencia de los recursos antes de migrarlos, sin corregir rutas por suposición.
+- **Contacto y redes:** la página incluye enlaces de Instagram, Facebook y WhatsApp, teléfono, correo y una llamada a “Reservar por WhatsApp”. Por el criterio transversal confirmado por el usuario, los datos generales de contacto y perfiles se extraerán de `index.html`; no reutilizar automáticamente los valores locales distintos ni inventar datos ausentes. El enlace de mapa se evalúa aparte.
+- **Detalles e interacciones:** navegación adaptable, galería/lightbox con controles anterior/siguiente/cerrar, compartir por Facebook/WhatsApp y copiar enlace. El lightbox también tiene `src=""` inicialmente; evitar renderizar una imagen con fuente vacía si ello provoca una solicitud a la propia página. Las interacciones se identificaron en el código, pero no se probaron en navegador.
+- **Tarjetas relacionadas:** esta página aparece como destino desde la tarjeta “Festival Mayor de Aconquija” en la página del Desfile Cívico Escolar, coherente con la categoría propuesta `/eventos/`; no se cambia ningún enlace del HTML original en esta fase.
+
+### Estado de esta revisión
+
+Página 11 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, la fecha variable, las imágenes vacías, los enlaces de contacto/mapa y las interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
