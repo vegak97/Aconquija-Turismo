@@ -240,3 +240,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Regla acordada:** no reponer imágenes externas ni inventar sustitutos; no considerar automáticamente `src=""` o `data-full=""` como un error; verificar los archivos locales antes de conservar referencias sospechosas. En la futura migración React, tratar las imágenes como opcionales y evitar un elemento `img` con `src=""`; según el diseño aprobado, dejar el espacio vacío o no renderizar la imagen.
 - **Alcance:** documentación únicamente. Se mantienen las reglas del proyecto y la condición de no tocar el código hasta aprobar el mapa definitivo de rutas.
 - **Resultado:** metodología actualizada mediante el commit 517b5b0f61cf3c02d24adfce8f2bb56f36f7672f. Registro actualizado en este commit.
+
+
+### 2026-10-11 21:00:00 -03:00 — Página 10: Desfile Cívico Escolar
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio:** se añadió el Anexo Q con la revisión estática de `html/tercer_nivel/desfile_civico.html` y la propuesta provisional `/eventos/desfile-civico-escolar`.
+- **Hallazgos:** contenido de la actividad comunitaria de verano en el Complejo Municipal de Aconquija; fecha variable; enlace de mapa específico; tres referencias locales de galería que parecen resolver bajo `html/imagenes/`; atributos `data-full=""`; una imagen externa explícitamente ilustrativa; tarjetas relacionadas con Festival Mayor, Cabalgatas de Pirca y Planetario; recursos compartidos e interacciones de galería/compartir/copiar enlace.
+- **Contacto e imágenes:** se aplicaron los criterios confirmados por el usuario: los datos globales de contacto y redes se extraen de `index.html`, y no se reponen imágenes ilustrativas retiradas ni se rellenan referencias vacías por suposición. El destino `cabalgatas de pirca.html` queda pendiente de confirmación.
+- **Autorización:** petición directa del usuario de continuar con la siguiente página por revisar y respetar las reglas de `Aconquija-react/agents.md`. Se limitó el trabajo a lectura estática y documentación; no se tocaron archivos de código.
+- **Resultado:** metodología actualizada mediante el commit `178c30b34e74690f7599cce38551db0710145da9`. No se modificó código React ni el sitio HTML/CSS/JavaScript original, no se implementó la ruta y no se ejecutaron pruebas de navegador. La ruta propuesta sigue pendiente de aprobación.
