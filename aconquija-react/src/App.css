@@ -328,6 +328,13 @@ header.nav .nav-mobile-social .icon-circle svg {
 #explorar .section-head h2,
 #explorar .section-head p { color: #ffffff !important; }
 
+/* Rótulos de sección en dorado arena, sin alterar títulos ni descripciones */
+#explorar .section-head .eyebrow,
+#lugares .section-head .eyebrow,
+#estaciones .section-head .eyebrow,
+#servicios .section-head .eyebrow,
+#sobre .cta-content .eyebrow { color: var(--sand); }
+
 .card-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
 .exp-card {
   position: relative; border-radius: var(--radius); overflow: hidden; height: 420px;
