@@ -1377,3 +1377,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance:** solo el alto visual de la navegación React; el logo del footer y el sitio original no se modifican intencionalmente.
 - **Validación:** reglas guardadas en `main`; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+## Imágenes más compactas y bordes suaves en Estaciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** las imágenes de las cuatro estaciones pasan a ocupar el 94 % del ancho disponible, con una altura de 390 px en escritorio y alturas ligeramente menores en tablet y móvil. Se aplican esquinas redondeadas de 10 px y se centran dentro de su columna.
+- **Motivo:** darles un aspecto algo más compacto y suave sin cambiar las fotografías ni el contenido.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance:** únicamente las imágenes de la sección Estaciones; las demás imágenes del sitio no se modifican intencionalmente.
+- **Validación:** reglas CSS guardadas en `main`; no se ejecutaron build, lint ni pruebas de navegador.
