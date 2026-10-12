@@ -397,7 +397,12 @@ header.nav .nav-mobile-social .icon-circle svg {
 .estaciones { background: #1c222c; color: var(--white); padding: 120px 0; position: relative; }
 .est-tabs {
   display: flex; margin-top: 50px;
-  border-bottom: 1px solid var(--line); flex-wrap: wrap;
+  position: relative; flex-wrap: wrap;
+}
+.est-tabs::after {
+  content: ''; position: absolute; left: 0; bottom: -14px;
+  width: min(60%, 520px); height: 1px;
+  background: rgba(255,255,255,.38);
 }
 .est-tab {
   appearance: none; background: transparent; border: 0; border-radius: 0;
