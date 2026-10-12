@@ -490,3 +490,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización explícita del usuario el 2026-10-12.
 - **Límites respetados:** se conserva el fondo `#1c222c`; no se modificaron tarjetas, imágenes, márgenes, contenido ni otras secciones. No se tocó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios documentados y guardados en la rama `main`. La comprobación visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12 — Refuerzo del color dorado de los textos de Explorar
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se sustituyó el selector de clase por `#explorar .section-head h2` y `#explorar .section-head p`, con color explícito `#cdaa78 !important`, apuntando a los dos textos solicitados dentro de la sección `id="explorar"`.
+- **Motivo:** el usuario informó que el ajuste anterior no se veía y autorizó volver a intentarlo.
+- **Alcance:** solo el título y el párrafo indicados; se conserva el fondo `#1c222c` y no se modifican las tarjetas ni otras secciones.
+- **Resultado:** cambio aplicado en `main` y documentado. Comprobación visual pendiente del usuario; no se ejecutaron lint, build ni pruebas de navegador.
