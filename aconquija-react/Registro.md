@@ -711,3 +711,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario reportó que el subrayado dorado arena no funcionaba y autorizó corregirlo.
 - **Alcance respetado:** no se modificó el estado React `activeSeason`, las imágenes, los textos ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** CSS y metodología actualizados en `main`. Revisión estática realizada; no se ejecutaron lint, build ni pruebas de navegador. La verificación visual local queda pendiente.
+
+
+## 2026-10-12 19:00:00 -03:00 — Subrayado activo de Estaciones con elemento explícito
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** cada botón de estación contiene ahora un `span.est-tab-underline` decorativo. CSS muestra ese elemento solo dentro del botón con clase `active`, manteniendo el color dorado arena `#cdaa78`, el grosor de 2 px y la línea base blanca translúcida.
+- **Motivo:** el usuario informó que la corrección anterior no funcionaba y pidió revisar bien y solucionar el subrayado.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** cambio limitado a la pestaña activa de Estaciones dentro de `aconquija-react/`; no se alteraron las demás secciones ni el sitio original.
+- **Resultado:** archivos actualizados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador; la verificación visual local sigue pendiente.
