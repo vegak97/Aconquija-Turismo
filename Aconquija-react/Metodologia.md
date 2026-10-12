@@ -857,3 +857,8 @@ Este criterio se suma a las reglas del proyecto y a la indicación de extraer lo
 ### Estado de esta revisión
 
 Página 10 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, los destinos relacionados, las referencias de imagen que requieren verificación y las interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
+
+
+### Aprobación de ruta — Desfile Cívico Escolar
+
+El usuario aprobó expresamente la ruta React `/eventos/desfile-civico-escolar` para `html/tercer_nivel/desfile_civico.html` el 2026-10-11. Esta aprobación corresponde a la página individual; el mapa global de las 15 páginas continúa pendiente. No se modificó código React ni el sitio original y la ruta no se implementó.
