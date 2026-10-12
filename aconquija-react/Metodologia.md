@@ -1442,3 +1442,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** el usuario autorizó hacer la línea translúcida aún más fina y más cercana a los botones, manteniendo la idea de que el dorado reemplace el tramo situado bajo la estación activa.
 - **Alcance:** solo se modificaron los dos pseudo-elementos de las pestañas de Estaciones; la selección React, los textos, las imágenes y el sitio original quedan sin cambios intencionales.
 - **Validación:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron lint, build ni pruebas de navegador; falta la comprobación visual local.
+
+
+## Corrección de visibilidad del subrayado activo en Estaciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se eleva la pestaña activa dentro del orden de apilamiento (`z-index: 2`) y se da prioridad al subrayado dorado (`z-index: 3)); el tramo dorado aumenta a 2 px para que se distinga claramente de la línea blanca translúcida de 0,5 px.
+- **Motivo:** el usuario informó que el tramo dorado arena no se estaba mostrando y pidió revisarlo y solucionarlo.
+- **Alcance:** ajuste exclusivo del apilamiento y grosor del subrayado activo; no se modifica la selección React ni el contenido de la sección.
+- **Validación:** cambio guardado y revisado estáticamente en GitHub. No se ejecutaron lint, build ni pruebas de navegador; se necesita comprobarlo visualmente en el navegador local.
