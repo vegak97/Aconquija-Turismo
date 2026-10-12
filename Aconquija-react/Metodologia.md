@@ -945,3 +945,12 @@ Página 12 de 15 revisada estáticamente. Se documentaron contenido, ruta candid
 ### Estado de esta revisión
 
 Página 13 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, las relaciones con otros destinos, las referencias de imagen vacías, los datos de contacto genéricos y los recursos/interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
+
+
+## Aprobación de ruta — Página 13: Río Potrero
+
+- **Fecha de aprobación:** 2026-10-11.
+- **Archivo original:** `html/tercer_nivel/rio_potrero.html`.
+- **Ruta aprobada expresamente por el usuario:** `/lugares/rio-potrero`.
+- **Alcance:** se aprueba la ruta para el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación continúa pendiente de aprobación del mapa completo.
+- **Observaciones pendientes:** las imágenes del hero y la galería contienen referencias vacías; no completarlas por suposición ni restaurar ilustraciones eliminadas. Los datos globales de contacto y redes deben obtenerse de `index.html`.
