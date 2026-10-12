@@ -1245,3 +1245,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** únicamente el color de esos dos textos dentro de `.explorar`. El fondo `#1c222c`, las tarjetas, imágenes, márgenes, estructura y demás secciones permanecen sin cambios.
 - **Autorización:** el usuario autorizó expresamente este ajuste el 2026-10-12.
 - **Validación pendiente:** la comprobación visual queda a cargo del usuario. No se ejecutaron lint, build ni pruebas de navegador.
+
+## Refuerzo del color dorado en los textos de Explorar — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Ajuste:** se reemplazó el selector anterior por `#explorar .section-head h2` y `#explorar .section-head p`, con el color dorado explícito `#cdaa78 !important`, para dar prioridad a los dos textos exactos de la sección cuyo contenedor tiene el id `explorar`.
+- **Textos objetivo:** «Explorá Aconquija a tu manera» y «Recorré Aconquija a través de nuestros circuitos turísticos, diseñados para que vivas una experiencia inolvidable».
+- **Se conserva:** el fondo `#1c222c`, el resto de la sección, y los estilos de otras secciones.
+- **Autorización:** el usuario pidió reintentar el cambio porque el resultado anterior no se reflejó.
+- **Validación:** selector guardado y comprobado estáticamente en GitHub. La revisión visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
