@@ -1451,3 +1451,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** el usuario informó que el tramo dorado arena no se estaba mostrando y pidió revisarlo y solucionarlo.
 - **Alcance:** ajuste exclusivo del apilamiento y grosor del subrayado activo; no se modifica la selección React ni el contenido de la sección.
 - **Validación:** cambio guardado y revisado estáticamente en GitHub. No se ejecutaron lint, build ni pruebas de navegador; se necesita comprobarlo visualmente en el navegador local.
+
+
+## Corrección estructural del subrayado activo de Estaciones — 2026-10-12 19:00:00 -03:00
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se reemplazó el pseudo-elemento `.est-tab.active::after` por un `span.est-tab-underline` real dentro de cada botón. Su opacidad depende de la clase `.active`; se conservan el color arena `var(--sand)`, el grosor de 2 px y la posición alineada con la línea base.
+- **Motivo:** el ajuste anterior basado únicamente en pseudo-elementos no resolvió el reporte visual del usuario; esta alternativa hace explícito el indicador dentro del botón seleccionado.
+- **Alcance:** solo la línea de las pestañas de Estaciones; no se cambia la lógica de selección ni el sitio original fuera de `aconquija-react/`.
+- **Validación:** revisión estática del JSX y CSS guardados en GitHub. La comprobación visual local, build y pruebas de navegador no se han ejecutado.
