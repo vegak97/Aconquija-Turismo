@@ -1270,3 +1270,11 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance preservado:** no se cambian los títulos grandes, las descripciones, los fondos, las tarjetas, los botones, la navegación ni otras secciones. El texto principal y la descripción de Explorar permanecen blancos.
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Validación:** selector comprobado estáticamente en el CSS guardado en GitHub. La comprobación visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+## Refuerzo de prioridad para los cinco rótulos dorado arena — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Ajuste:** se reemplazó el color heredado `var(--sand)` por el valor explícito `#cdaa78 !important` en los selectores específicos de «Qué hacer», «Recorridos», «Cuándo venir», «Servicios» y «Sobre Aconquija», para reforzar la prioridad del color frente a reglas generales de sección.
+- **Alcance:** solo los cinco rótulos pequeños; no se cambian títulos principales, párrafos, fondos, tarjetas, botones ni navegación.
+- **Autorización:** petición directa del usuario el 2026-10-12 para volver a intentar el ajuste de color.
+- **Validación:** cambio comprobado estáticamente en GitHub. Aún falta verificarlo en navegador; no se ejecutaron lint, build ni pruebas de navegador.
