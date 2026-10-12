@@ -305,3 +305,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** continuar el mapa de rutas por categoría para Aconquija React.
 - **Autorización:** solicitud directa del usuario, que aprobó expresamente la ruta y pidió registrar la aprobación en ambos documentos.
 - **Resultado:** ruta registrada como aprobada. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la implementación sigue pendiente de la aprobación del mapa definitivo.
+
+
+## 2026-10-11 21:11 -03:00 — Revisión estática de página 14
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió el Anexo U sobre `html/tercer_nivel/yunka_suma.html`, con la ruta candidata `/lugares/yunka-suma`, contenido, imágenes con referencias vacías, enlaces de mapas, información de acceso/alojamiento y recursos.
+- **Motivo:** continuar la revisión secuencial de las 15 páginas y documentar hallazgos para el mapa de rutas.
+- **Autorización:** solicitud directa del usuario de registrar aprobaciones y continuar con la página 14, siguiendo `Aconquija-react/agents.md` y sin modificar código.
+- **Resultado:** documentación actualizada; la ruta de Yunka Suma queda pendiente de aprobación. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se ejecutaron pruebas de navegador.
