@@ -415,16 +415,17 @@ header.nav .nav-mobile-social .icon-circle svg {
 .est-panel.active { display: grid; animation: fadeUp .6s ease; }
 .est-panel img { width: 94%; height: 390px; justify-self: center; object-fit: cover; border-radius: 10px; }
 .est-panel .est-eyebrow {
-  font-size: .75rem; letter-spacing: 2.5px; color: var(--sand);
+  font-size: .75rem; letter-spacing: 2.5px; color: #cdaa78 !important;
   text-transform: uppercase; font-weight: 600;
 }
-.est-panel .season-date--summer { color: #cdaa78 !important; }
-.est-panel h3 { font-family: var(--ff-display); font-size: 2.2rem; font-weight: 500; margin-top: 14px; }
+.est-panel h3 {
+  font-family: var(--ff-display); font-size: 2.2rem; font-weight: 500;
+  margin-top: 14px; color: #ffffff !important;
+}
 
-/* Contraste solicitado para los textos principales de Estaciones y el título de verano */
+/* Contraste uniforme para los encabezados de Estaciones */
 #estaciones .section-head h2,
-#estaciones .section-head p,
-#estaciones .season-title--summer {
+#estaciones .section-head p {
   color: #ffffff !important;
 }
 .est-panel p  { color: rgba(255,255,255,.75); line-height: 1.75; margin-top: 18px; max-width: 460px; }
