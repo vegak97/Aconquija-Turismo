@@ -114,6 +114,20 @@ header.nav .nav-mobile-social .icon-circle svg {
 }
 .pill:hover { background: var(--white); color: var(--night); }
 
+/* Clima actual compacto junto a las redes sociales */
+.nav-actions { display: flex; align-items: center; gap: 18px; }
+.weather-badge {
+  display: flex; align-items: center; gap: 6px;
+  color: var(--white); white-space: nowrap;
+  font-size: .78rem; line-height: 1;
+}
+.weather-icon { font-size: 1rem; }
+.weather-temp { font-weight: 600; letter-spacing: .2px; }
+.weather-location {
+  color: rgba(255,255,255,.78); font-size: .68rem;
+  letter-spacing: .3px;
+}
+
 /* Iconos de redes sociales (escritorio) */
 .nav-icons { display: flex; align-items: center; gap: 14px; }
 .icon-circle {
@@ -841,6 +855,9 @@ footer.site-footer {
   .nav-mobile-social .icon-circle {
     width: 42px; height: 42px;
   }
+
+  .nav-actions { gap: 12px; }
+  .weather-location { display: none; }
 
   /* Ocultar iconos de redes en la barra superior en mobile */
   .nav-icons .icon-circle:not(.menu-trigger) { display: none; }
