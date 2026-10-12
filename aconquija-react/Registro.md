@@ -636,3 +636,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** se modificó únicamente el alto visual de la navegación de React y se documentó el cambio. El logo del footer y el sitio original no se modificaron intencionalmente.
 - **Resultado:** CSS y documentación actualizados en `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el resultado visual local.
+
+
+## 2026-10-12T19:00:48-03:00 — Imágenes más compactas en Estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** las imágenes de Estaciones ahora ocupan el 94 % del ancho disponible, con una altura de 390 px en escritorio, 280 px en tablet y 230 px en móvil. Se redondearon las esquinas a 10 px y se centraron dentro de su columna.
+- **Motivo:** hacer las imágenes un poco más pequeñas y darles puntas suavemente redondeadas, como pidió el usuario.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo se modificaron las imágenes de la sección Estaciones; no se cambiaron las fotografías, textos, pestañas ni imágenes de otras secciones.
+- **Resultado:** CSS y documentación actualizados en `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el aspecto visual local.
