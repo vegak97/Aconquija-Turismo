@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import logoHeader from '../../imagenes/logo_aconquija(1).png'
 import logoFooter from '../../imagenes/logo_aconquija(2).png'
