@@ -1414,3 +1414,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** recuperar el contraste translúcido de las pestañas inactivas y hacer más evidente cuál estación está seleccionada, según la aclaración del usuario.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Validación:** cambio guardado en `main` y comparado estáticamente; no se ejecutaron lint, build ni pruebas visuales en navegador.
+
+## Línea fina debajo de las pestañas de Estaciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se reemplazó el borde inferior general anterior por una línea independiente de 1 px, blanco translúcido (`rgba(255,255,255,.38)`), limitada al 60 % del ancho con un máximo de 520 px y ubicada 14 px debajo de las pestañas.
+- **Motivo:** agregar el separador solicitado, con el color de la familia visual de los botones, sin que quede pegado ni ocupe todo el ancho.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance:** solo el separador visual de las pestañas de Estaciones; se conservan la línea ámbar de la pestaña activa y el comportamiento de selección.
+- **Validación:** CSS guardado en `main`; no se ejecutaron lint, build ni pruebas visuales en navegador.
