@@ -345,3 +345,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** presentar al usuario el mapa consolidado para su revisión antes de implementar React Router.
 - **Autorización:** solicitud directa del usuario de registrar la aprobación de Virgen del Valle y mostrar el mapa de las 15 páginas antes de implementar.
 - **Resultado:** mapa documental consolidado para revisión. Quedan pendientes la confirmación de `/` y la aprobación expresa de las rutas de Cultiva Tradición, Cristo Redentor y Festival Provincial del Bandoneón, además de la aprobación del mapa completo como conjunto. No se modificó código React ni el sitio HTML/CSS/JavaScript original.
+
+
+## 2026-10-11 21:17 -03:00 — Registro de decisiones sobre rutas pendientes
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se actualizaron en el Anexo W las rutas de Inicio (`/`), Cultiva Tradición (`/circuitos/cultiva-tradicion`), Cristo Redentor (`/lugares/cristo-redentor`) y Festival Provincial del Bandoneón (`/eventos/fiesta-del-bandoneon`); se añadió el Anexo X con las decisiones explícitas.
+- **Motivo:** reflejar las decisiones de rutas proporcionadas por el usuario antes de aprobar el mapa como conjunto.
+- **Autorización:** solicitud directa del usuario; pidió registrar las cuatro decisiones en ambos documentos sin modificar código.
+- **Resultado:** las cuatro rutas quedan confirmadas individualmente; el mapa completo de 15 páginas se presenta a continuación para aprobación conjunta. No se modificó código React ni el sitio HTML/CSS/JavaScript original.
