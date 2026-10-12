@@ -1287,3 +1287,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Estilo conservado:** se mantienen el tamaño de cobertura, el posicionamiento centrado, la capa oscura superpuesta y el contenido de la sección.
 - **Autorización:** solicitud directa del usuario el 2026-10-12.
 - **Validación:** se confirmó que `imagenes/caballo.webp` existe en el repositorio y se verificó estáticamente la referencia del código. No se ejecutaron lint, build ni pruebas visuales en navegador.
+
+
+## Título blanco de Sobre Aconquija — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se añadió el selector específico `#sobre .cta-content h2` con `color: #ffffff !important` para que el título «Un pueblo, una sierra, un mismo ritmo.» aparezca en blanco sobre la imagen de fondo.
+- **Alcance:** solo el título de la sección `#sobre`; no se cambian el rótulo dorado, el párrafo, el botón, la imagen ni otras secciones.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Validación:** regla comprobada estáticamente en el CSS guardado en GitHub; no se ejecutaron lint, build ni pruebas visuales en navegador.
