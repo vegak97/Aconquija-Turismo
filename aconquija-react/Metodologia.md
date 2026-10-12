@@ -1423,3 +1423,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance:** solo el separador visual de las pestañas de Estaciones; se conservan la línea ámbar de la pestaña activa y el comportamiento de selección.
 - **Validación:** CSS guardado en `main`; no se ejecutaron lint, build ni pruebas visuales en navegador.
+
+
+## Línea base continua y subrayado dorado activo en Estaciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** la línea base de las pestañas ahora mide 1 px y ocupa el 100 % del ancho disponible del contenedor, para acompañar el ancho de la zona de imágenes. El subrayado de la pestaña activa también mide 1 px, usa dorado arena (`var(--sand)`, `#cdaa78`) y se alinea sobre la línea base, reemplazando visualmente ese pequeño tramo en vez de quedar separado.
+- **Motivo:** hacer la línea más fina, extenderla hasta el ancho del contenido visual y conseguir que el dorado arena siga a la estación seleccionada al presionar cada botón.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance:** solo se ajustaron los estilos de las pestañas de Estaciones en React; no se modificó la lógica de selección ni el sitio original.
+- **Validación:** cambio revisado estáticamente en el contenido de GitHub. No se ejecutaron lint, build ni pruebas visuales en navegador.
