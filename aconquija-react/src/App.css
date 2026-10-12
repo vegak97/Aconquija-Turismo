@@ -417,6 +417,13 @@ header.nav .nav-mobile-social .icon-circle svg {
   text-transform: uppercase; font-weight: 600;
 }
 .est-panel h3 { font-family: var(--ff-display); font-size: 2.2rem; font-weight: 500; margin-top: 14px; }
+
+/* Contraste solicitado para los textos principales de Estaciones y el título de verano */
+#estaciones .section-head h2,
+#estaciones .section-head p,
+#estaciones .season-title--summer {
+  color: #ffffff !important;
+}
 .est-panel p  { color: rgba(255,255,255,.75); line-height: 1.75; margin-top: 18px; max-width: 460px; }
 
 
