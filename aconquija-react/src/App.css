@@ -403,10 +403,13 @@ header.nav .nav-mobile-social .icon-circle svg {
   appearance: none; background: transparent; border: 0; border-radius: 0;
   padding: 16px 28px; font-family: inherit; font-size: .85rem;
   letter-spacing: 1.5px; text-transform: uppercase;
-  color: var(--stone); cursor: pointer; position: relative; font-weight: 500;
-  transition: color .3s ease; text-align: left;
+  color: rgba(255,255,255,.62); cursor: pointer; position: relative; font-weight: 500;
+  transition: color .3s ease, text-shadow .3s ease; text-align: left;
 }
-.est-tab.active { color: var(--white); }
+.est-tab.active {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255,255,255,.22);
+}
 .est-tab:focus-visible { outline: 2px solid var(--sand); outline-offset: -2px; }
 .est-tab.active::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -1px;
