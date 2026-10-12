@@ -1296,3 +1296,14 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo el título de la sección `#sobre`; no se cambian el rótulo dorado, el párrafo, el botón, la imagen ni otras secciones.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Validación:** regla comprobada estáticamente en el CSS guardado en GitHub; no se ejecutaron lint, build ni pruebas visuales en navegador.
+
+
+## Botón «Planeá tu visita» de Sobre Aconquija — 2026-10-12
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Referencia:** botón del sitio original en `index.html` y sus estilos en `css/style.css`.
+- **Hallazgo:** el original usa `class="btn-primary"` y `href="#"`; React ya comparte la clase y sus estilos visuales, pero el enlace apuntaba a `#servicios`.
+- **Cambio:** se ajustó únicamente el destino del botón React a `href="#" ` para igualar el comportamiento definido en el HTML original. No fue necesario cambiar el CSS del botón porque sus estilos coinciden con la referencia.
+- **Alcance preservado:** no se modificó el sitio original, otros botones, la imagen de fondo ni el resto de la sección.
+- **Autorización:** permiso explícito del usuario el 2026-10-12, tras explicar que se replicaría el aspecto y el comportamiento del botón original.
+- **Validación:** se verificó estáticamente la diferencia entre el HTML original y React. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual local queda pendiente.
