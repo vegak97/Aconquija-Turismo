@@ -1200,3 +1200,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo estilos de navegación de la aplicación React. No se cambiaron los textos, destinos de los enlaces, componentes, fondo de la barra, recursos gráficos ni el sitio original.
 - **Autorización:** el usuario autorizó expresamente revisar y corregir el color y el grosor visual de los enlaces y redes sociales de la barra.
 - **Validación pendiente:** comprobar visualmente en `http://localhost:5173/` tanto el encabezado sobre el hero como la barra después de desplazarse, además del menú móvil. No se ejecutaron pruebas de navegador, lint ni build en esta intervención.
+
+
+## Color del título principal de Inicio — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se fijó el color blanco puro (`#fff`) para el título central `Aconquija` y el subtítulo `Naturaleza que inspira` del hero, mediante selectores específicos de `.hero-content`.
+- **Alcance:** únicamente el color de esos dos textos de la portada. No se modificaron la navegación, el fondo, las imágenes, el resto de la página ni el sitio original.
+- **Autorización:** confirmación explícita del usuario el 2026-10-12.
+- **Validación:** cambio registrado en `main`; queda pendiente que el usuario compruebe el resultado visual en el navegador local. No se afirma que se hayan ejecutado lint, build o pruebas de navegador.
