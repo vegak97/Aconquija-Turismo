@@ -1191,3 +1191,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 3. Pedir solo la información que falte para esa condición; no repetir auditorías ya completadas.
 4. Explicar archivos, propósito e impacto antes de solicitar autorización para una nueva etapa.
 5. Al terminar, actualizar el estado de esta metodología y añadir una entrada detallada al registro.
+
+
+## Ajuste visual de la navegación de Inicio — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se reforzó el color blanco de los enlaces principales en sus estados normal, visitado, hover, foco y activo; se redujo el peso tipográfico a `400` para que no se vean tan gruesos; y se explicitó el blanco de los iconos sociales tanto en escritorio como en el menú móvil.
+- **Alcance:** solo estilos de navegación de la aplicación React. No se cambiaron los textos, destinos de los enlaces, componentes, fondo de la barra, recursos gráficos ni el sitio original.
+- **Autorización:** el usuario autorizó expresamente revisar y corregir el color y el grosor visual de los enlaces y redes sociales de la barra.
+- **Validación pendiente:** comprobar visualmente en `http://localhost:5173/` tanto el encabezado sobre el hero como la barra después de desplazarse, además del menú móvil. No se ejecutaron pruebas de navegador, lint ni build en esta intervención.
