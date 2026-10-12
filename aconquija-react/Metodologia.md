@@ -1307,3 +1307,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance preservado:** no se modificó el sitio original, otros botones, la imagen de fondo ni el resto de la sección.
 - **Autorización:** permiso explícito del usuario el 2026-10-12, tras explicar que se replicaría el aspecto y el comportamiento del botón original.
 - **Validación:** se verificó estáticamente la diferencia entre el HTML original y React. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual local queda pendiente.
+
+
+## Botón «Planeá tu visita»: refuerzo visual — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se añadió un selector específico para el botón dentro de `#sobre .cta-content`, reforzando el fondo ámbar anaranjado `#e2935c`, los bordes redondeados de 30 px y el texto oscuro; en hover pasa a fondo blanco y se eleva ligeramente.
+- **Motivo:** el usuario indicó que el estilo visual no se estaba aplicando como esperaba y pidió un tono más anaranjado con bordes redondeados.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Alcance:** solo el botón «Planeá tu visita» de «Sobre Aconquija»; no se alteran otros botones ni el sitio original.
+- **Validación:** regla comprobada estáticamente en el CSS de GitHub. La comprobación visual en navegador sigue pendiente.
