@@ -507,3 +507,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario aclaró que quería blanco en vez de dorado y pidió que se aplicara el cambio directamente para probar.
 - **Alcance:** se mantiene el fondo `#1c222c`; no se modifican tarjetas ni otras secciones.
 - **Validación:** cambio guardado en `main` y documentado. La revisión visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12T17:19:06.376-03:00 — Cinco rótulos de sección en dorado arena
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se agregaron selectores específicos para que «Qué hacer» en Explorar, «Recorridos» en Lugares, «Cuándo venir» en Estaciones, «Servicios» en Servicios y «Sobre Aconquija» en la sección Sobre usen `var(--sand)` (`#cdaa78`).
+- **Motivo:** unificar esos cinco rótulos pequeños con el color dorado arena del diseño.
+- **Autorización:** autorización explícita del usuario el 2026-10-12.
+- **Límites respetados:** no se cambiaron títulos grandes, párrafos, fondos, tarjetas, botones, navegación ni el sitio original fuera de `aconquija-react/`. El título y el párrafo de Explorar siguen blancos.
+- **Resultado:** los tres archivos se actualizaron en la rama `main`. La comprobación visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
