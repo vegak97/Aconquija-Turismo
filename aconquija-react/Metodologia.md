@@ -1278,3 +1278,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo los cinco rótulos pequeños; no se cambian títulos principales, párrafos, fondos, tarjetas, botones ni navegación.
 - **Autorización:** petición directa del usuario el 2026-10-12 para volver a intentar el ajuste de color.
 - **Validación:** cambio comprobado estáticamente en GitHub. Aún falta verificarlo en navegador; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## Imagen de fondo de Sobre Aconquija — 2026-10-12
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** se importa explícitamente `imagenes/caballo.webp` desde `App.jsx` y se asigna al fondo de la sección `#sobre` mediante el elemento `.cta-bg`. Se elimina la URL duplicada de la hoja CSS para que Vite resuelva el recurso a través del import.
+- **Estilo conservado:** se mantienen el tamaño de cobertura, el posicionamiento centrado, la capa oscura superpuesta y el contenido de la sección.
+- **Autorización:** solicitud directa del usuario el 2026-10-12.
+- **Validación:** se confirmó que `imagenes/caballo.webp` existe en el repositorio y se verificó estáticamente la referencia del código. No se ejecutaron lint, build ni pruebas visuales en navegador.
