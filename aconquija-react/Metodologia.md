@@ -1367,3 +1367,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** solicitud directa del usuario el 2026-10-12.
 - **Límites:** no se cambian las fechas de otoño, invierno o primavera ni otros estilos o secciones.
 - **Validación:** cambio registrado en `main`; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+## Ajuste sutil del alto de la navegación — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se redujo ligeramente el relleno vertical de la barra de navegación de 20 px a 16 px y, al desplazarse, de 12 px a 10 px. El logo del encabezado pasa de 72 px a 66 px y se reduce suavemente a 58 px al activar el estado desplazado.
+- **Motivo:** hacer que la barra se vea menos gruesa sin alterar sus enlaces, colores ni funcionamiento.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance:** solo el alto visual de la navegación React; el logo del footer y el sitio original no se modifican intencionalmente.
+- **Validación:** reglas guardadas en `main`; no se ejecutaron build, lint ni pruebas de navegador.
