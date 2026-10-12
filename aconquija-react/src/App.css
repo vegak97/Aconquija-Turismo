@@ -889,3 +889,7 @@ footer.site-footer {
 }
 
 
+
+
+/* Título de Sobre Aconquija en blanco */
+#sobre .cta-content h2 { color: #ffffff !important; }
