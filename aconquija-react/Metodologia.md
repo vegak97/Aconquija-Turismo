@@ -1228,3 +1228,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** estilos visuales de esas partes; sin cambios en textos, imágenes, enlaces, estructura JSX ni sitio original.
 - **Autorización:** el usuario autorizó expresamente este ajuste el 2026-10-12.
 - **Validación:** pendiente de comprobación visual local; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## Fondo de la sección Explorar — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se cambió únicamente el valor de fondo de `.explorar` de `var(--night)` a `#1c222c`, para igualarlo exactamente al fondo de `.estaciones`. Se conservaron el padding, el color del texto y el posicionamiento de la sección.
+- **Alcance:** solo el fondo de «Explorá Aconquija a tu manera». No se modificaron tarjetas, imágenes, textos, enlaces, otras secciones ni el sitio original.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Validación pendiente:** se verificó estáticamente el valor CSS guardado en GitHub; no se ejecutaron lint, build ni pruebas de navegador.
