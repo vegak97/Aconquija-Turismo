@@ -914,3 +914,12 @@ Página 11 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 ### Estado de esta revisión
 
 Página 12 de 15 revisada estáticamente. Se documentaron contenido, ruta candidata, duración contradictoria, referencias de imagen vacías, contactos, recursos y posibles detalles estructurales. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
+
+
+## Aprobación de ruta — Página 12: Túneles del Río Potrero
+
+- **Fecha de aprobación:** 2026-10-11.
+- **Archivo original:** `html/tercer_nivel/tuneles_rio_potrero.html`.
+- **Ruta aprobada expresamente por el usuario:** `/lugares/tuneles-del-rio-potrero`.
+- **Alcance:** se aprueba la ruta para incluirla en el mapa definitivo. No se autoriza implementar la ruta ni modificar el código React; la implementación permanece pendiente hasta que el usuario apruebe el mapa completo.
+- **Observaciones que siguen pendientes:** confirmar la duración, que aparece contradictoria en el HTML, y verificar recursos locales cuando corresponda. Respetar el criterio de imágenes vacías y tomar datos globales de contacto y redes desde `index.html`.
