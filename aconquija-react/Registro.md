@@ -693,3 +693,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** no se modificó la lógica React que actualiza `activeSeason`, el contenido ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** CSS y documentación actualizados en `main`. Se hizo revisión estática; no se ejecutaron lint, build ni pruebas de navegador, por lo que la comprobación visual local queda pendiente.
+
+
+## 2026-10-12T19:45:00-03:00 — Línea base más fina y más cercana a las pestañas de Estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** la línea base blanca translúcida pasa a 0,5 px y se ubica a 2 px debajo de las pestañas; el segmento dorado de la estación activa se alinea a esa misma distancia y conserva 1 px de grosor para cubrir visualmente la línea base.
+- **Motivo:** el usuario dio permiso explícito para afinar y acercar la línea, sin cambiar el comportamiento ni el contenido de Estaciones.
+- **Alcance respetado:** no se cambió la lógica React de `activeSeason`, los textos, las imágenes ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** los cambios CSS y la documentación quedaron guardados en `main`. Revisión estática realizada; no se ejecutaron lint, build ni pruebas de navegador. La comprobación visual local queda pendiente.
