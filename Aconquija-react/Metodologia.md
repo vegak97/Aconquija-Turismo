@@ -883,3 +883,12 @@ El usuario aprobó expresamente la ruta React `/eventos/desfile-civico-escolar` 
 ### Estado de esta revisión
 
 Página 11 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, la fecha variable, las imágenes vacías, los enlaces de contacto/mapa y las interacciones. No se modificó código React ni el sitio HTML/CSS/JavaScript original; no se implementó la ruta ni se ejecutaron pruebas de navegador.
+
+
+## Aprobación de ruta — Página 11: Festival Mayor de Aconquija
+
+- **Fecha de aprobación:** 2026-10-11.
+- **Archivo original revisado:** `html/tercer_nivel/festival_mayor_aconquija.html`.
+- **Ruta aprobada por el usuario:** `/eventos/festival-mayor`.
+- **Alcance:** se aprueba únicamente el nombre y patrón de ruta para el mapa definitivo. No autoriza cambios en código ni migración de la página; estos siguen pendientes hasta aprobar el mapa completo.
+- **Criterios que se conservan:** no completar referencias de imágenes vacías ni restaurar imágenes ilustrativas eliminadas; obtener contacto y redes globales desde `index.html`; verificar rutas locales antes de migrar.
