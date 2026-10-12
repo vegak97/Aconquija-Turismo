@@ -353,3 +353,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** reflejar las decisiones de rutas proporcionadas por el usuario antes de aprobar el mapa como conjunto.
 - **Autorización:** solicitud directa del usuario; pidió registrar las cuatro decisiones en ambos documentos sin modificar código.
 - **Resultado:** las cuatro rutas quedan confirmadas individualmente; el mapa completo de 15 páginas se presenta a continuación para aprobación conjunta. No se modificó código React ni el sitio HTML/CSS/JavaScript original.
+
+
+## 2026-10-11 21:23 -03:00 — Aprobación conjunta del mapa de 15 rutas
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se actualizó el Anexo W para indicar que el mapa de las 15 rutas está aprobado como conjunto y se añadió el Anexo Y con la decisión expresa del usuario. Este registro documenta la aprobación conjunta y el límite de autorización.
+- **Motivo:** cerrar la fase de revisión del mapa antes de planificar la implementación de React Router.
+- **Autorización:** solicitud directa del usuario: aprobó las 15 rutas exactamente como aparecen en la tabla y pidió registrar la aprobación en ambos documentos, sin modificar código.
+- **Resultado:** mapa de 15 rutas aprobado como conjunto. No se modificó código React ni el sitio original HTML/CSS/JavaScript. La implementación queda pendiente de autorización separada, que se solicitará después de presentar el plan concreto y los archivos afectados.
