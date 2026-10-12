@@ -646,3 +646,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo se modificaron las imágenes de la sección Estaciones; no se cambiaron las fotografías, textos, pestañas ni imágenes de otras secciones.
 - **Resultado:** CSS y documentación actualizados en `main`. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente revisar el aspecto visual local.
+
+## 2026-10-12T22:11:22.578-03:00 — Colores uniformes en las cuatro estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se estableció el dorado arena `#cdaa78` para las fechas de todas las estaciones y el blanco `#ffffff` para los títulos de todos los paneles, en lugar de aplicar el color blanco explícitamente solo al título de Verano.
+- **Motivo:** extender a Otoño, Invierno y Primavera el criterio de colores aprobado en Verano.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Límites respetados:** no se cambiaron textos, imágenes, tamaños, bordes, distribución, pestañas ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** CSS y documentación actualizados en la rama `main`. La comprobación es estática; no se ejecutaron lint, build ni pruebas de navegador y queda pendiente revisar el aspecto en el navegador local.
