@@ -1387,3 +1387,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance:** únicamente las imágenes de la sección Estaciones; las demás imágenes del sitio no se modifican intencionalmente.
 - **Validación:** reglas CSS guardadas en `main`; no se ejecutaron build, lint ni pruebas de navegador.
+
+## Colores uniformes para las cuatro estaciones — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** las fechas de Verano, Otoño, Invierno y Primavera usan explícitamente dorado arena (`#cdaa78`); los títulos de las cuatro estaciones usan blanco (`#ffffff`). Se elimina la dependencia del selector exclusivo de verano para el color del título y se mantiene el mismo criterio visual en todos los paneles.
+- **Motivo:** extender a Otoño, Invierno y Primavera los colores que se habían ajustado primero en Verano.
+- **Alcance:** solo colores de fechas y títulos dentro de Estaciones. No se modifican textos, imágenes, tamaños, bordes, distribución, pestañas ni otras secciones.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Validación:** cambio comprobado estáticamente en el CSS de GitHub. No se ejecutaron lint, build ni pruebas de navegador; queda pendiente la comprobación visual local.
