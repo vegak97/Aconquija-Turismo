@@ -414,11 +414,13 @@ header.nav .nav-mobile-social .icon-circle svg {
 .est-tab.active {
   color: #ffffff;
   text-shadow: 0 0 10px rgba(255,255,255,.22);
+  z-index: 2;
 }
 .est-tab:focus-visible { outline: 2px solid var(--sand); outline-offset: -2px; }
 .est-tab.active::after {
   content: ''; position: absolute; left: 0; right: 0; bottom: -2px;
-  height: 1px; background: var(--sand); z-index: 1;
+  height: 2px; background: var(--sand); z-index: 3;
+  pointer-events: none;
 }
 .est-panels { position: relative; margin-top: 50px; min-height: 420px; }
 .est-panel  { display: none; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
