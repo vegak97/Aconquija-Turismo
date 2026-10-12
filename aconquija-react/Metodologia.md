@@ -1209,3 +1209,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** únicamente el color de esos dos textos de la portada. No se modificaron la navegación, el fondo, las imágenes, el resto de la página ni el sitio original.
 - **Autorización:** confirmación explícita del usuario el 2026-10-12.
 - **Validación:** cambio registrado en `main`; queda pendiente que el usuario compruebe el resultado visual en el navegador local. No se afirma que se hayan ejecutado lint, build o pruebas de navegador.
+
+
+## Fondo azul pizarra de Estaciones / Climas — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Diagnóstico:** la sección `.estaciones` tenía el fondo `#1c222c`.
+- **Cambio:** se cambió únicamente el color de fondo de `.estaciones` a azul pizarra `#34485b`, conservando las demás propiedades y estilos de la sección.
+- **Autorización:** el usuario eligió expresamente Azul pizarra y autorizó cambiar únicamente el fondo de Estaciones / Climas.
+- **Validación pendiente:** revisar visualmente la sección en el navegador local. No se ejecutaron lint, build ni pruebas de navegador en esta intervención.
