@@ -976,3 +976,12 @@ Página 13 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 ### Estado de esta revisión
 
 Página 14 de 15 revisada estáticamente. Se documentaron contenido, ruta candidata, referencias de imágenes vacías, enlaces de mapas, descripción de acceso/alojamiento y recursos compartidos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
+
+
+## Aprobación de ruta — Página 14: Yunka Suma
+
+- **Fecha de aprobación:** 2026-10-11.
+- **Archivo original:** `html/tercer_nivel/yunka_suma.html`.
+- **Ruta aprobada expresamente por el usuario:** `/lugares/yunka-suma`.
+- **Alcance:** se aprueba la ruta para el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación continúa pendiente de aprobación del mapa completo.
+- **Observaciones pendientes:** las imágenes de la galería y la imagen del lightbox contienen referencias vacías; no completarlas por suposición ni restaurar ilustraciones eliminadas. Los datos globales de contacto y redes deben obtenerse de `index.html`.
