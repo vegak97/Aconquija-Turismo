@@ -935,3 +935,17 @@ footer .foot-bottom p {
 footer .foot-col h5 {
   color: #cdaa78 !important;
 }
+
+/* Separador entre el contenido del footer y la franja legal/social */
+footer .foot-top {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+footer .foot-bottom {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(205, 170, 120, 0.45);
+}
+footer .foot-social .icon-circle {
+  color: #cdaa78 !important;
+}
