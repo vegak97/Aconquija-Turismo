@@ -382,7 +382,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 /* ══════════════════════════════════════════════
    SECCIÓN: ESTACIONES — tabs (index)
 ══════════════════════════════════════════════ */
-.estaciones { background: #1c222c; color: var(--white); padding: 120px 0; position: relative; }
+.estaciones { background: #34485b; color: var(--white); padding: 120px 0; position: relative; }
 .est-tabs {
   display: flex; margin-top: 50px;
   border-bottom: 1px solid var(--line); flex-wrap: wrap;
