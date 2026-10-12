@@ -665,3 +665,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Límites respetados:** no se cambiaron textos ni el comportamiento de selección; no se modificó `index.html` ni `css/style.css` fuera de `aconquija-react/`.
 - **Resultado:** estilos y documentación actualizados en la rama `main`. Comparación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12T19:21:37-03:00 — Contraste translúcido y estado iluminado de las pestañas
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** las pestañas no seleccionadas usan blanco translúcido (`rgba(255,255,255,.62)`); la pestaña seleccionada usa blanco pleno con un resplandor muy sutil y conserva la línea inferior ámbar. Se mantiene intacto el mecanismo React que cambia la estación activa.
+- **Motivo:** reflejar la apariencia indicada por el usuario: pestañas translúcidas y estación seleccionada visualmente iluminada. Se revisaron el `index.html`, `css/style.css` y `js/scrip.js` originales como referencia.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Límites respetados:** solo se ajustó el estilo de las pestañas dentro de React; no se modificó el sitio original ni la lógica de selección.
+- **Resultado:** CSS y documentación actualizados en `main`. Verificación estática realizada; no se ejecutaron lint, build ni pruebas de navegador.
