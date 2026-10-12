@@ -16,13 +16,19 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 6. **Si no se puede actualizar el registro, detenerse.** No continuar con más modificaciones hasta informar el problema y resolver cómo mantener la trazabilidad.
 7. **No dar por verificado lo que no se probó.** Diferenciar entre tareas realizadas, pruebas ejecutadas y asuntos pendientes.
 
-## 3. Criterios acordados para la migración
+## 3. Criterios vigentes acordados para la migración
 
-- **Diseño:** mantener el diseño original lo más fielmente posible; corregir errores solo dentro del alcance autorizado.
-- **Páginas y contenido:** conservar las páginas, textos, enlaces y contenidos existentes, adaptándolos a React.
-- **Alcance previsto:** migrar el sitio completo, incluidas las páginas secundarias, las imágenes y las interacciones. Cada etapa concreta se confirmará antes de ejecutarla.
-- **Separación:** el proyecto nuevo estará dentro de `aconquija-react/`; el sitio original no se utilizará como lugar de trabajo para esta migración.
-- **Cambios no previstos:** ninguna mejora estética, reescritura de contenido, eliminación de funciones, cambio de rutas o instalación adicional se hará por iniciativa propia sin consultarlo primero.
+- **Diseño y contenido:** mantener el diseño original lo más fielmente posible y conservar textos, estructura, enlaces e interacciones de las páginas aprobadas. No introducir mejoras, reescrituras ni contenido nuevo por iniciativa propia.
+- **Alcance vigente:** el inventario autorizado para migrar es de **15 páginas originales**, conforme al mapa aprobado en el Anexo W/Y. `html/tercer_nivel/el_charquiadero.html` fue excluida intencionalmente y no debe recrearse ni migrarse. Los conteos de 16 páginas y las listas anteriores que aparecen en anexos antiguos son antecedentes históricos, no el alcance actual.
+- **Rutas:** el mapa de 15 rutas del Anexo W está aprobado como conjunto. Esta aprobación documental no autoriza por sí sola a modificar código ni a implementar rutas; se requiere la autorización específica de la etapa correspondiente.
+- **Páginas futuras aún no terminadas:** algunos destinos inexistentes se incluyeron intencionalmente como recordatorios de contenido futuro. No crear esas páginas ni redactar su contenido durante esta migración. Antes de migrar los enlaces que apuntan a ellas, conservar la referencia como pendiente y no convertirla en un enlace activo roto; si la forma de representarla en la interfaz requiere una decisión no acordada, consultar al usuario.
+- **Imágenes y recursos faltantes:** si una ruta o extensión de imagen no coincide con un archivo disponible, buscar en el repositorio local el mismo recurso con otra extensión (por ejemplo, `.webp`, `.png`, `.jpg` o variaciones de mayúsculas). Usar la ruta real solo cuando se confirme que es la misma imagen y documentar la correspondencia. Si no existe una imagen equivalente local, conservar el espacio visual reservado para que el usuario la agregue más adelante; no descargar, inventar ni sustituirla por una imagen parecida.
+- **Referencias de imagen vacías:** algunas pueden ser espacios intencionales reservados para recursos que todavía no se agregaron. No clasificarlas automáticamente como errores ni generar en React elementos `<img>` con `src=""`; mantener el espacio reservado de forma segura hasta que el usuario proporcione el recurso.
+- **Contacto y redes sociales globales:** usar los datos de contacto y redes de `index.html` como fuente canónica. Si una página secundaria presenta datos globales diferentes o incompletos, unificarlos con los de `index.html` durante la migración. No inventar datos que no estén allí. Los enlaces de mapas o ubicación específicos de cada atractivo se revisan por separado.
+- **Verificación:** distinguir siempre una auditoría estática de las pruebas reales. Inspeccionar archivos o referencias no demuestra que la aplicación compile, que el linter pase ni que la interfaz funcione en un navegador. Informar cada prueba como ejecutada, fallida o pendiente según corresponda.
+- **Separación:** el proyecto nuevo estará dentro de `aconquija-react/`; el sitio original HTML/CSS/JavaScript debe permanecer intacto.
+- **Trazabilidad histórica:** conservar los anexos antiguos por trazabilidad. Cuando contradigan las decisiones vigentes, señalar que son antecedentes superados y tomar como referencia los criterios actuales y el mapa aprobado.
+- **Cambios no previstos:** si surge una decisión sobre diseño, contenido, comportamiento, dependencias o alcance que no esté cubierta por estos acuerdos, detenerse y consultarla antes de modificar archivos.
 
 ## 4. Fase 0 — Inventario y diagnóstico
 
