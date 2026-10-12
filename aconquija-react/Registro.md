@@ -731,3 +731,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo se modificó la barra superior dentro de `aconquija-react/`; no se modificó el sitio original ni se agregaron dependencias.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Temperatura del clima en blanco
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se agregó color blanco explícito (`#ffffff !important`) a la cifra de temperatura del indicador climático en la navegación.
+- **Motivo:** aumentar el contraste de la temperatura sobre el fondo pizarra oscuro.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo la cifra de temperatura; se conservaron el icono, el nombre Aconquija, la consulta del clima y el resto del diseño. No se modificó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente comprobarlo visualmente en el navegador local.
