@@ -205,6 +205,14 @@ Esta sección resume el estado actual para retomar el trabajo sin repetir audito
 
 ### Estado de la migración de Inicio
 
+
+#### Ajuste del fondo del hero — 2026-10-12
+
+- Se confirmó que el archivo `imagenes/fondo(1).webp` existe en el repositorio.
+- Para que Vite resuelva el recurso de forma explícita, se importó el archivo en `src/App.jsx` y se asignó como `backgroundImage` al contenedor `.hero-bg`.
+- Se quitó la referencia CSS con paréntesis escapados de `src/App.css` y se dejó un color de respaldo mientras carga la imagen.
+- La verificación remota confirma la importación y la asignación en el JSX, pero todavía falta comprobar en el navegador local que la imagen se vea correctamente.
+
 - [x] Se trasladó a `src/App.jsx` la estructura de la página principal: navegación, hero, presentación, circuitos, lugares, pestañas de estaciones, servicios, sección final y pie de página.
 - [x] Se reutilizaron los recursos gráficos existentes del repositorio mediante importaciones relativas, sin mover ni modificar los archivos de imágenes originales.
 - [x] Se trasladaron a `src/App.css` las reglas de diseño originales de `css/style.css`, ajustando únicamente las rutas de recursos necesarias desde la ubicación del archivo React.
