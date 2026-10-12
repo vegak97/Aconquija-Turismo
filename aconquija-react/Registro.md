@@ -387,3 +387,16 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** facilitar la continuidad del proyecto y evitar repetir revisiones o tratar decisiones históricas como vigentes.
 - **Autorización:** permiso explícito del usuario en esta conversación del 2026-10-12 para consolidar la documentación y corregir el error de formato.
 - **Resultado:** actualización documental aplicada en `main`. No se modificó código React ni el sitio original HTML/CSS/JavaScript. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-12 03:22:49 -03:00 — Implementación de la Etapa 1 y conservación del plan
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/index.css`, `aconquija-react/index.html`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto en `src/App.jsx`:** se agregó el componente raíz con `BrowserRouter` y las 15 rutas del mapa aprobado. Cada ruta muestra temporalmente el título y un aviso de que el contenido original se migrará en la etapa correspondiente. Las direcciones no incluidas en el mapa muestran una pantalla de página no encontrada. No se crearon páginas turísticas completas ni se agregó la página excluida.
+- **Cambio concreto en `src/index.css`:** se reemplazaron los estilos globales de la plantilla por una base neutral y adaptable, con reglas básicas de caja, tipografía, recursos multimedia y estilos provisionales para las pantallas de estado.
+- **Cambio concreto en `index.html`:** se estableció `lang="es"`, el título `Aconquija Turismo`, una descripción básica y el color de tema. Se conservó la referencia al favicon existente `public/favicon.svg`.
+- **Cambio concreto en `Metodologia.md`:** se actualizó el estado vigente, se anotaron los resultados reales de lint/build previos a la etapa y se incorporó la sección 14 con el plan completo de implementación, etapas, archivos autorizados, criterios de aceptación y pasos para retomar sin repetir trabajo.
+- **Archivos deliberadamente sin cambios:** `src/App.css` permanece vacío por decisión del usuario; no se modificaron `src/main.jsx`, `vite.config.js`, `package.json`, dependencias, imágenes originales ni archivos del sitio HTML/CSS/JavaScript original.
+- **Motivo:** iniciar la implementación por etapas según la metodología aprobada y guardar un plan persistente para mantener continuidad y trazabilidad.
+- **Autorización:** permiso explícito del usuario el 2026-10-12: autorizó la Etapa 1, pidió seguir y respetar la metodología y solicitó guardar el plan de implementación en Aconquija React.
+- **Resultado:** cambios aplicados en la rama `main` del repositorio remoto. Se deben sincronizar en VS Code y ejecutar nuevamente lint/build y la revisión en navegador; esas pruebas posteriores aún no se han ejecutado. El lint previo a la etapa pasó con 0 advertencias y 0 errores; el build previo falló porque `src/App.jsx` estaba vacío. El sitio original no se modificó.
