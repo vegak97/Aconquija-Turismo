@@ -1018,13 +1018,13 @@ Página 15 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 - **Observaciones pendientes:** la imagen principal externa está identificada como ilustrativa; la galería contiene referencias vacías y un recurso local por verificar. No restaurar imágenes ni completar referencias vacías sin autorización. Los datos globales de contacto y redes deben obtenerse de `index.html`.
 
 
-## Anexo W — Mapa consolidado de las 15 páginas para aprobación del usuario (2026-10-11)
+## Anexo W — Mapa consolidado y aprobado de las 15 páginas (2026-10-11)
 
-Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigente. Es el **mapa consolidado presentado para revisión**; todavía no se considera aprobado como conjunto ni autoriza implementar React Router. Los estados individuales reflejan las aprobaciones expresas registradas más abajo/en anexos previos. La ruta inicial de la página principal y las candidatas marcadas pendientes deben confirmarse antes de implementar.
+Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigente. El usuario aprobó expresamente el **mapa completo como conjunto el 2026-10-11**, exactamente como aparece en esta tabla. La aprobación valida el mapa documental, pero no autoriza por sí sola la modificación del código React; la implementación requiere autorización separada.
 
 | N.º | Página / contenido | Archivo original | Ruta propuesta para React | Estado de la ruta |
 |---:|---|---|---|---|
-| 1 | Inicio | `index.html` | `/` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
+| 1 | Inicio | `index.html` | `/` | Aprobada individualmente y como parte del mapa completo |
 | 2 | Aconquija Respira Verde | `html/segundo_nivel/aconquija_respira_verde.html` | `/circuitos/respira-verde` | Aprobada expresamente. Sustituye la candidata inicial `/experiencias/respira-verde` documentada en la revisión temprana; mantener una sola ruta para este archivo |
 | 3 | Cultiva Tradición | `html/segundo_nivel/cultiva_tradicion.html` | `/circuitos/cultiva-tradicion` | Confirmada por el usuario; pendiente aprobación del mapa como conjunto |
 | 4 | Planetario Janaxpacha Huasi | `html/segundo_nivel/noches_estrelladas.html` | `/lugares/planetario-janaxpacha-huasi` | Aprobada expresamente |
@@ -1048,8 +1048,8 @@ Este cuadro reúne una sola vez cada uno de los 15 archivos del inventario vigen
 - Los enlaces a secciones de la página principal, recursos, mapas externos, correo, teléfono, redes y WhatsApp no son páginas adicionales de este mapa.
 - Las referencias de imágenes vacías y los recursos locales dudosos siguen pendientes de verificación; no se restaurarán imágenes eliminadas ni se modificarán originales sin autorización.
 - Las revisiones de contenido fueron estáticas. No se han ejecutado pruebas en navegador ni de acceso directo a rutas React, porque el enrutador aún no se implementó.
-- **Pendiente para aprobación conjunta:** revisar la tabla actualizada y confirmar que se aprueba el mapa completo como conjunto.
-- **Estado:** presentado para revisión del usuario. No se modificó código React ni el sitio original.
+- **Aprobación conjunta:** el usuario confirmó expresamente que aprueba las 15 rutas exactamente como aparecen en la tabla.
+- **Estado:** mapa de rutas aprobado como conjunto el 2026-10-11. La implementación de React Router y cualquier modificación de código siguen pendientes de autorización separada. No se modificó código React ni el sitio original.
 
 
 ## Anexo X — Decisiones del usuario sobre rutas pendientes (2026-10-11)
@@ -1062,3 +1062,12 @@ El usuario confirmó estas decisiones individuales para el mapa de rutas:
 - `html/tercer_nivel/fiesta_bandoneon.html` → `/eventos/fiesta-del-bandoneon`.
 
 Estas decisiones reemplazan las propuestas anteriores para esas páginas. Se registran como rutas elegidas individualmente; el mapa de 15 páginas todavía necesita la aprobación del usuario como conjunto antes de implementar React Router.
+
+
+## Anexo Y — Aprobación conjunta del mapa de rutas (2026-10-11)
+
+- **Decisión expresa del usuario:** «Apruebo el mapa completo de las 15 rutas de Aconquija React exactamente como aparece en la tabla».
+- **Alcance aprobado:** las 15 correspondencias entre páginas originales y rutas React del Anexo W, sin cambios.
+- **Resultado:** el mapa de rutas queda aprobado como conjunto y pasa a ser la referencia acordada para planificar la implementación.
+- **Límite de autorización:** esta aprobación no permite modificar código. Antes de implementar, se presentará un plan concreto con los archivos React que se crearían o modificarían y se solicitará autorización independiente.
+- **Estado del código:** no se modificó ningún archivo de código React ni los originales HTML/CSS/JavaScript; tampoco se implementó ni probó React Router.
