@@ -63,6 +63,57 @@ function SocialLinks({ mobile = false }) {
   )
 }
 
+function WeatherBadge() {
+  const [weather, setWeather] = useState(null)
+
+  useEffect(() => {
+    let cancelled = false
+
+    const loadWeather = async () => {
+      try {
+        const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-27.9&longitude=-65.8&current=temperature_2m,weather_code&timezone=America%2FArgentina%2FCatamarca')
+        if (!response.ok) throw new Error('No se pudo consultar el clima')
+        const data = await response.json()
+        if (!cancelled && data.current) {
+          setWeather({
+            temperature: Math.round(data.current.temperature_2m),
+            code: data.current.weather_code,
+          })
+        }
+      } catch {
+        if (!cancelled) setWeather(null)
+      }
+    }
+
+    loadWeather()
+    const refreshId = window.setInterval(loadWeather, 15 * 60 * 1000)
+
+    return () => {
+      cancelled = true
+      window.clearInterval(refreshId)
+    }
+  }, [])
+
+  const weatherCode = weather?.code
+  let icon = '⛅'
+  if (weatherCode === 0) icon = '☀️'
+  else if ([1, 2].includes(weatherCode)) icon = '🌤️'
+  else if (weatherCode === 3) icon = '☁️'
+  else if ([45, 48].includes(weatherCode)) icon = '🌫️'
+  else if ([51, 53, 55, 56, 57].includes(weatherCode)) icon = '🌦️'
+  else if ([61, 63, 65, 66, 67, 80, 81, 82].includes(weatherCode)) icon = '🌧️'
+  else if ([71, 73, 75, 77, 85, 86].includes(weatherCode)) icon = '🌨️'
+  else if ([95, 96, 99].includes(weatherCode)) icon = '⛈️'
+
+  return (
+    <div className="weather-badge" title="Clima actual en Aconquija, Catamarca" aria-label={`Clima actual en Aconquija: ${weather ? `${weather.temperature} grados` : 'sin datos'}`}>
+      <span className="weather-icon" aria-hidden="true">{icon}</span>
+      <span className="weather-temp">{weather ? `${weather.temperature}°` : '—°'}</span>
+      <span className="weather-location">Aconquija</span>
+    </div>
+  )
+}
+
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -96,6 +147,7 @@ function Header() {
           <SocialLinks mobile />
         </nav>
         <div className="nav-actions">
+          <WeatherBadge />
           <SocialLinks />
           <button className="icon-circle menu-trigger" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7" /><line x1="4" y1="12" x2="20" y2="12" /><line x1="4" y1="17" x2="20" y2="17" /></svg>
