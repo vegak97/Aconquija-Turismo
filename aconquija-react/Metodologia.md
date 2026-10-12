@@ -1262,3 +1262,11 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Cambio concreto:** el título «Explorá Aconquija a tu manera» y su párrafo descriptivo pasan a `#ffffff` mediante el selector `#explorar .section-head h2, #explorar .section-head p`.
 - **Motivo y autorización:** el usuario aclaró que quería los dos textos blancos, no dorados, y autorizó cambiarlo directamente para probar.
 - **Límites:** se conserva el fondo `#1c222c`; no se modifican tarjetas ni otras secciones. La comprobación visual queda a cargo del usuario; no se ejecutaron lint, build ni pruebas de navegador.
+
+## Rótulos de sección en dorado arena — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** los cinco rótulos pequeños «Qué hacer», «Recorridos», «Cuándo venir», «Servicios» y «Sobre Aconquija» usan `var(--sand)` (`#cdaa78`). Los selectores están limitados a esos rótulos de la página de inicio.
+- **Alcance preservado:** no se cambian los títulos grandes, las descripciones, los fondos, las tarjetas, los botones, la navegación ni otras secciones. El texto principal y la descripción de Explorar permanecen blancos.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Validación:** selector comprobado estáticamente en el CSS guardado en GitHub. La comprobación visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
