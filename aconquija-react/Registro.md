@@ -400,3 +400,18 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** iniciar la implementación por etapas según la metodología aprobada y guardar un plan persistente para mantener continuidad y trazabilidad.
 - **Autorización:** permiso explícito del usuario el 2026-10-12: autorizó la Etapa 1, pidió seguir y respetar la metodología y solicitó guardar el plan de implementación en Aconquija React.
 - **Resultado:** cambios aplicados en la rama `main` del repositorio remoto. Se deben sincronizar en VS Code y ejecutar nuevamente lint/build y la revisión en navegador; esas pruebas posteriores aún no se han ejecutado. El lint previo a la etapa pasó con 0 advertencias y 0 errores; el build previo falló porque `src/App.jsx` estaba vacío. El sitio original no se modificó.
+
+
+## 2026-10-12 — Migración inicial de la página principal a React
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/src/index.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio en `src/App.jsx`:** se reemplazó la pantalla provisional de Inicio por la estructura del `index.html` original: encabezado y navegación, hero, presentación, tarjetas de circuitos, carrusel horizontal de lugares, pestañas de estaciones, servicios, sección final y pie de página. Las 14 rutas secundarias mantienen sus pantallas provisionales.
+- **Interacciones adaptadas:** menú móvil y cierre con Escape, cierre por superposición, progreso de lectura, cambio del encabezado al desplazarse, animaciones de aparición y selección de estaciones.
+- **Cambio en `src/App.css`:** se trasladaron las reglas de `css/style.css` a la aplicación React y se ajustaron las rutas de imágenes relativas a la nueva ubicación del CSS.
+- **Cambio en `src/index.css`:** se alineó la base global con la paleta y tipografía originales y se agregaron reglas de apoyo para los controles React.
+- **Recursos:** las imágenes se importan desde sus rutas existentes en el repositorio; no se movieron, editaron ni sustituyeron los archivos originales.
+- **Contenido conservado:** los títulos y textos vacíos de las cuatro tarjetas de circuitos siguen vacíos, tal como están en el `index.html` original; no se inventó contenido.
+- **Motivo:** el usuario autorizó expresamente migrar la página principal original a React y conservar el diseño y los recursos existentes.
+- **Autorización:** autorización explícita del usuario el 2026-10-12 para iniciar esta etapa y modificar inicialmente los cinco archivos indicados.
+- **Límites respetados:** no se modificó el sitio original fuera de `aconquija-react/`; no se cambiaron `src/main.jsx`, `vite.config.js`, `package.json`, dependencias ni configuración de publicación; no se crearon archivos nuevos ni se movieron recursos.
+- **Resultado:** cambios aplicados a la rama remota `main`. La inspección remota del contenido confirma que se incorporó la estructura principal y se importó la hoja de estilos; todavía no se ejecutaron lint, build ni pruebas de navegador después de estos cambios. La etapa no se declara validada hasta revisar los resultados reales en el entorno local.
