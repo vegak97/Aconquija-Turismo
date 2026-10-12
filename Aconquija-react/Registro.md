@@ -281,3 +281,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** continuar la revisión secuencial de las 15 páginas y mantener documentados los hallazgos útiles para el mapa de rutas.
 - **Autorización:** solicitud directa del usuario de continuar paso a paso con la revisión y documentación, respetando `Aconquija-react/agents.md` y sin tocar código antes de aprobar el mapa definitivo.
 - **Resultado:** documentación actualizada; la ruta de esta página queda pendiente de aprobación. No se modificó código React ni el sitio HTML/CSS/JavaScript original y no se ejecutaron pruebas de navegador.
+
+
+## 2026-10-11 21:08 -03:00 — Aprobación de ruta de Túneles del Río Potrero
+- **Archivos afectados:** `Aconquija-react/Metodologia.md` y `Aconquija-react/Registro.md`.
+- **Cambio concreto:** se registró la aprobación de `/lugares/tuneles-del-rio-potrero` para `html/tercer_nivel/tuneles_rio_potrero.html`.
+- **Motivo:** continuar el mapa de rutas por categoría de Aconquija React.
+- **Autorización:** petición directa del usuario, que aprobó expresamente la ruta y solicitó registrar la aprobación en ambos documentos.
+- **Resultado:** ruta registrada como aprobada. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la implementación sigue pendiente de la aprobación del mapa definitivo.
