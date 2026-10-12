@@ -537,3 +537,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Límites respetados:** se conserva el oscurecimiento de la imagen, el recorte, el contenido y la estructura de la sección; no se modificó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** el archivo `imagenes/caballo.webp` existe en el repositorio y la referencia quedó conectada en el código remoto. No se ejecutaron lint, build ni pruebas de navegador; falta comprobar el resultado visual local.
+
+
+## 2026-10-12 — Título blanco en Sobre Aconquija
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió una regla CSS específica para mostrar en blanco (`#ffffff`) el título «Un pueblo, una sierra, un mismo ritmo.» dentro de `#sobre .cta-content h2`.
+- **Motivo:** mejorar el contraste del título sobre la imagen de caballo que funciona como fondo de la sección.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Límites respetados:** no se modifican el rótulo dorado «Sobre Aconquija», el párrafo, el botón, la imagen de fondo ni otras secciones.
+- **Resultado:** cambio aplicado y documentado en `main`. No se ejecutaron lint, build ni pruebas de navegador; falta comprobar el aspecto visual local.
