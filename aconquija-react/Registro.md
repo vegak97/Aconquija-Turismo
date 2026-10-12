@@ -424,3 +424,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** reducir el riesgo de advertencias del linter y mantener una limpieza clara del observador al desmontar la página.
 - **Autorización:** ajuste técnico interno incluido en la autorización de migrar Inicio y adaptar sus interacciones; no se amplió el alcance ni se modificaron archivos adicionales.
 - **Resultado:** cambio aplicado en la rama remota `main`. La comprobación estática remota confirma que la inicialización quedó explícita; el lint, el build y las pruebas de navegador siguen pendientes.
+
+
+## 2026-10-12 — Corrección de la imagen de fondo del hero
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Diagnóstico:** se verificó que `imagenes/fondo(1).webp` existe en el repositorio; la regla CSS anterior referenciaba el archivo con paréntesis escapados.
+- **Cambio:** el recurso se importa explícitamente en `App.jsx` y se asigna a `backgroundImage` del elemento `.hero-bg`; se reemplazó la referencia de imagen de CSS por un color de respaldo.
+- **Motivo y autorización:** el usuario pidió pulir la página de Inicio y señaló que no veía el fondo esperado. La corrección se limita a la imagen del hero y está dentro de la etapa autorizada.
+- **Resultado:** actualización aplicada en la rama remota `main`. La inspección del contenido confirma la importación explícita y que se eliminó la referencia CSS anterior. Falta comprobar el resultado visual en el navegador local; no se declara aún validado.
