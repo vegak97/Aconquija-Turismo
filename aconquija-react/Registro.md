@@ -517,3 +517,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización explícita del usuario el 2026-10-12.
 - **Límites respetados:** no se cambiaron títulos grandes, párrafos, fondos, tarjetas, botones, navegación ni el sitio original fuera de `aconquija-react/`. El título y el párrafo de Explorar siguen blancos.
 - **Resultado:** los tres archivos se actualizaron en la rama `main`. La comprobación visual queda pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12 — Refuerzo de prioridad del dorado arena en cinco rótulos
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se reforzó el selector de los cinco rótulos («Qué hacer», «Recorridos», «Cuándo venir», «Servicios» y «Sobre Aconquija») con el color explícito `#cdaa78 !important` para evitar que reglas generales de color lo sobrescriban.
+- **Motivo:** el usuario indicó que el resultado de color anterior no se veía correcto y pidió volver a intentarlo.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo los cinco rótulos pequeños; títulos grandes, descripciones, fondos, tarjetas, botones, navegación y el sitio original permanecen sin cambios.
+- **Resultado:** cambio aplicado y documentado en `main`. La revisión visual sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
