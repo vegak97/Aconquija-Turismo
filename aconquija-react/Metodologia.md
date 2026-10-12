@@ -1478,3 +1478,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** mejorar la legibilidad del dato de temperatura, como pidió el usuario.
 - **Alcance:** solo el texto de temperatura del indicador climático; no se cambian el icono, el nombre del lugar, la consulta meteorológica ni otras partes de la navegación.
 - **Validación:** revisión estática del cambio. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## Separadores verticales negros en Servicios — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se añadieron líneas verticales negras de 1 px entre las cuatro tarjetas de Servicios. En anchos de tablet se conserva la separación entre las dos columnas; en móvil angosto, donde las tarjetas se apilan, se ocultan los separadores verticales para evitar líneas aisladas.
+- **Motivo:** separar visualmente «Dónde dormir», «Dónde comer», «Guías y excursiones» y «Artesanías» con una línea negra.
+- **Alcance:** solo la presentación de las tarjetas de Servicios en React; no se modifican textos, enlaces ni el sitio original.
+- **Validación:** revisión estática del CSS. No se ejecutaron build, lint ni pruebas de navegador.
