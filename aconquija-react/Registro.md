@@ -606,3 +606,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa y confirmación explícita del usuario el 2026-10-12.
 - **Alcance:** la lógica de desplazamiento ya existía en `src/App.jsx` y se conservó; no se cambiaron enlaces, estructura de navegación ni el sitio original.
 - **Resultado:** CSS y documentación guardados en `main`. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual y de fluidez queda pendiente.
+
+
+## 2026-10-12T18:48:08-03:00 — Textos blancos en Estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el título «Aconquija cambia con cada estación» y la descripción «Cada momento del año tiene su propia versión. Elegí la que te llama.» pasan a blanco puro (`#ffffff`). Se identificó exclusivamente el título de verano «Días largos» mediante una clase CSS para aplicarle el mismo color.
+- **Motivo:** mejorar la legibilidad de los tres textos señalados en la sección Estaciones.
+- **Autorización:** confirmación explícita del usuario el 2026-10-12.
+- **Alcance respetado:** no se cambiaron el fondo, las pestañas, las imágenes, los demás títulos de temporada ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** actualizaciones enviadas a la rama `main`. No se ejecutaron lint, build ni pruebas de navegador; la comprobación visual local queda pendiente.
