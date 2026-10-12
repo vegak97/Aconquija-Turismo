@@ -954,3 +954,25 @@ Página 13 de 15 revisada estáticamente. Se documentaron el contenido, la ruta 
 - **Ruta aprobada expresamente por el usuario:** `/lugares/rio-potrero`.
 - **Alcance:** se aprueba la ruta para el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación continúa pendiente de aprobación del mapa completo.
 - **Observaciones pendientes:** las imágenes del hero y la galería contienen referencias vacías; no completarlas por suposición ni restaurar ilustraciones eliminadas. Los datos globales de contacto y redes deben obtenerse de `index.html`.
+
+
+## Anexo U — Página 14 de 15: Yunka Suma
+
+**Archivo revisado:** `html/tercer_nivel/yunka_suma.html`. Revisión estática del HTML en la rama `main`; no se ejecutó en navegador ni se verificó físicamente la existencia de recursos locales.
+
+### Hallazgos para el mapa de rutas
+
+- **Título y contenido principal:** título “Yunka Suma — Aconquija Turismo” y H1 “Yunka Suma”. Presenta la localidad como un refugio de montaña y última parada de Aconquija antes de cruzar hacia Tucumán por la Cuesta del Clavillo. Describe su ubicación a unos 1.470 msnm, los bosques nublados de aliso de cerro, el Río Las Chacras, opciones de alojamiento y el acceso desde Catamarca y Tucumán.
+- **Ruta React candidata:** `/lugares/yunka-suma`. Propuesta provisional, pendiente de aprobación expresa del usuario y de la revisión del mapa completo. No se implementó.
+- **Relaciones con el inventario:** la página puede relacionarse con el circuito Respira Verde y con otros destinos naturales de la zona. No se detectaron enlaces directos en el cuerpo a archivos de otras páginas del inventario; los enlaces principales son anclas a la página de inicio y búsquedas de Google Maps.
+- **Imágenes:** las cuatro imágenes de galería tienen `src=""`; la primera está identificada como ilustrativa y el pie dice que el resto corresponde al entorno local. El lightbox contiene también una imagen con fuente vacía. Según el criterio confirmado por el usuario, no restaurar ilustraciones externas ni rellenar referencias vacías por iniciativa propia. En React no renderizar imágenes con `src=""`; tratarlas como opcionales según el diseño aprobado.
+- **Ubicación y mapas:** los enlaces “Ver en el mapa” y “Cómo llegar” abren Google Maps con la búsqueda `Yunka Suma Aconquija Catamarca`; son destinos externos, no rutas internas.
+- **Alojamiento y datos variables:** el texto menciona el Complejo Valle Hermoso y cabañas provinciales en comodato con el municipio, equipadas para grupos de hasta ocho personas. No dar por actuales disponibilidad, condiciones ni capacidad comercial sin verificación posterior.
+- **Acceso:** el contenido describe la Ruta Provincial N.º 1 y un tramo de camino de tierra desde Singuil, además del acceso por la Cuesta del Clavillo desde Tucumán. Es descripción editorial del HTML, no una confirmación en tiempo real del estado de los caminos.
+- **Contacto y redes:** se aplicará el criterio transversal: obtener los datos globales de contacto y perfiles sociales desde `index.html`; no copiar datos locales como fuente de verdad.
+- **Recursos compartidos:** CSS `../../css/style.css`, icono `../../imagenes/aconquija_icono.png`, logos `../../imagenes/logo_aconquija(1).png` y `../../imagenes/logo_aconquija(2).png`, JavaScript `../../js/scrip.js`. Verificar que existan y que las rutas sean correctas antes de migrar, sin alterar los originales.
+- **Estructura e interacciones:** la página contiene navegación adaptable, barra de progreso, galería/lightbox y controles de compartir/copiar enlace. Las interacciones no se probaron en navegador. Las afirmaciones superlativas sobre alojamiento se conservan como texto original, no como información verificada.
+
+### Estado de esta revisión
+
+Página 14 de 15 revisada estáticamente. Se documentaron contenido, ruta candidata, referencias de imágenes vacías, enlaces de mapas, descripción de acceso/alojamiento y recursos compartidos. No se modificó código React ni el sitio HTML/CSS/JavaScript original; la ruta no se implementó y las interacciones no se probaron en navegador.
