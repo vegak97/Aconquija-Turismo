@@ -473,3 +473,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Límites:** no se modificaron contenido, imágenes, enlaces, estructura JSX ni el sitio original.
 - **Validación:** pendiente en navegador local; no se ejecutaron lint, build ni pruebas de navegador.
+
+
+### 2026-10-12T16:51:13 -03:00
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio:** se modificó únicamente el fondo de `.explorar` de `var(--night)` a `#1c222c`, el mismo color usado por `.estaciones`; se documentó el ajuste en la metodología y en este registro.
+- **Motivo:** igualar el fondo de «Explorá Aconquija a tu manera» al de «Estaciones / Climas», sin alterar el resto del diseño.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Resultado:** cambios aplicados en la rama `main` y confirmados por la respuesta de GitHub. La comprobación es estática; no se ejecutaron lint, build ni pruebas de navegador.
