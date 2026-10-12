@@ -741,3 +741,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo la cifra de temperatura; se conservaron el icono, el nombre Aconquija, la consulta del clima y el resto del diseño. No se modificó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente comprobarlo visualmente en el navegador local.
+
+
+## 2026-10-12 — Líneas negras verticales entre los servicios
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se agregaron bordes verticales negros de 1 px entre las tarjetas de Servicios. En escritorio separan las cuatro columnas; en tablet separan las dos columnas; en móvil angosto se quitan al apilar las tarjetas en una sola columna.
+- **Motivo:** petición directa del usuario para separar visualmente los cuatro servicios con líneas negras verticales.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo estilos de la sección Servicios en `aconquija-react/`; no se cambiaron contenido ni enlaces, y no se modificó el sitio original.
+- **Resultado:** CSS y documentación guardados en la rama `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente verificar el aspecto visual local.
