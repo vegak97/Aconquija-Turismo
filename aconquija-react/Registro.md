@@ -702,3 +702,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario dio permiso explícito para afinar y acercar la línea, sin cambiar el comportamiento ni el contenido de Estaciones.
 - **Alcance respetado:** no se cambió la lógica React de `activeSeason`, los textos, las imágenes ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** los cambios CSS y la documentación quedaron guardados en `main`. Revisión estática realizada; no se ejecutaron lint, build ni pruebas de navegador. La comprobación visual local queda pendiente.
+
+
+## 2026-10-12T19:50:00-03:00 — Corrección de visibilidad del subrayado dorado en Estaciones
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se eleva la pestaña activa en el orden de apilamiento y se asigna prioridad superior al pseudo-elemento del subrayado; el tramo dorado pasa de 1 px a 2 px para destacar sobre la línea base translúcida de 0,5 px.
+- **Motivo:** el usuario reportó que el subrayado dorado arena no funcionaba y autorizó corregirlo.
+- **Alcance respetado:** no se modificó el estado React `activeSeason`, las imágenes, los textos ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** CSS y metodología actualizados en `main`. Revisión estática realizada; no se ejecutaron lint, build ni pruebas de navegador. La verificación visual local queda pendiente.
