@@ -576,3 +576,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** permiso explícito del usuario el 2026-10-12.
 - **Alcance respetado:** reglas limitadas al footer de React; no se modificaron otras secciones ni el sitio original.
 - **Resultado:** CSS, metodología y registro actualizados en `main`. Se verificaron los contenidos guardados en GitHub; la revisión visual en navegador sigue pendiente y no se ejecutaron lint, build ni pruebas de navegador.
+
+
+## 2026-10-12T17:52:00-03:00 — Encabezados del footer en dorado arena
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** los encabezados «Explorar», «Servicios» y «Contacto» en las tres columnas del footer pasan a dorado arena `#cdaa78`. Los demás textos permanecen blancos y el fondo pizarra oscuro se conserva.
+- **Motivo:** aplicar el color dorado arena solicitado a esos tres encabezados para diferenciarlos del resto del contenido.
+- **Autorización:** permiso explícito del usuario el 2026-10-12.
+- **Alcance respetado:** solo encabezados de columnas del pie de página React; no se alteran enlaces ni otras secciones, y no se modifica el sitio original.
+- **Resultado:** CSS, metodología y registro guardados en `main`. La revisión visual en navegador sigue pendiente; no se ejecutaron lint, build ni pruebas de navegador.
