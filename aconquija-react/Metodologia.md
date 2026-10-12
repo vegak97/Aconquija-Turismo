@@ -1237,3 +1237,11 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo el fondo de «Explorá Aconquija a tu manera». No se modificaron tarjetas, imágenes, textos, enlaces, otras secciones ni el sitio original.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Validación pendiente:** se verificó estáticamente el valor CSS guardado en GitHub; no se ejecutaron lint, build ni pruebas de navegador.
+
+## Color dorado del título y la descripción de Explorar — 2026-10-12
+
+- **Archivo de estilos afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se agregó una regla específica para que el título «Explorá Aconquija a tu manera» y la descripción «Recorré Aconquija a través de nuestros circuitos turísticos, diseñados para que vivas una experiencia inolvidable» usen `var(--sand)`, el tono dorado de la paleta del proyecto.
+- **Alcance:** únicamente el color de esos dos textos dentro de `.explorar`. El fondo `#1c222c`, las tarjetas, imágenes, márgenes, estructura y demás secciones permanecen sin cambios.
+- **Autorización:** el usuario autorizó expresamente este ajuste el 2026-10-12.
+- **Validación pendiente:** la comprobación visual queda a cargo del usuario. No se ejecutaron lint, build ni pruebas de navegador.
