@@ -82,6 +82,27 @@ nav.links a::after {
 }
 nav.links a:hover::after { width: 100%; }
 
+/* Contraste de la navegación principal */
+header.nav nav.links > a:not(.icon-circle),
+header.nav nav.links > a:not(.icon-circle):visited,
+header.nav nav.links > a:not(.icon-circle):hover,
+header.nav nav.links > a:not(.icon-circle):focus-visible,
+header.nav nav.links > a:not(.icon-circle):active {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+header.nav .nav-icons .icon-circle,
+header.nav .nav-mobile-social .icon-circle {
+  color: #fff;
+}
+
+header.nav .nav-icons .icon-circle svg,
+header.nav .nav-mobile-social .icon-circle svg {
+  color: inherit;
+}
+
 /* Pill "Sobre Aconquija" */
 .pill {
   border: 1px solid rgba(255,255,255,.5); padding: 10px 22px; border-radius: 30px;
