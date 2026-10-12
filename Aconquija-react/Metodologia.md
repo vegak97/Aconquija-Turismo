@@ -1007,3 +1007,12 @@ Página 14 de 15 revisada estáticamente. Se documentaron contenido, ruta candid
 ### Estado de esta revisión
 
 Página 15 de 15 revisada estáticamente. Se documentaron el contenido, la ruta candidata, la relación con Cristo Redentor, las referencias de imágenes y los enlaces externos. La ruta queda pendiente de aprobación; no se modificó código React ni el sitio HTML/CSS/JavaScript original.
+
+
+## Aprobación de ruta — Página 15: Virgen del Valle de Aconquija
+
+- **Fecha de aprobación:** 2026-10-11.
+- **Archivo original:** `html/tercer_nivel/virgen_del_valle.html`.
+- **Ruta aprobada expresamente por el usuario:** `/lugares/virgen-del-valle`.
+- **Alcance:** ruta aprobada para incluirla en el mapa definitivo; no se autoriza implementar rutas ni modificar código React. La implementación sigue pendiente de aprobación del mapa definitivo de las 15 páginas.
+- **Observaciones pendientes:** la imagen principal externa está identificada como ilustrativa; la galería contiene referencias vacías y un recurso local por verificar. No restaurar imágenes ni completar referencias vacías sin autorización. Los datos globales de contacto y redes deben obtenerse de `index.html`.
