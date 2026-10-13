@@ -81,9 +81,28 @@ nav.links a {
 }
 nav.links a::after {
   content: ''; position: absolute; left: 0; bottom: 0;
-  height: 1px; width: 0; background: var(--sand); transition: width .35s ease;
+  height: 1px; width: 100%; background: #cdaa78;
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform .2s var(--motion-soft);
 }
-nav.links a:hover::after { width: 100%; }
+@keyframes navUnderlineGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+/* En escritorio la línea solo aparece al apuntar o enfocar un enlace. */
+@media (hover: hover) and (pointer: fine) {
+  nav.links > a[href^="#"]:hover::after,
+  nav.links > a[href^="#"]:focus-visible::after {
+    animation: navUnderlineGrow 1.45s linear forwards;
+  }
+}
+/* En el menú táctil, la línea indica la sección actual y permanece visible. */
+@media (max-width: 880px) {
+  nav.links > a[href^="#"].is-active::after {
+    transform: scaleX(1);
+    transition: transform .25s var(--motion-soft);
+  }
+}
 
 /* Contraste de la navegación principal */
 header.nav nav.links > a:not(.icon-circle),
@@ -1146,11 +1165,7 @@ nav.links a,
   transition-timing-function: var(--motion-soft);
 }
 
-/* Subrayado del menú: crecimiento fluido */
-nav.links a::after {
-  transform-origin: left center;
-  transition: width .42s var(--motion-soft);
-}
+/* El subrayado del menú usa el crecimiento temporizado definido junto a la navegación. */
 
 /* Botones e iconos responden con un movimiento mínimo */
 .icon-circle:hover {
