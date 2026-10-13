@@ -121,7 +121,12 @@ header.nav .nav-mobile-social .icon-circle svg {
   color: var(--white); white-space: nowrap;
   font-size: .78rem; line-height: 1;
 }
-.weather-icon { font-size: 1rem; }
+.weather-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 25px; height: 25px; flex: 0 0 25px;
+  color: #f2c66d;
+}
+.weather-icon svg { display: block; width: 25px; height: 25px; }
 .weather-temp { color: #ffffff !important; font-weight: 600; letter-spacing: .2px; }
 .weather-location {
   color: rgba(255,255,255,.78); font-size: .68rem;
