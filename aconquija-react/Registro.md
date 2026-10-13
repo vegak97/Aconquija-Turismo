@@ -829,3 +829,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** corregir el descentrado y la media imagen visible, y asegurar que el avance automático sea más perceptible también en teléfonos.
 - **Autorización:** petición directa del usuario el 2026-10-13.
 - **Resultado:** archivos actualizados en la rama `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13T19:00:00-03:00 — Corrección del bucle infinito para evitar bloqueos al deslizar
+
+- **Archivo afectado:** `aconquija-react/src/App.jsx`; documentación actualizada en `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se corrigieron los límites que reajustan el scroll entre las copias del carrusel. Antes, al retroceder apenas desde el punto inicial, el evento de scroll podía sumar todo el ancho del bucle repetidamente, interrumpiendo el gesto táctil. Ahora el salto solo sucede cerca de los extremos de la secuencia central.
+- **Movimiento automático:** se conserva el avance automático hacia la derecha, la pausa breve al interactuar y la preferencia de reducir movimiento del sistema.
+- **Motivo:** el usuario informó que el carrusel no avanzaba automáticamente como esperaba y se trababa al deslizar en teléfono.
+- **Autorización:** reporte directo del usuario el 2026-10-13.
+- **Resultado:** cambios guardados en `main`; revisión estática realizada. No se ejecutaron build, lint ni pruebas de navegador.
