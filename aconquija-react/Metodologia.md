@@ -1505,3 +1505,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo la aplicación React dentro de `aconquija-react/`; no se modifican el sitio original, los colores, las imágenes, el contenido ni la estructura.
 - **Carga de fuentes:** Google Fonts mediante el import existente en `src/App.css`.
 - **Verificación pendiente:** revisar en el navegador local el aspecto y la carga de las fuentes; no se declara ejecutado lint, build ni pruebas visuales.
+
+## Detalles cálidos y microinteracciones — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se añadieron pequeños subrayados dorados a rótulos de sección, respuestas más cálidas en tarjetas e iconos, un matiz de color al pasar sobre títulos de lugares y entradas escalonadas suaves para estadísticas, tarjetas de explorar y servicios.
+- **Motivo:** aportar movimiento y calidez sin recargar la interfaz ni cambiar el contenido.
+- **Límites:** no se modificaron imágenes, textos, colores base, estructura JSX ni el sitio original. Se conservó la preferencia de accesibilidad para reducir movimiento.
+- **Tipografía:** Playfair Display para títulos y Montserrat para textos.
+- **Validación:** revisión estática del CSS; queda pendiente comprobar el resultado en navegador. No se ejecutaron build, lint ni pruebas de navegador.
