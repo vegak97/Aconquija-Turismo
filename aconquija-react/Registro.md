@@ -881,3 +881,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** el hover de las tarjetas no centrales queda separado y la tarjeta `.is-center` conserva su transformación de elevación incluso al estar bajo el puntero.
 - **Motivo y autorización:** el usuario reportó un rebote al pasar por Bosque de Alisos el 2026-10-13.
 - **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-13 — Estabilizar la tarjeta central y añadir sombreado al carrusel
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Problema:** la detección de la tarjeta central usaba `getBoundingClientRect()`, que incluye la escala y elevación visual. Al cambiar la transformación durante el desplazamiento, la tarjeta podía alternar de centro y dar un efecto de trabado/rebote.
+- **Cambio concreto:** la detección del centro ahora usa `offsetLeft` y `offsetWidth` junto con el desplazamiento del contenedor, medidas que no cambian por las transformaciones visuales. Se añadió una sombra suave a las imágenes y una sombra algo más marcada a la tarjeta central.
+- **Motivo y autorización:** el usuario pidió corregir el rebote y añadir sombreado el 2026-10-13; indicó que no era necesario actualizar `Metodologia.md` para este tipo de ajuste.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
