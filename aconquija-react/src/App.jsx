@@ -308,7 +308,7 @@ function HomePage() {
 
     let lastCenterUpdate = 0
     const animate = (timestamp) => {
-      if (!placePausedRef.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      if (!placePausedRef.current) {
         track.scrollLeft += 0.6
       }
 
