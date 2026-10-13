@@ -1003,3 +1003,92 @@ footer .foot-bottom {
 footer .foot-social .icon-circle {
   color: #cdaa78 !important;
 }
+
+/* ══════════════════════════════════════════════
+   MOVIMIENTO SUTIL — sensación natural y cálida
+   Se conservan las tipografías existentes:
+   Fraunces para títulos y Work Sans para texto.
+══════════════════════════════════════════════ */
+:root {
+  --motion-soft: cubic-bezier(.22,.7,.22,1);
+}
+
+/* Transiciones consistentes en elementos interactivos */
+nav.links a,
+.icon-circle,
+.pill,
+.btn-primary,
+.est-tab,
+.serv-item,
+.place-card h3 {
+  transition-timing-function: var(--motion-soft);
+}
+
+/* Subrayado del menú: crecimiento fluido */
+nav.links a::after {
+  transform-origin: left center;
+  transition: width .42s var(--motion-soft);
+}
+
+/* Botones e iconos responden con un movimiento mínimo */
+.icon-circle:hover {
+  transform: translateY(-2px);
+}
+.btn-primary,
+#sobre .cta-content a.btn-primary {
+  transition: transform .35s var(--motion-soft), background-color .35s ease,
+    border-color .35s ease, color .35s ease, box-shadow .35s ease;
+}
+.btn-primary:hover,
+#sobre .cta-content a.btn-primary:hover {
+  box-shadow: 0 8px 22px rgba(22,27,34,.14);
+}
+
+/* Tarjetas: elevación discreta, sin cambiar sus imágenes */
+.exp-card,
+.place-card,
+.serv-item,
+.rel-card {
+  transition: transform .5s var(--motion-soft), box-shadow .5s var(--motion-soft),
+    background-color .35s ease;
+}
+.exp-card:hover,
+.place-card:hover,
+.rel-card:hover {
+  transform: translateY(-3px);
+}
+.serv-item:hover {
+  box-shadow: inset 0 0 0 1px rgba(205,170,120,.22);
+}
+
+/* Los encabezados y las secciones reveladas llegan con suavidad */
+.reveal {
+  transform: translateY(22px);
+  transition: opacity .8s var(--motion-soft), transform .8s var(--motion-soft);
+}
+.section-head h2 {
+  text-wrap: balance;
+}
+
+/* Línea decorativa del hero: aparición sutil */
+.hero-divider {
+  transform-origin: top center;
+  animation: dividerAppear 1s .85s var(--motion-soft) both;
+}
+@keyframes dividerAppear {
+  from { opacity: 0; transform: scaleY(.45); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+
+/* Reduce el movimiento cuando el visitante lo solicita en su sistema */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}

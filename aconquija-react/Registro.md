@@ -751,3 +751,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo estilos de la sección Servicios en `aconquija-react/`; no se cambiaron contenido ni enlaces, y no se modificó el sitio original.
 - **Resultado:** CSS y documentación guardados en la rama `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente verificar el aspecto visual local.
+
+## 2026-10-12 — Animaciones sutiles y tipografía
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadieron transiciones más fluidas al menú y a elementos interactivos, elevación mínima al pasar el mouse por tarjetas, una animación breve del separador del hero y soporte para la preferencia del sistema de reducir movimiento. Se conservaron Fraunces para títulos y Work Sans para textos, las familias ya definidas en el CSS.
+- **Motivo:** petición directa del usuario para que el sitio se sienta vivo, cálido y natural sin modificar las imágenes ni recargar el diseño; también pidió volver a la tipografía anterior.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** únicamente CSS y documentación dentro de `aconquija-react/`. No se cambiaron imágenes, textos, estructura ni el sitio original.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente comprobar el aspecto visual en el navegador local.
