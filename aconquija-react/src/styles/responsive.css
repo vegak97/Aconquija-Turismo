@@ -295,6 +295,14 @@ nav.links a,
 
 /* Reduce el movimiento cuando el visitante lo solicita en su sistema */
 @media (prefers-reduced-motion: reduce) {
+  header.nav.nav-intro,
+  .hero-bg,
+  .hero-content,
+  .hero-divider,
+  .scroll-cue {
+    animation-delay: 0s !important;
+  }
+
   html { scroll-behavior: auto; }
   *,
   *::before,
