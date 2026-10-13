@@ -328,7 +328,7 @@ function HomePage() {
           if (step > 0) track.scrollBy({ left: step, behavior: 'smooth' })
         }
         scheduleNextCard()
-      }, 3800)
+      }, 2500)
     }
 
     positionAtMiddleSet()
