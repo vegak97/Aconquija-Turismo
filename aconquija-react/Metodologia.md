@@ -1576,3 +1576,7 @@ El avance automático no debe depender de `prefers-reduced-motion`, ya que esa c
 ### Carrusel de Lugares: avance por tarjeta con pausa
 
 El carrusel debe avanzar una tarjeta por vez mediante `scrollBy({ behavior: 'smooth' })`, usando la misma distancia que el botón «siguiente». Entre avances espera 3,8 segundos para dejar tiempo de observar el contenido. La interacción manual pausa temporalmente el avance automático; el bucle infinito y el scroll táctil se mantienen.
+
+
+### Ajuste del intervalo del carrusel de Lugares
+El avance automático desplaza una tarjeta por vez hacia la derecha y espera 2,5 segundos entre avances, manteniendo la transición suave, el bucle infinito y la pausa temporal durante la interacción manual.
