@@ -1496,3 +1496,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** dar al sitio una sensación más viva y natural sin recargar el diseño.
 - **Alcance:** solo CSS dentro de `aconquija-react/`; no se modificó el sitio original ni se añadieron dependencias.
 - **Validación:** revisión estática del CSS guardado. No se ejecutaron build, lint ni pruebas de navegador.
+
+## Tipografía de la interfaz React — Playfair Display + Montserrat
+
+- **Fecha:** 2026-10-12.
+- **Criterio:** usar Playfair Display en títulos y elementos que heredan `--ff-display`, y Montserrat como tipografía de lectura e interfaz mediante `--ff-body` y la fuente base de `index.css`.
+- **Motivo:** dar más personalidad editorial a los títulos y una lectura moderna y uniforme a navegación, párrafos, controles y textos de tarjetas.
+- **Alcance:** solo la aplicación React dentro de `aconquija-react/`; no se modifican el sitio original, los colores, las imágenes, el contenido ni la estructura.
+- **Carga de fuentes:** Google Fonts mediante el import existente en `src/App.css`.
+- **Verificación pendiente:** revisar en el navegador local el aspecto y la carga de las fuentes; no se declara ejecutado lint, build ni pruebas visuales.
