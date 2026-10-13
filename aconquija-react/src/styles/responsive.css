@@ -166,9 +166,6 @@
 }
 
 
-
-
-
 /* Estaciones: encabezado más limpio solo en teléfonos */
 @media (max-width: 600px) {
   #estaciones .section-head p {
@@ -207,7 +204,6 @@
   color: #161b22 !important;
   transform: translateY(-2px);
 }
-
 
 
 /* Footer en pizarra oscuro con todos sus textos en blanco */
@@ -339,7 +335,6 @@ nav.links a,
 }
 
 
-
 /* ══════════════════════════════════════════════
    DETALLES CÁLIDOS — movimiento natural y microinteracciones
 ══════════════════════════════════════════════ */
@@ -465,11 +460,3 @@ nav.links a,
 /* Respeta la preferencia de movimiento reducido definida por el visitante */
 
 
-
-
-/* El mapa interactivo se reserva para escritorio en esta primera versión. */
-@media (max-width: 1024px) {
-  .intro-map-layout { display: block; }
-  .intro-copy { max-width: 780px; margin: 0 auto; }
-  .intro-map-column { display: none; }
-}
