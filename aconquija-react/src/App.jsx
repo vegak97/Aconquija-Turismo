@@ -230,7 +230,10 @@ function HomePage() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('in')
-            if (observer) observer.unobserve(entry.target)
+            // Servicios vuelve a animarse cada vez que entra en la zona visible.
+            if (observer && !entry.target.closest('.servicios')) observer.unobserve(entry.target)
+          } else if (entry.target.closest('.servicios')) {
+            entry.target.classList.remove('in')
           }
         })
       }, { threshold: 0.12 })
