@@ -1544,3 +1544,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Accesibilidad:** se respeta `prefers-reduced-motion`; cuando el sistema solicita reducir movimiento, el avance automático se desactiva. Se mantienen las flechas de escritorio y el desplazamiento manual con tacto o panel táctil.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Validación:** revisión estática del código y la documentación; no se ejecutaron build, lint ni pruebas en navegador.
+
+
+## Ajuste del carrusel de Lugares para centrar las tarjetas y mejorar el avance automático — 2026-10-13
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** en escritorio, el carrusel se limita al ancho necesario para mostrar tres tarjetas completas centradas, sin dejar visible una cuarta tarjeta cortada. En móvil se muestra una tarjeta completa por vez, conservando una imagen amplia. La elevación y sombra de la tarjeta central se desactivan en pantallas de hasta 768 px.
+- **Movimiento automático:** se aumentó ligeramente la velocidad de avance y se quitó la pausa provocada solo por mantener el puntero o el foco sobre el carrusel; la pausa breve por interacción táctil sigue disponible. Se mantiene el bucle y el respeto por `prefers-reduced-motion`.
+- **Motivo y autorización:** petición directa del usuario el 2026-10-13; pidió quitar la elevación en teléfonos, centrar las tarjetas visibles, eliminar la media tarjeta cortada y asegurar el movimiento automático también en móvil.
+- **Alcance:** no se modificaron imágenes, textos ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
+- **Validación:** revisión estática del código y documentación tras guardar. No se ejecutaron build, lint ni pruebas en navegador.
