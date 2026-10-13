@@ -524,7 +524,7 @@ function HomePage() {
               <a className="serv-item" href="#sobre">
                 <div className="num">03</div><h4>Guías y excursiones</h4>
                 <p>Baqueanos certificados para trekking, cabalgatas y travesías de altura.</p>
-                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M10 7 37 12 33 41 7 35 10 7Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/><path d="m11 11 22 4M9 31l23 5" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2.5 3"/><path d="m14 28 5-7 4 3 5-7M25 17l3 0-1 3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 21c-2 4-1 8 3 10s7 1 9-3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeDasharray="2 2"/><path d="m28 27 3 1-1 3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M5 17 14 7l8 10 7-7 14 12-2 17H7L5 17Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/><path d="m5 17 9-3 8 3 7-7M7 39l9-9 6 3 8-7 11 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 23c4-3 7-2 10 1s5 5 8 2 3-5 7-4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="2.2 2.8"/><path d="m34 19 4 3-1 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
               </a>
               <a className="serv-item" href="#sobre">
                 <div className="num">04</div><h4>Artesanías</h4>
