@@ -819,3 +819,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió que el carrusel se moviera siempre hacia la derecha y que la imagen central se levantara levemente.
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Resultado:** código y documentación actualizados en la rama `main`. Revisión estática realizada; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13T19:00:00-03:00 — Carrusel de Lugares centrado y movimiento automático más visible
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** en escritorio, el carrusel queda centrado y muestra tres tarjetas completas, sin una cuarta imagen cortada en el borde. En móvil se muestra una tarjeta completa por vez y se desactiva el efecto de elevación de la tarjeta central. Se conserva el tamaño amplio de las imágenes en teléfonos.
+- **Movimiento automático:** se aumentó la velocidad de avance y se eliminó la pausa automática por hover o foco, para que no se detenga simplemente porque el puntero queda encima. La interacción táctil mantiene una pausa breve; se conserva el bucle infinito y la preferencia de reducir movimiento del sistema.
+- **Motivo:** corregir el descentrado y la media imagen visible, y asegurar que el avance automático sea más perceptible también en teléfonos.
+- **Autorización:** petición directa del usuario el 2026-10-13.
+- **Resultado:** archivos actualizados en la rama `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
