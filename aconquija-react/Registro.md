@@ -789,3 +789,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Alcance respetado:** solo se modificó el párrafo de introducción y su CSS; no se cambiaron sus palabras, las imágenes, otras secciones ni el sitio original. No se agregaron dependencias.
 - **Accesibilidad:** la preferencia del sistema para reducir movimiento sigue respetada por la regla CSS existente.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-12 — Inversión de la dirección de entrada del párrafo
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se invirtió el desplazamiento inicial de `translateX(76px)` a `translateX(-76px)`. El párrafo ahora aparece desde la izquierda y se desplaza hacia la derecha hasta su posición original; se conservan los 1,7 segundos, la demora de 0,08 segundos y la activación al entrar en pantalla.
+- **Motivo:** el usuario aclaró que quería la dirección contraria a la versión anterior.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Alcance respetado:** solo se invirtió la dirección de esta animación y se actualizó la documentación. No se modificaron el texto, otras secciones ni el sitio original.
+- **Validación:** se comprobó estáticamente el cambio en CSS y documentación. No se ejecutaron build, lint ni pruebas de navegador.
