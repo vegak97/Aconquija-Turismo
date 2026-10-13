@@ -873,3 +873,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Comportamiento conservado:** desplazamiento suave de una tarjeta hacia la derecha, bucle infinito, interacción táctil y pausa temporal al interactuar manualmente.
 - **Motivo y autorización:** el usuario pidió acortar el tiempo de espera entre imágenes el 2026-10-13.
 - **Resultado:** archivos actualizados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-13 — Corregir el rebote de la tarjeta central en Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Problema:** al pasar el puntero sobre una tarjeta que se convertía en la central, la regla general de hover podía reemplazar su elevación y producir un efecto de rebote.
+- **Cambio concreto:** el hover de las tarjetas no centrales queda separado y la tarjeta `.is-center` conserva su transformación de elevación incluso al estar bajo el puntero.
+- **Motivo y autorización:** el usuario reportó un rebote al pasar por Bosque de Alisos el 2026-10-13.
+- **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
