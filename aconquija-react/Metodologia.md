@@ -1487,3 +1487,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo:** separar visualmente «Dónde dormir», «Dónde comer», «Guías y excursiones» y «Artesanías» con una línea negra.
 - **Alcance:** solo la presentación de las tarjetas de Servicios en React; no se modifican textos, enlaces ni el sitio original.
 - **Validación:** revisión estática del CSS. No se ejecutaron build, lint ni pruebas de navegador.
+
+## Movimiento sutil y tipografías conservadas — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** se añadieron transiciones suaves para navegación, botones, iconos y tarjetas; una elevación mínima al interactuar; una entrada delicada para el separador del hero; y ajustes de movimiento reducido para accesibilidad.
+- **Tipografía:** se conservan las familias que ya estaban definidas en el proyecto: Fraunces para títulos y Work Sans para textos. No se modificaron las imágenes, los textos ni la estructura de las secciones.
+- **Motivo:** dar al sitio una sensación más viva y natural sin recargar el diseño.
+- **Alcance:** solo CSS dentro de `aconquija-react/`; no se modificó el sitio original ni se añadieron dependencias.
+- **Validación:** revisión estática del CSS guardado. No se ejecutaron build, lint ni pruebas de navegador.
