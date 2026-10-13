@@ -409,8 +409,10 @@ function HomePage() {
                 const track = placeScrollRef.current
                 const loopWidth = placeLoopWidthRef.current
                 if (!track || !loopWidth) return
-                if (track.scrollLeft < loopWidth - 1) track.scrollLeft += loopWidth
-                else if (track.scrollLeft >= loopWidth * 2 - 1) track.scrollLeft -= loopWidth
+                // Reubicar solo al acercarse a los extremos de la secuencia central.
+                // Evita que cada pequeño gesto hacia atrás provoque un salto y bloquee el swipe.
+                if (track.scrollLeft < loopWidth * 0.5) track.scrollLeft += loopWidth
+                else if (track.scrollLeft >= loopWidth * 2) track.scrollLeft -= loopWidth
               }}>
                 {[...places, ...places, ...places].map((place, index) => (
                   <article className="place-card" key={`${Math.floor(index / places.length)}-${place.path}`}>
