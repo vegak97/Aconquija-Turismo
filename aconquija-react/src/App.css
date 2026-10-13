@@ -552,6 +552,13 @@ header.nav .nav-mobile-social .icon-circle svg {
 .serv-item .num { font-family: var(--ff-display); color: var(--amber); font-size: .95rem; }
 .serv-item h4   { font-family: var(--ff-display); font-size: 1.3rem; font-weight: 500; margin-top: 18px; }
 .serv-item p    { font-size: .9rem; color: #6b6f76; margin-top: 10px; line-height: 1.6; }
+.serv-icon {
+  display: flex; justify-content: center; align-items: center;
+  margin-top: 26px; color: rgba(105, 110, 116, .72);
+}
+.serv-icon svg { display: block; width: 42px; height: 42px; }
+.serv-item:hover .serv-icon { color: rgba(105, 110, 116, .9); }
+
 
 /* Separadores verticales suaves entre las tarjetas de Servicios */
 .serv-item:not(:nth-child(4n)) { border-right: 1px solid rgba(105, 110, 116, .24); }
