@@ -559,7 +559,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 }
 .serv-icon svg { display: block; width: 42px; height: 42px; }
 .serv-item:hover .serv-icon,
-.serv-item:focus-visible .serv-icon { color: #cdaa78; }
+.serv-item:focus-visible .serv-icon { color: #e0a800; }
 
 
 /* Separadores verticales suaves entre las tarjetas de Servicios */
