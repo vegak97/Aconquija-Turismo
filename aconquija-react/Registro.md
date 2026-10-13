@@ -865,3 +865,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Interacción:** al tocar o deslizar el carrusel, la reproducción automática queda pausada temporalmente durante 4 segundos; se conserva el bucle infinito y el scroll táctil nativo.
 - **Motivo y autorización:** el usuario aclaró que esperaba un movimiento suave hacia la derecha, una pausa de unos segundos y la repetición infinita, similar al botón de siguiente; autorización directa el 2026-10-13.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Reducir la espera del carrusel de Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el intervalo entre avances automáticos del carrusel se redujo de 3,8 a 2,5 segundos.
+- **Comportamiento conservado:** desplazamiento suave de una tarjeta hacia la derecha, bucle infinito, interacción táctil y pausa temporal al interactuar manualmente.
+- **Motivo y autorización:** el usuario pidió acortar el tiempo de espera entre imágenes el 2026-10-13.
+- **Resultado:** archivos actualizados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
