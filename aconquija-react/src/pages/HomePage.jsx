@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
@@ -11,7 +11,6 @@ import AboutSection from '../components/home/AboutSection'
 import { places } from '../data/homeData'
 
 function HomePage() {
-  const [activeSeason, setActiveSeason] = useState('verano')
   const placeScrollRef = useRef(null)
   const placeLoopWidthRef = useRef(0)
   const placePausedRef = useRef(false)
