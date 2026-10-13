@@ -899,3 +899,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Alcance respetado:** no se modificó `Metodologia.md`, ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; la comprobación visual local sigue pendiente.
 
+## 2026-10-13 — Suavizar las líneas divisorias de Servicios
+
+- **Archivos afectados:** `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** las líneas verticales entre los servicios pasan de negro sólido a gris con transparencia (`rgba(105, 110, 116, .24)`), manteniendo el grosor de 1 px y el comportamiento adaptable para pantallas más estrechas.
+- **Motivo y autorización:** el usuario pidió que los separadores de los cuatro servicios fueran más finos visualmente, grises y más transparentes el 2026-10-13.
+- **Alcance respetado:** solo se modificó el estilo de los separadores; no se tocó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
