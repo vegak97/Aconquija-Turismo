@@ -922,3 +922,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió estos dos diseños el 2026-10-13.
 - **Alcance respetado:** no se modificó `App.css`, los textos ni `Metodologia.md`; tampoco el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Rediseñar el mapa de guías y el color de los iconos de Servicios
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el icono de Guías y excursiones ahora muestra montañas puntiagudas con un sendero punteado. Todos los iconos de Servicios pasan a negro en estado normal y a dorado arena (`#cdaa78`) al pasar el cursor por la tarjeta o al enfocarla con teclado.
+- **Motivo y autorización:** el usuario pidió una ilustración de montañas puntiagudas con sendero para guías y que todos los iconos pasaran de gris a negro, cambiando a dorado arena al poner el cursor sobre la tarjeta, el 2026-10-13.
+- **Alcance respetado:** se mantuvieron los textos, las tarjetas y los separadores; no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
