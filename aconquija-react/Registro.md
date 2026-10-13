@@ -839,3 +839,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario informó que el carrusel no avanzaba automáticamente como esperaba y se trababa al deslizar en teléfono.
 - **Autorización:** reporte directo del usuario el 2026-10-13.
 - **Resultado:** cambios guardados en `main`; revisión estática realizada. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13T19:15:00-03:00 — Reactivar el avance automático del carrusel de Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se quitó la condición que impedía el avance automático cuando el sistema reporta `prefers-reduced-motion: reduce`. El carrusel ahora avanza hacia la derecha siempre que no esté pausado por una interacción manual; se conserva la pausa breve al deslizar, el bucle infinito y el arreglo táctil anterior.
+- **Motivo:** el usuario confirmó que el bloqueo táctil ya se había solucionado, pero el carrusel seguía sin moverse, y autorizó probar desactivar esta condición como posible causa.
+- **Autorización:** petición directa del usuario el 2026-10-13.
+- **Alcance respetado:** se modificó únicamente esa condición de la animación; no se alteraron estilos, imágenes, textos ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambio y documentación guardados en `main`; revisión estática realizada. No se ejecutaron build, lint ni pruebas de navegador.
