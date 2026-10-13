@@ -1563,3 +1563,7 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Movimiento automático:** se conserva el avance automático hacia la derecha, su velocidad actual, la pausa breve durante la interacción y el respeto por la preferencia de reducir movimiento del sistema.
 - **Motivo y autorización:** reporte directo del usuario el 2026-10-13: el avance automático no se percibía y el gesto de deslizar se trababa en teléfono.
 - **Validación:** código y documentación revisados estáticamente después de guardar. No se ejecutaron build, lint ni pruebas en navegador.
+
+### Avance automático del carrusel de Lugares
+
+El avance automático no debe depender de `prefers-reduced-motion`, ya que esa condición puede dejar el carrusel inmóvil en ciertos equipos. La animación sí debe respetar la pausa temporal durante la interacción manual y conservar el scroll táctil nativo.
