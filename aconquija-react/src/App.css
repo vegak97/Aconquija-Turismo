@@ -299,15 +299,15 @@ header.nav .nav-mobile-social .icon-circle svg {
 .reveal { opacity: 0; transform: translateY(36px); transition: opacity .9s ease, transform .9s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
-/* El párrafo principal de la introducción entra desde la derecha al revelarse */
-.intro .lead {
+/* El párrafo entra desde la derecha cuando el propio texto llega a la pantalla */
+.intro .lead.reveal {
   opacity: 0;
-  transform: translateX(56px);
-  transition: opacity 1s cubic-bezier(.22,.7,.22,1), transform 1s cubic-bezier(.22,.7,.22,1);
-  transition-delay: .12s;
+  transform: translateX(76px);
+  transition: opacity 1.7s cubic-bezier(.22,.7,.22,1), transform 1.7s cubic-bezier(.22,.7,.22,1);
+  transition-delay: .08s;
   will-change: opacity, transform;
 }
-.intro .reveal.in .lead {
+.intro .lead.reveal.in {
   opacity: 1;
   transform: translateX(0);
 }
