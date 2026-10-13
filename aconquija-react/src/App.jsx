@@ -519,12 +519,12 @@ function HomePage() {
               <a className="serv-item" href="#sobre">
                 <div className="num">02</div><h4>Dónde comer</h4>
                 <p>Cocina regional, cabrito de monte y productos de huerta de cercanía.</p>
-                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M7 22h27a12 12 0 0 1-12 12H19A12 12 0 0 1 7 22ZM19 34v5M12 39h19M38 8v31M34 8v9a4 4 0 0 0 8 0V8M34 8v8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" strokeWidth="1.7"/><circle cx="24" cy="24" r="12.5" stroke="currentColor" strokeWidth="1.4"/><path d="M11 10v8M8.5 10v5.5a2.5 2.5 0 0 0 5 0V10M11 18v19M37 10c-3.1 2.8-4 6.2-4 10v4h4V10ZM37 24v13" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
               </a>
               <a className="serv-item" href="#sobre">
                 <div className="num">03</div><h4>Guías y excursiones</h4>
                 <p>Baqueanos certificados para trekking, cabalgatas y travesías de altura.</p>
-                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" strokeWidth="1.7"/><path d="m14 29 7-14 4 10 4-5 5 9H14ZM24 8v4M40 24h-4M24 40v-4M8 24h4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M10 7 37 12 33 41 7 35 10 7Z" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/><path d="m11 11 22 4M9 31l23 5" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2.5 3"/><path d="m14 28 5-7 4 3 5-7M25 17l3 0-1 3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/><path d="M19 21c-2 4-1 8 3 10s7 1 9-3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeDasharray="2 2"/><path d="m28 27 3 1-1 3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
               </a>
               <a className="serv-item" href="#sobre">
                 <div className="num">04</div><h4>Artesanías</h4>
