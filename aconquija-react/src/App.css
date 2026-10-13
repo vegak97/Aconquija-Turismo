@@ -409,7 +409,9 @@ header.nav .nav-mobile-social .icon-circle svg {
   margin-inline: auto;
   overflow-x: auto;
   padding: 12px 0 18px;
-  scroll-snap-type: x proximity;
+  /* El avance automático y el gesto táctil controlan el scroll; no ajustar a cada tarjeta. */
+  scroll-snap-type: none;
+  scroll-behavior: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
@@ -419,7 +421,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 .place-card {
   flex: 0 0 calc((100% - 48px) / 3);
   max-width: 300px;
-  scroll-snap-align: start;
+  scroll-snap-align: none;
   cursor: pointer;
   transform: translateY(0) scale(.985);
   transition: transform .45s cubic-bezier(.22,.7,.22,1), filter .45s ease;
