@@ -1082,3 +1082,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Precisión y límites:** este primer mapa es un borrador visual, no una geometría GIS exacta del límite municipal. Las posiciones visuales son esquemáticas; solo algunas localidades tienen coordenadas preliminares de fuentes abiertas. Las líneas secundarias son hipótesis editables y están marcadas como pendientes de verificación. El tramo Buena Vista–Río Potrero se identifica como pavimentado según la referencia consultada; no se presenta el mapa como GPS ni se deben usar sus líneas para navegación real.
 - **Alcance respetado:** solo se modificó la aplicación dentro de `aconquija-react/`; no se tocó el sitio original ni `Metodologia.md`.
 - **Verificación:** revisión estática del código y de las rutas de datos en GitHub. No se ejecutaron `npm run build`, lint ni pruebas en navegador; la revisión visual local queda pendiente para que el usuario pueda señalar correcciones.
+
+
+### 16:30:00 -03:00 — Ajuste de integración del mapa
+
+- **Archivos afectados:** `src/components/home/IntroSection.jsx`, `src/data/aconquijaMapData.js` y `Registro.md`.
+- **Cambio concreto:** se conserva el contador original de 22 localidades del sitio (el mapa muestra inicialmente las 16 localidades confirmadas para esta etapa), se mantienen las clases de animación de entrada de la introducción y se corrige el identificador interno del tramo de la Cuesta de la Chilca.
+- **Motivo y autorización:** ajuste necesario dentro de la petición directa de incorporar el mapa, para no alterar un dato general del sitio ni quitar la animación existente.
+- **Resultado:** corrección aplicada en GitHub; no se ejecutaron build, lint ni pruebas de navegador.

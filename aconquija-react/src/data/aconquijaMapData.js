@@ -169,7 +169,7 @@ export const aconquijaLocalities = [
 
 export const aconquijaRoadSegments = [
   {
-    id: 'rp48-cu esta',
+    id: 'rp48-cuesta',
     label: 'RP 48 · Cuesta de la Chilca / Pucará',
     category: 'principal-tierra',
     surface: 'La Cuesta de la Chilca se describe como camino sin pavimentar; la geometría exacta de este tramo debe comprobarse.',

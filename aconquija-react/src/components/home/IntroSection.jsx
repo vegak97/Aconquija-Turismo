@@ -11,10 +11,10 @@ export default function IntroSection() {
   return (
     <section className="intro">
       <div className="container intro-map-layout">
-        <div className="intro-copy">
+        <div className="intro-copy reveal">
           <div className="eyebrow">Aconquija - Catamarca - Argentina</div>
           <h2>{selectedLocality ? selectedLocality.name : '"La luz de la luna sobre la nieve en las alturas"'}</h2>
-          <p className="lead">
+          <p className="lead reveal">
             {selectedLocality ? selectedLocality.description : generalDescription}
           </p>
 
@@ -33,12 +33,12 @@ export default function IntroSection() {
             <div className="intro-stats">
               <div className="stat"><b>+5.500m</b><span>Altura de los Nevados</span></div>
               <div className="stat"><b>3.165</b><span>Habitantes</span></div>
-              <div className="stat"><b>16</b><span>Localidades del mapa</span></div>
+              <div className="stat"><b>22</b><span>Localidades</span></div>
             </div>
           )}
         </div>
 
-        <div className="intro-map-column">
+        <div className="intro-map-column reveal">
           <AconquijaInteractiveMap
             selectedLocalityId={selectedLocalityId}
             onSelect={setSelectedLocalityId}
