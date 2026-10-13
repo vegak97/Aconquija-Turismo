@@ -990,3 +990,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario aprobó la interacción diferenciada para PC y teléfono y pidió expresamente revisar si podía reutilizarse una función existente, el 2026-10-13.
 - **Alcance respetado:** no se añadieron dependencias ni se modificó el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13 — Primera etapa de modularización de React
+
+- **Archivos creados:** `src/components/layout/Header.jsx`, `Footer.jsx`, `SocialLinks.jsx`, `src/components/ui/WeatherBadgeView.jsx`, `src/pages/HomePage.jsx`, `PagePlaceholder.jsx`, `NotFound.jsx` y `src/data/routes.js`.
+- **Archivo actualizado:** `src/App.jsx`.
+- **Cambio:** los componentes existentes se trasladaron a archivos según su responsabilidad; las rutas aprobadas se centralizaron en `data/routes.js` y `App.jsx` quedó dedicado a React Router. La página de inicio se trasladó sin rediseñar sus secciones ni su lógica.
+- **Autorización:** el usuario aprobó el mapa de carpetas y componentes el 2026-10-13.
+- **Alcance:** no se modificaron intencionalmente textos, imágenes, estilos ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** revisión estática de imports y estructura. No se ejecutaron build, lint ni pruebas de navegador; la extracción de secciones y organización de estilos queda pendiente.
