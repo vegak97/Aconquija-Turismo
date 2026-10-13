@@ -264,6 +264,20 @@ function HomePage() {
       if (progress) progress.style.width = percentage + '%'
       const nav = document.getElementById('siteNav')
       if (nav) nav.classList.toggle('scrolled', window.scrollY > 60)
+
+      // Reutiliza el listener de scroll existente para marcar la sección visible en el menú.
+      const navLinks = document.querySelectorAll('#navLinks > a[href^="#"]')
+      let activeId = ''
+      navLinks.forEach((link) => {
+        const section = document.getElementById(link.getAttribute('href').slice(1))
+        if (section && section.getBoundingClientRect().top <= 150) activeId = section.id
+      })
+      navLinks.forEach((link) => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle('is-active', Boolean(activeId) && isActive)
+        if (isActive && activeId) link.setAttribute('aria-current', 'location')
+        else link.removeAttribute('aria-current')
+      })
     }
 
     updateScroll()
