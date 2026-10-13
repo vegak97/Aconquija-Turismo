@@ -780,12 +780,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Accesibilidad:** se conserva la regla existente `prefers-reduced-motion`.
 - **Resultado:** actualización guardada en GitHub. Verificación visual local pendiente; no se ejecutaron lint, build ni pruebas de navegador.
 
-## 2026-10-12 — Animación lateral del párrafo de introducción
+## 2026-10-12 — Ajuste de la animación lateral del párrafo de introducción
 
-- **Archivo afectado:** `aconquija-react/src/App.css`; se documentó el cambio en `aconquija-react/Metodologia.md` y en este registro.
-- **Cambio concreto:** el párrafo `.intro .lead` aparece con una transición de opacidad y un desplazamiento de 56 px desde la derecha hasta su posición original. La transición dura 1 segundo y tiene una demora breve de 0,12 segundos para que el movimiento se sienta natural. Se activa al entrar en pantalla la sección de introducción y no se repite al volver a desplazarse.
-- **Motivo:** petición del usuario para que el texto de presentación de Aconquija se deslice desde la derecha y se acomode suavemente en su lugar.
-- **Autorización:** permiso explícito del usuario el 2026-10-12, tras explicar el comportamiento propuesto.
-- **Alcance respetado:** solo se modificó el CSS de la aplicación React y se actualizaron los documentos de metodología y registro. No se cambió el texto ni la estructura JSX, no se agregaron dependencias y no se modificó el sitio original.
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió la clase `reveal` al propio párrafo para que la animación empiece cuando el texto entra en la zona visible. Se aumentó el desplazamiento inicial a 76 px y la duración a 1,7 segundos, con una demora de 0,08 segundos. El movimiento sigue siendo de derecha a izquierda y termina en la posición original.
+- **Motivo:** ajuste solicitado por el usuario para que el texto se anime al aparecer en pantalla y el deslizamiento sea más lento.
+- **Autorización:** petición directa del usuario el 2026-10-12 para corregir el momento de activación y suavizar la velocidad de la animación previamente autorizada.
+- **Alcance respetado:** solo se modificó el párrafo de introducción y su CSS; no se cambiaron sus palabras, las imágenes, otras secciones ni el sitio original. No se agregaron dependencias.
 - **Accesibilidad:** la preferencia del sistema para reducir movimiento sigue respetada por la regla CSS existente.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
