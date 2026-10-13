@@ -424,11 +424,17 @@ header.nav .nav-mobile-social .icon-circle svg {
   scroll-snap-align: none;
   cursor: pointer;
   transform: translateY(0) scale(.985);
-  transition: transform .45s cubic-bezier(.22,.7,.22,1), filter .45s ease;
+  transition: transform .45s cubic-bezier(.22,.7,.22,1);
 }
 .place-card.is-center {
   transform: translateY(-10px) scale(1);
-  filter: drop-shadow(0 12px 16px rgba(25,31,38,.12));
+}
+.place-img {
+  box-shadow: 0 8px 24px rgba(25,31,38,.12);
+  transition: box-shadow .45s ease;
+}
+.place-card.is-center .place-img {
+  box-shadow: 0 16px 34px rgba(25,31,38,.2);
 }
 .place-carousel-arrow {
   position: absolute;
