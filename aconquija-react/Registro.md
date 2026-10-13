@@ -857,3 +857,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Comportamiento conservado:** bucle infinito, pausa breve durante la interacción y deslizamiento horizontal manual en teléfono.
 - **Autorización:** petición directa del usuario el 2026-10-13 para revisar el problema y corregirlo si se encontraba una causa probable.
 - **Resultado:** archivos actualizados en `main` y comprobados estáticamente tras guardar. No se ejecutaron build, lint ni pruebas en navegador, por lo que la causa se considera probable y no confirmada visualmente.
+
+## 2026-10-13T19:35:00-03:00 — Cambiar el carrusel a avance por tarjeta
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se eliminó la animación de desplazamiento continuo por píxeles y se reemplazó por un avance suave de una tarjeta cada 3,8 segundos, usando `scrollBy({ left: step, behavior: 'smooth' })` con el mismo cálculo de distancia que el botón de siguiente.
+- **Interacción:** al tocar o deslizar el carrusel, la reproducción automática queda pausada temporalmente durante 4 segundos; se conserva el bucle infinito y el scroll táctil nativo.
+- **Motivo y autorización:** el usuario aclaró que esperaba un movimiento suave hacia la derecha, una pausa de unos segundos y la repetición infinita, similar al botón de siguiente; autorización directa el 2026-10-13.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
