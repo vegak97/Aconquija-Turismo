@@ -1006,8 +1006,7 @@ footer .foot-social .icon-circle {
 
 /* ══════════════════════════════════════════════
    MOVIMIENTO SUTIL — sensación natural y cálida
-   Se conservan las tipografías existentes:
-   Fraunces para títulos y Work Sans para texto.
+   Tipografías actuales: Playfair Display para títulos y Montserrat para textos.
 ══════════════════════════════════════════════ */
 :root {
   --motion-soft: cubic-bezier(.22,.7,.22,1);
@@ -1092,3 +1091,124 @@ nav.links a::after {
     transition-duration: .01ms !important;
   }
 }
+
+
+
+/* ══════════════════════════════════════════════
+   DETALLES CÁLIDOS — movimiento natural y microinteracciones
+══════════════════════════════════════════════ */
+
+/* Pequeño acento dorado bajo los rótulos de sección */
+.intro .eyebrow,
+.section-head .eyebrow,
+.cta-content .eyebrow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.intro .eyebrow::after,
+.section-head .eyebrow::after,
+.cta-content .eyebrow::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+  opacity: .8;
+  transform-origin: left center;
+  transition: width .45s var(--motion-soft), opacity .3s ease;
+}
+.intro .eyebrow:hover::after,
+.section-head .eyebrow:hover::after,
+.cta-content .eyebrow:hover::after {
+  width: 56px;
+  opacity: 1;
+}
+
+/* Las tarjetas fotográficas responden como una ventana al paisaje */
+.exp-card,
+.place-img,
+.est-panel img,
+.gallery-item img {
+  backface-visibility: hidden;
+}
+.exp-card img,
+.place-img img,
+.est-panel img,
+.gallery-item img {
+  transition: transform 1s var(--motion-soft), filter .65s ease;
+}
+.exp-card:hover img,
+.place-card:hover .place-img img,
+.gallery-item:hover img {
+  filter: saturate(1.06) brightness(1.025);
+}
+
+/* Sombra cálida y discreta al interactuar con las tarjetas */
+.exp-card:hover,
+.place-card:hover .place-img,
+.rel-card:hover {
+  box-shadow: 0 14px 34px rgba(22, 27, 34, .16);
+}
+.place-card h3 {
+  transition: color .35s ease, transform .35s var(--motion-soft);
+}
+.place-card:hover h3 {
+  color: #9b7446;
+  transform: translateX(2px);
+}
+
+/* Botones con una respuesta cálida, sin destellos exagerados */
+.btn-primary,
+.pill,
+.icon-circle,
+.nav-close {
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-primary:hover,
+#sobre .cta-content a.btn-primary:hover {
+  box-shadow: 0 9px 24px rgba(205, 170, 120, .22);
+}
+.icon-circle:hover,
+.nav-close:hover {
+  border-color: rgba(205, 170, 120, .8);
+}
+
+/* Las estaciones ganan claridad al pasar el cursor */
+.est-tab:not(.active):hover {
+  color: rgba(255, 255, 255, .92);
+}
+
+/* Entrada escalonada: los elementos aparecen con un ritmo más orgánico */
+.intro-stats.reveal.in > *,
+.card-grid.reveal.in > *,
+.serv-grid.reveal.in > * {
+  animation: detailRise .7s var(--motion-soft) both;
+}
+.intro-stats.reveal.in > *:nth-child(2),
+.card-grid.reveal.in > *:nth-child(2),
+.serv-grid.reveal.in > *:nth-child(2) {
+  animation-delay: .08s;
+}
+.intro-stats.reveal.in > *:nth-child(3),
+.card-grid.reveal.in > *:nth-child(3),
+.serv-grid.reveal.in > *:nth-child(3) {
+  animation-delay: .16s;
+}
+.card-grid.reveal.in > *:nth-child(4),
+.serv-grid.reveal.in > *:nth-child(4) {
+  animation-delay: .24s;
+}
+@keyframes detailRise {
+  from { opacity: .45; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pequeño pulso en la indicación para seguir recorriendo la página */
+.scroll-cue .chev {
+  animation: bounce 1.8s infinite;
+}
+
+/* Respeta la preferencia de movimiento reducido definida por el visitante */
+
