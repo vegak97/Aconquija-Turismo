@@ -1047,3 +1047,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se reemplazó el favicon violeta heredado de la plantilla por el ícono oficial de Aconquija que ya utiliza el sitio original, copiado dentro de `public/` para que Vite lo sirva correctamente.
 - **Alcance:** solo cambia el ícono mostrado en la pestaña del navegador; no se modificaron el logo visible del encabezado ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** se revisó el enlace de favicon en `index.html` y se preparó el recurso desde `imagenes/aconquija_icono.png`. No se ejecutaron build ni pruebas de navegador.
+
+## 2026-10-13 — Mejorar el contraste del botón de menú en móviles
+
+- **Archivos afectados:** `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** el botón hamburguesa en pantallas de hasta 880 px ahora tiene fondo pizarra oscuro (`#161b22`), contorno blanco y conserva las tres líneas blancas. El estilo se aplica solo a la versión móvil; no se alteran el menú lateral, el encabezado de escritorio ni otras secciones.
+- **Motivo y autorización:** el usuario pidió que el fondo del botón coincidiera con el pizarra oscuro de la navegación y que el contorno blanco lo distinguiera como botón, manteniendo las líneas blancas, el 2026-10-13.
+- **Alcance respetado:** no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** archivos revisados estáticamente y cambio guardado en GitHub. No se ejecutaron build, lint ni pruebas de navegador.

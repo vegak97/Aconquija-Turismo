@@ -36,8 +36,13 @@
 ══════════════════════════════════════════════ */
 @media (max-width: 880px) {
 
-  /* Mostrar hamburguesa */
-  .menu-trigger { display: flex !important; }
+  /* Botón hamburguesa: fondo pizarra, líneas y contorno blancos */
+  .menu-trigger {
+    display: flex !important;
+    background: #161b22;
+    border: 1px solid #fff;
+    color: #fff;
+  }
 
   /* Activar overlay */
   .nav-overlay { display: block; }
