@@ -66,7 +66,7 @@ function HomePage() {
   return (
     <>
       <div id="readProgress" aria-hidden="true" />
-      <Header />
+      <Header animateOnLoad />
       <main>
         <HeroSection />
 

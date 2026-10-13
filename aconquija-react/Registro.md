@@ -1029,3 +1029,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-13 para aplicar las dos primeras mejoras visuales; el usuario buscará por separado la fotografía original de mayor calidad.
 - **Alcance respetado:** no se cambió la imagen de fondo, el tratamiento de la imagen ni otras secciones de la página. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** cambios revisados estáticamente y guardados en GitHub. No se ejecutaron build, lint ni pruebas visuales en navegador; el ajuste visual final queda pendiente de la revisión del usuario.
+
+
+## 2026-10-13 — Entrada cinematográfica de la portada
+
+- **Archivos afectados:** `src/components/layout/Header.jsx`, `src/pages/HomePage.jsx`, `src/styles/home-hero.css`, `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** en la página de inicio, la navegación aparece primero con un desplazamiento vertical discreto; el fondo comienza su alejamiento y el título con su subtítulo entra después; el indicador «Deslizá para explorar» aparece al final. Se ajustó la duración del alejamiento de la imagen a 7,5 segundos para que el paisaje empiece a revelarse antes de que aparezca el contenido.
+- **Reutilización y alcance:** se reutilizaron las animaciones existentes del hero y del separador; la nueva entrada de navegación se activa mediante una propiedad que solo se pasa desde `HomePage`, por lo que no cambia la entrada de las páginas internas. No se cambió la fotografía, el texto ni el degradado del título.
+- **Accesibilidad:** se conserva la preferencia de movimiento reducido y se eliminan las esperas de las animaciones cuando esa preferencia está activa.
+- **Autorización:** el usuario aprobó probar esta secuencia el 2026-10-13.
+- **Verificación:** cambios revisados estáticamente y guardados en GitHub. No se ejecutaron build, lint ni pruebas de navegador; falta que el usuario revise el resultado visual.

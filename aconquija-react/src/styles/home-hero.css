@@ -11,7 +11,7 @@
   background-color: #26342b;
   background-size: cover; background-position: center 65%;
   transform: scale(1.08);
-  animation: heroZoom 18s ease-out forwards;
+  animation: heroZoom 7.5s ease-out forwards;
 }
 @keyframes heroZoom { from { transform: scale(1.18); } to { transform: scale(1.0); } }
 .hero-bg::after {
@@ -23,7 +23,7 @@
 .hero-content {
   position: relative; z-index: 5; text-align: center; color: var(--white);
   opacity: 0; transform: translateY(24px);
-  animation: heroIn 1.4s .3s ease forwards;
+  animation: heroIn 1.4s 1.25s ease forwards;
 }
 @keyframes heroIn { to { opacity: 1; transform: translateY(10px); } }
 .hero-content h1 {
@@ -44,10 +44,22 @@
   width: 1px; height: 40px; background: rgba(255,255,255,.55);
   margin: 28px auto 0;
 }
+@keyframes navIntro {
+  from { opacity: 0; transform: translateY(-12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+header.nav.nav-intro {
+  animation: navIntro .85s .35s ease both;
+}
 .scroll-cue {
   position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
   z-index: 5; text-align: center; color: var(--white); font-size: .72rem;
-  letter-spacing: 2px; text-transform: uppercase; opacity: .85;
+  letter-spacing: 2px; text-transform: uppercase; opacity: 0;
+  animation: scrollCueIn .8s 2.15s ease forwards;
+}
+@keyframes scrollCueIn {
+  from { opacity: 0; transform: translate(-50%, 8px); }
+  to { opacity: .85; transform: translate(-50%, 0); }
 }
 .scroll-cue .chev {
   margin: 8px auto 0; width: 16px; height: 16px;

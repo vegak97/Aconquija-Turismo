@@ -4,7 +4,7 @@ import SocialLinks from './SocialLinks'
 import WeatherBadge from '../ui/WeatherBadgeView'
 import logoHeader from '../../../../imagenes/logo_aconquija(1).png'
 
-function Header() {
+function Header({ animateOnLoad = false }) {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -21,7 +21,7 @@ function Header() {
 
   return (
     <>
-      <header className="nav" id="siteNav">
+      <header className={`nav${animateOnLoad ? ' nav-intro' : ''}`} id="siteNav">
         <Link to="/" className="logo" aria-label="Aconquija Turismo, inicio" onClick={() => setMenuOpen(false)}>
           <img src={logoHeader} alt="Aconquija Turismo" />
         </Link>
