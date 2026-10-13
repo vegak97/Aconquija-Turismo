@@ -210,6 +210,7 @@ function HomePage() {
   const placeAnimationFrameRef = useRef(null)
   const placePausedRef = useRef(false)
   const placeResumeTimerRef = useRef(null)
+  const placeAutoplayTimerRef = useRef(null)
 
   useEffect(() => {
     const updateScroll = () => {
@@ -306,34 +307,43 @@ function HomePage() {
       if (closestCard) closestCard.classList.add('is-center')
     }
 
-    let lastCenterUpdate = 0
-    let lastFrameTimestamp = 0
-    const animate = (timestamp) => {
-      // Velocidad basada en tiempo real: mantiene un avance constante aunque
-      // el navegador cambie la frecuencia de cuadros.
-      const elapsed = lastFrameTimestamp ? Math.min(timestamp - lastFrameTimestamp, 32) : 16
-      lastFrameTimestamp = timestamp
+    let centerUpdateTimer = null
+    let autoplayTimeout = null
 
-      if (!placePausedRef.current) {
-        track.scrollLeft += elapsed * 0.035
-      }
+    const updateCenterPeriodically = () => {
+      updateCenterCard()
+      centerUpdateTimer = window.setTimeout(updateCenterPeriodically, 120)
+    }
 
-      if (timestamp - lastCenterUpdate > 100) {
-        updateCenterCard()
-        lastCenterUpdate = timestamp
-      }
+    const getCardStep = () => {
+      const firstCard = track.querySelector('.place-card')
+      const secondCard = track.children[1]
+      if (!firstCard || !secondCard) return 0
+      return secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
+    }
 
-      placeAnimationFrameRef.current = window.requestAnimationFrame(animate)
+    // Avanza una tarjeta, como el botón de siguiente, y deja tiempo para mirar.
+    const scheduleNextCard = () => {
+      autoplayTimeout = window.setTimeout(() => {
+        if (!placePausedRef.current) {
+          const step = getCardStep()
+          if (step > 0) track.scrollBy({ left: step, behavior: 'smooth' })
+        }
+        scheduleNextCard()
+      }, 3800)
+      placeAutoplayTimerRef.current = autoplayTimeout
     }
 
     positionAtMiddleSet()
     updateCenterCard()
-    placeAnimationFrameRef.current = window.requestAnimationFrame(animate)
+    updateCenterPeriodically()
+    scheduleNextCard()
     window.addEventListener('resize', positionAtMiddleSet)
 
     return () => {
       window.removeEventListener('resize', positionAtMiddleSet)
-      if (placeAnimationFrameRef.current) window.cancelAnimationFrame(placeAnimationFrameRef.current)
+      if (centerUpdateTimer) window.clearTimeout(centerUpdateTimer)
+      if (autoplayTimeout) window.clearTimeout(autoplayTimeout)
       if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
     }
   }, [places.length])
@@ -343,7 +353,7 @@ function HomePage() {
     if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
     placeResumeTimerRef.current = window.setTimeout(() => {
       placePausedRef.current = false
-    }, 1800)
+    }, 4000)
   }
 
   return (
