@@ -1,0 +1,54 @@
+/* ══════════════════════════════════════════════
+   HERO — LUGAR/PLANTILLA (62vh)
+══════════════════════════════════════════════ */
+.lugar-hero {
+  position: relative; height: 62vh; min-height: 440px;
+  display: flex; align-items: flex-end; overflow: hidden;
+}
+.lugar-hero-img {
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  transform: scale(1.06);
+  animation: heroZoom 1.8s ease forwards;
+}
+.lugar-hero-img::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(16,18,22,.2) 0%, rgba(16,18,22,.08) 40%,
+    rgba(16,18,22,.72) 80%, rgba(16,18,22,.9) 100%);
+}
+.lugar-hero-content {
+  position: relative; z-index: 3; width: 100%;
+  padding: 0 6vw 48px;
+  animation: fadeUp .9s .2s ease both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.breadcrumb {
+  display: flex; gap: 8px; align-items: center;
+  font-size: .74rem; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(255,255,255,.6); margin-bottom: 14px; flex-wrap: wrap;
+}
+.breadcrumb a { color: rgba(255,255,255,.6); transition: color .25s; }
+.breadcrumb a:hover { color: var(--sand); }
+.breadcrumb span { color: rgba(255,255,255,.35); }
+.lugar-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.lugar-tag {
+  font-size: .7rem; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 600;
+  color: var(--sand); border: 1px solid rgba(205,170,120,.5);
+  padding: 5px 14px; border-radius: 20px;
+}
+.lugar-hero h1 {
+  font-family: var(--ff-display); font-weight: 500; color: var(--white);
+  font-size: clamp(1.8rem, 5vw, 3.8rem); line-height: 1.05; max-width: 820px;
+}
+.lugar-meta {
+  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+  margin-top: 18px; color: rgba(255,255,255,.65); font-size: .82rem; letter-spacing: .5px;
+}
+.lugar-meta .meta-item { display: flex; align-items: center; gap: 7px; }
+.lugar-meta svg { width: 14px; height: 14px; opacity: .7; }
+
+

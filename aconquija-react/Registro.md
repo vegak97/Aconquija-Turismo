@@ -1010,3 +1010,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** implementación del mapa de arquitectura aprobado por el usuario el 2026-10-13.
 - **Alcance:** se conservaron clases CSS, textos, imágenes y comportamiento intencional. `App.css` no se dividió para evitar cambios visuales sin auditar selectores. No se modificó el sitio original fuera de `aconquija-react/`.
 - **Verificación:** revisión estática de imports, exports, datos y composición. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13 — Separación de estilos por responsabilidad
+
+- **Archivo actualizado:** `src/App.css`, que queda como punto de entrada de estilos.
+- **Archivos creados:** `src/styles/variables.css`, `global.css`, `layout.css`, `home-hero.css`, `page-hero.css`, `home.css`, `pages.css` y `responsive.css`.
+- **Cambio:** se trasladaron los bloques CSS existentes por tramos contiguos para conservar el orden de cascada original: variables y fuentes, reglas globales, navegación/progreso, hero de inicio, hero de páginas internas, secciones de inicio/pie, contenido de páginas internas y reglas responsive/movimiento.
+- **Alcance:** se reorganizaron declaraciones sin rediseñar valores, selectores ni puntos de corte. Se mantiene `App.css` como entrada para no cambiar el import existente en React. El CSS general de `index.css` queda intacto.
+- **Verificación:** revisión estática de límites y orden de imports. No se ejecutaron build, lint ni comprobación visual en navegador.

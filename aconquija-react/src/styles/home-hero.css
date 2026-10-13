@@ -1,0 +1,63 @@
+/* ══════════════════════════════════════════════
+   HERO — INDEX (pantalla completa)
+══════════════════════════════════════════════ */
+.hero {
+  position: relative; height: 100vh; width: 100%;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  background-color: #26342b;
+  background-size: cover; background-position: center 65%;
+  transform: scale(1.08);
+  animation: heroZoom 18s ease-out forwards;
+}
+@keyframes heroZoom { from { transform: scale(1.18); } to { transform: scale(1.0); } }
+.hero-bg::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(20,22,26,.45) 0%, rgba(20,22,26,.15) 32%,
+    rgba(20,22,26,.55) 78%, rgba(15,17,20,.85) 100%);
+}
+.hero-content {
+  position: relative; z-index: 5; text-align: center; color: var(--white);
+  opacity: 0; transform: translateY(24px);
+  animation: heroIn 1.4s .3s ease forwards;
+}
+@keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+.hero-content h1 {
+  font-family: var(--ff-display); font-weight: 500;
+  font-size: clamp(3.6rem, 11vw, 8.5rem); letter-spacing: 1px; line-height: .95;
+}
+.hero-sub {
+  margin-top: 18px; font-size: .85rem; letter-spacing: 5px; text-transform: uppercase;
+  color: rgba(255,255,255,.88); font-weight: 500;
+}
+
+/* Contraste del título y subtítulo centrales del hero */
+.hero-content h1,
+.hero-content .hero-sub {
+  color: #fff;
+}
+.hero-divider {
+  width: 1px; height: 46px; background: rgba(255,255,255,.55);
+  margin: 34px auto 0;
+}
+.scroll-cue {
+  position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+  z-index: 5; text-align: center; color: var(--white); font-size: .72rem;
+  letter-spacing: 2px; text-transform: uppercase; opacity: .85;
+}
+.scroll-cue .chev {
+  margin: 8px auto 0; width: 16px; height: 16px;
+  border-right: 1.5px solid #fff; border-bottom: 1.5px solid #fff;
+  transform: rotate(45deg); animation: bounce 1.8s infinite;
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0) rotate(45deg); }
+  50%      { transform: translateY(8px) rotate(45deg); }
+}
+.peaks-divider { display: block; width: 100%; height: 64px; }
+
+

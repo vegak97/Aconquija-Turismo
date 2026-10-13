@@ -1,0 +1,171 @@
+/* ══════════════════════════════════════════════
+   BARRA DE PROGRESO DE LECTURA
+══════════════════════════════════════════════ */
+#readProgress {
+  position: fixed; top: 0; left: 0;
+  height: 3px; width: 0%;
+  background: #cdaa78;
+  z-index: 9999;
+  transition: width .14s cubic-bezier(.22,.7,.22,1);
+  will-change: width;
+}
+
+
+/* ══════════════════════════════════════════════
+   NAVEGACIÓN
+══════════════════════════════════════════════ */
+header.nav {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 6vw;
+  transition: background .5s ease, padding .4s ease, box-shadow .4s ease;
+}
+header.nav.scrolled {
+  background: rgba(22,27,34,.93);
+  padding: 10px 6vw;
+  box-shadow: 0 6px 24px rgba(0,0,0,.25);
+  backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo {
+  font-family: var(--ff-display);
+  font-size: 1.5rem; font-weight: 500; letter-spacing: .5px;
+  color: var(--white); display: flex; align-items: center; gap: 10px;
+  position: relative; z-index: 999;
+}
+.logo img  { height: 72px; }
+header.nav .logo img { height: 66px; transition: height .4s ease; }
+header.nav.scrolled .logo img { height: 58px; }
+.logo svg  { width: 26px; height: 18px; }
+
+/* Links de escritorio */
+nav.links {
+  display: flex; align-items: center; gap: 36px;
+}
+nav.links a {
+  color: var(--white); font-size: .82rem; letter-spacing: 1.3px;
+  text-transform: uppercase; font-weight: 500;
+  position: relative; padding: 6px 0;
+}
+nav.links a::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  height: 1px; width: 100%; background: #cdaa78;
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform .2s var(--motion-soft);
+}
+@keyframes navUnderlineGrow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+/* En escritorio la línea solo aparece al apuntar o enfocar un enlace. */
+@media (hover: hover) and (pointer: fine) {
+  nav.links > a[href^="#"]:hover::after,
+  nav.links > a[href^="#"]:focus-visible::after {
+    animation: navUnderlineGrow 1.45s linear forwards;
+  }
+}
+/* En el menú táctil, la línea indica la sección actual y permanece visible. */
+@media (max-width: 880px) {
+  nav.links > a[href^="#"].is-active::after {
+    transform: scaleX(1);
+    transition: transform .25s var(--motion-soft);
+  }
+}
+
+/* Contraste de la navegación principal */
+header.nav nav.links > a:not(.icon-circle),
+header.nav nav.links > a:not(.icon-circle):visited,
+header.nav nav.links > a:not(.icon-circle):hover,
+header.nav nav.links > a:not(.icon-circle):focus-visible,
+header.nav nav.links > a:not(.icon-circle):active {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+header.nav .nav-icons .icon-circle,
+header.nav .nav-mobile-social .icon-circle {
+  color: #fff;
+}
+
+header.nav .nav-icons .icon-circle svg,
+header.nav .nav-mobile-social .icon-circle svg {
+  color: inherit;
+}
+
+/* Pill "Sobre Aconquija" */
+.pill {
+  border: 1px solid rgba(255,255,255,.5); padding: 10px 22px; border-radius: 30px;
+  font-size: .78rem; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--white); transition: all .3s ease;
+}
+.pill:hover { background: var(--white); color: var(--night); }
+
+/* Clima actual compacto junto a las redes sociales */
+.nav-actions { display: flex; align-items: center; gap: 18px; }
+.weather-badge {
+  display: flex; align-items: center; gap: 6px;
+  color: var(--white); white-space: nowrap;
+  font-size: .78rem; line-height: 1;
+}
+.weather-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 25px; height: 25px; flex: 0 0 25px;
+  color: #f2c66d;
+}
+.weather-icon svg { display: block; width: 25px; height: 25px; }
+.weather-temp { color: #ffffff !important; font-weight: 600; letter-spacing: .2px; }
+.weather-location {
+  color: rgba(255,255,255,.78); font-size: .68rem;
+  letter-spacing: .3px;
+}
+
+/* Iconos de redes sociales (escritorio) */
+.nav-icons { display: flex; align-items: center; gap: 14px; }
+.icon-circle {
+  width: 38px; height: 38px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.45);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--white); transition: all .3s ease; cursor: pointer;
+}
+.icon-circle:hover { background: rgba(255,255,255,.15); }
+.icon-circle svg { width: 16px; height: 16px; }
+
+/* Botón hamburguesa: OCULTO en escritorio, visible en mobile */
+.menu-trigger { display: none; }
+
+
+/* ── OVERLAY para cerrar el menú mobile tocando afuera ── */
+.nav-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(10,12,15,.55);
+  z-index: 998;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s ease;
+  backdrop-filter: blur(2px);
+}
+.nav-overlay.open { opacity: 1; pointer-events: all; }
+
+/* ── BOTÓN CERRAR dentro del menú mobile ── */
+.nav-close {
+  display: none; /* visible sólo en mobile */
+  position: absolute; top: 22px; right: 22px;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,.3);
+  background: transparent;
+  align-items: center; justify-content: center;
+  cursor: pointer; color: var(--white);
+  transition: background .25s ease;
+  flex-shrink: 0;
+}
+.nav-close:hover { background: rgba(255,255,255,.12); }
+.nav-close svg { width: 16px; height: 16px; pointer-events: none; }
+
+/* ── ICONOS SOCIALES en barra mobile ── */
+.nav-mobile-social {
+  display: none; /* visible sólo en mobile */
+}
+
+

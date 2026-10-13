@@ -1603,3 +1603,8 @@ El usuario aprobó el mapa de carpetas y componentes reutilizables. Primera etap
 ## Segunda etapa de modularización — 2026-10-13
 
 Se extrajeron las secciones de inicio a src/components/home/: HeroSection, IntroSection, ExploreSection, PlacesCarousel, SeasonsSection, ServicesSection y AboutSection. Los datos de estaciones, circuitos y lugares se centralizaron en src/data/homeData.js. HomePage.jsx ahora compone las secciones y conserva la lógica transversal de scroll, progreso de lectura y animaciones. Los estilos siguen en App.css para evitar cambios visuales; su separación queda pendiente de una auditoría de selectores. Verificación estática; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+### Organización de estilos React
+
+Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas por responsabilidad. Para conservar la cascada existente, los bloques se separan en tramos contiguos y se importan en el mismo orden original: `variables.css`, `global.css`, `layout.css`, `home-hero.css`, `page-hero.css`, `home.css`, `pages.css` y `responsive.css`. No se deben mover selectores entre hojas sin revisar solapamientos, media queries y animaciones.
