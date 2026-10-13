@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import heroBackgroundImage from '../../imagenes/fondo(1).webp'
@@ -205,6 +205,8 @@ function Footer() {
 
 function HomePage() {
   const [activeSeason, setActiveSeason] = useState('verano')
+  const placeScrollRef = useRef(null)
+  const placeLoopWidthRef = useRef(0)
 
   useEffect(() => {
     const updateScroll = () => {
@@ -264,6 +266,27 @@ function HomePage() {
     { path: '/lugares/tuneles-del-rio-potrero', name: 'Los tuneles', image: tunelesImage, alt: 'Amanecer en la sierra', description: 'Adentrate en los tuneles de Yunca y descubrí un recirrido único, donde la naturaleza y el misterio se encuntran.' },
   ]
 
+  useEffect(() => {
+    const track = placeScrollRef.current
+    if (!track) return
+
+    const positionAtMiddleSet = () => {
+      const firstCard = track.children[0]
+      const secondSetFirstCard = track.children[places.length]
+      if (!firstCard || !secondSetFirstCard) return
+
+      const loopWidth = secondSetFirstCard.offsetLeft - firstCard.offsetLeft
+      if (loopWidth <= 0) return
+
+      placeLoopWidthRef.current = loopWidth
+      track.scrollLeft = loopWidth
+    }
+
+    positionAtMiddleSet()
+    window.addEventListener('resize', positionAtMiddleSet)
+    return () => window.removeEventListener('resize', positionAtMiddleSet)
+  }, [places.length])
+
   return (
     <>
       <div id="readProgress" aria-hidden="true" />
@@ -317,17 +340,47 @@ function HomePage() {
               <div><div className="eyebrow">Recorridos</div><h2>Lugares para no dejar de ver</h2></div>
               <p>Una selección de rincones de Aconquija y sus alrededores, pensada para armar tu propio recorrido.</p>
             </div>
-            <div className="place-scroll reveal" id="placeScroll">
-              {places.map((place, index) => (
-                <article className="place-card" key={place.path}>
-                  <div className="place-img">
-                    <span className="place-num">{String(index + 1).padStart(2, '0')}</span>
-                    <Link to={place.path} aria-label={place.name}><img src={place.image} alt={place.alt} /></Link>
-                  </div>
-                  <h3>{place.name}</h3>
-                  <p>{place.description}</p>
-                </article>
-              ))}
+            <div className="place-carousel">
+              <button className="place-carousel-arrow place-carousel-arrow--prev" type="button" aria-label="Ver lugares anteriores" aria-controls="placeScroll" onClick={() => {
+                const track = placeScrollRef.current
+                const firstCard = track?.querySelector('.place-card')
+                const secondCard = track?.children[1]
+                if (track && firstCard && secondCard) {
+                  const step = secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
+                  track.scrollBy({ left: -step, behavior: 'smooth' })
+                }
+              }}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
+              </button>
+              <div className="place-scroll reveal" id="placeScroll" ref={placeScrollRef} onScroll={() => {
+                const track = placeScrollRef.current
+                const loopWidth = placeLoopWidthRef.current
+                if (!track || !loopWidth) return
+                if (track.scrollLeft < loopWidth - 1) track.scrollLeft += loopWidth
+                else if (track.scrollLeft >= loopWidth * 2 - 1) track.scrollLeft -= loopWidth
+              }}>
+                {[...places, ...places, ...places].map((place, index) => (
+                  <article className="place-card" key={`${Math.floor(index / places.length)}-${place.path}`}>
+                    <div className="place-img">
+                      <span className="place-num">{String((index % places.length) + 1).padStart(2, '0')}</span>
+                      <Link to={place.path} aria-label={place.name}><img src={place.image} alt={place.alt} /></Link>
+                    </div>
+                    <h3>{place.name}</h3>
+                    <p>{place.description}</p>
+                  </article>
+                ))}
+              </div>
+              <button className="place-carousel-arrow place-carousel-arrow--next" type="button" aria-label="Ver lugares siguientes" aria-controls="placeScroll" onClick={() => {
+                const track = placeScrollRef.current
+                const firstCard = track?.querySelector('.place-card')
+                const secondCard = track?.children[1]
+                if (track && firstCard && secondCard) {
+                  const step = secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
+                  track.scrollBy({ left: step, behavior: 'smooth' })
+                }
+              }}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6" /></svg>
+              </button>
             </div>
             <div className="scroll-hint reveal">Deslizá hacia la derecha →</div>
           </div>
