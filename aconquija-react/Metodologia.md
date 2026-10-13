@@ -1517,9 +1517,9 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 
 ## Entrada lateral del párrafo de introducción — 2026-10-12
 
-- **Archivo afectado:** `aconquija-react/src/App.css`.
-- **Cambio:** el párrafo `.intro .lead` comienza con transparencia y un desplazamiento horizontal de 56 px hacia la derecha; cuando el contenedor `.reveal` de la introducción recibe la clase `.in` al entrar en pantalla, el texto se desliza suavemente hasta su posición normal durante 1 segundo.
-- **Momento y repetición:** aprovecha el `IntersectionObserver` que ya existe para las secciones; al revelarse el contenedor, la animación se ejecuta una vez porque el observador deja de observar el elemento tras su primera entrada.
-- **Alcance:** solo se animó la aparición del párrafo solicitado. No se cambiaron el texto, la estructura JSX, las imágenes, otras secciones ni el sitio original; no se agregaron dependencias.
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** el propio párrafo recibe la clase `reveal` para que el observador existente detecte cuándo entra en la zona visible. Comienza transparente y desplazado 76 px hacia la derecha; luego se desliza hasta su posición normal durante 1,7 segundos, con una demora breve de 0,08 segundos.
+- **Momento y repetición:** se activa cuando el texto mismo entra en pantalla y se ejecuta una sola vez, porque el observador deja de observar el elemento tras su primera entrada.
+- **Alcance:** solo se ajustó la aparición del párrafo solicitado. No se cambiaron sus palabras, imágenes, otras secciones ni el sitio original; no se agregaron dependencias.
 - **Accesibilidad:** la regla global existente `prefers-reduced-motion: reduce` reduce la duración de las transiciones.
-- **Validación:** cambio de CSS revisado estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+- **Validación:** cambios revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
