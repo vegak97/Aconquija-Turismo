@@ -209,6 +209,7 @@ function HomePage() {
   const placeLoopWidthRef = useRef(0)
   const placePausedRef = useRef(false)
   const placeResumeTimerRef = useRef(null)
+  const placeSnapTimerRef = useRef(null)
 
   useEffect(() => {
     const updateScroll = () => {
@@ -344,6 +345,7 @@ function HomePage() {
       if (centerUpdateTimer) window.clearTimeout(centerUpdateTimer)
       if (autoplayTimeout) window.clearTimeout(autoplayTimeout)
       if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
+      if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
     }
   }, [places.length])
 
@@ -424,10 +426,36 @@ function HomePage() {
                 const track = placeScrollRef.current
                 const loopWidth = placeLoopWidthRef.current
                 if (!track || !loopWidth) return
-                // Reubicar solo al acercarse a los extremos de la secuencia central.
-                // Evita que cada pequeño gesto hacia atrás provoque un salto y bloquee el swipe.
+
+                // Mantener el bucle infinito sin interrumpir el gesto manual.
                 if (track.scrollLeft < loopWidth * 0.5) track.scrollLeft += loopWidth
                 else if (track.scrollLeft >= loopWidth * 2) track.scrollLeft -= loopWidth
+
+                // Cuando el trackpad deja de mover el carrusel, alinear la tarjeta
+                // más cercana al centro para que no queden imágenes a medio camino.
+                if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
+                placeSnapTimerRef.current = window.setTimeout(() => {
+                  const cards = Array.from(track.querySelectorAll('.place-card'))
+                  if (!cards.length) return
+
+                  const centerX = track.scrollLeft + track.clientWidth / 2
+                  let closestCard = null
+                  let closestDistance = Infinity
+                  cards.forEach((card) => {
+                    const cardCenterX = card.offsetLeft + card.offsetWidth / 2
+                    const distance = Math.abs(cardCenterX - centerX)
+                    if (distance < closestDistance) {
+                      closestDistance = distance
+                      closestCard = card
+                    }
+                  })
+
+                  if (!closestCard) return
+                  const targetLeft = closestCard.offsetLeft + closestCard.offsetWidth / 2 - track.clientWidth / 2
+                  if (Math.abs(targetLeft - track.scrollLeft) > 2) {
+                    track.scrollTo({ left: targetLeft, behavior: 'smooth' })
+                  }
+                }, 180)
               }}>
                 {[...places, ...places, ...places].map((place, index) => (
                   <article className="place-card" key={`${Math.floor(index / places.length)}-${place.path}`}>
