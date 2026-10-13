@@ -1534,3 +1534,13 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Accesibilidad y movimiento:** las flechas tienen nombres accesibles y foco visible; el carrusel no introduce animaciones automáticas.
 - **Autorización:** el usuario aprobó explícitamente la opción A de carrusel infinito y fluido el 2026-10-12.
 - **Validación:** revisión estática de los cambios y del registro. No se ejecutaron build, lint ni pruebas en navegador.
+
+
+## Movimiento automático y elevación de la tarjeta central en Lugares — 2026-10-12
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** el carrusel avanza automáticamente hacia la derecha a velocidad suave y conserva el bucle infinito existente. Se pausa temporalmente cuando el visitante interactúa con él o mantiene el puntero encima, y vuelve a avanzar al dejar de interactuar.
+- **Tarjeta central:** se calcula cuál de las tarjetas está más cerca del centro visible y se le aplica una elevación sutil con escala y sombra suaves; el efecto se adapta a pantallas pequeñas.
+- **Accesibilidad:** se respeta `prefers-reduced-motion`; cuando el sistema solicita reducir movimiento, el avance automático se desactiva. Se mantienen las flechas de escritorio y el desplazamiento manual con tacto o panel táctil.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Validación:** revisión estática del código y la documentación; no se ejecutaron build, lint ni pruebas en navegador.
