@@ -25,13 +25,13 @@
   opacity: 0; transform: translateY(24px);
   animation: heroIn 1.4s .3s ease forwards;
 }
-@keyframes heroIn { to { opacity: 1; transform: translateY(0); } }
+@keyframes heroIn { to { opacity: 1; transform: translateY(10px); } }
 .hero-content h1 {
   font-family: var(--ff-display); font-weight: 500;
-  font-size: clamp(3.6rem, 11vw, 8.5rem); letter-spacing: 1px; line-height: .95;
+  font-size: clamp(3.3rem, 8.8vw, 7.2rem); letter-spacing: 1px; line-height: .95;
 }
 .hero-sub {
-  margin-top: 18px; font-size: .85rem; letter-spacing: 5px; text-transform: uppercase;
+  margin-top: 15px; font-size: .8rem; letter-spacing: 4px; text-transform: uppercase;
   color: rgba(255,255,255,.88); font-weight: 500;
 }
 
@@ -41,8 +41,8 @@
   color: #fff;
 }
 .hero-divider {
-  width: 1px; height: 46px; background: rgba(255,255,255,.55);
-  margin: 34px auto 0;
+  width: 1px; height: 40px; background: rgba(255,255,255,.55);
+  margin: 28px auto 0;
 }
 .scroll-cue {
   position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);

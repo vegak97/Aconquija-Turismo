@@ -1019,3 +1019,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio:** se trasladaron los bloques CSS existentes por tramos contiguos para conservar el orden de cascada original: variables y fuentes, reglas globales, navegación/progreso, hero de inicio, hero de páginas internas, secciones de inicio/pie, contenido de páginas internas y reglas responsive/movimiento.
 - **Alcance:** se reorganizaron declaraciones sin rediseñar valores, selectores ni puntos de corte. Se mantiene `App.css` como entrada para no cambiar el import existente en React. El CSS general de `index.css` queda intacto.
 - **Verificación:** revisión estática de límites y orden de imports. No se ejecutaron build, lint ni comprobación visual en navegador.
+
+
+## 2026-10-13 — Dar más aire a la portada principal
+
+- **Archivos afectados:** `src/styles/home-hero.css`, `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** se redujo moderadamente el tamaño máximo y proporcional del título «Aconquija»; se hizo algo más compacto el subtítulo y el separador; el bloque central termina ahora ligeramente más abajo (10 px respecto del centro vertical). En móviles también se redujo el tamaño del título para mantener la composición despejada en pantallas estrechas.
+- **Motivo:** dar más protagonismo visual a los Nevados, evitando que el título y el texto tapen tanto el paisaje, sin volver el título demasiado discreto.
+- **Autorización:** petición directa del usuario el 2026-10-13 para aplicar las dos primeras mejoras visuales; el usuario buscará por separado la fotografía original de mayor calidad.
+- **Alcance respetado:** no se cambió la imagen de fondo, el tratamiento de la imagen ni otras secciones de la página. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** cambios revisados estáticamente y guardados en GitHub. No se ejecutaron build, lint ni pruebas visuales en navegador; el ajuste visual final queda pendiente de la revisión del usuario.

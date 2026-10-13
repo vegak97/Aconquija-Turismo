@@ -152,8 +152,8 @@
   /* Stats del intro */
   .intro-stats { flex-direction: column; gap: 28px; }
 
-  /* Hero principal — ajuste de texto */
-  .hero-content h1 { font-size: clamp(3rem, 15vw, 5rem); }
+  /* Hero principal — título más contenido en móviles */
+  .hero-content h1 { font-size: clamp(2.65rem, 12vw, 4.25rem); }
 }
 
 
