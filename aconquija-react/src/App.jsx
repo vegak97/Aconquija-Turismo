@@ -511,10 +511,26 @@ function HomePage() {
               <p>Alojamiento, gastronomía y guías locales para armar tu estadía sin vueltas.</p>
             </div>
             <div className="serv-grid reveal">
-              <a className="serv-item" href="#sobre"><div className="num">01</div><h4>Dónde dormir</h4><p>Posadas de montaña, cabañas y hospedajes familiares con vista a la sierra.</p></a>
-              <a className="serv-item" href="#sobre"><div className="num">02</div><h4>Dónde comer</h4><p>Cocina regional, cabrito de monte y productos de huerta de cercanía.</p></a>
-              <a className="serv-item" href="#sobre"><div className="num">03</div><h4>Guías y excursiones</h4><p>Baqueanos certificados para trekking, cabalgatas y travesías de altura.</p></a>
-              <a className="serv-item" href="#sobre"><div className="num">04</div><h4>Artesanías</h4><p>Tejidos en telar, cerámica y productos regionales hechos a mano.</p></a>
+              <a className="serv-item" href="#sobre">
+                <div className="num">01</div><h4>Dónde dormir</h4>
+                <p>Posadas de montaña, cabañas y hospedajes familiares con vista a la sierra.</p>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 22.5 24 8l18 14.5M11 20v20h26V20M20 40V27h8v13M17 22h.01M31 22h.01" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+              </a>
+              <a className="serv-item" href="#sobre">
+                <div className="num">02</div><h4>Dónde comer</h4>
+                <p>Cocina regional, cabrito de monte y productos de huerta de cercanía.</p>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M7 22h27a12 12 0 0 1-12 12H19A12 12 0 0 1 7 22ZM19 34v5M12 39h19M38 8v31M34 8v9a4 4 0 0 0 8 0V8M34 8v8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+              </a>
+              <a className="serv-item" href="#sobre">
+                <div className="num">03</div><h4>Guías y excursiones</h4>
+                <p>Baqueanos certificados para trekking, cabalgatas y travesías de altura.</p>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" strokeWidth="1.7"/><path d="m14 29 7-14 4 10 4-5 5 9H14ZM24 8v4M40 24h-4M24 40v-4M8 24h4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+              </a>
+              <a className="serv-item" href="#sobre">
+                <div className="num">04</div><h4>Artesanías</h4>
+                <p>Tejidos en telar, cerámica y productos regionales hechos a mano.</p>
+                <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M16 9h16l-2 7 5 6-3 15H16l-3-15 5-6-2-7ZM18 16h12M17 25h14M20 31h8M9 12l4 4M39 12l-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
+              </a>
             </div>
           </div>
         </section>
