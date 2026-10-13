@@ -809,3 +809,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario eligió la opción A: carrusel infinito con transición continua, con flechas en computadora y gesto de deslizamiento disponible tanto en móvil como en PC/notebook.
 - **Autorización:** aprobación explícita del usuario el 2026-10-12.
 - **Resultado:** implementación y documentación actualizadas en la rama `main`; revisión estática prevista tras guardar. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-12 — Movimiento automático y tarjeta central elevada en Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se agregó desplazamiento automático continuo hacia la derecha con bucle infinito. La animación se pausa mientras el puntero está encima o el visitante interactúa con el carrusel, y se reanuda al terminar la interacción. La tarjeta más cercana al centro visible recibe una elevación sutil, escala y sombra, con intensidad reducida en pantallas pequeñas.
+- **Accesibilidad:** el avance automático respeta `prefers-reduced-motion`; el gesto manual y las flechas existentes se conservan.
+- **Motivo:** el usuario pidió que el carrusel se moviera siempre hacia la derecha y que la imagen central se levantara levemente.
+- **Autorización:** petición directa del usuario el 2026-10-12.
+- **Resultado:** código y documentación actualizados en la rama `main`. Revisión estática realizada; no se ejecutaron build, lint ni pruebas de navegador.
