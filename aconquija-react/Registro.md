@@ -906,3 +906,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió que los separadores de los cuatro servicios fueran más finos visualmente, grises y más transparentes el 2026-10-13.
 - **Alcance respetado:** solo se modificó el estilo de los separadores; no se tocó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Añadir iconos grises a las tarjetas de Servicios
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió un icono SVG lineal gris dentro de cada tarjeta, debajo del texto: casa para alojamiento, plato y cubiertos para gastronomía, brújula con montañas para guías y excursiones, y pieza de cerámica para artesanías. Los iconos mantienen un estilo de trazo sencillo y se aclaran levemente al pasar el cursor.
+- **Motivo y autorización:** el usuario pidió iconos típicos para alojamiento y comida, y diseños creativos para las otras dos categorías, todos grises y ubicados debajo del contenido dentro de cada tarjeta, el 2026-10-13.
+- **Alcance respetado:** no se cambiaron los textos ni los separadores de Servicios; no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
