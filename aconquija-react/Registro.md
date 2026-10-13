@@ -1090,3 +1090,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se conserva el contador original de 22 localidades del sitio (el mapa muestra inicialmente las 16 localidades confirmadas para esta etapa), se mantienen las clases de animación de entrada de la introducción y se corrige el identificador interno del tramo de la Cuesta de la Chilca.
 - **Motivo y autorización:** ajuste necesario dentro de la petición directa de incorporar el mapa, para no alterar un dato general del sitio ni quitar la animación existente.
 - **Resultado:** corrección aplicada en GitHub; no se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Retirar el mapa interactivo de la introducción
+
+### 2026-10-13 17:08:24 -03:00
+- **Archivos afectados:** `src/components/home/IntroSection.jsx`, `src/components/home/AconquijaInteractiveMap.jsx`, `src/data/aconquijaMapData.js`, `src/styles/home.css`, `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** se quitó el mapa de la sección de introducción y se eliminaron sus funciones de selección/hover de localidades, las fichas de acceso y los datos de localidades y tramos viales que solo utilizaba ese mapa. El texto general de Aconquija permanece y ahora ocupa el espacio de la sección sin la columna del mapa. Se conservaron los indicadores de altura, habitantes y cantidad de localidades.
+- **Motivo:** el usuario indicó que el cambio del mapa no le gustó y pidió retirarlo junto con sus funciones.
+- **Autorización:** petición directa del usuario el 2026-10-13.
+- **Alcance respetado:** los cambios quedaron dentro de `aconquija-react/`; no se modificó el sitio HTML/CSS/JavaScript original ni `Metodologia.md`.
+- **Verificación:** se comprobaron las referencias directas del componente y de los datos del mapa antes de eliminarlos. Se actualizaron los estilos de escritorio y responsive asociados al mapa. No se ejecutaron `npm run build`, lint ni pruebas de navegador, por lo que la validación visual/funcional queda pendiente.
