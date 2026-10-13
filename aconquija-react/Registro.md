@@ -914,3 +914,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió iconos típicos para alojamiento y comida, y diseños creativos para las otras dos categorías, todos grises y ubicados debajo del contenido dentro de cada tarjeta, el 2026-10-13.
 - **Alcance respetado:** no se cambiaron los textos ni los separadores de Servicios; no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Ajustar iconos de gastronomía y excursiones
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el icono de gastronomía ahora muestra un plato redondo visto desde arriba, con cuchara a la izquierda y tenedor a la derecha, ambos sobre el plato. El icono de guías y excursiones se reemplazó por un mapa de tesoro con camino punteado y una X como destino. Se conserva el estilo lineal gris y la ubicación debajo de cada descripción dentro de la tarjeta.
+- **Motivo y autorización:** el usuario pidió estos dos diseños el 2026-10-13.
+- **Alcance respetado:** no se modificó `App.css`, los textos ni `Metodologia.md`; tampoco el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
