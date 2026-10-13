@@ -1000,3 +1000,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** el usuario aprobó el mapa de carpetas y componentes el 2026-10-13.
 - **Alcance:** no se modificaron intencionalmente textos, imágenes, estilos ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** revisión estática de imports y estructura. No se ejecutaron build, lint ni pruebas de navegador; la extracción de secciones y organización de estilos queda pendiente.
+
+
+## 2026-10-13 — Extraer secciones reutilizables de la página de inicio
+
+- **Archivos creados:** `src/components/home/HeroSection.jsx`, `IntroSection.jsx`, `ExploreSection.jsx`, `PlacesCarousel.jsx`, `SeasonsSection.jsx`, `ServicesSection.jsx`, `AboutSection.jsx` y `src/data/homeData.js`.
+- **Archivo actualizado:** `src/pages/HomePage.jsx`.
+- **Cambio:** `HomePage` ahora compone componentes de sección. El carrusel conserva refs, avance automático, bucle infinito, pausa manual y centrado en su propio componente. Los datos de estaciones, circuitos y lugares se centralizaron en `homeData.js`.
+- **Motivo y autorización:** implementación del mapa de arquitectura aprobado por el usuario el 2026-10-13.
+- **Alcance:** se conservaron clases CSS, textos, imágenes y comportamiento intencional. `App.css` no se dividió para evitar cambios visuales sin auditar selectores. No se modificó el sitio original fuera de `aconquija-react/`.
+- **Verificación:** revisión estática de imports, exports, datos y composición. No se ejecutaron build, lint ni pruebas de navegador.
