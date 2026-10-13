@@ -1514,3 +1514,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Límites:** no se modificaron imágenes, textos, colores base, estructura JSX ni el sitio original. Se conservó la preferencia de accesibilidad para reducir movimiento.
 - **Tipografía:** Playfair Display para títulos y Montserrat para textos.
 - **Validación:** revisión estática del CSS; queda pendiente comprobar el resultado en navegador. No se ejecutaron build, lint ni pruebas de navegador.
+
+## Entrada lateral del párrafo de introducción — 2026-10-12
+
+- **Archivo afectado:** `aconquija-react/src/App.css`.
+- **Cambio:** el párrafo `.intro .lead` comienza con transparencia y un desplazamiento horizontal de 56 px hacia la derecha; cuando el contenedor `.reveal` de la introducción recibe la clase `.in` al entrar en pantalla, el texto se desliza suavemente hasta su posición normal durante 1 segundo.
+- **Momento y repetición:** aprovecha el `IntersectionObserver` que ya existe para las secciones; al revelarse el contenedor, la animación se ejecuta una vez porque el observador deja de observar el elemento tras su primera entrada.
+- **Alcance:** solo se animó la aparición del párrafo solicitado. No se cambiaron el texto, la estructura JSX, las imágenes, otras secciones ni el sitio original; no se agregaron dependencias.
+- **Accesibilidad:** la regla global existente `prefers-reduced-motion: reduce` reduce la duración de las transiciones.
+- **Validación:** cambio de CSS revisado estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
