@@ -946,3 +946,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario indicó que la ventana chocaba con la puerta y pidió dejar solamente la puerta, el 2026-10-13.
 - **Alcance respetado:** solo se ajustó el SVG de alojamiento; no se modificaron otros iconos, estilos, textos, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13 — Reforzar el dorado de los iconos al pasar el cursor
+
+- **Archivos afectados:** `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** el color interactivo de los iconos de las tarjetas de Servicios cambia de dorado arena (`#cdaa78`) a un dorado más intenso (`#e0a800`) al pasar el cursor o al enfocar la tarjeta con teclado.
+- **Motivo y autorización:** el usuario pidió que el color al poner el cursor sobre la tarjeta fuera un dorado más fuerte y visible, el 2026-10-13.
+- **Alcance respetado:** solo se modificó el color interactivo de los iconos de Servicios y se registró el cambio; no se alteraron los colores base, las tarjetas, otros iconos ni `Metodologia.md` o el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambio guardado y revisado estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
