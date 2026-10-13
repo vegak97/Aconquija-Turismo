@@ -779,3 +779,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Alcance respetado:** solo CSS y documentación dentro de `aconquija-react/`; no se modificaron JSX, imágenes, textos, estructura ni el sitio original.
 - **Accesibilidad:** se conserva la regla existente `prefers-reduced-motion`.
 - **Resultado:** actualización guardada en GitHub. Verificación visual local pendiente; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12 — Animación lateral del párrafo de introducción
+
+- **Archivo afectado:** `aconquija-react/src/App.css`; se documentó el cambio en `aconquija-react/Metodologia.md` y en este registro.
+- **Cambio concreto:** el párrafo `.intro .lead` aparece con una transición de opacidad y un desplazamiento de 56 px desde la derecha hasta su posición original. La transición dura 1 segundo y tiene una demora breve de 0,12 segundos para que el movimiento se sienta natural. Se activa al entrar en pantalla la sección de introducción y no se repite al volver a desplazarse.
+- **Motivo:** petición del usuario para que el texto de presentación de Aconquija se deslice desde la derecha y se acomode suavemente en su lugar.
+- **Autorización:** permiso explícito del usuario el 2026-10-12, tras explicar el comportamiento propuesto.
+- **Alcance respetado:** solo se modificó el CSS de la aplicación React y se actualizaron los documentos de metodología y registro. No se cambió el texto ni la estructura JSX, no se agregaron dependencias y no se modificó el sitio original.
+- **Accesibilidad:** la preferencia del sistema para reducir movimiento sigue respetada por la regla CSS existente.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
