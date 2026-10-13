@@ -1583,3 +1583,13 @@ El avance automático desplaza una tarjeta por vez hacia la derecha y espera 2,5
 
 ### Corrección del rebote al elevar la tarjeta central del carrusel
 La regla de hover de las tarjetas no debe sobrescribir la elevación de `.place-card.is-center`. Las tarjetas no centrales pueden elevarse al pasar el puntero; la tarjeta central conserva `translateY(-10px) scale(1)` incluso cuando está bajo el puntero, evitando cambios bruscos de altura al desplazarse el carrusel.
+
+## Subrayado temporizado y sección activa en la navegación — 2026-10-13
+
+- **Archivos afectados:** `src/App.jsx`, `src/App.css`, `Metodologia.md` y `Registro.md`.
+- **Reutilización:** se amplió el `updateScroll` que ya actualizaba la barra de progreso y el estado visual del encabezado. Ese mismo listener identifica cuál de las secciones principales quedó atrás del umbral visible y marca el enlace correspondiente, sin añadir otro listener de scroll ni otra dependencia.
+- **Escritorio:** el subrayado dorado arena (`#cdaa78`) permanece oculto hasta que el puntero pasa por encima de un enlace o este recibe foco de teclado. Al interactuar, crece de izquierda a derecha durante 1,45 segundos; al retirar el puntero se reinicia.
+- **Móvil:** el enlace que corresponde a la sección actual mantiene la línea visible mientras esa sección está activa. Al desplazarse a otra sección, la marca cambia al enlace correspondiente.
+- **Accesibilidad y alcance:** se conserva el foco visible y la preferencia global de movimiento reducido. No se añadieron dependencias ni se modificó el sitio original fuera de `aconquija-react/`.
+- **Autorización:** petición directa del usuario el 2026-10-13.
+- **Validación:** cambios revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas en navegador.
