@@ -963,3 +963,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario aprobó la combinación de aparición escalonada, elevación con sombra, icono dorado y línea dorada animada, con intensidad elegante y sutil, el 2026-10-13.
 - **Accesibilidad y alcance:** los efectos interactivos también se activan con foco de teclado y se conserva la regla global existente para reducir movimiento. Solo se modificaron los estilos de Servicios y este registro; no se tocó `App.jsx`, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Animaciones de Servicios más pausadas y activadas al entrar en pantalla
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se alargó ligeramente la aparición escalonada de las cuatro tarjetas, con pausas progresivas un poco mayores. También se hicieron más pausadas la elevación, la sombra, el movimiento del icono y el crecimiento de la línea dorada al interactuar.
+- **Detección de la sección:** las animaciones de los elementos revelables dentro de Servicios se activan al entrar en la zona visible y se preparan de nuevo al salir, para volver a ejecutarse cuando el visitante regrese a esa sección. Las demás secciones conservan su comportamiento anterior.
+- **Motivo y autorización:** el usuario pidió que la animación fuera un poco más lenta y que se activara al detectar que está en la sección de Servicios, el 2026-10-13.
+- **Alcance respetado:** solo se ajustaron el disparador de aparición, los tiempos de animación de Servicios y este registro. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
