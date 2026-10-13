@@ -552,7 +552,7 @@ header.nav .nav-mobile-social .icon-circle svg {
   overflow: hidden;
   background: var(--mist);
   padding: 44px 30px;
-  transition: background .35s ease, translate .45s var(--motion-soft), box-shadow .45s var(--motion-soft);
+  transition: background .45s ease, translate .65s var(--motion-soft), box-shadow .65s var(--motion-soft);
 }
 .serv-item::after {
   content: "";
@@ -562,7 +562,7 @@ header.nav .nav-mobile-social .icon-circle svg {
   width: 0;
   height: 2px;
   background: #e0a800;
-  transition: width .48s var(--motion-soft);
+  transition: width .7s var(--motion-soft);
 }
 .serv-item:hover,
 .serv-item:focus-visible {
@@ -578,7 +578,7 @@ header.nav .nav-mobile-social .icon-circle svg {
 .serv-icon {
   display: flex; justify-content: center; align-items: center;
   margin-top: 26px; color: #171717;
-  transition: color .3s ease, transform .4s var(--motion-soft);
+  transition: color .4s ease, transform .55s var(--motion-soft);
 }
 .serv-item:hover .serv-icon,
 .serv-item:focus-visible .serv-icon { transform: translateY(-2px); }
@@ -1306,17 +1306,17 @@ nav.links a::after {
 .intro-stats.reveal.in > *,
 .card-grid.reveal.in > *,
 .serv-grid.reveal.in > * {
-  animation: detailRise .7s var(--motion-soft) both;
+  animation: detailRise .95s var(--motion-soft) both;
 }
 .intro-stats.reveal.in > *:nth-child(2),
 .card-grid.reveal.in > *:nth-child(2),
 .serv-grid.reveal.in > *:nth-child(2) {
-  animation-delay: .08s;
+  animation-delay: .12s;
 }
 .intro-stats.reveal.in > *:nth-child(3),
 .card-grid.reveal.in > *:nth-child(3),
 .serv-grid.reveal.in > *:nth-child(3) {
-  animation-delay: .16s;
+  animation-delay: .36s;
 }
 .card-grid.reveal.in > *:nth-child(4),
 .serv-grid.reveal.in > *:nth-child(4) {
