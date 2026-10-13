@@ -889,3 +889,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** la detección del centro ahora usa `offsetLeft` y `offsetWidth` junto con el desplazamiento del contenedor, medidas que no cambian por las transformaciones visuales. Se añadió una sombra suave a las imágenes y una sombra algo más marcada a la tarjeta central.
 - **Motivo y autorización:** el usuario pidió corregir el rebote y añadir sombreado el 2026-10-13; indicó que no era necesario actualizar `Metodologia.md` para este tipo de ajuste.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-13 — Sombreado y centrado automático del carrusel de Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se reforzó la sombra de las imágenes y se añadió un ajuste automático al terminar el desplazamiento horizontal: el carrusel detecta la tarjeta más cercana al centro y la alinea suavemente cuando el usuario deja de moverlo con el panel táctil. Se conserva el bucle infinito y el avance automático.
+- **Motivo:** el usuario pidió un sombreado más visible y que las imágenes no queden descentradas ni cortadas al desplazarse con el panel táctil.
+- **Autorización:** petición directa del usuario el 2026-10-13.
+- **Alcance respetado:** no se modificó `Metodologia.md`, ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; la comprobación visual local sigue pendiente.
+
