@@ -554,10 +554,12 @@ header.nav .nav-mobile-social .icon-circle svg {
 .serv-item p    { font-size: .9rem; color: #6b6f76; margin-top: 10px; line-height: 1.6; }
 .serv-icon {
   display: flex; justify-content: center; align-items: center;
-  margin-top: 26px; color: rgba(105, 110, 116, .72);
+  margin-top: 26px; color: #171717;
+  transition: color .3s ease;
 }
 .serv-icon svg { display: block; width: 42px; height: 42px; }
-.serv-item:hover .serv-icon { color: rgba(105, 110, 116, .9); }
+.serv-item:hover .serv-icon,
+.serv-item:focus-visible .serv-icon { color: #cdaa78; }
 
 
 /* Separadores verticales suaves entre las tarjetas de Servicios */
