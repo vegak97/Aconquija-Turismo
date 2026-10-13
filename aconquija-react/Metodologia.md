@@ -1593,3 +1593,8 @@ La regla de hover de las tarjetas no debe sobrescribir la elevación de `.place-
 - **Accesibilidad y alcance:** se conserva el foco visible y la preferencia global de movimiento reducido. No se añadieron dependencias ni se modificó el sitio original fuera de `aconquija-react/`.
 - **Autorización:** petición directa del usuario el 2026-10-13.
 - **Validación:** cambios revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas en navegador.
+
+
+## Arquitectura React aprobada — 2026-10-13
+
+El usuario aprobó el mapa de carpetas y componentes reutilizables. Primera etapa: separar encabezado, pie de página, enlaces sociales, indicador meteorológico, página de inicio, página de ruta pendiente y página 404; centralizar las rutas aprobadas en data/routes.js. App.jsx queda dedicado a React Router. La página de inicio todavía mantiene sus secciones y el carrusel en un solo archivo; se extraerán en una etapa posterior, junto con la revisión de estilos y datos. No se cambia el diseño ni el sitio original fuera de aconquija-react. La verificación es estática: no se ejecutaron build, lint ni pruebas de navegador.
