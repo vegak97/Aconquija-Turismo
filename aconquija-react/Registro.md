@@ -769,3 +769,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** el usuario aceptó seguir la recomendación tipográfica el 2026-10-12.
 - **Alcance respetado:** solo tipografías y documentación dentro de `aconquija-react/`; no se alteraron colores, imágenes, contenido ni estructura, y no se modificó el sitio original.
 - **Resultado:** cambios guardados en GitHub. La revisión visual debe realizarse en el navegador local; no se ejecutaron lint, build ni pruebas de navegador.
+
+## 2026-10-12 — Detalles cálidos y microinteracciones
+
+- **Archivo afectado:** `aconquija-react/src/App.css`, además de la documentación en `aconquija-react/Metodologia.md`.
+- **Cambio concreto:** se agregaron líneas doradas pequeñas bajo rótulos de sección, transiciones más cálidas en tarjetas fotográficas, títulos de lugares, botones, iconos y pestañas; también una entrada escalonada para estadísticas, tarjetas y servicios cuando sus contenedores se revelan al desplazarse.
+- **Motivo:** dar una sensación más viva, natural y cálida manteniendo el diseño sobrio y las fotografías existentes.
+- **Autorización:** petición directa del usuario el 2026-10-12 para agregar animaciones y detalles visuales.
+- **Alcance respetado:** solo CSS y documentación dentro de `aconquija-react/`; no se modificaron JSX, imágenes, textos, estructura ni el sitio original.
+- **Accesibilidad:** se conserva la regla existente `prefers-reduced-motion`.
+- **Resultado:** actualización guardada en GitHub. Verificación visual local pendiente; no se ejecutaron lint, build ni pruebas de navegador.
