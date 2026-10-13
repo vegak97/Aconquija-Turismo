@@ -207,6 +207,9 @@ function HomePage() {
   const [activeSeason, setActiveSeason] = useState('verano')
   const placeScrollRef = useRef(null)
   const placeLoopWidthRef = useRef(0)
+  const placeAnimationFrameRef = useRef(null)
+  const placePausedRef = useRef(false)
+  const placeResumeTimerRef = useRef(null)
 
   useEffect(() => {
     const updateScroll = () => {
@@ -282,10 +285,60 @@ function HomePage() {
       track.scrollLeft = loopWidth
     }
 
+    const updateCenterCard = () => {
+      const trackBounds = track.getBoundingClientRect()
+      const centerX = trackBounds.left + trackBounds.width / 2
+      let closestCard = null
+      let closestDistance = Infinity
+
+      Array.from(track.querySelectorAll('.place-card')).forEach((card) => {
+        const bounds = card.getBoundingClientRect()
+        const distance = Math.abs((bounds.left + bounds.width / 2) - centerX)
+        if (distance < closestDistance) {
+          closestDistance = distance
+          closestCard = card
+        }
+      })
+
+      track.querySelectorAll('.place-card.is-center').forEach((card) => {
+        if (card !== closestCard) card.classList.remove('is-center')
+      })
+      if (closestCard) closestCard.classList.add('is-center')
+    }
+
+    let lastCenterUpdate = 0
+    const animate = (timestamp) => {
+      if (!placePausedRef.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        track.scrollLeft += 0.35
+      }
+
+      if (timestamp - lastCenterUpdate > 100) {
+        updateCenterCard()
+        lastCenterUpdate = timestamp
+      }
+
+      placeAnimationFrameRef.current = window.requestAnimationFrame(animate)
+    }
+
     positionAtMiddleSet()
+    updateCenterCard()
+    placeAnimationFrameRef.current = window.requestAnimationFrame(animate)
     window.addEventListener('resize', positionAtMiddleSet)
-    return () => window.removeEventListener('resize', positionAtMiddleSet)
+
+    return () => {
+      window.removeEventListener('resize', positionAtMiddleSet)
+      if (placeAnimationFrameRef.current) window.cancelAnimationFrame(placeAnimationFrameRef.current)
+      if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
+    }
   }, [places.length])
+
+  const pausePlaceCarousel = () => {
+    placePausedRef.current = true
+    if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
+    placeResumeTimerRef.current = window.setTimeout(() => {
+      placePausedRef.current = false
+    }, 1800)
+  }
 
   return (
     <>
@@ -340,7 +393,7 @@ function HomePage() {
               <div><div className="eyebrow">Recorridos</div><h2>Lugares para no dejar de ver</h2></div>
               <p>Una selección de rincones de Aconquija y sus alrededores, pensada para armar tu propio recorrido.</p>
             </div>
-            <div className="place-carousel">
+            <div className="place-carousel" onPointerDown={pausePlaceCarousel} onPointerUp={pausePlaceCarousel} onPointerCancel={pausePlaceCarousel} onMouseEnter={() => { placePausedRef.current = true }} onMouseLeave={() => { placePausedRef.current = false }} onFocusCapture={() => { placePausedRef.current = true }} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) placePausedRef.current = false }}>
               <button className="place-carousel-arrow place-carousel-arrow--prev" type="button" aria-label="Ver lugares anteriores" aria-controls="placeScroll" onClick={() => {
                 const track = placeScrollRef.current
                 const firstCard = track?.querySelector('.place-card')
