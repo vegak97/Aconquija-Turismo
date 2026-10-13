@@ -799,3 +799,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** solo se invirtió la dirección de esta animación y se actualizó la documentación. No se modificaron el texto, otras secciones ni el sitio original.
 - **Validación:** se comprobó estáticamente el cambio en CSS y documentación. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-12T23:47:00-03:00 — Carrusel infinito y flechas de escritorio para Lugares
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se duplicó la secuencia de cinco lugares en tres tramos para crear un bucle horizontal fluido, reajustando la posición de scroll al cruzar los límites equivalentes. Se agregaron flechas anterior/siguiente que desplazan una tarjeta por vez y se muestran solo en pantallas mayores a 880 px.
+- **Interacción conservada:** se mantiene el scroll horizontal nativo para deslizar con el dedo o panel táctil, y se conserva el desplazamiento horizontal de escritorio. No se agregaron dependencias ni se modificó el sitio original fuera de `aconquija-react/`.
+- **Motivo:** el usuario eligió la opción A: carrusel infinito con transición continua, con flechas en computadora y gesto de deslizamiento disponible tanto en móvil como en PC/notebook.
+- **Autorización:** aprobación explícita del usuario el 2026-10-12.
+- **Resultado:** implementación y documentación actualizadas en la rama `main`; revisión estática prevista tras guardar. No se ejecutaron build, lint ni pruebas de navegador.
