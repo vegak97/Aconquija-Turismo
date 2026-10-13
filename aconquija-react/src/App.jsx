@@ -207,10 +207,8 @@ function HomePage() {
   const [activeSeason, setActiveSeason] = useState('verano')
   const placeScrollRef = useRef(null)
   const placeLoopWidthRef = useRef(0)
-  const placeAnimationFrameRef = useRef(null)
   const placePausedRef = useRef(false)
   const placeResumeTimerRef = useRef(null)
-  const placeAutoplayTimerRef = useRef(null)
 
   useEffect(() => {
     const updateScroll = () => {
@@ -331,7 +329,6 @@ function HomePage() {
         }
         scheduleNextCard()
       }, 3800)
-      placeAutoplayTimerRef.current = autoplayTimeout
     }
 
     positionAtMiddleSet()
