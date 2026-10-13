@@ -1055,3 +1055,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió que el fondo del botón coincidiera con el pizarra oscuro de la navegación y que el contorno blanco lo distinguiera como botón, manteniendo las líneas blancas, el 2026-10-13.
 - **Alcance respetado:** no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** archivos revisados estáticamente y cambio guardado en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Sincronizar el fondo del botón móvil con la barra de navegación
+
+- **Archivos afectados:** `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** el botón hamburguesa comienza con el fondo transparente y conserva su contorno y líneas blancas. Cuando el encabezado recibe la clase `scrolled`, el botón adopta el mismo fondo pizarra translúcido que la barra de navegación (`rgba(22,27,34,.93)`). Se reutiliza el estado de desplazamiento ya existente, sin añadir listeners ni JavaScript.
+- **Motivo y autorización:** el usuario pidió que el fondo del botón fuera transparente al inicio y que tomara el color junto con la barra de navegación al desplazarse, el 2026-10-13.
+- **Alcance respetado:** solo se modificaron los estilos móviles y este registro; no se tocó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** archivos revisados estáticamente y cambio guardado en GitHub. No se ejecutaron build, lint ni pruebas de navegador.

@@ -36,12 +36,16 @@
 ══════════════════════════════════════════════ */
 @media (max-width: 880px) {
 
-  /* Botón hamburguesa: fondo pizarra, líneas y contorno blancos */
+  /* Botón hamburguesa transparente al inicio; acompaña el fondo al desplazarse */
   .menu-trigger {
     display: flex !important;
-    background: #161b22;
+    background: transparent;
     border: 1px solid #fff;
     color: #fff;
+  }
+
+  header.nav.scrolled .menu-trigger {
+    background: rgba(22,27,34,.93);
   }
 
   /* Activar overlay */
