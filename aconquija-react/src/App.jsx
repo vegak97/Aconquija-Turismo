@@ -307,9 +307,15 @@ function HomePage() {
     }
 
     let lastCenterUpdate = 0
+    let lastFrameTimestamp = 0
     const animate = (timestamp) => {
+      // Velocidad basada en tiempo real: mantiene un avance constante aunque
+      // el navegador cambie la frecuencia de cuadros.
+      const elapsed = lastFrameTimestamp ? Math.min(timestamp - lastFrameTimestamp, 32) : 16
+      lastFrameTimestamp = timestamp
+
       if (!placePausedRef.current) {
-        track.scrollLeft += 0.6
+        track.scrollLeft += elapsed * 0.035
       }
 
       if (timestamp - lastCenterUpdate > 100) {
