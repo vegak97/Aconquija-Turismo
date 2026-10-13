@@ -285,14 +285,16 @@ function HomePage() {
     }
 
     const updateCenterCard = () => {
-      const trackBounds = track.getBoundingClientRect()
-      const centerX = trackBounds.left + trackBounds.width / 2
+      // Calcular el centro con medidas de layout, no con getBoundingClientRect:
+      // este último incluye el transform de elevación/escala y puede hacer oscilar
+      // la selección de la tarjeta central mientras el carrusel se desplaza.
+      const centerX = track.scrollLeft + track.clientWidth / 2
       let closestCard = null
       let closestDistance = Infinity
 
       Array.from(track.querySelectorAll('.place-card')).forEach((card) => {
-        const bounds = card.getBoundingClientRect()
-        const distance = Math.abs((bounds.left + bounds.width / 2) - centerX)
+        const cardCenterX = card.offsetLeft + card.offsetWidth / 2
+        const distance = Math.abs(cardCenterX - centerX)
         if (distance < closestDistance) {
           closestDistance = distance
           closestCard = card
