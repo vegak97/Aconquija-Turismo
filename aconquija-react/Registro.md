@@ -938,3 +938,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** petición directa del usuario el 2026-10-13.
 - **Alcance respetado:** solo se ajustó el SVG de la casa; no se modificaron los demás iconos, estilos, textos, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Dejar solo la puerta en el icono de alojamiento
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se retiró la ventana del icono de la casa para evitar que se superponga con la puerta; se conservaron únicamente el contorno de la casa y la puerta.
+- **Motivo y autorización:** el usuario indicó que la ventana chocaba con la puerta y pidió dejar solamente la puerta, el 2026-10-13.
+- **Alcance respetado:** solo se ajustó el SVG de alojamiento; no se modificaron otros iconos, estilos, textos, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
