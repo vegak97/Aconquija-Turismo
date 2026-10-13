@@ -1554,3 +1554,12 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Motivo y autorización:** petición directa del usuario el 2026-10-13; pidió quitar la elevación en teléfonos, centrar las tarjetas visibles, eliminar la media tarjeta cortada y asegurar el movimiento automático también en móvil.
 - **Alcance:** no se modificaron imágenes, textos ni otras secciones. No se modificó el sitio original fuera de `aconquija-react/`.
 - **Validación:** revisión estática del código y documentación tras guardar. No se ejecutaron build, lint ni pruebas en navegador.
+
+
+## Corrección del bucle y del gesto táctil en el carrusel de Lugares — 2026-10-13
+
+- **Archivo afectado:** `aconquija-react/src/App.jsx`.
+- **Cambio:** el reajuste infinito ahora ocurre solo al acercarse a los extremos de la secuencia central, en vez de activarse ante cualquier desplazamiento mínimo por debajo del inicio. Esto evita que el scroll táctil se corrija repetidamente y parezca trabarse.
+- **Movimiento automático:** se conserva el avance automático hacia la derecha, su velocidad actual, la pausa breve durante la interacción y el respeto por la preferencia de reducir movimiento del sistema.
+- **Motivo y autorización:** reporte directo del usuario el 2026-10-13: el avance automático no se percibía y el gesto de deslizar se trababa en teléfono.
+- **Validación:** código y documentación revisados estáticamente después de guardar. No se ejecutaron build, lint ni pruebas en navegador.
