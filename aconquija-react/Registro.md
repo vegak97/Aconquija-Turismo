@@ -760,3 +760,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-12.
 - **Alcance respetado:** únicamente CSS y documentación dentro de `aconquija-react/`. No se cambiaron imágenes, textos, estructura ni el sitio original.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador; queda pendiente comprobar el aspecto visual en el navegador local.
+
+## 2026-10-12 — Prueba tipográfica: Playfair Display + Montserrat
+
+- **Archivos afectados:** `aconquija-react/src/App.css`, `aconquija-react/src/index.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se reemplazó Fraunces por Playfair Display para la tipografía de títulos y Work Sans por Montserrat para textos e interfaz. Se actualizó tanto la importación de Google Fonts como las variables tipográficas y la fuente base global, para evitar que estilos de la aplicación o páginas auxiliares sigan usando la fuente anterior.
+- **Motivo:** probar la combinación recomendada para diferenciar con más claridad los títulos y mantener una lectura limpia en el resto del sitio.
+- **Autorización:** el usuario aceptó seguir la recomendación tipográfica el 2026-10-12.
+- **Alcance respetado:** solo tipografías y documentación dentro de `aconquija-react/`; no se alteraron colores, imágenes, contenido ni estructura, y no se modificó el sitio original.
+- **Resultado:** cambios guardados en GitHub. La revisión visual debe realizarse en el navegador local; no se ejecutaron lint, build ni pruebas de navegador.
