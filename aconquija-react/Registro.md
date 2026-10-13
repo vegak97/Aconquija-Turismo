@@ -981,3 +981,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió mejorar los iconos del clima porque el de tiempo nublado no se distinguía bien, el 2026-10-13.
 - **Alcance respetado:** solo se modificaron los iconos y sus estilos, más este registro. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13T03:01:00-03:00 — Subrayado temporizado en PC y sección activa en móvil
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** en escritorio, la línea dorado arena aparece al pasar el puntero o enfocar con teclado un enlace y crece de izquierda a derecha durante 1,45 segundos. Al salir del enlace, vuelve a ocultarse. En móvil, la línea permanece debajo del enlace que corresponde a la sección actual.
+- **Función reutilizada:** se amplió el `updateScroll` ya existente en `HomePage`, que actualiza la barra de progreso de lectura y el estado del encabezado. Ahora también identifica la sección actual y actualiza las clases `is-active` y `aria-current` de los enlaces principales, sin agregar otro listener de desplazamiento.
+- **Motivo y autorización:** el usuario aprobó la interacción diferenciada para PC y teléfono y pidió expresamente revisar si podía reutilizarse una función existente, el 2026-10-13.
+- **Alcance respetado:** no se añadieron dependencias ni se modificó el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
