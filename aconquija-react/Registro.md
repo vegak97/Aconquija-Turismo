@@ -1072,3 +1072,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** petición directa del usuario el 2026-10-13 para simplificar exclusivamente la presentación móvil de Estaciones.
 - **Alcance respetado:** los ajustes están dentro de una media query para teléfonos; no cambian la presentación de escritorio ni la de pantallas mayores de 600 px. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** reglas revisadas estáticamente y guardadas en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13 — Primera versión del mapa interactivo de Aconquija (borrador geográfico)
+
+- **Archivos afectados:** `src/components/home/IntroSection.jsx`, `src/components/home/AconquijaInteractiveMap.jsx`, `src/data/aconquijaMapData.js`, `src/styles/home.css`, `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** se incorporó un mapa SVG interactivo de escritorio en la sección de introducción, junto al texto existente. Al pasar el cursor por un marcador aparece el nombre; al seleccionarlo cambian el título y la descripción, y se muestra una ficha con referencias de acceso y estado de verificación. Se añadieron las 16 localidades confirmadas, una capa visual para RP 48, la conexión de referencia RP 114 y ramales rurales provisionales. Los datos de caminos, superficies, coordenadas preliminares y fuentes quedaron centralizados en `src/data/aconquijaMapData.js` para facilitar correcciones posteriores.
+- **Motivo y autorización:** petición directa del usuario del 2026-10-13 para implementar el mapa y registrar los caminos, teniendo en cuenta rutas principales y caminos rurales/de tierra.
+- **Precisión y límites:** este primer mapa es un borrador visual, no una geometría GIS exacta del límite municipal. Las posiciones visuales son esquemáticas; solo algunas localidades tienen coordenadas preliminares de fuentes abiertas. Las líneas secundarias son hipótesis editables y están marcadas como pendientes de verificación. El tramo Buena Vista–Río Potrero se identifica como pavimentado según la referencia consultada; no se presenta el mapa como GPS ni se deben usar sus líneas para navegación real.
+- **Alcance respetado:** solo se modificó la aplicación dentro de `aconquija-react/`; no se tocó el sitio original ni `Metodologia.md`.
+- **Verificación:** revisión estática del código y de las rutas de datos en GitHub. No se ejecutaron `npm run build`, lint ni pruebas en navegador; la revisión visual local queda pendiente para que el usuario pueda señalar correcciones.

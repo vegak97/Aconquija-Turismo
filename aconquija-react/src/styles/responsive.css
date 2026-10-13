@@ -465,3 +465,11 @@ nav.links a,
 /* Respeta la preferencia de movimiento reducido definida por el visitante */
 
 
+
+
+/* El mapa interactivo se reserva para escritorio en esta primera versión. */
+@media (max-width: 1024px) {
+  .intro-map-layout { display: block; }
+  .intro-copy { max-width: 780px; margin: 0 auto; }
+  .intro-map-column { display: none; }
+}
