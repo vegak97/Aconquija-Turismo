@@ -309,7 +309,7 @@ function HomePage() {
     let lastCenterUpdate = 0
     const animate = (timestamp) => {
       if (!placePausedRef.current && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        track.scrollLeft += 0.35
+        track.scrollLeft += 0.6
       }
 
       if (timestamp - lastCenterUpdate > 100) {
@@ -393,7 +393,7 @@ function HomePage() {
               <div><div className="eyebrow">Recorridos</div><h2>Lugares para no dejar de ver</h2></div>
               <p>Una selección de rincones de Aconquija y sus alrededores, pensada para armar tu propio recorrido.</p>
             </div>
-            <div className="place-carousel" onPointerDown={pausePlaceCarousel} onPointerUp={pausePlaceCarousel} onPointerCancel={pausePlaceCarousel} onMouseEnter={() => { placePausedRef.current = true }} onMouseLeave={() => { placePausedRef.current = false }} onFocusCapture={() => { placePausedRef.current = true }} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) placePausedRef.current = false }}>
+            <div className="place-carousel" onPointerDown={pausePlaceCarousel} onPointerUp={pausePlaceCarousel} onPointerCancel={pausePlaceCarousel}>
               <button className="place-carousel-arrow place-carousel-arrow--prev" type="button" aria-label="Ver lugares anteriores" aria-controls="placeScroll" onClick={() => {
                 const track = placeScrollRef.current
                 const firstCard = track?.querySelector('.place-card')
