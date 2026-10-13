@@ -955,3 +955,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió que el color al poner el cursor sobre la tarjeta fuera un dorado más fuerte y visible, el 2026-10-13.
 - **Alcance respetado:** solo se modificó el color interactivo de los iconos de Servicios y se registró el cambio; no se alteraron los colores base, las tarjetas, otros iconos ni `Metodologia.md` o el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambio guardado y revisado estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Animaciones sutiles para las tarjetas de Servicios
+
+- **Archivos afectados:** `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se añadió una elevación breve de 4 px con sombra suave al pasar el cursor o enfocar una tarjeta; una línea dorada intensa (`#e0a800`) crece desde el borde inferior, y el icono sube apenas mientras mantiene su cambio de color. Se conserva la aparición escalonada existente al entrar en la sección.
+- **Motivo y autorización:** el usuario aprobó la combinación de aparición escalonada, elevación con sombra, icono dorado y línea dorada animada, con intensidad elegante y sutil, el 2026-10-13.
+- **Accesibilidad y alcance:** los efectos interactivos también se activan con foco de teclado y se conserva la regla global existente para reducir movimiento. Solo se modificaron los estilos de Servicios y este registro; no se tocó `App.jsx`, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
