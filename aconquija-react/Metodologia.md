@@ -1598,3 +1598,8 @@ La regla de hover de las tarjetas no debe sobrescribir la elevación de `.place-
 ## Arquitectura React aprobada — 2026-10-13
 
 El usuario aprobó el mapa de carpetas y componentes reutilizables. Primera etapa: separar encabezado, pie de página, enlaces sociales, indicador meteorológico, página de inicio, página de ruta pendiente y página 404; centralizar las rutas aprobadas en data/routes.js. App.jsx queda dedicado a React Router. La página de inicio todavía mantiene sus secciones y el carrusel en un solo archivo; se extraerán en una etapa posterior, junto con la revisión de estilos y datos. No se cambia el diseño ni el sitio original fuera de aconquija-react. La verificación es estática: no se ejecutaron build, lint ni pruebas de navegador.
+
+
+## Segunda etapa de modularización — 2026-10-13
+
+Se extrajeron las secciones de inicio a src/components/home/: HeroSection, IntroSection, ExploreSection, PlacesCarousel, SeasonsSection, ServicesSection y AboutSection. Los datos de estaciones, circuitos y lugares se centralizaron en src/data/homeData.js. HomePage.jsx ahora compone las secciones y conserva la lógica transversal de scroll, progreso de lectura y animaciones. Los estilos siguen en App.css para evitar cambios visuales; su separación queda pendiente de una auditoría de selectores. Verificación estática; no se ejecutaron build, lint ni pruebas de navegador.
