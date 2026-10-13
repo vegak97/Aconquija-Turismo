@@ -403,14 +403,24 @@ header.nav .nav-mobile-social .icon-circle svg {
 .place-carousel { position: relative; }
 .place-scroll {
   position: relative;
-  display: flex; gap: 24px; overflow-x: auto; padding-bottom: 18px;
+  display: flex; gap: 24px; overflow-x: auto; padding: 12px 0 18px;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: none; scrollbar-width: none;
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
 }
 .place-scroll::-webkit-scrollbar { display: none; }
-.place-card { flex: 0 0 300px; scroll-snap-align: start; cursor: pointer; }
+.place-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transform: translateY(0) scale(.985);
+  transition: transform .45s cubic-bezier(.22,.7,.22,1), filter .45s ease;
+}
+.place-card.is-center {
+  transform: translateY(-10px) scale(1);
+  filter: drop-shadow(0 12px 16px rgba(25,31,38,.12));
+}
 .place-carousel-arrow {
   position: absolute;
   top: 178px;
@@ -952,6 +962,7 @@ footer.site-footer {
 
   /* Lugar scroll: tarjetas más angostas */
   .place-card { flex: 0 0 260px; }
+  .place-card.is-center { transform: translateY(-7px) scale(1); }
   .place-img  { height: 300px; }
 
   /* Feature list — columna única */
@@ -985,6 +996,7 @@ footer.site-footer {
 
   /* Carrusel de lugares */
   .place-card { flex: 0 0 85vw; }
+  .place-card.is-center { transform: translateY(-6px) scale(1); }
   .place-img  { height: 260px; }
 
   /* Footer en columna */
