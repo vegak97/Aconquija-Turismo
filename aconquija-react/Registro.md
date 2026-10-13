@@ -848,3 +848,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-13.
 - **Alcance respetado:** se modificó únicamente esa condición de la animación; no se alteraron estilos, imágenes, textos ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambio y documentación guardados en `main`; revisión estática realizada. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13T19:25:00-03:00 — Corrección del avance continuo del carrusel
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css`, `aconquija-react/Metodologia.md` y `aconquija-react/Registro.md`.
+- **Problema investigado:** el carrusel combinaba avance automático píxel a píxel con `scroll-snap-type: x proximity` y `scroll-snap-align: start`. Ese ajuste puede competir con el desplazamiento programático y dar la impresión de que el carrusel no avanza.
+- **Cambio concreto:** se desactivó el ajuste a tarjetas en el carrusel y se fijó `scroll-behavior: auto` en el contenedor. La animación ahora calcula el desplazamiento a partir del tiempo entre cuadros, con un límite al tiempo acumulado para evitar saltos grandes si el navegador se demora.
+- **Comportamiento conservado:** bucle infinito, pausa breve durante la interacción y deslizamiento horizontal manual en teléfono.
+- **Autorización:** petición directa del usuario el 2026-10-13 para revisar el problema y corregirlo si se encontraba una causa probable.
+- **Resultado:** archivos actualizados en `main` y comprobados estáticamente tras guardar. No se ejecutaron build, lint ni pruebas en navegador, por lo que la causa se considera probable y no confirmada visualmente.
