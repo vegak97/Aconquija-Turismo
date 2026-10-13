@@ -1580,3 +1580,6 @@ El carrusel debe avanzar una tarjeta por vez mediante `scrollBy({ behavior: 'smo
 
 ### Ajuste del intervalo del carrusel de Lugares
 El avance automático desplaza una tarjeta por vez hacia la derecha y espera 2,5 segundos entre avances, manteniendo la transición suave, el bucle infinito y la pausa temporal durante la interacción manual.
+
+### Corrección del rebote al elevar la tarjeta central del carrusel
+La regla de hover de las tarjetas no debe sobrescribir la elevación de `.place-card.is-center`. Las tarjetas no centrales pueden elevarse al pasar el puntero; la tarjeta central conserva `translateY(-10px) scale(1)` incluso cuando está bajo el puntero, evitando cambios bruscos de altura al desplazarse el carrusel.
