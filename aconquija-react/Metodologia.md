@@ -1567,3 +1567,8 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 ### Avance automático del carrusel de Lugares
 
 El avance automático no debe depender de `prefers-reduced-motion`, ya que esa condición puede dejar el carrusel inmóvil en ciertos equipos. La animación sí debe respetar la pausa temporal durante la interacción manual y conservar el scroll táctil nativo.
+
+### Carrusel de Lugares: avance continuo y scroll táctil
+
+- El contenedor `.place-scroll` no debe usar `scroll-snap`, porque el ajuste a las tarjetas puede competir con el avance automático continuo.
+- El avance se calcula con el tiempo transcurrido entre cuadros para mantener una velocidad consistente; se conserva el scroll horizontal nativo para el gesto táctil y el bucle infinito.
