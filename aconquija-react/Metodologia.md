@@ -1523,3 +1523,14 @@ Este plan refleja las etapas y autorizaciones vigentes. Las decisiones históric
 - **Alcance:** solo se ajustó la aparición del párrafo solicitado. No se cambiaron sus palabras, imágenes, otras secciones ni el sitio original; no se agregaron dependencias.
 - **Accesibilidad:** la regla global existente `prefers-reduced-motion: reduce` reduce la duración de las transiciones.
 - **Validación:** cambios revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## Carrusel infinito de Lugares — 2026-10-12
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/src/App.css`.
+- **Cambio:** la lista de lugares se renderiza en tres secuencias consecutivas y el desplazamiento se reajusta entre secuencias equivalentes para simular un bucle horizontal continuo. Se agregaron flechas anterior/siguiente para escritorio; los botones desplazan una tarjeta por vez.
+- **Interacción conservada:** el contenedor sigue usando desplazamiento horizontal nativo, por lo que admite gesto táctil, panel táctil y desplazamiento horizontal del usuario. Las flechas se ocultan en anchos de 880 px o menos.
+- **Diseño:** se conservan las tarjetas, fotografías, textos, tamaños y separación existentes. Los números de las tarjetas se repiten del 01 al 05 en cada vuelta.
+- **Accesibilidad y movimiento:** las flechas tienen nombres accesibles y foco visible; el carrusel no introduce animaciones automáticas.
+- **Autorización:** el usuario aprobó explícitamente la opción A de carrusel infinito y fluido el 2026-10-12.
+- **Validación:** revisión estática de los cambios y del registro. No se ejecutaron build, lint ni pruebas en navegador.
