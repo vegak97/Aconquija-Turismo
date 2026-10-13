@@ -68,19 +68,19 @@ function HomePage() {
       <div id="readProgress" aria-hidden="true" />
       <Header />
       <main>
-                <HeroSection />
+        <HeroSection />
 
-                <IntroSection />
+        <IntroSection />
 
-                <ExploreSection />
+        <ExploreSection />
 
         <PlacesCarousel />
 
-                <SeasonsSection />
+        <SeasonsSection />
 
-                <ServicesSection />
+        <ServicesSection />
 
-                <AboutSection />
+        <AboutSection />
       </main>
       <Footer />
     </>
