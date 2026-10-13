@@ -972,3 +972,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió que la animación fuera un poco más lenta y que se activara al detectar que está en la sección de Servicios, el 2026-10-13.
 - **Alcance respetado:** solo se ajustaron el disparador de aparición, los tiempos de animación de Servicios y este registro. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Mejorar la legibilidad de los iconos del clima
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx`, `aconquija-react/src/App.css` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se reemplazaron los emojis pequeños del indicador meteorológico por iconos SVG lineales, más nítidos y de tamaño uniforme. El icono de cielo nublado ahora tiene un contorno de nube más grande y definido; también se diferenciaron visualmente sol, parcialmente nublado, niebla, lluvia, nieve y tormenta.
+- **Accesibilidad:** el indicador incorpora el estado del clima en su texto accesible y en el título; los dibujos decorativos no se anuncian por separado.
+- **Motivo y autorización:** el usuario pidió mejorar los iconos del clima porque el de tiempo nublado no se distinguía bien, el 2026-10-13.
+- **Alcance respetado:** solo se modificaron los iconos y sus estilos, más este registro. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
