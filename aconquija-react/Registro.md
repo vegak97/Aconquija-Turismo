@@ -930,3 +930,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió una ilustración de montañas puntiagudas con sendero para guías y que todos los iconos pasaran de gris a negro, cambiando a dorado arena al poner el cursor sobre la tarjeta, el 2026-10-13.
 - **Alcance respetado:** se mantuvieron los textos, las tarjetas y los separadores; no se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+## 2026-10-13 — Añadir ventana al icono de alojamiento
+
+- **Archivos afectados:** `aconquija-react/src/App.jsx` y `aconquija-react/Registro.md`.
+- **Cambio concreto:** se quitaron los dos pequeños puntos de la fachada de la casa en el icono de «Dónde dormir» y se agregó una ventana cuadrada, manteniendo el trazo, tamaño y colores interactivos existentes.
+- **Motivo y autorización:** petición directa del usuario el 2026-10-13.
+- **Alcance respetado:** solo se ajustó el SVG de la casa; no se modificaron los demás iconos, estilos, textos, `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
