@@ -1039,3 +1039,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Accesibilidad:** se conserva la preferencia de movimiento reducido y se eliminan las esperas de las animaciones cuando esa preferencia está activa.
 - **Autorización:** el usuario aprobó probar esta secuencia el 2026-10-13.
 - **Verificación:** cambios revisados estáticamente y guardados en GitHub. No se ejecutaron build, lint ni pruebas de navegador; falta que el usuario revise el resultado visual.
+
+
+## 2026-10-13 — Actualizar el ícono de la pestaña del navegador
+
+- **Archivos afectados:** `index.html`, `public/aconquija-icono.png` y `Registro.md`.
+- **Cambio concreto:** se reemplazó el favicon violeta heredado de la plantilla por el ícono oficial de Aconquija que ya utiliza el sitio original, copiado dentro de `public/` para que Vite lo sirva correctamente.
+- **Alcance:** solo cambia el ícono mostrado en la pestaña del navegador; no se modificaron el logo visible del encabezado ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** se revisó el enlace de favicon en `index.html` y se preparó el recurso desde `imagenes/aconquija_icono.png`. No se ejecutaron build ni pruebas de navegador.
