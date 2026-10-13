@@ -168,6 +168,21 @@
 
 
 
+
+/* Estaciones: encabezado más limpio solo en teléfonos */
+@media (max-width: 600px) {
+  #estaciones .section-head p {
+    display: none !important;
+  }
+
+  #estaciones .section-head h2 {
+    font-size: clamp(1.55rem, 6.2vw, 1.9rem);
+    line-height: 1.16;
+    margin-top: 10px;
+  }
+}
+
+
 /* Título de Sobre Aconquija en blanco */
 #sobre .cta-content h2 { color: #ffffff !important; }
 

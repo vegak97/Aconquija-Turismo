@@ -1063,3 +1063,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario pidió que el fondo del botón fuera transparente al inicio y que tomara el color junto con la barra de navegación al desplazarse, el 2026-10-13.
 - **Alcance respetado:** solo se modificaron los estilos móviles y este registro; no se tocó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
 - **Verificación:** archivos revisados estáticamente y cambio guardado en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+## 2026-10-13 — Simplificar el encabezado de Estaciones en teléfonos
+
+- **Archivos afectados:** `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** en pantallas de hasta 600 px se oculta el párrafo «Cada momento del año tiene su propia versión. Elegí la que te llama.» y se reduce el tamaño del título de Estaciones, ajustando también su interlineado y margen superior.
+- **Motivo y autorización:** petición directa del usuario el 2026-10-13 para simplificar exclusivamente la presentación móvil de Estaciones.
+- **Alcance respetado:** los ajustes están dentro de una media query para teléfonos; no cambian la presentación de escritorio ni la de pantallas mayores de 600 px. No se modificó `Metodologia.md` ni el sitio original fuera de `aconquija-react/`.
+- **Verificación:** reglas revisadas estáticamente y guardadas en GitHub. No se ejecutaron build, lint ni pruebas de navegador.
