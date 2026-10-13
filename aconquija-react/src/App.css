@@ -403,15 +403,22 @@ header.nav .nav-mobile-social .icon-circle svg {
 .place-carousel { position: relative; }
 .place-scroll {
   position: relative;
-  display: flex; gap: 24px; overflow-x: auto; padding: 12px 0 18px;
-  scroll-snap-type: x mandatory;
-  -ms-overflow-style: none; scrollbar-width: none;
+  display: flex;
+  gap: 24px;
+  width: min(100%, 948px);
+  margin-inline: auto;
+  overflow-x: auto;
+  padding: 12px 0 18px;
+  scroll-snap-type: x proximity;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   overscroll-behavior-x: contain;
   -webkit-overflow-scrolling: touch;
 }
 .place-scroll::-webkit-scrollbar { display: none; }
 .place-card {
-  flex: 0 0 300px;
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: 300px;
   scroll-snap-align: start;
   cursor: pointer;
   transform: translateY(0) scale(.985);
@@ -961,8 +968,9 @@ footer.site-footer {
   .exp-card:nth-child(1) { grid-column: span 1; height: auto; aspect-ratio: 3 / 4; }
 
   /* Lugar scroll: tarjetas más angostas */
-  .place-card { flex: 0 0 260px; }
-  .place-card.is-center { transform: translateY(-7px) scale(1); }
+  .place-scroll { width: 100%; }
+  .place-card { flex: 0 0 calc((100% - 48px) / 3); }
+  .place-card.is-center { transform: none; filter: none; }
   .place-img  { height: 300px; }
 
   /* Feature list — columna única */
@@ -995,8 +1003,8 @@ footer.site-footer {
   .exp-card { height: auto; aspect-ratio: 3 / 4; }
 
   /* Carrusel de lugares */
-  .place-card { flex: 0 0 85vw; }
-  .place-card.is-center { transform: translateY(-6px) scale(1); }
+  .place-card { flex: 0 0 100%; max-width: none; }
+  .place-card.is-center { transform: none; filter: none; }
   .place-img  { height: 260px; }
 
   /* Footer en columna */
