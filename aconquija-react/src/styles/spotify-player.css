@@ -104,6 +104,26 @@
   transform: translateY(8px) scale(.985);
 }
 
+.spotify-panel {
+  max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(205,170,120,.55) transparent;
+}
+
+.spotify-tracks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spotify-tracks iframe {
+  display: block;
+  flex: 0 0 auto;
+}
+
 .spotify-panel-header {
   display: flex;
   align-items: center;
