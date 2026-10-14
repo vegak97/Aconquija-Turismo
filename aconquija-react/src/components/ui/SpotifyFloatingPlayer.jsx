@@ -6,7 +6,7 @@ export default function SpotifyFloatingPlayer() {
   return (
     <div className={`spotify-float ${isOpen ? 'is-open' : ''}`}>
       {isOpen && (
-        <section className="spotify-panel" aria-label="Reproductor de música de Spotify">
+        <section id="spotify-player-panel" className="spotify-panel" aria-label="Reproductor de música de Spotify">
           <div className="spotify-panel-header">
             <div>
               <span className="spotify-kicker">Música para el camino</span>
