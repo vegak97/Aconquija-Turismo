@@ -5,8 +5,13 @@ export default function SpotifyFloatingPlayer() {
 
   return (
     <div className={`spotify-float ${isOpen ? 'is-open' : ''}`}>
-      {isOpen && (
-        <section id="spotify-player-panel" className="spotify-panel" aria-label="Reproductor de música de Spotify">
+      <section
+        id="spotify-player-panel"
+        className={`spotify-panel ${isOpen ? 'is-visible' : 'is-hidden'}`}
+        aria-label="Reproductor de música de Spotify"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+      >
           <div className="spotify-panel-header">
             <div>
               <span className="spotify-kicker">Música para el camino</span>
@@ -33,8 +38,7 @@ export default function SpotifyFloatingPlayer() {
             style={{ borderRadius: '12px', border: 0 }}
           />
           <p className="spotify-note">Elegí reproducir dentro del reproductor para comenzar.</p>
-        </section>
-      )}
+      </section>
 
       <button
         className="spotify-toggle"
