@@ -1100,3 +1100,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-13.
 - **Alcance respetado:** los cambios quedaron dentro de `aconquija-react/`; no se modificó el sitio HTML/CSS/JavaScript original ni `Metodologia.md`.
 - **Verificación:** se comprobaron las referencias directas del componente y de los datos del mapa antes de eliminarlos. Se actualizaron los estilos de escritorio y responsive asociados al mapa. No se ejecutaron `npm run build`, lint ni pruebas de navegador, por lo que la validación visual/funcional queda pendiente.
+
+
+## 2026-10-14 — Incorporar reproductor flotante de Spotify
+
+### 2026-10-14 10:56:00 -03:00
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx` (nuevo), `src/styles/spotify-player.css` (nuevo), `src/App.jsx`, `src/App.css` y `Registro.md`.
+- **Cambio concreto:** se añadió un reproductor flotante con el álbum de Spotify compartido por el usuario. El botón permite abrir y cerrar el panel; la reproducción queda a cargo del reproductor oficial y comienza manualmente cuando la persona presiona reproducir dentro de Spotify. El componente se monta dentro de `BrowserRouter`, por lo que está disponible en las rutas de la aplicación. Se añadieron estilos adaptables a móviles, foco visible para teclado y respeto por la preferencia de movimiento reducido.
+- **Motivo:** el usuario pidió integrar el álbum de Spotify en modo flotante y con inicio manual.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio HTML/CSS/JavaScript original ni `Metodologia.md`.
+- **Resultado:** integración guardada en GitHub y pendiente de comprobación de compilación y visual en navegador. No se ejecutaron `npm run build`, lint ni pruebas de navegador.
