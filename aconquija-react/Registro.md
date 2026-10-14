@@ -1133,3 +1133,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-14.
 - **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se tocó el sitio original ni `Metodologia.md`.
 - **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+## 2026-10-14 — Cerrar el reproductor al tocar fuera del panel
+
+### 2026-10-14 11:22:41 -03:00
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx` y `Registro.md`.
+- **Cambio concreto:** se añadió una referencia al contenedor del reproductor y un listener temporal de `pointerdown` que cierra el panel cuando el clic o toque ocurre fuera de él. El listener solo existe mientras el panel está abierto y se elimina al cerrarlo o desmontar el componente. El iframe de Spotify permanece montado y oculto al cerrar, por lo que no se fuerza su reinicio.
+- **Motivo:** el usuario pidió que el panel de música se cierre al tocar fuera de él.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron `npm run build`, lint ni pruebas en navegador.
+
