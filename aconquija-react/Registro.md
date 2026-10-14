@@ -1144,3 +1144,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron `npm run build`, lint ni pruebas en navegador.
 
+## 2026-10-14 — Agregar dos canciones al reproductor de Spotify
+
+### 2026-10-14 11:28:04 -03:00
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx`, `src/styles/spotify-player.css` y `Registro.md`.
+- **Cambio concreto:** se conservaron el álbum existente y el funcionamiento del panel, y se agregaron dos reproductores oficiales de Spotify para las canciones identificadas por los enlaces compartidos por el usuario. El panel ahora permite desplazarse verticalmente si el contenido supera la altura disponible en la pantalla.
+- **Motivo:** el usuario pidió agregar ambas canciones al reproductor flotante existente.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
