@@ -77,7 +77,20 @@
   border-radius: 18px;
   background: #1c222c;
   box-shadow: 0 18px 55px rgba(0,0,0,.36);
-  animation: spotifyPanelIn .28s var(--motion-soft, ease-out) both;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+}
+
+.spotify-panel.is-hidden {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px) scale(.985);
 }
 
 .spotify-panel-header {
@@ -133,11 +146,6 @@
   line-height: 1.45;
 }
 
-@keyframes spotifyPanelIn {
-  from { opacity: 0; transform: translateY(8px) scale(.985); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
 @media (max-width: 520px) {
   .spotify-float {
     right: max(12px, env(safe-area-inset-right));
@@ -161,5 +169,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .spotify-panel { animation: none; }
+  .spotify-panel { transition: none; }
 }
