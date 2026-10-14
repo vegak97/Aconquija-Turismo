@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
+import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
 import { approvedRoutes } from './data/routes'
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         {approvedRoutes.map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <SpotifyFloatingPlayer />
     </BrowserRouter>
   )
 }
