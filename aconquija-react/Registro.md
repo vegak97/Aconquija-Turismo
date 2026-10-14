@@ -1111,3 +1111,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-14.
 - **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio HTML/CSS/JavaScript original ni `Metodologia.md`.
 - **Resultado:** integración guardada en GitHub y pendiente de comprobación de compilación y visual en navegador. No se ejecutaron `npm run build`, lint ni pruebas de navegador.
+
+
+## 2026-10-14 — Mantener la música al cerrar el panel flotante
+
+### 2026-10-14 11:10:52 -03:00
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx`, `src/styles/spotify-player.css` y `Registro.md`.
+- **Cambio concreto:** el iframe oficial de Spotify permanece montado aunque el panel se oculte. Cerrar el panel solo lo oculta visualmente y desactiva su interacción accesible; al volver a abrirlo, el reproductor sigue en la misma instancia. Se mantiene el botón flotante para abrir y cerrar el panel.
+- **Motivo:** el usuario pidió poder escuchar música mientras recorre la página sin que se corte al cerrar el panel del reproductor.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run build`, lint ni pruebas de navegador. Cerrar la pestaña completa del navegador sigue deteniendo normalmente el reproductor incrustado; este cambio mantiene la música al cerrar únicamente el panel flotante.
