@@ -11,6 +11,17 @@
   font-family: var(--ff-body);
 }
 
+.spotify-float.is-home-intro .spotify-toggle {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: spotifyHeroCueIn .8s 2.15s ease forwards;
+}
+
+@keyframes spotifyHeroCueIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .spotify-toggle {
   display: inline-flex;
   align-items: center;
@@ -170,4 +181,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .spotify-panel { transition: none; }
+  .spotify-float.is-home-intro .spotify-toggle {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }
