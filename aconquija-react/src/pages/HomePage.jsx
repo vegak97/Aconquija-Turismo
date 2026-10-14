@@ -43,9 +43,8 @@ function HomePage() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('in')
-            // Servicios vuelve a animarse cada vez que entra en la zona visible.
-            if (observer && !entry.target.closest('.servicios')) observer.unobserve(entry.target)
-          } else if (entry.target.closest('.servicios')) {
+          } else {
+            // Al salir de pantalla, queda listo para repetir la animación al volver.
             entry.target.classList.remove('in')
           }
         })
