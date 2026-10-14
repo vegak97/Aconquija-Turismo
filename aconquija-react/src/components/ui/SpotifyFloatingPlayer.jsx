@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export default function SpotifyFloatingPlayer() {
   const [isOpen, setIsOpen] = useState(false)
+  const { pathname } = useLocation()
+  const isHomePage = pathname === '/'
 
   return (
-    <div className={`spotify-float ${isOpen ? 'is-open' : ''}`}>
+    <div className={`spotify-float ${isOpen ? 'is-open' : ''} ${isHomePage ? 'is-home-intro' : ''}`}>
       <section
         id="spotify-player-panel"
         className={`spotify-panel ${isOpen ? 'is-visible' : 'is-hidden'}`}
