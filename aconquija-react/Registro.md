@@ -1154,3 +1154,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
 
+
+
+## 2026-10-14 — Repetir las animaciones de aparición al volver a la pantalla
+
+### 2026-10-14 11:55:17 -03:00
+- **Archivos afectados:** `src/pages/HomePage.jsx` y `Registro.md`.
+- **Cambio concreto:** se ajustó el observador de los elementos `.reveal` para que quite la clase `in` cuando un elemento sale de la zona visible y vuelva a agregarla cuando entra. Así, las animaciones de aparición se repiten cada vez que se vuelve a esa parte de la página, no solamente la primera vez. Se conserva el umbral de visibilidad existente y las transiciones CSS actuales.
+- **Motivo:** el usuario pidió que las animaciones de texto y secciones se mantengan activas a lo largo del recorrido, para evitar que la página se sienta estática después de la primera pasada.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificó el comportamiento de las animaciones `.reveal` en `aconquija-react/` y se documentó el cambio; no se modificó el sitio original ni `Metodologia.md`.
+- **Resultado:** cambio guardado en GitHub y comprobado estáticamente en el código. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
