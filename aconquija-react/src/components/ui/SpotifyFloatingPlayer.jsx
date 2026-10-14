@@ -45,16 +45,36 @@ export default function SpotifyFloatingPlayer() {
               </svg>
             </button>
           </div>
-          <iframe
-            title="Álbum de Spotify compartido para Aconquija"
-            src="https://open.spotify.com/embed/album/0reHM12gjxXyBRkBdfjoio?utm_source=generator&theme=0"
-            width="100%"
-            height="352"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            style={{ borderRadius: '12px', border: 0 }}
-          />
-          <p className="spotify-note">Elegí reproducir dentro del reproductor para comenzar.</p>
+          <div className="spotify-tracks">
+            <iframe
+              title="Álbum de Spotify compartido para Aconquija"
+              src="https://open.spotify.com/embed/album/0reHM12gjxXyBRkBdfjoio?utm_source=generator&theme=0"
+              width="100%"
+              height="352"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              style={{ borderRadius: '12px', border: 0 }}
+            />
+            <iframe
+              title="Primera canción agregada a Spotify"
+              src="https://open.spotify.com/embed/track/18bMLccmFACzjiskbvJhNc?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              style={{ borderRadius: '12px', border: 0 }}
+            />
+            <iframe
+              title="Segunda canción agregada a Spotify"
+              src="https://open.spotify.com/embed/track/6WJmUP3dk06bCbu8CvKrJB?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              style={{ borderRadius: '12px', border: 0 }}
+            />
+          </div>
+          <p className="spotify-note">Elegí reproducir dentro de Spotify para comenzar.</p>
       </section>
 
       <button
