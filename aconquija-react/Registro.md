@@ -1122,3 +1122,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-14.
 - **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se modificó el sitio original ni `Metodologia.md`.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run build`, lint ni pruebas de navegador. Cerrar la pestaña completa del navegador sigue deteniendo normalmente el reproductor incrustado; este cambio mantiene la música al cerrar únicamente el panel flotante.
+
+
+## 2026-10-14 — Sincronizar la entrada del botón de Spotify con «Deslizá para explorar»
+
+### 2026-10-14 11:16:04 -03:00
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx`, `src/styles/spotify-player.css` y `Registro.md`.
+- **Cambio concreto:** se detecta la ruta de inicio con `useLocation` y se aplica una clase únicamente en la portada. El botón «Escuchar música» comienza oculto y aparece con una animación de 0,8 segundos, con el mismo retraso de 2,15 segundos que el indicador «Deslizá para explorar». En las demás rutas conserva su aparición habitual. Se respeta la preferencia de movimiento reducido, mostrando el botón sin animación.
+- **Motivo:** el usuario pidió que el botón de música aparezca junto con «Deslizá para explorar», al final de la secuencia de entrada de la portada.
+- **Autorización:** petición directa del usuario el 2026-10-14.
+- **Alcance respetado:** solo se modificaron archivos dentro de `aconquija-react/`; no se tocó el sitio original ni `Metodologia.md`.
+- **Resultado:** cambios guardados y revisados estáticamente en GitHub. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
