@@ -60,14 +60,14 @@ nav.links a::after {
 }
 /* En escritorio la línea solo aparece al apuntar o enfocar un enlace. */
 @media (hover: hover) and (pointer: fine) {
-  nav.links > a[href^="#"]:hover::after,
-  nav.links > a[href^="#"]:focus-visible::after {
+  nav.links > a[href*="#"]:hover::after,
+  nav.links > a[href*="#"]:focus-visible::after {
     animation: navUnderlineGrow 1.45s linear forwards;
   }
 }
 /* En el menú táctil, la línea indica la sección actual y permanece visible. */
 @media (max-width: 880px) {
-  nav.links > a[href^="#"].is-active::after {
+  nav.links > a[href*="#"].is-active::after {
     transform: scaleX(1);
     transition: transform .25s var(--motion-soft);
   }
