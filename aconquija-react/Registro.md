@@ -1184,3 +1184,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** conservar la presentación de la galería original y mejorar el manejo del visor con teclado.
 - **Autorización:** ajuste estrictamente necesario dentro de la implementación de la página del Planetario autorizada por el usuario el 2026-10-15.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas en navegador.
+
+
+## 2026-10-15 — Corregir el fondo de navegación al desplazarse en páginas secundarias
+
+### 2026-10-15 20:09:38 -03:00
+- **Archivos afectados:** `src/components/layout/Header.jsx`, `src/styles/layout.css` y `Registro.md`.
+- **Cambio concreto:** se reutilizó la clase CSS existente `scrolled` añadiendo al encabezado un listener de scroll que funciona en todas las rutas, incluido el Planetario. Al superar los 60 px de desplazamiento aplica la clase y al volver arriba la retira. También se ajustó el fondo de esa clase a pizarra oscura `rgba(28, 34, 44, .95)`, basado en `#1c222c`.
+- **Motivo:** el encabezado de la página del Planetario no tenía el efecto de cambio de fondo porque la lógica de scroll estaba dentro de `HomePage.jsx`.
+- **Autorización:** petición directa del usuario el 2026-10-15.
+- **Alcance:** se modificó únicamente el comportamiento compartido del encabezado y el color de su estado desplazado; no se modificó el sitio HTML original ni el contenido de la página.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
