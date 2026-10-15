@@ -1176,3 +1176,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización explícita del usuario el 2026-10-15 para crear esta primera implementación con la estructura propuesta.
 - **Alcance:** solo se modificó `aconquija-react/`; el HTML original `html/segundo_nivel/noches_estrelladas.html` y sus recursos no se modificaron. Se usaron imágenes ya existentes en `imagenes/planetario/` y `imagenes/fondo_prueba.png`; no se generaron ni descargaron imágenes.
 - **Verificación:** revisión estática de los archivos creados, imports, ruta y existencia de las imágenes en el repositorio. No se ejecutaron `npm run build`, lint ni pruebas en navegador, por lo que la compilación y el comportamiento visual/funcional quedan pendientes de prueba local.
+
+
+### 2026-10-15 20:06:09 -03:00 — Ajustes de accesibilidad de la galería del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioGallery.jsx` y `Registro.md`.
+- **Cambio concreto:** se normalizó el estilo del botón que abre cada foto para evitar bordes nativos no deseados y se dejaron los controles de teclado del visor gestionados dentro del efecto, manteniendo Escape para cerrar y flechas para cambiar de imagen.
+- **Motivo:** conservar la presentación de la galería original y mejorar el manejo del visor con teclado.
+- **Autorización:** ajuste estrictamente necesario dentro de la implementación de la página del Planetario autorizada por el usuario el 2026-10-15.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas en navegador.
