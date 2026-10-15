@@ -1165,3 +1165,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-14.
 - **Alcance respetado:** solo se modificó el comportamiento de las animaciones `.reveal` en `aconquija-react/` y se documentó el cambio; no se modificó el sitio original ni `Metodologia.md`.
 - **Resultado:** cambio guardado en GitHub y comprobado estáticamente en el código. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+## 2026-10-15 — Migrar la página del Planetario Janaxpacha Huasi a React
+
+### 2026-10-15 20:05:00 -03:00
+- **Archivos afectados:** `src/pages/second-level/PlanetarioPage.jsx` (nuevo); `src/components/second-level/planetario/PlanetarioHero.jsx`, `PlanetarioContent.jsx`, `PlanetarioGallery.jsx` y `PlanetarioInfoCard.jsx` (nuevos); `src/App.jsx`; `Registro.md`.
+- **Cambio concreto:** se implementó la primera página secundaria migrada, con hero, etiquetas y metadatos, descripción y características, información de acceso y equipamiento, galería de cuatro imágenes locales con visor ampliado, ficha de información lateral y botones de contacto/mapa. Se reutilizan el encabezado, pie de página y estilos de página existentes. La ruta `/lugares/planetario-janaxpacha-huasi` ahora muestra la página React en lugar del marcador provisional.
+- **Motivo:** iniciar la migración de páginas secundarias usando componentes pequeños y reutilizables, siguiendo la estructura acordada.
+- **Autorización:** autorización explícita del usuario el 2026-10-15 para crear esta primera implementación con la estructura propuesta.
+- **Alcance:** solo se modificó `aconquija-react/`; el HTML original `html/segundo_nivel/noches_estrelladas.html` y sus recursos no se modificaron. Se usaron imágenes ya existentes en `imagenes/planetario/` y `imagenes/fondo_prueba.png`; no se generaron ni descargaron imágenes.
+- **Verificación:** revisión estática de los archivos creados, imports, ruta y existencia de las imágenes en el repositorio. No se ejecutaron `npm run build`, lint ni pruebas en navegador, por lo que la compilación y el comportamiento visual/funcional quedan pendientes de prueba local.
