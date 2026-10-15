@@ -1214,3 +1214,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario aclaró que esos datos también debían borrarse de la presentación del Planetario.
 - **Autorización:** petición directa del usuario el 2026-10-15.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+### 2026-10-15 20:32:52 -03:00 — Bajar un poco las etiquetas del hero del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioHero.jsx`, `src/styles/page-hero.css` y `Registro.md`.
+- **Cambio concreto:** se agregó la clase específica `planetario-hero` a la sección del Planetario y se añadió `margin-top: 10px` a sus etiquetas, separándolas un poco del título sin alterar las etiquetas de otras páginas.
+- **Motivo:** bajar ligeramente las etiquetas «Astroturismo», «Observación de estrellas» y «Noches despejadas».
+- **Autorización:** petición directa del usuario el 2026-10-15.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas de navegador.
