@@ -1195,3 +1195,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-15.
 - **Alcance:** se modificó únicamente el comportamiento compartido del encabezado y el color de su estado desplazado; no se modificó el sitio HTML original ni el contenido de la página.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
+
+## 2026-10-15 — Ajustar el hero del Planetario y la navegación compartida
+
+### 2026-10-15 20:17:10 -03:00
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioHero.jsx`, `src/components/layout/Header.jsx`, `src/styles/layout.css` y `Registro.md`.
+- **Cambio concreto:** se eliminó la ruta de navegación «Inicio › Explorar › Turismo Astronómico» del hero del Planetario. Se reordenó el encabezado para mostrar el título, las etiquetas «Astroturismo», «Observación de estrellas» y «Noches despejadas», y debajo los metadatos de duración, público, ubicación y cantidad mínima de personas. En el encabezado compartido, los enlaces a las secciones ahora conservan el ancla en Inicio y desde páginas secundarias navegan a Inicio y desplazan hasta la sección correspondiente; se agregó desplazamiento con margen para que el encabezado fijo no tape el destino. Se ajustó el selector de subrayado para contemplar enlaces con hash dentro de una ruta.
+- **Motivo:** simplificar la presentación de la página del Planetario y corregir los botones de navegación que antes apuntaban a anclas inexistentes en páginas secundarias.
+- **Autorización:** petición directa del usuario el 2026-10-15.
+- **Alcance:** cambios limitados a `aconquija-react/`; no se modificó el sitio HTML original ni `Metodologia.md`.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
