@@ -1206,3 +1206,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-15.
 - **Alcance:** cambios limitados a `aconquija-react/`; no se modificó el sitio HTML original ni `Metodologia.md`.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas de navegador.
+
+
+### 2026-10-15 20:26:10 -03:00 — Retirar los metadatos del hero del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioHero.jsx` y `Registro.md`.
+- **Cambio concreto:** se eliminaron del hero los cuatro datos «Menos de 30 min», «Apto para todo público», «Aconquija, Catamarca» y «Desde 1 persona», junto con sus iconos y la función auxiliar que los dibujaba. Se conservaron el título y las tres etiquetas.
+- **Motivo:** el usuario aclaró que esos datos también debían borrarse de la presentación del Planetario.
+- **Autorización:** petición directa del usuario el 2026-10-15.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas de navegador.
