@@ -1,5 +1,4 @@
 import heroImage from '../../../../../imagenes/fondo_prueba.png'
-import { Link } from 'react-router-dom'
 
 const tags = ['Astroturismo', 'Observación de estrellas', 'Noches despejadas']
 
@@ -15,15 +14,10 @@ export default function PlanetarioHero() {
     <section className="lugar-hero">
       <div className="lugar-hero-img" style={{ backgroundImage: `url("${heroImage}")` }} />
       <div className="lugar-hero-content">
-        <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link><span>›</span>
-          <Link to="/#explorar">Explorar</Link><span>›</span>
-          <span>Turismo Astronómico</span>
-        </nav>
+        <h1>Planetario Janaxpacha Huasi</h1>
         <div className="lugar-tags">
           {tags.map(tag => <span className="lugar-tag" key={tag}>{tag}</span>)}
         </div>
-        <h1>Planetario Janaxpacha Huasi</h1>
         <div className="lugar-meta">
           <div className="meta-item"><MetaIcon type="time" />Menos de 30 min</div>
           <div className="meta-item"><MetaIcon type="landscape" />Apto para todo público</div>
