@@ -21,7 +21,7 @@ header.nav {
   transition: background .5s ease, padding .4s ease, box-shadow .4s ease;
 }
 header.nav.scrolled {
-  background: rgba(22,27,34,.93);
+  background: rgba(28,34,44,.95);
   padding: 10px 6vw;
   box-shadow: 0 6px 24px rgba(0,0,0,.25);
   backdrop-filter: blur(10px);
