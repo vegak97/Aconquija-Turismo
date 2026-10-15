@@ -19,6 +19,20 @@ function Header({ animateOnLoad = false }) {
     }
   }, [menuOpen])
 
+  // Mantiene el mismo estado visual de la navegación en todas las rutas.
+  useEffect(() => {
+    const nav = document.getElementById('siteNav')
+    if (!nav) return undefined
+
+    const updateScroll = () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60)
+    }
+
+    updateScroll()
+    window.addEventListener('scroll', updateScroll, { passive: true })
+    return () => window.removeEventListener('scroll', updateScroll)
+  }, [])
+
   return (
     <>
       <header className={`nav${animateOnLoad ? ' nav-intro' : ''}`} id="siteNav">
