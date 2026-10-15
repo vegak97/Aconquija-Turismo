@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import SocialLinks from './SocialLinks'
 import WeatherBadge from '../ui/WeatherBadgeView'
 import logoHeader from '../../../../imagenes/logo_aconquija(1).png'
 
 function Header({ animateOnLoad = false }) {
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onKeyDown = (event) => {
@@ -33,6 +34,31 @@ function Header({ animateOnLoad = false }) {
     return () => window.removeEventListener('scroll', updateScroll)
   }, [])
 
+  // Los enlaces de secciones también funcionan cuando se llega desde una página secundaria.
+  useEffect(() => {
+    if (location.pathname !== '/' || !location.hash) return undefined
+    const sectionId = decodeURIComponent(location.hash.slice(1))
+    const scrollToSection = () => {
+      const section = document.getElementById(sectionId)
+      if (!section) return
+      const top = section.getBoundingClientRect().top + window.scrollY - 90
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+    const frame = window.requestAnimationFrame(scrollToSection)
+    return () => window.cancelAnimationFrame(frame)
+  }, [location.pathname, location.hash])
+
+  const handleSectionClick = (event, sectionId) => {
+    setMenuOpen(false)
+    if (location.pathname !== '/') return
+    event.preventDefault()
+    const section = document.getElementById(sectionId)
+    if (!section) return
+    const top = section.getBoundingClientRect().top + window.scrollY - 90
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+
+
   return (
     <>
       <header className={`nav${animateOnLoad ? ' nav-intro' : ''}`} id="siteNav">
@@ -43,11 +69,11 @@ function Header({ animateOnLoad = false }) {
           <button className="nav-close" type="button" aria-label="Cerrar menú" onClick={() => setMenuOpen(false)}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
           </button>
-          <a href="#explorar" onClick={() => setMenuOpen(false)}>Explorar</a>
-          <a href="#lugares" onClick={() => setMenuOpen(false)}>Lugares</a>
-          <a href="#estaciones" onClick={() => setMenuOpen(false)}>Estaciones</a>
-          <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
-          <a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre Aconquija</a>
+          <Link to={location.pathname === '/' ? '#explorar' : '/#explorar'} onClick={(event) => handleSectionClick(event, 'explorar')}>Explorar</Link>
+          <Link to={location.pathname === '/' ? '#lugares' : '/#lugares'} onClick={(event) => handleSectionClick(event, 'lugares')}>Lugares</Link>
+          <Link to={location.pathname === '/' ? '#estaciones' : '/#estaciones'} onClick={(event) => handleSectionClick(event, 'estaciones')}>Estaciones</Link>
+          <Link to={location.pathname === '/' ? '#servicios' : '/#servicios'} onClick={(event) => handleSectionClick(event, 'servicios')}>Servicios</Link>
+          <Link to={location.pathname === '/' ? '#sobre' : '/#sobre'} onClick={(event) => handleSectionClick(event, 'sobre')}>Sobre Aconquija</Link>
           <SocialLinks mobile />
         </nav>
         <div className="nav-actions">
