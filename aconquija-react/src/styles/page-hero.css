@@ -35,6 +35,7 @@
 .breadcrumb a:hover { color: var(--sand); }
 .breadcrumb span { color: rgba(255,255,255,.35); }
 .lugar-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+.planetario-hero .lugar-tags { margin-top: 10px; }
 .lugar-tag {
   font-size: .7rem; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 600;
   color: var(--sand); border: 1px solid rgba(205,170,120,.5);
