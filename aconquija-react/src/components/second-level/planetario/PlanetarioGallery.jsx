@@ -22,9 +22,9 @@ export default function PlanetarioGallery() {
   useEffect(() => {
     if (!isOpen) return undefined
     const onKeyDown = event => {
-      if (event.key === 'Escape') close()
-      if (event.key === 'ArrowLeft') showPrevious()
-      if (event.key === 'ArrowRight') showNext()
+      if (event.key === 'Escape') setActiveIndex(null)
+      if (event.key === 'ArrowLeft') setActiveIndex(index => (index - 1 + photos.length) % photos.length)
+      if (event.key === 'ArrowRight') setActiveIndex(index => (index + 1) % photos.length)
     }
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -42,7 +42,7 @@ export default function PlanetarioGallery() {
         <h2 id="planetario-gallery-title">El cielo en imágenes</h2>
         <div className="gallery-grid">
           {photos.map((photo, index) => (
-            <button className="gallery-item" type="button" key={photo.src} onClick={() => setActiveIndex(index)} aria-label={`Ampliar imagen: ${photo.alt}`}>
+            <button className="gallery-item" type="button" key={photo.src} onClick={() => setActiveIndex(index)} aria-label={`Ampliar imagen: ${photo.alt}`} style={{ border: 0, padding: 0, background: 'transparent', display: 'block', textAlign: 'left' }}>
               <img src={photo.src} alt={photo.alt} loading="lazy" />
               <span className="gallery-overlay" aria-hidden="true">
                 <span className="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35M11 8v6M8 11h6" /></svg></span>
