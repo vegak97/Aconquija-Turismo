@@ -1346,3 +1346,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Estilos:** se añadieron reglas limitadas a `.pucara-hero` en `page-hero.css`, reutilizando el mismo ajuste de posición del contenido que tiene el hero del Planetario. No se cambió el estilo de otras páginas.
 - **Motivo y autorización:** petición directa del usuario el 2026-10-16, siguiendo los ajustes que se hicieron previamente en la página del Planetario.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-16 03:59:15 -03:00 — Simplificar el encabezado de la ficha de Pucará
+- **Archivos afectados:** `src/components/second-level/pucara/PucaraInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se eliminaron las etiquetas «Otoño», «Invierno» y «Primavera», el texto «Evitar días de lluvia» y la fila «Precio — Consultas disponibles». El encabezado ahora muestra «Acerca de» en blanco y con mayor tamaño; también se redujo ligeramente el relleno vertical de la cabecera para evitar espacio vacío innecesario.
+- **Motivo:** petición directa del usuario para limpiar la ficha, destacar el título y reducir el espacio que quedara tras quitar esos elementos.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas en navegador.
