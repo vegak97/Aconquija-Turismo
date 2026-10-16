@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const infoRows = [
   { label: 'Duración', value: '4 a 6 horas (ida y vuelta)', icon: 'time' },
   { label: 'Dificultad', value: 'Media-alta — sendero pedregoso y empinado', icon: 'activity' },
@@ -18,29 +16,6 @@ function ShareIcon({ type }) {
 }
 
 export default function PucaraInfoCard() {
-  const [copied, setCopied] = useState(false)
-
-  const shareUrl = window.location.href
-  const shareTitle = 'Pucará de Aconquija — Aconquija Turismo'
-
-  const shareFacebook = () => {
-    window.open(`https://www.facebook.com/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=600,height=400')
-  }
-
-  const shareWhatsApp = () => {
-    window.open(`https://wa.me/?text=${encodeURIComponent(`${shareTitle} ${shareUrl}`)}`, '_blank', 'noopener,noreferrer')
-  }
-
-  const copyLink = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl)
-      setCopied(true)
-      window.setTimeout(() => setCopied(false), 2000)
-    } catch {
-      setCopied(false)
-    }
-  }
-
   return (
     <>
       <div className="info-card reveal in">
@@ -85,27 +60,6 @@ export default function PucaraInfoCard() {
         </div>
       </div>
 
-      <div className="share-block reveal in">
-        <h5>Compartir</h5>
-        <div className="share-btns">
-          <button className="share-btn fb" type="button" onClick={shareFacebook}>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ShareIcon type="facebook" /></svg>
-            Facebook
-          </button>
-          <button className="share-btn wa" type="button" onClick={shareWhatsApp}>
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ShareIcon type="whatsapp" /></svg>
-            WhatsApp
-          </button>
-        </div>
-        <button
-          id="shareCopy"
-          type="button"
-          onClick={copyLink}
-          style={{ marginTop: 10, background: 'none', border: '1px solid #e0ddd5', borderRadius: 6, width: '100%', padding: 10, cursor: 'pointer', fontSize: '.78rem', letterSpacing: 1, textTransform: 'uppercase', fontWeight: 600, color: '#8d9199', transition: 'all .25s' }}
-        >
-          {copied ? '¡Copiado!' : 'Copiar link'}
-        </button>
-      </div>
     </>
   )
 }
