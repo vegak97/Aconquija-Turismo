@@ -11,12 +11,6 @@ import PlacesCarousel from '../components/home/PlacesCarousel'
 
 function HomePage() {
   useLayoutEffect(() => {
-    // Evita que el navegador muestre la posición de scroll anterior al entrar a Inicio.
-    // Si la URL apunta a una sección (#explorar, etc.), se conserva ese destino.
-    if (!window.location.hash) {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-    }
-
     const updateScroll = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight
       const percentage = total > 0 ? (window.scrollY / total) * 100 : 0
