@@ -140,7 +140,7 @@
   box-shadow: 0 8px 40px rgba(22,27,34,.07);
 }
 .info-card-header { background: var(--night); color: var(--white); padding: 22px 26px; }
-.info-card-header.planetario-info-card-spacer { min-height: 112px; padding: 0; }
+.info-card-header.planetario-info-card-spacer { min-height: 84px; padding: 0; }
 .info-card-header .eyebrow {
   font-size: .7rem; letter-spacing: 2.5px; text-transform: uppercase;
   color: var(--sand); font-weight: 600; margin-bottom: 8px;
