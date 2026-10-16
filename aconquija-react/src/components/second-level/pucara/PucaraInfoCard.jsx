@@ -53,11 +53,7 @@ export default function PucaraInfoCard() {
         </div>
 
         <div className="info-card-footer">
-          <a className="btn-contact" href="https://wa.me/543834966977?text=Hola%2C%20me%20interesa%20visitar%20el%20Pucar%C3%A1%20de%20Aconquija" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ShareIcon type="whatsapp" /></svg>
-            Reservar por WhatsApp
-          </a>
-          <a
+            <a
             className="btn-directions"
             href="https://www.google.com/maps/dir/?api=1&origin=Sala+de+Turismo%2C+Aconquija%2C+Catamarca%2C+Argentina&destination=Paraje+Pucar%C3%A1%2C+Aconquija%2C+Catamarca%2C+Argentina&travelmode=driving"
             target="_blank"
