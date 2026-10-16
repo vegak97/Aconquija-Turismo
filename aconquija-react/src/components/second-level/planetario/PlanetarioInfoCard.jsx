@@ -13,6 +13,9 @@ function InfoIcon({ type }) {
 export default function PlanetarioInfoCard() {
   return (
     <div className="info-card reveal in">
+      <div className="info-card-header">
+        <h3>Acerca de</h3>
+      </div>
       <div className="info-rows">
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
