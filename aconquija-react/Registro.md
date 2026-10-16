@@ -1299,3 +1299,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió que el Planetario se cargue arriba directamente, sin la animación de subir.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
+### 2026-10-16 02:37:25 -03:00 — Ajustar el encuadre de la imagen principal en teléfonos
+- **Archivos afectados:** `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** se añadió una regla exclusiva para pantallas de hasta 600 px que ajusta la posición de fondo del hero principal a `43% 65%`, desplazando ligeramente el paisaje hacia la derecha para intentar dejar el árbol más centrado. El encuadre de escritorio y el resto de la página no se modifican.
+- **Motivo:** el usuario pidió mover un poco hacia la derecha la imagen principal en teléfonos para centrar el árbol.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en un teléfono o emulador.
