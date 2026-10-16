@@ -44,14 +44,8 @@ export default function PucaraInfoCard() {
   return (
     <>
       <div className="info-card reveal in">
-        <div className="info-card-header">
-          <div className="eyebrow">Acerca de</div>
-          <div className="season-badges">
-            <span className="season-badge active">Otoño</span>
-            <span className="season-badge active">Invierno</span>
-            <span className="season-badge active">Primavera</span>
-          </div>
-          <h3 style={{ marginTop: 14, fontFamily: 'var(--ff-display)', fontWeight: 500 }}>Evitar días de lluvia</h3>
+        <div className="info-card-header" style={{ padding: '18px 26px' }}>
+          <h3 style={{ margin: 0, fontFamily: 'var(--ff-display)', fontSize: '1.5rem', fontWeight: 500, color: '#fff' }}>Acerca de</h3>
         </div>
 
         <div className="info-rows">
@@ -70,10 +64,6 @@ export default function PucaraInfoCard() {
                 <a href="https://maps.app.goo.gl/bpQn3UqrJxXJkzuaA" target="_blank" rel="noreferrer">Ver en el mapa →</a>
               </div>
             </div>
-          </div>
-          <div className="info-row">
-            <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="price" /></svg></div>
-            <div><div className="info-row-label">Precio</div><div className="info-row-val">Consultas disponibles</div></div>
           </div>
           <div className="info-row">
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z" /></svg></div>
