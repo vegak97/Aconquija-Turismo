@@ -1386,3 +1386,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
 
+### 2026-10-16 05:03:30 -03:00 — Restablecer instantáneamente el scroll al entrar a cualquier página
+- **Archivos afectados:** `src/App.jsx` y `Registro.md`.
+- **Cambio concreto:** se añadió el componente global `ScrollToTop`, conectado al `pathname` de React Router, para llevar la ventana a `(0, 0)` al cargar la aplicación y cada vez que se navega a otra ruta. Durante esa operación se desactiva temporalmente el desplazamiento suave CSS, y se configura `history.scrollRestoration = 'manual'` para evitar que el navegador recupere la posición anterior.
+- **Motivo:** el intento anterior solo cubría la página de inicio y no evitaba de forma global que otras rutas conservaran o animaran la posición de scroll. El usuario pidió que cualquier página se abra desde el principio para no perjudicar la experiencia.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron `npm run build`, `npm run lint` ni pruebas de navegador.
+
