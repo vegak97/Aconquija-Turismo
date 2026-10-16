@@ -16,24 +16,11 @@ function ScrollToTop() {
   const { pathname } = useLocation()
 
   useLayoutEffect(() => {
-    const root = document.documentElement
-    const previousScrollBehavior = root.style.scrollBehavior
-
-    // Anula temporalmente el scroll suave para evitar una subida animada.
-    root.style.scrollBehavior = 'auto'
-    window.scrollTo(0, 0)
-    root.style.scrollBehavior = previousScrollBehavior
+    // El scroll global es instantáneo; los desplazamientos suaves se solicitan explícitamente
+    // desde los enlaces de sección del encabezado.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname])
 
-  useLayoutEffect(() => {
-    // Evita que el navegador restaure la posición anterior al cambiar de página.
-    const previousRestoration = window.history.scrollRestoration
-    window.history.scrollRestoration = 'manual'
-
-    return () => {
-      window.history.scrollRestoration = previousRestoration
-    }
-  }, [])
 
   return null
 }
