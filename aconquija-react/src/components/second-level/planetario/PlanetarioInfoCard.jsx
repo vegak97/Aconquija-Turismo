@@ -1,5 +1,3 @@
-const seasons = ['Verano', 'Otoño', 'Invierno', 'Primavera']
-
 const infoRows = [
   { label: 'Duración', value: '1 a 2 horas por visita', icon: 'time' },
   { label: 'Dificultad', value: 'Sin dificultad — apto para todo público', icon: 'activity' },
@@ -15,13 +13,7 @@ function InfoIcon({ type }) {
 export default function PlanetarioInfoCard() {
   return (
     <div className="info-card reveal in">
-      <div className="info-card-header">
-        <div className="eyebrow">Cuándo ir</div>
-        <div className="season-badges">
-          {seasons.map(season => <span className="season-badge active" key={season}>{season}</span>)}
-        </div>
-        <h3 style={{ marginTop: 14 }}>Mejor en noches despejadas de verano</h3>
-      </div>
+      <div className="info-card-header planetario-info-card-spacer" aria-hidden="true" />
 
       <div className="info-rows">
         {infoRows.map(row => (
