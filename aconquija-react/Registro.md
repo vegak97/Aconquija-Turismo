@@ -1335,3 +1335,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** ajuste detectado durante la revisión estática de la nueva ficha informativa.
 - **Autorización:** corrección estrictamente necesaria dentro de la migración solicitada por el usuario el 2026-10-16.
 - **Resultado:** cambio guardado y revisado estáticamente; no se ejecutaron pruebas visuales ni compilación.
+
+
+### 2026-10-16 03:44:07 -03:00 — Ajustar hero, ficha y galería de Pucará
+
+- **Archivos afectados:** `src/components/second-level/pucara/PucaraHero.jsx`, `PucaraInfoCard.jsx`, `PucaraGallery.jsx`, `src/styles/page-hero.css` y `Registro.md`.
+- **Hero principal:** se eliminó la ruta de navegación «Inicio › Explorar › Sitio Arqueológico» y los cuatro metadatos «Medio día (4 a 6 h)», «Dificultad media-alta», «Aconquija, Catamarca» e «Ingreso registrado». Las etiquetas «Patrimonio Mundial UNESCO», «Arqueología Inca» y «Monumento Histórico Nacional» ahora quedan debajo del título «Pucará de Aconquija». Se ajustó el espacio inferior del hero y el margen superior de las etiquetas para bajar un poco el conjunto.
+- **Ficha lateral:** se cambió el rótulo «Cuándo ir» por «Acerca de», manteniendo el resto de la ficha.
+- **Galería:** se quitó el título «El sitio en imágenes», conservando la etiqueta «Galería», las cuatro imágenes y la interacción de ampliación.
+- **Estilos:** se añadieron reglas limitadas a `.pucara-hero` en `page-hero.css`, reutilizando el mismo ajuste de posición del contenido que tiene el hero del Planetario. No se cambió el estilo de otras páginas.
+- **Motivo y autorización:** petición directa del usuario el 2026-10-16, siguiendo los ajustes que se hicieron previamente en la página del Planetario.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
