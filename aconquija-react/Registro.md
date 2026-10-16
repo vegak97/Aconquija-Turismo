@@ -1418,3 +1418,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió quitar ese botón de la tarjeta ubicada a la derecha en ambas páginas.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
+
+
+### 2026-10-16 10:40:16 -03:00 — Migrar Cultiva Tradición a React
+- **Archivos afectados:** `src/pages/second-level/CultivaTradicionPage.jsx`; `src/components/second-level/cultiva-tradicion/CultivaTradicionHero.jsx`; `src/components/second-level/cultiva-tradicion/CultivaTradicionGrid.jsx`; `src/components/second-level/cultiva-tradicion/CultivaTradicion.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se migró la página `html/segundo_nivel/cultiva_tradicion.html` a la ruta aprobada `/circuitos/cultiva-tradicion`. Se reutilizan el encabezado, el pie de página y el reproductor flotante globales. Se trasladaron el hero, breadcrumb, grilla con las 12 tarjetas, metadatos y CTA de WhatsApp. Las cinco imágenes locales disponibles se importan desde sus rutas reales. Las otras siete tarjetas mantienen sus espacios de imagen reservados, sin referencias externas ni atributos `src` vacíos; las tarjetas sin ruta aprobada se renderizan como elementos visuales sin enlace activo. Las tres tarjetas con destinos del mapa aprobado enlazan a sus rutas existentes. La sección CTA conserva el espacio visual mediante un fondo oscuro, sin asumir que `caballo.webp` sea idéntico a la referencia antigua `caballo.PNG`.
+- **Motivo:** petición directa del usuario del 2026-10-16, con la decisión explícita de mantener las tarjetas sin ruta como visuales no interactivas y dejar vacíos los espacios de imágenes externas.
+- **Autorización:** petición directa del usuario del 2026-10-16, siguiendo el plan de archivos presentado y los criterios de `Metodologia.md`.
+- **Resultado:** archivos guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas de navegador; la validación funcional y visual queda pendiente.
