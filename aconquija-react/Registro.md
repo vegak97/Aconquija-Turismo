@@ -1286,3 +1286,9 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
 
+### 2026-10-16 01:59:40.681 - — Agregar el título «Acerca de» a la ficha del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se agregó una cabecera color pizarra en la parte superior de la ficha informativa, con el título «Acerca de», reutilizando los estilos existentes de `.info-card-header`. Las filas de información y los botones se mantienen sin cambios.
+- **Motivo:** el usuario pidió poner el título «Acerca de» en la barra que quedó al quitar el espacio vacío de la ficha.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
