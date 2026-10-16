@@ -1635,3 +1635,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** se usan los cinco recursos locales de `imagenes/Cultiva_tradiciones/` disponibles para el hero y las primeras cinco tarjetas. Las siete tarjetas restantes conservan el espacio visual reservado sin `img src=""` ni imágenes externas. La referencia original `imagenes/caballo.PNG` de la sección final no se dio por equivalente a otro archivo solo por el nombre; la sección mantiene un fondo oscuro sin asignar una fotografía.
 - **Reutilización:** no se reutilizó `AccordionGallery`, porque es una galería acordeón de páginas de atractivos y no corresponde a esta grilla.
 - **Estado de verificación:** revisión estática de la estructura, las rutas declaradas y los imports. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+## Estado de migración secundaria — Aconquija Respira Verde (2026-10-16 12:08:01 -03:00)
+
+- **Ruta React:** `/circuitos/respira-verde`, conforme al mapa aprobado.
+- **Origen conservado:** `html/segundo_nivel/aconquija_respira_verde.html`; no se modificó el sitio original.
+- **Página React:** `src/pages/second-level/RespiraVerdePage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/second-level/respira-verde/RespiraVerdeHero.jsx`, `RespiraVerdeGrid.jsx` y `RespiraVerde.css`.
+- **Integración:** `src/App.jsx` conecta la ruta de Respira Verde y excluye esa ruta de las pantallas provisionales. Se reutilizan `Header`, `Footer`, el reproductor global y el contenedor compartido.
+- **Contenido migrado:** hero, breadcrumb, las ocho tarjetas en el orden original, textos, categorías, dificultades y metadatos; también se conserva la sección «Armamos el recorrido con vos» y su enlace de WhatsApp.
+- **Tarjetas enlazadas:** Túneles Quebrada de las cañas → `/lugares/tuneles-del-rio-potrero`; las dos tarjetas de Bosque de Alisos → `/lugares/bosque-de-alisos`; Río Potrero → `/lugares/rio-potrero`; Yunca Suma → `/lugares/yunka-suma`. Son destinos presentes en el mapa aprobado, aunque algunas páginas todavía pueden mostrar una pantalla provisional.
+- **Tarjetas sin enlace activo:** Cabalgatas, La Cruz y Senderismo. Se conserva el título vacío de Senderismo y no se crean destinos nuevos.
+- **Imágenes:** se usa el recurso local existente del Bosque de Alisos en el hero y en las dos tarjetas de bosque; se utiliza una imagen de la carpeta local `imagenes/respira_verde/tuneles/` para la tarjeta de túneles y `imagenes/cabalgata.webp` para Cabalgatas. Las tarjetas de Río Potrero, Yunca Suma, La Cruz y Senderismo mantienen espacios reservados porque no se confirmó una correspondencia inequívoca con los archivos referenciados por el HTML antiguo. La sección de consulta utiliza `imagenes/caballo.webp`, recurso que está referenciado por el propio HTML original. No se usan imágenes externas ni se crean elementos con `src=""`.
+- **Estado de verificación:** revisión estática de imports, rutas, enlaces de tarjetas y estructura realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
