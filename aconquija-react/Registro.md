@@ -1292,3 +1292,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió poner el título «Acerca de» en la barra que quedó al quitar el espacio vacío de la ficha.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
+### 2026-10-16 02:11:00 -03:00 — Quitar la animación de desplazamiento al entrar al Planetario
+- **Archivos afectados:** `src/pages/second-level/PlanetarioPage.jsx` y `Registro.md`.
+- **Cambio concreto:** se cambió el desplazamiento de entrada a `window.scrollTo({ top: 0, left: 0, behavior: 'instant' })`, para que la página vaya directamente al inicio sin animar la subida aunque el sitio tenga desplazamiento suave global.
+- **Motivo:** el usuario pidió que el Planetario se cargue arriba directamente, sin la animación de subir.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
