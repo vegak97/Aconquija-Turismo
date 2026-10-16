@@ -1256,3 +1256,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió bajar un poquito el título y las etiquetas para que se vean mejor las personas en la imagen.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-16 00:30:44 -03:00 — Quitar el espacio vacío de la ficha del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx`, `src/styles/pages.css` y `Registro.md`.
+- **Cambio concreto:** se eliminó el contenedor vacío oscuro de la parte superior de la ficha lateral y la regla CSS que le reservaba 84 px. Las filas informativas comienzan ahora directamente en la parte superior de la ficha.
+- **Motivo:** petición del usuario de borrar el espacio sin contenido que se había dejado anteriormente.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas visuales en navegador.
