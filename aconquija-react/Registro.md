@@ -1306,3 +1306,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió mover un poco hacia la derecha la imagen principal en teléfonos para centrar el árbol.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en un teléfono o emulador.
+
+### 2026-10-16 02:39:50 -03:00 — Corregir la dirección del encuadre del hero en teléfonos
+- **Archivos afectados:** `src/styles/responsive.css` y `Registro.md`.
+- **Cambio concreto:** se cambió la posición horizontal del fondo del hero móvil de `43%` a `57%` (manteniendo el eje vertical en `65%`) para desplazar el contenido visible de la imagen hacia la derecha. El ajuste solo aplica a pantallas de hasta 600 px.
+- **Motivo:** el usuario aclaró que el árbol debía desplazarse hacia la derecha, no hacia la izquierda.
+- **Autorización:** corrección solicitada directamente por el usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron pruebas visuales en teléfono o emulador.
