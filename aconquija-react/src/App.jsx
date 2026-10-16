@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PlanetarioPage from './pages/second-level/PlanetarioPage'
 import PucaraPage from './pages/second-level/PucaraPage'
+import CultivaTradicionPage from './pages/second-level/CultivaTradicionPage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -11,6 +12,7 @@ import { approvedRoutes } from './data/routes'
 
 const planetarioPath = '/lugares/planetario-janaxpacha-huasi'
 const pucaraPath = '/lugares/pucara-de-aconquija'
+const cultivaTradicionPath = '/circuitos/cultiva-tradicion'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -25,7 +27,6 @@ function ScrollToTop() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname])
 
-
   return null
 }
 
@@ -37,8 +38,9 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path={planetarioPath} element={<PlanetarioPage />} />
         <Route path={pucaraPath} element={<PucaraPage />} />
+        <Route path={cultivaTradicionPath} element={<CultivaTradicionPage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
