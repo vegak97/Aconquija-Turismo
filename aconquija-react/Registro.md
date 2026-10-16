@@ -1272,3 +1272,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
 
+### 2026-10-16 01:04:41 -03:00 — Enlazar «Cómo llegar» con la ruta desde la Sala de Turismo
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se reemplazó el enlace genérico de Google Maps por una URL de indicaciones en automóvil con origen en la oficina de Información Turística de Aconquija (coordenadas publicadas para RP 48, El Alamito) y destino en el Planetario Janaxpacha Huasi, Sierra de Narváez. El botón mantiene su texto y estilo.
+- **Motivo:** el usuario pidió que «Cómo llegar» indique cómo ir desde la Sala de Turismo hasta el Planetario.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** enlace actualizado en GitHub y revisado estáticamente. No se abrió la ruta en Google Maps ni se ejecutaron build, lint o pruebas visuales; conviene comprobar que Google Maps resuelva el destino y el camino local correctamente.
+
