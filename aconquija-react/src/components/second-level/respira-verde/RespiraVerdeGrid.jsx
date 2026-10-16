@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import tunnelsImage from '../../../../../imagenes/respira_verde/tuneles/IMG_1886.jpg'
 import bosqueImage from '../../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
 import cabalgataImage from '../../../../../imagenes/cabalgata.webp'
-import caballoImage from '../../../../../imagenes/caballo.webp'
 
 const cards = [
   {
@@ -121,7 +120,6 @@ export default function RespiraVerdeGrid() {
           </div>
         </div>
       </main>
-      <div className="respira-cta-image-reference" aria-hidden="true" style={{ '--respira-cta-image': `url("${caballoImage}")` }} />
     </>
   )
 }
