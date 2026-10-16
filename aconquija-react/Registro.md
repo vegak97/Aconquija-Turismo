@@ -1279,3 +1279,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** enlace actualizado en GitHub y revisado estáticamente. No se abrió la ruta en Google Maps ni se ejecutaron build, lint o pruebas visuales; conviene comprobar que Google Maps resuelva el destino y el camino local correctamente.
 
+### 2026-10-16 01:39:36 -03:00 — Abrir la página del Planetario desde arriba
+- **Archivos afectados:** `src/pages/second-level/PlanetarioPage.jsx` y `Registro.md`.
+- **Cambio concreto:** se agregó un efecto de React que desplaza la ventana al inicio (`window.scrollTo(0, 0)`) cuando se monta la página del Planetario. Así, al entrar desde otra sección, la página comienza en la parte superior en vez de conservar la posición de desplazamiento anterior.
+- **Motivo:** el usuario pidió que al entrar al Planetario la página aparezca desde arriba, no a mitad de página.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
