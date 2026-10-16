@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import PlanetarioPage from './pages/second-level/PlanetarioPage'
 import PucaraPage from './pages/second-level/PucaraPage'
 import CultivaTradicionPage from './pages/second-level/CultivaTradicionPage'
+import RespiraVerdePage from './pages/second-level/RespiraVerdePage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -13,6 +14,7 @@ import { approvedRoutes } from './data/routes'
 const planetarioPath = '/lugares/planetario-janaxpacha-huasi'
 const pucaraPath = '/lugares/pucara-de-aconquija'
 const cultivaTradicionPath = '/circuitos/cultiva-tradicion'
+const respiraVerdePath = '/circuitos/respira-verde'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -39,8 +41,9 @@ export default function App() {
         <Route path={planetarioPath} element={<PlanetarioPage />} />
         <Route path={pucaraPath} element={<PucaraPage />} />
         <Route path={cultivaTradicionPath} element={<CultivaTradicionPage />} />
+        <Route path={respiraVerdePath} element={<RespiraVerdePage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
