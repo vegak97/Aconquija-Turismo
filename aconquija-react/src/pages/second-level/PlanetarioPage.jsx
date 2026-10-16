@@ -8,7 +8,7 @@ import PlanetarioInfoCard from '../../components/second-level/planetario/Planeta
 
 export default function PlanetarioPage() {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [])
 
   return (
