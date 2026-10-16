@@ -1426,3 +1426,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16, con la decisión explícita de mantener las tarjetas sin ruta como visuales no interactivas y dejar vacíos los espacios de imágenes externas.
 - **Autorización:** petición directa del usuario del 2026-10-16, siguiendo el plan de archivos presentado y los criterios de `Metodologia.md`.
 - **Resultado:** archivos guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas de navegador; la validación funcional y visual queda pendiente.
+
+### 2026-10-16 12:08:01 -03:00 — Migrar Aconquija Respira Verde a React
+- **Archivos afectados:** `src/pages/second-level/RespiraVerdePage.jsx`; `src/components/second-level/respira-verde/RespiraVerdeHero.jsx`; `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `src/components/second-level/respira-verde/RespiraVerde.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React para `/circuitos/respira-verde`, con hero, breadcrumb, ocho tarjetas y sección de consulta por WhatsApp. Se reutilizan el encabezado, pie de página, reproductor global y contenedor común. La ruta se conectó en `App.jsx` y se excluyó de las rutas que muestran la pantalla provisional.
+- **Contenido y navegación:** se conservaron el orden, textos, categorías y metadatos de las ocho tarjetas, incluida la segunda tarjeta duplicada de Bosque de Alisos y el título vacío de Senderismo. Túneles, ambas tarjetas de Bosque, Río Potrero y Yunca Suma enlazan a rutas ya incluidas en el mapa aprobado. Cabalgatas, La Cruz y Senderismo permanecen sin enlace activo.
+- **Imágenes:** se usan recursos locales confirmados para el hero y las tarjetas de bosque, los Túneles y Cabalgatas; las tarjetas sin una correspondencia de imagen confirmada mantienen un espacio visual reservado. El CTA usa `imagenes/caballo.webp`, referenciada por el HTML original. No se usan imágenes externas ni `src=""`.
+- **Motivo:** migración de la página secundaria aprobada por el usuario, respetando el plan acordado y sin modificar el sitio HTML original.
+- **Autorización:** aprobación explícita del usuario el 2026-10-16 para el plan de migración de Respira Verde.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, rutas y estructura realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; la validación funcional y visual queda pendiente.
