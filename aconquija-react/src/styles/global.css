@@ -1,6 +1,5 @@
 /* ── RESET ── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html  { scroll-behavior: smooth; }
 body  { font-family: var(--ff-body); background: var(--mist); color: var(--night); overflow-x: hidden; }
 a     { text-decoration: none; color: inherit; }
 ul    { list-style: none; }
