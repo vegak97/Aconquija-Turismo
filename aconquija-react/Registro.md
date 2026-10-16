@@ -1411,3 +1411,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Comportamiento esperado:** al entrar a otra página mediante la navegación, comienza arriba; al recargar la misma página, el navegador conserva la posición en la que se recargó.
 - **Motivo y autorización:** petición directa del usuario el 2026-10-16 para que la navegación comience arriba, pero la recarga mantenga la posición actual.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas reales en navegador.
+
+### 2026-10-16 10:08:48 -03:00 — Quitar el botón de reserva por WhatsApp de las fichas del Planetario y Pucará
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx`, `src/components/second-level/pucara/PucaraInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se eliminó únicamente el botón «Reservar por WhatsApp» de la ficha lateral del Planetario Janaxpacha Huasi y de la ficha lateral de las Ruinas del Pucará. Se conservaron los datos de contacto y el botón «Cómo llegar» en ambas fichas.
+- **Motivo:** el usuario pidió quitar ese botón de la tarjeta ubicada a la derecha en ambas páginas.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
