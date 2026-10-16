@@ -1326,3 +1326,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Límites respetados:** no se modificó `html/segundo_nivel/pucara_aconquija.html`, ni se alteró el sitio original fuera de `aconquija-react/`.
 - **Resultado:** archivos creados y ruta conectada en GitHub; revisión estática realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas en navegador, por lo que esas verificaciones quedan pendientes.
+
+
+### 2026-10-16 03:32:44 -03:00 — Corregir el trazo SVG del icono de contacto de Pucará
+
+- **Archivo afectado:** `src/components/second-level/pucara/PucaraInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se corrigió el comando de arco del SVG del icono telefónico para que use el indicador de barrido previsto.
+- **Motivo:** ajuste detectado durante la revisión estática de la nueva ficha informativa.
+- **Autorización:** corrección estrictamente necesaria dentro de la migración solicitada por el usuario el 2026-10-16.
+- **Resultado:** cambio guardado y revisado estáticamente; no se ejecutaron pruebas visuales ni compilación.
