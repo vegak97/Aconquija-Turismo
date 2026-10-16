@@ -58,17 +58,12 @@ export default function PucaraInfoCard() {
             Reservar por WhatsApp
           </a>
           <a
-            className="btn-contact"
+            className="btn-directions"
             href="https://www.google.com/maps/dir/?api=1&origin=Sala+de+Turismo%2C+Aconquija%2C+Catamarca%2C+Argentina&destination=Paraje+Pucar%C3%A1%2C+Aconquija%2C+Catamarca%2C+Argentina&travelmode=driving"
             target="_blank"
             rel="noreferrer"
-            style={{ marginTop: 10 }}
           >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M3 6.5 8.5 3 15.5 6l5.5-3v14.5L15.5 21 8.5 18 3 21z" />
-              <path d="M8.5 3v15M15.5 6v15" />
-              <path d="M12 8.5a2 2 0 0 1 2 2c0 1.5-2 3.5-2 3.5s-2-2-2-3.5a2 2 0 0 1 2-2z" />
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
             Cómo llegar
           </a>
         </div>
