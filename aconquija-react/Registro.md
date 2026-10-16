@@ -1230,3 +1230,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** modernizar la galería del Planetario Janaxpacha Huasi usando el componente y los estilos compartidos por el usuario.
 - **Autorización:** petición directa del usuario el 2026-10-15; el usuario confirmó que actualizó GitHub con las bibliotecas requeridas.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. Se confirmó que `gsap` figura en `package.json` y `package-lock.json`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+## 2026-10-16 — Retirar el bloque «Cuándo ir» de la ficha del Planetario
+
+### 2026-10-16 00:15:19 -03:00
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx`, `src/styles/pages.css` y `Registro.md`.
+- **Cambio concreto:** se quitaron el rótulo «Cuándo ir», las etiquetas «Verano», «Otoño», «Invierno» y «Primavera», y el texto «Mejor en noches despejadas de verano» de la parte superior de la ficha lateral del Planetario. En su lugar se conserva un espacio vacío de 112 px con el fondo pizarra oscura (`var(--night)`), antes de las filas informativas.
+- **Motivo:** el usuario pidió eliminar ese bloque de texto y mantener la zona vacía con el color de pizarra oscura.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
