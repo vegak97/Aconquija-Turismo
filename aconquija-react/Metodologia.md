@@ -1648,3 +1648,15 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Tarjetas sin enlace activo:** Cabalgatas, La Cruz y Senderismo. Se conserva el título vacío de Senderismo y no se crean destinos nuevos.
 - **Imágenes:** se usa el recurso local existente del Bosque de Alisos en el hero y en las dos tarjetas de bosque; se utiliza una imagen de la carpeta local `imagenes/respira_verde/tuneles/` para la tarjeta de túneles y `imagenes/cabalgata.webp` para Cabalgatas. Las tarjetas de Río Potrero, Yunca Suma, La Cruz y Senderismo mantienen espacios reservados porque no se confirmó una correspondencia inequívoca con los archivos referenciados por el HTML antiguo. La sección de consulta utiliza `imagenes/caballo.webp`, recurso que está referenciado por el propio HTML original. No se usan imágenes externas ni se crean elementos con `src=""`.
 - **Estado de verificación:** revisión estática de imports, rutas, enlaces de tarjetas y estructura realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+## Estado de migración de tercer nivel — Túneles del Río Potrero (2026-10-16 20:55:42 -03:00)
+
+- **Ruta React:** `/lugares/tuneles-del-rio-potrero`, según el mapa aprobado.
+- **Origen conservado:** `html/tercer_nivel/tuneles_rio_potrero.html`; no se modificó el sitio original.
+- **Página React:** `src/pages/third-level/TunelesRioPotreroPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/third-level/tuneles-rio-potrero/TunelesRioPotreroHero.jsx`, `TunelesRioPotreroContent.jsx`, `TunelesRioPotreroGallery.jsx`, `TunelesRioPotreroInfoCard.jsx` y `TunelesRioPotrero.css`.
+- **Reutilización:** se reutilizan `Header`, `Footer`, el reproductor global de Spotify y las clases comunes de hero, contenido, lista de características, galería y ficha informativa. La ruta real sustituye la pantalla provisional solo para este destino.
+- **Imágenes:** la referencia del hero en el HTML original no se tomó como equivalente a la foto local que aparece en la tarjeta de Respira Verde, por lo que se conserva un fondo visual reservado sin inventar ni descargar una fotografía. La galería original contiene cuatro referencias de imagen vacías; React conserva los cuatro espacios sin crear elementos de imagen con `src=""`.
+- **Contenido que requiere confirmación futura:** el HTML original muestra tres duraciones distintas o inconsistentes: «30 a 1,20 horas» en el hero, «40 a 1,20 horas» en una característica y «3 a 4 horas (ida y vuelta)» en la ficha. Se mantuvieron los textos fuente sin corregirlos por iniciativa propia. También se conservaron los demás textos de la página.
+- **Estado de verificación:** revisión estática de componentes, imports y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
