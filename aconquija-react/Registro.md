@@ -1370,3 +1370,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario indicó que faltaba el botón que permite iniciar la ruta desde la Sala de Turismo.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas de navegador. Google Maps determinará la ruta disponible y podría no representar todos los caminos de tierra o senderos locales.
+
+
+### 2026-10-16 04:33:00 -03:00 — Igualar el botón «Cómo llegar» de Pucará al del Planetario
+- **Archivos afectados:** `src/components/second-level/pucara/PucaraInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** el botón «Cómo llegar» de Pucará ahora utiliza la misma clase CSS `.btn-directions`, el mismo icono SVG, el mismo tamaño y los mismos estilos de interacción que el botón del Planetario. Se conserva el enlace de Google Maps desde la Sala de Turismo hasta el Paraje Pucará; no se modificó el botón de WhatsApp.
+- **Motivo:** el usuario pidió que ambos botones «Cómo llegar» tengan un diseño idéntico.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
