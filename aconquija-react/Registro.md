@@ -1362,3 +1362,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario para quitar los controles de compartir y usar en Pucará la misma galería implementada previamente en el Planetario.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
+
+
+### 2026-10-16 04:24:14 -03:00 — Restaurar el botón «Cómo llegar» en la ficha de Pucará
+- **Archivos afectados:** `src/components/second-level/pucara/PucaraInfoCard.jsx` y `Registro.md`.
+- **Cambio concreto:** se volvió a añadir debajo de «Reservar por WhatsApp» el botón «Cómo llegar», con icono de mapa y un enlace a Google Maps Directions. La ruta solicita indicaciones en automóvil desde la Sala de Turismo de Aconquija hasta el Paraje Pucará.
+- **Motivo:** el usuario indicó que faltaba el botón que permite iniciar la ruta desde la Sala de Turismo.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas de navegador. Google Maps determinará la ruta disponible y podría no representar todos los caminos de tierra o senderos locales.
