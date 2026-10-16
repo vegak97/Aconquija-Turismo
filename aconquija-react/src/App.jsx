@@ -1,5 +1,5 @@
 import './App.css'
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PlanetarioPage from './pages/second-level/PlanetarioPage'
@@ -14,10 +14,14 @@ const pucaraPath = '/lugares/pucara-de-aconquija'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
+  const previousPathname = useRef(pathname)
 
   useLayoutEffect(() => {
-    // El scroll global es instantáneo; los desplazamientos suaves se solicitan explícitamente
-    // desde los enlaces de sección del encabezado.
+    // En la primera carga no se toca el scroll: así el navegador puede conservar
+    // la posición al recargar. Solo se sube al principio al cambiar de ruta.
+    if (previousPathname.current === pathname) return
+
+    previousPathname.current = pathname
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname])
 
