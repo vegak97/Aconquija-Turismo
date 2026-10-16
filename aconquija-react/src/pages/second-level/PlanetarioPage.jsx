@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Header from '../../components/layout/Header'
 import Footer from '../../components/layout/Footer'
 import PlanetarioHero from '../../components/second-level/planetario/PlanetarioHero'
@@ -6,6 +7,10 @@ import PlanetarioGallery from '../../components/second-level/planetario/Planetar
 import PlanetarioInfoCard from '../../components/second-level/planetario/PlanetarioInfoCard'
 
 export default function PlanetarioPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <Header />
