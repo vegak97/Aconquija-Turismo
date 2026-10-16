@@ -32,7 +32,6 @@ export default function PlanetarioGallery() {
   return (
     <section className="gallery-section reveal in planetario-gallery-section" aria-labelledby="planetario-gallery-title">
       <div className="section-eyebrow">Galería</div>
-      <h2 id="planetario-gallery-title">El cielo en imágenes</h2>
       <AccordionGallery
         items={photos}
         defaultIndex={0}
@@ -51,7 +50,6 @@ export default function PlanetarioGallery() {
         gap={10}
         radius={16}
       />
-      <p className="gallery-caption">Fotografías ilustrativas del cielo nocturno y el entorno de la Sierra de Narváez, donde se ubica el Planetario Janaxpacha Huasi.</p>
     </section>
   )
 }
