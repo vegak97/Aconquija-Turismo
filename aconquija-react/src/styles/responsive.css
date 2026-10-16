@@ -168,7 +168,7 @@
 
 /* Hero principal: desplazar un poco el paisaje a la derecha en teléfonos para centrar el árbol. */
 @media (max-width: 600px) {
-  .hero-bg { background-position: 43% 65%; }
+  .hero-bg { background-position: 57% 65%; }
 }
 
 /* Estaciones: encabezado más limpio solo en teléfonos */
