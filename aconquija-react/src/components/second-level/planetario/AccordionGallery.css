@@ -74,6 +74,10 @@
     color-mix(in srgb, var(--ag-overlay) calc(var(--ag-dim, .34) * 100%), transparent);
 }
 
+.ag-panel--active .ag-panel__overlay {
+  background: linear-gradient(180deg, transparent 34%, color-mix(in srgb, var(--ag-overlay) 88%, transparent) 100%);
+}
+
 .ag-panel__label {
   position: absolute;
   left: 20px;
