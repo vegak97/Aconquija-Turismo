@@ -1393,3 +1393,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron `npm run build`, `npm run lint` ni pruebas de navegador.
 
+
+
+### 2026-10-16 05:09:00 -03:00 — Corregir la restauración y centralizar el desplazamiento inicial
+- **Archivos afectados:** `src/main.jsx`, `src/App.jsx`, `src/pages/HomePage.jsx`, `src/pages/second-level/PlanetarioPage.jsx`, `src/pages/second-level/PucaraPage.jsx`, `src/index.css`, `src/styles/global.css` y `Registro.md`.
+- **Causa encontrada:** la restauración manual del navegador se activaba desde un efecto de React, después de que el documento ya podía haber comenzado a restaurar la posición anterior. Además, había tres reinicios de scroll repartidos entre Inicio, Planetario y Pucará, y el desplazamiento suave estaba declarado globalmente en dos hojas CSS.
+- **Cambio concreto:** se configura `history.scrollRestoration = 'manual'` en `main.jsx` antes de montar React; se deja el reinicio de posición de ruta centralizado en `ScrollToTop` de `App.jsx`; se quitan los reinicios duplicados de las páginas; y se elimina el scroll suave global de ambas hojas CSS. Los enlaces de sección conservan su desplazamiento suave explícito desde `Header.jsx`.
+- **Motivo:** evitar que el navegador restaure una posición anterior antes de que el enrutador pueda corregirla y eliminar comportamientos de scroll duplicados que podían competir entre sí.
+- **Autorización:** petición directa del usuario el 2026-10-16 para revisar el código y corregir el problema persistente.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas reales en navegador.
