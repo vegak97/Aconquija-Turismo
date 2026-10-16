@@ -1620,3 +1620,18 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Recursos e interacciones migrados:** hero con las imágenes originales, textos descriptivos, características, acceso, equipamiento, ficha de información, mapa del paraje, contacto global canónico, enlace de WhatsApp, galería con lightbox y acciones para compartir.
 - **Criterios aplicados:** no se descargaron ni generaron imágenes; no se cambiaron los archivos del sitio original; los datos globales de contacto siguen la página principal; se documentaron los cambios en `Registro.md`.
 - **Estado de verificación:** revisión estática de rutas, imports y estructura realizada. `npm run lint`, `npm run build` y pruebas visuales en navegador no se han ejecutado; no deben marcarse como aprobados hasta correrlos.
+
+
+## Estado de migración secundaria — Cultiva Tradición (2026-10-16 10:40:16 -03:00)
+
+- **Ruta React:** `/circuitos/cultiva-tradicion`, conforme al mapa de rutas aprobado.
+- **Origen conservado:** `html/segundo_nivel/cultiva_tradicion.html`; no se modificó el sitio original.
+- **Página React:** `src/pages/second-level/CultivaTradicionPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/second-level/cultiva-tradicion/CultivaTradicionHero.jsx`, `CultivaTradicionGrid.jsx` y `CultivaTradicion.css`.
+- **Integración:** `src/App.jsx` conecta la ruta de Cultiva Tradición y la excluye del conjunto de rutas que siguen mostrando la pantalla provisional. Se reutilizan `Header`, `Footer`, el contenedor compartido y `SpotifyFloatingPlayer` global.
+- **Contenido migrado:** hero y breadcrumb React, grilla de 12 tarjetas, textos y metadatos, sección de consulta por WhatsApp y pie de página compartido.
+- **Enlaces activos de las tarjetas:** El Bandoneón → `/eventos/fiesta-del-bandoneon`; Festival Mayor → `/eventos/festival-mayor`; Desfiles de Aconquija → `/eventos/desfile-civico-escolar`. Esas rutas pertenecen al mapa aprobado, aunque sus páginas de destino aún pueden mostrar la pantalla provisional hasta migrarlas.
+- **Tarjetas sin ruta:** se conservaron como elementos visuales no interactivos, sin enlaces activos, de acuerdo con la decisión del usuario. No se crearon rutas nuevas para destinos fuera del mapa aprobado.
+- **Imágenes:** se usan los cinco recursos locales de `imagenes/Cultiva_tradiciones/` disponibles para el hero y las primeras cinco tarjetas. Las siete tarjetas restantes conservan el espacio visual reservado sin `img src=""` ni imágenes externas. La referencia original `imagenes/caballo.PNG` de la sección final no se dio por equivalente a otro archivo solo por el nombre; la sección mantiene un fondo oscuro sin asignar una fotografía.
+- **Reutilización:** no se reutilizó `AccordionGallery`, porque es una galería acordeón de páginas de atractivos y no corresponde a esta grilla.
+- **Estado de verificación:** revisión estática de la estructura, las rutas declaradas y los imports. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
