@@ -1435,3 +1435,15 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** migración de la página secundaria aprobada por el usuario, respetando el plan acordado y sin modificar el sitio HTML original.
 - **Autorización:** aprobación explícita del usuario el 2026-10-16 para el plan de migración de Respira Verde.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, rutas y estructura realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; la validación funcional y visual queda pendiente.
+
+### 2026-10-16 20:55:42 -03:00 — Migrar Túneles del Río Potrero a React
+
+- **Archivos afectados:** `src/pages/third-level/TunelesRioPotreroPage.jsx`; `src/components/third-level/tuneles-rio-potrero/TunelesRioPotreroHero.jsx`; `TunelesRioPotreroContent.jsx`; `TunelesRioPotreroGallery.jsx`; `TunelesRioPotreroInfoCard.jsx`; `TunelesRioPotrero.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se migró la página de Túneles del Río Potrero a la ruta `/lugares/tuneles-del-rio-potrero`, reemplazando su pantalla provisional. La página se divide en hero, contenido descriptivo y características, galería, ficha informativa y composición de página; reutiliza el encabezado, pie de página, reproductor global y estilos compartidos de las páginas de lugares.
+- **Contenido y navegación:** se conservaron los textos, etiquetas, metadatos, recomendaciones estacionales, datos informativos y enlaces a mapas del HTML original. El contacto de la ficha se alineó con los datos globales presentes en el pie de página React.
+- **Imágenes:** el hero mantiene un fondo visual reservado porque no se confirmó que la imagen usada en la tarjeta de Respira Verde sea la misma que la referencia del HTML antiguo. Los cuatro espacios de galería se mantienen reservados, ya que el HTML original tenía referencias vacías. No se añadieron imágenes externas, inventadas ni elementos con `src=""`.
+- **Nota de contenido pendiente:** el origen contiene duraciones contradictorias: «30 a 1,20 horas» en el hero, «40 a 1,20 horas» en una característica y «3 a 4 horas (ida y vuelta)» en la ficha. Se preservaron sin corregir para no alterar el contenido sin indicación del usuario.
+- **Motivo:** migración de la página de tercer nivel conforme a la estructura propuesta y aprobada por el usuario.
+- **Autorización:** autorización explícita del usuario el 2026-10-16 para continuar con la migración de Túneles del Río Potrero.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, componentes y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
+
