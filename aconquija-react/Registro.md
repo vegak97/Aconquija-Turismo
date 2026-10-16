@@ -1264,3 +1264,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición del usuario de borrar el espacio sin contenido que se había dejado anteriormente.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas visuales en navegador.
+
+### 2026-10-16 00:38:13 -03:00 — Quitar título y descripción de la galería del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioGallery.jsx` y `Registro.md`.
+- **Cambio concreto:** se eliminó el encabezado «El cielo en imágenes» y el texto descriptivo «Fotografías ilustrativas del cielo nocturno y el entorno de la Sierra de Narváez, donde se ubica el Planetario Janaxpacha Huasi.» Se conservaron la etiqueta «Galería» y los cuatro paneles con sus imágenes.
+- **Motivo:** el usuario pidió retirar esos dos textos de la sección de galería.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
