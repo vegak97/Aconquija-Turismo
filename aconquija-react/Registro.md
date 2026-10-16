@@ -1354,3 +1354,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario para limpiar la ficha, destacar el título y reducir el espacio que quedara tras quitar esos elementos.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas en navegador.
+
+
+### 2026-10-16 04:10:10 -03:00 — Quitar compartir y reutilizar la galería acordeón en Pucará
+- **Archivos afectados:** `src/components/second-level/pucara/PucaraInfoCard.jsx`, `src/components/second-level/pucara/PucaraGallery.jsx`, `src/components/second-level/planetario/AccordionGallery.jsx` y `Registro.md`.
+- **Cambio concreto:** se eliminó de la ficha de Pucará el bloque completo «Compartir», incluidos los botones «Facebook», «WhatsApp» y «Copiar link». Se reemplazó la galería anterior por el componente `AccordionGallery` que ya usa el Planetario, conservando las cuatro fotografías locales del Pucará y configurando el mismo estilo de paneles expandibles, etiquetas, animación y colores. El componente compartido ahora acepta una etiqueta accesible configurable para que la galería de Pucará no anuncie por error el nombre del Planetario.
+- **Motivo:** petición directa del usuario para quitar los controles de compartir y usar en Pucará la misma galería implementada previamente en el Planetario.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
