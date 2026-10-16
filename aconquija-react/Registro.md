@@ -1240,3 +1240,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió eliminar ese bloque de texto y mantener la zona vacía con el color de pizarra oscura.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-16 00:18:13 -03:00 — Reducir el espacio oscuro y quitar el precio de la ficha del Planetario
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioInfoCard.jsx`, `src/styles/pages.css` y `Registro.md`.
+- **Cambio concreto:** se redujo de 112 px a 84 px la altura mínima del espacio vacío color pizarra oscura en la cabecera de la ficha. También se eliminó por completo la fila «Precio — Consultá disponibilidad», incluido su icono.
+- **Motivo:** el usuario pidió achicar un poco el espacio vacío y quitar la información de precio porque no corresponde allí.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
