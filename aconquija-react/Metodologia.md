@@ -1608,3 +1608,15 @@ Se extrajeron las secciones de inicio a src/components/home/: HeroSection, Intro
 ### Organización de estilos React
 
 Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas por responsabilidad. Para conservar la cascada existente, los bloques se separan en tramos contiguos y se importan en el mismo orden original: `variables.css`, `global.css`, `layout.css`, `home-hero.css`, `page-hero.css`, `home.css`, `pages.css` y `responsive.css`. No se deben mover selectores entre hojas sin revisar solapamientos, media queries y animaciones.
+
+
+## Estado de migración secundaria — Pucará de Aconquija (2026-10-16)
+
+- **Ruta React:** `/lugares/pucara-de-aconquija`.
+- **Origen conservado:** `html/segundo_nivel/pucara_aconquija.html`; no se modifica durante esta migración.
+- **Página React:** `src/pages/second-level/PucaraPage.jsx`.
+- **Componentes de página:** `src/components/second-level/pucara/PucaraHero.jsx`, `PucaraContent.jsx`, `PucaraGallery.jsx`, `PucaraGallery.css` y `PucaraInfoCard.jsx`.
+- **Integración:** `src/App.jsx` conecta la ruta aprobada y evita que Pucará siga usando la pantalla provisional. Se reutilizan el encabezado, el pie de página y los estilos compartidos de páginas de lugares.
+- **Recursos e interacciones migrados:** hero con las imágenes originales, textos descriptivos, características, acceso, equipamiento, ficha de información, mapa del paraje, contacto global canónico, enlace de WhatsApp, galería con lightbox y acciones para compartir.
+- **Criterios aplicados:** no se descargaron ni generaron imágenes; no se cambiaron los archivos del sitio original; los datos globales de contacto siguen la página principal; se documentaron los cambios en `Registro.md`.
+- **Estado de verificación:** revisión estática de rutas, imports y estructura realizada. `npm run lint`, `npm run build` y pruebas visuales en navegador no se han ejecutado; no deben marcarse como aprobados hasta correrlos.
