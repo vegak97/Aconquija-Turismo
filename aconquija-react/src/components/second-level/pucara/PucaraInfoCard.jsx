@@ -45,7 +45,7 @@ export default function PucaraInfoCard() {
     <>
       <div className="info-card reveal in">
         <div className="info-card-header">
-          <div className="eyebrow">Cuándo ir</div>
+          <div className="eyebrow">Acerca de</div>
           <div className="season-badges">
             <span className="season-badge active">Otoño</span>
             <span className="season-badge active">Invierno</span>
