@@ -1248,3 +1248,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió achicar un poco el espacio vacío y quitar la información de precio porque no corresponde allí.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-16 00:24:49 -03:00 — Bajar el título y las etiquetas del hero del Planetario
+- **Archivos afectados:** `src/styles/page-hero.css` y `Registro.md`.
+- **Cambio concreto:** se añadió una regla exclusiva para `.planetario-hero .lugar-hero-content` que reduce el espacio inferior de 48 px a 30 px en el hero del Planetario. Esto baja aproximadamente 18 px el conjunto «Planetario Janaxpacha Huasi» y sus etiquetas, sin cambiar los otros heroes. Se conserva el margen superior de 10 px entre el título y las etiquetas.
+- **Motivo:** el usuario pidió bajar un poquito el título y las etiquetas para que se vean mejor las personas en la imagen.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron build, lint ni pruebas visuales en navegador.
