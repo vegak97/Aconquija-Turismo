@@ -1313,3 +1313,16 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario aclaró que el árbol debía desplazarse hacia la derecha, no hacia la izquierda.
 - **Autorización:** corrección solicitada directamente por el usuario el 2026-10-16.
 - **Resultado:** cambio guardado en GitHub y revisado estáticamente; no se ejecutaron pruebas visuales en teléfono o emulador.
+
+
+### 2026-10-16 03:31:54 -03:00 — Migrar Pucará de Aconquija a React
+
+- **Archivos afectados:** `src/App.jsx`; `src/pages/second-level/PucaraPage.jsx`; `src/components/second-level/pucara/PucaraHero.jsx`, `PucaraContent.jsx`, `PucaraGallery.jsx`, `PucaraGallery.css` y `PucaraInfoCard.jsx`; `Metodologia.md` y `Registro.md`.
+- **Cambio concreto:** se reemplazó el destino provisional de `/lugares/pucara-de-aconquija` por una página React modular. Se reutilizan `Header`, `Footer` y los estilos comunes de las páginas de lugares. Se trasladaron el hero, las etiquetas y metadatos, la descripción histórica, las seis características, el acceso, el equipamiento recomendado, la ficha lateral, los enlaces de ubicación/contacto, la acción de WhatsApp y los controles para compartir.
+- **Galería:** se incorporaron las cuatro fotografías originales disponibles en `imagenes/ruinas_del_pucara/`, con ampliación en lightbox, navegación anterior/siguiente, cierre por Escape y clic fuera de la imagen. Se añadieron estilos para que los controles de galería conserven el diseño y tengan foco visible.
+- **Rutas y recursos:** la ruta React aprobada se conecta a `PucaraPage` y se excluye de las rutas provisionales. Las imágenes se importan desde sus ubicaciones existentes; no se movieron ni se reemplazaron archivos originales.
+- **Contenido global:** los datos generales de contacto se unificaron con los de la página principal conforme al criterio de la metodología. Se conservaron el enlace específico al mapa del Paraje Pucará y el enlace de WhatsApp de la página original.
+- **Motivo:** petición directa del usuario de revisar la estructura React y migrar la siguiente página HTML de segundo nivel: Pucará de Aconquija.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Límites respetados:** no se modificó `html/segundo_nivel/pucara_aconquija.html`, ni se alteró el sitio original fuera de `aconquija-react/`.
+- **Resultado:** archivos creados y ruta conectada en GitHub; revisión estática realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas en navegador, por lo que esas verificaciones quedan pendientes.
