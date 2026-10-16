@@ -1378,3 +1378,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** el usuario pidió que ambos botones «Cómo llegar» tengan un diseño idéntico.
 - **Autorización:** petición directa del usuario el 2026-10-16.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador.
+
+### 2026-10-16 19:00:00 -03:00 — Evitar la animación de subida al entrar a Inicio
+- **Archivos afectados:** `src/pages/HomePage.jsx` y `Registro.md`.
+- **Cambio concreto:** el efecto de inicialización de la página principal ahora se ejecuta con `useLayoutEffect` y, si la URL no apunta a una sección mediante un fragmento (`#...`), coloca la ventana directamente arriba con `window.scrollTo({ top: 0, left: 0, behavior: 'instant' })`. Se conserva el desplazamiento a secciones cuando la URL incluye un fragmento.
+- **Motivo:** corregir el salto/desplazamiento animado desde una posición intermedia hasta arriba al entrar a la página de inicio, evitando que se muestre la posición anterior antes de pintar la página.
+- **Autorización:** petición directa del usuario el 2026-10-16.
+- **Resultado:** cambio guardado en GitHub y revisado estáticamente. No se ejecutaron build, lint ni pruebas visuales en navegador.
+
