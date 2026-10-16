@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import HeroSection from '../components/home/HeroSection'
@@ -10,7 +10,13 @@ import AboutSection from '../components/home/AboutSection'
 import PlacesCarousel from '../components/home/PlacesCarousel'
 
 function HomePage() {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Evita que el navegador muestre la posición de scroll anterior al entrar a Inicio.
+    // Si la URL apunta a una sección (#explorar, etc.), se conserva ese destino.
+    if (!window.location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }
+
     const updateScroll = () => {
       const total = document.documentElement.scrollHeight - window.innerHeight
       const percentage = total > 0 ? (window.scrollY / total) * 100 : 0
