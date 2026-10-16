@@ -1222,3 +1222,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** bajar ligeramente las etiquetas «Astroturismo», «Observación de estrellas» y «Noches despejadas».
 - **Autorización:** petición directa del usuario el 2026-10-15.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente; no se ejecutaron build, lint ni pruebas de navegador.
+
+
+### 2026-10-15 23:48:45 -03:00 — Modernizar la galería del Planetario Janaxpacha Huasi
+- **Archivos afectados:** `src/components/second-level/planetario/PlanetarioGallery.jsx`, `src/components/second-level/planetario/AccordionGallery.jsx` (nuevo), `src/components/second-level/planetario/AccordionGallery.css` (nuevo) y `Registro.md`.
+- **Cambio concreto:** se reemplazó la cuadrícula con visor ampliado por una galería de cuatro paneles expandibles animados con GSAP. Se conservaron las cuatro imágenes locales y sus descripciones, se añadieron etiquetas vinculadas al Planetario, se aplicó el acento dorado arena sobre el tono pizarra y se adaptó la disposición a pantallas pequeñas. Se incluyeron controles de teclado y respeto por la preferencia de movimiento reducido.
+- **Motivo:** modernizar la galería del Planetario Janaxpacha Huasi usando el componente y los estilos compartidos por el usuario.
+- **Autorización:** petición directa del usuario el 2026-10-15; el usuario confirmó que actualizó GitHub con las bibliotecas requeridas.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. Se confirmó que `gsap` figura en `package.json` y `package-lock.json`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
