@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import './PucaraGallery.css'
 import ruinas3 from '../../../../../imagenes/ruinas_del_pucara/ruinas_3.webp'
 import ruinas2 from '../../../../../imagenes/ruinas_del_pucara/ruinas_2.webp'
 import ruina from '../../../../../imagenes/ruinas_del_pucara/ruina.webp'
@@ -53,7 +54,7 @@ export default function PucaraGallery() {
 
   return (
     <>
-      <section className="gallery-section reveal in" aria-labelledby="pucara-gallery-title">
+      <section className="gallery-section reveal in pucara-gallery-section" aria-labelledby="pucara-gallery-title">
         <div className="section-eyebrow">Galería</div>
         <h2 id="pucara-gallery-title">El sitio en imágenes</h2>
         <div className="gallery-grid">
