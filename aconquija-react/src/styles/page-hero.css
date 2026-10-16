@@ -36,6 +36,8 @@
 .breadcrumb span { color: rgba(255,255,255,.35); }
 .lugar-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
 .planetario-hero .lugar-hero-content { padding-bottom: 30px; }
+.pucara-hero .lugar-hero-content { padding-bottom: 30px; }
+.pucara-hero .lugar-tags { margin-top: 10px; }
 .planetario-hero .lugar-tags { margin-top: 10px; }
 .lugar-tag {
   font-size: .7rem; letter-spacing: 1.8px; text-transform: uppercase; font-weight: 600;
