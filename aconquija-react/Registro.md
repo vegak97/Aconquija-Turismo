@@ -1402,3 +1402,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** evitar que el navegador restaure una posición anterior antes de que el enrutador pueda corregirla y eliminar comportamientos de scroll duplicados que podían competir entre sí.
 - **Autorización:** petición directa del usuario el 2026-10-16 para revisar el código y corregir el problema persistente.
 - **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas reales en navegador.
+
+
+### 2026-10-16 09:56:00 -03:00 — Mantener el scroll al recargar y subir solo al cambiar de ruta
+- **Archivos afectados:** `src/main.jsx`, `src/App.jsx` y `Registro.md`.
+- **Causa encontrada:** el componente global `ScrollToTop` se ejecutaba también en el montaje inicial, por lo que forzaba la parte superior incluso al recargar una página donde el usuario estaba leyendo. Además, `main.jsx` había configurado `history.scrollRestoration = 'manual'`, impidiendo que el navegador restaurara la posición al recargar.
+- **Cambio concreto:** se eliminó la configuración de restauración manual del navegador. `ScrollToTop` ahora recuerda la ruta inicial y no modifica el scroll en el primer montaje; solo llama a `window.scrollTo(0, 0)` cuando cambia el `pathname` después de navegar a otra ruta.
+- **Comportamiento esperado:** al entrar a otra página mediante la navegación, comienza arriba; al recargar la misma página, el navegador conserva la posición en la que se recargó.
+- **Motivo y autorización:** petición directa del usuario el 2026-10-16 para que la navegación comience arriba, pero la recarga mantenga la posición actual.
+- **Resultado:** cambios guardados en GitHub y revisados estáticamente. No se ejecutaron `npm run lint`, `npm run build` ni pruebas reales en navegador.
