@@ -20,6 +20,7 @@ export default function AccordionGallery({
   showLabels = true,
   grayscale = true,
   className = '',
+  ariaLabel = 'Galería de imágenes del Planetario Janaxpacha Huasi',
 }) {
   const rootRef = useRef(null)
   const panelRefs = useRef([])
@@ -147,7 +148,7 @@ export default function AccordionGallery({
         height: `${height}px`,
       }}
       role="list"
-      aria-label="Galería de imágenes del Planetario Janaxpacha Huasi"
+      aria-label={ariaLabel}
     >
       {items.map((item, index) => {
         const isActive = index === active
