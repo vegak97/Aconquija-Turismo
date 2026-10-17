@@ -1514,3 +1514,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para continuar con la migración de `festival_mayor_Aconquija`.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de estructura, imports, ruta y referencias de imagen realizada. El archivo HTML original conserva el SHA `40b042e6a15151b2f36200f98cfc3c7a7fbf7af6`; no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+### 2026-10-16 23:04:54 -03:00 — Migrar Balneario Municipal Buena Vista a React
+- **Archivos afectados:** `src/pages/third-level/BalnearioBuenaVistaPage.jsx`; `src/components/third-level/balneario-buena-vista/BalnearioBuenaVistaHero.jsx`; `BalnearioBuenaVistaContent.jsx`; `BalnearioBuenaVistaGallery.jsx`; `BalnearioBuenaVistaInfoCard.jsx`; `BalnearioBuenaVista.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React del Balneario Municipal Buena Vista y se conectó la ruta `/lugares/balneario-municipal-buena-vista`, reemplazando la pantalla provisional.
+- **Contenido:** se migraron descripción, seis características, instrucciones de acceso, recomendaciones de equipamiento, metadatos, temporadas y ficha lateral.
+- **Imágenes:** se usaron los recursos locales existentes `imagenes/balneario_municipal/balneario.webp`, `balneario_2.webp`, `balneario_4.webp` y `balneario_5.webp`; no se descargaron imágenes ni se agregaron referencias `src=""`.
+- **Contacto:** se omitieron teléfono, correo y WhatsApp de ejemplo del HTML secundario; se conservó el enlace de Google Maps propio del balneario.
+- **Motivo:** petición directa del usuario del 2026-10-16 para migrar `balneario_buena_vista.html`.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, ruta y recursos locales realizada. El HTML original conserva el SHA `207bf6e0b5db6c8d0173e995d4dd84d028e8be37`; no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
