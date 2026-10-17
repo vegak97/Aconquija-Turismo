@@ -3,7 +3,7 @@ import Footer from '../../components/layout/Footer'
 import RespiraVerdeHero from '../../components/second-level/respira-verde/RespiraVerdeHero'
 import RespiraVerdeGrid from '../../components/second-level/respira-verde/RespiraVerdeGrid'
 import '../../components/second-level/respira-verde/RespiraVerde.css'
-import caballoImage from '../../../../imagenes/caballo.webp'
+import caballoImage from '../../../imagenes/caballo.webp'
 
 export default function RespiraVerdePage() {
   return (
