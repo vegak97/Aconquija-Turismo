@@ -1671,3 +1671,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Contactos:** no se trasladaron el teléfono, correo ni enlace de WhatsApp de ejemplo del HTML original, porque son datos de relleno. Se conserva el enlace al mapa de Yunka Suma.
 - **Estado de verificación:** revisión estática de imports, estructura y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
 
+
+## Estado de migración de tercer nivel — Río Potrero (2026-10-16 21:36:00 -03:00)
+
+- **Ruta React:** `/lugares/rio-potrero`, tomada del mapa de rutas aprobado.
+- **Origen conservado:** `html/tercer_nivel/rio_potrero.html`; el HTML original no se modificó.
+- **Página React:** `src/pages/third-level/RioPotreroPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/third-level/rio-potrero/RioPotreroHero.jsx`, `RioPotreroContent.jsx`, `RioPotreroGallery.jsx`, `RioPotreroInfoCard.jsx` y `RioPotrero.css`.
+- **Reutilización:** se usan `Header`, `Footer`, el reproductor global de Spotify, el diseño compartido de páginas de lugares y las clases comunes para hero, contenido, características y ficha.
+- **Contenido y navegación:** se trasladaron la descripción, seis características, instrucciones de acceso, recomendaciones, metadatos, temporadas y ficha de ubicación. Se conserva el enlace a Google Maps para Río Potrero.
+- **Imágenes:** el hero y las cuatro posiciones de galería permanecen como espacios reservados, porque el HTML original no contiene rutas de imagen utilizables y no se encontró una imagen local confirmada específicamente para esta página. No se añadieron imágenes externas ni elementos `img` con `src=""`.
+- **Contactos:** no se trasladaron teléfono, correo ni enlace de WhatsApp de ejemplo presentes en el HTML original.
+- **Acceso:** se mantuvo el aviso de que el camino es de ripio y vadea el río en algunos tramos, recomendando consultar su estado especialmente después de lluvias.
+- **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
