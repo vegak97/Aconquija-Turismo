@@ -1590,3 +1590,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización expresa del usuario del 2026-10-17 para realizar la limpieza propuesta, eliminando únicamente elementos confirmados como innecesarios.
 - **Resultado:** cambios aplicados en GitHub. Se verificará estáticamente el árbol y las referencias después del commit. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales; no se declara que la compilación esté validada.
 
+
+### 2026-10-17 03:29:32 -03:00 — Verificación estructural de la limpieza
+
+- **Archivos afectados:** revisión del árbol de `aconquija-react/`, `src/App.jsx` y `Registro.md`.
+- **Qué se verificó:** el árbol de GitHub ya no contiene los siete `.gitkeep`, los SVG de ejemplo `react.svg` y `vite.svg`, `src/data/routes.js` ni `src/pages/PagePlaceholder.jsx`. `App.jsx` ya no importa ni menciona el sistema de rutas provisionales. Se mantienen las páginas React de segundo y tercer nivel.
+- **Pendientes conservados deliberadamente:** `src/assets/hero.png`, `public/favicon.svg`, `public/icons.svg` y las imágenes duplicadas por contenido no se eliminaron porque no se pudo confirmar con seguridad que ninguna referencia activa las necesite. Los estilos globales superpuestos tampoco se modificaron sin una comprobación de comportamiento.
+- **Motivo:** documentar el resultado real y no eliminar recursos cuya función no está confirmada.
+- **Autorización:** autorización expresa del usuario del 2026-10-17 para la limpieza propuesta.
+- **Resultado:** revisión estática de estructura y referencias en `App.jsx` completada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales; no se confirma todavía la compilación.
+
