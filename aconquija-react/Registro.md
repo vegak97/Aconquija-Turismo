@@ -1469,3 +1469,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para continuar la siguiente migración de tercer nivel, Río Potrero, con la misma estructura de las páginas anteriores.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, referencias de imagen y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
+
+### 2026-10-16 22:12:37 -03:00 — Migrar Yunka Suma a React
+
+- **Archivos afectados:** `src/pages/third-level/YunkaSumaPage.jsx`; `src/components/third-level/yunka-suma/YunkaSumaHero.jsx`; `YunkaSumaContent.jsx`; `YunkaSumaGallery.jsx`; `YunkaSumaInfoCard.jsx`; `YunkaSuma.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React de Yunka Suma con la misma estructura de las páginas de tercer nivel anteriores y se conectó la ruta `/lugares/yunka-suma`, reemplazando la pantalla provisional. Se reutilizan encabezado, pie de página, reproductor global y estilos comunes.
+- **Contenido y navegación:** se trasladaron descripción, seis características, cómo llegar, recomendaciones, metadatos, temporadas, duración, acceso y ubicación. Se conserva el enlace de mapa de Yunka Suma.
+- **Imágenes:** el hero y las cuatro posiciones de galería permanecen reservados porque el HTML original tiene rutas de imagen vacías y no se encontró un recurso local confirmado para esta página. No se usaron imágenes externas ni `src=""`.
+- **Datos de ejemplo:** se omitieron teléfono, correo, WhatsApp y controles de compartir del HTML original, ya que los datos de contacto eran ficticios y la funcionalidad de compartir no forma parte de la estructura reutilizada en las páginas migradas.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar la migración de tercer nivel con `yunka_suma.html), siguiendo la misma estructura de las páginas anteriores.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, referencias de imagen y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
