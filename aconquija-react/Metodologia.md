@@ -1709,3 +1709,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** el hero y las cuatro posiciones de galería quedan reservados porque las referencias del HTML original están vacías. No se añadieron imágenes externas ni elementos `img` con `src=""`.
 - **Contactos y compartir:** se omitieron los teléfonos, correo y enlace de WhatsApp de ejemplo, además de los controles de compartir del HTML original.
 - **Estado de verificación:** se revisaron estáticamente la conexión de ruta, la inclusión en el mapa aprobado, los imports y la ausencia de `src=""`. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+## Estado de migración de tercer nivel — Desfile Cívico Escolar (2026-10-16 22:45:03 -03:00)
+
+- **Archivo fuente localizado:** el nombre solicitado `Festival_civico.html` no existe en el repositorio; el archivo que corresponde por contenido y mapa de rutas es `html/tercer_nivel/desfile_civico.html`. Se migró este archivo, sin modificarlo.
+- **Ruta React:** `/eventos/desfile-civico-escolar`, existente en el mapa de rutas aprobado.
+- **Página React:** `src/pages/third-level/DesfileCivicoPage.jsx`.
+- **Componentes y estilos:** `src/components/third-level/desfile-civico/DesfileCivicoHero.jsx`, `DesfileCivicoContent.jsx`, `DesfileCivicoGallery.jsx`, `DesfileCivicoInfoCard.jsx` y `DesfileCivico.css`.
+- **Integración:** la ruta se conectó en `src/App.jsx` y se excluyó de la pantalla provisional. Se reutilizan `Header`, `Footer`, la estructura común de páginas de tercer nivel y las clases compartidas.
+- **Contenido:** se migraron descripción, seis características, cómo llegar, recomendaciones, metadatos y ficha lateral.
+- **Imágenes:** el hero usa el recurso local confirmado `imagenes/Cultiva_tradiciones/desfiles.webp`, que corresponde a la referencia `desfiles.jpg` del HTML original. La galería reutiliza `imagenes/montaña.png` y `imagenes/rio.jpeg`, que existen en el repositorio. Los espacios para las fotos ilustrativas externas y para `chica.PNG` quedan reservados; no se descargaron imágenes ni se agregaron imágenes de reemplazo.
+- **Contacto y redes:** no se trasladaron los datos de contacto de ejemplo ni los enlaces sociales del HTML secundario.
+- **Estado de verificación:** se revisaron estáticamente la ruta, los imports, los recursos locales y la ausencia de `src=""`. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
