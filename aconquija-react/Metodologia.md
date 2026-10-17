@@ -1735,3 +1735,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** el hero y los cuatro espacios de galería permanecen reservados porque las referencias del HTML original están vacías. No se añadieron imágenes externas ni elementos `img` con `src=""`.
 - **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original.
 - **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+## Estado de migración de tercer nivel — Balneario Municipal Buena Vista (2026-10-16 23:04:54 -03:00)
+
+- **Ruta React:** `/lugares/balneario-municipal-buena-vista`, contemplada en el mapa aprobado.
+- **Origen conservado:** `html/tercer_nivel/balneario_buena_vista.html`; no se modificó el HTML original.
+- **Página React:** `src/pages/third-level/BalnearioBuenaVistaPage.jsx`.
+- **Componentes y estilos:** `src/components/third-level/balneario-buena-vista/BalnearioBuenaVistaHero.jsx`, `BalnearioBuenaVistaContent.jsx`, `BalnearioBuenaVistaGallery.jsx`, `BalnearioBuenaVistaInfoCard.jsx` y `BalnearioBuenaVista.css`.
+- **Integración:** se conectó la ruta en `src/App.jsx` y se excluyó de la pantalla provisional. Se reutilizan `Header`, `Footer` y la estructura compartida de páginas de tercer nivel.
+- **Contenido:** se trasladaron descripción, seis características, acceso, equipamiento, etiquetas, metadatos y ficha informativa.
+- **Imágenes:** se confirmaron en el repositorio local `imagenes/balneario_municipal/balneario.webp`, `balneario_2.webp`, `balneario_4.webp` y `balneario_5.webp`; se usaron como hero y cuatro imágenes de galería. No se añadieron recursos externos ni `src=""`.
+- **Contacto:** se omitieron teléfono, correo y WhatsApp de ejemplo del HTML secundario; se conservó el enlace específico de ubicación en Google Maps.
+- **Estado de verificación:** revisión estática de imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
