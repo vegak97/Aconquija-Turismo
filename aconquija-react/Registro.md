@@ -1600,3 +1600,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización expresa del usuario del 2026-10-17 para la limpieza propuesta.
 - **Resultado:** revisión estática de estructura y referencias en `App.jsx` completada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales; no se confirma todavía la compilación.
 
+
+
+### 2026-10-17 04:30:33 -03:00 — Corrección de ruta de imagen en Respira Verde
+
+- **Archivo afectado:** `aconquija-react/src/pages/second-level/RespiraVerdePage.jsx`.
+- **Cambio concreto:** se corrigió la importación de `caballo.webp` de `../../../../imagenes/caballo.webp` a `../../../imagenes/caballo.webp`. La imagen existe en `aconquija-react/imagenes/caballo.webp`.
+- **Motivo:** Netlify informó que Vite no podía resolver la ruta anterior durante la compilación.
+- **Autorización:** permiso explícito del usuario en la conversación del 2026-10-17.
+- **Resultado:** corrección aplicada en GitHub en el commit `7f47b49ce02cba8079cc116c87088ea3198b3716`. La compilación todavía no se ha vuelto a ejecutar; queda pendiente el nuevo despliegue de Netlify.
