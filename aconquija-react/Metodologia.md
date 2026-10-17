@@ -1757,3 +1757,12 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - Se mantienen las imágenes locales confirmadas de `imagenes/cristo_redentor/`; no se modificó el HTML original.
 - Se reutilizan el encabezado, el pie de página y el reproductor global existentes.
 - **Estado:** integración de código y revisión estática realizadas. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas pruebas no se dan por realizadas.
+
+
+## Estado de migración de tercer nivel — Virgen del Valle de Aconquija (2026-10-17 02:32:04 -03:00)
+
+- Se creó `src/pages/third-level/VirgenDelVallePage.jsx` y los componentes `VirgenDelValleHero.jsx`, `VirgenDelValleContent.jsx`, `VirgenDelValleGallery.jsx`, `VirgenDelValleInfoCard.jsx` y `VirgenDelValle.css` dentro de `src/components/third-level/virgen-del-valle/`.
+- La ruta `/lugares/virgen-del-valle` quedó conectada en `src/App.jsx` y excluida del filtro que presenta páginas provisionales.
+- Se reutilizan las imágenes locales confirmadas `imagenes/virgen_del_valle/virgen_del_valle.webp` y `imagenes/virgen_del_valle/virgen_del_valle_2.webp`. No se usa la imagen externa ilustrativa del HTML; los espacios sin imagen confirmada no se convierten en imágenes rotas.
+- Se conserva el contenido descriptivo, las características, la información de acceso y el enlace de Google Maps. Se omiten los datos de contacto y WhatsApp de ejemplo del HTML secundario.
+- **Estado:** conexión e inspección estática realizadas. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas verificaciones quedan pendientes. El HTML original permanece sin modificaciones.
