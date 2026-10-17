@@ -1748,3 +1748,12 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** se confirmaron en el repositorio local `imagenes/balneario_municipal/balneario.webp`, `balneario_2.webp`, `balneario_4.webp` y `balneario_5.webp`; se usaron como hero y cuatro imágenes de galería. No se añadieron recursos externos ni `src=""`.
 - **Contacto:** se omitieron teléfono, correo y WhatsApp de ejemplo del HTML secundario; se conservó el enlace específico de ubicación en Google Maps.
 - **Estado de verificación:** revisión estática de imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+## Estado de migración de tercer nivel — Cristo Redentor de Aconquija (2026-10-16 23:25:15 -03:00)
+
+- La página se implementó en `src/pages/third-level/CristoRedentorPage.jsx` y sus componentes están en `src/components/third-level/cristo-redentor/`: hero, contenido, galería, ficha informativa y estilos.
+- La ruta aprobada `/lugares/cristo-redentor` se conectó en `src/App.jsx` y se excluyó del filtro que muestra páginas provisionales.
+- Se mantienen las imágenes locales confirmadas de `imagenes/cristo_redentor/`; no se modificó el HTML original.
+- Se reutilizan el encabezado, el pie de página y el reproductor global existentes.
+- **Estado:** integración de código y revisión estática realizadas. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas pruebas no se dan por realizadas.
