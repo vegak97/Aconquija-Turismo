@@ -9,6 +9,7 @@ import RespiraVerdePage from './pages/second-level/RespiraVerdePage'
 import TunelesRioPotreroPage from './pages/third-level/TunelesRioPotreroPage'
 import BosqueDeAlisosPage from './pages/third-level/BosqueDeAlisosPage'
 import RioPotreroPage from './pages/third-level/RioPotreroPage'
+import YunkaSumaPage from './pages/third-level/YunkaSumaPage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -21,6 +22,7 @@ const respiraVerdePath = '/circuitos/respira-verde'
 const tunelesRioPotreroPath = '/lugares/tuneles-del-rio-potrero'
 const bosqueDeAlisosPath = '/lugares/bosque-de-alisos'
 const rioPotreroPath = '/lugares/rio-potrero'
+const yunkaSumaPath = '/lugares/yunka-suma'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -51,8 +53,9 @@ export default function App() {
         <Route path={tunelesRioPotreroPath} element={<TunelesRioPotreroPage />} />
         <Route path={bosqueDeAlisosPath} element={<BosqueDeAlisosPage />} />
         <Route path={rioPotreroPath} element={<RioPotreroPage />} />
+        <Route path={yunkaSumaPath} element={<YunkaSumaPage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath && path !== yunkaSumaPath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
