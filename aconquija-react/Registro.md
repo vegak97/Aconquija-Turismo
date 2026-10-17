@@ -1447,3 +1447,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** autorización explícita del usuario el 2026-10-16 para continuar con la migración de Túneles del Río Potrero.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, componentes y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
 
+### 2026-10-16 21:15:38 -03:00 — Migrar Bosque de Alisos a React
+
+- **Archivos afectados:** `src/pages/third-level/BosqueDeAlisosPage.jsx`; `src/components/third-level/bosque-de-alisos/BosqueDeAlisosHero.jsx`; `BosqueDeAlisosContent.jsx`; `BosqueDeAlisosGallery.jsx`; `BosqueDeAlisosInfoCard.jsx`; `BosqueDeAlisos.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React de Bosque de Alisos y se conectó la ruta `/lugares/bosque-de-alisos`, reemplazando la pantalla provisional de ese destino. La página separa hero, contenido y características, galería, ficha informativa y composición de página.
+- **Reutilización:** se conservan el encabezado, pie de página, reproductor global y estilos compartidos de las páginas de lugares.
+- **Contenido y navegación:** se migraron la descripción, seis características, instrucciones de acceso, recomendaciones de equipamiento, metadatos, temporadas sugeridas y ubicación en Yunka Suma. El botón de mapa apunta a la búsqueda de Yunka Suma en Aconquija.
+- **Imágenes:** se reutilizan los archivos locales `bosque_de_alisos_2.webp` y `bosque.webp`, referenciados por el HTML fuente. Los otros dos espacios de la galería permanecen reservados porque el HTML tenía `src=""`; no se añadieron imágenes externas ni datos de contacto de ejemplo.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar con la migración del siguiente HTML de tercer nivel, Bosque de Alisos.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
+
