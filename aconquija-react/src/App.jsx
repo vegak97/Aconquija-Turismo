@@ -7,6 +7,7 @@ import PucaraPage from './pages/second-level/PucaraPage'
 import CultivaTradicionPage from './pages/second-level/CultivaTradicionPage'
 import RespiraVerdePage from './pages/second-level/RespiraVerdePage'
 import TunelesRioPotreroPage from './pages/third-level/TunelesRioPotreroPage'
+import BosqueDeAlisosPage from './pages/third-level/BosqueDeAlisosPage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -17,6 +18,7 @@ const pucaraPath = '/lugares/pucara-de-aconquija'
 const cultivaTradicionPath = '/circuitos/cultiva-tradicion'
 const respiraVerdePath = '/circuitos/respira-verde'
 const tunelesRioPotreroPath = '/lugares/tuneles-del-rio-potrero'
+const bosqueDeAlisosPath = '/lugares/bosque-de-alisos'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -45,8 +47,9 @@ export default function App() {
         <Route path={cultivaTradicionPath} element={<CultivaTradicionPage />} />
         <Route path={respiraVerdePath} element={<RespiraVerdePage />} />
         <Route path={tunelesRioPotreroPath} element={<TunelesRioPotreroPage />} />
+        <Route path={bosqueDeAlisosPath} element={<BosqueDeAlisosPage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
