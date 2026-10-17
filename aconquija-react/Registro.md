@@ -1534,3 +1534,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** completar la petición directa del usuario de continuar con `cristo_redentor.html`.
 - **Autorización:** petición directa del usuario del 2026-10-15/16 para migrar esa página; el usuario pidió expresamente volver a intentarlo el 2026-10-16.
 - **Resultado:** inicio de la reanudación. La página y sus componentes están guardados, pero la ruta y la documentación todavía deben actualizarse; no considerar la migración completa hasta confirmar esos cambios.
+
+
+### 2026-10-16 23:25:15 -03:00 — Completar integración de Cristo Redentor
+
+- **Archivos afectados:** `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se importó `CristoRedentorPage`, se declaró la ruta `/lugares/cristo-redentor`, se conectó al componente de página y se excluyó del filtro de páginas provisionales. Se documentó el estado de la migración en `Metodologia.md`.
+- **Motivo:** completar la migración solicitada de `html/tercer_nivel/cristo_redentor.html`.
+- **Autorización:** petición directa del usuario y solicitud explícita de reintentar la integración el 2026-10-16.
+- **Resultado:** cambios guardados en GitHub. La revisión estática confirma que la importación y la ruta están presentes y que la ruta queda fuera de la pantalla provisional. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador. El HTML original no se modificó.
