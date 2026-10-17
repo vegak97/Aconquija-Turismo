@@ -1562,3 +1562,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** completar la última página de tercer nivel pendiente dentro de la migración aprobada.
 - **Autorización:** petición directa del usuario del 2026-10-17 para continuar con `virgen_del_valle.html`.
 - **Resultado:** archivos guardados en GitHub. La inspección estática confirma importación, ruta y exclusión del marcador provisional. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador. El HTML original no se modificó.
+
+
+### 2026-10-17 02:44:37 -03:00 — Inicio de migración de recursos y preparación para Netlify
+
+- **Archivos/rutas previstas:** imágenes del repositorio raíz `imagenes/` hacia `aconquija-react/imagenes/`; referencias de recursos en `aconquija-react/src/`; configuración de despliegue en `aconquija-react/`; documentación `Metodologia.md` y `Registro.md`; limpieza posterior de `html/`, `css/`, `js/` y `index.html` raíz.
+- **Cambio previsto:** inventariar los recursos; trasladar las imágenes conservando sus nombres y contenido; actualizar referencias de React; preparar la configuración necesaria para Netlify; ejecutar las comprobaciones disponibles; eliminar los archivos antiguos solo después de verificar que React ya no dependa de ellos.
+- **Motivo:** preparar el proyecto React para publicarlo en Netlify, a petición directa del usuario del 2026-10-17.
+- **Autorización:** petición directa del usuario para migrar todas las imágenes, limpiar lo que no sea de React y preparar el proyecto para publicación en Netlify.
+- **Resultado inicial:** inventario estructural realizado. Todavía no se han movido ni borrado archivos; la implementación continúa.
