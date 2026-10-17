@@ -12,6 +12,7 @@ import RioPotreroPage from './pages/third-level/RioPotreroPage'
 import YunkaSumaPage from './pages/third-level/YunkaSumaPage'
 import FiestaBandoneonPage from './pages/third-level/FiestaBandoneonPage'
 import DesfileCivicoPage from './pages/third-level/DesfileCivicoPage'
+import FestivalMayorPage from './pages/third-level/FestivalMayorPage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -27,6 +28,7 @@ const rioPotreroPath = '/lugares/rio-potrero'
 const yunkaSumaPath = '/lugares/yunka-suma'
 const fiestaBandoneonPath = '/eventos/fiesta-del-bandoneon'
 const desfileCivicoPath = '/eventos/desfile-civico-escolar'
+const festivalMayorPath = '/eventos/festival-mayor'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -60,8 +62,9 @@ export default function App() {
         <Route path={yunkaSumaPath} element={<YunkaSumaPage />} />
         <Route path={fiestaBandoneonPath} element={<FiestaBandoneonPage />} />
         <Route path={desfileCivicoPath} element={<DesfileCivicoPage />} />
+        <Route path={festivalMayorPath} element={<FestivalMayorPage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath && path !== yunkaSumaPath && path !== fiestaBandoneonPath && path !== desfileCivicoPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath && path !== yunkaSumaPath && path !== fiestaBandoneonPath && path !== desfileCivicoPath && path !== festivalMayorPath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
