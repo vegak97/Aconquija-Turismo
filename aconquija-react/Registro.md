@@ -1480,3 +1480,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para continuar la migración de tercer nivel con `yunka_suma.html), siguiendo la misma estructura de las páginas anteriores.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, referencias de imagen y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+### 2026-10-16 22:35:29 -03:00 — Migrar Festival Provincial del Bandoneón a React
+- **Archivos afectados:** `src/pages/third-level/FiestaBandoneonPage.jsx`; `src/components/third-level/fiesta-bandoneon/FiestaBandoneonHero.jsx`; `FiestaBandoneonContent.jsx`; `FiestaBandoneonGallery.jsx`; `FiestaBandoneonInfoCard.jsx`; `FiestaBandoneon.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React del Festival Provincial del Bandoneón y se conectó `/eventos/fiesta-del-bandoneon`, reemplazando la pantalla provisional. Se separó la página en hero, contenido, galería, ficha informativa y estilos propios, reutilizando componentes globales existentes.
+- **Contenido y navegación:** se migraron la descripción, seis características, instrucciones de acceso, recomendaciones, metadatos y ficha lateral. Se conserva el enlace de mapa que figuraba en el HTML original.
+- **Imágenes:** el hero y las cuatro posiciones de galería quedan reservados porque las referencias originales están vacías; no se usaron imágenes externas ni `src=""`.
+- **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar la migración de `fiesta_bandoneon.html`.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de la estructura, los imports, la ruta y las referencias de imagen realizada. El HTML original mantiene el mismo SHA que antes de la migración. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
