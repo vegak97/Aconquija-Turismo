@@ -1491,3 +1491,15 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para continuar la migración de `fiesta_bandoneon.html`.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de la estructura, los imports, la ruta y las referencias de imagen realizada. El HTML original mantiene el mismo SHA que antes de la migración. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+### 2026-10-16 22:45:03 -03:00 — Migrar Desfile Cívico Escolar a React
+- **Archivos afectados:** `src/pages/third-level/DesfileCivicoPage.jsx`; `src/components/third-level/desfile-civico/DesfileCivicoHero.jsx`; `DesfileCivicoContent.jsx`; `DesfileCivicoGallery.jsx`; `DesfileCivicoInfoCard.jsx`; `DesfileCivico.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React del Desfile Cívico Escolar y se conectó `/eventos/desfile-civico-escolar`, reemplazando la página provisional.
+- **Fuente:** la petición nombraba `Festival_civico.html`, pero el archivo existente y coincidente con la ruta aprobada es `html/tercer_nivel/desfile_civico.html`; se usó esa fuente y no se modificó el HTML original.
+- **Contenido:** se migraron la descripción, seis características, instrucciones de acceso, recomendaciones, metadatos, fecha orientativa y ficha informativa.
+- **Imágenes:** el hero usa `imagenes/Cultiva_tradiciones/desfiles.webp` como correspondencia local de `desfiles.jpg`; la galería usa `imagenes/montaña.png` y `imagenes/rio.jpeg`. Se reservaron las posiciones sin recurso local confirmado. No se añadieron imágenes externas ni `src=""`.
+- **Contacto y redes:** se omitieron datos de contacto de ejemplo y enlaces sociales del HTML secundario.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar con la siguiente página cívica.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** página y ruta guardadas en GitHub; revisión estática de ruta, imports, recursos locales y referencias de imagen realizada. El HTML original no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
