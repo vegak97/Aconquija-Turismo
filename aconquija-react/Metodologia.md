@@ -1660,3 +1660,14 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Contenido que requiere confirmación futura:** el HTML original muestra tres duraciones distintas o inconsistentes: «30 a 1,20 horas» en el hero, «40 a 1,20 horas» en una característica y «3 a 4 horas (ida y vuelta)» en la ficha. Se mantuvieron los textos fuente sin corregirlos por iniciativa propia. También se conservaron los demás textos de la página.
 - **Estado de verificación:** revisión estática de componentes, imports y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
 
+## Estado de migración de tercer nivel — Bosque de Alisos (2026-10-16 21:15:38 -03:00)
+
+- **Ruta React:** `/lugares/bosque-de-alisos`, tomada del mapa de rutas aprobado.
+- **Origen conservado:** `html/tercer_nivel/bosque_de_alisos.html`; no se modificó el HTML original.
+- **Página React:** `src/pages/third-level/BosqueDeAlisosPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/third-level/bosque-de-alisos/BosqueDeAlisosHero.jsx`, `BosqueDeAlisosContent.jsx`, `BosqueDeAlisosGallery.jsx`, `BosqueDeAlisosInfoCard.jsx` y `BosqueDeAlisos.css`.
+- **Reutilización:** se reutilizan `Header`, `Footer`, el reproductor global de Spotify, la estructura de página de lugar y las clases compartidas para hero, contenido, características y ficha informativa.
+- **Imágenes:** el hero usa `imagenes/bosque_de_alisos/bosque_de_alisos_2.webp`; la galería reutiliza `bosque.webp` y `bosque_de_alisos_2.webp`, referenciadas por el HTML original. Los dos espacios de galería cuyas referencias estaban vacías se conservan como espacios visuales, sin `src=""` ni imágenes externas.
+- **Contactos:** no se trasladaron el teléfono, correo ni enlace de WhatsApp de ejemplo del HTML original, porque son datos de relleno. Se conserva el enlace al mapa de Yunka Suma.
+- **Estado de verificación:** revisión estática de imports, estructura y conexión de ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
