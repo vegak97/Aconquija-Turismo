@@ -1,4 +1,4 @@
-import heroImage from '../../../../../imagenes/ruinas_del_pucara/ruinas.webp'
+import heroImage from '../../../../imagenes/ruinas_del_pucara/ruinas.webp'
 
 const tags = [
   'Patrimonio Mundial UNESCO',

@@ -1571,3 +1571,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** preparar el proyecto React para publicarlo en Netlify, a petición directa del usuario del 2026-10-17.
 - **Autorización:** petición directa del usuario para migrar todas las imágenes, limpiar lo que no sea de React y preparar el proyecto para publicación en Netlify.
 - **Resultado inicial:** inventario estructural realizado. Todavía no se han movido ni borrado archivos; la implementación continúa.
+
+
+### 2026-10-17 02:47:03 -03:00 — Migración de imágenes y limpieza para Netlify
+
+- **Archivos afectados:** todos los recursos gráficos de `imagenes/` se trasladan a `aconquija-react/imagenes/` conservando sus nombres y subcarpetas; referencias de imágenes en `src/data/homeData.js`, componentes de inicio, encabezado, pie de página y componentes de las páginas secundarias; `aconquija-react/README.md`; `aconquija-react/public/_redirects`; `netlify.toml`; `Metodologia.md`; `Registro.md`. Se eliminan los archivos originales de `html/`, `css/`, `js/` y el `index.html` raíz.
+- **Cambio concreto:** se actualizan las rutas relativas de las imágenes para la nueva ubicación dentro de React; se prepara la configuración de compilación y publicación en Netlify; se configura el fallback de React Router; se reemplaza el README genérico por instrucciones del proyecto; se retiran los archivos del sitio HTML/CSS/JS anterior tras actualizar las referencias.
+- **Motivo:** dejar el repositorio centrado en la aplicación React y preparar su publicación en Netlify.
+- **Autorización:** petición directa del usuario del 2026-10-17 para migrar todas las imágenes, eliminar lo que no sea de React y preparar el proyecto para Netlify.
+- **Resultado:** cambios estructurales y de referencias preparados para el commit. La verificación estática puede confirmarse tras revisar el árbol final; no se afirma compilación ni pruebas de navegador si no se ejecutaron.

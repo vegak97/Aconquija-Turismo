@@ -1,7 +1,7 @@
-import balnearioImage from '../../../../../imagenes/balneario_municipal/balneario.webp'
-import slideImage from '../../../../../imagenes/balneario_municipal/balneario_2.webp'
-import quinchosImage from '../../../../../imagenes/balneario_municipal/balneario_5.webp'
-import sierraImage from '../../../../../imagenes/balneario_municipal/balneario_4.webp'
+import balnearioImage from '../../../../imagenes/balneario_municipal/balneario.webp'
+import slideImage from '../../../../imagenes/balneario_municipal/balneario_2.webp'
+import quinchosImage from '../../../../imagenes/balneario_municipal/balneario_5.webp'
+import sierraImage from '../../../../imagenes/balneario_municipal/balneario_4.webp'
 
 const photos = [
   { src: balnearioImage, alt: 'Pileta municipal con sectores de distinta profundidad', label: 'Pileta municipal' },

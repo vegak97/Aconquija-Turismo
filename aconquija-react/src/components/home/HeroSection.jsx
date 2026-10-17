@@ -1,4 +1,4 @@
-import heroBackgroundImage from '../../../../imagenes/fondo(1).webp'
+import heroBackgroundImage from '../../../imagenes/fondo(1).webp'
 
 export default function HeroSection() {
   return (

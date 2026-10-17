@@ -1766,3 +1766,15 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - Se reutilizan las imágenes locales confirmadas `imagenes/virgen_del_valle/virgen_del_valle.webp` y `imagenes/virgen_del_valle/virgen_del_valle_2.webp`. No se usa la imagen externa ilustrativa del HTML; los espacios sin imagen confirmada no se convierten en imágenes rotas.
 - Se conserva el contenido descriptivo, las características, la información de acceso y el enlace de Google Maps. Se omiten los datos de contacto y WhatsApp de ejemplo del HTML secundario.
 - **Estado:** conexión e inspección estática realizadas. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas verificaciones quedan pendientes. El HTML original permanece sin modificaciones.
+
+
+## Estado de preparación para Netlify — 2026-10-17
+
+### Migración de imágenes y limpieza autorizada
+
+- **Autorización vigente:** el usuario autorizó expresamente migrar todas las imágenes del repositorio al proyecto React y eliminar los archivos del sitio anterior que no sean necesarios para la aplicación.
+- **Recursos:** las imágenes de la carpeta raíz `imagenes/` se incorporan a `aconquija-react/imagenes/`, manteniendo los nombres y subdirectorios originales. Las referencias de los componentes React se ajustan a la nueva ubicación. No se sustituyen imágenes ni se eliminan recursos gráficos del inventario por parecer duplicados o no estar actualmente referenciados.
+- **Limpieza:** se eliminan los archivos originales de `html/`, `css/`, `js/` y el `index.html` de la raíz del repositorio después de incorporar las imágenes y actualizar las referencias. El `index.html` que permanece es el propio de Vite en `aconquija-react/index.html`. Esta limpieza fue autorizada directamente por el usuario y constituye una excepción a la regla histórica de conservar el sitio original.
+- **Netlify:** se añade `netlify.toml` en la raíz del repositorio con `aconquija-react` como directorio base, `npm run build` como comando y `dist` como carpeta publicada. Se añade `aconquija-react/public/_redirects` para resolver las rutas de React Router en recargas y accesos directos.
+- **Documentación:** se reemplaza el README genérico de Vite por instrucciones propias de Aconquija Turismo.
+- **Verificación:** la revisión de rutas y estructura es estática. La compilación, el linter y las pruebas visuales deben declararse pendientes salvo que se ejecuten realmente.

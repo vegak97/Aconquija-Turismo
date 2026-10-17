@@ -1,4 +1,4 @@
-import heroImage from '../../../../../imagenes/fondo_prueba.png'
+import heroImage from '../../../../imagenes/fondo_prueba.png'
 
 const tags = ['Astroturismo', 'Observación de estrellas', 'Noches despejadas']
 

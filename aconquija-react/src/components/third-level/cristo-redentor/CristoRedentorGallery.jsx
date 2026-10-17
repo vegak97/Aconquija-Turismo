@@ -1,5 +1,5 @@
-import cristoImage from '../../../../../imagenes/cristo_redentor/cristo_redentor.webp'
-import cristoImageThree from '../../../../../imagenes/cristo_redentor/cristo_redentor_3.webp'
+import cristoImage from '../../../../imagenes/cristo_redentor/cristo_redentor.webp'
+import cristoImageThree from '../../../../imagenes/cristo_redentor/cristo_redentor_3.webp'
 
 const photos = [
   { src: cristoImage, alt: 'Cristo Redentor de Aconquija', label: 'Cristo Redentor' },

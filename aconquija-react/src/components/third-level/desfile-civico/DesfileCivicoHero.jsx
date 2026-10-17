@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/Cultiva_tradiciones/desfiles.webp'
+import heroImage from '../../../../imagenes/Cultiva_tradiciones/desfiles.webp'
 
 const tags = ['Agenda de verano', 'Comunidad', 'Enero en Aconquija']
 

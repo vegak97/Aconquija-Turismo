@@ -1,0 +1,4 @@
+[build]
+  base = "aconquija-react"
+  command = "npm run build"
+  publish = "dist"

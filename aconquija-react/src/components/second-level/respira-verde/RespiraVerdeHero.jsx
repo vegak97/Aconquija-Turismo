@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
+import heroImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
 
 export default function RespiraVerdeHero() {
   return (

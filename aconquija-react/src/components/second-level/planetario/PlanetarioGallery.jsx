@@ -1,9 +1,9 @@
 import AccordionGallery from './AccordionGallery'
 
-import planetario3 from '../../../../../imagenes/planetario/planetario_3.webp'
-import planetario4 from '../../../../../imagenes/planetario/planetario_4.webp'
-import noche from '../../../../../imagenes/planetario/noche.webp'
-import planetario2 from '../../../../../imagenes/planetario/planetario_2.webp'
+import planetario3 from '../../../../imagenes/planetario/planetario_3.webp'
+import planetario4 from '../../../../imagenes/planetario/planetario_4.webp'
+import noche from '../../../../imagenes/planetario/noche.webp'
+import planetario2 from '../../../../imagenes/planetario/planetario_2.webp'
 
 const photos = [
   {

@@ -1,10 +1,10 @@
 import AccordionGallery from '../planetario/AccordionGallery'
 import './PucaraGallery.css'
 
-import ruinas3 from '../../../../../imagenes/ruinas_del_pucara/ruinas_3.webp'
-import ruinas2 from '../../../../../imagenes/ruinas_del_pucara/ruinas_2.webp'
-import ruina from '../../../../../imagenes/ruinas_del_pucara/ruina.webp'
-import ruinas4 from '../../../../../imagenes/ruinas_del_pucara/ruinas_4.webp'
+import ruinas3 from '../../../../imagenes/ruinas_del_pucara/ruinas_3.webp'
+import ruinas2 from '../../../../imagenes/ruinas_del_pucara/ruinas_2.webp'
+import ruina from '../../../../imagenes/ruinas_del_pucara/ruina.webp'
+import ruinas4 from '../../../../imagenes/ruinas_del_pucara/ruinas_4.webp'
 
 const photos = [
   {

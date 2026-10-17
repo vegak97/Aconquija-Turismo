@@ -1,16 +1,46 @@
-# React + Vite
+# Aconquija Turismo — React
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Sitio turístico de Aconquija, Catamarca, construido con React, Vite y React Router.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js compatible con la versión de Vite indicada en `package.json`.
+- npm.
 
-## React Compiler
+## Desarrollo local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Desde esta carpeta (`aconquija-react/`):
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Comprobaciones y compilación
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+La compilación de producción se genera en `dist/`.
+
+## Publicación en Netlify
+
+La configuración de Netlify está en el archivo `../netlify.toml`. El directorio base es `aconquija-react`, el comando de compilación es `npm run build` y la carpeta publicada es `dist`. El archivo `public/_redirects` permite que las rutas de React Router funcionen al entrar directamente o recargar una página secundaria.
+
+## Recursos
+
+Las imágenes del proyecto se guardan en `imagenes/` dentro de esta carpeta. Los recursos públicos de Vite (como el favicon y las redirecciones) se encuentran en `public/`.
+
+## Estructura
+
+- `src/components/`: componentes de interfaz y páginas.
+- `src/pages/`: páginas y rutas.
+- `src/data/`: datos de navegación y contenido.
+- `src/styles/`: estilos globales y compartidos.
+- `imagenes/`: recursos gráficos del sitio.
+- `public/`: recursos servidos directamente por Vite.
+
+El registro de cambios y la metodología están documentados en `Registro.md` y `Metodologia.md`.

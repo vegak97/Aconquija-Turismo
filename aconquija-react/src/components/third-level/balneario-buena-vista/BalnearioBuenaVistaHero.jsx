@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/balneario_municipal/balneario.webp'
+import heroImage from '../../../../imagenes/balneario_municipal/balneario.webp'
 
 const tags = ['Pileta Municipal', 'Recreación Familiar', 'Buena Vista, Aconquija']
 

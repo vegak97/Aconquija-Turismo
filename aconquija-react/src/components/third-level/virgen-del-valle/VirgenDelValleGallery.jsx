@@ -1,5 +1,5 @@
-import virgenImage from '../../../../../imagenes/virgen_del_valle/virgen_del_valle.webp'
-import virgenImageTwo from '../../../../../imagenes/virgen_del_valle/virgen_del_valle_2.webp'
+import virgenImage from '../../../../imagenes/virgen_del_valle/virgen_del_valle.webp'
+import virgenImageTwo from '../../../../imagenes/virgen_del_valle/virgen_del_valle_2.webp'
 
 const photos = [
   { src: virgenImage, alt: 'Virgen del Valle de Aconquija', label: 'Virgen del Valle' },

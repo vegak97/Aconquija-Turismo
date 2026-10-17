@@ -1,4 +1,4 @@
-import caballoImage from '../../../../imagenes/caballo.webp'
+import caballoImage from '../../../imagenes/caballo.webp'
 
 export default function AboutSection() {
   return (

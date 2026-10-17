@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import SocialLinks from './SocialLinks'
 import WeatherBadge from '../ui/WeatherBadgeView'
-import logoHeader from '../../../../imagenes/logo_aconquija(1).png'
+import logoHeader from '../../../imagenes/logo_aconquija(1).png'
 
 function Header({ animateOnLoad = false }) {
   const [menuOpen, setMenuOpen] = useState(false)

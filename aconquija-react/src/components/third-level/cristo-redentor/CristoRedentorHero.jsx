@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/cristo_redentor/cristo_redentor_2.webp'
+import heroImage from '../../../../imagenes/cristo_redentor/cristo_redentor_2.webp'
 
 const tags = ['Mirador', 'Sendero corto', 'Apto en familia']
 

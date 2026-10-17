@@ -1,5 +1,5 @@
-import mountainImage from '../../../../../imagenes/montaña.png'
-import riverImage from '../../../../../imagenes/rio.jpeg'
+import mountainImage from '../../../../imagenes/montaña.png'
+import riverImage from '../../../../imagenes/rio.jpeg'
 
 const photos = [
   { alt: 'Actividad comunitaria al aire libre (espacio reservado para imagen del desfile)', label: 'Desfile Cívico Escolar' },

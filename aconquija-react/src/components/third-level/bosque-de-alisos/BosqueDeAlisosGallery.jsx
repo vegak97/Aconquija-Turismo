@@ -1,5 +1,5 @@
-import bosqueImage from '../../../../../imagenes/bosque_de_alisos/bosque.webp'
-import sierraImage from '../../../../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webp'
+import bosqueImage from '../../../../imagenes/bosque_de_alisos/bosque.webp'
+import sierraImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webp'
 
 const photos = [
   { src: bosqueImage, alt: 'Bosque de aliso de cerro entre Río Potrero y Yunka Suma, Aconquija', label: 'Bosque de alisos' },

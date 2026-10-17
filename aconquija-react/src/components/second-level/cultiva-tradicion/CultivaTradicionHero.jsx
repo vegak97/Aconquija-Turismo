@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/Cultiva_tradiciones/fondo.webp'
+import heroImage from '../../../../imagenes/Cultiva_tradiciones/fondo.webp'
 
 export default function CultivaTradicionHero() {
   return (

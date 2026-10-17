@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { InstagramIcon, FacebookIcon, TikTokIcon, WhatsAppIcon } from './SocialLinks'
-import logoFooter from '../../../../imagenes/logo_aconquija(2).png'
+import logoFooter from '../../../imagenes/logo_aconquija(2).png'
 
 function Footer() {
   return (

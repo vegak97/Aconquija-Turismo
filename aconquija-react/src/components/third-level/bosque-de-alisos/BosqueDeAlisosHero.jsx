@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webp'
+import heroImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos_2.webp'
 
 const tags = [
   'Bosque de Yungas',

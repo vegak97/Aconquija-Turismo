@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroImage from '../../../../../imagenes/virgen_del_valle/virgen_del_valle_2.webp'
+import heroImage from '../../../../imagenes/virgen_del_valle/virgen_del_valle_2.webp'
 
 const tags = ['Mirador', 'Fe y religión', 'Caminata corta']
 

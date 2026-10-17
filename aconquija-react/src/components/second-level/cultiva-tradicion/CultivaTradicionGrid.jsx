@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
-import bandoneonImage from '../../../../../imagenes/Cultiva_tradiciones/images.jpg'
-import festivalImage from '../../../../../imagenes/Cultiva_tradiciones/720x405_121220_20250123110656.jpg'
-import tradicionImage from '../../../../../imagenes/Cultiva_tradiciones/IMG_7775.webp'
-import fogonImage from '../../../../../imagenes/Cultiva_tradiciones/fogon.webp'
-import desfileImage from '../../../../../imagenes/Cultiva_tradiciones/desfiles.webp'
+import bandoneonImage from '../../../../imagenes/Cultiva_tradiciones/images.jpg'
+import festivalImage from '../../../../imagenes/Cultiva_tradiciones/720x405_121220_20250123110656.jpg'
+import tradicionImage from '../../../../imagenes/Cultiva_tradiciones/IMG_7775.webp'
+import fogonImage from '../../../../imagenes/Cultiva_tradiciones/fogon.webp'
+import desfileImage from '../../../../imagenes/Cultiva_tradiciones/desfiles.webp'
 
 const cards = [
   { title: 'El Bandoneón', category: 'Festival', description: '🎶 ¡Dejá que el sonido del bandoneón te emocione! Viví una noche llena de música, tradición y cultura en el Festival Provincial del Bandoneón de Aconquija. ¡Te esperamos!', metadata: ['Día completo'], image: bandoneonImage, alt: 'Festival Provincial del Bandoneón de Aconquija', href: '/eventos/fiesta-del-bandoneon', featured: true },
