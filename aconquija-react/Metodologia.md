@@ -1684,3 +1684,15 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Contactos:** no se trasladaron teléfono, correo ni enlace de WhatsApp de ejemplo presentes en el HTML original.
 - **Acceso:** se mantuvo el aviso de que el camino es de ripio y vadea el río en algunos tramos, recomendando consultar su estado especialmente después de lluvias.
 - **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+## Estado de migración de tercer nivel — Yunka Suma (2026-10-16 22:12:37 -03:00)
+
+- **Ruta React:** `/lugares/yunka-suma`, existente en el mapa de rutas aprobado.
+- **Origen conservado:** `html/tercer_nivel/yunka_suma.html`; el HTML original no se modificó.
+- **Página React:** `src/pages/third-level/YunkaSumaPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/third-level/yunka-suma/YunkaSumaHero.jsx`, `YunkaSumaContent.jsx`, `YunkaSumaGallery.jsx`, `YunkaSumaInfoCard.jsx` y `YunkaSuma.css`.
+- **Reutilización:** se usan `Header`, `Footer`, el reproductor global de Spotify, la estructura común de páginas de lugares y las clases compartidas para hero, contenido, características, galería y ficha informativa.
+- **Contenido:** se trasladaron la descripción, las seis características, las instrucciones de acceso desde Catamarca y Tucumán, las recomendaciones, los metadatos y la información de temporada, duración, entrada y ubicación. Se conserva el enlace de Google Maps de Yunka Suma.
+- **Imágenes:** el hero y los cuatro espacios de galería quedan reservados, ya que el HTML original tiene las referencias de imagen vacías y no se encontró un recurso local confirmado específicamente para Yunka Suma. No se añadieron imágenes externas ni elementos `img` con `src=""`.
+- **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original; no se trasladaron números ni direcciones ficticias.
+- **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
