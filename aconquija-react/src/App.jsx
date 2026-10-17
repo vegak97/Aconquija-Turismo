@@ -15,6 +15,7 @@ import DesfileCivicoPage from './pages/third-level/DesfileCivicoPage'
 import FestivalMayorPage from './pages/third-level/FestivalMayorPage'
 import BalnearioBuenaVistaPage from './pages/third-level/BalnearioBuenaVistaPage'
 import CristoRedentorPage from './pages/third-level/CristoRedentorPage'
+import VirgenDelVallePage from './pages/third-level/VirgenDelVallePage'
 import PagePlaceholder from './pages/PagePlaceholder'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
@@ -33,6 +34,7 @@ const desfileCivicoPath = '/eventos/desfile-civico-escolar'
 const festivalMayorPath = '/eventos/festival-mayor'
 const balnearioBuenaVistaPath = '/lugares/balneario-municipal-buena-vista'
 const cristoRedentorPath = '/lugares/cristo-redentor'
+const virgenDelVallePath = '/lugares/virgen-del-valle'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -69,8 +71,9 @@ export default function App() {
         <Route path={festivalMayorPath} element={<FestivalMayorPage />} />
         <Route path={balnearioBuenaVistaPath} element={<BalnearioBuenaVistaPage />} />
         <Route path={cristoRedentorPath} element={<CristoRedentorPage />} />
+        <Route path={virgenDelVallePath} element={<VirgenDelVallePage />} />
         {approvedRoutes
-          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath && path !== yunkaSumaPath && path !== fiestaBandoneonPath && path !== desfileCivicoPath && path !== festivalMayorPath && path !== balnearioBuenaVistaPath && path !== cristoRedentorPath)
+          .filter(({ path }) => path !== planetarioPath && path !== pucaraPath && path !== cultivaTradicionPath && path !== respiraVerdePath && path !== tunelesRioPotreroPath && path !== bosqueDeAlisosPath && path !== rioPotreroPath && path !== yunkaSumaPath && path !== fiestaBandoneonPath && path !== desfileCivicoPath && path !== festivalMayorPath && path !== balnearioBuenaVistaPath && path !== cristoRedentorPath && path !== virgenDelVallePath)
           .map(({ path, title }) => <Route key={path} path={path} element={<PagePlaceholder title={title} />} />)}
         <Route path="*" element={<NotFound />} />
       </Routes>
