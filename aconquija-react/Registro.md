@@ -1525,3 +1525,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para migrar `balneario_buena_vista.html`.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, ruta y recursos locales realizada. El HTML original conserva el SHA `207bf6e0b5db6c8d0173e995d4dd84d028e8be37`; no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+### 2026-10-16 23:25:15 -03:00 — Retomar integración de Cristo Redentor a React
+
+- **Archivos afectados previstos:** `src/App.jsx`; `Metodologia.md`; `Registro.md`. La página y sus componentes ya existen en `src/pages/third-level/CristoRedentorPage.jsx` y `src/components/third-level/cristo-redentor/`.
+- **Cambio concreto:** registrar el intento de completar la conexión de la página a `/lugares/cristo-redentor`, excluir esa ruta de la pantalla provisional y documentar el estado de migración.
+- **Motivo:** completar la petición directa del usuario de continuar con `cristo_redentor.html`.
+- **Autorización:** petición directa del usuario del 2026-10-15/16 para migrar esa página; el usuario pidió expresamente volver a intentarlo el 2026-10-16.
+- **Resultado:** inicio de la reanudación. La página y sus componentes están guardados, pero la ruta y la documentación todavía deben actualizarse; no considerar la migración completa hasta confirmar esos cambios.
