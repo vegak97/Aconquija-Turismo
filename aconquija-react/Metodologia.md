@@ -1696,3 +1696,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** el hero y los cuatro espacios de galería quedan reservados, ya que el HTML original tiene las referencias de imagen vacías y no se encontró un recurso local confirmado específicamente para Yunka Suma. No se añadieron imágenes externas ni elementos `img` con `src=""`.
 - **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original; no se trasladaron números ni direcciones ficticias.
 - **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+## Estado de migración de tercer nivel — Festival Provincial del Bandoneón (2026-10-16 22:35:29 -03:00)
+
+- **Ruta React:** `/eventos/fiesta-del-bandoneon`, ya incluida en el mapa de rutas aprobado.
+- **Origen conservado:** `html/tercer_nivel/fiesta_bandoneon.html`; el HTML original no se modificó.
+- **Página React:** `src/pages/third-level/FiestaBandoneonPage.jsx`.
+- **Componentes y estilos nuevos:** `src/components/third-level/fiesta-bandoneon/FiestaBandoneonHero.jsx`, `FiestaBandoneonContent.jsx`, `FiestaBandoneonGallery.jsx`, `FiestaBandoneonInfoCard.jsx` y `FiestaBandoneon.css`.
+- **Integración:** se conectó la ruta en `src/App.jsx` y se excluyó de la pantalla provisional. Se reutilizan `Header`, `Footer`, el reproductor global y las clases compartidas de las páginas de tercer nivel.
+- **Contenido:** se migraron la descripción, las seis características, cómo llegar, recomendaciones, etiquetas, fecha orientativa, duración, acceso, ubicación y enlace al mapa, respetando el contenido del HTML fuente.
+- **Imágenes:** el hero y las cuatro posiciones de galería quedan reservados porque las referencias del HTML original están vacías. No se añadieron imágenes externas ni elementos `img` con `src=""`.
+- **Contactos y compartir:** se omitieron los teléfonos, correo y enlace de WhatsApp de ejemplo, además de los controles de compartir del HTML original.
+- **Estado de verificación:** se revisaron estáticamente la conexión de ruta, la inclusión en el mapa aprobado, los imports y la ausencia de `src=""`. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
