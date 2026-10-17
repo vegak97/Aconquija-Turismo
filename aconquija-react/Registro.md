@@ -1580,3 +1580,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** dejar el repositorio centrado en la aplicación React y preparar su publicación en Netlify.
 - **Autorización:** petición directa del usuario del 2026-10-17 para migrar todas las imágenes, eliminar lo que no sea de React y preparar el proyecto para Netlify.
 - **Resultado:** cambios guardados en GitHub en el commit `360c44fd4b92f7a62086bcb8bc3e429b16fd183f`. La revisión estática del árbol final confirma que se trasladaron 78 archivos gráficos a `aconquija-react/imagenes/`, no quedan imágenes bajo la carpeta raíz `imagenes/` y se eliminaron los archivos de `html/`, `css/`, `js/` y el `index.html` raíz. Se confirmó la configuración `netlify.toml`, la regla `public/_redirects` y las referencias actualizadas en los componentes inspeccionados. `npm run lint`, `npm run build` y las pruebas visuales no se ejecutaron: el entorno de trabajo no pudo conectarse a GitHub para obtener una copia local del repositorio.
+
+
+### 2026-10-17 03:28:58 -03:00 — Limpieza de recursos de plantilla y rutas provisionales
+
+- **Archivos afectados:** se elimina `src/assets/react.svg`, `src/assets/vite.svg`, los siete archivos `.gitkeep` de carpetas que ya contienen código, `src/data/routes.js` y `src/pages/PagePlaceholder.jsx`; se actualiza `src/App.jsx`.
+- **Cambio concreto:** se retiran los dos SVG de ejemplo de la plantilla y los marcadores vacíos; se quita del enrutador el mecanismo de páginas provisionales porque las 14 rutas secundarias del mapa aprobado ya están declaradas explícitamente en `App.jsx`; se eliminan el listado auxiliar y el componente que solo servía a ese mecanismo.
+- **Motivo:** reducir archivos vacíos/de plantilla y evitar mantener dos listas de rutas con un filtro de exclusión redundante.
+- **Autorización:** autorización expresa del usuario del 2026-10-17 para realizar la limpieza propuesta, eliminando únicamente elementos confirmados como innecesarios.
+- **Resultado:** cambios aplicados en GitHub. Se verificará estáticamente el árbol y las referencias después del commit. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales; no se declara que la compilación esté validada.
+
