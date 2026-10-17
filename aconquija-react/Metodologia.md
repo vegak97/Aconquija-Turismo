@@ -1722,3 +1722,16 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Imágenes:** el hero usa el recurso local confirmado `imagenes/Cultiva_tradiciones/desfiles.webp`, que corresponde a la referencia `desfiles.jpg` del HTML original. La galería reutiliza `imagenes/montaña.png` y `imagenes/rio.jpeg`, que existen en el repositorio. Los espacios para las fotos ilustrativas externas y para `chica.PNG` quedan reservados; no se descargaron imágenes ni se agregaron imágenes de reemplazo.
 - **Contacto y redes:** no se trasladaron los datos de contacto de ejemplo ni los enlaces sociales del HTML secundario.
 - **Estado de verificación:** se revisaron estáticamente la ruta, los imports, los recursos locales y la ausencia de `src=""`. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+## Estado de migración de tercer nivel — Festival Mayor de Aconquija (2026-10-16 22:54:30 -03:00)
+
+- **Ruta React:** `/eventos/festival-mayor`, ya incluida en el mapa de rutas aprobado.
+- **Origen conservado:** `html/tercer_nivel/festival_mayor_aconquija.html`; el HTML original no se modificó.
+- **Página React:** `src/pages/third-level/FestivalMayorPage.jsx`.
+- **Componentes y estilos:** `src/components/third-level/festival-mayor/FestivalMayorHero.jsx`, `FestivalMayorContent.jsx`, `FestivalMayorGallery.jsx`, `FestivalMayorInfoCard.jsx` y `FestivalMayor.css`.
+- **Integración:** la ruta se conectó en `src/App.jsx` y se excluyó de la pantalla provisional. Se reutilizan `Header`, `Footer`, la estructura común de páginas de tercer nivel y las clases compartidas.
+- **Contenido:** se trasladaron la descripción, seis características, cómo llegar, recomendaciones, etiquetas, metadatos y ficha informativa con fecha orientativa, duración, precio y ubicación.
+- **Imágenes:** el hero y los cuatro espacios de galería permanecen reservados porque las referencias del HTML original están vacías. No se añadieron imágenes externas ni elementos `img` con `src=""`.
+- **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original.
+- **Estado de verificación:** revisión estática de componentes, imports, ruta y referencias de imágenes realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
