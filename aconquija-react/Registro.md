@@ -1503,3 +1503,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** petición directa del usuario del 2026-10-16 para continuar con la siguiente página cívica.
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** página y ruta guardadas en GitHub; revisión estática de ruta, imports, recursos locales y referencias de imagen realizada. El HTML original no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
+
+
+### 2026-10-16 22:54:30 -03:00 — Migrar Festival Mayor de Aconquija a React
+- **Archivos afectados:** `src/pages/third-level/FestivalMayorPage.jsx`; `src/components/third-level/festival-mayor/FestivalMayorHero.jsx`; `FestivalMayorContent.jsx`; `FestivalMayorGallery.jsx`; `FestivalMayorInfoCard.jsx`; `FestivalMayor.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página React del Festival Mayor de Aconquija y se conectó la ruta `/eventos/festival-mayor`, reemplazando la pantalla provisional.
+- **Contenido y navegación:** se migraron la descripción, seis características, cómo llegar, recomendaciones, metadatos y ficha lateral, manteniendo el enlace a Google Maps del HTML original.
+- **Imágenes:** el hero y los cuatro espacios de galería se mantienen reservados porque las referencias del HTML original están vacías. No se añadieron imágenes externas ni elementos `img` con `src=""`.
+- **Contactos y compartir:** se omitieron los datos de contacto de ejemplo y los controles de compartir del HTML original.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar con la migración de `festival_mayor_Aconquija`.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de estructura, imports, ruta y referencias de imagen realizada. El archivo HTML original conserva el SHA `40b042e6a15151b2f36200f98cfc3c7a7fbf7af6`; no se modificó. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; quedan pendientes.
