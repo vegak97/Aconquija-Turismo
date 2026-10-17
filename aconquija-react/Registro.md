@@ -1458,3 +1458,14 @@ Zona horaria: Argentina (UTC-03:00).
 - **Autorización:** petición directa del usuario del 2026-10-16.
 - **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
 
+
+### 2026-10-16 21:36:00 -03:00 — Migrar Río Potrero a React
+
+- **Archivos afectados:** `src/pages/third-level/RioPotreroPage.jsx`; `src/components/third-level/rio-potrero/RioPotreroHero.jsx`; `RioPotreroContent.jsx`; `RioPotreroGallery.jsx`; `RioPotreroInfoCard.jsx`; `RioPotrero.css`; `src/App.jsx`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó la página de Río Potrero con la misma estructura de las páginas de tercer nivel anteriores y se conectó la ruta `/lugares/rio-potrero`, reemplazando la pantalla provisional. Se reutilizan el encabezado, pie de página, reproductor global y estilos compartidos.
+- **Contenido y navegación:** se trasladaron la descripción, las seis características, cómo llegar, recomendaciones, metadatos y ficha lateral. Se conserva el enlace de mapa a Río Potrero.
+- **Imágenes:** el hero y las cuatro posiciones de la galería quedan reservados porque las referencias del HTML original están vacías y no se confirmó una imagen local específica para esta página. No se generaron imágenes ni se usaron recursos externos o `src=""`.
+- **Contactos:** se omitieron el teléfono, correo y enlace de WhatsApp de ejemplo del HTML original para no publicar datos ficticios.
+- **Motivo:** petición directa del usuario del 2026-10-16 para continuar la siguiente migración de tercer nivel, Río Potrero, con la misma estructura de las páginas anteriores.
+- **Autorización:** petición directa del usuario del 2026-10-16.
+- **Resultado:** archivos guardados en GitHub y revisión estática de imports, estructura, referencias de imagen y ruta realizada. No se ejecutaron `npm run lint`, `npm run build` ni pruebas visuales en navegador; esas comprobaciones quedan pendientes.
