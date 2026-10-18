@@ -1796,3 +1796,9 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - Se ajustaron los estilos globales en `src/styles/pages.css` para que las tarjetas compartan espaciado y tipografía y para que las etiquetas de temporada se lean correctamente sobre el fondo claro de las filas.
 - No se cambió el contenido de la tarjeta del Pucará; su estructura se mantiene como referencia. La tarjeta del Planetario ya tenía la cabecera «Acerca de» y adopta los ajustes visuales globales.
 - La comprobación realizada fue estática sobre los diez componentes modificados, sus filas de temporada, enlaces y botones. No se ejecutaron compilación, lint ni pruebas de navegador.
+
+
+## Criterio de contenido para tarjetas informativas laterales — 2026-10-18
+
+- En las diez tarjetas de tercer nivel unificadas con el modelo de Ruinas del Pucará, no mostrar filas «Cuándo ir» ni «Precio».
+- Mantener la información propia de cada ficha —como duración, dificultad o entrada, ubicación/punto de partida— y conservar los enlaces de mapa y el botón «Cómo llegar». No eliminar información de «Entrada» cuando forma parte de los datos del evento o lugar.
