@@ -33,7 +33,8 @@ export default function RioPotreroInfoCard() {
               <a href="https://maps.google.com/?q=Rio+Potrero+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>      </div>
+        </div>
+      </div>
 
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Rio+Potrero+Aconquija+Catamarca" target="_blank" rel="noreferrer">
