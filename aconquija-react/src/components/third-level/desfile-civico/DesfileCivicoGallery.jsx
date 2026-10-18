@@ -1,3 +1,4 @@
+import AccordionGallery from '../../ui/AccordionGallery'
 import mountainImage from '../../../../imagenes/montaña.png'
 import riverImage from '../../../../imagenes/rio.jpeg'
 
@@ -13,17 +14,11 @@ export default function DesfileCivicoGallery() {
     <section className="gallery-section reveal in desfile-civico-gallery" aria-label="Galería del Desfile Cívico Escolar">
       <div className="section-eyebrow">Galería</div>
       <h2>La agenda de verano en imágenes</h2>
-      <div className="gallery-grid desfile-civico-gallery-grid">
-        {photos.map((photo, index) => (
-          <div className={`gallery-item desfile-civico-gallery-item desfile-civico-gallery-item--${index + 1}`} key={photo.label}>
-            {photo.src ? <img src={photo.src} alt={photo.alt} loading="lazy" /> : <div className="desfile-civico-gallery-placeholder" aria-hidden="true" />}
-            <span className="desfile-civico-gallery-label">{photo.label}</span>
-          </div>
-        ))}
-      </div>
-      <p className="gallery-caption">
-        Las fotos disponibles muestran el entorno de Aconquija; los espacios restantes quedan reservados para fotografías del desfile.
-      </p>
+      <AccordionGallery
+        items={photos}
+        ariaLabel="Galería de imágenes del Desfile Cívico Escolar"
+      />
+      <p className="gallery-caption">Las fotos disponibles muestran el entorno de Aconquija; los espacios restantes quedan reservados para fotografías del desfile.</p>
     </section>
   )
 }
