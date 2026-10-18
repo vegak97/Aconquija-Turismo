@@ -33,7 +33,8 @@ export default function BalnearioBuenaVistaInfoCard() {
               <a href="https://maps.google.com/?q=Balneario+Municipal+Buena+Vista+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>      </div>
+        </div>
+      </div>
 
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Balneario+Municipal+Buena+Vista+Aconquija+Catamarca" target="_blank" rel="noreferrer">
