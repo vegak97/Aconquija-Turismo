@@ -1,4 +1,4 @@
-import AccordionGallery from './AccordionGallery'
+import AccordionGallery from '../../ui/AccordionGallery'
 
 import planetario3 from '../../../../imagenes/planetario/planetario_3.webp'
 import planetario4 from '../../../../imagenes/planetario/planetario_4.webp'
@@ -30,25 +30,11 @@ const photos = [
 
 export default function PlanetarioGallery() {
   return (
-    <section className="gallery-section reveal in planetario-gallery-section" aria-labelledby="planetario-gallery-title">
+    <section className="gallery-section reveal in planetario-gallery-section" aria-label="Galería del Planetario Janaxpacha Huasi">
       <div className="section-eyebrow">Galería</div>
       <AccordionGallery
         items={photos}
-        defaultIndex={0}
-        expandRatio={0.52}
-        accentColor="#cdaa78"
-        overlayColor="#1c222c"
-        textColor="#ffffff"
-        grayscale
-        showLabels
-        duration={0.6}
-        ease="power3.out"
-        parallax={0.5}
-        tilt={5}
-        stagger={0.06}
-        height={440}
-        gap={10}
-        radius={16}
+        ariaLabel="Galería de imágenes del Planetario Janaxpacha Huasi"
       />
     </section>
   )
