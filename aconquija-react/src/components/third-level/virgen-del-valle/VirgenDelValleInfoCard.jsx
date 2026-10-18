@@ -18,19 +18,6 @@ export default function VirgenDelValleInfoCard() {
         <h3>Acerca de</h3>
       </div>
       <div className="info-rows">
-        <div className="info-row info-season-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
-          <div>
-            <div className="info-row-label">Cuándo ir</div>
-            <div className="info-row-val">
-              <div className="season-badges">
-          {['Verano', 'Otoño', 'Invierno', 'Primavera'].map(season => <span className="season-badge active" key={season}>{season}</span>)}
-        </div>
-              <div className="info-season-note">Todo el año</div>
-            </div>
-          </div>
-        </div>
-        
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div>
@@ -40,12 +27,7 @@ export default function VirgenDelValleInfoCard() {
         <div className="info-row">
           <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="location" /></svg></div>
           <div><div className="info-row-label">Ubicación</div><div className="info-row-val">El Lindero, municipio de Aconquija<br /><a href={mapUrl} target="_blank" rel="noreferrer">Ver en el mapa →</a></div></div>
-        </div>
-        <div className="info-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="price" /></svg></div>
-          <div><div className="info-row-label">Precio</div><div className="info-row-val">Sin costo</div></div>
-        </div>
-      </div>
+        </div>      </div>
       <div className="info-card-footer">
         <a className="btn-directions" href={mapUrl} target="_blank" rel="noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
