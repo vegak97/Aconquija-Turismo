@@ -1787,3 +1787,12 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - Se mantuvo un archivo de compatibilidad en `src/components/second-level/planetario/AccordionGallery.jsx` que reexporta el componente compartido; se retiró la hoja de estilos duplicada de esa ubicación.
 - El componente solo renderiza una etiqueta `img` cuando existe `item.src`, para evitar fuentes de imagen vacías en las galerías que aún tienen espacios reservados.
 - No se ejecutaron compilación, lint ni pruebas de navegador desde esta edición remota; la comprobación realizada fue estática sobre los archivos y sus importaciones.
+
+## Actualización 2026-10-18T00:01:37 -03:00 — Unificación de tarjetas laterales
+
+- Se unificó la cabecera de las tarjetas informativas laterales con el modelo de la página Ruinas del Pucará: cabecera color pizarra y título «Acerca de».
+- En las diez fichas que mostraban la temporada en la cabecera, la información de «Cuándo ir», sus etiquetas de temporada y el texto descriptivo se trasladaron a una fila informativa con icono, manteniendo los datos.
+- Se conservaron las filas de duración, dificultad o entrada, ubicación/punto de partida, precio y contacto que ya existían, junto con sus enlaces de mapa y botones «Cómo llegar».
+- Se ajustaron los estilos globales en `src/styles/pages.css` para que las tarjetas compartan espaciado y tipografía y para que las etiquetas de temporada se lean correctamente sobre el fondo claro de las filas.
+- No se cambió el contenido de la tarjeta del Pucará; su estructura se mantiene como referencia. La tarjeta del Planetario ya tenía la cabecera «Acerca de» y adopta los ajustes visuales globales.
+- La comprobación realizada fue estática sobre los diez componentes modificados, sus filas de temporada, enlaces y botones. No se ejecutaron compilación, lint ni pruebas de navegador.
