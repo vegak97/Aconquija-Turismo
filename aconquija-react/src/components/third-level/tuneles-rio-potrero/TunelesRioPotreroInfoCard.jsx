@@ -18,21 +18,6 @@ export default function TunelesRioPotreroInfoCard() {
       </div>
 
       <div className="info-rows">
-        <div className="info-row info-season-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
-          <div>
-            <div className="info-row-label">Cuándo ir</div>
-            <div className="info-row-val">
-              <div className="season-badges">
-          <span className="season-badge active">Otoño</span>
-          <span className="season-badge active">Invierno</span>
-          <span className="season-badge active">Primavera</span>
-        </div>
-              <div className="info-season-note">Mejor evitar el verano (crecidas del río)</div>
-            </div>
-          </div>
-        </div>
-        
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div>
@@ -48,12 +33,7 @@ export default function TunelesRioPotreroInfoCard() {
               <a href="https://maps.google.com/?q=Rio+Potrero+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>
-        <div className="info-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="price" /></svg></div>
-          <div><div className="info-row-label">Precio</div><div className="info-row-val">Consultá disponibilidad</div></div>
-        </div>
-        <div className="info-row">
+        </div>        <div className="info-row">
           <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.94-.94a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z" /></svg></div>
           <div>
             <div className="info-row-label">Contacto</div>
