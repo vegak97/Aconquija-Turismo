@@ -1778,3 +1778,12 @@ Los estilos se mantienen conectados mediante `src/App.css`, que importa hojas po
 - **Netlify:** se añade `netlify.toml` en la raíz del repositorio con `aconquija-react` como directorio base, `npm run build` como comando y `dist` como carpeta publicada. Se añade `aconquija-react/public/_redirects` para resolver las rutas de React Router en recargas y accesos directos.
 - **Documentación:** se reemplaza el README genérico de Vite por instrucciones propias de Aconquija Turismo.
 - **Verificación:** la revisión de rutas y estructura es estática. La compilación, el linter y las pruebas visuales deben declararse pendientes salvo que se ejecuten realmente.
+
+## Actualización 2026-10-17T23:45:50 -03:00 — Unificación de galerías
+
+- Se centralizó el componente reutilizable de galería acordeón en `src/components/ui/AccordionGallery.jsx`, con sus estilos en `src/components/ui/AccordionGallery.css`.
+- Las galerías de Pucará, Planetario, Balneario Municipal Buena Vista, Bosque de Alisos, Cristo Redentor, Desfile Cívico Escolar, Festival Mayor, Fiesta Provincial del Bandoneón, Río Potrero, Túneles del Río Potrero, Virgen del Valle y Yunka Suma ahora utilizan el mismo componente.
+- Se conservaron las listas de imágenes, importaciones locales, etiquetas y textos de las galerías. Los espacios sin fotografía siguen siendo espacios reservados: no se descargaron, generaron ni sustituyeron imágenes.
+- Se mantuvo un archivo de compatibilidad en `src/components/second-level/planetario/AccordionGallery.jsx` que reexporta el componente compartido; se retiró la hoja de estilos duplicada de esa ubicación.
+- El componente solo renderiza una etiqueta `img` cuando existe `item.src`, para evitar fuentes de imagen vacías en las galerías que aún tienen espacios reservados.
+- No se ejecutaron compilación, lint ni pruebas de navegador desde esta edición remota; la comprobación realizada fue estática sobre los archivos y sus importaciones.
