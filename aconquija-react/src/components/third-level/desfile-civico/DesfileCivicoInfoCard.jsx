@@ -17,17 +17,6 @@ export default function DesfileCivicoInfoCard() {
         <h3>Acerca de</h3>
       </div>
       <div className="info-rows">
-        <div className="info-row info-season-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
-          <div>
-            <div className="info-row-label">Cuándo ir</div>
-            <div className="info-row-val">
-              <div className="season-badges"><span className="season-badge active">Verano</span></div>
-              <div className="info-season-note">Enero (fecha exacta varía cada año)</div>
-            </div>
-          </div>
-        </div>
-        
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div>
@@ -43,12 +32,7 @@ export default function DesfileCivicoInfoCard() {
               <a href="https://maps.google.com/?q=Complejo+Municipal+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>
-        <div className="info-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="price" /></svg></div>
-          <div><div className="info-row-label">Precio</div><div className="info-row-val">Sin costo</div></div>
-        </div>
-      </div>
+        </div>      </div>
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Complejo+Municipal+Aconquija+Catamarca" target="_blank" rel="noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
