@@ -32,7 +32,8 @@ export default function DesfileCivicoInfoCard() {
               <a href="https://maps.google.com/?q=Complejo+Municipal+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>      </div>
+        </div>
+      </div>
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Complejo+Municipal+Aconquija+Catamarca" target="_blank" rel="noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
