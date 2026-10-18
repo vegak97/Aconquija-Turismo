@@ -146,11 +146,6 @@
 }
 .info-card-header h3 { margin: 0; font-family: var(--ff-display); font-size: 1.5rem; font-weight: 500; color: var(--white); }
 .season-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
-.info-season-row .info-row-val { margin-top: 0; }
-.info-season-row .season-badges { margin-top: 0; margin-bottom: 6px; }
-.info-season-row .season-badge { background: rgba(28,34,44,.08); color: var(--night); }
-.info-season-row .season-badge.active { background: var(--amber); color: var(--night); }
-.info-season-note { margin-top: 6px; font-size: .92rem; line-height: 1.4; color: var(--night); }
 .season-badge {
   font-size: .68rem; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 600;
   padding: 5px 12px; border-radius: 20px;
