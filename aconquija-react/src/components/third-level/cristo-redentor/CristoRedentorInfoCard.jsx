@@ -19,7 +19,8 @@ export default function CristoRedentorInfoCard() {
       </div>
       <div className="info-rows">
         {infoRows.map(row => <div className="info-row" key={row.label}><div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div><div><div className="info-row-label">{row.label}</div><div className="info-row-val">{row.value}</div></div></div>)}
-        <div className="info-row"><div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="location" /></svg></div><div><div className="info-row-label">Ubicación</div><div className="info-row-val">El Lindero, municipio de Aconquija<br /><a href={mapUrl} target="_blank" rel="noreferrer">Ver en el mapa →</a></div></div></div>      </div>
+        <div className="info-row"><div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="location" /></svg></div><div><div className="info-row-label">Ubicación</div><div className="info-row-val">El Lindero, municipio de Aconquija<br /><a href={mapUrl} target="_blank" rel="noreferrer">Ver en el mapa →</a></div></div></div>
+      </div>
       <div className="info-card-footer"><a className="btn-directions" href={mapUrl} target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>Cómo llegar</a></div>
     </div>
   )
