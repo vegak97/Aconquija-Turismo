@@ -1,4 +1,4 @@
-import AccordionGallery from '../planetario/AccordionGallery'
+import AccordionGallery from '../../ui/AccordionGallery'
 import './PucaraGallery.css'
 
 import ruinas3 from '../../../../imagenes/ruinas_del_pucara/ruinas_3.webp'
@@ -36,21 +36,6 @@ export default function PucaraGallery() {
       <AccordionGallery
         items={photos}
         ariaLabel="Galería de imágenes del Pucará de Aconquija"
-        defaultIndex={0}
-        expandRatio={0.52}
-        accentColor="#cdaa78"
-        overlayColor="#1c222c"
-        textColor="#ffffff"
-        grayscale
-        showLabels
-        duration={0.6}
-        ease="power3.out"
-        parallax={0.5}
-        tilt={5}
-        stagger={0.06}
-        height={440}
-        gap={10}
-        radius={16}
       />
     </section>
   )
