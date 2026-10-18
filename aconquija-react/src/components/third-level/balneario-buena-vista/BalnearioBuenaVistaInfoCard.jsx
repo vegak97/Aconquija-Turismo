@@ -18,20 +18,6 @@ export default function BalnearioBuenaVistaInfoCard() {
       </div>
 
       <div className="info-rows">
-        <div className="info-row info-season-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
-          <div>
-            <div className="info-row-label">Cuándo ir</div>
-            <div className="info-row-val">
-              <div className="season-badges">
-          <span className="season-badge active">Primavera</span>
-          <span className="season-badge active">Verano</span>
-        </div>
-              <div className="info-season-note">Ideal en los meses de calor</div>
-            </div>
-          </div>
-        </div>
-        
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div>
@@ -47,12 +33,7 @@ export default function BalnearioBuenaVistaInfoCard() {
               <a href="https://maps.google.com/?q=Balneario+Municipal+Buena+Vista+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>
-        <div className="info-row">
-          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type="price" /></svg></div>
-          <div><div className="info-row-label">Precio</div><div className="info-row-val">Consultá disponibilidad</div></div>
-        </div>
-      </div>
+        </div>      </div>
 
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Balneario+Municipal+Buena+Vista+Aconquija+Catamarca" target="_blank" rel="noreferrer">
