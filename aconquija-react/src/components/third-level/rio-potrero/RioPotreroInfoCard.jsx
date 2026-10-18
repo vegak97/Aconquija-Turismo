@@ -13,16 +13,25 @@ function InfoIcon({ type }) {
 export default function RioPotreroInfoCard() {
   return (
     <div className="info-card reveal in">
-      <div className="info-card-header rio-potrero-info-header">
-        <div className="eyebrow">Cuándo ir</div>
-        <div className="season-badges">
-          <span className="season-badge active">Verano</span>
-          <span className="season-badge active">Otoño</span>
-        </div>
-        <h3>Todo el año (mejor época: verano y otoño)</h3>
+      <div className="info-card-header">
+        <h3>Acerca de</h3>
       </div>
 
       <div className="info-rows">
+        <div className="info-row info-season-row">
+          <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M16 2v4M8 2v4M3 10h18" /></svg></div>
+          <div>
+            <div className="info-row-label">Cuándo ir</div>
+            <div className="info-row-val">
+              <div className="season-badges">
+          <span className="season-badge active">Verano</span>
+          <span className="season-badge active">Otoño</span>
+        </div>
+              <div className="info-season-note">Todo el año (mejor época: verano y otoño)</div>
+            </div>
+          </div>
+        </div>
+        
         {infoRows.map(row => (
           <div className="info-row" key={row.label}>
             <div className="info-row-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><InfoIcon type={row.icon} /></svg></div>
