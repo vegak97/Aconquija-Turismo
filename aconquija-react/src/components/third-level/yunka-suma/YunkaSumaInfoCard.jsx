@@ -33,7 +33,8 @@ export default function YunkaSumaInfoCard() {
               <a href="https://maps.google.com/?q=Yunka+Suma+Aconquija+Catamarca" target="_blank" rel="noreferrer">Ver en el mapa →</a>
             </div>
           </div>
-        </div>      </div>
+        </div>
+      </div>
 
       <div className="info-card-footer">
         <a className="btn-directions" href="https://maps.google.com/?q=Yunka+Suma+Aconquija+Catamarca" target="_blank" rel="noreferrer">
