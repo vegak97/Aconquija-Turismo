@@ -1623,3 +1623,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** unificar las tarjetas laterales de las páginas con el modelo de Ruinas del Pucará sin perder información específica.
 - **Autorización:** petición directa del usuario del 2026-10-18 para modificar las tarjetas laterales de las mismas páginas cuyas galerías se habían actualizado.
 - **Resultado:** cambios guardados en `main`. Se revisaron estáticamente los diez componentes modificados y se confirmó la presencia de las filas de temporada, enlaces de mapa y botones «Cómo llegar». No se ejecutaron compilación, lint ni pruebas de navegador.
+
+
+### 2026-10-18 23:00:00 -03:00 — Retirar «Cuándo ir» y «Precio» de las tarjetas laterales
+- **Archivos afectados:** las diez fichas informativas de Balneario Buena Vista, Bosque de Alisos, Cristo Redentor, Desfile Cívico, Festival Mayor, Fiesta del Bandoneón, Río Potrero, Túneles del Río Potrero, Virgen del Valle y Yunka Suma; además de `src/styles/pages.css`.
+- **Cambio concreto:** se eliminaron por completo las filas «Cuándo ir» y «Precio» de esas diez tarjetas. Se conservaron las demás filas, los datos específicos de cada lugar o evento, los enlaces al mapa y los botones «Cómo llegar». Se retiraron los estilos que solo servían a la fila estacional.
+- **Autorización:** solicitud directa del usuario del 2026-10-18.
+- **Verificación:** inspección estática de las diez fichas; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
