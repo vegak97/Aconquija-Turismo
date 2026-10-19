@@ -226,18 +226,18 @@
   .history-panel-heading p { font-size: .72rem; }
   .history-panel-body { grid-template-columns: 1fr; gap: 16px; padding: 18px 16px 20px; }
   .history-timeline {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px 5px;
-    padding: 0 0 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 0 10px;
     border-bottom: 1px solid rgba(32,41,54,.12);
   }
-  .history-timeline::before { top: 12px; bottom: auto; left: 12px; right: 12px; width: auto; height: 1px; }
-  .history-date { min-height: 45px; gap: 3px; padding: 0 2px 0 0; flex-direction: column; align-items: flex-start; }
-  .history-dot { flex-basis: 24px; }
-  .history-date-text { gap: 1px; padding-left: 1px; }
-  .history-date strong { font-size: .75rem; }
-  .history-date small { font-size: .63rem; line-height: 1.25; }
+  .history-timeline::before { top: 12px; bottom: 20px; left: 12px; right: auto; width: 1px; height: auto; }
+  .history-date { min-height: 38px; gap: 10px; padding: 0 0 9px; flex-direction: row; align-items: flex-start; }
+  .history-dot { flex: 0 0 25px; }
+  .history-date-text { gap: 1px; padding-left: 0; }
+  .history-date strong { font-size: .78rem; }
+  .history-date small { font-size: .68rem; line-height: 1.3; }
   .history-detail img { height: 165px; margin-bottom: 12px; }
   .history-detail h3 { font-size: 1.35rem; }
   .history-detail > p:not(.history-detail-eyebrow):not(.history-note) { font-size: .86rem; line-height: 1.65; }
@@ -250,8 +250,8 @@
   .history-eyebrow { font-size: .62rem; letter-spacing: 1.5px; }
   .history-intro-copy h3 { font-size: 1.28rem; }
   .history-prompt { font-size: .73rem; line-height: 1.5; }
-  .history-timeline { gap: 8px 2px; }
-  .history-date strong { font-size: .7rem; }
-  .history-date small { font-size: .58rem; }
+  .history-timeline { gap: 0; }
+  .history-date strong { font-size: .76rem; }
+  .history-date small { font-size: .65rem; }
   .history-detail img { height: 145px; }
 }
