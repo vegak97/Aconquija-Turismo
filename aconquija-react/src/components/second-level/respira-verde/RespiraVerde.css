@@ -1,10 +1,10 @@
 .respira-hero{position:relative;min-height:360px;height:54vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--night)}
 .respira-hero__background{position:absolute;inset:0;background-size:cover;background-position:center 40%;transform:scale(1.05);animation:respira-hero-zoom 1.6s ease forwards}
-.respira-hero__background::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,22,.3),rgba(16,18,22,.1) 35%,rgba(16,18,22,.65) 72%,rgba(16,18,22,.92))}
+.respira-hero__background::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,22,.18),rgba(16,18,22,.06) 35%,transparent 72%)}
 .respira-hero__content{position:relative;z-index:1;width:100%;padding:0 6vw 44px;animation:respira-fade-up .8s .15s ease both}
 .respira-eyebrow{margin:0 0 10px;color:var(--sand);font-size:.72rem;font-weight:600;letter-spacing:3px;text-transform:uppercase}
-.respira-hero h1{margin:0 0 14px;color:var(--white);font-family:var(--ff-display);font-size:clamp(2.6rem,7vw,5rem);font-weight:500;line-height:1}
-.respira-lead{max-width:760px;margin:0;color:rgba(255,255,255,.82);font-size:.98rem;line-height:1.7}
+.respira-hero h1{margin:0 0 12px;color:var(--white);font-family:var(--ff-display);font-size:clamp(2.3rem,5.8vw,4.2rem);font-weight:500;line-height:1}
+.respira-lead{max-width:760px;margin:0;color:rgba(255,255,255,.82);font-size:.9rem;line-height:1.65}
 .respira-main{padding:48px 0 80px;background:var(--mist)}
 .respira-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .respira-card{position:relative;display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid var(--line-light);border-radius:10px;background:var(--white);color:var(--night);text-align:left;text-decoration:none;transition:transform .38s cubic-bezier(.2,.7,.2,1),box-shadow .38s ease}
@@ -34,5 +34,5 @@
 .respira-cta__button:hover{transform:translateY(-2px);background:transparent;color:var(--white)}.respira-cta__button:focus-visible{outline:3px solid var(--white);outline-offset:4px}
 @keyframes respira-hero-zoom{to{transform:scale(1)}}@keyframes respira-fade-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:980px){.respira-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:640px){.respira-hero{height:auto;min-height:440px}.respira-hero__content{padding:0 1.25rem 32px}.respira-hero h1{font-size:clamp(2.3rem,12vw,3.4rem)}.respira-main{padding:32px 0 56px}.respira-grid{grid-template-columns:minmax(0,1fr);gap:18px}.respira-card__image{height:220px}.respira-cta{min-height:320px;padding:56px 1.25rem}}
+@media(max-width:640px){.respira-hero{height:auto;min-height:440px}.respira-hero__content{padding:0 1.25rem 32px}.respira-hero h1{font-size:clamp(2rem,10vw,3rem)}.respira-lead{font-size:.88rem;line-height:1.6}.respira-main{padding:32px 0 56px}.respira-grid{grid-template-columns:minmax(0,1fr);gap:18px}.respira-card__image{height:220px}.respira-cta{min-height:320px;padding:56px 1.25rem}}
 @media(prefers-reduced-motion:reduce){.respira-hero__background,.respira-hero__content{animation:none}.respira-card,.respira-card__image img,.respira-card__arrow,.respira-cta__button{transition:none}}
