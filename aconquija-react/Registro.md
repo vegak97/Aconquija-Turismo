@@ -1639,3 +1639,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** simplificar la cabecera según la solicitud del usuario.
 - **Autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación, lint ni pruebas visuales. La solicitud también mencionaba achicar un elemento, pero el mensaje quedó incompleto y ese ajuste queda pendiente de aclaración.
+
+
+### 2026-10-19 18:43:07 -03:00 — Ajustar título, descripción y sombreado de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerde.css`; `Registro.md`.
+- **Cambio concreto:** se redujo ligeramente el tamaño del título «Respira Verde» y del texto descriptivo, con ajustes específicos para pantallas móviles. Se quitó el sombreado oscuro fuerte de la parte inferior de la imagen de portada; queda únicamente una capa muy sutil en la parte superior para no oscurecer la zona inferior.
+- **Motivo:** ajustar la escala del encabezado y mostrar la fotografía de fondo sin el degradado oscuro inferior, según la solicitud del usuario.
+- **Autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
