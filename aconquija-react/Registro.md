@@ -1648,3 +1648,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** ajustar la escala del encabezado y mostrar la fotografía de fondo sin el degradado oscuro inferior, según la solicitud del usuario.
 - **Autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-19 18:44:00 -03:00 — Cambiar imagen de portada de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeHero.jsx`; `Registro.md`.
+- **Cambio concreto:** se reemplazó la imagen de fondo anterior por `imagenes/respira_verde/dondoderespiraverde.jpg`, recurso existente en el repositorio.
+- **Motivo:** usar la fotografía indicada por el usuario en la portada de Respira Verde.
+- **Autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambio guardado en la rama `main`. No se ejecutaron compilación ni pruebas visuales.
