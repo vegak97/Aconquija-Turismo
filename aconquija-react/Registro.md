@@ -1685,3 +1685,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** corregir el efecto visual que se percibía trabado al separar por completo las dos animaciones.
 - **Autorización:** petición directa del usuario del 2026-10-19 y su indicación posterior para corregir el movimiento.
 - **Resultado:** ajuste guardado en GitHub. Se revisó estáticamente el flujo del evento de scroll; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+### 2026-10-19 — Corregir el alcance de la función de animación del carrusel de lugares
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
+- **Problema encontrado:** `onScroll` llamaba a `updateCenterCard()`, pero esa función estaba declarada dentro de `useEffect` y no era accesible desde el manejador JSX. Al desplazarse el carrusel, esa llamada podía producir un `ReferenceError`; por eso las tarjetas se movían, pero no se actualizaba la clase `is-center` que activa la elevación y el descenso.
+- **Cambio concreto:** se trasladó `updateCenterCard` al alcance del componente, donde puede ser usada tanto por el evento de desplazamiento como por la inicialización y el redimensionamiento. El cálculo sigue usando posiciones de layout para evitar que la elevación altere la selección de la tarjeta central.
+- **Motivo y autorización:** corrección directa solicitada por el usuario el 2026-10-19.
+- **Resultado:** cambio guardado en GitHub. La causa se identificó mediante inspección estática del alcance de la función; no se ejecutaron compilación ni prueba visual en navegador.
