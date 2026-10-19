@@ -41,6 +41,31 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.spotify-toggle-label {
+  display: inline-block;
+  max-width: 140px;
+  opacity: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width .4s ease, opacity .25s ease, margin .4s ease;
+}
+
+.spotify-float.is-compact .spotify-toggle {
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  min-height: 48px;
+  padding: 0;
+  gap: 0;
+  transition: width .4s ease, min-width .4s ease, padding .4s ease, gap .4s ease, background .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.spotify-float.is-compact .spotify-toggle-label {
+  max-width: 0;
+  opacity: 0;
+  margin: 0;
+}
+
 .spotify-toggle:hover {
   background: #2a333f;
   transform: translateY(-2px);
