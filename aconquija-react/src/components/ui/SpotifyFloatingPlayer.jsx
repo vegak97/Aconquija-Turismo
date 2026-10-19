@@ -5,16 +5,28 @@ export default function SpotifyFloatingPlayer() {
   const [isOpen, setIsOpen] = useState(false)
   const [isCompact, setIsCompact] = useState(false)
   const playerRef = useRef(null)
+  const compactTimerRef = useRef(null)
   const { pathname } = useLocation()
   const isHomePage = pathname === '/'
 
-  // Mostrar primero el botón completo y compactarlo después de cinco segundos
-  // cada vez que se entra a una ruta.
+  // En la portada, la cuenta empieza cuando termina la entrada cinematográfica.
+  // En las páginas internas, el botón aparece sin demora y cuenta desde allí.
   useEffect(() => {
     setIsCompact(false)
-    const compactTimer = window.setTimeout(() => setIsCompact(true), 5000)
-    return () => window.clearTimeout(compactTimer)
-  }, [pathname])
+    if (compactTimerRef.current) window.clearTimeout(compactTimerRef.current)
+    if (!isHomePage || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      compactTimerRef.current = window.setTimeout(() => setIsCompact(true), 5000)
+    }
+    return () => {
+      if (compactTimerRef.current) window.clearTimeout(compactTimerRef.current)
+    }
+  }, [pathname, isHomePage])
+
+  const handleToggleEntranceEnd = (event) => {
+    if (event.animationName !== 'spotifyHeroCueIn' || !isHomePage) return
+    if (compactTimerRef.current) window.clearTimeout(compactTimerRef.current)
+    compactTimerRef.current = window.setTimeout(() => setIsCompact(true), 5000)
+  }
 
   useEffect(() => {
     if (!isOpen) return
@@ -88,6 +100,7 @@ export default function SpotifyFloatingPlayer() {
 
       <button
         className="spotify-toggle"
+        onAnimationEnd={handleToggleEntranceEnd}
         type="button"
         aria-expanded={isOpen}
         aria-controls="spotify-player-panel"
