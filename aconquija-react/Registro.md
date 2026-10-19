@@ -1700,3 +1700,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** al entrar en una ruta, el botón «Escuchar música» aparece inicialmente completo. A los cinco segundos se estrecha suavemente hasta quedar circular, conservando el icono de reproducción. Si el reproductor está abierto, no se fuerza el cierre ni se compacta el botón hasta que vuelva a cerrarse.
 - **Motivo y autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambios guardados en GitHub. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-19 19:50:00 -03:00 — Sincronizar la entrada cinematográfica del botón de música
+
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx`; `src/styles/spotify-player.css`; `Registro.md`.
+- **Cambio concreto:** en la portada, el botón flotante entra con una animación retrasada de 2,15 segundos para aparecer junto al indicador «Deslizá para explorar». Los cinco segundos para compactarlo comienzan únicamente cuando termina esa animación de entrada. En las páginas internas, donde no hay esa entrada cinematográfica, el conteo comienza cuando aparece el botón completo. Se conserva el comportamiento de movimiento reducido.
+- **Motivo y autorización:** precisión solicitada directamente por el usuario el 2026-10-19.
+- **Resultado:** cambio del componente guardado en GitHub. La regla CSS ya tenía el retraso de 2,15 segundos y no necesitó cambios. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
