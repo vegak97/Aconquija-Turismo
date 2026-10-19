@@ -120,6 +120,10 @@ export default function PlacesCarousel() {
             // Mantener el bucle infinito sin interrumpir el gesto manual.
             if (track.scrollLeft < loopWidth * 0.5) track.scrollLeft += loopWidth
             else if (track.scrollLeft >= loopWidth * 2) track.scrollLeft -= loopWidth
+
+            // Acompañar el desplazamiento: la tarjeta que sale del centro baja
+            // y la que entra se eleva, sin esperar al final del movimiento.
+            updateCenterCard()
     
             // Cuando el trackpad deja de mover el carrusel, alinear la tarjeta
             // más cercana al centro para que no queden imágenes a medio camino.
@@ -143,14 +147,10 @@ export default function PlacesCarousel() {
               if (!closestCard) return
               const targetLeft = closestCard.offsetLeft + closestCard.offsetWidth / 2 - track.clientWidth / 2
               if (Math.abs(targetLeft - track.scrollLeft) > 2) {
-                // Primero termina el desplazamiento y el centrado; la elevación
-                // se activa en el siguiente ciclo de reposo del scroll.
+                // Ajustar suavemente el centrado; onScroll sincroniza la elevación
+                // de la tarjeta nueva y el descenso de la anterior durante el trayecto.
                 track.scrollTo({ left: targetLeft, behavior: 'smooth' })
-                return
               }
-
-              // Aplicar la elevación recién cuando la tarjeta ya quedó centrada.
-              updateCenterCard()
             }, 180)
           }}>
             {[...places, ...places, ...places].map((place, index) => (
