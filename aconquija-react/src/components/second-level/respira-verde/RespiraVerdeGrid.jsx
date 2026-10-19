@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import tunnelsImage from '../../../../imagenes/respira_verde/tuneles/IMG_1886.jpg'
+import tunnelsImage from '../../../../imagenes/respira_verde/tuneles-por.jpg'
 import bosqueImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
 import cabalgataImage from '../../../../imagenes/cabalgata.webp'
 
