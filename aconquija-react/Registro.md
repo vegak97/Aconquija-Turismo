@@ -1708,3 +1708,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** en la portada, el botón flotante entra con una animación retrasada de 2,15 segundos para aparecer junto al indicador «Deslizá para explorar». Los cinco segundos para compactarlo comienzan únicamente cuando termina esa animación de entrada. En las páginas internas, donde no hay esa entrada cinematográfica, el conteo comienza cuando aparece el botón completo. Se conserva el comportamiento de movimiento reducido.
 - **Motivo y autorización:** precisión solicitada directamente por el usuario el 2026-10-19.
 - **Resultado:** cambio del componente guardado en GitHub. La regla CSS ya tenía el retraso de 2,15 segundos y no necesitó cambios. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-19 19:55:00 -03:00 — Unificar animación de apertura y cierre del reproductor Spotify
+
+- **Archivos afectados:** `src/styles/spotify-player.css`; `Registro.md`.
+- **Cambio concreto:** el panel del reproductor ahora conserva la misma posición base, tanto abierto como cerrado, y anima la opacidad y la escala/desplazamiento con la misma duración y curva en ambas direcciones. Se fija el origen de transformación en la esquina inferior derecha para que el cierre replique la sensación de despliegue y no pegue un salto al cambiar de posición.
+- **Motivo y autorización:** solicitud directa del usuario del 2026-10-19 para reutilizar al cerrar la animación que le gusta al desplegar el reproductor.
+- **Resultado:** CSS actualizado en GitHub. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
