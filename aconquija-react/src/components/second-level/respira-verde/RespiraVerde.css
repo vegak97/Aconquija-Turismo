@@ -2,9 +2,6 @@
 .respira-hero__background{position:absolute;inset:0;background-size:cover;background-position:center 40%;transform:scale(1.05);animation:respira-hero-zoom 1.6s ease forwards}
 .respira-hero__background::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,18,22,.3),rgba(16,18,22,.1) 35%,rgba(16,18,22,.65) 72%,rgba(16,18,22,.92))}
 .respira-hero__content{position:relative;z-index:1;width:100%;padding:0 6vw 44px;animation:respira-fade-up .8s .15s ease both}
-.respira-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px;color:rgba(255,255,255,.6);font-size:.74rem;letter-spacing:1.5px;text-transform:uppercase}
-.respira-breadcrumb a{color:inherit;transition:color .25s}.respira-breadcrumb a:hover,.respira-breadcrumb a:focus-visible{color:var(--sand)}
-.respira-breadcrumb span[aria-current=page]{color:rgba(255,255,255,.82)}
 .respira-eyebrow{margin:0 0 10px;color:var(--sand);font-size:.72rem;font-weight:600;letter-spacing:3px;text-transform:uppercase}
 .respira-hero h1{margin:0 0 14px;color:var(--white);font-family:var(--ff-display);font-size:clamp(2.6rem,7vw,5rem);font-weight:500;line-height:1}
 .respira-lead{max-width:760px;margin:0;color:rgba(255,255,255,.82);font-size:.98rem;line-height:1.7}
