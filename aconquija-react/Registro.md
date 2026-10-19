@@ -1693,3 +1693,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se trasladó `updateCenterCard` al alcance del componente, donde puede ser usada tanto por el evento de desplazamiento como por la inicialización y el redimensionamiento. El cálculo sigue usando posiciones de layout para evitar que la elevación altere la selección de la tarjeta central.
 - **Motivo y autorización:** corrección directa solicitada por el usuario el 2026-10-19.
 - **Resultado:** cambio guardado en GitHub. La causa se identificó mediante inspección estática del alcance de la función; no se ejecutaron compilación ni prueba visual en navegador.
+
+### 2026-10-19 — Mostrar y compactar el botón flotante de música
+
+- **Archivos afectados:** `src/components/ui/SpotifyFloatingPlayer.jsx`; `src/styles/spotify-player.css`; `Registro.md`.
+- **Cambio concreto:** al entrar en una ruta, el botón «Escuchar música» aparece inicialmente completo. A los cinco segundos se estrecha suavemente hasta quedar circular, conservando el icono de reproducción. Si el reproductor está abierto, no se fuerza el cierre ni se compacta el botón hasta que vuelva a cerrarse.
+- **Motivo y autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambios guardados en GitHub. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
