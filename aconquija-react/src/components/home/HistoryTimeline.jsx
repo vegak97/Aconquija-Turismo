@@ -73,8 +73,26 @@ const milestones = [
 export default function HistoryTimeline() {
   const [activeIndex, setActiveIndex] = useState(0)
   const [titleStarted, setTitleStarted] = useState(false)
+  const [typedTitle, setTypedTitle] = useState('')
+  const titleText = 'Un destino. Muchas historias.'
   const sectionRef = useRef(null)
   const active = milestones[activeIndex]
+
+  useEffect(() => {
+    if (!titleStarted) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setTypedTitle(titleText)
+      return undefined
+    }
+    let index = 0
+    setTypedTitle('')
+    const typing = window.setInterval(() => {
+      index += 1
+      setTypedTitle(titleText.slice(0, index))
+      if (index >= titleText.length) window.clearInterval(typing)
+    }, 58)
+    return () => window.clearInterval(typing)
+  }, [titleStarted])
 
   useEffect(() => {
     const section = sectionRef.current
@@ -104,8 +122,8 @@ export default function HistoryTimeline() {
       <div className="container history-container">
         <header className="history-intro">
           <p className="history-eyebrow">Aconquija · Historia y territorio</p>
-          <h2 id="history-title" className={titleStarted ? 'is-typing' : ''}>
-            Un destino. Muchas historias.
+          <h2 id="history-title" aria-label={titleText} className={titleStarted ? 'is-typing' : ''}>
+            {typedTitle}
           </h2>
           <span className="history-title-rule" aria-hidden="true" />
           <p className="history-subtitle">De las antiguas sendas a los caminos que hicieron historia.</p>
