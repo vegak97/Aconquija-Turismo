@@ -6,7 +6,6 @@ export default function SpotifyFloatingPlayer() {
   const [isCompact, setIsCompact] = useState(false)
   const playerRef = useRef(null)
   const compactTimerRef = useRef(null)
-  const compactTimerRef = useRef(null)
   const { pathname } = useLocation()
   const isHomePage = pathname === '/'
 
