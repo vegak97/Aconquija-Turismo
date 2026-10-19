@@ -9,6 +9,32 @@ export default function PlacesCarousel() {
   const placeResumeTimerRef = useRef(null)
   const placeSnapTimerRef = useRef(null)
 
+  // Esta función debe vivir en el alcance del componente: también la usa
+  // el onScroll del JSX para sincronizar la elevación durante el movimiento.
+  const updateCenterCard = () => {
+    const track = placeScrollRef.current
+    if (!track) return
+
+    // Usar medidas de layout evita que el transform de elevación altere el cálculo.
+    const centerX = track.scrollLeft + track.clientWidth / 2
+    let closestCard = null
+    let closestDistance = Infinity
+
+    Array.from(track.querySelectorAll('.place-card')).forEach((card) => {
+      const cardCenterX = card.offsetLeft + card.offsetWidth / 2
+      const distance = Math.abs(cardCenterX - centerX)
+      if (distance < closestDistance) {
+        closestDistance = distance
+        closestCard = card
+      }
+    })
+
+    track.querySelectorAll('.place-card.is-center').forEach((card) => {
+      if (card !== closestCard) card.classList.remove('is-center')
+    })
+    if (closestCard) closestCard.classList.add('is-center')
+  }
+
   useEffect(() => {
     const track = placeScrollRef.current
     if (!track) return
@@ -23,29 +49,6 @@ export default function PlacesCarousel() {
 
       placeLoopWidthRef.current = loopWidth
       track.scrollLeft = loopWidth
-    }
-
-    const updateCenterCard = () => {
-      // Calcular el centro con medidas de layout, no con getBoundingClientRect:
-      // este último incluye el transform de elevación/escala y puede hacer oscilar
-      // la selección de la tarjeta central mientras el carrusel se desplaza.
-      const centerX = track.scrollLeft + track.clientWidth / 2
-      let closestCard = null
-      let closestDistance = Infinity
-
-      Array.from(track.querySelectorAll('.place-card')).forEach((card) => {
-        const cardCenterX = card.offsetLeft + card.offsetWidth / 2
-        const distance = Math.abs(cardCenterX - centerX)
-        if (distance < closestDistance) {
-          closestDistance = distance
-          closestCard = card
-        }
-      })
-
-      track.querySelectorAll('.place-card.is-center').forEach((card) => {
-        if (card !== closestCard) card.classList.remove('is-center')
-      })
-      if (closestCard) closestCard.classList.add('is-center')
     }
 
     let autoplayTimeout = null
