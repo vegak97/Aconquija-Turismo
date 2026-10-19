@@ -48,13 +48,7 @@ export default function PlacesCarousel() {
       if (closestCard) closestCard.classList.add('is-center')
     }
 
-    let centerUpdateTimer = null
     let autoplayTimeout = null
-
-    const updateCenterPeriodically = () => {
-      updateCenterCard()
-      centerUpdateTimer = window.setTimeout(updateCenterPeriodically, 120)
-    }
 
     const getCardStep = () => {
       const firstCard = track.querySelector('.place-card')
@@ -76,13 +70,15 @@ export default function PlacesCarousel() {
 
     positionAtMiddleSet()
     updateCenterCard()
-    updateCenterPeriodically()
     scheduleNextCard()
-    window.addEventListener('resize', positionAtMiddleSet)
+    const handleResize = () => {
+      positionAtMiddleSet()
+      updateCenterCard()
+    }
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      window.removeEventListener('resize', positionAtMiddleSet)
-      if (centerUpdateTimer) window.clearTimeout(centerUpdateTimer)
+      window.removeEventListener('resize', handleResize)
       if (autoplayTimeout) window.clearTimeout(autoplayTimeout)
       if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
       if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
@@ -147,8 +143,14 @@ export default function PlacesCarousel() {
               if (!closestCard) return
               const targetLeft = closestCard.offsetLeft + closestCard.offsetWidth / 2 - track.clientWidth / 2
               if (Math.abs(targetLeft - track.scrollLeft) > 2) {
+                // Primero termina el desplazamiento y el centrado; la elevación
+                // se activa en el siguiente ciclo de reposo del scroll.
                 track.scrollTo({ left: targetLeft, behavior: 'smooth' })
+                return
               }
+
+              // Aplicar la elevación recién cuando la tarjeta ya quedó centrada.
+              updateCenterCard()
             }, 180)
           }}>
             {[...places, ...places, ...places].map((place, index) => (
