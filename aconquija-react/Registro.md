@@ -1630,3 +1630,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminaron por completo las filas «Cuándo ir» y «Precio» de esas diez tarjetas. Se conservaron las demás filas, los datos específicos de cada lugar o evento, los enlaces al mapa y los botones «Cómo llegar». Se retiraron los estilos que solo servían a la fila estacional.
 - **Autorización:** solicitud directa del usuario del 2026-10-18.
 - **Verificación:** inspección estática de las diez fichas; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+## 2026-10-19 — Sección histórica de los caminos en Inicio
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx` (nuevo); `src/styles/history-timeline.css` (nuevo); `src/pages/HomePage.jsx`; `src/App.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó debajo del hero una sección blanca sobre la historia de los caminos, con borde superior irregular inspirado en las montañas, separador dorado bajo el título, introducción, cronología interactiva con seis hitos y panel de detalle con imagen local. En móvil la cronología se muestra arriba del detalle y la navegación superior se oculta mientras la sección histórica está visible. Se añadieron animaciones suaves con respeto a la preferencia de movimiento reducido.
+- **Motivo:** implementar el diseño conceptual aprobado por el usuario para mostrar la historia territorial de Aconquija en la portada, priorizando la lectura en teléfonos.
+- **Autorización:** petición directa del usuario del 2026-10-19: «modifica nomas mandale mano y veamos si corregimos algo despues».
+- **Resultado:** cambios preparados en la rama `feature/historia-caminos-home`. La verificación estática y la compilación todavía deben ejecutarse; no se afirma que haya sido probado en navegador.
