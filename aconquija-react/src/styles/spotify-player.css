@@ -14,7 +14,7 @@
 .spotify-float.is-home-intro .spotify-toggle {
   opacity: 0;
   transform: translateY(8px);
-  animation: spotifyHeroCueIn .8s 2.15s ease forwards;
+  animation: spotifyHeroCueIn .8s ease forwards;
 }
 
 @keyframes spotifyHeroCueIn {
