@@ -1657,3 +1657,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** usar la fotografía indicada por el usuario en la portada de Respira Verde.
 - **Autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambio guardado en la rama `main`. No se ejecutaron compilación ni pruebas visuales.
+
+
+### 2026-10-19 19:03:00 -03:00 — Ajustar encuadre de portada de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerde.css`; `Registro.md`.
+- **Cambio concreto:** se redujo ligeramente la escala final de la imagen de fondo y se desplazó su encuadre hacia arriba para dar más espacio visible al hongo ubicado en el centro de la fotografía.
+- **Motivo:** afinar el encuadre de la portada según la solicitud del usuario.
+- **Autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación ni pruebas visuales en navegador.
