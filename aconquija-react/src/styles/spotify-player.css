@@ -107,6 +107,10 @@
 }
 
 .spotify-panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 12px);
+  transform-origin: bottom right;
   width: min(352px, calc(100vw - 32px));
   padding: 12px;
   border: 1px solid rgba(205,170,120,.35);
@@ -116,13 +120,10 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
-  transition: opacity .22s ease, transform .22s ease, visibility .22s ease;
+  transition: opacity .28s ease, transform .28s ease, visibility .28s ease;
 }
 
 .spotify-panel.is-hidden {
-  position: absolute;
-  right: 0;
-  bottom: calc(100% + 12px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
