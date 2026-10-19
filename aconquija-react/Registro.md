@@ -1675,3 +1675,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** actualizar la fotografía de la tarjeta según la solicitud del usuario.
 - **Autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambio guardado en la rama `main`. No se ejecutaron compilación ni pruebas visuales en navegador.
+
+
+### 2026-10-19 19:23:52 -03:00 — Secuenciar movimiento y elevación del carrusel de lugares
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
+- **Cambio concreto:** se dejó de actualizar la tarjeta central continuamente mientras el carrusel se desplaza. Ahora primero termina el movimiento y el centrado de la tarjeta; después se aplica la clase visual que la eleva. Se mantiene la elevación inicial y se actualiza el centro al cambiar el tamaño de la ventana.
+- **Motivo:** separar las dos animaciones para que el desplazamiento ocurra primero y la tarjeta se levante después, con una transición visual más limpia.
+- **Autorización:** petición directa del usuario del 2026-10-19.
+- **Resultado:** cambio de código guardado en GitHub. La revisión estática confirma que la elevación se aplica después del reposo del scroll; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
