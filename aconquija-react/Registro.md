@@ -1630,3 +1630,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminaron por completo las filas «Cuándo ir» y «Precio» de esas diez tarjetas. Se conservaron las demás filas, los datos específicos de cada lugar o evento, los enlaces al mapa y los botones «Cómo llegar». Se retiraron los estilos que solo servían a la fila estacional.
 - **Autorización:** solicitud directa del usuario del 2026-10-18.
 - **Verificación:** inspección estática de las diez fichas; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-19 18:40:41 -03:00 — Simplificar encabezado de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeHero.jsx`; `src/components/second-level/respira-verde/RespiraVerde.css`; `Registro.md`.
+- **Cambio concreto:** se eliminó la ruta de navegación «Inicio / Respira Verde» y la etiqueta «Aconquija · Catamarca» del encabezado de Respira Verde. También se retiraron las reglas CSS que solo se utilizaban para esa ruta de navegación. El título y el texto descriptivo se conservaron.
+- **Motivo:** simplificar la cabecera según la solicitud del usuario.
+- **Autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación, lint ni pruebas visuales. La solicitud también mencionaba achicar un elemento, pero el mensaje quedó incompleto y ese ajuste queda pendiente de aclaración.
