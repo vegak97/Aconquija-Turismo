@@ -1677,10 +1677,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Resultado:** cambio guardado en la rama `main`. No se ejecutaron compilación ni pruebas visuales en navegador.
 
 
-### 2026-10-19 19:23:52 -03:00 — Secuenciar movimiento y elevación del carrusel de lugares
+### 2026-10-19 19:23:52 -03:00 — Ajustar secuencia de animación del carrusel de lugares
 
 - **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
-- **Cambio concreto:** se dejó de actualizar la tarjeta central continuamente mientras el carrusel se desplaza. Ahora primero termina el movimiento y el centrado de la tarjeta; después se aplica la clase visual que la eleva. Se mantiene la elevación inicial y se actualiza el centro al cambiar el tamaño de la ventana.
-- **Motivo:** separar las dos animaciones para que el desplazamiento ocurra primero y la tarjeta se levante después, con una transición visual más limpia.
-- **Autorización:** petición directa del usuario del 2026-10-19.
-- **Resultado:** cambio de código guardado en GitHub. La revisión estática confirma que la elevación se aplica después del reposo del scroll; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
+- **Cambio concreto inicial:** se intentó aplicar la elevación después de finalizar el desplazamiento.
+- **Ajuste posterior solicitado por el usuario:** se sincronizó la selección de la tarjeta central con cada evento de scroll. Así, mientras la tarjeta de la derecha avanza al centro, comienza a elevarse y la que estaba en el centro baja para cederle el lugar. El ajuste automático de centrado conserva el mismo comportamiento.
+- **Motivo:** corregir el efecto visual que se percibía trabado al separar por completo las dos animaciones.
+- **Autorización:** petición directa del usuario del 2026-10-19 y su indicación posterior para corregir el movimiento.
+- **Resultado:** ajuste guardado en GitHub. Se revisó estáticamente el flujo del evento de scroll; no se ejecutaron compilación, lint ni pruebas visuales en navegador.
