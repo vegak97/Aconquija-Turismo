@@ -3,9 +3,18 @@ import { useLocation } from 'react-router-dom'
 
 export default function SpotifyFloatingPlayer() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isCompact, setIsCompact] = useState(false)
   const playerRef = useRef(null)
   const { pathname } = useLocation()
   const isHomePage = pathname === '/'
+
+  // Mostrar primero el botón completo y compactarlo después de cinco segundos
+  // cada vez que se entra a una ruta.
+  useEffect(() => {
+    setIsCompact(false)
+    const compactTimer = window.setTimeout(() => setIsCompact(true), 5000)
+    return () => window.clearTimeout(compactTimer)
+  }, [pathname])
 
   useEffect(() => {
     if (!isOpen) return
@@ -21,7 +30,7 @@ export default function SpotifyFloatingPlayer() {
   }, [isOpen])
 
   return (
-    <div ref={playerRef} className={`spotify-float ${isOpen ? 'is-open' : ''} ${isHomePage ? 'is-home-intro' : ''}`}>
+    <div ref={playerRef} className={`spotify-float ${isOpen ? 'is-open' : ''} ${isCompact && !isOpen ? 'is-compact' : ''} ${isHomePage ? 'is-home-intro' : ''}`}>
       <section
         id="spotify-player-panel"
         className={`spotify-panel ${isOpen ? 'is-visible' : 'is-hidden'}`}
@@ -91,7 +100,7 @@ export default function SpotifyFloatingPlayer() {
             <svg viewBox="0 0 24 24"><path d="M9 6v12l10-6z" /></svg>
           )}
         </span>
-        <span>{isOpen ? 'Cerrar música' : 'Escuchar música'}</span>
+        <span className="spotify-toggle-label">{isOpen ? 'Cerrar música' : 'Escuchar música'}</span>
       </button>
     </div>
   )
