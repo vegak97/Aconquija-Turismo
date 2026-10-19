@@ -1,4 +1,4 @@
-import heroImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
+import heroImage from '../../../../imagenes/respira_verde/dondoderespiraverde.jpg'
 
 export default function RespiraVerdeHero() {
   return (
