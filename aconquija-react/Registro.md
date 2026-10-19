@@ -1666,3 +1666,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** afinar el encuadre de la portada según la solicitud del usuario.
 - **Autorización:** solicitud directa del usuario del 2026-10-19.
 - **Resultado:** cambios guardados en la rama `main`. No se ejecutaron compilación ni pruebas visuales en navegador.
+
+
+### 2026-10-19 19:12:00 -03:00 — Cambiar imagen de la tarjeta de túneles de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `Registro.md`.
+- **Cambio concreto:** se reemplazó únicamente la imagen importada para la tarjeta “Túneles Quebrada de las cañas” por `imagenes/respira_verde/tuneles-por.jpg`, que es el nombre y la extensión presentes en el repositorio.
+- **Motivo:** actualizar la fotografía de la tarjeta según la solicitud del usuario.
+- **Autorización:** solicitud directa del usuario del 2026-10-19.
+- **Resultado:** cambio guardado en la rama `main`. No se ejecutaron compilación ni pruebas visuales en navegador.
