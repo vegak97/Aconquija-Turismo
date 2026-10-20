@@ -8,6 +8,8 @@
 }
 .hero-bg {
   position: absolute; inset: 0; width: 100%; height: 100%;
+  translate: 0 var(--hero-scroll-shift, 0px);
+  will-change: transform;
   background-color: #26342b;
   background-size: cover; background-position: center 65%;
   transform: scale(1.08);
@@ -22,6 +24,7 @@
 }
 .hero-content {
   position: relative; z-index: 5; text-align: center; color: var(--white);
+  will-change: transform, opacity;
   opacity: 0; transform: translateY(24px);
   animation: heroIn 1.4s 1.25s ease forwards;
 }
@@ -54,6 +57,7 @@ header.nav.nav-intro {
 .scroll-cue {
   position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
   z-index: 5; text-align: center; color: var(--white); font-size: .72rem;
+  will-change: transform, opacity;
   letter-spacing: 2px; text-transform: uppercase; opacity: 0;
   animation: scrollCueIn .8s 2.15s ease forwards;
 }
@@ -73,3 +77,8 @@ header.nav.nav-intro {
 .peaks-divider { display: block; width: 100%; height: 64px; }
 
 
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg, .hero-content, .scroll-cue, .scroll-cue .chev { animation: none !important; }
+  .hero-bg, .hero-content, .scroll-cue { will-change: auto; }
+}
