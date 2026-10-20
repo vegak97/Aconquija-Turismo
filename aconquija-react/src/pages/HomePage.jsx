@@ -3,6 +3,7 @@ import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import HeroSection from '../components/home/HeroSection'
 import IntroSection from '../components/home/IntroSection'
+import HistoryTimeline from '../components/home/HistoryTimeline'
 import ExploreSection from '../components/home/ExploreSection'
 import SeasonsSection from '../components/home/SeasonsSection'
 import ServicesSection from '../components/home/ServicesSection'
@@ -68,6 +69,8 @@ function HomePage() {
       <Header animateOnLoad />
       <main>
         <HeroSection />
+
+        <HistoryTimeline />
 
         <IntroSection />
 

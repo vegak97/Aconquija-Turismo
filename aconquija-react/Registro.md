@@ -1716,3 +1716,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** el panel del reproductor ahora conserva la misma posición base, tanto abierto como cerrado, y anima la opacidad y la escala/desplazamiento con la misma duración y curva en ambas direcciones. Se fija el origen de transformación en la esquina inferior derecha para que el cierre replique la sensación de despliegue y no pegue un salto al cambiar de posición.
 - **Motivo y autorización:** solicitud directa del usuario del 2026-10-19 para reutilizar al cerrar la animación que le gusta al desplegar el reproductor.
 - **Resultado:** CSS actualizado en GitHub. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+## 2026-10-19 — Sección histórica de los caminos en Inicio
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx` (nuevo); `src/styles/history-timeline.css` (nuevo); `src/pages/HomePage.jsx`; `src/App.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó debajo del hero una sección blanca sobre la historia de los caminos, con borde superior irregular inspirado en las montañas, separador dorado bajo el título, introducción, cronología interactiva con seis hitos y panel de detalle con imagen local. En móvil la cronología se muestra arriba del detalle y la navegación se oculta mientras la sección histórica está visible. Se añadieron animaciones suaves con respeto a la preferencia de movimiento reducido.
+- **Motivo:** implementar el diseño conceptual aprobado por el usuario para mostrar la historia territorial de Aconquija en la portada, priorizando la lectura en teléfonos.
+- **Autorización:** petición directa del usuario del 2026-10-19.
+- **Resultado:** cambios preparados en `feature/historia-caminos-home-v2`; compilación y revisión visual pendientes.
