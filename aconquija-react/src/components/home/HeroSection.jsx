@@ -24,20 +24,20 @@ export default function HeroSection() {
         const progress = Math.min(Math.max(window.scrollY / heroHeight, 0), 1)
 
         if (reducedMotion.matches) {
-          content.style.removeProperty('transform')
-          content.style.removeProperty('opacity')
-          cue.style.removeProperty('transform')
-          cue.style.removeProperty('opacity')
+          content.style.removeProperty('--hero-scroll-y')
+          content.style.removeProperty('--hero-scroll-opacity')
+          cue.style.removeProperty('--hero-scroll-y')
+          cue.style.removeProperty('--hero-scroll-opacity')
           background.style.removeProperty('--hero-scroll-shift')
           return
         }
 
         // El contenido avanza hacia arriba algo más rápido que el paisaje,
         // reforzando la transición cinematográfica hacia la sección histórica.
-        content.style.transform = `translate3d(0, ${-progress * 105}px, 0)`
-        content.style.opacity = String(1 - progress * 1.25)
-        cue.style.transform = `translate3d(-50%, ${-progress * 52}px, 0)`
-        cue.style.opacity = String(Math.max(0, 0.85 - progress * 2.2))
+        content.style.setProperty('--hero-scroll-y', `${-progress * 105}px`)
+        content.style.setProperty('--hero-scroll-opacity', String(Math.max(0, 1 - progress * 1.25)))
+        cue.style.setProperty('--hero-scroll-y', `${-progress * 52}px`)
+        cue.style.setProperty('--hero-scroll-opacity', String(Math.max(0, 1 - progress * 2.6)))
         background.style.setProperty('--hero-scroll-shift', `${progress * 34}px`)
       })
     }
