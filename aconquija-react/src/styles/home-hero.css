@@ -25,6 +25,8 @@
 .hero-content {
   position: relative; z-index: 5; text-align: center; color: var(--white);
   will-change: transform, opacity;
+  translate: 0 var(--hero-scroll-y, 0px);
+  filter: opacity(var(--hero-scroll-opacity, 1));
   opacity: 0; transform: translateY(24px);
   animation: heroIn 1.4s 1.25s ease forwards;
 }
