@@ -6,6 +6,7 @@ import PlanetarioPage from './pages/second-level/PlanetarioPage'
 import PucaraPage from './pages/second-level/PucaraPage'
 import CultivaTradicionPage from './pages/second-level/CultivaTradicionPage'
 import RespiraVerdePage from './pages/second-level/RespiraVerdePage'
+import CircuitoLaFePage from './pages/second-level/CircuitoLaFePage'
 import TunelesRioPotreroPage from './pages/third-level/TunelesRioPotreroPage'
 import BosqueDeAlisosPage from './pages/third-level/BosqueDeAlisosPage'
 import RioPotreroPage from './pages/third-level/RioPotreroPage'
@@ -23,6 +24,7 @@ const planetarioPath = '/lugares/planetario-janaxpacha-huasi'
 const pucaraPath = '/lugares/pucara-de-aconquija'
 const cultivaTradicionPath = '/circuitos/cultiva-tradicion'
 const respiraVerdePath = '/circuitos/respira-verde'
+const circuitoLaFePath = '/circuitos/la-fe'
 const tunelesRioPotreroPath = '/lugares/tuneles-del-rio-potrero'
 const bosqueDeAlisosPath = '/lugares/bosque-de-alisos'
 const rioPotreroPath = '/lugares/rio-potrero'
@@ -60,6 +62,7 @@ export default function App() {
         <Route path={pucaraPath} element={<PucaraPage />} />
         <Route path={cultivaTradicionPath} element={<CultivaTradicionPage />} />
         <Route path={respiraVerdePath} element={<RespiraVerdePage />} />
+        <Route path={circuitoLaFePath} element={<CircuitoLaFePage />} />
         <Route path={tunelesRioPotreroPath} element={<TunelesRioPotreroPage />} />
         <Route path={bosqueDeAlisosPath} element={<BosqueDeAlisosPage />} />
         <Route path={rioPotreroPath} element={<RioPotreroPage />} />
