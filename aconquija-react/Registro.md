@@ -1778,3 +1778,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** mostrar la fotografía correspondiente al hito de la Ruta 1 en la línea de tiempo.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambio guardado en la rama `main`. Se confirmó en el árbol del repositorio que `imagenes/rutaN1.webp` existe y se revisará estáticamente la referencia. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+### 2026-10-21 18:30:59 -03:00 — Reubicar fotografías de la línea de tiempo
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx`; `Registro.md`.
+- **Cambio concreto:** se actualizó la importación de `rutaN1.webp` para usar `imagenes/linea_del_tiempo/rutaN1.webp`, y se asignó `imagenes/linea_del_tiempo/pueblo.webp` al hito `1886`, «El territorio», con texto alternativo descriptivo. Se conservaron las imágenes de los demás hitos.
+- **Motivo:** reflejar la nueva ubicación de los recursos locales y mostrar la imagen del pueblo en la fecha de 1886.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** referencias actualizadas en la rama `main`. Se verificó en el árbol del repositorio que ambos archivos existen en `imagenes/linea_del_tiempo`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
