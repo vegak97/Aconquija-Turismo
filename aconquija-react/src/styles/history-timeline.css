@@ -60,10 +60,13 @@
 }
 .history-intro-copy p,
 .history-detail > p:not(.history-detail-eyebrow):not(.history-note) {
-  color: #d0d6df;
+  color: #536071;
   font-size: .91rem;
   line-height: 1.7;
   margin-top: 10px;
+}
+.history-detail > p:not(.history-detail-eyebrow):not(.history-note) {
+  color: #d0d6df;
 }
 .history-prompt {
   margin-top: 20px;
