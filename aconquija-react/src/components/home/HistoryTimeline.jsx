@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import mountainImage from '../../../imagenes/montaña.png'
 import lineaChilcaImage from '../../../imagenes/linea_del_tiempo/linea-chilca.webp'
 import lineaClavilloImage from '../../../imagenes/linea_del_tiempo/linea-clavillo.webp'
-import routeN1Image from '../../../imagenes/rutaN1.webp'
+import puebloImage from '../../../imagenes/linea_del_tiempo/pueblo.webp'
+import routeN1Image from '../../../imagenes/linea_del_tiempo/rutaN1.webp'
 
 const milestones = [
   {
@@ -21,6 +22,8 @@ const milestones = [
     short: 'El territorio',
     eyebrow: 'Mapas y caminos',
     title: 'Un territorio conectado',
+    image: puebloImage,
+    imageAlt: 'Pueblo de Aconquija en una fotografía histórica',
     paragraphs: [
       'Un mapa del Instituto Geográfico Argentino de 1886 representa un camino por el corredor de Narváez y Singuil, un antecedente territorial de la actual Ruta Provincial 1.',
       'Los mapas antiguos ayudan a reconocer cómo se conectaban los valles y las poblaciones antes de la infraestructura vial moderna.'
