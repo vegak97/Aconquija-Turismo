@@ -1770,3 +1770,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** vincular las dos fotos locales con los períodos correspondientes según los nombres de archivo y el contenido de cada hito.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambios guardados en la rama `main`; referencias y fechas verificadas estáticamente. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+### 2026-10-21 18:18:40 -03:00 — Asignar rutaN1.webp al hito de 1972
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx`; `Registro.md`.
+- **Cambio concreto:** se importó la imagen local `imagenes/rutaN1.webp` y se asignó al hito `1972`, «Ruta 1», con el texto alternativo «Ruta Provincial 1 de Aconquija». La imagen estaba en la carpeta `imagenes` principal, no dentro de `imagenes/linea_del_tiempo`; se reutilizó su ubicación existente sin mover ni duplicar el archivo.
+- **Motivo:** mostrar la fotografía correspondiente al hito de la Ruta 1 en la línea de tiempo.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambio guardado en la rama `main`. Se confirmó en el árbol del repositorio que `imagenes/rutaN1.webp` existe y se revisará estáticamente la referencia. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
