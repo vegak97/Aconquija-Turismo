@@ -1786,3 +1786,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** reflejar la nueva ubicación de los recursos locales y mostrar la imagen del pueblo en la fecha de 1886.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** referencias actualizadas en la rama `main`. Se verificó en el árbol del repositorio que ambos archivos existen en `imagenes/linea_del_tiempo`. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+### 2026-10-21 18:32:00 -03:00 — Asignar cendas.webp al hito de antiguas sendas
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx`; `Registro.md`.
+- **Cambio concreto:** se importó `imagenes/linea_del_tiempo/cendas.webp` y se asignó al primer hito de la cronología, fechado en `1632`, «Antiguas sendas», con texto alternativo descriptivo.
+- **Motivo:** mostrar la nueva imagen local en el hito inicial de las sendas antiguas.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambio guardado en la rama `main`; se confirmó que `cendas.webp` existe en la carpeta indicada. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
