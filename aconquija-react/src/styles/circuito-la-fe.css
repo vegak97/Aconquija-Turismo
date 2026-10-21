@@ -1,0 +1,24 @@
+.circuito-la-fe-page {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  padding: 140px 24px 100px;
+  background: #1c222c;
+  color: #fff;
+  text-align: center;
+}
+
+.circuito-la-fe-page__content h1 {
+  margin: 0;
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 500;
+}
+
+.circuito-la-fe-page__content p {
+  margin-top: 18px;
+  color: #cdaa78;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
