@@ -1725,3 +1725,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** implementar el diseño conceptual aprobado por el usuario para mostrar la historia territorial de Aconquija en la portada, priorizando la lectura en teléfonos.
 - **Autorización:** petición directa del usuario del 2026-10-19.
 - **Resultado:** cambios preparados en `feature/historia-caminos-home-v2`; compilación y revisión visual pendientes.
+
+
+### 2026-10-21 15:33:25 -03:00 — Corregir la unión entre la portada y la sección histórica
+
+- **Archivos afectados:** `src/styles/history-timeline.css`; `Registro.md`.
+- **Cambio concreto:** se eliminó el margen superior negativo de 28 px de `.history-section`, para que la sección histórica comience después de la portada sin invadir su borde inferior. Se conserva el borde irregular blanco inspirado en las montañas.
+- **Motivo:** corregir la línea blanca y la sensación de superposición entre la portada y la sección siguiente en la página principal.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambio guardado en la rama `main`. Se verificó estáticamente la regla CSS modificada; no se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
