@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import mountainImage from '../../../imagenes/montaña.png'
+import lineaChilcaImage from '../../../imagenes/linea_del_tiempo/linea-chilca.webp'
+import lineaClavilloImage from '../../../imagenes/linea_del_tiempo/linea-clavillo.webp'
 
 const milestones = [
   {
@@ -29,6 +31,8 @@ const milestones = [
     short: 'Cuesta de la Chilca',
     eyebrow: 'Obras y comunicación',
     title: 'La Cuesta de la Chilca',
+    image: lineaChilcaImage,
+    imageAlt: 'Camino histórico de la Cuesta de la Chilca',
     paragraphs: [
       'En 1894 se registraron estudios y fondos para conectar Concepción con Andalgalá. El proyecto fue avanzando por etapas, en una época en que los viajes por las sierras dependían de caminos difíciles.',
       'Según la reseña histórica de Turismo Andalgalá, la Cuesta de la Chilca fue inaugurada en 1909, consolidando una conexión importante entre la región y Tucumán.'
@@ -40,6 +44,8 @@ const milestones = [
     short: 'El Clavillo',
     eyebrow: 'Huellas de arrieros',
     title: 'Del huellón al camino de montaña',
+    image: lineaClavilloImage,
+    imageAlt: 'Camino histórico del Clavillo',
     paragraphs: [
       'En 1905 aparecen proyectos para construir puentes sobre el arroyo Chirimayo y el río Cochuna. Las antiguas huellas de arrieros convivieron con las nuevas obras para atravesar la montaña.',
       'Un recuerdo publicado por Eduardo Conrado Vela menciona el “Huellón de los Burros” y el encuentro de frentes de obra cerca de 1920 en El Corte del Anta. La carta topográfica de Aconquija de 1923 aporta otra referencia documental de aquel territorio.'
@@ -166,7 +172,7 @@ export default function HistoryTimeline() {
             </nav>
 
             <article className="history-detail" aria-live="polite" key={active.date}>
-              <img src={mountainImage} alt="Paisaje serrano de Aconquija" />
+              <img src={active.image || mountainImage} alt={active.imageAlt || "Paisaje serrano de Aconquija"} />
               <p className="history-detail-eyebrow">{active.date} · {active.eyebrow}</p>
               <h3>{active.title}</h3>
               {active.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
