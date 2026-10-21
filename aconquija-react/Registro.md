@@ -1752,3 +1752,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** aplicar el color solicitado a todo el cuadro de la cronología, no solamente al contenido que aparece a la derecha.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambio guardado en la rama `main` y revisado estáticamente en CSS. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-21 16:20:32 -03:00 — Incorporar el Circuito La Fe en Explorar
+
+- **Archivos afectados:** `src/data/homeData.js`; `src/components/home/ExploreSection.jsx`; `src/pages/second-level/CircuitoLaFePage.jsx` (nuevo); `src/styles/circuito-la-fe.css` (nuevo); `src/App.jsx`; `Registro.md`.
+- **Cambio concreto:** se agregó la tarjeta «Circuito La Fe» después de «Ruinas del Pucará» en la sección Explorar, usando la imagen local existente `imagenes/camino_la_fe.webp`. La tarjeta muestra «En creación» y abre la ruta `/circuitos/la-fe`. Se creó una página provisional con el título «Circuito La Fe» y el mensaje «En creación», manteniendo el encabezado y pie de sitio.
+- **Motivo:** dejar preparado el nuevo circuito sin inventar contenido turístico que todavía no está definido.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambios guardados en la rama `main`. Se confirmó que la imagen existe con el nombre `camino_la_fe.webp` (la escritura indicada inicialmente como `camini_la_fe.wubp` no coincide con el archivo real). No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
