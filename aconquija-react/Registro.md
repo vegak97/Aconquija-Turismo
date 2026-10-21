@@ -1743,3 +1743,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** dar al cuadro de la cronología el tono de pizarra oscura solicitado y asegurar la legibilidad del contenido en cada selección.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente en CSS. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-21 15:44:00 -03:00 — Extender la pizarra oscura a todo el cuadro de la línea de tiempo
+
+- **Archivos afectados:** `src/styles/history-timeline.css`; `Registro.md`.
+- **Cambio concreto:** el fondo pizarra oscura (`#1c222c`) ahora cubre el cuadro completo: encabezado, lista de fechas, contenido de la fecha activa y franja inferior. Se quitó el fondo separado del panel derecho para que todo se vea como una única tarjeta. Se aclararon los textos y separadores para conservar el contraste; el acento dorado se mantiene.
+- **Motivo:** aplicar el color solicitado a todo el cuadro de la cronología, no solamente al contenido que aparece a la derecha.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente en CSS. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
