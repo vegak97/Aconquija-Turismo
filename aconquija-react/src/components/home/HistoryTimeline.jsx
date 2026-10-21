@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import mountainImage from '../../../imagenes/montaña.png'
 import lineaChilcaImage from '../../../imagenes/linea_del_tiempo/linea-chilca.webp'
 import lineaClavilloImage from '../../../imagenes/linea_del_tiempo/linea-clavillo.webp'
+import routeN1Image from '../../../imagenes/rutaN1.webp'
 
 const milestones = [
   {
@@ -57,6 +58,8 @@ const milestones = [
     short: 'Ruta 1',
     eyebrow: 'Cambios en el recorrido',
     title: 'La ruta y el Valle Central',
+    image: routeN1Image,
+    imageAlt: 'Ruta Provincial 1 de Aconquija',
     paragraphs: [
       'Durante el siglo XX, el camino figuró en la red nacional como RN64 y luego RN62. En 1972 pasó a jurisdicción provincial.',
       'Los testimonios locales sitúan alrededor de ese período un cambio importante en la traza. En Cóndor Huasi, Los Narváez y La Atravesada todavía se reconocen referencias a antiguos recorridos.'
