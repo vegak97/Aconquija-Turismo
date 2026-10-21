@@ -15,7 +15,7 @@ export default function ExploreSection() {
               <img src={card.image} alt={card.alt} />
               <div className="overlay" />
               <div className="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><path d="M7 17L17 7M9 7h8v8" /></svg></div>
-              <div className="text"><div className="tag" /><h3 /><p /></div>
+              <div className="text"><div className="tag" />{card.title && <h3>{card.title}</h3>}{card.description && <p>{card.description}</p>}</div>
             </Link>
           ))}
         </div>
