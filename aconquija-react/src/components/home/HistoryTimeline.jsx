@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import mountainImage from '../../../imagenes/montaña.png'
 import lineaChilcaImage from '../../../imagenes/linea_del_tiempo/linea-chilca.webp'
 import lineaClavilloImage from '../../../imagenes/linea_del_tiempo/linea-clavillo.webp'
+import sendasImage from '../../../imagenes/linea_del_tiempo/cendas.webp'
 import puebloImage from '../../../imagenes/linea_del_tiempo/pueblo.webp'
 import routeN1Image from '../../../imagenes/linea_del_tiempo/rutaN1.webp'
 
@@ -11,6 +12,8 @@ const milestones = [
     short: 'Antiguas sendas',
     eyebrow: 'Contexto histórico',
     title: 'Mucho antes de las carreteras',
+    image: sendasImage,
+    imageAlt: 'Antiguas sendas de la región de Aconquija',
     paragraphs: [
       'Los acontecimientos vinculados al Gran Alzamiento Diaguita en la zona de Singuil muestran que este territorio ya formaba parte de una historia de desplazamientos y conexiones anteriores a las rutas modernas.',
       'Las comunidades aprovechaban quebradas y pasos naturales para moverse, intercambiar productos y mantener el contacto con otros pueblos.'
