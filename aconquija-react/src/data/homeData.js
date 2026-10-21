@@ -2,6 +2,7 @@ import respiraVerdeImage from '../../imagenes/respira_verde_fondo.png'
 import cultivaTradicionImage from '../../imagenes/cultiva_tradicion.webp'
 import nochesEstrelladasImage from '../../imagenes/cautiva_miradas.png'
 import pucaraImage from '../../imagenes/respira_aconquija2.webp'
+import laFeImage from '../../imagenes/camino_la_fe.webp'
 import cristoRedentorImage from '../../imagenes/cristo_redentor/cristo_redentor.webp'
 import bosqueAlisosImage from '../../imagenes/bosque_de_alisos/bosque.webp'
 import virgenValleImage from '../../imagenes/virgen_del_valle/virgen_del_valle.webp'
@@ -24,6 +25,7 @@ export const circuitCards = [
   { path: '/circuitos/cultiva-tradicion', image: cultivaTradicionImage, alt: 'Cabalgatas' },
   { path: '/lugares/planetario-janaxpacha-huasi', image: nochesEstrelladasImage, alt: 'Cielo estrellado' },
   { path: '/lugares/pucara-de-aconquija', image: pucaraImage, alt: 'Paisajes de Aconquija' },
+  { path: '/circuitos/la-fe', image: laFeImage, alt: 'Camino de La Fe', title: 'Circuito La Fe', description: 'En creación' },
 ]
 
 export const places = [
