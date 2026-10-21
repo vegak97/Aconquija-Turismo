@@ -1761,3 +1761,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** dejar preparado el nuevo circuito sin inventar contenido turístico que todavía no está definido.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambios guardados en la rama `main`. Se confirmó que la imagen existe con el nombre `camino_la_fe.webp` (la escritura indicada inicialmente como `camini_la_fe.wubp` no coincide con el archivo real). No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-21 17:03:45 -03:00 — Asignar fotografías a los hitos de la línea de tiempo
+
+- **Archivos afectados:** `src/components/home/HistoryTimeline.jsx`; `Registro.md`.
+- **Cambio concreto:** se agregó `imagenes/linea_del_tiempo/linea-chilca.webp` al hito `1894–1909`, «Cuesta de la Chilca», y `imagenes/linea_del_tiempo/linea-clavillo.webp` al hito `1905–1923`, «El Clavillo». Cada fotografía tiene su texto alternativo descriptivo. Los demás hitos conservan la imagen serrana que ya utilizaban.
+- **Motivo:** vincular las dos fotos locales con los períodos correspondientes según los nombres de archivo y el contenido de cada hito.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambios guardados en la rama `main`; referencias y fechas verificadas estáticamente. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
