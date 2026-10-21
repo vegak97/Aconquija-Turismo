@@ -1734,3 +1734,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** corregir la línea blanca y la sensación de superposición entre la portada y la sección siguiente en la página principal.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambio guardado en la rama `main`. Se verificó estáticamente la regla CSS modificada; no se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-21 15:41:00 -03:00 — Aplicar pizarra oscura al detalle de la línea de tiempo
+
+- **Archivos afectados:** `src/styles/history-timeline.css`; `Registro.md`.
+- **Cambio concreto:** el panel de contenido que se actualiza al seleccionar una fecha ahora tiene fondo pizarra oscura (`#1c222c`), título blanco y texto claro, manteniendo el acento dorado de la sección. Se ajustó el relleno para escritorio y móvil. El estilo está aplicado a la clase compartida del detalle, por lo que se mantiene en todas las fechas.
+- **Motivo:** dar al cuadro de la cronología el tono de pizarra oscura solicitado y asegurar la legibilidad del contenido en cada selección.
+- **Autorización:** petición directa del usuario del 2026-10-21.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente en CSS. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
