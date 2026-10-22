@@ -1803,3 +1803,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** desarrollar la página del circuito según la indicación del usuario y basar el contenido exclusivamente en el PDF «Circuito de la Fe Cuadernillo», edición del 14 de octubre de 2026.
 - **Autorización:** petición directa del usuario el 2026-10-22.
 - **Resultado:** los archivos de página y estilos se actualizaron en `main`. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador. Las fotografías específicas de las dos iglesias siguen pendientes de localizar o incorporar.
+
+
+### 2026-10-22 11:23:00 -03:00 — Incorporar portada y navegación a las páginas de las iglesias del Circuito de la Fe
+
+- **Archivos afectados:** `src/pages/second-level/CircuitoLaFePage.jsx`; `src/styles/circuito-la-fe.css`; `src/pages/third-level/CircuitoLaFeChurchPage.jsx` (nuevo); `src/App.jsx`; `Registro.md`.
+- **Cambio concreto:** se agregó una portada superior con la imagen local existente `imagenes/camino_la_fe.webp`, siguiendo la estructura visual de la página del Pucará. Las tarjetas se hicieron más compactas y ahora son enlaces completos a las páginas de la Iglesia Nuestra Señora del Rosario de Alumbrera y la Capilla del Señor de El Charquiadero. Se incorporaron las dos rutas en React y una plantilla de detalle compartida con la información histórica disponible en el cuadernillo y un espacio reservado para la fotografía específica.
+- **Motivo:** ajustar la página a la indicación del usuario: portada superior, tarjetas más pequeñas y navegación a la página individual de cada iglesia.
+- **Autorización:** petición directa del usuario el 2026-10-22.
+- **Resultado:** cambios guardados en la rama `main`. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador. Las fotografías específicas de las dos iglesias siguen pendientes de localizar o incorporar.
