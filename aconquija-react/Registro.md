@@ -1794,3 +1794,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** mostrar la nueva imagen local en el hito inicial de las sendas antiguas.
 - **Autorización:** petición directa del usuario del 2026-10-21.
 - **Resultado:** cambio guardado en la rama `main`; se confirmó que `cendas.webp` existe en la carpeta indicada. No se ejecutaron compilación, lint ni pruebas visuales en navegador.
+
+
+### 2026-10-22 11:11:20 -03:00 — Desarrollar la página Circuito de la Fe con dos iglesias
+
+- **Archivos afectados:** `src/pages/second-level/CircuitoLaFePage.jsx`; `src/styles/circuito-la-fe.css`; `Registro.md`.
+- **Cambio concreto:** se reemplazó el contenido provisional por una página con dos tarjetas: Iglesia Nuestra Señora del Rosario de Alumbrera y Capilla del Señor de El Charquiadero. Cada tarjeta organiza la información del cuadernillo por introducción, antecedentes y detalles históricos; se incorporó un espacio visual reservado para la fotografía de cada iglesia, sin usar imágenes no confirmadas. El diseño utiliza tarjetas con fotografía a la izquierda e información a la derecha en escritorio, adaptándose a una sola columna en móvil.
+- **Motivo:** desarrollar la página del circuito según la indicación del usuario y basar el contenido exclusivamente en el PDF «Circuito de la Fe Cuadernillo», edición del 14 de octubre de 2026.
+- **Autorización:** petición directa del usuario el 2026-10-22.
+- **Resultado:** los archivos de página y estilos se actualizaron en `main`. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador. Las fotografías específicas de las dos iglesias siguen pendientes de localizar o incorporar.
