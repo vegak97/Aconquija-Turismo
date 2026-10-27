@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/layout/Header'
 import Footer from '../../components/layout/Footer'
 import laFeHeroImage from '../../../imagenes/camino_la_fe.webp'
+import cristoRedentorImage from '../../../imagenes/cristo_redentor/cristo_redentor.webp'
 import '../../styles/circuito-la-fe.css'
 
 const churches = [
@@ -21,9 +22,23 @@ const churches = [
       'Una capilla levantada con la participación de vecinos, el trabajo artesanal y materiales propios de la construcción tradicional.',
     path: '/lugares/capilla-del-senor',
   },
+  {
+    id: 'cristo-redentor',
+    locality: 'El Lindero',
+    title: 'Cristo Redentor de Aconquija',
+    description:
+      'Un sendero corto conduce hasta el mirador, con vistas a los Nevados del Aconquija y al valle.',
+    path: '/lugares/cristo-redentor',
+    image: cristoRedentorImage,
+    imageAlt: 'Cristo Redentor en el mirador de El Lindero',
+  },
 ]
 
-function ChurchImagePlaceholder({ locality }) {
+function CardImage({ locality, image, imageAlt }) {
+  if (image) {
+    return <img className="la-fe-card__image" src={image} alt={imageAlt} />
+  }
+
   return (
     <div
       className="la-fe-card__image-placeholder"
@@ -69,7 +84,7 @@ export default function CircuitoLaFePage() {
           {churches.map((church, index) => (
             <Link className="la-fe-card-link" to={church.path} key={church.id}>
               <article className={`la-fe-card la-fe-card--${church.id}`}>
-                <ChurchImagePlaceholder locality={church.locality} />
+                <CardImage locality={church.locality} image={church.image} imageAlt={church.imageAlt} />
                 <div className="la-fe-card__content">
                   <p className="la-fe-card__eyebrow">
                     <span>0{index + 1}</span>
