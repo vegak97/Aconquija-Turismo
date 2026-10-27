@@ -1812,3 +1812,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** ajustar la página a la indicación del usuario: portada superior, tarjetas más pequeñas y navegación a la página individual de cada iglesia.
 - **Autorización:** petición directa del usuario el 2026-10-22.
 - **Resultado:** cambios guardados en la rama `main`. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador. Las fotografías específicas de las dos iglesias siguen pendientes de localizar o incorporar.
+
+### 2026-10-27 17:42 -03:00 — Agregar Cristo Redentor al recorrido El Camino de la Fe
+
+- **Archivos afectados:** `src/pages/second-level/CircuitoLaFePage.jsx`; `src/styles/circuito-la-fe.css`; `Registro.md`.
+- **Cambio concreto:** se agregó una tercera tarjeta para «Cristo Redentor de Aconquija» en el recorrido Circuito de la Fe, con la misma estructura visual de las tarjetas existentes y enlace a la página ya disponible `/lugares/cristo-redentor`. Se reutilizó la imagen local `imagenes/cristo_redentor/cristo_redentor.webp` y se adaptaron sus estilos para mantener el formato de imagen a la izquierda y la información a la derecha.
+- **Motivo:** incorporar la página del Cristo Redentor al recorrido turístico El Camino de la Fe, respetando la temática visual solicitada.
+- **Autorización:** petición directa del usuario el 2026-10-27.
+- **Resultado:** cambios guardados en la rama `main`. Se verificaron estáticamente la tarjeta, la ruta y la referencia a la imagen local. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
