@@ -1,10 +1,58 @@
-# Metodología de migración — Aconquija React
+# Metodología de desarrollo y mantenimiento — Aconquija React
 
 ## 1. Objetivo
 
-Migrar el sitio turístico de Aconquija desde su implementación actual en HTML, CSS y JavaScript a React, de forma ordenada, verificable y por etapas. La meta es conservar el diseño, los contenidos, las imágenes, los enlaces y las interacciones existentes, salvo que el usuario autorice expresamente cambios concretos.
+Mantener y evolucionar el sitio turístico Aconquija React de forma ordenada, verificable y por etapas. La migración inicial desde HTML/CSS/JavaScript ya no es el único objetivo: el documento también guía las páginas nuevas, mejoras visuales, navegación, componentes compartidos, recursos locales, calidad y preparación para publicación.
 
-Este documento funciona como lista de trabajo y referencia común para no olvidar tareas durante la migración. No significa que todas las etapas estén aprobadas para ejecutarse automáticamente: antes de modificar archivos se deben respetar las reglas de `agents.md` y registrar los cambios en `Registro.md`.
+Este archivo conserva la metodología y los antecedentes de la migración. Las decisiones y el estado vigentes se resumen en la sección **Estado actual del proyecto — 2026-10-28**, que prevalece sobre listas de tareas y estados antiguos de los anexos. Antes de modificar archivos se deben respetar `agents.md` y registrar los cambios en `Registro.md`.
+
+## Estado actual del proyecto — 2026-10-28
+
+Esta sección reemplaza los estados de avance antiguos que aparecen en la metodología. Los anexos y las listas de fases se conservan como historial y guía de referencia; sus casillas pendientes no describen necesariamente el estado actual.
+
+### Situación general
+
+- El proyecto React/Vite está dentro de `aconquija-react/` y se publica mediante la configuración preparada para Netlify. La configuración remota de Netlify y su despliegue efectivo deben tratarse como estados separados: no declarar un despliegue exitoso sin comprobarlo.
+- La aplicación usa React y React Router. Las rutas activas se mantienen en `src/App.jsx`; antes de crear una ruta nueva, revisar cómo están organizadas las páginas y si ya existe un destino equivalente.
+- Las páginas y componentes se han ampliado después de la migración original. Por eso el inventario histórico de 15 páginas no es un conteo actualizado del sitio completo.
+- Se han incorporado páginas y contenido que no pertenecían al inventario original, entre ellos el Circuito de la Fe y la página de Cabalgatas dentro de Respira Verde.
+- El HTML de origen ya no es la fuente operativa principal del proyecto React. Las decisiones históricas sobre conservar o eliminar archivos originales deben interpretarse según las autorizaciones posteriores documentadas en este archivo y en `Registro.md`.
+
+### Estructura y patrones que deben respetarse
+
+- Páginas de segundo nivel: `src/pages/second-level/`; páginas de detalle de tercer nivel: `src/pages/third-level/`.
+- Componentes específicos de una página: organizar dentro de `src/components/second-level/<seccion>/` o `src/components/third-level/<pagina>/`, siguiendo el patrón existente.
+- Estilos compartidos y componentes comunes: revisar primero `src/components/ui/` y `src/styles/` para evitar duplicaciones.
+- La galería acordeón compartida se encuentra en `src/components/ui/AccordionGallery.jsx`; reutilizarla cuando encaje con el diseño existente.
+- Mantener los componentes globales existentes, como `Header`, `Footer` y el reproductor flotante, en vez de duplicar su implementación.
+- Las imágenes del proyecto React están organizadas en `aconquija-react/imagenes/`. Usar importaciones locales con rutas correctas y confirmar el nombre y la extensión reales antes de referenciar un recurso.
+- Los huecos de galería pueden ser intencionales. Si no existe una imagen local confirmada, conservar un espacio reservado seguro; no introducir imágenes externas, inventadas o parecidas como sustitución, ni usar `src=""`.
+
+### Criterios de contenido y diseño vigentes
+
+- Respetar la temática visual existente: naturaleza, calidez y estética rústica; pizarra oscura `#1c222c`, acentos dorados y texto legible donde corresponda al diseño de la sección.
+- Mantener el diseño adaptable a escritorio y móvil y respetar las preferencias de movimiento reducido al añadir animaciones.
+- Reutilizar patrones de páginas ya aprobadas, sin copiar componentes completos de manera automática si las necesidades difieren.
+- No inventar datos turísticos, antecedentes históricos, duración, dificultad, precios, horarios, disponibilidad, servicios ni contactos. Usar información ya aprobada o proporcionada por el usuario.
+- Los datos globales de contacto deben seguir la fuente canónica ya definida en la sección 3; antes de reutilizar un WhatsApp o enlace de mapa, confirmar que corresponde a la página y al propósito.
+- No reactivar enlaces rotos ni añadir rutas sin comprobar que el destino exista y que la navegación sea coherente.
+
+### Calidad y publicación
+
+- Distinguir inspección estática de pruebas ejecutadas. Revisar imports, rutas y nombres de recursos no equivale a compilar ni a comprobar la interfaz en navegador.
+- Cuando el entorno local esté disponible, ejecutar `npm.cmd run lint` y `npm.cmd run build` desde `aconquija-react/` si esos scripts existen en `package.json`; indicar resultados reales. Las pruebas visuales requieren abrir y recorrer la aplicación en navegador.
+- No afirmar que la compilación, lint, pruebas responsive o el despliegue de Netlify fueron satisfactorios si no se ejecutaron o no hay evidencia del resultado.
+- No modificar dependencias, configuración de build, variables, dominio, DNS ni servicios externos salvo que la petición lo autorice o se consulte primero cuando exceda el alcance.
+- Cada cambio debe anotarse en `Registro.md` con fecha y hora real de Argentina (UTC-03:00), rutas afectadas, cambio, motivo, autorización y resultado.
+
+### Próximas tareas generales
+
+1. Mantener actualizados los documentos de trabajo cuando cambie la estructura, la arquitectura o una regla acordada.
+2. Resolver las tareas visuales y de contenido que el usuario solicite, sin ampliar el alcance silenciosamente.
+3. Completar la validación local de lint, build y navegación visual cuando se disponga del resultado de ejecución.
+4. Actualizar esta sección cuando se confirme un cambio importante de estructura, ruta, flujo de publicación o criterio de trabajo.
+
+---
 
 ## 2. Reglas obligatorias de trabajo
 
@@ -19,9 +67,9 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 ## 3. Criterios vigentes acordados para la migración
 
 - **Diseño y contenido:** mantener el diseño original lo más fielmente posible y conservar textos, estructura, enlaces e interacciones de las páginas aprobadas. No introducir mejoras, reescrituras ni contenido nuevo por iniciativa propia.
-- **Alcance vigente:** el inventario autorizado para migrar es de **15 páginas originales**, conforme al mapa aprobado en el Anexo W/Y. `html/tercer_nivel/el_charquiadero.html` fue excluida intencionalmente y no debe recrearse ni migrarse. Los conteos de 16 páginas y las listas anteriores que aparecen en anexos antiguos son antecedentes históricos, no el alcance actual.
-- **Rutas:** el mapa de 15 rutas del Anexo W está aprobado como conjunto. Esta aprobación documental no autoriza por sí sola a modificar código ni a implementar rutas; se requiere la autorización específica de la etapa correspondiente.
-- **Páginas futuras aún no terminadas:** algunos destinos inexistentes se incluyeron intencionalmente como recordatorios de contenido futuro. No crear esas páginas ni redactar su contenido durante esta migración. Antes de migrar los enlaces que apuntan a ellas, conservar la referencia como pendiente y no convertirla en un enlace activo roto; si la forma de representarla en la interfaz requiere una decisión no acordada, consultar al usuario.
+- **Alcance histórico de la migración inicial:** el inventario original de 15 páginas descrito en el Anexo W/Y documenta la migración inicial, no el total de páginas existentes hoy. Desde entonces se han añadido páginas y recorridos por solicitudes directas del usuario; el estado actual se detalla al inicio de este documento y en `Registro.md`. `html/tercer_nivel/el_charquiadero.html` fue excluida intencionalmente de la migración original y no debe recrearse como una página independiente sin una petición explícita.
+- **Rutas:** las rutas actuales se definen en `src/App.jsx`. Los mapas de rutas de anexos antiguos son antecedentes de la etapa inicial y no deben usarse como inventario exhaustivo del sitio actual.
+- **Páginas y contenido futuros:** crear nuevas páginas, enlaces o contenido cuando el usuario lo solicite directamente. No convertir referencias pendientes en enlaces activos rotos ni inventar información turística, precios, horarios, servicios o datos de contacto. Si hace falta una decisión que excede la petición, consultar al usuario.
 - **Imágenes y recursos faltantes:** si una ruta o extensión de imagen no coincide con un archivo disponible, buscar en el repositorio local el mismo recurso con otra extensión (por ejemplo, `.webp`, `.png`, `.jpg` o variaciones de mayúsculas). Usar la ruta real solo cuando se confirme que es la misma imagen y documentar la correspondencia. Si no existe una imagen equivalente local, conservar el espacio visual reservado para que el usuario la agregue más adelante; no descargar, inventar ni sustituirla por una imagen parecida.
 - **Referencias de imagen vacías:** algunas pueden ser espacios intencionales reservados para recursos que todavía no se agregaron. No clasificarlas automáticamente como errores ni generar en React elementos `<img>` con `src=""`; mantener el espacio reservado de forma segura hasta que el usuario proporcione el recurso.
 - **Contacto y redes sociales globales:** usar los datos de contacto y redes de `index.html` como fuente canónica. Si una página secundaria presenta datos globales diferentes o incompletos, unificarlos con los de `index.html` durante la migración. No inventar datos que no estén allí. Los enlaces de mapas o ubicación específicos de cada atractivo se revisan por separado.
@@ -30,7 +78,11 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 - **Trazabilidad histórica:** conservar los anexos antiguos por trazabilidad. Cuando contradigan las decisiones vigentes, señalar que son antecedentes superados y tomar como referencia los criterios actuales y el mapa aprobado.
 - **Cambios no previstos:** si surge una decisión sobre diseño, contenido, comportamiento, dependencias o alcance que no esté cubierta por estos acuerdos, detenerse y consultarla antes de modificar archivos.
 
-## 4. Fase 0 — Inventario y diagnóstico
+## 4. Fases históricas de la migración inicial
+
+Las fases siguientes documentan el método original de migración. Se conservan como referencia de proceso; no deben interpretarse como una lista de tareas pendientes global ni como autorización para repetir pasos ya completados. El estado vigente se mantiene en la sección inicial y en `Registro.md`.
+
+### Fase 0 — Inventario y diagnóstico
 
 **Objetivo:** conocer todo lo que existe antes de trasladarlo.
 
@@ -45,7 +97,7 @@ Este documento funciona como lista de trabajo y referencia común para no olvida
 
 **Condición para avanzar:** el inventario debe estar completo en lo posible y el usuario debe conocer cualquier problema que implique ampliar el alcance.
 
-## 5. Fase 1 — Preparación de la estructura React
+### Fase 1 — Preparación de la estructura React
 
 **Objetivo:** organizar la aplicación sin migrar contenido todavía, salvo lo expresamente autorizado.
 
@@ -79,7 +131,7 @@ aconquija-react/
 
 **Condición para avanzar:** la estructura está clara, el sitio original sigue intacto y la aplicación base funciona.
 
-## 6. Fase 2 — Migración de recursos y estilos
+### Fase 2 — Migración de recursos y estilos
 
 - [ ] Copiar o incorporar a la carpeta autorizada de React las imágenes necesarias, sin borrar ni mover los originales.
 - [ ] Verificar nombres de archivos, extensiones, mayúsculas/minúsculas y rutas de imágenes.
@@ -91,7 +143,7 @@ aconquija-react/
 
 **Condición para avanzar:** los recursos utilizados por la primera página están disponibles y las rutas han sido comprobadas.
 
-## 7. Fase 3 — Migración de la página de inicio
+### Fase 3 — Migración de la página de inicio
 
 Migrar la página principal por bloques pequeños, comparando el resultado con el sitio original.
 
@@ -108,7 +160,7 @@ Migrar la página principal por bloques pequeños, comparando el resultado con e
 
 **Condición para avanzar:** la página principal conserva el contenido y el aspecto acordados y no presenta errores visibles importantes.
 
-## 8. Fase 4 — Adaptación de las interacciones a React
+### Fase 4 — Adaptación de las interacciones a React
 
 No copiar el JavaScript original de forma indiscriminada: revisar cada comportamiento y adaptarlo al ciclo de vida y al estado de React.
 
@@ -125,7 +177,7 @@ No copiar el JavaScript original de forma indiscriminada: revisar cada comportam
 
 **Condición para avanzar:** cada interacción inventariada se ha probado o figura claramente como pendiente, con su motivo.
 
-## 9. Fase 5 — Migración de páginas secundarias
+### Fase 5 — Migración de páginas secundarias
 
 - [ ] Migrar cada página secundaria identificada en el inventario.
 - [ ] Conservar textos, imágenes, estructura y enlaces existentes.
@@ -139,7 +191,7 @@ Páginas ya identificadas para revisar en el inventario, sin asumir que la lista
 - `html/segundo_nivel/aconquija_respira_verde.html`
 - `html/segundo_nivel/cultiva_tradicion.html`
 
-## 10. Fase 6 — Pruebas y control de calidad
+### Fase 6 — Pruebas y control de calidad
 
 - [ ] Ejecutar el servidor de desarrollo y revisar cada página.
 - [ ] Ejecutar el linter disponible (`npm run lint`) y revisar los errores.
@@ -154,7 +206,7 @@ Páginas ya identificadas para revisar en el inventario, sin asumir que la lista
 
 No marcar una prueba como aprobada si no se ejecutó realmente.
 
-## 11. Fase 7 — Preparación para publicación
+### Fase 7 — Preparación para publicación
 
 Esta fase no implica publicar el sitio ni modificar servicios externos automáticamente.
 
@@ -166,7 +218,7 @@ Esta fase no implica publicar el sitio ni modificar servicios externos automáti
 - [ ] Solicitar autorización antes de publicar, cambiar DNS, modificar configuración de hosting o realizar acciones externas.
 - [ ] Mantener el sitio original disponible como referencia y respaldo hasta que el usuario confirme que la migración está aceptada.
 
-## 12. Lista de verificación por cada etapa
+### Lista de verificación para cambios nuevos
 
 Antes de trabajar:
 - [ ] La etapa y su objetivo están definidos.
@@ -182,9 +234,9 @@ Después de trabajar:
 - [ ] Se actualizó `Registro.md` con fecha y hora de Argentina (UTC-03:00), rutas, cambio, motivo, autorización y resultado.
 - [ ] Se informó al usuario qué se hizo, qué se comprobó y qué queda pendiente.
 
-## 13. Estado vigente del proyecto — 2026-10-12
+## 13. Estado histórico del proyecto — 2026-10-12 (superado)
 
-Esta sección resume el estado actual para retomar el trabajo sin repetir auditorías ni confundir decisiones antiguas con las vigentes. El detalle histórico se conserva en los anexos y en el registro de cambios.
+Esta sección registra el estado de la etapa inicial en esa fecha. Está conservada por trazabilidad y no representa el estado vigente de octubre de 2026; consultar la sección «Estado actual del proyecto — 2026-10-28» al inicio del documento.
 
 ### Decisiones aprobadas
 
