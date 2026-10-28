@@ -31,6 +31,7 @@ const cards = [
     metadata: ['2 a 4 hs'],
     image: cabalgataImage,
     alt: 'Cabalgatas en Aconquija',
+    href: '/lugares/cabalgatas',
   },
   {
     title: 'Río Potrero',
