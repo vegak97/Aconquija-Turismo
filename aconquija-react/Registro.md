@@ -1838,3 +1838,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** evitar que la documentación siga describiendo el proyecto como si la migración inicial estuviera empezando y mantener las instrucciones de trabajo alineadas con el estado actual del repositorio.
 - **Autorización:** petición directa del usuario del 2026-10-28.
 - **Resultado:** documentos actualizados en la rama `main`. Se revisaron los textos recuperados desde GitHub y se mantuvieron los anexos históricos para conservar trazabilidad. No se ejecutaron lint, build ni pruebas visuales porque el cambio fue documental.
+
+
+### 2026-10-28T03:58:45 -03:00 — Simplificar metodología para la etapa final del proyecto
+
+- **Archivos afectados:** `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se reemplazó el documento extenso de metodología de migración por una guía breve centrada en el mantenimiento y cierre del proyecto React ya migrado. Se eliminaron las fases de migración inicial, listas de páginas antiguas, inventarios repetidos y anexos históricos que ya no servían como instrucciones operativas. Se conservaron reglas vigentes de autorización, registro, estructura, rutas, recursos locales, contenido, calidad y publicación.
+- **Motivo:** evitar que la metodología describa tareas superadas y facilitar que el trabajo restante se enfoque en finalizar el sitio.
+- **Autorización:** petición directa del usuario del 2026-10-28.
+- **Resultado:** metodología simplificada en la rama `main`; el historial de decisiones y cambios permanece en `Registro.md`. No se ejecutaron lint, build ni pruebas visuales porque el cambio fue documental.
