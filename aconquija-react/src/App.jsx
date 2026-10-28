@@ -18,6 +18,7 @@ import FestivalMayorPage from './pages/third-level/FestivalMayorPage'
 import BalnearioBuenaVistaPage from './pages/third-level/BalnearioBuenaVistaPage'
 import CristoRedentorPage from './pages/third-level/CristoRedentorPage'
 import VirgenDelVallePage from './pages/third-level/VirgenDelVallePage'
+import CabalgatasPage from './pages/third-level/CabalgatasPage'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
 
@@ -38,6 +39,7 @@ const festivalMayorPath = '/eventos/festival-mayor'
 const balnearioBuenaVistaPath = '/lugares/balneario-municipal-buena-vista'
 const cristoRedentorPath = '/lugares/cristo-redentor'
 const virgenDelVallePath = '/lugares/virgen-del-valle'
+const cabalgatasPath = '/lugares/cabalgatas'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -78,6 +80,7 @@ export default function App() {
         <Route path={balnearioBuenaVistaPath} element={<BalnearioBuenaVistaPage />} />
         <Route path={cristoRedentorPath} element={<CristoRedentorPage />} />
         <Route path={virgenDelVallePath} element={<VirgenDelVallePage />} />
+        <Route path={cabalgatasPath} element={<CabalgatasPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <SpotifyFloatingPlayer />
