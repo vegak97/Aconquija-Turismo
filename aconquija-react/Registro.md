@@ -1829,3 +1829,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** desarrollar la página de Cabalgatas dentro del recorrido turístico Respira Verde con la temática visual de las demás páginas.
 - **Autorización:** petición directa del usuario el 2026-10-27.
 - **Resultado:** archivos guardados en la rama `main`; falta ejecutar compilación y pruebas visuales en navegador.
+
+
+### 2026-10-28 03:54:00 -03:00 — Actualizar metodología y reglas de agentes
+
+- **Archivos afectados:** `Metodologia.md`; `agents.md`; `Registro.md`.
+- **Cambio concreto:** se actualizó el propósito de la metodología para reflejar que el proyecto ya está en etapa de mantenimiento y evolución, se añadió un estado actual fechado, se aclaró que las fases y el inventario de 15 páginas son antecedentes de la migración inicial y se documentaron la estructura actual, los componentes compartidos, los criterios de contenido, recursos locales y verificación. Se reescribieron las reglas de agentes para incluir organización de páginas de segundo/tercer nivel, reutilización de componentes, rutas en `src/App.jsx`, galería compartida, accesibilidad/responsive, límites de contenido, pruebas y publicación.
+- **Motivo:** evitar que la documentación siga describiendo el proyecto como si la migración inicial estuviera empezando y mantener las instrucciones de trabajo alineadas con el estado actual del repositorio.
+- **Autorización:** petición directa del usuario del 2026-10-28.
+- **Resultado:** documentos actualizados en la rama `main`. Se revisaron los textos recuperados desde GitHub y se mantuvieron los anexos históricos para conservar trazabilidad. No se ejecutaron lint, build ni pruebas visuales porque el cambio fue documental.
