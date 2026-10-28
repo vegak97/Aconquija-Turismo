@@ -1,0 +1,24 @@
+.cabalgatas-hero-img {
+  background-position: center 52%;
+}
+
+.cabalgatas-contact {
+  width: 100%;
+  gap: 10px;
+}
+
+.cabalgatas-contact svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.cabalgatas-gallery .gallery-caption {
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .cabalgatas-hero-img {
+    background-position: center;
+  }
+}
