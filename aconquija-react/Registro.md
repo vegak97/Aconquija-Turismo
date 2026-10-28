@@ -1820,3 +1820,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** incorporar la página del Cristo Redentor al recorrido turístico El Camino de la Fe, respetando la temática visual solicitada.
 - **Autorización:** petición directa del usuario el 2026-10-27.
 - **Resultado:** cambios guardados en la rama `main`. Se verificaron estáticamente la tarjeta, la ruta y la referencia a la imagen local. No se ejecutaron `npm run build`, lint ni pruebas visuales en navegador.
+
+### 2026-10-27 23:35:00 -03:00 — Crear página de Cabalgatas para Respira Verde
+
+- **Archivos afectados:** `src/pages/third-level/CabalgatasPage.jsx` (nuevo); `src/components/third-level/cabalgatas/CabalgatasHero.jsx` (nuevo); `CabalgatasContent.jsx` (nuevo); `CabalgatasInfoCard.jsx` (nuevo); `CabalgatasGallery.jsx` (nuevo); `Cabalgatas.css` (nuevo); `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `src/App.jsx`; `Registro.md`.
+- **Cambio concreto:** se creó una página de detalle de Cabalgatas siguiendo la estructura de las páginas de atractivos existentes: portada con imagen local, navegación de regreso a Respira Verde, descripción, características, ficha informativa, galería y contacto por WhatsApp. La tarjeta «Cabalgatas» del circuito ahora enlaza a `/lugares/cabalgatas`, y se registró la ruta en React. Se reutilizó `imagenes/cabalgata.webp`; las fotografías adicionales no disponibles quedan como espacios reservados.
+- **Contenido:** se mantuvo la información que ya figuraba en la tarjeta de Respira Verde: recorrido a caballo entre parajes del circuito, acompañamiento de baqueanos locales y duración orientativa de 2 a 4 horas. No se agregaron precios ni detalles de servicios no confirmados.
+- **Motivo:** desarrollar la página de Cabalgatas dentro del recorrido turístico Respira Verde con la temática visual de las demás páginas.
+- **Autorización:** petición directa del usuario el 2026-10-27.
+- **Resultado:** archivos guardados en la rama `main`; falta ejecutar compilación y pruebas visuales en navegador.
