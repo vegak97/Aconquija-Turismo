@@ -21,16 +21,18 @@ function HomePage() {
       if (nav) nav.classList.toggle('scrolled', window.scrollY > 60)
 
       // Reutiliza el listener de scroll existente para marcar la sección visible en el menú.
-      const navLinks = document.querySelectorAll('#navLinks > a[href^="#"]')
+      // Los enlaces del menú son <Link> y su href incluye la ruta (/turismo#sección),
+      // por eso se lee el fragmento con link.hash en lugar de buscar href que empiece con "#".
+      const navLinks = Array.from(document.querySelectorAll('#navLinks > a')).filter((link) => link.hash)
       let activeId = ''
       navLinks.forEach((link) => {
-        const section = document.getElementById(link.getAttribute('href').slice(1))
+        const section = document.getElementById(link.hash.slice(1))
         if (section && section.getBoundingClientRect().top <= 150) activeId = section.id
       })
       navLinks.forEach((link) => {
-        const isActive = link.getAttribute('href') === `#${activeId}`
-        link.classList.toggle('is-active', Boolean(activeId) && isActive)
-        if (isActive && activeId) link.setAttribute('aria-current', 'location')
+        const isActive = Boolean(activeId) && link.hash === `#${activeId}`
+        link.classList.toggle('is-active', isActive)
+        if (isActive) link.setAttribute('aria-current', 'location')
         else link.removeAttribute('aria-current')
       })
     }
