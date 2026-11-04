@@ -36,7 +36,7 @@ function Header({ animateOnLoad = false }) {
 
   // Los enlaces de secciones también funcionan cuando se llega desde una página secundaria.
   useEffect(() => {
-    if (location.pathname !== '/' || !location.hash) return undefined
+    if (location.pathname !== '/turismo' || !location.hash) return undefined
     const sectionId = decodeURIComponent(location.hash.slice(1))
     const scrollToSection = () => {
       const section = document.getElementById(sectionId)
@@ -62,14 +62,14 @@ function Header({ animateOnLoad = false }) {
   return (
     <>
       <header className={`nav${animateOnLoad ? ' nav-intro' : ''}`} id="siteNav">
-        <Link to="/" className="logo" aria-label="Aconquija Turismo, inicio" onClick={() => setMenuOpen(false)}>
+        <Link to="/turismo" className="logo" aria-label="Aconquija Turismo, inicio" onClick={() => setMenuOpen(false)}>
           <img src={logoHeader} alt="Aconquija Turismo" />
         </Link>
         <nav className={`links${menuOpen ? ' open' : ''}`} id="navLinks" aria-label="Navegación principal">
           <button className="nav-close" type="button" aria-label="Cerrar menú" onClick={() => setMenuOpen(false)}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
           </button>
-          <Link to={location.pathname === '/' ? '#explorar' : '/#explorar'} onClick={(event) => handleSectionClick(event, 'explorar')}>Explorar</Link>
+          <Link to={location.pathname === '/turismo' ? '#explorar' : '/turismo#explorar'} onClick={(event) => handleSectionClick(event, 'explorar')}>Explorar</Link>
           <Link to={location.pathname === '/' ? '#lugares' : '/#lugares'} onClick={(event) => handleSectionClick(event, 'lugares')}>Lugares</Link>
           <Link to={location.pathname === '/' ? '#estaciones' : '/#estaciones'} onClick={(event) => handleSectionClick(event, 'estaciones')}>Estaciones</Link>
           <Link to={location.pathname === '/' ? '#servicios' : '/#servicios'} onClick={(event) => handleSectionClick(event, 'servicios')}>Servicios</Link>
