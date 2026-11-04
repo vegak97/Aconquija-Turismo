@@ -50,7 +50,7 @@ function Header({ animateOnLoad = false }) {
 
   const handleSectionClick = (event, sectionId) => {
     setMenuOpen(false)
-    if (location.pathname !== '/') return
+    if (location.pathname !== '/turismo') return
     event.preventDefault()
     const section = document.getElementById(sectionId)
     if (!section) return
@@ -70,10 +70,10 @@ function Header({ animateOnLoad = false }) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
           </button>
           <Link to={location.pathname === '/turismo' ? '#explorar' : '/turismo#explorar'} onClick={(event) => handleSectionClick(event, 'explorar')}>Explorar</Link>
-          <Link to={location.pathname === '/' ? '#lugares' : '/#lugares'} onClick={(event) => handleSectionClick(event, 'lugares')}>Lugares</Link>
-          <Link to={location.pathname === '/' ? '#estaciones' : '/#estaciones'} onClick={(event) => handleSectionClick(event, 'estaciones')}>Estaciones</Link>
-          <Link to={location.pathname === '/' ? '#servicios' : '/#servicios'} onClick={(event) => handleSectionClick(event, 'servicios')}>Servicios</Link>
-          <Link to={location.pathname === '/' ? '#sobre' : '/#sobre'} onClick={(event) => handleSectionClick(event, 'sobre')}>Sobre Aconquija</Link>
+          <Link to={location.pathname === '/turismo' ? '#lugares' : '/turismo#lugares'} onClick={(event) => handleSectionClick(event, 'lugares')}>Lugares</Link>
+          <Link to={location.pathname === '/turismo' ? '#estaciones' : '/turismo#estaciones'} onClick={(event) => handleSectionClick(event, 'estaciones')}>Estaciones</Link>
+          <Link to={location.pathname === '/turismo' ? '#servicios' : '/turismo#servicios'} onClick={(event) => handleSectionClick(event, 'servicios')}>Servicios</Link>
+          <Link to={location.pathname === '/turismo' ? '#sobre' : '/turismo#sobre'} onClick={(event) => handleSectionClick(event, 'sobre')}>Sobre Aconquija</Link>
           <SocialLinks mobile />
         </nav>
         <div className="nav-actions">
