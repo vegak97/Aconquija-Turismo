@@ -28,9 +28,9 @@ export default function DesfileCivicoHero() {
       <div className="lugar-hero-img desfile-civico-hero-img" style={{ backgroundImage: `url("${heroImage}")` }} />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
-          <Link to="/#explorar">Explorar</Link>
+          <Link to="/turismo#explorar">Explorar</Link>
           <span aria-hidden="true">›</span>
           <span aria-current="page">Agenda y Eventos</span>
         </nav>
