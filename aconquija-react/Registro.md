@@ -1864,3 +1864,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se incorporó al encabezado el logo local `imagenes/logo_aconquija(1).png`, reutilizando el recurso institucional que ya usa el encabezado del sitio. Se suavizaron las animaciones iniciales reduciendo desplazamientos y escala, ampliando sus duraciones y espaciando la aparición de las tarjetas. Se redujo la elevación y el zoom al pasar el cursor. Las imágenes de las tarjetas ahora tienen mayor altura en escritorio y móvil para darles una proporción más alargada.
 - **Motivo y autorización:** solicitud directa del usuario del 2026-11-04.
 - **Resultado:** archivos actualizados en la rama `main`. Se verificaron estáticamente la importación del logo, los nombres de clases y el balance de llaves CSS. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-04T17:48:08 -03:00 — Compactar la portada institucional y simplificar el pie
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se quitó cualquier fondo propio del pie institucional y se mantuvo el texto centrado, con menos separación respecto de las tarjetas. Se reorganizaron los espacios verticales de encabezado, introducción, tarjetas y pie para aprovechar mejor la altura disponible. Las imágenes de las tarjetas conservan una presencia destacada, pero ahora usan alturas adaptables al alto de pantalla; en móvil se compactaron también los espacios internos de las tarjetas. Se añadieron ajustes específicos para pantallas de poca altura, con el objetivo de que el conjunto entre en la primera vista sin desplazamiento.
+- **Motivo y autorización:** solicitud directa del usuario el 2026-11-04.
+- **Resultado:** estilos actualizados en la rama `main` y cambio registrado. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
