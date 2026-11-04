@@ -15,7 +15,7 @@ export default function CabalgatasHero() {
       <div className="lugar-hero-img cabalgatas-hero-img" style={{ backgroundImage: `url("${cabalgataImage}")` }} aria-hidden="true" />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
           <Link to="/circuitos/respira-verde">Respira Verde</Link>
           <span aria-hidden="true">›</span>
