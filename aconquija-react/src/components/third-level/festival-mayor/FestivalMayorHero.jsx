@@ -27,9 +27,9 @@ export default function FestivalMayorHero() {
       <div className="lugar-hero-img festival-mayor-hero-img" aria-hidden="true" />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
-          <Link to="/#explorar">Explorar</Link>
+          <Link to="/turismo#explorar">Explorar</Link>
           <span aria-hidden="true">›</span>
           <span aria-current="page">Fiestas y Festivales</span>
         </nav>
