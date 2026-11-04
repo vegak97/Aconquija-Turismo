@@ -1880,3 +1880,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se ajustó el margen y el ancho del encabezado para ubicar el escudo y el nombre institucional más cerca de la esquina superior izquierda. Se redujo la escala tipográfica y el espacio ocupado por «BIENVENIDOS», el título y el texto introductorio. Con ese espacio recuperado, se aumentó la altura de las imágenes de las tarjetas en escritorio y se amplió moderadamente su espacio en móvil. El pie «ACONQUIJA · CATAMARCA · ARGENTINA» sigue sin fondo y ahora usa un tono azul pizarra más oscuro para distinguirse mejor del fondo.
 - **Motivo y autorización:** solicitud directa del usuario del 2026-11-04.
 - **Resultado:** estilos actualizados en la rama `main`. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-04T18:09:00 -03:00 — Ampliar las tarjetas y unificar el color del pie institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se aumentó un poco más la altura de las imágenes de las tarjetas en escritorio y se amplió moderadamente en móvil y en pantallas de poca altura. El pie «ACONQUIJA · CATAMARCA · ARGENTINA» conserva el fondo transparente y ahora utiliza exactamente el color de tinta del título principal (`var(--portal-ink)`), en lugar del tono azul pizarra anterior.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** estilos actualizados en la rama `main`. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
