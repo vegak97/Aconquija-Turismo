@@ -2,6 +2,8 @@ import './App.css'
 import { useLayoutEffect, useRef } from 'react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import PortalHomePage from './pages/PortalHomePage'
+import GovernmentPage from './pages/GovernmentPage'
 import PlanetarioPage from './pages/second-level/PlanetarioPage'
 import PucaraPage from './pages/second-level/PucaraPage'
 import CultivaTradicionPage from './pages/second-level/CultivaTradicionPage'
@@ -22,6 +24,8 @@ import CabalgatasPage from './pages/third-level/CabalgatasPage'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
 
+const tourismHomePath = '/turismo'
+const governmentPath = '/gobierno'
 const planetarioPath = '/lugares/planetario-janaxpacha-huasi'
 const pucaraPath = '/lugares/pucara-de-aconquija'
 const cultivaTradicionPath = '/circuitos/cultiva-tradicion'
@@ -40,6 +44,12 @@ const balnearioBuenaVistaPath = '/lugares/balneario-municipal-buena-vista'
 const cristoRedentorPath = '/lugares/cristo-redentor'
 const virgenDelVallePath = '/lugares/virgen-del-valle'
 const cabalgatasPath = '/lugares/cabalgatas'
+
+function TourismFloatingPlayer() {
+  const { pathname } = useLocation()
+  if (pathname === '/' || pathname === governmentPath) return null
+  return <SpotifyFloatingPlayer />
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -62,7 +72,9 @@ export default function App() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<PortalHomePage />} />
+        <Route path={tourismHomePath} element={<HomePage />} />
+        <Route path={governmentPath} element={<GovernmentPage />} />
         <Route path={planetarioPath} element={<PlanetarioPage />} />
         <Route path={pucaraPath} element={<PucaraPage />} />
         <Route path={cultivaTradicionPath} element={<CultivaTradicionPage />} />
@@ -83,7 +95,7 @@ export default function App() {
         <Route path={cabalgatasPath} element={<CabalgatasPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <SpotifyFloatingPlayer />
+      <TourismFloatingPlayer />
     </BrowserRouter>
   )
 }
