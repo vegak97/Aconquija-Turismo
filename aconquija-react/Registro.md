@@ -1847,3 +1847,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** evitar que la metodología describa tareas superadas y facilitar que el trabajo restante se enfoque en finalizar el sitio.
 - **Autorización:** petición directa del usuario del 2026-10-28.
 - **Resultado:** metodología simplificada en la rama `main`; el historial de decisiones y cambios permanece en `Registro.md`. No se ejecutaron lint, build ni pruebas visuales porque el cambio fue documental.
+
+
+### 2026-11-04T17:02:13 -03:00 — Incorporar portada institucional y separar el acceso a Turismo y Gobierno
+
+- **Archivos afectados:** `src/App.jsx`; `src/pages/PortalHomePage.jsx` (nuevo); `src/pages/GovernmentPage.jsx` (nuevo); `src/styles/portal.css` (nuevo); `src/components/layout/Header.jsx`; `src/components/layout/Footer.jsx`; componentes de navegación y breadcrumbs de páginas turísticas; `index.html`; `Metodologia.md`; `Registro.md`.
+- **Cambio concreto:** se creó una portada institucional en `/` con fondo degradado claro, encabezado minimalista y dos tarjetas flotantes del mismo tamaño para Turismo y Gobierno. Las tarjetas reutilizan fotografías locales existentes y tienen animaciones de entrada, elevación, zoom de imagen y estados de foco accesibles. Se creó `/gobierno` como pantalla provisional «Sección en desarrollo». La página de inicio turística existente se conservó en `/turismo`; sus rutas de circuitos, lugares y eventos no se cambiaron. Se actualizaron el encabezado, el pie y los breadcrumbs para que los enlaces de regreso del área Turismo apunten a `/turismo`. El reproductor flotante se mantiene en las rutas turísticas y se oculta en la portada institucional y en Gobierno. Se actualizaron los metadatos del documento y la metodología para reflejar la nueva organización.
+- **Motivo:** incorporar el portal institucional solicitado sin rediseñar ni reemplazar el sitio de Turismo existente, y dejar preparada la entrada para la futura sección de Gobierno.
+- **Autorización:** autorización explícita del usuario el 2026-11-04 para comenzar la integración y modificar el código.
+- **Resultado:** cambios guardados en la rama `main`. Se realizó revisión estática de rutas, enlaces principales, imports y referencias a imágenes locales. No se ejecutaron `npm.cmd run lint`, `npm.cmd run build` ni pruebas visuales en navegador desde un entorno local; quedan pendientes para la verificación posterior. No se modificó la configuración de Netlify ni se publicó el sitio.
