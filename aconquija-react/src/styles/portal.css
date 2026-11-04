@@ -7,6 +7,7 @@
   position: relative;
   isolation: isolate;
   display: flex;
+  min-height: 100vh;
   min-height: 100svh;
   flex-direction: column;
   overflow: hidden;
@@ -54,7 +55,7 @@
   color: var(--portal-ink);
   text-decoration: none;
 }
- .portal-wordmark__logo {
+.portal-wordmark__logo {
   display: block;
   width: clamp(2.7rem, 4vw, 3.5rem);
   height: clamp(2.7rem, 4vw, 3.5rem);
@@ -136,12 +137,12 @@
   text-decoration: none;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  transform: translateY(12px) scale(.99);
-  opacity: 0;
-  animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) forwards;
+  /* "backwards" aplica el primer fotograma solo durante el retraso. Con "forwards"
+     la animación mantenía su transform final y anulaba la elevación del :hover. */
+  animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) backwards;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: .42s; }
+.portal-card--tourism { animation-delay: .42s; }
 .portal-card--government { animation-delay: .58s; }
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
@@ -393,5 +394,4 @@
     transition-duration: .01ms !important;
     scroll-behavior: auto !important;
   }
-  .portal-card { opacity: 1; transform: none; }
 }
