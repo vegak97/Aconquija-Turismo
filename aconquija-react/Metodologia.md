@@ -20,6 +20,9 @@ La historia de decisiones y cambios se conserva en `Registro.md`. No se mantiene
 La aplicación React/Vite está en `aconquija-react/`.
 
 - Rutas de la aplicación: `src/App.jsx`.
+- La ruta `/` corresponde a la portada institucional; `/turismo` conserva la página de inicio turística que anteriormente estaba en `/`; `/gobierno` muestra una pantalla provisional hasta desarrollar esa sección.
+- Las rutas existentes de circuitos, lugares y eventos se mantienen con sus direcciones actuales. Los enlaces de inicio y navegación interna del área Turismo deben volver a `/turismo`, no a la portada institucional.
+- La portada institucional y la pantalla provisional de Gobierno usan `src/styles/portal.css`, separada de los estilos visuales de Turismo. El reproductor flotante global se oculta únicamente en `/` y `/gobierno`.
 - Páginas de segundo nivel: `src/pages/second-level/`.
 - Páginas de detalle: `src/pages/third-level/`.
 - Componentes específicos: seguir la organización existente bajo `src/components/second-level/` y `src/components/third-level/`.
