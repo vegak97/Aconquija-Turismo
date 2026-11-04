@@ -7,7 +7,7 @@ export default function CultivaTradicionHero() {
       <div className="cultiva-hero__background" style={{ backgroundImage: `url("${heroImage}")` }} aria-hidden="true" />
       <div className="cultiva-hero__content">
         <nav className="cultiva-breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
           <span aria-current="page">Cultiva Tradición</span>
         </nav>
