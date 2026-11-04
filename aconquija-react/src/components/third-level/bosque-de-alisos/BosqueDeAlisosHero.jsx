@@ -32,9 +32,9 @@ export default function BosqueDeAlisosHero() {
       <div className="lugar-hero-img bosque-alisos-hero-img" style={{ backgroundImage: `url("${heroImage}")` }} />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
-          <Link to="/#explorar">Explorar</Link>
+          <Link to="/turismo#explorar">Explorar</Link>
           <span aria-hidden="true">›</span>
           <span aria-current="page">Patrimonio Natural</span>
         </nav>
