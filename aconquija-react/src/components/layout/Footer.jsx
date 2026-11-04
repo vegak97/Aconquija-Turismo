@@ -1,8 +1,22 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { InstagramIcon, FacebookIcon, TikTokIcon, WhatsAppIcon } from './SocialLinks'
 import logoFooter from '../../../imagenes/logo_aconquija(2).png'
 
 function Footer() {
+  const { pathname } = useLocation()
+
+  // Los enlaces de sección llevan a /turismo#sección; en el inicio de Turismo se
+  // desplaza con el mismo margen que el menú, y desde otras páginas navega y el
+  // encabezado se encarga de bajar hasta la sección.
+  const goToSection = (event, sectionId) => {
+    if (pathname !== '/turismo') return
+    const section = document.getElementById(sectionId)
+    if (!section) return
+    event.preventDefault()
+    const top = section.getBoundingClientRect().top + window.scrollY - 90
+    window.scrollTo({ top, behavior: 'smooth' })
+  }
+
   return (
     <footer>
       <div className="container">
@@ -14,15 +28,15 @@ function Footer() {
           <div className="foot-cols">
             <div className="foot-col">
               <h5>Explorar</h5>
-              <a href="#explorar">Excursiones</a>
-              <a href="#lugares">Lugares</a>
-              <a href="#estaciones">Estaciones</a>
+              <Link to="/turismo#explorar" onClick={(event) => goToSection(event, 'explorar')}>Excursiones</Link>
+              <Link to="/turismo#lugares" onClick={(event) => goToSection(event, 'lugares')}>Lugares</Link>
+              <Link to="/turismo#estaciones" onClick={(event) => goToSection(event, 'estaciones')}>Estaciones</Link>
             </div>
             <div className="foot-col">
               <h5>Servicios</h5>
-              <a href="#servicios">Dónde dormir</a>
-              <a href="#servicios">Dónde comer</a>
-              <a href="#servicios">Guías locales</a>
+              <Link to="/turismo#servicios" onClick={(event) => goToSection(event, 'servicios')}>Dónde dormir</Link>
+              <Link to="/turismo#servicios" onClick={(event) => goToSection(event, 'servicios')}>Dónde comer</Link>
+              <Link to="/turismo#servicios" onClick={(event) => goToSection(event, 'servicios')}>Guías locales</Link>
             </div>
             <div className="foot-col">
               <h5>Contacto</h5>
