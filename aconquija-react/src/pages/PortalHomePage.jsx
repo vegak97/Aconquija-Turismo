@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import tourismImage from '../../imagenes/fondo(1).webp'
+import municipalLogo from '../../imagenes/logo_aconquija(1).png'
 import governmentImage from '../../imagenes/linea_del_tiempo/pueblo.webp'
 import '../styles/portal.css'
 
@@ -11,8 +12,11 @@ function PortalHomePage() {
 
       <header className="portal-header">
         <Link to="/" className="portal-wordmark" aria-label="Aconquija, portal institucional">
-          <span className="portal-wordmark__name">ACONQUIJA</span>
-          <span className="portal-wordmark__caption">PORTAL INSTITUCIONAL</span>
+          <img src={municipalLogo} alt="Escudo municipal de Aconquija" className="portal-wordmark__logo" />
+          <span className="portal-wordmark__text">
+            <span className="portal-wordmark__name">ACONQUIJA</span>
+            <span className="portal-wordmark__caption">PORTAL INSTITUCIONAL</span>
+          </span>
         </Link>
       </header>
 
