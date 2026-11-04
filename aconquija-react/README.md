@@ -44,3 +44,5 @@ Las imágenes del proyecto se guardan en `imagenes/` dentro de esta carpeta. Los
 - `public/`: recursos servidos directamente por Vite.
 
 El registro de cambios y la metodología están documentados en `Registro.md` y `Metodologia.md`.
+
+<!-- prueba de permisos de escritura -->
