@@ -44,14 +44,27 @@
   width: min(100%, 1160px);
   margin: 0 auto;
   align-items: center;
-  animation: portal-header-in .75s cubic-bezier(.2,.75,.25,1) both;
+  animation: portal-header-in 1.15s cubic-bezier(.22,.61,.36,1) both;
 }
 .portal-wordmark {
   display: inline-flex;
-  flex-direction: column;
-  gap: .2rem;
+  flex-direction: row;
+  align-items: center;
+  gap: .8rem;
   color: var(--portal-ink);
   text-decoration: none;
+}
+ .portal-wordmark__logo {
+  display: block;
+  width: clamp(2.7rem, 4vw, 3.5rem);
+  height: clamp(2.7rem, 4vw, 3.5rem);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.portal-wordmark__text {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
 }
 .portal-wordmark__name {
   font-size: .92rem;
@@ -77,7 +90,7 @@
 .portal-intro {
   margin: 0 auto clamp(2rem, 4.5vh, 3.5rem);
   text-align: center;
-  animation: portal-intro-in .85s .12s cubic-bezier(.2,.75,.25,1) both;
+  animation: portal-intro-in 1.25s .18s cubic-bezier(.22,.61,.36,1) both;
 }
 .portal-eyebrow {
   display: inline-block;
@@ -123,16 +136,15 @@
   text-decoration: none;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  transform: translateY(2rem) scale(.97);
+  transform: translateY(12px) scale(.99);
   opacity: 0;
-  animation: portal-card-in .9s cubic-bezier(.18,.78,.25,1) forwards;
-  transition: transform .45s cubic-bezier(.2,.75,.25,1), box-shadow .45s ease, border-color .35s ease;
-  will-change: transform;
+  animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) forwards;
+  transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
-.portal-card--tourism { animation-delay: .28s; }
-.portal-card--government { animation-delay: .43s; }
+ .portal-card--tourism { animation-delay: .42s; }
+.portal-card--government { animation-delay: .58s; }
 .portal-card:hover {
-  transform: translateY(-.65rem) scale(1.012);
+  transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
 }
 .portal-card:focus-visible,
@@ -146,7 +158,7 @@
 
 .portal-card__image-wrap {
   position: relative;
-  height: clamp(12.5rem, 27vh, 18.5rem);
+  height: clamp(17rem, 34vh, 23rem);
   overflow: hidden;
   background: #dce5e7;
 }
@@ -157,7 +169,7 @@
   transition: transform .95s cubic-bezier(.2,.75,.25,1), filter .6s ease;
 }
 .portal-card:hover .portal-card__image {
-  transform: scale(1.075);
+  transform: scale(1.045);
   filter: saturate(1.06);
 }
 .portal-card__image-wrap::after {
@@ -277,7 +289,7 @@
   margin: 0 auto;
   padding: 4rem 0;
   text-align: center;
-  animation: portal-intro-in .8s .12s both;
+  animation: portal-intro-in 1.2s .18s both;
 }
 .government-message__symbol {
   display: grid;
@@ -317,15 +329,15 @@
 .government-back:hover span { transform: translateX(5px); }
 
 @keyframes portal-header-in {
-  from { opacity: 0; transform: translateY(-14px); }
+  from { opacity: 0; transform: translateY(-7px); }
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes portal-intro-in {
-  from { opacity: 0; transform: translateY(22px); }
+  from { opacity: 0; transform: translateY(9px); }
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes portal-card-in {
-  from { opacity: 0; transform: translateY(2.2rem) scale(.965); }
+  from { opacity: 0; transform: translateY(14px) scale(.99); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 @keyframes portal-footer-in {
@@ -338,11 +350,11 @@
   .portal-main { padding: 3.5rem 0 2.7rem; }
   .portal-intro { margin-bottom: 1.8rem; }
   .portal-cards { grid-template-columns: 1fr; gap: 1rem; }
-  .portal-card__image-wrap { height: clamp(10.5rem, 32vh, 14.5rem); }
+  .portal-card__image-wrap { height: clamp(13rem, 38vh, 17rem); }
   .portal-card__body { padding: 1.15rem 1.25rem 1.3rem; }
   .portal-card__body > p { margin-bottom: .9rem; }
   .portal-footer { padding-top: .4rem; font-size: .52rem; }
-  .portal-card:hover { transform: translateY(-.25rem); }
+  .portal-card:hover { transform: translateY(-.2rem); }
 }
 
 @media (max-width: 380px) {
