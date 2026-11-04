@@ -1856,3 +1856,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo:** incorporar el portal institucional solicitado sin rediseñar ni reemplazar el sitio de Turismo existente, y dejar preparada la entrada para la futura sección de Gobierno.
 - **Autorización:** autorización explícita del usuario el 2026-11-04 para comenzar la integración y modificar el código.
 - **Resultado:** cambios guardados en la rama `main`. Se realizó revisión estática de rutas, enlaces principales, imports y referencias a imágenes locales. No se ejecutaron `npm.cmd run lint`, `npm.cmd run build` ni pruebas visuales en navegador desde un entorno local; quedan pendientes para la verificación posterior. No se modificó la configuración de Netlify ni se publicó el sitio.
+
+
+### 2026-11-04T17:23:08 -03:00 — Suavizar animaciones y dar más presencia a las tarjetas del portal
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó al encabezado el logo local `imagenes/logo_aconquija(1).png`, reutilizando el recurso institucional que ya usa el encabezado del sitio. Se suavizaron las animaciones iniciales reduciendo desplazamientos y escala, ampliando sus duraciones y espaciando la aparición de las tarjetas. Se redujo la elevación y el zoom al pasar el cursor. Las imágenes de las tarjetas ahora tienen mayor altura en escritorio y móvil para darles una proporción más alargada.
+- **Motivo y autorización:** solicitud directa del usuario del 2026-11-04.
+- **Resultado:** archivos actualizados en la rama `main`. Se verificaron estáticamente la importación del logo, los nombres de clases y el balance de llaves CSS. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
