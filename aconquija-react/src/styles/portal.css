@@ -1,0 +1,363 @@
+/* Portal institucional: identidad independiente del sitio de Turismo. */
+.portal-page {
+  --portal-ink: #293d50;
+  --portal-muted: #71808c;
+  --portal-green: #66877c;
+  --portal-blue: #647a91;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(1.25rem, 3.2vw, 2.8rem) clamp(1.25rem, 6vw, 6rem) 1.35rem;
+  color: var(--portal-ink);
+  background:
+    radial-gradient(ellipse at 13% 17%, rgba(194, 215, 221, .48), transparent 34%),
+    radial-gradient(ellipse at 88% 78%, rgba(205, 218, 231, .54), transparent 38%),
+    linear-gradient(135deg, #eef2f4 0%, #f9fafb 48%, #e9eef2 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.portal-page *,
+.portal-page *::before,
+.portal-page *::after { box-sizing: border-box; }
+
+.portal-orb {
+  position: absolute;
+  z-index: -1;
+  width: clamp(13rem, 27vw, 27rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255,255,255,.58);
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  filter: blur(1px);
+  pointer-events: none;
+}
+.portal-orb--one { top: 12%; right: -9rem; }
+.portal-orb--two { bottom: -15rem; left: -9rem; width: clamp(19rem, 36vw, 36rem); }
+
+.portal-header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  align-items: center;
+  animation: portal-header-in .75s cubic-bezier(.2,.75,.25,1) both;
+}
+.portal-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  gap: .2rem;
+  color: var(--portal-ink);
+  text-decoration: none;
+}
+.portal-wordmark__name {
+  font-size: .92rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+}
+.portal-wordmark__caption {
+  color: var(--portal-muted);
+  font-size: .57rem;
+  font-weight: 600;
+  letter-spacing: .16em;
+}
+
+.portal-main {
+  display: flex;
+  width: min(100%, 1040px);
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: clamp(2.6rem, 7vh, 5.5rem) 0 clamp(2rem, 5vh, 4rem);
+}
+.portal-intro {
+  margin: 0 auto clamp(2rem, 4.5vh, 3.5rem);
+  text-align: center;
+  animation: portal-intro-in .85s .12s cubic-bezier(.2,.75,.25,1) both;
+}
+.portal-eyebrow {
+  display: inline-block;
+  color: #778994;
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+}
+.portal-intro h1,
+.government-message h1 {
+  margin: .8rem 0 .65rem;
+  color: var(--portal-ink);
+  font-size: clamp(2.05rem, 4.2vw, 3.45rem);
+  font-weight: 600;
+  letter-spacing: -.055em;
+  line-height: 1.1;
+}
+.portal-intro p,
+.government-message > p {
+  max-width: 39rem;
+  margin: 0 auto;
+  color: #71808a;
+  font-size: clamp(.88rem, 1.25vw, 1rem);
+  line-height: 1.75;
+}
+
+.portal-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.15rem, 3vw, 2rem);
+  perspective: 1200px;
+}
+.portal-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.88);
+  border-radius: 1.35rem;
+  background: rgba(255,255,255,.82);
+  box-shadow: 0 1.2rem 3.3rem rgba(52, 70, 87, .09), 0 .2rem .65rem rgba(52, 70, 87, .045);
+  color: var(--portal-ink);
+  text-decoration: none;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: translateY(2rem) scale(.97);
+  opacity: 0;
+  animation: portal-card-in .9s cubic-bezier(.18,.78,.25,1) forwards;
+  transition: transform .45s cubic-bezier(.2,.75,.25,1), box-shadow .45s ease, border-color .35s ease;
+  will-change: transform;
+}
+.portal-card--tourism { animation-delay: .28s; }
+.portal-card--government { animation-delay: .43s; }
+.portal-card:hover {
+  transform: translateY(-.65rem) scale(1.012);
+  box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
+}
+.portal-card:focus-visible,
+.portal-wordmark:focus-visible,
+.government-back:focus-visible {
+  outline: 3px solid rgba(100, 122, 145, .7);
+  outline-offset: 5px;
+}
+.portal-card--tourism:hover { border-color: rgba(102,135,124,.45); }
+.portal-card--government:hover { border-color: rgba(100,122,145,.48); }
+
+.portal-card__image-wrap {
+  position: relative;
+  height: clamp(12.5rem, 27vh, 18.5rem);
+  overflow: hidden;
+  background: #dce5e7;
+}
+.portal-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .95s cubic-bezier(.2,.75,.25,1), filter .6s ease;
+}
+.portal-card:hover .portal-card__image {
+  transform: scale(1.075);
+  filter: saturate(1.06);
+}
+.portal-card__image-wrap::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(20,34,45,.18), transparent 42%, rgba(20,34,45,.1));
+  content: "";
+  pointer-events: none;
+}
+.portal-card__number {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  left: 1.1rem;
+  color: white;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-shadow: 0 1px 8px rgba(0,0,0,.25);
+}
+.portal-card__icon {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  width: 2.55rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.52);
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+.portal-card__icon svg { width: 1.3rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+.portal-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+}
+.portal-card__category {
+  font-size: .61rem;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+.portal-card--tourism .portal-card__category,
+.portal-card--tourism .portal-card__action { color: var(--portal-green); }
+.portal-card--government .portal-card__category,
+.portal-card--government .portal-card__action { color: var(--portal-blue); }
+.portal-card__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: .65rem;
+}
+.portal-card__heading h2 {
+  margin: 0;
+  color: var(--portal-ink);
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+.portal-card__arrow {
+  display: grid;
+  width: 2.2rem;
+  aspect-ratio: 1;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(99,119,137,.2);
+  border-radius: 50%;
+  color: #607789;
+  font-size: 1.15rem;
+  transition: transform .35s ease, background .35s ease, color .35s ease;
+}
+.portal-card:hover .portal-card__arrow { transform: translate(3px,-3px); background: var(--portal-ink); color: white; }
+.portal-card__body > p {
+  margin: .45rem 0 1.15rem;
+  color: #74818a;
+  font-size: .83rem;
+  line-height: 1.6;
+}
+.portal-card__action {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin-top: auto;
+  font-size: .76rem;
+  font-weight: 700;
+}
+.portal-card__action span { transition: transform .3s ease; }
+.portal-card:hover .portal-card__action span { transform: translateX(5px); }
+
+.portal-footer {
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  padding-top: 1.1rem;
+  color: #8a98a1;
+  font-size: .59rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-align: center;
+  animation: portal-footer-in .8s .55s both;
+}
+
+/* Pantalla provisional de Gobierno */
+.government-message {
+  display: flex;
+  width: min(100%, 42rem);
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: center;
+  animation: portal-intro-in .8s .12s both;
+}
+.government-message__symbol {
+  display: grid;
+  width: 5.25rem;
+  aspect-ratio: 1;
+  margin-bottom: 1.8rem;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.9);
+  border-radius: 1.5rem;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 1rem 2.5rem rgba(52,70,87,.09);
+  color: var(--portal-blue);
+}
+.government-message__symbol svg { width: 2.5rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.government-message h1 { margin-top: .8rem; }
+.government-status {
+  margin-top: 1.7rem;
+  padding: .6rem 1rem;
+  border: 1px solid rgba(100,122,145,.2);
+  border-radius: 999px;
+  background: rgba(255,255,255,.5);
+  color: #5f7890;
+  font-size: .72rem;
+  font-weight: 700;
+}
+.government-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  margin-top: 2rem;
+  color: var(--portal-ink);
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.government-back span { transition: transform .3s ease; }
+.government-back:hover span { transform: translateX(5px); }
+
+@keyframes portal-header-in {
+  from { opacity: 0; transform: translateY(-14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes portal-intro-in {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes portal-card-in {
+  from { opacity: 0; transform: translateY(2.2rem) scale(.965); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes portal-footer-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 680px) {
+  .portal-page { min-height: 100svh; padding-inline: 1.1rem; }
+  .portal-main { padding: 3.5rem 0 2.7rem; }
+  .portal-intro { margin-bottom: 1.8rem; }
+  .portal-cards { grid-template-columns: 1fr; gap: 1rem; }
+  .portal-card__image-wrap { height: clamp(10.5rem, 32vh, 14.5rem); }
+  .portal-card__body { padding: 1.15rem 1.25rem 1.3rem; }
+  .portal-card__body > p { margin-bottom: .9rem; }
+  .portal-footer { padding-top: .4rem; font-size: .52rem; }
+  .portal-card:hover { transform: translateY(-.25rem); }
+}
+
+@media (max-width: 380px) {
+  .portal-card__image-wrap { height: 10rem; }
+  .portal-intro h1 { font-size: 1.9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portal-page *,
+  .portal-page *::before,
+  .portal-page *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .portal-card { opacity: 1; transform: none; }
+}
