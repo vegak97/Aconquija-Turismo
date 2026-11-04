@@ -31,9 +31,9 @@ export default function TunelesRioPotreroHero() {
       <div className="lugar-hero-img tuneles-hero-img" aria-hidden="true" />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link>
+          <Link to="/turismo">Inicio</Link>
           <span aria-hidden="true">›</span>
-          <Link to="/#explorar">Explorar</Link>
+          <Link to="/turismo#explorar">Explorar</Link>
           <span aria-hidden="true">›</span>
           <span aria-current="page">Patrimonio Industrial</span>
         </nav>
