@@ -10,7 +10,7 @@
   min-height: 100svh;
   flex-direction: column;
   overflow: hidden;
-  padding: clamp(.9rem, 2.4vh, 2rem) clamp(1.25rem, 6vw, 6rem) .8rem;
+  padding: clamp(.75rem, 1.8vh, 1.4rem) clamp(1rem, 3vw, 3rem) .7rem;
   color: var(--portal-ink);
   background:
     radial-gradient(ellipse at 13% 17%, rgba(194, 215, 221, .48), transparent 34%),
@@ -41,8 +41,8 @@
   position: relative;
   z-index: 1;
   display: flex;
-  width: min(100%, 1160px);
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   align-items: center;
   animation: portal-header-in 1.15s cubic-bezier(.22,.61,.36,1) both;
 }
@@ -88,22 +88,22 @@
   padding: clamp(1rem, 3vh, 2.5rem) 0 clamp(.8rem, 2vh, 1.5rem);
 }
 .portal-intro {
-  margin: 0 auto clamp(1.2rem, 3vh, 2.2rem);
+  margin: 0 auto clamp(.8rem, 2vh, 1.5rem);
   text-align: center;
   animation: portal-intro-in 1.25s .18s cubic-bezier(.22,.61,.36,1) both;
 }
 .portal-eyebrow {
   display: inline-block;
   color: #778994;
-  font-size: .67rem;
+  font-size: .6rem;
   font-weight: 700;
   letter-spacing: .24em;
 }
 .portal-intro h1,
 .government-message h1 {
-  margin: .8rem 0 .65rem;
+  margin: .5rem 0 .4rem;
   color: var(--portal-ink);
-  font-size: clamp(2.05rem, 4.2vw, 3.45rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.85rem);
   font-weight: 600;
   letter-spacing: -.055em;
   line-height: 1.1;
@@ -113,8 +113,8 @@
   max-width: 39rem;
   margin: 0 auto;
   color: #71808a;
-  font-size: clamp(.88rem, 1.25vw, 1rem);
-  line-height: 1.75;
+  font-size: clamp(.8rem, 1.05vw, .92rem);
+  line-height: 1.5;
 }
 
 .portal-cards {
@@ -158,7 +158,7 @@
 
 .portal-card__image-wrap {
   position: relative;
-  height: clamp(11rem, 27vh, 19rem);
+  height: clamp(13rem, 31vh, 22rem);
   overflow: hidden;
   background: #dce5e7;
 }
@@ -271,7 +271,7 @@
   margin: 0 auto;
   padding-top: .45rem;
   background: transparent;
-  color: #8a98a1;
+  color: #647a91;
   font-size: .59rem;
   font-weight: 600;
   letter-spacing: .2em;
@@ -349,14 +349,14 @@
 @media (max-width: 680px) {
   .portal-page {
     min-height: 100svh;
-    padding: .8rem 1.1rem .65rem;
+    padding: .65rem 1rem .55rem;
   }
-  .portal-main { padding: .9rem 0 .7rem; }
-  .portal-intro { margin-bottom: 1rem; }
-  .portal-intro h1 { margin: .55rem 0 .4rem; }
-  .portal-intro p { line-height: 1.5; }
+  .portal-main { padding: .7rem 0 .55rem; }
+  .portal-intro { margin-bottom: .8rem; }
+  .portal-intro h1 { margin: .4rem 0 .3rem; font-size: clamp(1.65rem, 7vw, 2.1rem); }
+  .portal-intro p { font-size: .78rem; line-height: 1.4; }
   .portal-cards { grid-template-columns: 1fr; gap: .75rem; }
-  .portal-card__image-wrap { height: clamp(7.5rem, 18svh, 9.5rem); }
+  .portal-card__image-wrap { height: clamp(8rem, 19svh, 10rem); }
   .portal-card__body { padding: .8rem 1rem .9rem; }
   .portal-card__heading { margin-top: .35rem; }
   .portal-card__body > p { margin: .25rem 0 .6rem; }
@@ -380,7 +380,7 @@
   .portal-page { padding-top: .55rem; padding-bottom: .45rem; }
   .portal-main { padding-top: .55rem; padding-bottom: .45rem; }
   .portal-intro { margin-bottom: .65rem; }
-  .portal-card__image-wrap { height: clamp(6.5rem, 15svh, 8rem); }
+  .portal-card__image-wrap { height: clamp(7rem, 16svh, 8.5rem); }
   .portal-card__body { padding-top: .65rem; padding-bottom: .7rem; }
 }
 
