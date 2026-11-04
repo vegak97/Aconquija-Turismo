@@ -8,7 +8,7 @@ function Footer() {
       <div className="container">
         <div className="foot-top">
           <div className="foot-brand">
-            <Link to="/" className="logo" aria-label="Volver al inicio"><img src={logoFooter} alt="Aconquija Turismo" /></Link>
+            <Link to="/turismo" className="logo" aria-label="Volver al inicio de Turismo"><img src={logoFooter} alt="Aconquija Turismo" /></Link>
             <p>Ente de Turismo de Aconquija, Catamarca. A los pies de los Nevados, naturaleza que inspira.</p>
           </div>
           <div className="foot-cols">
