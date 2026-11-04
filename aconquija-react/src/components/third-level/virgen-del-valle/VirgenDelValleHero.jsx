@@ -16,8 +16,8 @@ export default function VirgenDelValleHero() {
       <div className="lugar-hero-img virgen-del-valle-hero-img" style={{ backgroundImage: `url("${heroImage}")` }} aria-hidden="true" />
       <div className="lugar-hero-content">
         <nav className="breadcrumb" aria-label="Ruta de navegación">
-          <Link to="/">Inicio</Link><span aria-hidden="true">›</span>
-          <Link to="/#explorar">Explorar</Link><span aria-hidden="true">›</span>
+          <Link to="/turismo">Inicio</Link><span aria-hidden="true">›</span>
+          <Link to="/turismo#explorar">Explorar</Link><span aria-hidden="true">›</span>
           <span aria-current="page">Miradores y Trekking</span>
         </nav>
         <div className="lugar-tags">{tags.map(tag => <span className="lugar-tag" key={tag}>{tag}</span>)}</div>
