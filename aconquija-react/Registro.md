@@ -2022,3 +2022,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se añadió al menú principal de Aconquija Turismo un enlace visible «Portal institucional» que conduce a la ruta `/`. El acceso utiliza un estilo de botón delineado en arena/dorado, incluye un icono de retorno, cierra el menú móvil al seleccionarlo y mantiene visible la opción dentro del menú lateral en teléfonos.
 - **Motivo y autorización:** petición directa del usuario para incorporar un botón que permita volver desde Aconquija Turismo al portal institucional.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente comprobar la presentación en escritorio y móvil.
+
+
+### 2026-11-05T16:02:29-03:00 — Integrar transición cinematográfica en rama de prueba
+
+- **Rama:** `test/integracion-transicion-turismo` (creada desde el estado actual de `main`; no se modifica ni fusiona `main`).
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/utils/enterTourismTransition.js` (nuevo); `Registro.md`.
+- **Cambio concreto:** se sustituyó únicamente el controlador de navegación de la tarjeta Turismo por la implementación de Claud basada en una capa temporal creada directamente en `document.body`. La capa clona el contenedor visual de la imagen, conserva las clases de tema y los estilos calculados de la fotografía, se expande hasta cubrir la ventana, navega a `/turismo` y luego se desvanece. Se mantienen los clics modificados como enlaces normales, el fallback cuando no puede animarse y el tratamiento de movimiento reducido. Se parte de `main`, por lo que se conserva el botón «Portal institucional» agregado al `Header.jsx`.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-05 para integrar la propuesta de Claud en el proyecto y evaluar su funcionamiento y los ajustes necesarios.
+- **Resultado:** integración aislada en la rama de prueba. No se modificaron estilos globales ni componentes de Turismo. Revisión estática inicial realizada; lint, compilación y pruebas visuales reales quedan pendientes. No se abrió PR ni se fusionó con `main`.
