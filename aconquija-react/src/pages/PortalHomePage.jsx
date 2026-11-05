@@ -102,7 +102,7 @@ function PortalHomePage() {
     const imageWrap = card.querySelector('.portal-card__image-wrap')
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    if (!imageWrap || reduceMotion || typeof imageWrap.animate !== 'function') return
+    if (!imageWrap || typeof imageWrap.animate !== 'function') return
 
     event.preventDefault()
 
@@ -113,11 +113,13 @@ function PortalHomePage() {
     // Evita que el backdrop-filter y la perspectiva de los padres
     // conviertan el fixed en una posición relativa a la tarjeta.
     card.style.animation = 'none'
+    card.style.transition = 'none'
     card.style.transform = 'none'
     card.style.backdropFilter = 'none'
     card.style.webkitBackdropFilter = 'none'
     card.style.overflow = 'visible'
     if (card.parentElement) card.parentElement.style.perspective = 'none'
+    imageWrap.style.transition = 'none'
     imageWrap.style.position = 'fixed'
     imageWrap.style.left = imageRect.left + 'px'
     imageWrap.style.top = imageRect.top + 'px'
@@ -147,7 +149,7 @@ function PortalHomePage() {
         },
       ],
       {
-        duration: 920,
+        duration: reduceMotion ? 420 : 920,
         easing: 'cubic-bezier(.2,.78,.18,1)',
         fill: 'forwards',
       },
