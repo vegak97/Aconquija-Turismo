@@ -1999,3 +1999,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** la tarjeta de Turismo ahora anima su propio nodo .portal-card__image-wrap mediante Web Animations API. El contenedor original pasa temporalmente a posición fija y se expande hasta cubrir la ventana; al terminar se navega a /turismo. No se genera una imagen duplicada, no se usa View Transitions y no se reubica el nodo fuera de React. Los clics modificados, la preferencia de movimiento reducido y los navegadores sin soporte de Element.animate() conservan la navegación normal.
 - **Motivo y autorización:** petición directa del usuario para volver a intentar la transición de entrada a Turismo con la misma imagen original.
 - **Resultado:** cambios guardados en main. Se realizó revisión estática de imports, controlador y enlace; no se ejecutaron lint, build ni pruebas visuales en navegador. La transición queda pendiente de comprobación en la copia local.
+
+
+### 2026-11-05 — Corregir origen de expansión de la tarjeta de Turismo
+
+- **Archivos afectados:** src/pages/PortalHomePage.jsx; Registro.md.
+- **Cambio concreto:** antes de animar el contenedor original de imagen, se desactiva la animación de entrada y el contexto de apilado/posicionamiento generado por el desenfoque de la tarjeta; también se neutraliza la perspectiva del contenedor de tarjetas. Esto permite que el elemento con posición fija tome como referencia la ventana y no el bloque padre, evitando que el crecimiento se desplace hacia abajo.
+- **Motivo y autorización:** el usuario informó que la transición ya funciona, pero la expansión se produce desplazada hacia la parte inferior; se ajusta el contexto de posicionamiento que causaba el desplazamiento.
+- **Resultado:** cambio guardado en main y revisado estáticamente. No se ejecutaron lint, build ni pruebas visuales en navegador; falta confirmar el encuadre en la copia local.
