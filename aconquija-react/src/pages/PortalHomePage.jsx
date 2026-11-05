@@ -110,8 +110,14 @@ function PortalHomePage() {
     const startRadius = window.getComputedStyle(card).borderRadius
 
     // Se anima el propio contenedor original sin duplicar ni reubicar el nodo.
+    // Evita que el backdrop-filter y la perspectiva de los padres
+    // conviertan el fixed en una posición relativa a la tarjeta.
+    card.style.animation = 'none'
     card.style.transform = 'none'
+    card.style.backdropFilter = 'none'
+    card.style.webkitBackdropFilter = 'none'
     card.style.overflow = 'visible'
+    if (card.parentElement) card.parentElement.style.perspective = 'none'
     imageWrap.style.position = 'fixed'
     imageWrap.style.left = imageRect.left + 'px'
     imageWrap.style.top = imageRect.top + 'px'
