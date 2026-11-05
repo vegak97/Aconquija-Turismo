@@ -482,3 +482,95 @@
     font-size: .66rem;
   }
 }
+
+
+/* Clima propio del portal: glifos geométricos, distintos a los de Turismo */
+.portal-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(.55rem, 1.4vw, 1rem);
+}
+.portal-weather {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  min-height: 2.8rem;
+  padding: .35rem .85rem .35rem .45rem;
+  border: 1px solid rgba(41, 61, 80, .13);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, .38);
+  color: var(--portal-ink);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.portal-weather__mark {
+  display: grid;
+  width: 2.2rem;
+  height: 2.2rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: .75rem;
+  background: rgba(102, 135, 124, .12);
+  color: var(--portal-green);
+}
+.portal-weather__mark svg { display: block; width: 1.85rem; height: 1.85rem; }
+.portal-weather__details {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+}
+.portal-weather__place {
+  color: var(--portal-muted);
+  font-size: .5rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+}
+.portal-weather__reading {
+  display: flex;
+  align-items: baseline;
+  gap: .4rem;
+  white-space: nowrap;
+}
+.portal-weather__reading strong {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+.portal-weather__reading > span {
+  color: var(--portal-muted);
+  font-size: .62rem;
+}
+.portal-page--dark .portal-weather {
+  border-color: rgba(220, 232, 237, .14);
+  background: rgba(230, 239, 242, .07);
+  color: var(--portal-ink);
+}
+.portal-page--dark .portal-weather__mark {
+  background: rgba(165, 200, 184, .12);
+  color: #b7d5c7;
+}
+.portal-page--dark .portal-weather__place,
+.portal-page--dark .portal-weather__reading > span {
+  color: #b5c2c9;
+}
+
+@media (max-width: 680px) {
+  .portal-header__actions { gap: .4rem; }
+  .portal-weather {
+    gap: .4rem;
+    min-height: 2.45rem;
+    padding: .25rem .55rem .25rem .3rem;
+    border-radius: .85rem;
+  }
+  .portal-weather__mark { width: 1.85rem; height: 1.85rem; border-radius: .6rem; }
+  .portal-weather__mark svg { width: 1.55rem; height: 1.55rem; }
+  .portal-weather__place { font-size: .43rem; }
+  .portal-weather__reading strong { font-size: .88rem; }
+  .portal-weather__reading > span { font-size: .54rem; }
+}
+@media (max-width: 420px) {
+  .portal-header__actions { gap: .3rem; }
+  .portal-weather__reading > span { display: none; }
+  .portal-weather { padding-right: .45rem; }
+}
