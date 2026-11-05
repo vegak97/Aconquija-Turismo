@@ -1969,3 +1969,9 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario aclaró que no quiere una copia de la fotografía, sino que la misma imagen de la tarjeta se agrande al entrar a Turismo.
 - **Resultado:** implementación guardada en la rama `main` y revisada estáticamente. La transición requiere un navegador compatible con View Transitions; en caso contrario, la navegación funciona sin animación. No se ejecutaron lint, compilación ni pruebas visuales.
 
+### 2026-11-05 — Revertir la transición nativa que afectó la portada
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se revirtió únicamente la implementación basada en View Transitions y se restauró el código anterior de la transición de zoom, que no utilizaba esa API. Se recuperó el controlador anterior y su estructura visual previa.
+- **Motivo y autorización:** el usuario informó que la página se rompió tras el último cambio; se revierte para recuperar el estado funcional anterior sin modificar otras secciones.
+- **Resultado:** archivos restaurados en la rama `main`. No se ejecutaron build, lint ni pruebas visuales; se debe recargar la aplicación para comprobar la recuperación.
