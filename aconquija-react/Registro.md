@@ -1940,3 +1940,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se reemplazó la distribución móvil en dos filas por una sola línea. Se redujeron el escudo, la tipografía de la marca, el icono y los textos del clima, los espacios y el botón de tema. En teléfonos de hasta 420 px se oculta la ubicación del clima y su descripción, conservando el icono y la temperatura.
 - **Motivo y autorización:** el usuario prefirió compactar el clima para que la marca, el clima y el modo oscuro entren juntos en la parte superior.
 - **Resultado:** ajuste guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni prueba visual en navegador móvil.
+
+### 2026-11-04T23:42:00-03:00 — Establecer el modo oscuro como tema inicial del portal
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** el portal institucional ahora inicia en modo oscuro. El control de la cabecera conserva la posibilidad de cambiar manualmente al modo claro y volver al oscuro. No se incorporó persistencia de preferencias ni se modificó el tema de Turismo o Gobierno.
+- **Motivo y autorización:** el usuario indicó que prefiere el modo oscuro como presentación inicial y pidió mantener disponible el modo claro.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
