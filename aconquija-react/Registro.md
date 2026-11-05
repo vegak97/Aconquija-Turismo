@@ -1918,3 +1918,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se añadió un control accesible para alternar entre modo claro y oscuro en la portada institucional (`/`). El tema oscuro utiliza una paleta azul pizarra con matices verdes y azulados, y adapta el fondo, las tarjetas, los textos y los controles. El estado se limita al componente de la portada: no modifica la pantalla de Gobierno ni las páginas de Turismo.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-04 — Añadir información meteorológica propia a la portada institucional
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó a la cabecera de la portada un indicador del clima actual de Aconquija, consultado a Open-Meteo y actualizado cada 15 minutos. Se diseñó un conjunto de glifos SVG geométricos exclusivo del portal, sin reutilizar los iconos meteorológicos de Turismo. El indicador adapta sus colores al modo claro/oscuro y reduce su contenido en pantallas pequeñas.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** implementación revisada estáticamente y registrada. No se ejecutaron lint, compilación ni pruebas visuales; la consulta meteorológica requiere conexión a internet en el navegador.
