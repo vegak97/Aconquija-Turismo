@@ -343,7 +343,6 @@
   .portal-card__body { padding: .8rem 1rem .9rem; }
   .portal-card__heading { margin-top: .35rem; }
   .portal-card__body > p { margin: .25rem 0 .6rem; }
-  .portal-footer { padding-top: .25rem; font-size: .5rem; }
   .portal-card:hover { transform: translateY(-.2rem); }
 }
 
