@@ -1991,3 +1991,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminó una llave de cierre sobrante que había quedado al retirar el bloque de transición a Turismo. El componente vuelve a cerrar correctamente la sección y el elemento `main`.
 - **Motivo y autorización:** corrección del error de parseo de Vite informado por el usuario tras la eliminación de la transición.
 - **Resultado:** corrección guardada en la rama `main` y revisada estáticamente en el fragmento de cierre JSX. No se ejecutó build ni pruebas locales.
+
+
+### 2026-11-05T00:31:12-03:00 — Reintentar transición con el elemento original
+
+- **Archivos afectados:** src/pages/PortalHomePage.jsx; Registro.md.
+- **Cambio concreto:** la tarjeta de Turismo ahora anima su propio nodo .portal-card__image-wrap mediante Web Animations API. El contenedor original pasa temporalmente a posición fija y se expande hasta cubrir la ventana; al terminar se navega a /turismo. No se genera una imagen duplicada, no se usa View Transitions y no se reubica el nodo fuera de React. Los clics modificados, la preferencia de movimiento reducido y los navegadores sin soporte de Element.animate() conservan la navegación normal.
+- **Motivo y autorización:** petición directa del usuario para volver a intentar la transición de entrada a Turismo con la misma imagen original.
+- **Resultado:** cambios guardados en main. Se realizó revisión estática de imports, controlador y enlace; no se ejecutaron lint, build ni pruebas visuales en navegador. La transición queda pendiente de comprobación en la copia local.
