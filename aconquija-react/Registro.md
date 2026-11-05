@@ -2015,3 +2015,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se corrigió el controlador de la tarjeta de Turismo para que la preferencia `prefers-reduced-motion` ya no suprima por completo la transición: en ese caso utiliza una duración reducida de 420 ms, mientras que el recorrido normal conserva 920 ms. También se desactivó la transición CSS de la tarjeta y del contenedor de imagen durante la expansión para evitar que compita con la animación de Web Animations API. Se mantiene el mismo nodo original de imagen, sin duplicarlo ni reubicarlo.
 - **Motivo y autorización:** el usuario informó que la animación había dejado de ejecutarse y pidió corregirla.
 - **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni pruebas visuales en navegador; queda pendiente la comprobación en la copia local.
+
+### 2026-11-05T01:28:50-03:00 — Añadir retorno al portal institucional desde Turismo
+
+- **Archivos afectados:** `src/components/layout/Header.jsx`; `src/styles/layout.css`; `Registro.md`.
+- **Cambio concreto:** se añadió al menú principal de Aconquija Turismo un enlace visible «Portal institucional» que conduce a la ruta `/`. El acceso utiliza un estilo de botón delineado en arena/dorado, incluye un icono de retorno, cierra el menú móvil al seleccionarlo y mantiene visible la opción dentro del menú lateral en teléfonos.
+- **Motivo y autorización:** petición directa del usuario para incorporar un botón que permita volver desde Aconquija Turismo al portal institucional.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente comprobar la presentación en escritorio y móvil.
