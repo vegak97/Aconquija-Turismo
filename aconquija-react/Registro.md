@@ -1962,3 +1962,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** el usuario señaló que la imagen ampliada se percibía distinta de la imagen de la tarjeta y pidió pulir la continuidad visual.
 - **Resultado:** cambios aplicados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente confirmar el resultado en pantalla y ajustar si hiciera falta.
 
+### 2026-11-05 — Animar la imagen original con View Transitions
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se eliminó la imagen duplicada que se usaba como superposición. La entrada a Turismo ahora utiliza la API nativa View Transitions del navegador para capturar y expandir el propio contenedor de imagen de la tarjeta, manteniendo en la captura su fotografía, recorte, filtros, degradado y elementos superpuestos tal como se ven en pantalla. La navegación normal queda como alternativa para navegadores sin soporte y para usuarios que solicitan movimiento reducido.
+- **Motivo y autorización:** el usuario aclaró que no quiere una copia de la fotografía, sino que la misma imagen de la tarjeta se agrande al entrar a Turismo.
+- **Resultado:** implementación guardada en la rama `main` y revisada estáticamente. La transición requiere un navegador compatible con View Transitions; en caso contrario, la navegación funciona sin animación. No se ejecutaron lint, compilación ni pruebas visuales.
+
