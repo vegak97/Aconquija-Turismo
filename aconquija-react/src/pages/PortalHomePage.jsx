@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import tourismImage from '../../imagenes/fondo(1).webp'
 import municipalLogo from '../../imagenes/logo_aconquija(1).png'
 import governmentImage from '../../imagenes/linea_del_tiempo/pueblo.webp'
@@ -86,32 +86,8 @@ function PortalWeather() {
 
 function PortalHomePage() {
   const [isDark, setIsDark] = useState(true)
-  const [tourismTransition, setTourismTransition] = useState(null)
-  const transitionTimeout = useRef(null)
-  const navigate = useNavigate()
-
-  useEffect(() => () => {
-    if (transitionTimeout.current) window.clearTimeout(transitionTimeout.current)
-  }, [])
-
-  const handleTourismClick = (event) => {
-    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return
-    event.preventDefault()
-    if (tourismTransition) return
-
-    const image = event.currentTarget.querySelector('.portal-card__image-wrap')
-    const bounds = image?.getBoundingClientRect()
-    if (!bounds || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      navigate('/turismo')
-      return
-    }
-
-    setTourismTransition({ top: bounds.top, left: bounds.left, width: bounds.width, height: bounds.height })
-    transitionTimeout.current = window.setTimeout(() => navigate('/turismo'), 760)
-  }
-
   return (
-    <main className={`portal-page${isDark ? ' portal-page--dark' : ''}${tourismTransition ? ' portal-page--tourism-entering' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
+    <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
       <div className="portal-orb portal-orb--one" aria-hidden="true" />
       <div className="portal-orb portal-orb--two" aria-hidden="true" />
 
@@ -150,7 +126,7 @@ function PortalHomePage() {
         </div>
 
         <div className="portal-cards">
-          <Link to="/turismo" onClick={handleTourismClick} className="portal-card portal-card--tourism">
+          <Link to="/turismo" className="portal-card portal-card--tourism">
             <div className="portal-card__image-wrap">
               <img src={tourismImage} alt="Paisaje natural de Aconquija" className="portal-card__image" />
               <span className="portal-card__number">01</span>
@@ -190,16 +166,7 @@ function PortalHomePage() {
         </div>
       </section>
 
-      {tourismTransition && (
-        <div className="portal-tourism-transition" aria-hidden="true" style={{
-          '--transition-top': `${tourismTransition.top}px`,
-          '--transition-left': `${tourismTransition.left}px`,
-          '--transition-width': `${tourismTransition.width}px`,
-          '--transition-height': `${tourismTransition.height}px`,
-        }}>
-          <img src={tourismImage} alt="" />
-        </div>
-      )}
+}
 
     </main>
   )
