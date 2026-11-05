@@ -68,9 +68,6 @@ function PortalHomePage() {
         </div>
       </section>
 
-      <footer className="portal-footer">
-        <span>ACONQUIJA · CATAMARCA · ARGENTINA</span>
-      </footer>
     </main>
   )
 }
