@@ -85,7 +85,7 @@ function PortalWeather() {
 }
 
 function PortalHomePage() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
 
   return (
     <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
