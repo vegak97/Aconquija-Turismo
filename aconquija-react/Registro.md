@@ -2007,3 +2007,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** antes de animar el contenedor original de imagen, se desactiva la animación de entrada y el contexto de apilado/posicionamiento generado por el desenfoque de la tarjeta; también se neutraliza la perspectiva del contenedor de tarjetas. Esto permite que el elemento con posición fija tome como referencia la ventana y no el bloque padre, evitando que el crecimiento se desplace hacia abajo.
 - **Motivo y autorización:** el usuario informó que la transición ya funciona, pero la expansión se produce desplazada hacia la parte inferior; se ajusta el contexto de posicionamiento que causaba el desplazamiento.
 - **Resultado:** cambio guardado en main y revisado estáticamente. No se ejecutaron lint, build ni pruebas visuales en navegador; falta confirmar el encuadre en la copia local.
+
+
+### 2026-11-05 — Recuperar la animación de entrada a Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** se corrigió el controlador de la tarjeta de Turismo para que la preferencia `prefers-reduced-motion` ya no suprima por completo la transición: en ese caso utiliza una duración reducida de 420 ms, mientras que el recorrido normal conserva 920 ms. También se desactivó la transición CSS de la tarjeta y del contenedor de imagen durante la expansión para evitar que compita con la animación de Web Animations API. Se mantiene el mismo nodo original de imagen, sin duplicarlo ni reubicarlo.
+- **Motivo y autorización:** el usuario informó que la animación había dejado de ejecutarse y pidió corregirla.
+- **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni pruebas visuales en navegador; queda pendiente la comprobación en la copia local.
