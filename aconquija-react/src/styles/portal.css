@@ -654,63 +654,31 @@
 }
 
 
-/* Transición nativa: el navegador anima la captura del mismo elemento original */
-.portal-card__image-wrap--tourism {
-  view-transition-name: portal-tourism-image;
+/* Transición de entrada a Turismo: la imagen de la tarjeta se expande a pantalla completa */
+.portal-page--tourism-entering .portal-header,
+.portal-page--tourism-entering .portal-main {
+  opacity: 0;
+  transition: opacity .42s ease;
 }
-
-::view-transition-group(portal-tourism-image) {
+.portal-tourism-transition {
+  position: fixed;
+  z-index: 10000;
+  top: var(--transition-top);
+  left: var(--transition-left);
+  width: var(--transition-width);
+  height: var(--transition-height);
   overflow: hidden;
-  border-radius: 1.35rem 1.35rem 0 0;
-  animation: portal-tourism-image-expand .9s cubic-bezier(.65, .02, .18, 1) both;
+  border-radius: 1rem;
+  pointer-events: none;
+  animation: portal-tourism-image-expand .76s cubic-bezier(.72, 0, .22, 1) forwards;
 }
-
-::view-transition-old(portal-tourism-image),
-::view-transition-new(portal-tourism-image) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: none;
-}
-
+.portal-tourism-transition img { display: block; width: 100%; height: 100%; object-fit: cover; }
 @keyframes portal-tourism-image-expand {
-  from {
-    top: var(--tourism-transition-top);
-    left: var(--tourism-transition-left);
-    width: var(--tourism-transition-width);
-    height: var(--tourism-transition-height);
-    border-radius: 1.35rem 1.35rem 0 0;
-  }
-  to {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-  }
+  0% { top: var(--transition-top); left: var(--transition-left); width: var(--transition-width); height: var(--transition-height); border-radius: 1rem; }
+  100% { top: 0; left: 0; width: 100vw; height: 100vh; border-radius: 0; }
 }
-
-::view-transition-old(root) {
-  animation: portal-root-fade-out .35s ease both;
-}
-
-::view-transition-new(root) {
-  animation: portal-root-fade-in .45s ease both;
-}
-
-@keyframes portal-root-fade-out {
-  to { opacity: 0; }
-}
-
-@keyframes portal-root-fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  ::view-transition-group(portal-tourism-image),
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
-  }
+  .portal-page--tourism-entering .portal-header,
+  .portal-page--tourism-entering .portal-main { opacity: 1; transition: none; }
+  .portal-tourism-transition { animation: none; }
 }
