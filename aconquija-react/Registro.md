@@ -1947,3 +1947,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** el portal institucional ahora inicia en modo oscuro. El control de la cabecera conserva la posibilidad de cambiar manualmente al modo claro y volver al oscuro. No se incorporó persistencia de preferencias ni se modificó el tema de Turismo o Gobierno.
 - **Motivo y autorización:** el usuario indicó que prefiere el modo oscuro como presentación inicial y pidió mantener disponible el modo claro.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-04T23:45:00-03:00 — Animar la entrada desde la tarjeta de Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** al seleccionar la tarjeta de Turismo, se toma la posición y el tamaño de su imagen y se anima una copia visual que se expande hasta cubrir la pantalla; al finalizar, se navega a `/turismo`. Se conserva el comportamiento de abrir el enlace en otra pestaña con Ctrl/Cmd o clic modificado. Si el dispositivo solicita movimiento reducido, se navega sin la animación.
+- **Motivo y autorización:** petición directa del usuario para que la imagen de la tarjeta de Turismo se agrande como transición antes de entrar a la página.
+- **Resultado:** implementación guardada en la rama `main` y revisada estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; la fluidez y el encuadre final quedan pendientes de comprobación visual.
