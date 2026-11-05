@@ -574,3 +574,19 @@
   .portal-weather__reading > span { display: none; }
   .portal-weather { padding-right: .45rem; }
 }
+
+/* Reorganizar la cabecera en móviles para evitar cruces entre marca y controles */
+@media (max-width: 680px) {
+  .portal-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .65rem;
+  }
+  .portal-wordmark {
+    align-self: flex-start;
+  }
+  .portal-header__actions {
+    align-self: flex-end;
+    width: 100%;
+  }
+}
