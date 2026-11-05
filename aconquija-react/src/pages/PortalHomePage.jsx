@@ -99,15 +99,30 @@ function PortalHomePage() {
     event.preventDefault()
     if (tourismTransition) return
 
-    const image = event.currentTarget.querySelector('.portal-card__image-wrap')
-    const bounds = image?.getBoundingClientRect()
-    if (!bounds || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const imageWrap = event.currentTarget.querySelector('.portal-card__image-wrap')
+    const imageElement = imageWrap?.querySelector('.portal-card__image')
+    const bounds = imageWrap?.getBoundingClientRect()
+    if (!bounds || !imageElement || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       navigate('/turismo')
       return
     }
 
-    setTourismTransition({ top: bounds.top, left: bounds.left, width: bounds.width, height: bounds.height })
-    transitionTimeout.current = window.setTimeout(() => navigate('/turismo'), 760)
+    // Copiar el tratamiento visual real del elemento para que el zoom no cambie de aspecto.
+    const imageStyle = window.getComputedStyle(imageElement)
+    const overlayStyle = window.getComputedStyle(imageWrap, '::after')
+    setTourismTransition({
+      top: bounds.top,
+      left: bounds.left,
+      width: bounds.width,
+      height: bounds.height,
+      imageFilter: imageStyle.filter,
+      imageTransform: imageStyle.transform,
+      imageTransformOrigin: imageStyle.transformOrigin,
+      imageObjectPosition: imageStyle.objectPosition,
+      overlayBackground: overlayStyle.backgroundImage,
+      overlayOpacity: overlayStyle.opacity,
+    })
+    transitionTimeout.current = window.setTimeout(() => navigate('/turismo'), 900)
   }
 
   return (
@@ -197,7 +212,23 @@ function PortalHomePage() {
           '--transition-width': `${tourismTransition.width}px`,
           '--transition-height': `${tourismTransition.height}px`,
         }}>
-          <img src={tourismImage} alt="" />
+          <img
+            src={tourismImage}
+            alt=""
+            style={{
+              filter: tourismTransition.imageFilter,
+              transform: tourismTransition.imageTransform,
+              transformOrigin: tourismTransition.imageTransformOrigin,
+              objectPosition: tourismTransition.imageObjectPosition,
+            }}
+          />
+          <span
+            className="portal-tourism-transition__overlay"
+            style={{
+              backgroundImage: tourismTransition.overlayBackground,
+              opacity: tourismTransition.overlayOpacity,
+            }}
+          />
         </div>
       )}
 
