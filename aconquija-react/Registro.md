@@ -1888,3 +1888,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se aumentó un poco más la altura de las imágenes de las tarjetas en escritorio y se amplió moderadamente en móvil y en pantallas de poca altura. El pie «ACONQUIJA · CATAMARCA · ARGENTINA» conserva el fondo transparente y ahora utiliza exactamente el color de tinta del título principal (`var(--portal-ink)`), en lugar del tono azul pizarra anterior.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** estilos actualizados en la rama `main`. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-04T22:37:00 -03:00 — Eliminar el pie institucional y ampliar las tarjetas
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se eliminó por completo del marcado el pie «ACONQUIJA · CATAMARCA · ARGENTINA» y se retiraron sus estilos y animación asociados. Se aumentó nuevamente la altura de las imágenes de las tarjetas en escritorio, móvil y pantallas de poca altura, aprovechando el espacio liberado.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
