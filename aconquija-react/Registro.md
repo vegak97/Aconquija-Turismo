@@ -1933,3 +1933,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** en pantallas de hasta 680 px, la cabecera pasa a organizarse en dos niveles: la marca institucional queda arriba a la izquierda y los controles de clima y modo oscuro se ubican en una segunda fila alineada a la derecha. Se conserva sin cambios la distribución de escritorio.
 - **Motivo y autorización:** corregir la colisión visual señalada por el usuario en la portada institucional para teléfonos; petición directa del usuario.
 - **Resultado:** estilos actualizados en la rama `main`. Revisión estática del ajuste CSS; no se ejecutaron lint, compilación ni prueba visual en un dispositivo o navegador móvil.
+
+### 2026-11-04 — Compactar clima y controles para mantener la cabecera en una fila móvil
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se reemplazó la distribución móvil en dos filas por una sola línea. Se redujeron el escudo, la tipografía de la marca, el icono y los textos del clima, los espacios y el botón de tema. En teléfonos de hasta 420 px se oculta la ubicación del clima y su descripción, conservando el icono y la temperatura.
+- **Motivo y autorización:** el usuario prefirió compactar el clima para que la marca, el clima y el modo oscuro entren juntos en la parte superior.
+- **Resultado:** ajuste guardado en `main` y revisado estáticamente. No se ejecutaron lint, build ni prueba visual en navegador móvil.
