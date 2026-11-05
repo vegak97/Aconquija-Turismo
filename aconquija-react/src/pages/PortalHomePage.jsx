@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import tourismImage from '../../imagenes/fondo(1).webp'
 import municipalLogo from '../../imagenes/logo_aconquija(1).png'
 import governmentImage from '../../imagenes/linea_del_tiempo/pueblo.webp'
@@ -86,6 +86,71 @@ function PortalWeather() {
 
 function PortalHomePage() {
   const [isDark, setIsDark] = useState(true)
+  const navigate = useNavigate()
+
+  const handleTourismNavigation = (event) => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    ) return
+
+    const card = event.currentTarget
+    const imageWrap = card.querySelector('.portal-card__image-wrap')
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (!imageWrap || reduceMotion || typeof imageWrap.animate !== 'function') return
+
+    event.preventDefault()
+
+    const imageRect = imageWrap.getBoundingClientRect()
+    const startRadius = window.getComputedStyle(card).borderRadius
+
+    // Se anima el propio contenedor original sin duplicar ni reubicar el nodo.
+    card.style.transform = 'none'
+    card.style.overflow = 'visible'
+    imageWrap.style.position = 'fixed'
+    imageWrap.style.left = imageRect.left + 'px'
+    imageWrap.style.top = imageRect.top + 'px'
+    imageWrap.style.width = imageRect.width + 'px'
+    imageWrap.style.height = imageRect.height + 'px'
+    imageWrap.style.margin = '0'
+    imageWrap.style.zIndex = '9999'
+    imageWrap.style.borderRadius = startRadius
+    imageWrap.style.overflow = 'hidden'
+    imageWrap.style.pointerEvents = 'none'
+
+    const expansion = imageWrap.animate(
+      [
+        {
+          left: imageRect.left + 'px',
+          top: imageRect.top + 'px',
+          width: imageRect.width + 'px',
+          height: imageRect.height + 'px',
+          borderRadius: startRadius,
+        },
+        {
+          left: '0px',
+          top: '0px',
+          width: window.innerWidth + 'px',
+          height: window.innerHeight + 'px',
+          borderRadius: '0px',
+        },
+      ],
+      {
+        duration: 920,
+        easing: 'cubic-bezier(.2,.78,.18,1)',
+        fill: 'forwards',
+      },
+    )
+
+    expansion.finished
+      .catch(() => {})
+      .then(() => navigate('/turismo'))
+  }
   return (
     <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
       <div className="portal-orb portal-orb--one" aria-hidden="true" />
@@ -126,7 +191,7 @@ function PortalHomePage() {
         </div>
 
         <div className="portal-cards">
-          <Link to="/turismo" className="portal-card portal-card--tourism">
+          <Link to="/turismo" onClick={handleTourismNavigation} className="portal-card portal-card--tourism">
             <div className="portal-card__image-wrap">
               <img src={tourismImage} alt="Paisaje natural de Aconquija" className="portal-card__image" />
               <span className="portal-card__number">01</span>
