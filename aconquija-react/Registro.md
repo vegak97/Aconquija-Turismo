@@ -1983,3 +1983,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminó el controlador, el estado y la superposición usados para animar la imagen de la tarjeta de Turismo. La tarjeta vuelve a navegar directamente a `/turismo`. También se retiraron los estilos y la animación asociados. Se conservaron el modo oscuro inicial, el clima, la cabecera móvil y el resto del diseño del portal.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-05 para borrar el trabajo de la transición y continuar con otra tarea.
 - **Resultado:** cambios guardados en la rama `main`. Se revisó estáticamente que no queden referencias al controlador ni a la superposición de la transición. No se ejecutaron build, lint ni pruebas visuales.
+
+
+### 2026-11-05 — Corregir cierre JSX de la portada institucional
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminó una llave de cierre sobrante que había quedado al retirar el bloque de transición a Turismo. El componente vuelve a cerrar correctamente la sección y el elemento `main`.
+- **Motivo y autorización:** corrección del error de parseo de Vite informado por el usuario tras la eliminación de la transición.
+- **Resultado:** corrección guardada en la rama `main` y revisada estáticamente en el fragmento de cierre JSX. No se ejecutó build ni pruebas locales.
