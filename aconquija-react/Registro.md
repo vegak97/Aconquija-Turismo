@@ -1903,3 +1903,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se desplazó hacia arriba el bloque completo de bienvenida («BIENVENIDOS», «Aconquija, Catamarca» y su texto introductorio) mediante un ajuste de posición adaptable al alto de pantalla. No se modificaron las tarjetas ni el encabezado.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-04T15:00:00-03:00 — Dar más personalidad al degradado del portal institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se renovó el fondo de la portada con un degradado más visible, combinando matices verde salvia, azul grisáceo y un toque arena cálido sobre una base clara. Se conservaron la legibilidad, las tarjetas y la identidad institucional existente.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
