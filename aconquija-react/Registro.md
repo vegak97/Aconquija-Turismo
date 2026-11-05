@@ -1910,3 +1910,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se renovó el fondo de la portada con un degradado más visible, combinando matices verde salvia, azul grisáceo y un toque arena cálido sobre una base clara. Se conservaron la legibilidad, las tarjetas y la identidad institucional existente.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-04T15:00:00-03:00 — Incorporar modo oscuro exclusivo a la portada institucional
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se añadió un control accesible para alternar entre modo claro y oscuro en la portada institucional (`/`). El tema oscuro utiliza una paleta azul pizarra con matices verdes y azulados, y adapta el fondo, las tarjetas, los textos y los controles. El estado se limita al componente de la portada: no modifica la pantalla de Gobierno ni las páginas de Turismo.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
