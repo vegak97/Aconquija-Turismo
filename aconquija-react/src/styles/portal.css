@@ -13,9 +13,10 @@
   padding: clamp(.75rem, 1.8vh, 1.4rem) clamp(1rem, 3vw, 3rem) .7rem;
   color: var(--portal-ink);
   background:
-    radial-gradient(ellipse at 13% 17%, rgba(194, 215, 221, .48), transparent 34%),
-    radial-gradient(ellipse at 88% 78%, rgba(205, 218, 231, .54), transparent 38%),
-    linear-gradient(135deg, #eef2f4 0%, #f9fafb 48%, #e9eef2 100%);
+    radial-gradient(ellipse at 8% 12%, rgba(166, 197, 190, .52), transparent 38%),
+    radial-gradient(ellipse at 92% 18%, rgba(174, 194, 216, .58), transparent 40%),
+    radial-gradient(ellipse at 78% 92%, rgba(206, 194, 169, .42), transparent 36%),
+    linear-gradient(128deg, #e5eeeb 0%, #f5f5f1 46%, #e5ebf1 100%);
   font-family: 'Montserrat', sans-serif;
 }
 
