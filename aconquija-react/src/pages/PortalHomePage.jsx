@@ -166,8 +166,6 @@ function PortalHomePage() {
         </div>
       </section>
 
-}
-
     </main>
   )
 }
