@@ -1975,3 +1975,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se revirtió únicamente la implementación basada en View Transitions y se restauró el código anterior de la transición de zoom, que no utilizaba esa API. Se recuperó el controlador anterior y su estructura visual previa.
 - **Motivo y autorización:** el usuario informó que la página se rompió tras el último cambio; se revierte para recuperar el estado funcional anterior sin modificar otras secciones.
 - **Resultado:** archivos restaurados en la rama `main`. No se ejecutaron build, lint ni pruebas visuales; se debe recargar la aplicación para comprobar la recuperación.
+
+
+### 2026-11-05 — Retirar la transición de entrada a Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se eliminó el controlador, el estado y la superposición usados para animar la imagen de la tarjeta de Turismo. La tarjeta vuelve a navegar directamente a `/turismo`. También se retiraron los estilos y la animación asociados. Se conservaron el modo oscuro inicial, el clima, la cabecera móvil y el resto del diseño del portal.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-05 para borrar el trabajo de la transición y continuar con otra tarea.
+- **Resultado:** cambios guardados en la rama `main`. Se revisó estáticamente que no queden referencias al controlador ni a la superposición de la transición. No se ejecutaron build, lint ni pruebas visuales.
