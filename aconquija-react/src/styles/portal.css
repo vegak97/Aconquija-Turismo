@@ -652,3 +652,33 @@
   .portal-weather__reading > span { display: none; }
   .portal-theme-toggle { min-height: 2rem; padding: .3rem .4rem; font-size: .54rem; }
 }
+
+
+/* Transición de entrada a Turismo: la imagen de la tarjeta se expande a pantalla completa */
+.portal-page--tourism-entering .portal-header,
+.portal-page--tourism-entering .portal-main {
+  opacity: 0;
+  transition: opacity .42s ease;
+}
+.portal-tourism-transition {
+  position: fixed;
+  z-index: 10000;
+  top: var(--transition-top);
+  left: var(--transition-left);
+  width: var(--transition-width);
+  height: var(--transition-height);
+  overflow: hidden;
+  border-radius: 1rem;
+  pointer-events: none;
+  animation: portal-tourism-image-expand .76s cubic-bezier(.72, 0, .22, 1) forwards;
+}
+.portal-tourism-transition img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@keyframes portal-tourism-image-expand {
+  0% { top: var(--transition-top); left: var(--transition-left); width: var(--transition-width); height: var(--transition-height); border-radius: 1rem; }
+  100% { top: 0; left: 0; width: 100vw; height: 100vh; border-radius: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-page--tourism-entering .portal-header,
+  .portal-page--tourism-entering .portal-main { opacity: 1; transition: none; }
+  .portal-tourism-transition { animation: none; }
+}
