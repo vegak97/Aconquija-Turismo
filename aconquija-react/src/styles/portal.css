@@ -88,6 +88,8 @@
   padding: clamp(1rem, 3vh, 2.5rem) 0 clamp(.8rem, 2vh, 1.5rem);
 }
 .portal-intro {
+  position: relative;
+  top: calc(-1 * clamp(1rem, 2.5vh, 2rem));
   margin: 0 auto clamp(.8rem, 2vh, 1.5rem);
   text-align: center;
   animation: portal-intro-in 1.25s .18s cubic-bezier(.22,.61,.36,1) both;
