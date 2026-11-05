@@ -1896,3 +1896,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminó por completo del marcado el pie «ACONQUIJA · CATAMARCA · ARGENTINA» y se retiraron sus estilos y animación asociados. Se aumentó nuevamente la altura de las imágenes de las tarjetas en escritorio, móvil y pantallas de poca altura, aprovechando el espacio liberado.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-04T15:00:00-03:00 — Subir el bloque de bienvenida de la portada institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se desplazó hacia arriba el bloque completo de bienvenida («BIENVENIDOS», «Aconquija, Catamarca» y su texto introductorio) mediante un ajuste de posición adaptable al alto de pantalla. No se modificaron las tarjetas ni el encabezado.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-04.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
