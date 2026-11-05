@@ -102,6 +102,36 @@ header.nav .nav-mobile-social .icon-circle svg {
 }
 .pill:hover { background: var(--white); color: var(--night); }
 
+/* Acceso al portal institucional desde la navegación de Turismo */
+nav.links a.portal-return-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(205,170,120,.78);
+  border-radius: 999px;
+  color: #e4c99f;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .75px;
+  white-space: nowrap;
+  transition: background .3s ease, border-color .3s ease, color .3s ease, transform .3s ease;
+}
+nav.links a.portal-return-link::after { display: none; }
+nav.links a.portal-return-link svg { width: 15px; height: 15px; flex: 0 0 auto; }
+nav.links a.portal-return-link:hover,
+nav.links a.portal-return-link:focus-visible {
+  border-color: #cdaa78;
+  background: #cdaa78;
+  color: #1c222c;
+  transform: translateY(-1px);
+}
+nav.links a.portal-return-link:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 /* Clima actual compacto junto a las redes sociales */
 .nav-actions { display: flex; align-items: center; gap: 18px; }
 .weather-badge {
