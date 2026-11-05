@@ -1926,3 +1926,10 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se incorporó a la cabecera de la portada un indicador del clima actual de Aconquija, consultado a Open-Meteo y actualizado cada 15 minutos. Se diseñó un conjunto de glifos SVG geométricos exclusivo del portal, sin reutilizar los iconos meteorológicos de Turismo. El indicador adapta sus colores al modo claro/oscuro y reduce su contenido en pantallas pequeñas.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-04.
 - **Resultado:** implementación revisada estáticamente y registrada. No se ejecutaron lint, compilación ni pruebas visuales; la consulta meteorológica requiere conexión a internet en el navegador.
+
+### 2026-11-04T23:14:49-03:00 — Corregir superposición de controles en la cabecera móvil
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** en pantallas de hasta 680 px, la cabecera pasa a organizarse en dos niveles: la marca institucional queda arriba a la izquierda y los controles de clima y modo oscuro se ubican en una segunda fila alineada a la derecha. Se conserva sin cambios la distribución de escritorio.
+- **Motivo y autorización:** corregir la colisión visual señalada por el usuario en la portada institucional para teléfonos; petición directa del usuario.
+- **Resultado:** estilos actualizados en la rama `main`. Revisión estática del ajuste CSS; no se ejecutaron lint, compilación ni prueba visual en un dispositivo o navegador móvil.
