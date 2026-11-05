@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import tourismImage from '../../imagenes/fondo(1).webp'
 import municipalLogo from '../../imagenes/logo_aconquija(1).png'
 import governmentImage from '../../imagenes/linea_del_tiempo/pueblo.webp'
+import { enterTourismTransition } from '../utils/enterTourismTransition'
 import '../styles/portal.css'
 
 
@@ -89,6 +90,7 @@ function PortalHomePage() {
   const navigate = useNavigate()
 
   const handleTourismNavigation = (event) => {
+    // Ctrl, Cmd, Shift, Alt y clic secundario o central conservan el comportamiento normal del enlace.
     if (
       event.defaultPrevented ||
       event.button !== 0 ||
@@ -98,67 +100,18 @@ function PortalHomePage() {
       event.altKey
     ) return
 
-    const card = event.currentTarget
-    const imageWrap = card.querySelector('.portal-card__image-wrap')
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const imageWrap = event.currentTarget.querySelector('.portal-card__image-wrap')
+    const reduceMotion = Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)
 
-    if (!imageWrap || typeof imageWrap.animate !== 'function') return
-
-    event.preventDefault()
-
-    const imageRect = imageWrap.getBoundingClientRect()
-    const startRadius = window.getComputedStyle(card).borderRadius
-
-    // Se anima el propio contenedor original sin duplicar ni reubicar el nodo.
-    // Evita que el backdrop-filter y la perspectiva de los padres
-    // conviertan el fixed en una posición relativa a la tarjeta.
-    card.style.animation = 'none'
-    card.style.transition = 'none'
-    card.style.transform = 'none'
-    card.style.backdropFilter = 'none'
-    card.style.webkitBackdropFilter = 'none'
-    card.style.overflow = 'visible'
-    if (card.parentElement) card.parentElement.style.perspective = 'none'
-    imageWrap.style.transition = 'none'
-    imageWrap.style.position = 'fixed'
-    imageWrap.style.left = imageRect.left + 'px'
-    imageWrap.style.top = imageRect.top + 'px'
-    imageWrap.style.width = imageRect.width + 'px'
-    imageWrap.style.height = imageRect.height + 'px'
-    imageWrap.style.margin = '0'
-    imageWrap.style.zIndex = '9999'
-    imageWrap.style.borderRadius = startRadius
-    imageWrap.style.overflow = 'hidden'
-    imageWrap.style.pointerEvents = 'none'
-
-    const expansion = imageWrap.animate(
-      [
-        {
-          left: imageRect.left + 'px',
-          top: imageRect.top + 'px',
-          width: imageRect.width + 'px',
-          height: imageRect.height + 'px',
-          borderRadius: startRadius,
-        },
-        {
-          left: '0px',
-          top: '0px',
-          width: window.innerWidth + 'px',
-          height: window.innerHeight + 'px',
-          borderRadius: '0px',
-        },
-      ],
-      {
-        duration: reduceMotion ? 420 : 920,
-        easing: 'cubic-bezier(.2,.78,.18,1)',
-        fill: 'forwards',
-      },
-    )
-
-    expansion.finished
-      .catch(() => {})
-      .then(() => navigate('/turismo'))
+    // La imagen se expande en una capa temporal (ver utils/enterTourismTransition.js) y, al cubrir
+    // la ventana, se navega. Si no puede animarse, no se cancela el evento y el enlace sigue su curso.
+    const started = enterTourismTransition(imageWrap, {
+      reduceMotion,
+      onCovered: () => navigate('/turismo'),
+    })
+    if (started) event.preventDefault()
   }
+
   return (
     <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
       <div className="portal-orb portal-orb--one" aria-hidden="true" />
