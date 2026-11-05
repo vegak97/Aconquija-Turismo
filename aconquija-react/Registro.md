@@ -1954,3 +1954,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** al seleccionar la tarjeta de Turismo, se toma la posición y el tamaño de su imagen y se anima una copia visual que se expande hasta cubrir la pantalla; al finalizar, se navega a `/turismo`. Se conserva el comportamiento de abrir el enlace en otra pestaña con Ctrl/Cmd o clic modificado. Si el dispositivo solicita movimiento reducido, se navega sin la animación.
 - **Motivo y autorización:** petición directa del usuario para que la imagen de la tarjeta de Turismo se agrande como transición antes de entrar a la página.
 - **Resultado:** implementación guardada en la rama `main` y revisada estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; la fluidez y el encuadre final quedan pendientes de comprobación visual.
+
+### 2026-11-04 — Igualar el tratamiento visual de la transición hacia Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** la transición ahora toma del elemento original los valores calculados de filtro, transformación, origen de transformación y posición de la imagen. También reproduce la capa de degradado superpuesta de la tarjeta, en lugar de mostrar una copia sin ese tratamiento. Se suavizó la curva de movimiento y se amplió ligeramente su duración para que el acercamiento resulte más continuo.
+- **Motivo y autorización:** el usuario señaló que la imagen ampliada se percibía distinta de la imagen de la tarjeta y pidió pulir la continuidad visual.
+- **Resultado:** cambios aplicados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente confirmar el resultado en pantalla y ajustar si hiciera falta.
+
