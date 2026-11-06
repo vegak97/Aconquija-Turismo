@@ -652,3 +652,93 @@
   .portal-weather__reading > span { display: none; }
   .portal-theme-toggle { min-height: 2rem; padding: .3rem .4rem; font-size: .54rem; }
 }
+
+
+/* Paisaje panorámico animado del portal institucional */
+.portal-landscape {
+  --land-far: #b7cce4;
+  --land-mid: #8faed0;
+  --land-near: #6689b2;
+  --land-snow: #e8f0f6;
+  --forest-back: #536f98;
+  --forest-front: #344f78;
+  --land-mist: rgba(224, 235, 244, .34);
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .76;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 86%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 86%, transparent 100%);
+}
+.portal-landscape::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(224, 235, 244, .12), transparent 34%, rgba(18, 37, 55, .04)),
+    radial-gradient(ellipse at 50% 48%, transparent 35%, rgba(30, 52, 72, .08) 100%);
+  content: "";
+}
+.portal-landscape__art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portal-landscape__ridge,
+.portal-landscape__forest,
+.portal-landscape__mist {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  opacity: 0;
+  animation: portal-landscape-arrive 1.9s cubic-bezier(.2,.72,.2,1) both;
+}
+.portal-landscape__ridge--far { animation-delay: .08s; }
+.portal-landscape__ridge--middle { animation-delay: .25s; }
+.portal-landscape__ridge--near { animation-delay: .42s; }
+.portal-landscape__forest--back { animation-delay: .58s; }
+.portal-landscape__forest--front { animation-delay: .76s; }
+.portal-landscape__mist { animation-delay: .92s; }
+@keyframes portal-landscape-arrive {
+  from { opacity: 0; transform: translate3d(0, 5%, 0) scale(1.025); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+.portal-page--dark .portal-landscape {
+  --land-far: #7189a8;
+  --land-mid: #526d91;
+  --land-near: #3b567a;
+  --land-snow: #c5d6e7;
+  --forest-back: #304968;
+  --forest-front: #203750;
+  --land-mist: rgba(112, 143, 173, .17);
+  opacity: .58;
+}
+.portal-main {
+  position: relative;
+  z-index: 1;
+}
+.portal-header {
+  z-index: 2;
+}
+.portal-page--dark .portal-landscape::after {
+  background:
+    linear-gradient(180deg, rgba(15, 28, 39, .08), transparent 36%, rgba(8, 19, 30, .16)),
+    radial-gradient(ellipse at 50% 48%, transparent 35%, rgba(8, 19, 30, .2) 100%);
+}
+@media (max-width: 680px) {
+  .portal-landscape {
+    opacity: .64;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 91%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 91%, transparent 100%);
+  }
+  .portal-page--dark .portal-landscape { opacity: .48; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-landscape__ridge,
+  .portal-landscape__forest,
+  .portal-landscape__mist {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
