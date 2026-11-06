@@ -121,13 +121,14 @@
   text-decoration: none;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  transform: translateY(12px) scale(.99);
+  transform: translateY(24px) scale(.965);
+  filter: blur(7px);
   opacity: 0;
-  animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) forwards;
+  animation: portal-card-in 1.05s cubic-bezier(.16,1,.3,1) both;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: 5.95s; }
-.portal-card--government { animation-delay: 6.3s; }
+ .portal-card--tourism { animation-delay: 5.5s; }
+.portal-card--government { animation-delay: 5.75s; }
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
@@ -310,8 +311,8 @@
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes portal-card-in {
-  from { opacity: 0; transform: translateY(14px) scale(.99); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; transform: translateY(24px) scale(.965); filter: blur(7px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
 @media (max-width: 680px) {
