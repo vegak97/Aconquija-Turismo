@@ -2040,3 +2040,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** duración de las entradas de las capas ampliada de 1,9 a 3,4 segundos y retrasos escalonados ajustados de 0,12 a 1,92 segundos. Se conserva el desplazamiento y la secuencia de aparición; el paisaje termina de componerse más pausadamente.
 - **Motivo y autorización:** solicitud directa del usuario porque la animación inicial se percibía demasiado apresurada.
 - **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-06T11:24:21-03:00 — Retirar círculos del fondo y retrasar las tarjetas del portal
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/styles/portal.css`; `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminaron los dos orbes circulares del JSX y sus estilos, además de los degradados radiales que generaban manchas circulares en el fondo claro y oscuro. Se dejó un fondo lineal limpio para que el paisaje de montañas sea el único elemento decorativo de fondo. Se reorganizaron los retrasos de las capas para que el paisaje termine de acomodarse antes de iniciar la entrada de las tarjetas. La tarjeta Turismo comienza a aparecer a los 5,95 s y Gobierno a los 6,3 s desde el inicio de la portada.
+- **Motivo y autorización:** solicitud directa del usuario para quitar los círculos del fondo anterior y hacer que primero se acomode todo el paisaje y recién después aparezcan las tarjetas, evitando saturación visual.
+- **Resultado:** cambios guardados en la rama de prueba. Revisión estática pendiente de verificación final; no se ejecutaron lint, build ni pruebas visuales en navegador. `main` no fue modificada.
