@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import tourismImage from '../../imagenes/fondo(1).webp'
 import municipalLogo from '../../imagenes/logo_aconquija(1).png'
 import governmentImage from '../../imagenes/linea_del_tiempo/pueblo.webp'
+import PortalMountainScene from '../components/portal/PortalMountainScene'
 import '../styles/portal.css'
 
 
@@ -161,6 +162,7 @@ function PortalHomePage() {
   }
   return (
     <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
+      <PortalMountainScene />
       <div className="portal-orb portal-orb--one" aria-hidden="true" />
       <div className="portal-orb portal-orb--two" aria-hidden="true" />
 
