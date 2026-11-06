@@ -12,31 +12,13 @@
   overflow: hidden;
   padding: clamp(.75rem, 1.8vh, 1.4rem) clamp(1rem, 3vw, 3rem) .7rem;
   color: var(--portal-ink);
-  background:
-    radial-gradient(ellipse at 8% 12%, rgba(166, 197, 190, .52), transparent 38%),
-    radial-gradient(ellipse at 92% 18%, rgba(174, 194, 216, .58), transparent 40%),
-    radial-gradient(ellipse at 78% 92%, rgba(206, 194, 169, .42), transparent 36%),
-    linear-gradient(128deg, #e5eeeb 0%, #f5f5f1 46%, #e5ebf1 100%);
+  background: linear-gradient(128deg, #e5eeeb 0%, #f5f5f1 46%, #e5ebf1 100%);
   font-family: 'Montserrat', sans-serif;
 }
 
 .portal-page *,
 .portal-page *::before,
 .portal-page *::after { box-sizing: border-box; }
-
-.portal-orb {
-  position: absolute;
-  z-index: -1;
-  width: clamp(13rem, 27vw, 27rem);
-  aspect-ratio: 1;
-  border: 1px solid rgba(255,255,255,.58);
-  border-radius: 50%;
-  background: rgba(255,255,255,.2);
-  filter: blur(1px);
-  pointer-events: none;
-}
-.portal-orb--one { top: 12%; right: -9rem; }
-.portal-orb--two { bottom: -15rem; left: -9rem; width: clamp(19rem, 36vw, 36rem); }
 
 .portal-header {
   position: relative;
@@ -144,8 +126,8 @@
   animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) forwards;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: .84s; }
-.portal-card--government { animation-delay: 1.2s; }
+ .portal-card--tourism { animation-delay: 5.95s; }
+.portal-card--government { animation-delay: 6.3s; }
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
@@ -428,15 +410,7 @@
   --portal-green: #a5c8b8;
   --portal-blue: #b2c5dc;
   color: var(--portal-ink);
-  background:
-    radial-gradient(ellipse at 8% 12%, rgba(75, 117, 108, .34), transparent 38%),
-    radial-gradient(ellipse at 92% 18%, rgba(78, 105, 137, .38), transparent 40%),
-    radial-gradient(ellipse at 78% 92%, rgba(132, 111, 77, .2), transparent 36%),
-    linear-gradient(128deg, #17252b 0%, #202a34 48%, #202b38 100%);
-}
-.portal-page--dark .portal-orb {
-  border-color: rgba(218, 231, 235, .12);
-  background: rgba(218, 231, 235, .035);
+  background: linear-gradient(128deg, #17252b 0%, #202a34 48%, #202b38 100%);
 }
 .portal-page--dark .portal-eyebrow,
 .portal-page--dark .portal-intro p {
@@ -675,9 +649,7 @@
 .portal-landscape::after {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(224, 235, 244, .12), transparent 34%, rgba(18, 37, 55, .04)),
-    radial-gradient(ellipse at 50% 48%, transparent 35%, rgba(30, 52, 72, .08) 100%);
+  background: linear-gradient(180deg, rgba(224, 235, 244, .12), transparent 34%, rgba(18, 37, 55, .04));
   content: "";
 }
 .portal-landscape__art {
@@ -695,12 +667,12 @@
   animation-timing-function: cubic-bezier(.2,.72,.2,1);
   animation-fill-mode: both;
 }
-.portal-landscape__ridge--far { animation-name: portal-landscape-from-left; animation-delay: .12s; }
-.portal-landscape__ridge--middle { animation-name: portal-landscape-from-right; animation-delay: .48s; }
-.portal-landscape__ridge--near { animation-name: portal-landscape-from-left; animation-delay: .42s; }
-.portal-landscape__forest--back { animation-name: portal-landscape-rise; animation-delay: .58s; }
-.portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: 1.56s; }
-.portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 1.92s; }
+.portal-landscape__ridge--far { animation-name: portal-landscape-from-left; animation-delay: .1s; }
+.portal-landscape__ridge--middle { animation-name: portal-landscape-from-right; animation-delay: .55s; }
+.portal-landscape__ridge--near { animation-name: portal-landscape-from-left; animation-delay: 1s; }
+.portal-landscape__forest--back { animation-name: portal-landscape-rise; animation-delay: 1.45s; }
+.portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: 1.9s; }
+.portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 2.35s; }
 @keyframes portal-landscape-from-left {
   from { opacity: 0; transform: translate3d(-4%, 2%, 0) scale(1.035); }
   to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
@@ -735,9 +707,7 @@
   z-index: 2;
 }
 .portal-page--dark .portal-landscape::after {
-  background:
-    linear-gradient(180deg, rgba(15, 28, 39, .08), transparent 36%, rgba(8, 19, 30, .16)),
-    radial-gradient(ellipse at 50% 48%, transparent 35%, rgba(8, 19, 30, .2) 100%);
+  background: linear-gradient(180deg, rgba(15, 28, 39, .08), transparent 36%, rgba(8, 19, 30, .16));
 }
 @media (max-width: 680px) {
   .portal-landscape {
