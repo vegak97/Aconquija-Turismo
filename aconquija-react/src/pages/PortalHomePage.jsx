@@ -163,9 +163,6 @@ function PortalHomePage() {
   return (
     <main className={`portal-page${isDark ? ' portal-page--dark' : ''}`} data-theme={isDark ? 'dark' : 'light'}>
       <PortalMountainScene />
-      <div className="portal-orb portal-orb--one" aria-hidden="true" />
-      <div className="portal-orb portal-orb--two" aria-hidden="true" />
-
       <header className="portal-header">
         <Link to="/" className="portal-wordmark" aria-label="Aconquija, portal institucional">
           <img src={municipalLogo} alt="Escudo municipal de Aconquija" className="portal-wordmark__logo" />
