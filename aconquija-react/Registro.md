@@ -2022,3 +2022,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se añadió al menú principal de Aconquija Turismo un enlace visible «Portal institucional» que conduce a la ruta `/`. El acceso utiliza un estilo de botón delineado en arena/dorado, incluye un icono de retorno, cierra el menú móvil al seleccionarlo y mantiene visible la opción dentro del menú lateral en teléfonos.
 - **Motivo y autorización:** petición directa del usuario para incorporar un botón que permita volver desde Aconquija Turismo al portal institucional.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente comprobar la presentación en escritorio y móvil.
+
+
+### 2026-11-06T11:14:51-03:00 — Añadir paisaje panorámico animado al portal institucional
+
+- **Rama:** `feature/paisaje-animado-portal`, creada desde el estado actual de `main`; los cambios quedan aislados para evaluación.
+- **Archivos afectados:** `src/components/portal/PortalMountainScene.jsx` (nuevo); `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó un paisaje vectorial SVG de pantalla completa, inspirado en la referencia aportada: tres planos de montañas, dos franjas de pinos y una capa de neblina. Cada plano aparece con un desplazamiento y retraso diferente para simular profundidad y acomodarse en su posición final. El paisaje queda detrás de la cabecera, el título y las tarjetas, sin capturar interacciones. Se definieron paletas suaves para modo claro y oscuro, adaptación a móvil y estado estático para `prefers-reduced-motion`. No se agregaron dependencias ni imágenes externas.
+- **Motivo y autorización:** petición directa del usuario para crear una animación de entrada del paisaje en toda la portada del Portal Institucional, rellenando el fondo sin recargar visualmente el contenido; confirmó que prefiere el paisaje completo.
+- **Resultado:** implementación guardada en la rama de prueba y revisión estática de imports, estructura JSX/SVG, selectores y capas visuales. No se ejecutaron lint, build ni pruebas visuales en navegador. La composición, opacidad y tiempos quedan sujetos a evaluación visual en escritorio y móvil. No se modificó ni fusionó `main`.
