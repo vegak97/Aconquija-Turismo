@@ -2031,3 +2031,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se incorporó un paisaje vectorial SVG de pantalla completa, inspirado en la referencia aportada: tres planos de montañas, dos franjas de pinos y una capa de neblina. Cada plano aparece con un desplazamiento y retraso diferente para simular profundidad y acomodarse en su posición final. El paisaje queda detrás de la cabecera, el título y las tarjetas, sin capturar interacciones. Se definieron paletas suaves para modo claro y oscuro, adaptación a móvil y estado estático para `prefers-reduced-motion`. No se agregaron dependencias ni imágenes externas.
 - **Motivo y autorización:** petición directa del usuario para crear una animación de entrada del paisaje en toda la portada del Portal Institucional, rellenando el fondo sin recargar visualmente el contenido; confirmó que prefiere el paisaje completo.
 - **Resultado:** implementación guardada en la rama de prueba y revisión estática de imports, estructura JSX/SVG, selectores y capas visuales. No se ejecutaron lint, build ni pruebas visuales en navegador. La composición, opacidad y tiempos quedan sujetos a evaluación visual en escritorio y móvil. No se modificó ni fusionó `main`.
+
+
+### 2026-11-06T11:19:40-03:00 — Ralentizar la animación de entrada del paisaje
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivo afectado:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** duración de las entradas de las capas ampliada de 1,9 a 3,4 segundos y retrasos escalonados ajustados de 0,12 a 1,92 segundos. Se conserva el desplazamiento y la secuencia de aparición; el paisaje termina de componerse más pausadamente.
+- **Motivo y autorización:** solicitud directa del usuario porque la animación inicial se percibía demasiado apresurada.
+- **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
