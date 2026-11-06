@@ -1,0 +1,32 @@
+function PortalMountainScene() {
+  return (
+    <div className="portal-landscape" aria-hidden="true">
+      <svg
+        className="portal-landscape__art"
+        viewBox="0 0 1600 1000"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <g className="portal-landscape__ridge portal-landscape__ridge--far">
+          <path d="M0 530 110 405 190 445 305 275 390 350 510 210 610 325 735 160 820 255 930 125 1050 300 1160 235 1275 375 1390 300 1500 430 1600 360V1000H0Z" fill="var(--land-far)" />
+          <path d="m280 300 25-25 30 30m160-80 15-15 22 22m205-55 18-22 22 22m145-75 25-25 26 30m180 155 22-20 25 25" fill="none" stroke="var(--land-snow)" strokeWidth="8" strokeLinecap="round" opacity=".45" />
+        </g>
+        <g className="portal-landscape__ridge portal-landscape__ridge--middle">
+          <path d="M0 650 125 525 220 575 340 405 430 485 555 355 665 470 790 320 885 430 1000 300 1110 455 1220 370 1345 520 1450 420 1600 565V1000H0Z" fill="var(--land-mid)" />
+        </g>
+        <g className="portal-landscape__ridge portal-landscape__ridge--near">
+          <path d="M0 760 150 635 260 700 390 555 500 665 625 535 745 655 865 500 990 640 1115 525 1240 670 1370 555 1485 665 1600 590V1000H0Z" fill="var(--land-near)" />
+        </g>
+        <g className="portal-landscape__forest portal-landscape__forest--back" fill="var(--forest-back)">
+          <path d="M0 720 38 620 76 720 58 720 95 600 132 720 116 720 155 625 194 720 176 720 216 590 258 720 240 720 280 630 320 720 302 720 344 580 386 720 368 720 410 620 452 720 434 720 476 595 518 720 500 720 540 625 580 720 562 720 604 570 646 720 628 720 670 620 712 720 694 720 736 590 778 720 760 720 802 625 844 720 826 720 868 575 910 720 892 720 934 620 976 720 958 720 1000 580 1042 720 1024 720 1066 625 1108 720 1090 720 1132 590 1174 720 1156 720 1198 620 1240 720 1222 720 1264 575 1306 720 1288 720 1330 620 1372 720 1354 720 1396 590 1438 720 1420 720 1462 625 1504 720 1486 720 1528 585 1570 720 1552 720 1594 625 1600 720V1000H0Z" />
+        </g>
+        <g className="portal-landscape__forest portal-landscape__forest--front" fill="var(--forest-front)">
+          <path d="M0 830 34 690 68 830 52 830 91 675 130 830 112 830 152 710 192 830 174 830 216 665 258 830 240 830 282 710 324 830 306 830 348 680 390 830 372 830 414 720 456 830 438 830 480 675 522 830 504 830 546 710 588 830 570 830 612 665 654 830 636 830 678 710 720 830 702 830 744 675 786 830 768 830 810 710 852 830 834 830 876 665 918 830 900 830 942 710 984 830 966 830 1008 675 1050 830 1032 830 1074 710 1116 830 1098 830 1140 665 1182 830 1164 830 1206 710 1248 830 1230 830 1272 675 1314 830 1296 830 1338 710 1380 830 1362 830 1404 665 1446 830 1428 830 1470 710 1512 830 1494 830 1536 675 1578 830 1560 830 1590 710 1600 830V1000H0Z" />
+        </g>
+        <path className="portal-landscape__mist" d="M0 835Q260 780 520 840T1040 830T1600 825V1000H0Z" fill="var(--land-mist)" />
+      </svg>
+    </div>
+  )
+}
+
+export default PortalMountainScene
