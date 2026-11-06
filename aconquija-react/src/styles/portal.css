@@ -144,8 +144,8 @@
   animation: portal-card-in 1.45s cubic-bezier(.22,.61,.36,1) forwards;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: .42s; }
-.portal-card--government { animation-delay: .58s; }
+ .portal-card--tourism { animation-delay: .84s; }
+.portal-card--government { animation-delay: 1.2s; }
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
@@ -691,16 +691,16 @@
   transform-box: fill-box;
   transform-origin: center bottom;
   opacity: 0;
-  animation-duration: 1.9s;
+  animation-duration: 3.4s;
   animation-timing-function: cubic-bezier(.2,.72,.2,1);
   animation-fill-mode: both;
 }
-.portal-landscape__ridge--far { animation-name: portal-landscape-from-left; animation-delay: .08s; }
-.portal-landscape__ridge--middle { animation-name: portal-landscape-from-right; animation-delay: .25s; }
+.portal-landscape__ridge--far { animation-name: portal-landscape-from-left; animation-delay: .12s; }
+.portal-landscape__ridge--middle { animation-name: portal-landscape-from-right; animation-delay: .48s; }
 .portal-landscape__ridge--near { animation-name: portal-landscape-from-left; animation-delay: .42s; }
 .portal-landscape__forest--back { animation-name: portal-landscape-rise; animation-delay: .58s; }
-.portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: .76s; }
-.portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: .92s; }
+.portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: 1.56s; }
+.portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 1.92s; }
 @keyframes portal-landscape-from-left {
   from { opacity: 0; transform: translate3d(-4%, 2%, 0) scale(1.035); }
   to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
