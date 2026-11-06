@@ -2049,3 +2049,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminaron los dos orbes circulares del JSX y sus estilos, además de los degradados radiales que generaban manchas circulares en el fondo claro y oscuro. Se dejó un fondo lineal limpio para que el paisaje de montañas sea el único elemento decorativo de fondo. Se reorganizaron los retrasos de las capas para que el paisaje termine de acomodarse antes de iniciar la entrada de las tarjetas. La tarjeta Turismo comienza a aparecer a los 5,95 s y Gobierno a los 6,3 s desde el inicio de la portada.
 - **Motivo y autorización:** solicitud directa del usuario para quitar los círculos del fondo anterior y hacer que primero se acomode todo el paisaje y recién después aparezcan las tarjetas, evitando saturación visual.
 - **Resultado:** cambios guardados en la rama de prueba. Revisión estática pendiente de verificación final; no se ejecutaron lint, build ni pruebas visuales en navegador. `main` no fue modificada.
+
+
+### 2026-11-06T11:28:36-03:00 — Refinar entrada de las tarjetas y acortar la espera
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se acortó el retraso de Turismo de 5,95 a 5,5 segundos y el de Gobierno de 6,3 a 5,75 segundos. La entrada ahora dura 1,05 segundos (antes 1,45), con desplazamiento vertical más perceptible, escala inicial ligeramente menor y desenfoque suave que se disipa al asentarse. Se mantiene el orden posterior a la composición del paisaje y la separación entre las dos tarjetas.
+- **Motivo y autorización:** solicitud directa del usuario para mejorar la entrada de las tarjetas y reducir un poco la espera, que se percibía demasiado larga.
+- **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
