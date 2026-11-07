@@ -2086,3 +2086,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Revisión de los cambios de Claude:** la rama `portal-cartas-entrada-rapida` contiene un ajuste de `portal.css` que elimina el retraso individual de ambas tarjetas y las hace iniciar juntas. Esa rama parte de una versión anterior del portal y no incluye el paisaje actual; no se fusionó. Se aplicó en nuestra rama el objetivo de reducir la espera, conservando la entrada escalonada.
 - **Motivo y autorización:** petición directa del usuario para revisar los ajustes de Claude y hacer que las tarjetas terminen de aparecer alrededor de los cuatro segundos de entrar al portal.
 - **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-07T00:31:48-03:00 — Unificar la entrada de las tarjetas del portal
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** las tarjetas Turismo y Gobierno ahora comparten el mismo retraso de 2,9 s y comienzan simultáneamente la misma animación `portal-card-in` de 0,85 s, con subida suave, escala y desenfoque progresivo. Ambas terminan de aparecer aproximadamente a los 3,75 s desde que se monta la portada. Se mantiene el resto del paisaje y sus animaciones sin cambios.
+- **Motivo y autorización:** petición directa del usuario para que ambas tarjetas aparezcan juntas y con la misma animación, evitando una entrada visual tosca.
+- **Resultado:** cambio guardado en la rama de prueba y verificado estáticamente en CSS. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
