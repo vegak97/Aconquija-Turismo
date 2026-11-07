@@ -2030,3 +2030,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se amplió la duración de la animación de entrada de las tarjetas de 1,45 a 2 segundos, se adoptó una curva de aceleración y desaceleración más suave y se redujo el desplazamiento vertical de 12 a 6 píxeles junto con una escala inicial casi imperceptible. Ambas tarjetas ahora comparten el mismo inicio y el mismo retraso de 0,4 segundos, para que aparezcan juntas y con un movimiento uniforme. Se conserva la regla de accesibilidad para usuarios que prefieren movimiento reducido.
 - **Motivo y autorización:** petición directa del usuario para que la aparición de las tarjetas sea más lenta y suave a la vista.
 - **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-07T03:09:00-03:00 — Eliminar la transición de zoom de la tarjeta de Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminó el controlador que interceptaba el clic de la tarjeta de Turismo, fijaba temporalmente el contenedor de imagen y lo expandía hasta cubrir la ventana. También se retiraron el import y la instancia de `useNavigate` que solo se utilizaban para esa transición, y se restauró el enlace directo `/turismo`.
+- **Motivo y autorización:** petición directa del usuario para quitar el efecto restante que agrandaba la imagen al seleccionar la tarjeta.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente; se confirmó que ya no quedan referencias al controlador ni a `Element.animate()` en la página. Se conserva el enlace de navegación y no se modificaron los estilos de las tarjetas ni las páginas internas de Turismo. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
