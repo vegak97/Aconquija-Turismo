@@ -2022,3 +2022,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se añadió al menú principal de Aconquija Turismo un enlace visible «Portal institucional» que conduce a la ruta `/`. El acceso utiliza un estilo de botón delineado en arena/dorado, incluye un icono de retorno, cierra el menú móvil al seleccionarlo y mantiene visible la opción dentro del menú lateral en teléfonos.
 - **Motivo y autorización:** petición directa del usuario para incorporar un botón que permita volver desde Aconquija Turismo al portal institucional.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente comprobar la presentación en escritorio y móvil.
+
+
+### 2026-11-07T01:26:43-03:00 — Suavizar la aparición de las tarjetas del portal institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se amplió la duración de la animación de entrada de las tarjetas de 1,45 a 2 segundos, se adoptó una curva de aceleración y desaceleración más suave y se redujo el desplazamiento vertical de 12 a 6 píxeles junto con una escala inicial casi imperceptible. Ambas tarjetas ahora comparten el mismo inicio y el mismo retraso de 0,4 segundos, para que aparezcan juntas y con un movimiento uniforme. Se conserva la regla de accesibilidad para usuarios que prefieren movimiento reducido.
+- **Motivo y autorización:** petición directa del usuario para que la aparición de las tarjetas sea más lenta y suave a la vista.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
