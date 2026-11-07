@@ -2067,3 +2067,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se reemplazó el paisaje geométrico azul anterior por una ilustración SVG panorámica inspirada en la referencia aportada: cielo degradado de atardecer, nubes finas, aves, montañas superpuestas con sombras, bruma, bosque de pinos en silueta y dos figuras de ciervos en primer plano. El paisaje cubre ahora el fondo completo, sin la máscara que dejaba zonas del fondo anterior visibles. Se adaptaron las paletas para modo claro y oscuro y se mantuvieron las entradas animadas por capas y el soporte de movimiento reducido. Las tarjetas se retrasaron a 6,05 s y 6,3 s para que la nueva composición termine antes de su aparición.
 - **Motivo y autorización:** petición directa del usuario para probar un fondo similar a la imagen de paisaje de atardecer compartida.
 - **Resultado:** revisión estática de la estructura SVG, clases de animación y variables de ambas paletas. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-06T23:59:17-03:00 — Limpiar trazos del cielo y renovar las siluetas del bosque
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/components/portal/PortalMountainScene.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se quitaron las líneas horizontales claras y semitransparentes del cielo, junto con los trazos blancos decorativos que recorrían las cumbres. Se reemplazaron las dos franjas de árboles geométricos anteriores por una línea de bosque formada por siluetas SVG de pinos de ramas irregulares y copas densas, repetidas con distintos tamaños y alturas para acercarse a las referencias aportadas. Se conserva la paleta del atardecer, las montañas, las aves, los ciervos, la animación escalonada y el soporte de movimiento reducido. Se retiraron también los estilos y variables que habían quedado sin uso para las nubes.
+- **Motivo y autorización:** petición directa del usuario para eliminar las líneas blancas semitransparentes del fondo y cambiar los árboles por los modelos de las imágenes de referencia.
+- **Resultado:** revisión estática de las referencias SVG, los usos del símbolo de pino, clases de animación y limpieza de estilos. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
