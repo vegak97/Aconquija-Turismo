@@ -2076,3 +2076,13 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se quitaron las líneas horizontales claras y semitransparentes del cielo, junto con los trazos blancos decorativos que recorrían las cumbres. Se reemplazaron las dos franjas de árboles geométricos anteriores por una línea de bosque formada por siluetas SVG de pinos de ramas irregulares y copas densas, repetidas con distintos tamaños y alturas para acercarse a las referencias aportadas. Se conserva la paleta del atardecer, las montañas, las aves, los ciervos, la animación escalonada y el soporte de movimiento reducido. Se retiraron también los estilos y variables que habían quedado sin uso para las nubes.
 - **Motivo y autorización:** petición directa del usuario para eliminar las líneas blancas semitransparentes del fondo y cambiar los árboles por los modelos de las imágenes de referencia.
 - **Resultado:** revisión estática de las referencias SVG, los usos del símbolo de pino, clases de animación y limpieza de estilos. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-07T00:24:59-03:00 — Acortar la entrada de las tarjetas del portal
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se redujo la duración de entrada de las tarjetas de 1,05 s a 0,85 s. Turismo ahora comienza a aparecer a los 2,9 s y termina su entrada aproximadamente a los 3,75 s; Gobierno comienza a los 3,15 s y termina aproximadamente a los 4 s desde que se monta la portada. Se conserva el orden escalonado y el efecto de subida con desenfoque progresivo.
+- **Revisión de los cambios de Claude:** la rama `portal-cartas-entrada-rapida` contiene un ajuste de `portal.css` que elimina el retraso individual de ambas tarjetas y las hace iniciar juntas. Esa rama parte de una versión anterior del portal y no incluye el paisaje actual; no se fusionó. Se aplicó en nuestra rama el objetivo de reducir la espera, conservando la entrada escalonada.
+- **Motivo y autorización:** petición directa del usuario para revisar los ajustes de Claude y hacer que las tarjetas terminen de aparecer alrededor de los cuatro segundos de entrar al portal.
+- **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
