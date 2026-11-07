@@ -127,8 +127,10 @@
   animation: portal-card-in .85s cubic-bezier(.16,1,.3,1) both;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: 2.9s; }
-.portal-card--government { animation-delay: 3.15s; }
+.portal-card--tourism,
+.portal-card--government {
+  animation-delay: 2.9s;
+}
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
