@@ -21,15 +21,11 @@ function PortalMountainScene() {
             <stop offset="0%" stopColor="var(--ground-top)" />
             <stop offset="100%" stopColor="var(--ground-bottom)" />
           </linearGradient>
+          <path id="aconquija-pine" d="M50 0 43 24 48 20 36 42 44 37 25 63 40 57 13 88 36 79 4 116 34 104 0 145 38 130 9 165 43 151 18 188 47 172 30 211 48 194 46 248 57 248 54 194 72 211 53 172 82 188 57 151 91 165 62 130 100 145 66 104 96 116 64 79 87 88 60 57 75 63 56 37 64 42 52 20 57 24Z" />
         </defs>
 
         <rect width="1600" height="1000" fill="url(#aconquija-sky)" />
 
-        <g className="portal-landscape__clouds">
-          <path d="M-40 255Q120 220 265 246T570 238T875 245T1180 230T1650 245" fill="none" stroke="var(--cloud)" strokeWidth="3" opacity=".25" />
-          <path d="M90 305Q250 278 420 294T760 287M980 300Q1190 268 1480 290" fill="none" stroke="var(--cloud)" strokeWidth="2" opacity=".2" />
-          <path d="M180 150Q340 132 490 150M1030 170Q1210 145 1410 166" fill="none" stroke="var(--cloud)" strokeWidth="2" opacity=".16" />
-        </g>
 
         <g className="portal-landscape__birds" fill="none" stroke="var(--bird)" strokeWidth="4" strokeLinecap="round">
           <path d="M330 175q-12-18-25-8q12 1 17 16q5-15 20-17q-8-7-12 9" />
@@ -40,7 +36,6 @@ function PortalMountainScene() {
 
         <g className="portal-landscape__ridge portal-landscape__ridge--far">
           <path d="M-30 560 95 430 170 470 300 345 390 390 520 285 625 390 755 245 850 355 990 225 1110 370 1225 305 1350 425 1455 355 1630 465V1000H-30Z" fill="var(--land-far)" />
-          <path d="m30 500 65-70 45 22 30 45m130-152 40 45 45-18 30-50m105 4 130-41 72 76m150-116 95 110 45-20m130-125 90 115 48-24m120 74 75 66" fill="none" stroke="var(--snow)" strokeWidth="12" strokeLinejoin="round" opacity=".58" />
           <path d="M0 555 175 475 300 520 435 450 565 520 700 430 840 520 990 420 1135 515 1290 450 1450 520 1600 475V680H0Z" fill="var(--land-far-shadow)" opacity=".5" />
         </g>
 
@@ -59,11 +54,50 @@ function PortalMountainScene() {
         <path d="M0 690Q300 655 560 700T1080 690T1600 680V1000H0Z" fill="url(#aconquija-ground)" />
 
         <g className="portal-landscape__forest portal-landscape__forest--back" fill="var(--forest-back)">
-          <path d="M0 790 28 675 56 790 45 790 82 650 119 790 105 790 145 700 184 790 170 790 210 655 250 790 236 790 275 700 314 790 300 790 342 645 384 790 370 790 410 690 450 790 436 790 478 650 520 790 506 790 548 695 590 790 576 790 618 650 660 790 646 790 688 700 730 790 716 790 758 650 800 790 786 790 828 690 870 790 856 790 898 645 940 790 926 790 968 690 1010 790 996 790 1038 650 1080 790 1066 790 1108 695 1150 790 1136 790 1178 650 1220 790 1206 790 1248 690 1290 790 1276 790 1318 645 1360 790 1346 790 1388 700 1430 790 1416 790 1458 650 1500 790 1486 790 1528 690 1570 790 1556 790 1598 660 1600 790V1000H0Z" />
+          <use href="#aconquija-pine" transform="translate(-22 575) scale(.58 1.02)" />
+          <use href="#aconquija-pine" transform="translate(54 610) scale(.43 .78)" />
+          <use href="#aconquija-pine" transform="translate(104 570) scale(.62 1.02)" />
+          <use href="#aconquija-pine" transform="translate(192 615) scale(.4 .76)" />
+          <use href="#aconquija-pine" transform="translate(245 585) scale(.55 .9)" />
+          <use href="#aconquija-pine" transform="translate(322 625) scale(.38 .7)" />
+          <use href="#aconquija-pine" transform="translate(378 580) scale(.58 .98)" />
+          <use href="#aconquija-pine" transform="translate(468 625) scale(.4 .74)" />
+          <use href="#aconquija-pine" transform="translate(530 590) scale(.55 .92)" />
+          <use href="#aconquija-pine" transform="translate(620 620) scale(.42 .78)" />
+          <use href="#aconquija-pine" transform="translate(680 585) scale(.58 .98)" />
+          <use href="#aconquija-pine" transform="translate(770 625) scale(.4 .74)" />
+          <use href="#aconquija-pine" transform="translate(830 580) scale(.57 .96)" />
+          <use href="#aconquija-pine" transform="translate(920 620) scale(.42 .78)" />
+          <use href="#aconquija-pine" transform="translate(980 580) scale(.58 .98)" />
+          <use href="#aconquija-pine" transform="translate(1070 625) scale(.4 .74)" />
+          <use href="#aconquija-pine" transform="translate(1130 585) scale(.56 .94)" />
+          <use href="#aconquija-pine" transform="translate(1220 620) scale(.42 .78)" />
+          <use href="#aconquija-pine" transform="translate(1280 570) scale(.62 1.02)" />
+          <use href="#aconquija-pine" transform="translate(1370 615) scale(.4 .76)" />
+          <use href="#aconquija-pine" transform="translate(1430 570) scale(.62 1.02)" />
+          <use href="#aconquija-pine" transform="translate(1515 600) scale(.5 .88)" />
         </g>
 
         <g className="portal-landscape__forest portal-landscape__forest--front" fill="var(--forest-front)">
-          <path d="M0 880 38 730 76 880 60 880 105 705 150 880 132 880 180 755 228 880 210 880 258 700 306 880 288 880 336 760 384 880 366 880 414 710 462 880 444 880 492 755 540 880 522 880 570 700 618 880 600 880 648 755 696 880 678 880 726 705 774 880 756 880 804 755 852 880 834 880 882 700 930 880 912 880 960 755 1008 880 990 880 1038 705 1086 880 1068 880 1116 755 1164 880 1146 880 1194 700 1242 880 1224 880 1272 755 1320 880 1302 880 1350 705 1398 880 1380 880 1428 755 1476 880 1458 880 1506 700 1554 880 1536 880 1584 730 1600 880V1000H0Z" />
+          <use href="#aconquija-pine" transform="translate(-48 665) scale(.82 1.34)" />
+          <use href="#aconquija-pine" transform="translate(58 700) scale(.62 1.12)" />
+          <use href="#aconquija-pine" transform="translate(132 665) scale(.78 1.28)" />
+          <use href="#aconquija-pine" transform="translate(230 720) scale(.55 1.02)" />
+          <use href="#aconquija-pine" transform="translate(300 680) scale(.75 1.22)" />
+          <use href="#aconquija-pine" transform="translate(395 720) scale(.58 1.04)" />
+          <use href="#aconquija-pine" transform="translate(468 670) scale(.8 1.3)" />
+          <use href="#aconquija-pine" transform="translate(570 720) scale(.58 1.04)" />
+          <use href="#aconquija-pine" transform="translate(642 680) scale(.76 1.24)" />
+          <use href="#aconquija-pine" transform="translate(740 725) scale(.55 1.02)" />
+          <use href="#aconquija-pine" transform="translate(812 670) scale(.82 1.32)" />
+          <use href="#aconquija-pine" transform="translate(916 720) scale(.58 1.04)" />
+          <use href="#aconquija-pine" transform="translate(990 680) scale(.78 1.26)" />
+          <use href="#aconquija-pine" transform="translate(1090 720) scale(.56 1.02)" />
+          <use href="#aconquija-pine" transform="translate(1160 665) scale(.82 1.34)" />
+          <use href="#aconquija-pine" transform="translate(1265 715) scale(.58 1.04)" />
+          <use href="#aconquija-pine" transform="translate(1340 670) scale(.8 1.3)" />
+          <use href="#aconquija-pine" transform="translate(1440 715) scale(.58 1.04)" />
+          <use href="#aconquija-pine" transform="translate(1510 665) scale(.82 1.34)" />
         </g>
 
         <g className="portal-landscape__animals" fill="var(--forest-front)" stroke="var(--forest-front)" strokeLinecap="round" strokeLinejoin="round">
