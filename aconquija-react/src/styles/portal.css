@@ -12,7 +12,7 @@
   overflow: hidden;
   padding: clamp(.75rem, 1.8vh, 1.4rem) clamp(1rem, 3vw, 3rem) .7rem;
   color: var(--portal-ink);
-  background: linear-gradient(128deg, #e5eeeb 0%, #f5f5f1 46%, #e5ebf1 100%);
+  background: linear-gradient(180deg, #c5d5d9 0%, #e9c9b4 58%, #e5c3a9 100%);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -127,8 +127,8 @@
   animation: portal-card-in 1.05s cubic-bezier(.16,1,.3,1) both;
   transition: transform .65s cubic-bezier(.22,.61,.36,1), box-shadow .65s ease, border-color .5s ease;
 }
- .portal-card--tourism { animation-delay: 5.5s; }
-.portal-card--government { animation-delay: 5.75s; }
+ .portal-card--tourism { animation-delay: 6.05s; }
+.portal-card--government { animation-delay: 6.3s; }
 .portal-card:hover {
   transform: translateY(-.35rem) scale(1.006);
   box-shadow: 0 1.8rem 4rem rgba(52, 70, 87, .16), 0 .35rem 1rem rgba(52, 70, 87, .06);
@@ -629,29 +629,32 @@
 }
 
 
-/* Paisaje panorámico animado del portal institucional */
+/* Paisaje panorámico de atardecer para el portal institucional */
 .portal-landscape {
-  --land-far: #b7cce4;
-  --land-mid: #8faed0;
-  --land-near: #6689b2;
-  --land-snow: #e8f0f6;
-  --forest-back: #536f98;
-  --forest-front: #344f78;
-  --land-mist: rgba(224, 235, 244, .34);
+  --sky-top: #b8cdd1;
+  --sky-horizon: #edc7ae;
+  --sky-low: #d9a98f;
+  --cloud: #fff0dc;
+  --bird: #283238;
+  --snow: #e8ded6;
+  --land-far: #aeb5bd;
+  --land-far-shadow: #818c98;
+  --land-mid: #707b87;
+  --land-mid-shadow: #53616c;
+  --land-near: #46545b;
+  --land-near-shadow: #35444a;
+  --mist-light: #e9d8cb;
+  --ground-top: #33434a;
+  --ground-bottom: #1f2c31;
+  --forest-back: #26383e;
+  --forest-front: #17262b;
+  --land-mist: rgba(215, 224, 220, .18);
   position: absolute;
   z-index: 0;
   inset: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: .76;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 86%, transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000 13%, #000 86%, transparent 100%);
-}
-.portal-landscape::after {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(224, 235, 244, .12), transparent 34%, rgba(18, 37, 55, .04));
-  content: "";
+  opacity: 1;
 }
 .portal-landscape__art {
   display: block;
@@ -660,7 +663,9 @@
 }
 .portal-landscape__ridge,
 .portal-landscape__forest,
-.portal-landscape__mist {
+.portal-landscape__mist,
+.portal-landscape__birds,
+.portal-landscape__animals {
   transform-box: fill-box;
   transform-origin: center bottom;
   opacity: 0;
@@ -673,7 +678,13 @@
 .portal-landscape__ridge--near { animation-name: portal-landscape-from-left; animation-delay: 1s; }
 .portal-landscape__forest--back { animation-name: portal-landscape-rise; animation-delay: 1.45s; }
 .portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: 1.9s; }
+.portal-landscape__birds { animation-name: portal-landscape-fade; animation-delay: 1.75s; }
+.portal-landscape__animals { animation-name: portal-landscape-rise; animation-delay: 2.05s; }
 .portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 2.35s; }
+.portal-landscape__clouds {
+  opacity: .9;
+  animation: portal-landscape-fade 2.8s .2s both;
+}
 @keyframes portal-landscape-from-left {
   from { opacity: 0; transform: translate3d(-4%, 2%, 0) scale(1.035); }
   to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
@@ -691,14 +702,30 @@
   to { opacity: 1; }
 }
 .portal-page--dark .portal-landscape {
-  --land-far: #7189a8;
-  --land-mid: #526d91;
-  --land-near: #3b567a;
-  --land-snow: #c5d6e7;
-  --forest-back: #304968;
-  --forest-front: #203750;
-  --land-mist: rgba(112, 143, 173, .17);
-  opacity: .58;
+  --sky-top: #344657;
+  --sky-horizon: #8c6870;
+  --sky-low: #a97870;
+  --cloud: #e4c5b4;
+  --bird: #18252c;
+  --snow: #c9c2c1;
+  --land-far: #7d828f;
+  --land-far-shadow: #5c6574;
+  --land-mid: #4d5868;
+  --land-mid-shadow: #394653;
+  --land-near: #303d46;
+  --land-near-shadow: #25343b;
+  --mist-light: #b5a3a0;
+  --ground-top: #26343b;
+  --ground-bottom: #172329;
+  --forest-back: #1d2b31;
+  --forest-front: #101c22;
+  --land-mist: rgba(117, 133, 141, .16);
+}
+.portal-page--dark .portal-landscape::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 28, 39, .04), transparent 46%, rgba(8, 19, 30, .12));
+  content: "";
 }
 .portal-main {
   position: relative;
@@ -707,21 +734,17 @@
 .portal-header {
   z-index: 2;
 }
-.portal-page--dark .portal-landscape::after {
-  background: linear-gradient(180deg, rgba(15, 28, 39, .08), transparent 36%, rgba(8, 19, 30, .16));
-}
 @media (max-width: 680px) {
-  .portal-landscape {
-    opacity: .64;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 91%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 91%, transparent 100%);
-  }
-  .portal-page--dark .portal-landscape { opacity: .48; }
+  .portal-landscape { opacity: .94; }
+  .portal-page--dark .portal-landscape { opacity: .9; }
 }
 @media (prefers-reduced-motion: reduce) {
   .portal-landscape__ridge,
   .portal-landscape__forest,
-  .portal-landscape__mist {
+  .portal-landscape__mist,
+  .portal-landscape__birds,
+  .portal-landscape__animals,
+  .portal-landscape__clouds {
     opacity: 1;
     transform: none;
     animation: none;
