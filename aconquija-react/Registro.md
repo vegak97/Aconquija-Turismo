@@ -2103,3 +2103,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se completó la regla de movimiento reducido del paisaje, que había quedado con una coma final y sin bloque de declaraciones ni cierres. Se conservaron los contenidos actuales de ambos archivos y se marcaron como resueltos los conflictos de merge pendientes.
 - **Motivo:** corregir los errores reportados en los archivos.
 - **Resultado:** corrección revisada estáticamente; no se ejecutaron lint, build ni pruebas.
+
+
+Fecha y hora: 2026-11-07 20:38 (UTC-03:00)
+Archivos: aconquija-react/vite.config.js
+Cambio: se agrega server.allowedHosts: ['.trycloudflare.com'] para probar el sitio desde el teléfono con un túnel temporal.
+Motivo: petición directa del usuario (Vite bloqueaba el host del túnel).
+Autorización: petición directa.
+Resultado: commit 8c482d2 en la rama portal-cartas-entrada-rapida, sin fusionar a main.
+Pruebas: pendiente verificar en el teléfono.
