@@ -2095,3 +2095,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** las tarjetas Turismo y Gobierno ahora comparten el mismo retraso de 2,9 s y comienzan simultáneamente la misma animación `portal-card-in` de 0,85 s, con subida suave, escala y desenfoque progresivo. Ambas terminan de aparecer aproximadamente a los 3,75 s desde que se monta la portada. Se mantiene el resto del paisaje y sus animaciones sin cambios.
 - **Motivo y autorización:** petición directa del usuario para que ambas tarjetas aparezcan juntas y con la misma animación, evitando una entrada visual tosca.
 - **Resultado:** cambio guardado en la rama de prueba y verificado estáticamente en CSS. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-07 — Corregir errores de portal.css y resolver Registro.md
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se completó la regla de movimiento reducido del paisaje, que había quedado con una coma final y sin bloque de declaraciones ni cierres. Se conservaron los contenidos actuales de ambos archivos y se marcaron como resueltos los conflictos de merge pendientes.
+- **Motivo:** corregir los errores reportados en los archivos.
+- **Resultado:** corrección revisada estáticamente; no se ejecutaron lint, build ni pruebas.

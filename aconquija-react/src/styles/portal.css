@@ -737,5 +737,9 @@
   .portal-landscape__forest,
   .portal-landscape__mist,
   .portal-landscape__birds,
-  .portal-landscape__animals,
+  .portal-landscape__animals {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
