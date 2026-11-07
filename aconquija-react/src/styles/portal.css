@@ -634,9 +634,7 @@
   --sky-top: #b8cdd1;
   --sky-horizon: #edc7ae;
   --sky-low: #d9a98f;
-  --cloud: #fff0dc;
   --bird: #283238;
-  --snow: #e8ded6;
   --land-far: #aeb5bd;
   --land-far-shadow: #818c98;
   --land-mid: #707b87;
@@ -681,10 +679,6 @@
 .portal-landscape__birds { animation-name: portal-landscape-fade; animation-delay: 1.75s; }
 .portal-landscape__animals { animation-name: portal-landscape-rise; animation-delay: 2.05s; }
 .portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 2.35s; }
-.portal-landscape__clouds {
-  opacity: .9;
-  animation: portal-landscape-fade 2.8s .2s both;
-}
 @keyframes portal-landscape-from-left {
   from { opacity: 0; transform: translate3d(-4%, 2%, 0) scale(1.035); }
   to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
@@ -705,9 +699,7 @@
   --sky-top: #344657;
   --sky-horizon: #8c6870;
   --sky-low: #a97870;
-  --cloud: #e4c5b4;
   --bird: #18252c;
-  --snow: #c9c2c1;
   --land-far: #7d828f;
   --land-far-shadow: #5c6574;
   --land-mid: #4d5868;
@@ -744,9 +736,4 @@
   .portal-landscape__mist,
   .portal-landscape__birds,
   .portal-landscape__animals,
-  .portal-landscape__clouds {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
 }
