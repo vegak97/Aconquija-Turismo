@@ -2058,3 +2058,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se acortó el retraso de Turismo de 5,95 a 5,5 segundos y el de Gobierno de 6,3 a 5,75 segundos. La entrada ahora dura 1,05 segundos (antes 1,45), con desplazamiento vertical más perceptible, escala inicial ligeramente menor y desenfoque suave que se disipa al asentarse. Se mantiene el orden posterior a la composición del paisaje y la separación entre las dos tarjetas.
 - **Motivo y autorización:** solicitud directa del usuario para mejorar la entrada de las tarjetas y reducir un poco la espera, que se percibía demasiado larga.
 - **Resultado:** cambios guardados en la rama de prueba. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
+
+
+### 2026-11-06T23:39:32-03:00 — Rediseñar el paisaje del portal con estética de atardecer
+
+- **Rama:** `feature/paisaje-animado-portal`.
+- **Archivos afectados:** `src/components/portal/PortalMountainScene.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se reemplazó el paisaje geométrico azul anterior por una ilustración SVG panorámica inspirada en la referencia aportada: cielo degradado de atardecer, nubes finas, aves, montañas superpuestas con sombras, bruma, bosque de pinos en silueta y dos figuras de ciervos en primer plano. El paisaje cubre ahora el fondo completo, sin la máscara que dejaba zonas del fondo anterior visibles. Se adaptaron las paletas para modo claro y oscuro y se mantuvieron las entradas animadas por capas y el soporte de movimiento reducido. Las tarjetas se retrasaron a 6,05 s y 6,3 s para que la nueva composición termine antes de su aparición.
+- **Motivo y autorización:** petición directa del usuario para probar un fondo similar a la imagen de paisaje de atardecer compartida.
+- **Resultado:** revisión estática de la estructura SVG, clases de animación y variables de ambas paletas. No se ejecutaron lint, build ni prueba visual en navegador. `main` permanece intacta.
