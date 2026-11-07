@@ -2038,3 +2038,12 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminó el controlador que interceptaba el clic de la tarjeta de Turismo, fijaba temporalmente el contenedor de imagen y lo expandía hasta cubrir la ventana. También se retiraron el import y la instancia de `useNavigate` que solo se utilizaban para esa transición, y se restauró el enlace directo `/turismo`.
 - **Motivo y autorización:** petición directa del usuario para quitar el efecto restante que agrandaba la imagen al seleccionar la tarjeta.
 - **Resultado:** cambio guardado en la rama `main` y revisado estáticamente; se confirmó que ya no quedan referencias al controlador ni a `Element.animate()` en la página. Se conserva el enlace de navegación y no se modificaron los estilos de las tarjetas ni las páginas internas de Turismo. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-07T03:52:09-03:00 — Corregir enlaces del pie de página desde páginas internas
+
+- **Archivos afectados:** `src/components/layout/Footer.jsx`; `Registro.md`.
+- **Cambio concreto:** los enlaces de las columnas «Explorar» y «Servicios» dejaron de apuntar a fragmentos locales como `#explorar` y ahora navegan a las secciones correspondientes de `/turismo` mediante enlaces de React Router (`/turismo#...`).
+- **Problema corregido:** al seleccionar esos enlaces desde una página de detalle, el navegador buscaba el identificador en la página actual, donde no existe, en lugar de regresar a la portada turística.
+- **Motivo y autorización:** revisión general solicitada directamente por el usuario el 2026-11-07; corrección de navegación necesaria para resolver la incoherencia encontrada.
+- **Resultado:** actualización aplicada en `main` y revisada estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
