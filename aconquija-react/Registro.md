@@ -2071,3 +2071,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** las tarjetas esperan 2 segundos y luego ejecutan una animación de entrada de 2 segundos; quedan completamente visibles al cumplirse aproximadamente 4 segundos desde que se carga la portada. Se conserva `opacity: 1` como estado base para evitar que queden invisibles si la animación no se ejecuta, y `prefers-reduced-motion` mantiene su comportamiento accesible.
 - **Motivo y autorización:** precisión solicitada por el usuario: el plazo de 4 segundos debe contarse desde que los visitantes entran a la página.
 - **Resultado:** ajuste aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
+
+
+### 2026-11-08T01:54:54-03:00 — Reconfigurar la aparición de las tarjetas del portal
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se reemplazó la espera separada de 2 segundos más animación de 2 segundos por una única animación de 4 segundos iniciada al montar la portada. Las tarjetas permanecen transparentes durante la primera mitad y aparecen juntas durante la segunda mitad; quedan completamente visibles al cumplirse los 4 segundos. Se conserva la excepción accesible para `prefers-reduced-motion`, que evita mantenerlas ocultas.
+- **Motivo y autorización:** nueva petición directa del usuario porque la configuración anterior no produjo el resultado esperado.
+- **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
