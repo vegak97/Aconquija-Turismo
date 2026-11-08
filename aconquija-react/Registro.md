@@ -2063,3 +2063,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** las tarjetas dejan de depender de una animación de opacidad para hacerse visibles. Se establece `opacity: 1` como estado base y la animación conserva únicamente el desplazamiento y la escala suaves de entrada, con su duración y retraso actuales.
 - **Motivo y autorización:** petición directa del usuario porque las tarjetas estaban presentes en la portada, pero no se veían después de integrar el paisaje SVG.
 - **Resultado:** ajuste aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
+
+
+### 2026-11-08T01:50:25-03:00 — Ajustar la aparición de las tarjetas a cuatro segundos desde la entrada
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** las tarjetas esperan 2 segundos y luego ejecutan una animación de entrada de 2 segundos; quedan completamente visibles al cumplirse aproximadamente 4 segundos desde que se carga la portada. Se conserva `opacity: 1` como estado base para evitar que queden invisibles si la animación no se ejecuta, y `prefers-reduced-motion` mantiene su comportamiento accesible.
+- **Motivo y autorización:** precisión solicitada por el usuario: el plazo de 4 segundos debe contarse desde que los visitantes entran a la página.
+- **Resultado:** ajuste aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
