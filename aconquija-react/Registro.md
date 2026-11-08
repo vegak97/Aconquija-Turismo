@@ -2047,3 +2047,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Problema corregido:** al seleccionar esos enlaces desde una página de detalle, el navegador buscaba el identificador en la página actual, donde no existe, en lugar de regresar a la portada turística.
 - **Motivo y autorización:** revisión general solicitada directamente por el usuario el 2026-11-07; corrección de navegación necesaria para resolver la incoherencia encontrada.
 - **Resultado:** actualización aplicada en `main` y revisada estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-08T01:17:01-03:00 — Recuperar e integrar el paisaje SVG animado del portal institucional
+
+- **Archivos afectados:** `src/components/portal/PortalMountainScene.jsx` (nuevo); `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se recuperó desde la rama `feature/paisaje-animado-portal` el componente SVG del paisaje y se integró en la portada institucional de `main`. Incluye cielo de atardecer, montañas en planos de profundidad, 41 siluetas de pinos en dos capas, aves, dos ciervos y bruma. Se incorporaron sus animaciones por capas, paletas para modo claro y oscuro, adaptación móvil y respeto por `prefers-reduced-motion`.
+- **Criterio de integración:** se conservaron la versión actual de `PortalHomePage.jsx`, el clima, el selector de tema, las tarjetas y sus animaciones; únicamente se añadió el paisaje como fondo decorativo.
+- **Motivo y autorización:** el usuario autorizó expresamente integrar en `main` el fondo animado recuperado de la rama de trabajo, preservando las mejoras posteriores de la portada.
+- **Resultado:** archivos integrados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
