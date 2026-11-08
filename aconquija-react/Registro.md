@@ -2055,3 +2055,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Criterio de integración:** se conservaron la versión actual de `PortalHomePage.jsx`, el clima, el selector de tema, las tarjetas y sus animaciones; únicamente se añadió el paisaje como fondo decorativo.
 - **Motivo y autorización:** el usuario autorizó expresamente integrar en `main` el fondo animado recuperado de la rama de trabajo, preservando las mejoras posteriores de la portada.
 - **Resultado:** archivos integrados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-08T01:44:16-03:00 — Corregir la visibilidad de las tarjetas del portal institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** las tarjetas dejan de depender de una animación de opacidad para hacerse visibles. Se establece `opacity: 1` como estado base y la animación conserva únicamente el desplazamiento y la escala suaves de entrada, con su duración y retraso actuales.
+- **Motivo y autorización:** petición directa del usuario porque las tarjetas estaban presentes en la portada, pero no se veían después de integrar el paisaje SVG.
+- **Resultado:** ajuste aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
