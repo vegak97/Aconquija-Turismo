@@ -650,3 +650,116 @@
   .portal-weather__reading > span { display: none; }
   .portal-theme-toggle { min-height: 2rem; padding: .3rem .4rem; font-size: .54rem; }
 }
+
+/* Paisaje panorámico de atardecer para el portal institucional */
+.portal-landscape {
+  --sky-top: #b8cdd1;
+  --sky-horizon: #edc7ae;
+  --sky-low: #d9a98f;
+  --bird: #283238;
+  --land-far: #aeb5bd;
+  --land-far-shadow: #818c98;
+  --land-mid: #707b87;
+  --land-mid-shadow: #53616c;
+  --land-near: #46545b;
+  --land-near-shadow: #35444a;
+  --mist-light: #e9d8cb;
+  --ground-top: #33434a;
+  --ground-bottom: #1f2c31;
+  --forest-back: #26383e;
+  --forest-front: #17262b;
+  --land-mist: rgba(215, 224, 220, .18);
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+}
+.portal-landscape__art {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.portal-landscape__ridge,
+.portal-landscape__forest,
+.portal-landscape__mist,
+.portal-landscape__birds,
+.portal-landscape__animals {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  opacity: 0;
+  animation-duration: 3.4s;
+  animation-timing-function: cubic-bezier(.2,.72,.2,1);
+  animation-fill-mode: both;
+}
+.portal-landscape__ridge--far { animation-name: portal-landscape-from-left; animation-delay: .1s; }
+.portal-landscape__ridge--middle { animation-name: portal-landscape-from-right; animation-delay: .55s; }
+.portal-landscape__ridge--near { animation-name: portal-landscape-from-left; animation-delay: 1s; }
+.portal-landscape__forest--back { animation-name: portal-landscape-rise; animation-delay: 1.45s; }
+.portal-landscape__forest--front { animation-name: portal-landscape-rise; animation-delay: 1.9s; }
+.portal-landscape__birds { animation-name: portal-landscape-fade; animation-delay: 1.75s; }
+.portal-landscape__animals { animation-name: portal-landscape-rise; animation-delay: 2.05s; }
+.portal-landscape__mist { animation-name: portal-landscape-fade; animation-delay: 2.35s; }
+@keyframes portal-landscape-from-left {
+  from { opacity: 0; transform: translate3d(-4%, 2%, 0) scale(1.035); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes portal-landscape-from-right {
+  from { opacity: 0; transform: translate3d(4%, 3%, 0) scale(1.035); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes portal-landscape-rise {
+  from { opacity: 0; transform: translate3d(0, 8%, 0) scale(1.02); }
+  to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes portal-landscape-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.portal-page--dark .portal-landscape {
+  --sky-top: #344657;
+  --sky-horizon: #8c6870;
+  --sky-low: #a97870;
+  --bird: #18252c;
+  --land-far: #7d828f;
+  --land-far-shadow: #5c6574;
+  --land-mid: #4d5868;
+  --land-mid-shadow: #394653;
+  --land-near: #303d46;
+  --land-near-shadow: #25343b;
+  --mist-light: #b5a3a0;
+  --ground-top: #26343b;
+  --ground-bottom: #172329;
+  --forest-back: #1d2b31;
+  --forest-front: #101c22;
+  --land-mist: rgba(117, 133, 141, .16);
+}
+.portal-page--dark .portal-landscape::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 28, 39, .04), transparent 46%, rgba(8, 19, 30, .12));
+  content: "";
+}
+.portal-main {
+  position: relative;
+  z-index: 1;
+}
+.portal-header {
+  z-index: 2;
+}
+@media (max-width: 680px) {
+  .portal-landscape { opacity: .94; }
+  .portal-page--dark .portal-landscape { opacity: .9; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-landscape__ridge,
+  .portal-landscape__forest,
+  .portal-landscape__mist,
+  .portal-landscape__birds,
+  .portal-landscape__animals {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
