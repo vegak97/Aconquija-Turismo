@@ -14,15 +14,15 @@ function Footer() {
           <div className="foot-cols">
             <div className="foot-col">
               <h5>Explorar</h5>
-              <a href="#explorar">Excursiones</a>
-              <a href="#lugares">Lugares</a>
-              <a href="#estaciones">Estaciones</a>
+              <Link to="/turismo#explorar">Excursiones</Link>
+              <Link to="/turismo#lugares">Lugares</Link>
+              <Link to="/turismo#estaciones">Estaciones</Link>
             </div>
             <div className="foot-col">
               <h5>Servicios</h5>
-              <a href="#servicios">Dónde dormir</a>
-              <a href="#servicios">Dónde comer</a>
-              <a href="#servicios">Guías locales</a>
+              <Link to="/turismo#servicios">Dónde dormir</Link>
+              <Link to="/turismo#servicios">Dónde comer</Link>
+              <Link to="/turismo#servicios">Guías locales</Link>
             </div>
             <div className="foot-col">
               <h5>Contacto</h5>

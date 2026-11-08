@@ -2022,3 +2022,36 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se añadió al menú principal de Aconquija Turismo un enlace visible «Portal institucional» que conduce a la ruta `/`. El acceso utiliza un estilo de botón delineado en arena/dorado, incluye un icono de retorno, cierra el menú móvil al seleccionarlo y mantiene visible la opción dentro del menú lateral en teléfonos.
 - **Motivo y autorización:** petición directa del usuario para incorporar un botón que permita volver desde Aconquija Turismo al portal institucional.
 - **Resultado:** cambios guardados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador; queda pendiente comprobar la presentación en escritorio y móvil.
+
+
+### 2026-11-07T01:26:43-03:00 — Suavizar la aparición de las tarjetas del portal institucional
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se amplió la duración de la animación de entrada de las tarjetas de 1,45 a 2 segundos, se adoptó una curva de aceleración y desaceleración más suave y se redujo el desplazamiento vertical de 12 a 6 píxeles junto con una escala inicial casi imperceptible. Ambas tarjetas ahora comparten el mismo inicio y el mismo retraso de 0,4 segundos, para que aparezcan juntas y con un movimiento uniforme. Se conserva la regla de accesibilidad para usuarios que prefieren movimiento reducido.
+- **Motivo y autorización:** petición directa del usuario para que la aparición de las tarjetas sea más lenta y suave a la vista.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-07T03:09:00-03:00 — Eliminar la transición de zoom de la tarjeta de Turismo
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminó el controlador que interceptaba el clic de la tarjeta de Turismo, fijaba temporalmente el contenedor de imagen y lo expandía hasta cubrir la ventana. También se retiraron el import y la instancia de `useNavigate` que solo se utilizaban para esa transición, y se restauró el enlace directo `/turismo`.
+- **Motivo y autorización:** petición directa del usuario para quitar el efecto restante que agrandaba la imagen al seleccionar la tarjeta.
+- **Resultado:** cambio guardado en la rama `main` y revisado estáticamente; se confirmó que ya no quedan referencias al controlador ni a `Element.animate()` en la página. Se conserva el enlace de navegación y no se modificaron los estilos de las tarjetas ni las páginas internas de Turismo. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
+### 2026-11-07T03:52:09-03:00 — Corregir enlaces del pie de página desde páginas internas
+
+- **Archivos afectados:** `src/components/layout/Footer.jsx`; `Registro.md`.
+- **Cambio concreto:** los enlaces de las columnas «Explorar» y «Servicios» dejaron de apuntar a fragmentos locales como `#explorar` y ahora navegan a las secciones correspondientes de `/turismo` mediante enlaces de React Router (`/turismo#...`).
+- **Problema corregido:** al seleccionar esos enlaces desde una página de detalle, el navegador buscaba el identificador en la página actual, donde no existe, en lugar de regresar a la portada turística.
+- **Motivo y autorización:** revisión general solicitada directamente por el usuario el 2026-11-07; corrección de navegación necesaria para resolver la incoherencia encontrada.
+- **Resultado:** actualización aplicada en `main` y revisada estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-08T01:17:01-03:00 — Recuperar e integrar el paisaje SVG animado del portal institucional
+
+- **Archivos afectados:** `src/components/portal/PortalMountainScene.jsx` (nuevo); `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se recuperó desde la rama `feature/paisaje-animado-portal` el componente SVG del paisaje y se integró en la portada institucional de `main`. Incluye cielo de atardecer, montañas en planos de profundidad, 41 siluetas de pinos en dos capas, aves, dos ciervos y bruma. Se incorporaron sus animaciones por capas, paletas para modo claro y oscuro, adaptación móvil y respeto por `prefers-reduced-motion`.
+- **Criterio de integración:** se conservaron la versión actual de `PortalHomePage.jsx`, el clima, el selector de tema, las tarjetas y sus animaciones; únicamente se añadió el paisaje como fondo decorativo.
+- **Motivo y autorización:** el usuario autorizó expresamente integrar en `main` el fondo animado recuperado de la rama de trabajo, preservando las mejoras posteriores de la portada.
+- **Resultado:** archivos integrados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
