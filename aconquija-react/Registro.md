@@ -2111,3 +2111,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se restauró el avance automático hacia la derecha, de una tarjeta por ciclo. El carrusel espera 2,5 segundos entre tarjetas y deja terminar el desplazamiento suave antes de programar el siguiente avance. Se recuperó la pausa temporal de cuatro segundos al interactuar mediante mouse o pantalla táctil. Se conserva el bucle infinito basado en tres copias de la lista y el reposicionamiento entre conjuntos, junto con la navegación manual y el centrado de tarjetas.
 - **Motivo y autorización:** petición directa del usuario para recuperar el movimiento automático original, pero evitando que avance continuamente sin pausas y conservando el efecto de tarjetas infinitas.
 - **Resultado:** cambio aplicado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales o táctiles en navegador; queda pendiente comprobar el ritmo y el bucle en funcionamiento.
+
+### 2026-11-18T23:00:00-03:00 — Evitar el retroceso visible del bucle infinito en móviles
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
+- **Cambio concreto:** el reposicionamiento entre las tres copias del carrusel ahora fuerza un cambio instantáneo de `scrollLeft`, desactivando temporalmente `scroll-behavior` solo durante ese ajuste y restaurando inmediatamente el valor anterior. Se aplica tanto al salto hacia el conjunto central como al regreso desde el tercer conjunto.
+- **Motivo y autorización:** petición directa del usuario para corregir el comportamiento móvil, donde al completar el carrusel se veía una animación hacia atrás hasta el principio; el comportamiento de escritorio debe mantenerse.
+- **Resultado:** corrección aplicada en `main`. Revisión estática pendiente de confirmar en el dispositivo; no se ejecutaron lint, build ni pruebas visuales/táctiles.
+
