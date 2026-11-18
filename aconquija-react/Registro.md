@@ -2,6 +2,15 @@
 
 Zona horaria: Argentina (UTC-03:00).
 
+## 2026-11-18
+
+### 16:58:00 -03:00 — Quitar el encabezado superior de Servicios
+
+- **Archivos afectados:** `src/pages/ServicesPage.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminó únicamente el bloque superior de la página de Servicios que contenía el enlace «Volver a Aconquija Turismo», la identificación «Aconquija · Catamarca», el título «Servicios para tu estadía» y su texto descriptivo. Se conserva el directorio inferior con categorías, filtros, búsqueda y tarjetas de prestadores.
+- **Motivo y autorización:** petición directa del usuario para borrar toda la parte superior y dejar solamente el contenido inferior.
+- **Resultado:** cambio aplicado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
 ## 2026-10-10
 
 ### 18:53:50 -03:00
