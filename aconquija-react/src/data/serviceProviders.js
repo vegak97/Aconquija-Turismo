@@ -122,7 +122,7 @@ export const serviceCategories = [
 ];
 
 export const serviceProviders = entries.map(([name, locality, category, phones, instagram, facebook]) => ({
-  id: name.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
+  id: name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
   name,
   locality,
   category,
