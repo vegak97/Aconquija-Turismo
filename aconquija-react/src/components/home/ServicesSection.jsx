@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function ServicesSection() {
   return (
     <section className="servicios" id="servicios">
@@ -7,11 +9,11 @@ export default function ServicesSection() {
           <p>Alojamientos, gastronomía y comercios locales para acompañarte durante tu estadía.</p>
         </div>
         <div className="serv-grid reveal">
-          <a className="serv-item" href="/servicios">
+          <Link className="serv-item" to="/servicios">
             <div className="num">01</div><h4>Dónde dormir</h4>
             <p>Cabañas, hoteles, hospedajes, hosterías y alquileres en Aconquija.</p>
             <div className="serv-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M6 22.5 24 8l18 14.5M11 20v20h26V20M20 40V27h8v13" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"/></svg></div>
-          </a>
+          </Link>
           <a className="serv-item" href="/servicios">
             <div className="num">02</div><h4>Dónde comer</h4>
             <p>Restaurantes, bares, sandwicherías, pizzerías y lugares de comida.</p>
