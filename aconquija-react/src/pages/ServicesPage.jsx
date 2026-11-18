@@ -124,7 +124,7 @@ export default function ServicesPage() {
 
             {filteredProviders.length > 0 ? (
               <div className="services-provider-grid">
-                {filteredProviders.map(provider => <ServiceCard key={provider.id} provider={provider} category={selectedCategory} />)}
+                {filteredProviders.map(provider => <ServiceCard key={provider.id} provider={provider} />)}
               </div>
             ) : (
               <div className="services-empty-state">
