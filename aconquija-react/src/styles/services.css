@@ -4,7 +4,7 @@
   position: relative;
   padding: clamp(132px, 15vw, 190px) 0 78px;
   color: #fff;
-  background: linear-gradient(115deg, rgba(20,27,35,.96), rgba(28,34,44,.86)), url('/imagenes/caballo.webp') center 48% / cover;
+  background: linear-gradient(115deg, #171e27, #303945);
 }
 .services-back-link { display: inline-flex; margin-bottom: 38px; color: #d9c29f; font-size: .82rem; transition: color .25s ease; }
 .services-back-link:hover { color: #fff; }
