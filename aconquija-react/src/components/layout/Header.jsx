@@ -20,19 +20,20 @@ function Header({ animateOnLoad = false }) {
     }
   }, [menuOpen])
 
-  // Mantiene el mismo estado visual de la navegación en todas las rutas.
+  // En Servicios la navegación entra directamente con el fondo de pizarra.
+  // En las demás rutas conserva el cambio de fondo al desplazarse.
   useEffect(() => {
     const nav = document.getElementById('siteNav')
     if (!nav) return undefined
 
     const updateScroll = () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60)
+      nav.classList.toggle('scrolled', location.pathname === '/servicios' || window.scrollY > 60)
     }
 
     updateScroll()
     window.addEventListener('scroll', updateScroll, { passive: true })
     return () => window.removeEventListener('scroll', updateScroll)
-  }, [])
+  }, [location.pathname])
 
   // Los enlaces de secciones también funcionan cuando se llega desde una página secundaria.
   useEffect(() => {
