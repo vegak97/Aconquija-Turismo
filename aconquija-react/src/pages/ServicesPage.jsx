@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import Footer from '../components/layout/Footer'
 import { serviceCategories, serviceProviders } from '../data/serviceProviders'
-import '../styles/services.css'
 
 function WhatsAppLink({ phone }) {
   const digits = phone.replace(/\D/g, '')
