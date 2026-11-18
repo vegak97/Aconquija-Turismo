@@ -5,8 +5,6 @@ import { places } from '../../data/homeData'
 export default function PlacesCarousel() {
   const placeScrollRef = useRef(null)
   const placeLoopWidthRef = useRef(0)
-  const placePausedRef = useRef(false)
-  const placeResumeTimerRef = useRef(null)
   const placeSnapTimerRef = useRef(null)
   const placeTouchStartRef = useRef(null)
   const placeSwipedRef = useRef(false)
@@ -63,7 +61,6 @@ export default function PlacesCarousel() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
       if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
     }
   }, [places.length])
@@ -83,7 +80,6 @@ export default function PlacesCarousel() {
     const touch = event.touches[0]
     if (!touch) return
     placeTouchStartRef.current = { x: touch.clientX, y: touch.clientY }
-    pausePlaceCarousel()
   }
 
   const handlePlaceTouchEnd = (event) => {
@@ -103,13 +99,6 @@ export default function PlacesCarousel() {
     pausePlaceCarousel()
   }
 
-  function pausePlaceCarousel() {
-    placePausedRef.current = true
-    if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
-    placeResumeTimerRef.current = window.setTimeout(() => {
-      placePausedRef.current = false
-    }, 4000)
-  }
 
   return (
     <section className="lugares" id="lugares">
