@@ -72,7 +72,7 @@ function Header({ animateOnLoad = false }) {
           <Link to={location.pathname === '/turismo' ? '#explorar' : '/turismo#explorar'} onClick={(event) => handleSectionClick(event, 'explorar')}>Explorar</Link>
           <Link to={location.pathname === '/turismo' ? '#lugares' : '/turismo#lugares'} onClick={(event) => handleSectionClick(event, 'lugares')}>Lugares</Link>
           <Link to={location.pathname === '/turismo' ? '#estaciones' : '/turismo#estaciones'} onClick={(event) => handleSectionClick(event, 'estaciones')}>Estaciones</Link>
-          <Link to={location.pathname === '/turismo' ? '#servicios' : '/turismo#servicios'} onClick={(event) => handleSectionClick(event, 'servicios')}>Servicios</Link>
+          <Link to={'/servicios'} onClick={() => setMenuOpen(false)}>Servicios</Link>
           <Link to={location.pathname === '/turismo' ? '#sobre' : '/turismo#sobre'} onClick={(event) => handleSectionClick(event, 'sobre')}>Sobre Aconquija</Link>
           <Link to="/" className="portal-return-link" onClick={() => setMenuOpen(false)}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg>
