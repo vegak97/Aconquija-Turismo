@@ -6,8 +6,9 @@ import { serviceCategories, serviceProviders } from '../data/serviceProviders'
 import '../styles/services.css'
 
 function WhatsAppLink({ phone }) {
-  const digits = phone.replace(/\\D/g, '')
-  const whatsappNumber = digits.length === 10 ? `549${digits}` : digits
+  const digits = phone.replace(/\D/g, '')
+  const whatsappNumber = `549${digits}`
+  if (digits.length !== 10) return <a className="service-contact" href={`tel:${digits}`}>☎ {phone}</a>
   return (
     <a className="service-contact service-contact--whatsapp" href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.8a8.6 8.6 0 0 1-12.7 7.5L3 20.5l1.3-4.6a8.6 8.6 0 1 1 16.2-4.1Z" /><path d="M8.2 7.8c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.2.2-.2.4 0 .7.5.9 1.2 1.6 2.1 2.1.3.2.5.2.7 0l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.3.3.3.5 0 .3-.2 1-.6 1.3-.4.4-1 .6-1.6.5-1-.1-2.2-.7-3.4-1.7-1.4-1.2-2.3-2.6-2.6-3.5-.3-.8-.2-1.7.4-2.7Z" /></svg>
@@ -16,7 +17,7 @@ function WhatsAppLink({ phone }) {
   )
 }
 
-function ServiceCard({ provider, category }) {
+function ServiceCard({ provider }) {
   const [expanded, setExpanded] = useState(false)
   const hasDescription = Boolean(provider.description)
   const hasImage = Boolean(provider.image)
