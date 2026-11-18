@@ -2103,3 +2103,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se eliminó el temporizador recursivo que avanzaba una tarjeta cada 2,5 segundos y volvía a programarse indefinidamente. También se retiraron las referencias y manejadores que solo servían para pausar ese avance automático. Se conserva el desplazamiento manual mediante flechas y gestos táctiles, el centrado de tarjetas y el bucle horizontal.
 - **Motivo y autorización:** petición directa del usuario para corregir el carrusel, que se movía constantemente y no se detenía.
 - **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
+
+
+### 2026-11-18T05:23:30-03:00 — Restaurar el avance automático pausado del carrusel de lugares
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
+- **Cambio concreto:** se restauró el avance automático hacia la derecha, de una tarjeta por ciclo. El carrusel espera 2,5 segundos entre tarjetas y deja terminar el desplazamiento suave antes de programar el siguiente avance. Se recuperó la pausa temporal de cuatro segundos al interactuar mediante mouse o pantalla táctil. Se conserva el bucle infinito basado en tres copias de la lista y el reposicionamiento entre conjuntos, junto con la navegación manual y el centrado de tarjetas.
+- **Motivo y autorización:** petición directa del usuario para recuperar el movimiento automático original, pero evitando que avance continuamente sin pausas y conservando el efecto de tarjetas infinitas.
+- **Resultado:** cambio aplicado en la rama `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales o táctiles en navegador; queda pendiente comprobar el ritmo y el bucle en funcionamiento.
