@@ -21,6 +21,7 @@ import BalnearioBuenaVistaPage from './pages/third-level/BalnearioBuenaVistaPage
 import CristoRedentorPage from './pages/third-level/CristoRedentorPage'
 import VirgenDelVallePage from './pages/third-level/VirgenDelVallePage'
 import CabalgatasPage from './pages/third-level/CabalgatasPage'
+import ServicesPage from './pages/ServicesPage'
 import NotFound from './pages/NotFound'
 import SpotifyFloatingPlayer from './components/ui/SpotifyFloatingPlayer'
 
@@ -93,6 +94,7 @@ export default function App() {
         <Route path={cristoRedentorPath} element={<CristoRedentorPage />} />
         <Route path={virgenDelVallePath} element={<VirgenDelVallePage />} />
         <Route path={cabalgatasPath} element={<CabalgatasPage />} />
+        <Route path="/servicios" element={<ServicesPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <TourismFloatingPlayer />
