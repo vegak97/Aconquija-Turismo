@@ -2128,3 +2128,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Motivo y autorización:** petición directa del usuario para corregir el comportamiento móvil, donde al completar el carrusel se veía una animación hacia atrás hasta el principio; el comportamiento de escritorio debe mantenerse.
 - **Resultado:** corrección aplicada en `main`. Revisión estática pendiente de confirmar en el dispositivo; no se ejecutaron lint, build ni pruebas visuales/táctiles.
 
+
+
+### 2026-11-18T17:28:40-03:00 — Ajustar separación del directorio y fondo inicial de navegación en Servicios
+
+- **Archivos afectados:** `src/components/layout/Header.jsx`; `src/styles/services.css`; `Registro.md`.
+- **Cambio concreto:** se añadieron 10 píxeles al espacio superior del directorio de Servicios (de 76 a 86 px en escritorio y de 44 a 54 px en tabletas/móviles). La navegación ahora activa desde el primer render el estado visual `scrolled` al entrar en `/servicios`, mostrando el fondo pizarra oscura `rgba(28,34,44,.95)` sin esperar al desplazamiento. En las demás rutas se conserva el comportamiento anterior.
+- **Motivo y autorización:** petición directa del usuario para separar un poco más el contenido de la barra de navegación y mostrar esta última en pizarra oscura al ingresar a Servicios.
+- **Resultado:** cambios guardados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
