@@ -36,7 +36,7 @@ const entries = [
   ["Sandwichería Vibras","Las Rosas","comer","3834341635,3834778380"],
   ["Venta de bebidas Zulema Miranda","Las Rosas","comer"],
   ["Parador Yunka Suma","Yunka Suma","comer"],
-  ["Complejo Valle Hermoso","Yunka Suma","comer"],
+  ["Complejo Valle Hermoso","Yunka Suma","dormir"],
 
   // Comercios y compras
   ["Finca La Victoria","Cóndor Huasi","compras","3834955322","fincalavictoria","Finca la Victoria"],
