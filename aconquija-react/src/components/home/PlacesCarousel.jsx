@@ -53,29 +53,8 @@ export default function PlacesCarousel() {
       track.scrollLeft = loopWidth
     }
 
-    let autoplayTimeout = null
-
-    const getCardStep = () => {
-      const firstCard = track.querySelector('.place-card')
-      const secondCard = track.children[1]
-      if (!firstCard || !secondCard) return 0
-      return secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
-    }
-
-    // Avanza una tarjeta, como el botón de siguiente, y deja tiempo para mirar.
-    const scheduleNextCard = () => {
-      autoplayTimeout = window.setTimeout(() => {
-        if (!placePausedRef.current) {
-          const step = getCardStep()
-          if (step > 0) track.scrollBy({ left: step, behavior: 'smooth' })
-        }
-        scheduleNextCard()
-      }, 2500)
-    }
-
     positionAtMiddleSet()
     updateCenterCard()
-    scheduleNextCard()
     const handleResize = () => {
       positionAtMiddleSet()
       updateCenterCard()
@@ -84,7 +63,6 @@ export default function PlacesCarousel() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
-      if (autoplayTimeout) window.clearTimeout(autoplayTimeout)
       if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
       if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
     }
