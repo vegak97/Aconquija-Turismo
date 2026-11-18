@@ -20,9 +20,9 @@ function Footer() {
             </div>
             <div className="foot-col">
               <h5>Servicios</h5>
-              <Link to="/turismo#servicios">Dónde dormir</Link>
-              <Link to="/turismo#servicios">Dónde comer</Link>
-              <Link to="/turismo#servicios">Guías locales</Link>
+              <Link to="/servicios">Dónde dormir</Link>
+              <Link to="/servicios">Dónde comer</Link>
+              <Link to="/servicios">Comercios y compras</Link>
             </div>
             <div className="foot-col">
               <h5>Contacto</h5>

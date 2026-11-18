@@ -149,7 +149,13 @@
   /* Cards explorar en pantalla pequeña */
   .exp-card { height: auto; aspect-ratio: 3 / 4; }
 
-  /* Carrusel de lugares */
+  /* Carrusel de lugares: un gesto táctil equivale a una sola tarjeta. */
+  .place-scroll {
+    overflow-x: hidden;
+    touch-action: pan-y;
+    scroll-behavior: smooth;
+    scroll-snap-type: none;
+  }
   .place-card { flex: 0 0 100%; max-width: none; }
   .place-card.is-center { transform: none; filter: none; }
   .place-img  { height: 260px; }

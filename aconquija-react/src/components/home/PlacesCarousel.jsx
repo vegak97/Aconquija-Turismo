@@ -8,6 +8,8 @@ export default function PlacesCarousel() {
   const placePausedRef = useRef(false)
   const placeResumeTimerRef = useRef(null)
   const placeSnapTimerRef = useRef(null)
+  const placeTouchStartRef = useRef(null)
+  const placeSwipedRef = useRef(false)
 
   // Esta función debe vivir en el alcance del componente: también la usa
   // el onScroll del JSX para sincronizar la elevación durante el movimiento.
@@ -88,7 +90,42 @@ export default function PlacesCarousel() {
     }
   }, [places.length])
 
-  const pausePlaceCarousel = () => {
+  const movePlaceByOne = (direction) => {
+    const track = placeScrollRef.current
+    const firstCard = track?.querySelector('.place-card')
+    const secondCard = track?.children[1]
+    if (!track || !firstCard || !secondCard) return
+
+    const step = secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
+    if (step > 0) track.scrollBy({ left: step * direction, behavior: 'smooth' })
+  }
+
+  const handlePlaceTouchStart = (event) => {
+    placeSwipedRef.current = false
+    const touch = event.touches[0]
+    if (!touch) return
+    placeTouchStartRef.current = { x: touch.clientX, y: touch.clientY }
+    pausePlaceCarousel()
+  }
+
+  const handlePlaceTouchEnd = (event) => {
+    const start = placeTouchStartRef.current
+    const touch = event.changedTouches[0]
+    placeTouchStartRef.current = null
+    if (!start || !touch) return
+
+    const deltaX = touch.clientX - start.x
+    const deltaY = touch.clientY - start.y
+    if (Math.abs(deltaX) < 40 || Math.abs(deltaX) < Math.abs(deltaY) * 1.15) return
+
+    // Un gesto completo equivale siempre a una sola tarjeta, aunque el dedo
+    // recorra mucha distancia o el movimiento haya sido muy rápido.
+    placeSwipedRef.current = true
+    movePlaceByOne(deltaX < 0 ? 1 : -1)
+    pausePlaceCarousel()
+  }
+
+  function pausePlaceCarousel() {
     placePausedRef.current = true
     if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
     placeResumeTimerRef.current = window.setTimeout(() => {
@@ -115,7 +152,7 @@ export default function PlacesCarousel() {
           }}>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6" /></svg>
           </button>
-          <div className="place-scroll reveal" id="placeScroll" ref={placeScrollRef} onScroll={() => {
+          <div className="place-scroll reveal" id="placeScroll" ref={placeScrollRef} onTouchStart={handlePlaceTouchStart} onTouchEnd={handlePlaceTouchEnd} onTouchCancel={() => { placeTouchStartRef.current = null }} onClickCapture={(event) => { if (placeSwipedRef.current) { event.preventDefault(); event.stopPropagation(); placeSwipedRef.current = false } }} onScroll={() => {
             const track = placeScrollRef.current
             const loopWidth = placeLoopWidthRef.current
             if (!track || !loopWidth) return
@@ -127,7 +164,11 @@ export default function PlacesCarousel() {
             // Acompañar el desplazamiento: la tarjeta que sale del centro baja
             // y la que entra se eleva, sin esperar al final del movimiento.
             updateCenterCard()
-    
+
+            // En teléfonos, cada gesto ya solicita un paso exacto; no aplicar
+            // el ajuste libre del trackpad mientras termina la animación.
+            if (window.matchMedia('(max-width: 520px)').matches) return
+
             // Cuando el trackpad deja de mover el carrusel, alinear la tarjeta
             // más cercana al centro para que no queden imágenes a medio camino.
             if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)

@@ -2079,3 +2079,19 @@ Zona horaria: Argentina (UTC-03:00).
 - **Cambio concreto:** se reemplazó la espera separada de 2 segundos más animación de 2 segundos por una única animación de 4 segundos iniciada al montar la portada. Las tarjetas permanecen transparentes durante la primera mitad y aparecen juntas durante la segunda mitad; quedan completamente visibles al cumplirse los 4 segundos. Se conserva la excepción accesible para `prefers-reduced-motion`, que evita mantenerlas ocultas.
 - **Motivo y autorización:** nueva petición directa del usuario porque la configuración anterior no produjo el resultado esperado.
 - **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+### 2026-11-18T03:54:00-03:00 — Limitar el carrusel móvil de lugares a una tarjeta por gesto
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `src/styles/responsive.css`; `Registro.md`.
+- **Cambio concreto:** en teléfonos de hasta 520 px, el carrusel deja de permitir el desplazamiento horizontal libre y la inercia nativa. Cada gesto horizontal táctil válido avanza o retrocede exactamente una tarjeta, independientemente de la distancia o velocidad del deslizamiento. Se conserva el desplazamiento vertical de la página, el centrado de tarjetas, el bucle del carrusel y la pausa temporal del avance automático al interactuar. También se evita que un gesto de navegación active accidentalmente el enlace de la tarjeta.
+- **Motivo y autorización:** petición directa del usuario para que la navegación móvil de lugares se comporte como TikTok: un solo elemento por deslizamiento.
+- **Resultado:** cambios aplicados en la rama `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas táctiles en un teléfono.
+
+
+### 2026-11-18T04:38:00-03:00 — Integrar el directorio de Servicios turísticos
+
+- **Archivos afectados:** `src/App.jsx`; `src/App.css`; `src/pages/ServicesPage.jsx` (nuevo); `src/data/serviceProviders.js` (nuevo); `src/styles/services.css` (nuevo); `src/components/layout/Header.jsx`; `src/components/layout/Footer.jsx`; `src/components/home/ServicesSection.jsx`; `Registro.md`.
+- **Cambio concreto:** se creó la ruta `/servicios` con las categorías «Dónde dormir», «Dónde comer» y «Comercios y compras», retirando «Guías y excursiones» de la presentación de servicios. Se incorporó el listado de prestadores del documento entregado por el usuario, clasificado por categoría y localidad, con filtro de localidad, búsqueda por nombre, tarjetas con espacio reservado para fotografía y descripción, contactos enlazados, enlaces a redes disponibles y control «Leer más» preparado para descripciones extensas. Se añadió el acceso «Cómo llegar» como estado pendiente hasta contar con enlaces o ubicaciones confirmadas. La navegación principal, el pie de página y las tarjetas de presentación de la portada turística ahora conducen al directorio.
+- **Criterios de contenido:** no se inventaron fotografías, descripciones ni ubicaciones. Los campos correspondientes quedan vacíos y se muestran como pendientes. Los teléfonos de diez dígitos se enlazan a WhatsApp; los números con otra longitud se ofrecen como llamada telefónica, sin alterar el número fuente.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-18 para comenzar la integración de la sección Servicios con las categorías, filtros, tarjetas expandibles, contactos y acceso a Google Maps acordados en la conversación.
+- **Resultado:** cambios aplicados en la rama `main` y revisados estáticamente en los archivos modificados. No se ejecutaron `npm.cmd run lint`, `npm.cmd run build` ni pruebas visuales en navegador; la presentación y el comportamiento quedan pendientes de esas comprobaciones.
