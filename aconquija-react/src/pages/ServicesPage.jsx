@@ -79,15 +79,6 @@ export default function ServicesPage() {
     <>
       <Header />
       <main className="services-page">
-        <section className="services-page-hero">
-          <div className="container">
-            <Link className="services-back-link" to="/turismo">← Volver a Aconquija Turismo</Link>
-            <span className="services-eyebrow">Aconquija · Catamarca</span>
-            <h1>Servicios para tu estadía</h1>
-            <p>Encontrá alojamientos, lugares para comer y comercios en las distintas localidades de Aconquija.</p>
-          </div>
-        </section>
-
         <div className="container services-directory">
           <aside className="services-sidebar" aria-label="Categorías de servicios">
             <p className="services-sidebar-title">Categorías</p>
