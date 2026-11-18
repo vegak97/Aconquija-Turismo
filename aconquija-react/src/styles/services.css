@@ -11,7 +11,7 @@
 .services-eyebrow { display: block; color: #cdaa78; font-size: .72rem; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 600; }
 .services-page-hero h1 { max-width: 760px; margin-top: 16px; font: 500 clamp(2.5rem, 5vw, 4.4rem)/1.08 var(--ff-display); }
 .services-page-hero p { max-width: 620px; margin-top: 18px; color: rgba(255,255,255,.78); line-height: 1.75; font-size: 1rem; }
-.services-directory { display: grid; grid-template-columns: 245px minmax(0,1fr); gap: clamp(28px, 5vw, 64px); padding-top: 76px; padding-bottom: 110px; align-items: start; }
+.services-directory { display: grid; grid-template-columns: 245px minmax(0,1fr); gap: clamp(28px, 5vw, 64px); padding-top: 86px; padding-bottom: 110px; align-items: start; }
 .services-sidebar { position: sticky; top: 112px; padding: 22px 0; border-right: 1px solid rgba(28,34,44,.13); }
 .services-sidebar-title { margin: 0 22px 18px; color: #8c775b; font-size: .7rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; }
 .services-category-button {
@@ -69,7 +69,7 @@
 .services-empty-state button { margin-top: 18px; padding: 10px 17px; border: 1px solid #b88c54; border-radius: 24px; background: transparent; color: #84613a; cursor: pointer; }
 
 @media (max-width: 900px) {
-  .services-directory { grid-template-columns: 1fr; gap: 28px; padding-top: 44px; }
+  .services-directory { grid-template-columns: 1fr; gap: 28px; padding-top: 54px; }
   .services-sidebar { position: static; display: flex; flex-wrap: wrap; gap: 6px; padding: 0 0 16px; border-right: 0; border-bottom: 1px solid rgba(28,34,44,.13); }
   .services-sidebar-title { width: 100%; margin: 0 0 8px; }
   .services-category-button { width: auto; flex: 1 1 auto; border: 1px solid rgba(28,34,44,.12); border-radius: 7px; padding: 12px; }
