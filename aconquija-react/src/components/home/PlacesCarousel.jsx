@@ -11,6 +11,16 @@ export default function PlacesCarousel() {
   const placeTouchStartRef = useRef(null)
   const placeSwipedRef = useRef(false)
 
+  // Reubica el scroll sin animación. En móvil, scroll-behavior: smooth
+  // también puede animar una asignación directa a scrollLeft y hacer visible
+  // el salto de un conjunto al anterior.
+  const setScrollLeftImmediately = (track, position) => {
+    const previousBehavior = track.style.scrollBehavior
+    track.style.scrollBehavior = 'auto'
+    track.scrollLeft = position
+    track.style.scrollBehavior = previousBehavior
+  }
+
   // Esta función debe vivir en el alcance del componente: también la usa
   // el onScroll del JSX para sincronizar la elevación durante el movimiento.
   const updateCenterCard = () => {
@@ -50,7 +60,7 @@ export default function PlacesCarousel() {
       if (loopWidth <= 0) return
 
       placeLoopWidthRef.current = loopWidth
-      track.scrollLeft = loopWidth
+      setScrollLeftImmediately(track, loopWidth)
     }
 
     let autoplayTimeout = null
@@ -164,8 +174,11 @@ export default function PlacesCarousel() {
             if (!track || !loopWidth) return
     
             // Mantener el bucle infinito sin interrumpir el gesto manual.
-            if (track.scrollLeft < loopWidth * 0.5) track.scrollLeft += loopWidth
-            else if (track.scrollLeft >= loopWidth * 2) track.scrollLeft -= loopWidth
+            if (track.scrollLeft < loopWidth * 0.5) {
+              setScrollLeftImmediately(track, track.scrollLeft + loopWidth)
+            } else if (track.scrollLeft >= loopWidth * 2) {
+              setScrollLeftImmediately(track, track.scrollLeft - loopWidth)
+            }
 
             // Acompañar el desplazamiento: la tarjeta que sale del centro baja
             // y la que entra se eleva, sin esperar al final del movimiento.
