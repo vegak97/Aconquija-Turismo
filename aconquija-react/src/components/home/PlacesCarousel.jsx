@@ -5,6 +5,8 @@ import { places } from '../../data/homeData'
 export default function PlacesCarousel() {
   const placeScrollRef = useRef(null)
   const placeLoopWidthRef = useRef(0)
+  const placePausedRef = useRef(false)
+  const placeResumeTimerRef = useRef(null)
   const placeSnapTimerRef = useRef(null)
   const placeTouchStartRef = useRef(null)
   const placeSwipedRef = useRef(false)
@@ -51,8 +53,34 @@ export default function PlacesCarousel() {
       track.scrollLeft = loopWidth
     }
 
+    let autoplayTimeout = null
+    let animationWaitTimeout = null
+
+    const getCardStep = () => {
+      const firstCard = track.querySelector('.place-card')
+      const secondCard = track.children[1]
+      if (!firstCard || !secondCard) return 0
+      return secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left
+    }
+
+    // Espera entre tarjetas: avanza una sola posición y vuelve a esperar
+    // a que termine el desplazamiento antes de iniciar el siguiente ciclo.
+    const scheduleNextCard = (delay = 2500) => {
+      autoplayTimeout = window.setTimeout(() => {
+        if (document.hidden || placePausedRef.current) {
+          scheduleNextCard(1000)
+          return
+        }
+
+        const step = getCardStep()
+        if (step > 0) track.scrollBy({ left: step, behavior: 'smooth' })
+        animationWaitTimeout = window.setTimeout(() => scheduleNextCard(2500), 900)
+      }, delay)
+    }
+
     positionAtMiddleSet()
     updateCenterCard()
+    scheduleNextCard()
     const handleResize = () => {
       positionAtMiddleSet()
       updateCenterCard()
@@ -61,6 +89,9 @@ export default function PlacesCarousel() {
 
     return () => {
       window.removeEventListener('resize', handleResize)
+      if (autoplayTimeout) window.clearTimeout(autoplayTimeout)
+      if (animationWaitTimeout) window.clearTimeout(animationWaitTimeout)
+      if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
       if (placeSnapTimerRef.current) window.clearTimeout(placeSnapTimerRef.current)
     }
   }, [places.length])
@@ -80,6 +111,7 @@ export default function PlacesCarousel() {
     const touch = event.touches[0]
     if (!touch) return
     placeTouchStartRef.current = { x: touch.clientX, y: touch.clientY }
+    pausePlaceCarousel()
   }
 
   const handlePlaceTouchEnd = (event) => {
@@ -99,6 +131,13 @@ export default function PlacesCarousel() {
     pausePlaceCarousel()
   }
 
+  function pausePlaceCarousel() {
+    placePausedRef.current = true
+    if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
+    placeResumeTimerRef.current = window.setTimeout(() => {
+      placePausedRef.current = false
+    }, 4000)
+  }
 
   return (
     <section className="lugares" id="lugares">
