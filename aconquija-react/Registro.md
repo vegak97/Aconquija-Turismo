@@ -2095,3 +2095,11 @@ Zona horaria: Argentina (UTC-03:00).
 - **Criterios de contenido:** no se inventaron fotografías, descripciones ni ubicaciones. Los campos correspondientes quedan vacíos y se muestran como pendientes. Los teléfonos de diez dígitos se enlazan a WhatsApp; los números con otra longitud se ofrecen como llamada telefónica, sin alterar el número fuente.
 - **Motivo y autorización:** petición directa del usuario del 2026-11-18 para comenzar la integración de la sección Servicios con las categorías, filtros, tarjetas expandibles, contactos y acceso a Google Maps acordados en la conversación.
 - **Resultado:** cambios aplicados en la rama `main` y revisados estáticamente en los archivos modificados. No se ejecutaron `npm.cmd run lint`, `npm.cmd run build` ni pruebas visuales en navegador; la presentación y el comportamiento quedan pendientes de esas comprobaciones.
+
+
+### 2026-11-18T05:05:41.138-03:00 — Detener el avance automático del carrusel de lugares
+
+- **Archivos afectados:** `src/components/home/PlacesCarousel.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminó el temporizador recursivo que avanzaba una tarjeta cada 2,5 segundos y volvía a programarse indefinidamente. También se retiraron las referencias y manejadores que solo servían para pausar ese avance automático. Se conserva el desplazamiento manual mediante flechas y gestos táctiles, el centrado de tarjetas y el bucle horizontal.
+- **Motivo y autorización:** petición directa del usuario para corregir el carrusel, que se movía constantemente y no se detenía.
+- **Resultado:** cambio guardado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni prueba visual en navegador.
