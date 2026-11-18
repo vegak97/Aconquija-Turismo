@@ -101,6 +101,7 @@ export default function PlacesCarousel() {
   }
 
   const handlePlaceTouchStart = (event) => {
+    placeSwipedRef.current = false
     const touch = event.touches[0]
     if (!touch) return
     placeTouchStartRef.current = { x: touch.clientX, y: touch.clientY }
@@ -124,7 +125,7 @@ export default function PlacesCarousel() {
     pausePlaceCarousel()
   }
 
-  const pausePlaceCarousel = () => {
+  function pausePlaceCarousel() {
     placePausedRef.current = true
     if (placeResumeTimerRef.current) window.clearTimeout(placeResumeTimerRef.current)
     placeResumeTimerRef.current = window.setTimeout(() => {
