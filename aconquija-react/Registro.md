@@ -1,5 +1,12 @@
 ## 2026-11-26
 
+### 12:50:00 -03:00 — Corregir las imágenes de las tarjetas de circuitos
+
+- **Archivos afectados:** `src/data/homeData.js`; `Registro.md`.
+- **Cambio concreto:** se restauró la imagen original de Respira Verde (`imagenes/respira_verde_fondo.png`); Cultiva Tradición ahora utiliza `imagenes/cultiva_tradicon.webp`; Camino de la Fe utiliza `imagenes/circuito_de_la_fe.webp`. Se confirmaron los tres recursos en la carpeta `aconquija-react/imagenes/`.
+- **Motivo y autorización:** corrección solicitada directamente por el usuario el 2026-11-26, quien aclaró la asignación correcta de cada imagen.
+- **Resultado:** referencias actualizadas en `main` y revisadas estáticamente. No se ejecutaron lint, compilación ni pruebas visuales.
+
 ### 12:47:00 -03:00 — Actualizar imágenes de las tarjetas de circuitos
 
 - **Archivos afectados:** `src/data/homeData.js`; `Registro.md`.
