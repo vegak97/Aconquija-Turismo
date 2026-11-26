@@ -1,5 +1,5 @@
-import respiraVerdeImage from '../../imagenes/respira_verde_fondo.png'
-import cultivaTradicionImage from '../../imagenes/cultiva_tradicion.webp'
+import respiraVerdeImage from '../../imagenes/cultiva_tradicon.webp'
+import cultivaTradicionImage from '../../imagenes/circuito_de_la_fe.webp'
 import nochesEstrelladasImage from '../../imagenes/cautiva_miradas.png'
 import pucaraImage from '../../imagenes/respira_aconquija2.webp'
 import laFeImage from '../../imagenes/camino_la_fe.webp'
