@@ -1,5 +1,14 @@
 ## 2026-11-26
 
+### 12:47:00 -03:00 — Actualizar imágenes de las tarjetas de circuitos
+
+- **Archivos afectados:** `src/data/homeData.js`; `Registro.md`.
+- **Cambio concreto:** la tarjeta de Respira Verde ahora utiliza `imagenes/cultiva_tradicon.webp` y la tarjeta de Cultiva Tradición utiliza `imagenes/circuito_de_la_fe.webp`. Se verificó previamente que ambos recursos existen en el repositorio.
+- **Motivo y autorización:** solicitud directa del usuario del 2026-11-26.
+- **Resultado:** referencias actualizadas en la rama `main`. Revisión estática realizada; no se ejecutaron lint, compilación ni pruebas visuales.
+
+## 2026-11-26
+
 ### 11:40:00 -03:00 — Simplificar y ampliar la identificación del portal institucional
 
 - **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
