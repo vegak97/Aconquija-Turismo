@@ -55,26 +55,19 @@
   color: var(--portal-ink);
   text-decoration: none;
 }
- .portal-wordmark__logo {
-  display: block;
-  width: clamp(2.7rem, 4vw, 3.5rem);
-  height: clamp(2.7rem, 4vw, 3.5rem);
-  object-fit: contain;
-  flex: 0 0 auto;
-}
 .portal-wordmark__text {
   display: flex;
   flex-direction: column;
   gap: .2rem;
 }
 .portal-wordmark__name {
-  font-size: .92rem;
+  font-size: 1.18rem;
   font-weight: 700;
   letter-spacing: .16em;
 }
 .portal-wordmark__caption {
   color: var(--portal-muted);
-  font-size: .57rem;
+  font-size: .72rem;
   font-weight: 600;
   letter-spacing: .16em;
 }
@@ -586,16 +579,12 @@
     flex: 1 1 auto;
     gap: .45rem;
   }
-  .portal-wordmark__logo {
-    width: 2.35rem;
-    height: 2.35rem;
-  }
   .portal-wordmark__name {
-    font-size: .72rem;
+    font-size: .84rem;
     letter-spacing: .1em;
   }
   .portal-wordmark__caption {
-    font-size: .46rem;
+    font-size: .53rem;
     letter-spacing: .1em;
   }
   .portal-header__actions {
@@ -641,9 +630,8 @@
 }
 @media (max-width: 420px) {
   .portal-wordmark { gap: .35rem; }
-  .portal-wordmark__logo { width: 2rem; height: 2rem; }
-  .portal-wordmark__name { font-size: .62rem; letter-spacing: .07em; }
-  .portal-wordmark__caption { font-size: .4rem; letter-spacing: .07em; }
+  .portal-wordmark__name { font-size: .72rem; letter-spacing: .07em; }
+  .portal-wordmark__caption { font-size: .48rem; letter-spacing: .07em; }
   .portal-header__actions { gap: .25rem; }
   .portal-weather { padding: .18rem .3rem; }
   .portal-weather__place { display: none; }
