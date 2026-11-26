@@ -1,3 +1,12 @@
+## 2026-11-26
+
+### 11:40:00 -03:00 — Simplificar y ampliar la identificación del portal institucional
+
+- **Archivos afectados:** `src/pages/PortalHomePage.jsx`; `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se retiró el escudo/logo del encabezado y su importación. Se aumentó el tamaño de «ACONQUIJA» y «PORTAL INSTITUCIONAL», con ajustes específicos para mantener la legibilidad y el espacio disponible en pantallas móviles.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-26 y permiso explícito para ingresar al repositorio, leer las reglas y aplicar el cambio.
+- **Resultado:** cambios aplicados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
 # Registro de cambios — Aconquija React
 
 Zona horaria: Argentina (UTC-03:00).
