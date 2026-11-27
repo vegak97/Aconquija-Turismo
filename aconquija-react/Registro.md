@@ -1,3 +1,10 @@
+### 18:51:36 -03:00 — Bajar las tarjetas del portal en teléfonos
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se añadió un ajuste exclusivo para anchos de hasta 600 px que agrega separación superior a las dos tarjetas del portal mediante un margen adaptable a la altura de pantalla. El objetivo es despejar la zona superior y permitir que se vean las puntas de las montañas del fondo. No se modificaron la vista de escritorio ni la de tabletas, ni el contenido o tamaño de las tarjetas.
+- **Motivo y autorización:** petición directa del usuario el 2026-11-27 para bajar las dos tarjetas únicamente en teléfonos.
+- **Resultado:** cambio aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en un teléfono.
+
 ### 18:17:42 -03:00 — Asignar imagen a la tarjeta Río Potrero de Respira Verde
 
 - **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `Registro.md`.
