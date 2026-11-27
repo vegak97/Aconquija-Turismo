@@ -18,7 +18,6 @@ export default function BosqueDeAlisosGallery() {
         items={photos}
         ariaLabel="Galería de imágenes del Bosque de Alisos"
       />
-      <p className="gallery-caption">Las imágenes de bosque nuboso son ilustrativas del tipo de vegetación de yungas; el resto corresponde al entorno real de Aconquija.</p>
     </section>
   )
 }
