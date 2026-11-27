@@ -1,4 +1,12 @@
 
+### 18:05:37 -03:00 — Depurar tarjetas de Cultiva Tradición
+
+- **Archivos afectados:** `src/components/second-level/cultiva-tradicion/CultivaTradicionGrid.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminaron las tarjetas «Quebrada del Arenal», «Cocina de la Sierra», «Bosque de Altura», «Artesanías en Telar», «Laguna del Viento», «Filo del Amanecer» y «Mirador del Aconquija». Se conservaron «El Bandoneón», «Festival Mayor de Aconquija», «Día de la Tradición», «El Fogón» y «Desfiles de Aconquija». No se modificó Respira Verde.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-27, quien especificó eliminar esas siete tarjetas de Cultiva Tradición y mantener las demás.
+- **Resultado:** cambio aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales.
+
+
 ### 18:03:38 -03:00 — Depurar tarjetas de Respira Verde
 
 - **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `Registro.md`.
