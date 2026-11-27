@@ -7,7 +7,7 @@ const entries = [
   ["Cabañas Aires del Nevado","Buena Vista","dormir","3834796337",null,"airesdelnevado.cabanas","Cabañas Aires Del Nevado Aconquija-Catamarca"],
   ["Hotel Gran Pucará","Buena Vista","dormir","3834912003"],
   ["Hospedaje El Fortín","Alamito","dormir","3834005624"],
-  ["Hospedaje El Guindo","El Lindero","dormir","3835517266","hospedaje.el.guindo",null,null,"¡Elegí tus vacaciones en el paraíso y en el mejor lugar! Cuenta con ropa de cama, toallones, ventiladores y agua caliente. También ofrecemos desayuno, almuerzo, merienda y cena.","","https://maps.app.goo.gl/3iEtzfAA2axaDJrk9","https://www.instagram.com/hospedaje.el.guindo?cnvx=bXp6YWFlb2d5MHFj"],
+  ["Hospedaje El Guindo","El Lindero","dormir","3835517266","hospedaje.el.guindo",null,null,"¡Elegí tus vacaciones en el paraíso y en el mejor lugar! Cuenta con ropa de cama, toallones, ventiladores y agua caliente. También ofrecemos desayuno, almuerzo, merienda y cena.","imagenes/servicios/El_Gindo.webp","https://maps.app.goo.gl/3iEtzfAA2axaDJrk9","https://www.instagram.com/hospedaje.el.guindo?cnvx=bXp6YWFlb2d5MHFj"],
   ["Nuna Huasi","El Lindero","dormir","3865653040"],
   ["Hostería El Hostal","El Lindero","dormir","3834959328"],
   ["Departamentos Carranzana","Río Potrero","dormir","3865403779"],
