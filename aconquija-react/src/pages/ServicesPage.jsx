@@ -45,10 +45,23 @@ function ServiceCard({ provider }) {
           <div className="service-contacts">
             {provider.phones.map(phone => <WhatsAppLink key={phone} phone={phone} />)}
           </div>
-          {provider.instagram && <a className="service-social-link" href={provider.instagramUrl || `https://www.instagram.com/${provider.instagram.replace(/^@/, '')}/`} target="_blank" rel="noreferrer">Instagram</a>}
+          {provider.instagram && (
+            <a className="service-social-link service-social-link--instagram" href={provider.instagramUrl || `https://www.instagram.com/${provider.instagram.replace(/^@/, '')}/`} target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" /><circle cx="12" cy="12" r="4" /><circle className="service-instagram-dot" cx="17.6" cy="6.7" r="1" /></svg>
+              Instagram
+            </a>
+          )}
           {provider.facebook && <a className="service-social-link" href={provider.facebook.startsWith('http') ? provider.facebook : `https://www.facebook.com/search/top?q=${encodeURIComponent(provider.facebook)}`} target="_blank" rel="noreferrer">Facebook</a>}
           {hasMap
-            ? <a className="service-map-link" href={provider.mapUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">⌖</span> Cómo llegar</a>
+            ? <a className="service-map-link" href={provider.mapUrl} target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#34A853" d="M12 2.2a8.1 8.1 0 0 0-7.1 12l5.8 7.1c.6.8 1.9.8 2.5 0l1.2-1.5-4.2-5.1a4.8 4.8 0 0 1 1.8-8.1V2.2Z" />
+                  <path fill="#4285F4" d="M12 2.2v4.4a4.8 4.8 0 0 1 4.8 4.8c0 1.1-.4 2.1-1 2.9l2.9 3.5 2.4-3.6A8.1 8.1 0 0 0 12 2.2Z" />
+                  <path fill="#FBBC04" d="m10.2 14.7 4.2 5.1 4.3-5.2-2.9-3.5a4.8 4.8 0 0 1-5.6 3.6Z" />
+                  <circle cx="12" cy="11.4" r="2.1" fill="#EA4335" />
+                </svg>
+                Cómo llegar
+              </a>
             : <span className="service-map-link is-pending" aria-disabled="true" title="Ubicación pendiente de confirmar"><span aria-hidden="true">⌖</span> Ubicación pendiente</span>}
         </div>
       </div>
