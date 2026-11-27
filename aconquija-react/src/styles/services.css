@@ -60,7 +60,18 @@
 .service-contact--whatsapp { border-color: rgba(47,130,87,.24); color: #28794d; }
 .service-contact--whatsapp svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 .service-contact:hover, .service-social-link:hover, .service-map-link:not(.is-pending):hover { background: #f3eee6; border-color: #cdaa78; }
+.service-social-link--instagram {
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(115deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) border-box;
+  color: #a52b78;
+}
+.service-social-link--instagram:hover {
+  background: linear-gradient(#fff8fb, #fff8fb) padding-box, linear-gradient(115deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5) border-box;
+}
+.service-social-link--instagram svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.service-social-link--instagram .service-instagram-dot { fill: currentColor; stroke: none; }
 .service-map-link { color: #8b6840; }
+.service-map-link svg { width: 17px; height: 17px; flex: 0 0 auto; }
 .service-map-link span { font-size: 1.1rem; }
 .service-map-link.is-pending { color: #99958e; border-style: dashed; cursor: not-allowed; }
 .services-empty-state { padding: 64px 24px; border: 1px dashed rgba(28,34,44,.2); border-radius: 12px; text-align: center; }
