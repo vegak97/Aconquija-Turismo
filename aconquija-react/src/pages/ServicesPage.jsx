@@ -52,7 +52,10 @@ function ServiceCard({ provider }) {
             </a>
           )}
           {provider.bookingUrl && <a className="service-booking-link" href={provider.bookingUrl} target="_blank" rel="noreferrer">Alquiler Argentina</a>}
-          {provider.facebook && <a className="service-social-link" href={provider.facebook.startsWith('http') ? provider.facebook : `https://www.facebook.com/search/top?q=${encodeURIComponent(provider.facebook)}`} target="_blank" rel="noreferrer">Facebook</a>}
+          {provider.facebook && <a className="service-social-link service-social-link--facebook" href={provider.facebook.startsWith('http') ? provider.facebook : `https://www.facebook.com/search/top?q=${encodeURIComponent(provider.facebook)}`} target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h2.7l.4-3H14V8.1c0-.9.3-1.5 1.5-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.5v8H14Z" fill="currentColor"/></svg>
+            Facebook
+          </a>}
           {hasMap
             ? <a className="service-map-link service-map-link--google" href={provider.mapUrl} target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
