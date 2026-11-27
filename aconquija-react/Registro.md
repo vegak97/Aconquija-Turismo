@@ -1,4 +1,12 @@
 
+### 17:33:54 -03:00 — Añadir identidad visual a los botones de Instagram y Google Maps
+
+- **Archivos afectados:** `src/pages/ServicesPage.jsx`; `src/styles/services.css`; `Registro.md`.
+- **Cambio concreto:** el botón de Instagram incorpora su icono y un borde degradado con los colores característicos de la red. El botón «Cómo llegar» reemplaza el símbolo genérico por un icono multicolor inspirado en Google Maps. Se mantienen los enlaces y comportamientos existentes; el cambio visual se aplica a los botones de Instagram y mapas de todas las tarjetas.
+- **Motivo y autorización:** detalle solicitado directamente por el usuario el 2026-11-27.
+- **Resultado:** cambios registrados en `main` mediante revisión estática. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
+
 ### 17:22:00 -03:00 — Asignar fotografía a Hospedaje El Guindo
 
 - **Archivo afectado:** `src/data/serviceProviders.js`.
