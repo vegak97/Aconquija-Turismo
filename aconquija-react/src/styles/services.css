@@ -100,3 +100,19 @@
 @media (prefers-reduced-motion: reduce) {
   .service-provider-card, .services-category-button, .service-contact, .service-social-link, .service-map-link { transition: none; }
 }
+
+/* Identidad de enlaces externos de alojamientos */
+.service-map-link--google {
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(120deg, #4285F4, #34A853, #FBBC04, #EA4335, #4285F4) border-box;
+  color: #4285F4;
+}
+.service-map-link--google:hover {
+  background: linear-gradient(#f7faff, #f7faff) padding-box, linear-gradient(120deg, #4285F4, #34A853, #FBBC04, #EA4335, #4285F4) border-box;
+}
+.service-booking-link {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 8px 11px;
+  border: 1px solid rgba(28,34,44,.13); border-radius: 6px; color: #8b6840; font-size: .73rem; font-weight: 600;
+  transition: background .25s ease, border-color .25s ease;
+}
+.service-booking-link:hover { background: #f3eee6; border-color: #cdaa78; }

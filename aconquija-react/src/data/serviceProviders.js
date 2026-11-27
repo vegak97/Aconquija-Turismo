@@ -3,7 +3,7 @@
 const entries = [
   // Dónde dormir
   ["Cabañas Mirador del Nevado","Buena Vista","dormir","3834604971"],
-  ["Cabañas Portal del Nevado","Buena Vista","dormir","2644055134",null,"cabañasportaldelnevado","Portal Del Nevado las Estancias Aconquija"],
+  ["Cabañas Portal del Nevado","Buena Vista","dormir","2644055134",null,"cabañasportaldelnevado","Portal Del Nevado las Estancias Aconquija","Ubicadas en la localidad de Aconquija, en la provincia de Catamarca, nuestras cabañas Portal del Nevado te invitan a disfrutar de un entorno natural y tranquilo, ideal para el descanso en cualquier temporada. Contamos con cabañas totalmente equipadas para 4 y 6 personas, ofreciendo un amplio y cómodo estacionamiento techado, así como una refrescante piscina para que disfrutes al máximo tus días de descanso. El predio cuenta con Salón para disfrutar un te,mates,juegos de mesa, wifi,bebidas, parque y asador,brindando espacios ideales para compartir en familia.",null,"https://maps.app.goo.gl/h7G62gVXDkcQb54FA",null,"https://portaldelnevado.alquilerargentina.com"],
   ["Cabañas Aires del Nevado","Buena Vista","dormir","3834796337",null,"airesdelnevado.cabanas","Cabañas Aires Del Nevado Aconquija-Catamarca"],
   ["Hotel Gran Pucará","Buena Vista","dormir","3834912003"],
   ["Hospedaje El Fortín","Alamito","dormir","3834005624"],
@@ -121,7 +121,7 @@ export const serviceCategories = [
   { id: "compras", label: "Comercios y compras", description: "Comercios, productos regionales y servicios útiles durante tu visita.", icon: "shopping-bag" },
 ];
 
-export const serviceProviders = entries.map(([name, locality, category, phones, instagram, facebook, _facebookSearch, description, image, mapUrl, instagramUrl]) => ({
+export const serviceProviders = entries.map(([name, locality, category, phones, instagram, facebook, _facebookSearch, description, image, mapUrl, instagramUrl, bookingUrl]) => ({
   id: name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
   name,
   locality,
@@ -133,4 +133,5 @@ export const serviceProviders = entries.map(([name, locality, category, phones, 
   image: image || "",
   mapUrl: mapUrl || "",
   instagramUrl: instagramUrl || "",
+  bookingUrl: bookingUrl || "",
 }));

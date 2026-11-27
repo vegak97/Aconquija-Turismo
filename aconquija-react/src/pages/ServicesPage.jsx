@@ -51,9 +51,10 @@ function ServiceCard({ provider }) {
               Instagram
             </a>
           )}
+          {provider.bookingUrl && <a className="service-booking-link" href={provider.bookingUrl} target="_blank" rel="noreferrer">Alquiler Argentina</a>}
           {provider.facebook && <a className="service-social-link" href={provider.facebook.startsWith('http') ? provider.facebook : `https://www.facebook.com/search/top?q=${encodeURIComponent(provider.facebook)}`} target="_blank" rel="noreferrer">Facebook</a>}
           {hasMap
-            ? <a className="service-map-link" href={provider.mapUrl} target="_blank" rel="noreferrer">
+            ? <a className="service-map-link service-map-link--google" href={provider.mapUrl} target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path fill="#34A853" d="M12 2.2a8.1 8.1 0 0 0-7.1 12l5.8 7.1c.6.8 1.9.8 2.5 0l1.2-1.5-4.2-5.1a4.8 4.8 0 0 1 1.8-8.1V2.2Z" />
                   <path fill="#4285F4" d="M12 2.2v4.4a4.8 4.8 0 0 1 4.8 4.8c0 1.1-.4 2.1-1 2.9l2.9 3.5 2.4-3.6A8.1 8.1 0 0 0 12 2.2Z" />

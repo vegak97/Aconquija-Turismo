@@ -1,3 +1,11 @@
+
+### 19:21:00 -03:00 — Completar la tarjeta de Cabañas Portal del Nevado
+
+- **Archivos afectados:** `src/data/serviceProviders.js`; `src/pages/ServicesPage.jsx`; `src/styles/services.css`; `Registro.md`.
+- **Cambio concreto:** se incorporó la descripción proporcionada para Cabañas Portal del Nevado, el enlace de Google Maps y el enlace a su perfil de Alquiler Argentina. Se añadió el botón «Alquiler Argentina» y se aplicó al botón de Google Maps un borde multicolor con los colores de su identidad visual, manteniendo el icono de Maps existente y el estilo de botones de las tarjetas de hospedaje.
+- **Motivo y autorización:** solicitud directa del usuario el 2026-11-27.
+- **Resultado:** cambios aplicados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
 ### 18:56:48 -03:00 — Bajar 5 px adicionales el título del portal en teléfonos
 
 - **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
