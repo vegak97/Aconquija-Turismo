@@ -1,3 +1,10 @@
+### 18:53:58 -03:00 — Ajustar posición del título y las tarjetas del portal en teléfonos
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** dentro del media query de hasta 600 px, se desplazó 5 px hacia abajo el bloque introductorio que contiene el título «Aconquija, Catamarca» y su descripción. También se añadieron 5 px al margen superior adaptable de las tarjetas para bajarlas un poco más. El ajuste no afecta escritorio ni tabletas y conserva las reglas responsive anteriores.
+- **Motivo y autorización:** petición directa del usuario el 2026-11-27.
+- **Resultado:** cambios aplicados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en un teléfono.
+
 ### 18:51:36 -03:00 — Bajar las tarjetas del portal en teléfonos
 
 - **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
