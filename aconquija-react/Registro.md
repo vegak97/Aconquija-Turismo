@@ -1,4 +1,12 @@
 
+### 17:22:00 -03:00 — Asignar fotografía a Hospedaje El Guindo
+
+- **Archivo afectado:** `src/data/serviceProviders.js`.
+- **Cambio concreto:** se asignó la imagen `imagenes/servicios/El_Gindo.webp` al registro de Hospedaje El Guindo para que aparezca en el sector superior de la tarjeta, en reemplazo de «Fotografía pendiente».
+- **Motivo y autorización:** corrección solicitada por el usuario el 2026-11-27.
+- **Resultado:** ruta de imagen registrada en `main`; no se modificó el archivo de imagen.
+
+
 ### 17:14:00 -03:00 — Incorporar información de Hospedaje El Guindo
 
 - **Archivos afectados:** `src/data/serviceProviders.js`; `src/pages/ServicesPage.jsx`; `Registro.md`.
