@@ -762,7 +762,7 @@
 /* Ajuste fino de posición del título y las tarjetas en teléfonos */
 @media (max-width: 600px) {
   .portal-intro {
-    top: calc(-1 * clamp(1rem, 2.5vh, 2rem) + 5px);
+    top: calc(-1 * clamp(1rem, 2.5vh, 2rem) + 10px);
   }
   .portal-cards {
     margin-top: calc(clamp(2rem, 7svh, 4rem) + 5px);
