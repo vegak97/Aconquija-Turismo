@@ -1,3 +1,11 @@
+
+### 17:14:00 -03:00 — Incorporar información de Hospedaje El Guindo
+
+- **Archivos afectados:** `src/data/serviceProviders.js`; `src/pages/ServicesPage.jsx`; `Registro.md`.
+- **Cambio concreto:** se agregó la descripción proporcionada, el enlace directo de Google Maps y el enlace exacto de Instagram de Hospedaje El Guindo. Se ajustó el modelo de datos para admitir enlaces directos de Instagram y se reutiliza el botón existente «Leer más». La imagen `El_Gindo.webp` no se incorporó porque no se encontró ese archivo en las ubicaciones consultadas del repositorio; la tarjeta conserva el marcador de fotografía pendiente hasta que el recurso esté disponible.
+- **Motivo y autorización:** solicitud directa del usuario del 2026-11-27.
+- **Resultado:** cambios de datos y enlace preparados para guardarse en `main`. Revisión estática; lint, compilación y prueba visual pendientes.
+
 ## 2026-11-26
 
 ### 12:50:00 -03:00 — Corregir las imágenes de las tarjetas de circuitos
