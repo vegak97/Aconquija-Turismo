@@ -116,3 +116,19 @@
   transition: background .25s ease, border-color .25s ease;
 }
 .service-booking-link:hover { background: #f3eee6; border-color: #cdaa78; }
+
+/* Identidad visual del enlace de Facebook */
+.service-social-link--facebook {
+  border: 1px solid #1877F2;
+  color: #1877F2;
+  background: #fff;
+}
+.service-social-link--facebook:hover {
+  border-color: #1877F2;
+  background: #f1f6ff;
+}
+.service-social-link--facebook svg {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 auto;
+}
