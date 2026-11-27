@@ -1,4 +1,11 @@
 
+### 2026-11-27T19:26:43-03:00 — Incorporar fotografía y estilo de Facebook en Portal del Nevado
+
+- **Archivos afectados:** `src/data/serviceProviders.js`; `src/pages/ServicesPage.jsx`; `src/styles/services.css`; `Registro.md`.
+- **Cambio concreto:** se asignó a Cabañas Portal del Nevado la fotografía local `imagenes/servicios/PortalDelNevado.jpg`. El enlace de Facebook ahora incluye el icono de la red social y un borde azul con el color de su identidad visual, además de un fondo azul muy suave al pasar el cursor.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-27.
+- **Resultado:** cambios aplicados en `main` y revisados estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en navegador.
+
 ### 19:21:00 -03:00 — Completar la tarjeta de Cabañas Portal del Nevado
 
 - **Archivos afectados:** `src/data/serviceProviders.js`; `src/pages/ServicesPage.jsx`; `src/styles/services.css`; `Registro.md`.
