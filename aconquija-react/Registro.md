@@ -1,4 +1,12 @@
 
+### 18:03:38 -03:00 — Depurar tarjetas de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `Registro.md`.
+- **Cambio concreto:** se eliminaron de Respira Verde las tarjetas «La Cruz», la tarjeta sin título y la segunda tarjeta repetida «Bosque De Alisos» ubicada al final. Se conservó la primera tarjeta «Bosque de Alisos» y todas las demás tarjetas de Respira Verde. No se modificó Cultiva Tradición: se mantienen sus tarjetas, incluidas Quebrada del Arenal, Cocina de la Sierra, Bosque de Altura, Artesanías en Telar, Laguna del Viento, Filo del Amanecer y Mirador del Aconquija.
+- **Motivo y autorización:** petición directa del usuario del 2026-11-27, quien especificó eliminar únicamente esas tres tarjetas de Respira Verde y conservar las demás.
+- **Resultado:** cambio aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales.
+
+
 ### 17:33:54 -03:00 — Añadir identidad visual a los botones de Instagram y Google Maps
 
 - **Archivos afectados:** `src/pages/ServicesPage.jsx`; `src/styles/services.css`; `Registro.md`.
