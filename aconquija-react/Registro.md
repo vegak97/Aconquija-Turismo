@@ -1,3 +1,10 @@
+### 18:17:42 -03:00 — Asignar imagen a la tarjeta Río Potrero de Respira Verde
+
+- **Archivos afectados:** `src/components/second-level/respira-verde/RespiraVerdeGrid.jsx`; `Registro.md`.
+- **Cambio concreto:** se importó el recurso local `imagenes/rio.jpeg` y se asignó a la tarjeta «Río Potrero» de Respira Verde. Se conservaron el texto, el enlace y el resto de las tarjetas.
+- **Motivo y autorización:** petición directa del usuario el 2026-11-27; aclaró que se refería a la tarjeta de Río Potrero ubicada en Respira Verde.
+- **Resultado:** cambio aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales.
+
 
 ### 18:05:37 -03:00 — Depurar tarjetas de Cultiva Tradición
 
