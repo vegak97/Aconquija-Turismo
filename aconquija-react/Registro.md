@@ -1,3 +1,10 @@
+### 18:56:48 -03:00 — Bajar 5 px adicionales el título del portal en teléfonos
+
+- **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
+- **Cambio concreto:** se desplazó otros 5 px hacia abajo el bloque introductorio del portal (título y descripción) en pantallas de hasta 600 px. El desplazamiento acumulado respecto de la posición original ahora es de 10 px. Las tarjetas y las vistas de escritorio y tabletas no se modificaron.
+- **Motivo y autorización:** petición directa del usuario el 2026-11-27.
+- **Resultado:** cambio aplicado en `main` y revisado estáticamente. No se ejecutaron lint, compilación ni pruebas visuales en un teléfono.
+
 ### 18:53:58 -03:00 — Ajustar posición del título y las tarjetas del portal en teléfonos
 
 - **Archivos afectados:** `src/styles/portal.css`; `Registro.md`.
