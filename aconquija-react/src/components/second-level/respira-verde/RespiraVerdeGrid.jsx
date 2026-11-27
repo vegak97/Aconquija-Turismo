@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import tunnelsImage from '../../../../imagenes/respira_verde/tuneles-por.jpg'
 import bosqueImage from '../../../../imagenes/bosque_de_alisos/bosque_de_alisos.webp'
 import cabalgataImage from '../../../../imagenes/cabalgata.webp'
+import rioImage from '../../../../imagenes/rio.jpeg'
 
 const cards = [
   {
@@ -38,6 +39,7 @@ const cards = [
     category: 'Naturaleza',
     description: 'El paraje más al norte del circuito, a orillas del Río del Campo. Un lugar de aguas frescas de montaña, perfecto para refrescarse después de una jornada de trekking o cabalgata.',
     metadata: ['Libre'],
+    image: rioImage,
     alt: 'Espacio reservado para una imagen del Río Potrero',
     href: '/lugares/rio-potrero',
   },
