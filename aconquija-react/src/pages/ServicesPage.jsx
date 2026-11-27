@@ -45,7 +45,7 @@ function ServiceCard({ provider }) {
           <div className="service-contacts">
             {provider.phones.map(phone => <WhatsAppLink key={phone} phone={phone} />)}
           </div>
-          {provider.instagram && <a className="service-social-link" href={`https://www.instagram.com/${provider.instagram.replace(/^@/, '')}/`} target="_blank" rel="noreferrer">Instagram</a>}
+          {provider.instagram && <a className="service-social-link" href={provider.instagramUrl || `https://www.instagram.com/${provider.instagram.replace(/^@/, '')}/`} target="_blank" rel="noreferrer">Instagram</a>}
           {provider.facebook && <a className="service-social-link" href={provider.facebook.startsWith('http') ? provider.facebook : `https://www.facebook.com/search/top?q=${encodeURIComponent(provider.facebook)}`} target="_blank" rel="noreferrer">Facebook</a>}
           {hasMap
             ? <a className="service-map-link" href={provider.mapUrl} target="_blank" rel="noreferrer"><span aria-hidden="true">⌖</span> Cómo llegar</a>
