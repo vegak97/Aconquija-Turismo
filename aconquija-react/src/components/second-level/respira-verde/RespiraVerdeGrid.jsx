@@ -49,32 +49,6 @@ const cards = [
     alt: 'Espacio reservado para una imagen de Yunca Suma',
     href: '/lugares/yunka-suma',
   },
-  {
-    title: 'La Cruz',
-    category: 'Trekking',
-    difficulty: 'Media dificultad',
-    description: 'La Cruz de Aconquija es un atractivo turístico de Catamarca, ideal para disfrutar de hermosos paisajes, respirar aire puro y apreciar la belleza de nuestras montañas.',
-    metadata: ['2 a 6 hs'],
-    alt: 'Espacio reservado para una imagen de trekking en Aconquija',
-  },
-  {
-    title: '',
-    category: 'Senderismo',
-    difficulty: 'Baja dificultad',
-    description: 'Caminatas suaves entre los parajes del circuito, ideales para hacer en familia o sin experiencia previa, con vistas al valle y al Río del Campo.',
-    metadata: ['1 a 2 hs'],
-    alt: 'Espacio reservado para una imagen de senderismo en Aconquija',
-  },
-  {
-    title: 'Bosque De Alisos',
-    category: 'Naturaleza',
-    difficulty: 'Baja dificultad',
-    description: 'Vegetación nativa de yungas, arroyos de montaña y una fauna variada como parte del paisaje que envuelve a todo el circuito. El microclima fresco de la zona la hace ideal para el descanso.',
-    metadata: ['Libre'],
-    image: bosqueImage,
-    alt: 'Naturaleza de Aconquija',
-    href: '/lugares/bosque-de-alisos',
-  },
 ]
 
 function CardContent({ card }) {
