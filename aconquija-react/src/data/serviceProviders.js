@@ -7,7 +7,7 @@ const entries = [
   ["Cabañas Aires del Nevado","Buena Vista","dormir","3834796337",null,"airesdelnevado.cabanas","Cabañas Aires Del Nevado Aconquija-Catamarca"],
   ["Hotel Gran Pucará","Buena Vista","dormir","3834912003"],
   ["Hospedaje El Fortín","Alamito","dormir","3834005624"],
-  ["Hospedaje El Guindo","El Lindero","dormir","3835517266",null,"hospedaje.el.guindo","Hospedaje El Guindo"],
+  ["Hospedaje El Guindo","El Lindero","dormir","3835517266","hospedaje.el.guindo",null,null,"¡Elegí tus vacaciones en el paraíso y en el mejor lugar! Cuenta con ropa de cama, toallones, ventiladores y agua caliente. También ofrecemos desayuno, almuerzo, merienda y cena.","","https://maps.app.goo.gl/3iEtzfAA2axaDJrk9","https://www.instagram.com/hospedaje.el.guindo?cnvx=bXp6YWFlb2d5MHFj"],
   ["Nuna Huasi","El Lindero","dormir","3865653040"],
   ["Hostería El Hostal","El Lindero","dormir","3834959328"],
   ["Departamentos Carranzana","Río Potrero","dormir","3865403779"],
@@ -121,7 +121,7 @@ export const serviceCategories = [
   { id: "compras", label: "Comercios y compras", description: "Comercios, productos regionales y servicios útiles durante tu visita.", icon: "shopping-bag" },
 ];
 
-export const serviceProviders = entries.map(([name, locality, category, phones, instagram, facebook]) => ({
+export const serviceProviders = entries.map(([name, locality, category, phones, instagram, facebook, _facebookSearch, description, image, mapUrl, instagramUrl]) => ({
   id: name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""),
   name,
   locality,
@@ -129,7 +129,8 @@ export const serviceProviders = entries.map(([name, locality, category, phones, 
   phones: phones ? phones.split(",") : [],
   instagram: instagram || "",
   facebook: facebook || "",
-  description: "",
-  image: "",
-  mapUrl: "",
+  description: description || "",
+  image: image || "",
+  mapUrl: mapUrl || "",
+  instagramUrl: instagramUrl || "",
 }));
