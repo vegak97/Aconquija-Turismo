@@ -751,3 +751,10 @@
     transform: none;
   }
 }
+
+/* En teléfonos, separar las tarjetas para dejar visibles las cumbres del paisaje */
+@media (max-width: 600px) {
+  .portal-cards {
+    margin-top: clamp(2rem, 7svh, 4rem);
+  }
+}
